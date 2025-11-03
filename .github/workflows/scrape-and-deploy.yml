@@ -37,7 +37,7 @@ jobs:
 
       - name: Run AAHL scraper
         run: |
-          python scripts/aahl_cli.py scrape --backend http
+          python scripts/aahl_cli.py scrape --backend http --targets schedule results stats standings rosters teams
 
       - name: Process data for Yodeck
         run: |
@@ -47,7 +47,10 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/yodeck_display.json
+          git add data/*.json
+          if [ -d data/rosters ]; then
+            git add data/rosters/*.json
+          fi
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update AAHL data - $(date '+%Y-%m-%d %H:%M:%S UTC')" && git push)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
