@@ -39,6 +39,14 @@ jobs:
         run: |
           python scripts/aahl_cli.py scrape --backend http --targets schedule results stats standings rosters teams
 
+      - name: Save historical snapshots
+        run: |
+          python scripts/save_snapshots.py
+
+      - name: Generate weekly report and headlines
+        run: |
+          python scripts/generate_weekly_report.py
+
       - name: Process data for Yodeck
         run: |
           python aahl_yodeck_processor.py
@@ -50,6 +58,9 @@ jobs:
           git add data/*.json
           if [ -d data/rosters ]; then
             git add data/rosters/*.json
+          fi
+          if [ -d data/history ]; then
+            find data/history -name '*.json' -print0 | xargs -0 git add
           fi
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update AAHL data - $(date '+%Y-%m-%d %H:%M:%S UTC')" && git push)
         env:

@@ -177,8 +177,8 @@ def parse_ics_games(
         start_utc, start_local = _parse_datetimeish(event.get("DTSTART"), local_tz=local_tz)
         box_score_url = _extract_box_score_url(event)
         summary_url = None
-        if box_score_url:
-            summary_url = re.sub(r"p=boxscore", "p=summary", box_score_url)
+        if box_score_url and "p=boxscore" in box_score_url:
+            summary_url = box_score_url.replace("p=boxscore", "p=summary")
 
         status = "final" if home_score is not None and away_score is not None else "scheduled"
 
@@ -301,7 +301,8 @@ def parse_scoreboard(html: str, *, tz_name: str = "America/Halifax") -> List[Sco
                 parsed = urlparse(absolute)
                 query = parse_qs(parsed.query)
                 game_id = query.get("gameID", [None])[0]
-                summary_url = absolute.replace("p=boxscore", "p=summary")
+                if "p=boxscore" in absolute:
+                    summary_url = absolute.replace("p=boxscore", "p=summary")
             else:
                 game_id = None
         else:
