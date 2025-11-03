@@ -1,4 +1,3 @@
-```python
 #!/usr/bin/env python3
 """
 AAHL Data Processor for Yodeck Display
@@ -278,4 +277,4 @@ if __name__ == "__main__":
     data = processor.save_yodeck_data()
     print("Generated Yodeck display data:")
     print(json.dumps(data, indent=2)[:500] + "...")
-```
+
