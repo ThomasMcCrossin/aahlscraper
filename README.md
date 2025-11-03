@@ -46,8 +46,11 @@ python scripts/aahl_cli.py scrape --backend http
 
 Output files will be created in the `data/` directory:
 - `schedule.json` / `schedule.csv`
+- `results.json`
 - `player_stats.json` / `player_stats.csv`
 - `standings.json` / `standings.csv`
+- `rosters.json` (plus `rosters/<team>.json` when the `rosters` target is enabled)
+- `teams.json` (when the `teams` target is enabled)
 
 ## Usage
 
@@ -58,7 +61,7 @@ Output files will be created in the `data/` directory:
 python scripts/aahl_cli.py scrape --backend http
 
 # Scrape specific targets
-python scripts/aahl_cli.py scrape --backend http --targets schedule stats
+python scripts/aahl_cli.py scrape --backend http --targets schedule results stats
 
 # Change team (default is DSMALL)
 python scripts/aahl_cli.py scrape --backend http --team TEAMID

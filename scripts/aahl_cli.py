@@ -6,10 +6,11 @@ Command-line interface for the aahlscraper package.
 from __future__ import annotations
 
 import argparse
-import json
 import sys
 from pathlib import Path
 from typing import Dict, Iterable, List
+import json
+from importlib import resources
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SRC_DIR = PROJECT_ROOT / "src"
@@ -76,6 +77,27 @@ def handle_scrape(args: argparse.Namespace) -> None:
         stats = scraper.scrape_stats(sort_by=args.sort_stats)
         _export_records(stats, outdir, "player_stats", emit_json=not args.no_json, emit_csv=not args.no_csv)
 
+    if "results" in args.targets:
+        results = scraper.scrape_results()
+        if not args.no_json:
+            export_json(results, outdir / "results.json")
+
+    if "rosters" in args.targets:
+        rosters = scraper.scrape_rosters()
+        if not args.no_json and rosters:
+            roster_dir = outdir / "rosters"
+            roster_dir.mkdir(parents=True, exist_ok=True)
+            export_json(list(rosters.values()), outdir / "rosters.json")
+            for slug, roster in rosters.items():
+                export_json(roster["players"], roster_dir / f"{slug}.json")
+
+    if "teams" in args.targets:
+        if not args.no_json:
+            teams_path = resources.files("aahlscraper.data").joinpath("teams.json")
+            data = teams_path.read_text(encoding="utf-8")
+            target = outdir / "teams.json"
+            target.write_text(data, encoding="utf-8")
+
     if "standings" in args.targets:
         standings = scraper.scrape_standings()
         _export_records(standings, outdir, "standings", emit_json=not args.no_json, emit_csv=not args.no_csv)
@@ -119,8 +141,8 @@ def build_parser() -> argparse.ArgumentParser:
     scrape_parser.add_argument(
         "--targets",
         nargs="+",
-        choices=("schedule", "stats", "standings"),
-        default=("schedule", "stats", "standings"),
+        choices=("schedule", "results", "stats", "standings", "rosters", "teams"),
+        default=("schedule", "results", "stats", "standings"),
         help="Data sets to scrape (default: all)",
     )
     scrape_parser.add_argument("--sort-stats", default="points", help="Sort order for stats endpoint")

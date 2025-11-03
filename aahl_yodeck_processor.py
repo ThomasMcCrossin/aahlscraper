@@ -105,9 +105,15 @@ class AAHLDataProcessor:
 
         def has_score(g: Dict[str, Any]) -> bool:
             # Consider any numeric score as a played game
+            home_score = g.get("home_score")
+            away_score = g.get("away_score")
+            if isinstance(home_score, (int, float)) and isinstance(away_score, (int, float)):
+                return True
             for k in ("result", "score", "home_score", "away_score"):
-                v = (g.get(k) or "").strip()
-                if v.isdigit():
+                v = g.get(k)
+                if isinstance(v, (int, float)) and v >= 0:
+                    return True
+                if isinstance(v, str) and v.strip().isdigit():
                     return True
             # Also catch strings like "3 - 2"
             for v in g.values():
@@ -118,11 +124,15 @@ class AAHLDataProcessor:
 
         def to_dt(g: Dict[str, Any]) -> Optional[datetime]:
             # Prefer explicit ISO datetime
-            if g.get("datetime"):
+            for key in ("start_local", "start_utc", "datetime"):
+                value = g.get(key)
+                if not value:
+                    continue
                 try:
-                    return datetime.fromisoformat(g["datetime"])
+                    return datetime.fromisoformat(str(value))
                 except Exception:
-                    pass
+                    continue
+
             # Try combining date header + time
             date_txt = (g.get("date") or "").strip()
             time_txt = (g.get("time") or "").strip()
@@ -133,10 +143,11 @@ class AAHLDataProcessor:
                     except ValueError:
                         continue
             if date_txt:
-                try:
-                    return datetime.strptime(date_txt, "%A, %B %d, %Y")
-                except Exception:
-                    return None
+                for fmt in ("%A, %B %d, %Y", "%b %d, %Y"):
+                    try:
+                        return datetime.strptime(date_txt, fmt)
+                    except Exception:
+                        continue
             return None
 
         amherst_recent: List[Dict[str, Any]] = []
@@ -144,11 +155,23 @@ class AAHLDataProcessor:
 
         for game in schedule:
             try:
-                location = (game.get('location', game.get('Location', '')) or '').lower()
-                if 'amherst' not in location:
+                location = (game.get("location", game.get("Location", "")) or "").lower()
+                if "amherst" not in location:
                     continue
 
-                game_copy = game.copy()
+                # Normalize home/away dictionaries for both legacy and new scraper output
+                game_copy: Dict[str, Any] = dict(game)
+                for side in ("home", "away"):
+                    side_value = game.get(side)
+                    if isinstance(side_value, dict):
+                        game_copy[side] = side_value.get("name")
+                        if side_value.get("final") is not None:
+                            game_copy[f"{side}_score"] = side_value["final"]
+                        if side_value.get("periods") is not None:
+                            game_copy[f"{side}_periods"] = side_value["periods"]
+                    elif isinstance(side_value, str):
+                        game_copy[side] = side_value
+
                 # Name corrections
                 for side in ("home", "away"):
                     if side in game_copy and isinstance(game_copy[side], str):
@@ -277,4 +300,3 @@ if __name__ == "__main__":
     data = processor.save_yodeck_data()
     print("Generated Yodeck display data:")
     print(json.dumps(data, indent=2)[:500] + "...")
-

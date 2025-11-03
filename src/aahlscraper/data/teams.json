@@ -1,0 +1,63 @@
+{
+  "league_meta": {
+    "AAHL": {
+      "name": "Amherst Adult Hockey League",
+      "badge": null,
+      "color": "#0b4f9c"
+    }
+  },
+  "teams": [
+    {
+      "slug": "maltby-sports",
+      "league": "AAHL",
+      "name": "Maltby Sports",
+      "sports_hq": "TYLERARSENEAU-1",
+      "aliases": [
+        "Maltby"
+      ],
+      "logo_path": "assets/logos/aahl/maltby-sports.png"
+    },
+    {
+      "slug": "ultramar",
+      "league": "AAHL",
+      "name": "Ultramar",
+      "sports_hq": "TYLERARSENEAU-2",
+      "aliases": [
+        "Ultramar"
+      ],
+      "logo_path": "assets/logos/aahl/ultramar.svg"
+    },
+    {
+      "slug": "colson-overhead-doors",
+      "league": "AAHL",
+      "name": "Colson Overhead Doors",
+      "sports_hq": "TYLERARSENEAU-3",
+      "aliases": [
+        "Colson"
+      ],
+      "logo_path": "assets/logos/aahl/colson-overhead-doors.png"
+    },
+    {
+      "slug": "j-and-k-electric",
+      "league": "AAHL",
+      "name": "J&K Electric",
+      "sports_hq": "TYLERARSENEAU-4",
+      "aliases": [
+        "JK Electric",
+        "J & K Electric"
+      ],
+      "logo_path": "assets/logos/aahl/j-and-k-electric.png"
+    },
+    {
+      "slug": "gr-mitchell-welding",
+      "league": "AAHL",
+      "name": "G.R. Mitchell Welding",
+      "sports_hq": "983723",
+      "aliases": [
+        "GR Mitchell",
+        "Mitchell Welding"
+      ],
+      "logo_path": "assets/logos/aahl/gr-mitchell-welding.png"
+    }
+  ]
+}
