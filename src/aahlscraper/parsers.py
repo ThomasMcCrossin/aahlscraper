@@ -27,6 +27,7 @@ SUMMARY_PATTERN = re.compile(
     re.IGNORECASE,
 )
 URL_PATTERN = re.compile(r"https?://[^\s]+")
+ROLE_PATTERN = re.compile(r"\((home|away)\)", re.IGNORECASE)
 
 
 def _unfold_ics_lines(text: str) -> Iterator[str]:
@@ -140,6 +141,15 @@ def _extract_box_score_url(event: Dict[str, str]) -> Optional[str]:
     return match.group(0) if match else None
 
 
+def _strip_role_tag(name: str) -> Tuple[str, Optional[str]]:
+    match = ROLE_PATTERN.search(name)
+    role: Optional[str] = None
+    if match:
+        role = match.group(1).lower()
+        name = ROLE_PATTERN.sub("", name)
+    return WHITESPACE_PATTERN.sub(" ", name).strip(), role
+
+
 def parse_ics_games(
     text: str,
     *,
@@ -172,16 +182,16 @@ def parse_ics_games(
 
         status = "final" if home_score is not None and away_score is not None else "scheduled"
 
-        home_line = GameTeamLine(
-            name=home_name,
-            slug=slugify(home_name),
-            final=home_score,
-        )
-        away_line = GameTeamLine(
-            name=away_name,
-            slug=slugify(away_name),
-            final=away_score,
-        )
+        home_name, home_role = _strip_role_tag(home_name)
+        away_name, away_role = _strip_role_tag(away_name)
+
+        candidate_home = GameTeamLine(name=home_name, slug=slugify(home_name), final=home_score)
+        candidate_away = GameTeamLine(name=away_name, slug=slugify(away_name), final=away_score)
+
+        if home_role == "away" or away_role == "home":
+            home_line, away_line = candidate_away, candidate_home
+        else:
+            home_line, away_line = candidate_home, candidate_away
 
         games.append(
             GameRecord(

@@ -55,7 +55,7 @@ class GameRecord:
     summary_url: Optional[str] = None
 
     def to_dict(self) -> Dict[str, object]:
-        return {
+        record: Dict[str, object] = {
             "game_id": self.game_id,
             "status": self.status,
             "location": self.location,
@@ -67,6 +67,27 @@ class GameRecord:
             "box_score_url": self.box_score_url,
             "summary_url": self.summary_url,
         }
+        # Legacy-friendly surface fields
+        record["home_line"] = record["home"]
+        record["away_line"] = record["away"]
+        record["home"] = self.home.name
+        record["away"] = self.away.name
+        record["home_score"] = self.home.final if self.home.final is not None else ""
+        record["away_score"] = self.away.final if self.away.final is not None else ""
+
+        if self.home.final is not None and self.away.final is not None:
+            record["result"] = f"{self.home.final} - {self.away.final}"
+
+        start = self.start_local or self.start_utc
+        if start:
+            local = self.start_local or start
+            record["datetime"] = local.isoformat()
+            record["date"] = local.strftime("%m/%d/%Y")
+            record["time"] = local.strftime("%I:%M %p").lstrip("0")
+        else:
+            record["datetime"] = None
+
+        return record
 
 
 @dataclass(slots=True)
