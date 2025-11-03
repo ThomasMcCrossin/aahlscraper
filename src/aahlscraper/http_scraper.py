@@ -101,7 +101,9 @@ class AmherstHockeyScraper:
 
         scores_html = self._fetch_scores_page()
         if scores_html:
-            scoreboard_entries = parse_scoreboard(scores_html)
+            scoreboard_entries = [
+                entry for entry in parse_scoreboard(scores_html) if "amherst" in (entry.location or "").lower()
+            ]
             games = merge_games_with_scores(games, scoreboard_entries)
 
         games.sort(

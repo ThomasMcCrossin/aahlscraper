@@ -61,6 +61,14 @@ class AAHLDataProcessor:
             return schedule
         return []
 
+    def load_results(self) -> List[Dict[str, Any]]:
+        """Load final results from JSON if available."""
+        results_json = self.data_dir / "results.json"
+        if results_json.exists():
+            with open(results_json, "r", encoding="utf-8") as handle:
+                return json.load(handle)
+        return []
+
     def load_stats(self) -> List[Dict[str, Any]]:
         """Load player stats from CSV or JSON."""
         stats_csv = self.data_dir / "player_stats.csv"
@@ -104,22 +112,29 @@ class AAHLDataProcessor:
         now = datetime.now()
 
         def has_score(g: Dict[str, Any]) -> bool:
-            # Consider any numeric score as a played game
-            home_score = g.get("home_score")
-            away_score = g.get("away_score")
-            if isinstance(home_score, (int, float)) and isinstance(away_score, (int, float)):
+            def _to_int(val: Any) -> Optional[int]:
+                if isinstance(val, (int, float)):
+                    return int(val)
+                if isinstance(val, str) and val.strip().isdigit():
+                    return int(val.strip())
+                return None
+
+            home_score = _to_int(g.get("home_score"))
+            away_score = _to_int(g.get("away_score"))
+            if home_score is not None and away_score is not None:
                 return True
-            for k in ("result", "score", "home_score", "away_score"):
-                v = g.get(k)
-                if isinstance(v, (int, float)) and v >= 0:
+
+            result_text = g.get("result") or g.get("score")
+            if isinstance(result_text, str):
+                parts = [segment.strip() for segment in result_text.split("-")]
+                if len(parts) == 2 and all(part.isdigit() for part in parts):
                     return True
-                if isinstance(v, str) and v.strip().isdigit():
+
+            for side_key in ("home_line", "away_line"):
+                side = g.get(side_key)
+                if isinstance(side, dict) and side.get("final") is not None:
                     return True
-            # Also catch strings like "3 - 2"
-            for v in g.values():
-                s = (str(v) or "").strip()
-                if s and ("-" in s) and any(ch.isdigit() for ch in s):
-                    return True
+
             return False
 
         def to_dt(g: Dict[str, Any]) -> Optional[datetime]:
@@ -129,7 +144,10 @@ class AAHLDataProcessor:
                 if not value:
                     continue
                 try:
-                    return datetime.fromisoformat(str(value))
+                    dt_val = datetime.fromisoformat(str(value))
+                    if dt_val.tzinfo is not None:
+                        return dt_val.astimezone().replace(tzinfo=None)
+                    return dt_val
                 except Exception:
                     continue
 
@@ -243,7 +261,17 @@ class AAHLDataProcessor:
         standings = self.load_standings()
         top_scorers = self.get_top_scorers(20)
         schedule = self.load_schedule()
-        games = self.filter_amherst_games(schedule)
+        results = self.load_results()
+
+        combined_by_id: Dict[str, Dict[str, Any]] = {}
+
+        for game in schedule:
+            combined_by_id[game.get("game_id", "")] = game
+
+        for game in results:
+            combined_by_id[game.get("game_id", "")] = game
+
+        games = self.filter_amherst_games(list(combined_by_id.values()))
 
         # Format standings
         formatted_standings = []
