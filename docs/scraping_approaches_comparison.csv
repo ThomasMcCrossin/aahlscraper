@@ -1,0 +1,13 @@
+Approach,Category,Details,Recommended
+BeautifulSoup,Speed,Very Fast (100-500ms per page),Yes
+BeautifulSoup,Setup Complexity,Simple - pip install only,Yes
+BeautifulSoup,JavaScript Support,No JavaScript rendering,Try first
+BeautifulSoup,Best Use Case,"Static HTML pages, server-rendered content",ASP.NET sites (most common)
+Playwright,Speed,Slower (2-5 seconds per page),If needed
+Playwright,Setup Complexity,Requires browser installation,Moderate
+Playwright,JavaScript Support,Full JavaScript rendering,Yes
+Playwright,Best Use Case,"Dynamic content, SPAs, AJAX-loaded data",Modern JS frameworks
+Selenium,Speed,Slower (2-5 seconds per page),Fallback
+Selenium,Setup Complexity,Requires driver installation,Moderate
+Selenium,JavaScript Support,Full JavaScript rendering,Yes
+Selenium,Best Use Case,"Fallback option, widely supported",When others fail
