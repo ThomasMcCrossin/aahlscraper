@@ -1,4 +1,3 @@
-```python
 """
 HTTP-based scraper implementation for the Amherst Adult Hockey League site.
 """
@@ -260,4 +259,3 @@ class AmherstHockeyScraper:
                 recent.append(game)
 
         return recent
-```

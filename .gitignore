@@ -50,3 +50,6 @@ Thumbs.db
 # Logs
 *.log
 .env
+
+# MCP configuration (may contain sensitive data)
+.mcp.json
