@@ -141,24 +141,22 @@ The digital display automatically rotates through four sections:
 3. **📊 Last 10 Days Results** - Recent game scores
 4. **📅 Next 10 Days Games** - Upcoming games
 
-### Quick Setup (5 Minutes)
+### Quick Setup (2 Minutes)
+
+**The display now automatically fetches live data from GitHub!** No manual updates needed.
 
 ```bash
-# 1. Scrape the latest data
-python scripts/aahl_cli.py scrape --backend http
-
-# 2. Process data for Yodeck (applies name corrections)
-python aahl_yodeck_processor.py
-
-# 3. Create deployment package
+# 1. Create deployment package
 python aahl_yodeck_setup.py full
 # Creates: aahl_display.zip
 
-# 4. Upload to Yodeck portal
+# 2. Upload to Yodeck portal
 # - Log into Yodeck → Custom Apps → Add New HTML App
 # - Upload aahl_display.zip
 # - Click Save & Push Changes
 ```
+
+That's it! The display will automatically show the latest data that's scraped every 2 hours by GitHub Actions.
 
 ### Features
 
@@ -166,7 +164,17 @@ python aahl_yodeck_setup.py full
 ✅ **Auto-Rotation** - Each section displays for 15 seconds
 ✅ **Professional Design** - Sports-themed colors optimized for viewing
 ✅ **No Dependencies** - Self-contained HTML5 app
-✅ **Auto Updates** - Set up a cron job for automatic data refresh
+✅ **🌟 Fully Automated** - GitHub Actions scrapes data every 2 hours, display auto-updates
+✅ **Cloud-Based** - No server or cron jobs needed, runs entirely on GitHub
+
+### How It Works
+
+1. **GitHub Actions** automatically runs the scraper every 2 hours
+2. Fresh data is committed to the repository (`data/yodeck_display.json`)
+3. The Yodeck display fetches the latest data from GitHub
+4. Your screen automatically shows the most current stats
+
+**Zero maintenance required!** Just upload the display once and it stays updated forever.
 
 ### Documentation
 

@@ -28,6 +28,9 @@ wheels/
 data/*.json
 data/*.csv
 
+# Exception: Allow yodeck_display.json for GitHub Actions auto-updates
+!data/yodeck_display.json
+
 # Yodeck deployment files (generated)
 aahl_display.zip
 exported-assets-temp/

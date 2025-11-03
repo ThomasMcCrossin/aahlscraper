@@ -1,0 +1,50 @@
+name: Scrape AAHL Data
+
+on:
+  schedule:
+    # Run every 2 hours
+    - cron: '0 */2 * * *'
+  workflow_dispatch: # Allow manual trigger
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'scripts/**'
+      - '.github/workflows/scrape-and-deploy.yml'
+
+jobs:
+  scrape-and-process:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 pandas
+
+      - name: Run AAHL scraper
+        run: |
+          python scripts/aahl_cli.py scrape --backend http
+
+      - name: Process data for Yodeck
+        run: |
+          python aahl_yodeck_processor.py
+
+      - name: Commit and push updated data
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/yodeck_display.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update AAHL data - $(date '+%Y-%m-%d %H:%M:%S UTC')" && git push)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -550,9 +550,25 @@
 
         // Load data from external source or use sample data
         function loadData() {
-            // Try to load from external JSON if available
-            // For now, use sample data
-            initializeDisplay(sampleData);
+            // GitHub repository data URL (auto-updated by GitHub Actions)
+            const dataUrl = 'https://raw.githubusercontent.com/ThomasMcCrossin/aahlscraper/main/data/yodeck_display.json';
+
+            fetch(dataUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch data from GitHub');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Successfully loaded data from GitHub');
+                    console.log('Data timestamp:', data.timestamp);
+                    initializeDisplay(data);
+                })
+                .catch(error => {
+                    console.warn('Could not load data from GitHub, using sample data:', error);
+                    initializeDisplay(sampleData);
+                });
         }
 
         // Start the application
