@@ -1,3 +1,4 @@
+```python
 #!/usr/bin/env python3
 """
 AAHL Data Processor for Yodeck Display
@@ -9,7 +10,7 @@ import csv
 import re
 from pathlib import Path
 from datetime import datetime, timedelta
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Optional
 
 class AAHLDataProcessor:
     """Process AAHL scraper data with corrections and formatting for Yodeck display."""
@@ -98,49 +99,85 @@ class AAHLDataProcessor:
     def filter_amherst_games(self, schedule: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
         """Filter schedule for Amherst games, split into completed and upcoming.
 
-        Note: AAHL website doesn't provide dates, so we split by:
-        - Recent results: games with scores (completed)
-        - Upcoming games: games without scores (scheduled)
+        Uses per-game ISO "datetime" when available; otherwise falls back to date header
+        parsing and/or presence of a numeric score.
         """
-        recent_results = []
-        upcoming_games = []
+        now = datetime.now()
+
+        def has_score(g: Dict[str, Any]) -> bool:
+            # Consider any numeric score as a played game
+            for k in ("result", "score", "home_score", "away_score"):
+                v = (g.get(k) or "").strip()
+                if v.isdigit():
+                    return True
+            # Also catch strings like "3 - 2"
+            for v in g.values():
+                s = (str(v) or "").strip()
+                if s and ("-" in s) and any(ch.isdigit() for ch in s):
+                    return True
+            return False
+
+        def to_dt(g: Dict[str, Any]) -> Optional[datetime]:
+            # Prefer explicit ISO datetime
+            if g.get("datetime"):
+                try:
+                    return datetime.fromisoformat(g["datetime"])
+                except Exception:
+                    pass
+            # Try combining date header + time
+            date_txt = (g.get("date") or "").strip()
+            time_txt = (g.get("time") or "").strip()
+            if date_txt and time_txt:
+                for fmt in ("%A, %B %d, %Y %I:%M %p", "%A, %B %d, %Y %I %p", "%A, %B %d, %Y %H:%M"):
+                    try:
+                        return datetime.strptime(f"{date_txt} {time_txt}", fmt)
+                    except ValueError:
+                        continue
+            if date_txt:
+                try:
+                    return datetime.strptime(date_txt, "%A, %B %d, %Y")
+                except Exception:
+                    return None
+            return None
+
+        amherst_recent: List[Dict[str, Any]] = []
+        amherst_upcoming: List[Dict[str, Any]] = []
 
         for game in schedule:
             try:
-                # Check if game involves Amherst location
-                location = game.get('location', game.get('Location', '')).lower()
-                home = game.get('home', game.get('Home', '')).lower()
-                away = game.get('away', game.get('Away', '')).lower()
+                location = (game.get('location', game.get('Location', '')) or '').lower()
+                if 'amherst' not in location:
+                    continue
 
-                is_amherst_location = 'amherst' in location
+                game_copy = game.copy()
+                # Name corrections
+                for side in ("home", "away"):
+                    if side in game_copy and isinstance(game_copy[side], str):
+                        game_copy[side] = self.correct_names(game_copy[side])
 
-                if is_amherst_location:
-                    # Apply name corrections
-                    game_copy = game.copy()
-                    if 'home' in game_copy:
-                        game_copy['home'] = self.correct_names(game_copy['home'])
-                    if 'away' in game_copy:
-                        game_copy['away'] = self.correct_names(game_copy['away'])
+                dt = to_dt(game_copy)
+                played = has_score(game_copy)
 
-                    # Check if game has a score/result (indicates it's been played)
-                    score = game.get('', '')  # Empty key contains the score
-                    has_result = bool(score and score.strip())
-
-                    if has_result:
-                        # Game has been played
-                        game_copy['result'] = score
-                        recent_results.append(game_copy)
-                    else:
-                        # Game is upcoming
-                        upcoming_games.append(game_copy)
+                if played or (dt and dt < now):
+                    amherst_recent.append(game_copy)
+                else:
+                    amherst_upcoming.append(game_copy)
 
             except Exception as e:
                 print(f"Error processing game: {e}")
                 continue
 
+        # Sort: recent newest first, upcoming earliest first
+        def sort_key(g: Dict[str, Any]):
+            d = to_dt(g)
+            return d or datetime.max
+
+        recent_sorted = sorted(amherst_recent, key=sort_key, reverse=True)[:10]
+        upcoming_sorted = sorted(amherst_upcoming, key=sort_key)[:10]
+
         return {
-            'recent_results': recent_results[:10],  # Last 10 completed Amherst games
-            'upcoming_games': upcoming_games[:10]    # Next 10 upcoming Amherst games
+            'recent_results': recent_sorted,
+            'upcoming_games': upcoming_sorted,
         }
 
     def get_top_scorers(self, limit: int = 20) -> List[Dict[str, Any]]:
@@ -150,13 +187,10 @@ class AAHLDataProcessor:
         # Parse points from various field names
         for stat in stats:
             try:
-                # Try 'pts' field first (most common)
                 if 'pts' in stat and stat['pts']:
                     stat['points'] = int(stat['pts'])
-                # Try 'points' field
                 elif 'points' in stat and stat['points']:
                     stat['points'] = int(stat['points'])
-                # Calculate from g + a
                 elif 'g' in stat and 'a' in stat:
                     goals = int(stat.get('g', 0) or 0)
                     assists = int(stat.get('a', 0) or 0)
@@ -168,10 +202,8 @@ class AAHLDataProcessor:
             except (ValueError, TypeError):
                 stat['points'] = 0
 
-        # Sort and limit
         sorted_stats = sorted(stats, key=lambda x: x.get('points', 0), reverse=True)[:limit]
 
-        # Add rank and apply name corrections
         ranked = []
         for idx, stat in enumerate(sorted_stats, 1):
             stat_copy = stat.copy()
@@ -194,7 +226,6 @@ class AAHLDataProcessor:
         # Format standings
         formatted_standings = []
         for team in standings:
-            # Parse wins/losses from 'record' field (e.g., "5-1")
             wins = 0
             losses = 0
             record = team.get('record', team.get('Record', ''))
@@ -206,7 +237,6 @@ class AAHLDataProcessor:
                 except (ValueError, IndexError):
                     pass
 
-            # Get points from 'pts' or 'points' field
             points = 0
             try:
                 if 'pts' in team and team['pts'] and team['pts'] != '-':
@@ -245,8 +275,7 @@ class AAHLDataProcessor:
 # Example usage
 if __name__ == "__main__":
     processor = AAHLDataProcessor()
-
-    # Generate and save Yodeck data
     data = processor.save_yodeck_data()
     print("Generated Yodeck display data:")
     print(json.dumps(data, indent=2)[:500] + "...")
+```
