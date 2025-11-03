@@ -460,7 +460,7 @@
                 card.innerHTML = `
                     <div class="scorer-rank">#${scorer.rank}</div>
                     <div class="scorer-info">
-                        <div class="scorer-name">${scorer.player_name}</div>
+                        <div class="scorer-name">${scorer.name}</div>
                         <div class="scorer-team">${scorer.team}</div>
                     </div>
                     <div class="scorer-points">${scorer.points}</div>
@@ -473,16 +473,22 @@
         function renderResults(results) {
             const list = document.getElementById('resultsList');
             list.innerHTML = '';
+            if (results.length === 0) {
+                list.innerHTML = '<div style="text-align: center; padding: 40px; color: #a8d0ff;">No recent results available</div>';
+                return;
+            }
             results.forEach(game => {
                 const card = document.createElement('div');
                 card.className = 'game-card';
+                const dateStr = game.date ? formatDate(game.date) : game.time || 'Recent Game';
                 card.innerHTML = `
-                    <div class="game-date">${formatDate(game.date)}</div>
+                    <div class="game-date">${dateStr}</div>
                     <div class="game-matchup">
-                        <div class="team-name">${game.home_team}</div>
-                        <div class="game-score">${game.home_score} - ${game.away_score}</div>
-                        <div class="team-name" style="text-align: right;">${game.away_team}</div>
+                        <div class="team-name">${game.away || game.away_team || 'Away'}</div>
+                        <div class="game-score">${game.result || game.score || 'vs'}</div>
+                        <div class="team-name" style="text-align: right;">${game.home || game.home_team || 'Home'}</div>
                     </div>
+                    <div class="game-location">📍 ${game.location || ''}</div>
                 `;
                 list.appendChild(card);
             });
@@ -492,18 +498,23 @@
         function renderUpcoming(games) {
             const list = document.getElementById('upcomingList');
             list.innerHTML = '';
+            if (games.length === 0) {
+                list.innerHTML = '<div style="text-align: center; padding: 40px; color: #a8d0ff;">No upcoming games available</div>';
+                return;
+            }
             games.forEach(game => {
                 const card = document.createElement('div');
                 card.className = 'game-card';
+                const dateStr = game.date ? formatDate(game.date) : 'Upcoming';
                 card.innerHTML = `
-                    <div class="game-date">${formatDate(game.date)}</div>
+                    <div class="game-date">${dateStr}</div>
                     <div class="game-matchup">
-                        <div class="team-name">${game.home_team}</div>
+                        <div class="team-name">${game.away || game.away_team || 'Away'}</div>
                         <div class="vs-text">VS</div>
-                        <div class="team-name" style="text-align: right;">${game.away_team}</div>
+                        <div class="team-name" style="text-align: right;">${game.home || game.home_team || 'Home'}</div>
                     </div>
-                    <div class="game-time">⏰ ${game.time}</div>
-                    <div class="game-location">📍 ${game.location}</div>
+                    <div class="game-time">⏰ ${game.time || 'TBD'}</div>
+                    <div class="game-location">📍 ${game.location || 'Amherst'}</div>
                 `;
                 list.appendChild(card);
             });
