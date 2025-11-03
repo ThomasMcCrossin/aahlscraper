@@ -1,3 +1,4 @@
+```python
 """
 HTTP-based scraper implementation for the Amherst Adult Hockey League site.
 """
@@ -62,58 +63,112 @@ class AmherstHockeyScraper:
         return BeautifulSoup(response.text, "html.parser")
 
     def scrape_schedule(self, format_type: str = "List", date_filter: str = "ALL") -> List[Dict[str, str]]:
+        """Scrape schedule while propagating date headers down to each game row.
+
+        The AAHL site groups games under a date header (e.g., "Sunday, November 2, 2025").
+        We walk the DOM in order, track the last seen date-looking header, and stamp it
+        into each subsequent game row. When possible, we also compute an ISO "datetime"
+        from the header date + row time for easier downstream sorting.
+        """
         soup = self._fetch_soup("schedule", format=format_type, d=date_filter)
         if soup is None:
             return []
 
-        table = find_best_table(soup, TABLE_CLASS_CANDIDATES)
-        if table is None:
-            print("No schedule table found")
-            return []
+        def looks_like_date(text: str) -> bool:
+            text = (text or "").strip()
+            try:
+                # Example: "Sunday, November 2, 2025"
+                datetime.strptime(text, "%A, %B %d, %Y")
+                return True
+            except Exception:
+                return False
 
-        rows = _extract_rows(table)
-        if not rows:
-            return []
-
-        # Parse headers like the stats scraper does
-        headers: List[str] = [normalize_header(cell) for cell in rows[0]]
-        data_rows = rows[1:] if len(rows) > 1 else rows
+        def parse_time_to_iso(date_str: str, time_str: str) -> Optional[str]:
+            if not date_str or not time_str:
+                return None
+            try:
+                base = datetime.strptime(date_str.strip(), "%A, %B %d, %Y").date()
+            except Exception:
+                return None
+            t_raw = time_str.strip().upper().replace(".", "")
+            for fmt in ("%I:%M %p", "%I %p", "%H:%M"):
+                try:
+                    t = datetime.strptime(t_raw, fmt).time()
+                    return datetime.combine(base, t).isoformat()
+                except ValueError:
+                    continue
+            return None
 
         games: List[Dict[str, str]] = []
-        current_date = ""  # Track the current date from header rows
+        current_date_header = ""
 
-        for cells in data_rows:
-            if len(cells) < 2:
+        # Consider headings/strong/divs and rows, in document order
+        for el in soup.find_all(["h1", "h2", "h3", "h4", "div", "strong", "tr"], recursive=True):
+            text = el.get_text(" ", strip=True)
+
+            # Update current header-date when encountered anywhere above the table rows
+            if looks_like_date(text):
+                current_date_header = text
                 continue
 
-            # Check if this is a date header row (single cell with a date like "Tuesday, October 28, 2025")
-            if len(cells) == 1 and any(month in cells[0] for month in ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']):
-                current_date = cells[0]
-                continue  # Skip to next row
+            # Skip week-range headers like "Mon, 10/27/25 to Sun, 11/2/25  Week 3"
+            if (el.name != "tr") and ("Week" in text):
+                continue
 
-            # Check if this is a week header (like "Mon, 10/27/25 to Sun, 11/2/25  Week 3")
-            if len(cells) == 1 and 'Week' in cells[0]:
-                continue  # Skip week headers
+            # Treat table rows as potential games
+            if el.name == "tr":
+                tds = el.find_all("td")
+                if not tds:
+                    continue
+                cells = [td.get_text(strip=True) for td in tds]
 
-            # Use headers if available, otherwise use generic column names
-            if headers and len(headers) == len(cells):
-                game = {headers[i]: cells[i] for i in range(len(cells))}
-            else:
-                # Fallback to assumed structure
-                padded = cells + [""] * max(0, 6 - len(cells))
-                game = {
-                    "time": padded[0],
-                    "away": padded[1] if len(padded) > 1 else "",
-                    "away_score": padded[2] if len(padded) > 2 else "",
-                    "vs": padded[3] if len(padded) > 3 else "",
-                    "home": padded[4] if len(padded) > 4 else "",
-                    "home_score": padded[5] if len(padded) > 5 else "",
-                    "location": padded[6] if len(padded) > 6 else "",
+                # Ignore divider/single-cell date/week rows inside tables
+                if len(cells) == 1 and (looks_like_date(cells[0]) or "Week" in cells[0]):
+                    continue
+
+                # Heuristic mapping (robust to minor layout shifts)
+                time_candidate = cells[0] if len(cells) >= 1 else ""
+                location_candidate = cells[1] if len(cells) >= 2 else ""
+
+                away = ""
+                home = ""
+                away_score = ""
+                home_score = ""
+
+                if len(cells) >= 5:
+                    # Typical: [time, rink, away, away_score?, 'vs'?, home, home_score?]
+                    away = cells[2]
+                    if len(cells) >= 4 and cells[3].isdigit():
+                        away_score = cells[3]
+                    # If last cell looks numeric, treat it as home_score, with name preceding
+                    if cells[-1].isdigit():
+                        home_score = cells[-1]
+                        home = cells[-2] if len(cells) >= 2 else ""
+                    else:
+                        home = cells[-1]
+
+                # Box score link, if present in the row
+                box = None
+                a = el.find("a", string=lambda s: s and "Box" in s)
+                if a and a.get("href"):
+                    box = a["href"].strip()
+
+                game: Dict[str, str] = {
+                    "date": current_date_header,  # carry down header date text
+                    "time": time_candidate,
+                    "location": location_candidate,
+                    "away": away,
+                    "away_score": away_score,
+                    "home": home,
+                    "home_score": home_score,
+                    "box_score_url": box or "",
                 }
 
-            # Add the current date to the game
-            game['date'] = current_date
-            games.append(game)
+                iso_dt = parse_time_to_iso(current_date_header, time_candidate)
+                if iso_dt:
+                    game["datetime"] = iso_dt
+
+                games.append(game)
 
         return games
 
@@ -186,7 +241,17 @@ class AmherstHockeyScraper:
 
         recent: List[Dict[str, str]] = []
         for game in games:
-            parsed = parse_game_date(game.get("date", ""))
+            # Prefer explicit ISO datetime if present
+            dt_txt = game.get("datetime")
+            parsed = None
+            if dt_txt:
+                try:
+                    parsed = datetime.fromisoformat(dt_txt)
+                except Exception:
+                    parsed = None
+            if parsed is None:
+                parsed = parse_game_date(game.get("date", ""))
+
             if parsed is None:
                 recent.append(game)
                 continue
@@ -195,3 +260,4 @@ class AmherstHockeyScraper:
                 recent.append(game)
 
         return recent
+```
