@@ -28,6 +28,11 @@ wheels/
 data/*.json
 data/*.csv
 
+# Yodeck deployment files (generated)
+aahl_display.zip
+exported-assets-temp/
+exported-assets*.zip
+
 # IDE
 .vscode/
 .idea/

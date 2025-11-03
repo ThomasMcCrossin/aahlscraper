@@ -9,6 +9,7 @@ A web scraper for the Amherst Adult Hockey League website that extracts schedule
 - **Multiple Output Formats**: JSON and CSV exports
 - **Built-in Diagnostics**: Automatically determines which backend to use
 - **CLI and Python API**: Use from command line or import as a package
+- **🆕 Yodeck Digital Signage Integration**: Professional display for stadium/canteen screens
 
 ## Quick Start
 
@@ -127,6 +128,59 @@ aahlscraper/
 
 ### Optional (Playwright Backend)
 - `playwright` - Browser automation (only if needed)
+
+## 🏒 Yodeck Digital Signage Integration
+
+Display live AAHL hockey stats on your stadium or canteen TV screens using Yodeck!
+
+### What It Shows
+
+The digital display automatically rotates through four sections:
+1. **🏆 Team Standings** - Current league standings
+2. **🎯 Top 20 Scorers** - Player rankings by points
+3. **📊 Last 10 Days Results** - Recent game scores
+4. **📅 Next 10 Days Games** - Upcoming games
+
+### Quick Setup (5 Minutes)
+
+```bash
+# 1. Scrape the latest data
+python scripts/aahl_cli.py scrape --backend http
+
+# 2. Process data for Yodeck (applies name corrections)
+python aahl_yodeck_processor.py
+
+# 3. Create deployment package
+python aahl_yodeck_setup.py full
+# Creates: aahl_display.zip
+
+# 4. Upload to Yodeck portal
+# - Log into Yodeck → Custom Apps → Add New HTML App
+# - Upload aahl_display.zip
+# - Click Save & Push Changes
+```
+
+### Features
+
+✅ **Smart Name Corrections** - Automatically fixes player names
+✅ **Auto-Rotation** - Each section displays for 15 seconds
+✅ **Professional Design** - Sports-themed colors optimized for viewing
+✅ **No Dependencies** - Self-contained HTML5 app
+✅ **Auto Updates** - Set up a cron job for automatic data refresh
+
+### Documentation
+
+See the `yodeck-docs/` folder for complete documentation:
+- `README.md` - Full overview and features
+- `quick-start.md` - 2-minute setup guide
+- `yodeck-integration-guide.md` - Detailed integration steps
+- `STADIUM_DISPLAY_GUIDE.md` - Display optimization tips
+
+### Files
+
+- `index.html` - Yodeck display application (upload to Yodeck)
+- `aahl_yodeck_processor.py` - Data processor with name corrections
+- `aahl_yodeck_setup.py` - Automated deployment helper
 
 ## License
 

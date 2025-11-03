@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAHL Display - Amherst Adult Hockey League</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            background: linear-gradient(135deg, #1a2a3a 0%, #0d1821 100%);
+            color: #ffffff;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #1e3a5f 0%, #2a5a8f 100%);
+            padding: 30px 40px;
+            text-align: center;
+            border-bottom: 5px solid #4a9eff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 1.4em;
+            color: #a8d0ff;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .content-container {
+            flex: 1;
+            padding: 40px 60px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-size: 2.8em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #4a9eff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            padding-bottom: 20px;
+            border-bottom: 3px solid #4a9eff;
+        }
+
+        /* Standings Table */
+        .standings-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 1.8em;
+        }
+
+        .standings-table thead {
+            background: #2a5a8f;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .standings-table th,
+        .standings-table td {
+            padding: 25px 30px;
+            text-align: left;
+            border-bottom: 2px solid rgba(74, 158, 255, 0.3);
+        }
+
+        .standings-table th {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .standings-table tbody tr {
+            background: rgba(42, 90, 143, 0.2);
+            transition: background 0.3s;
+        }
+
+        .standings-table tbody tr:nth-child(even) {
+            background: rgba(42, 90, 143, 0.1);
+        }
+
+        .standings-table tbody tr:hover {
+            background: rgba(74, 158, 255, 0.2);
+        }
+
+        .standings-table .rank {
+            font-weight: bold;
+            color: #4a9eff;
+            width: 80px;
+        }
+
+        .standings-table .points {
+            font-weight: bold;
+            color: #ffca28;
+            font-size: 1.2em;
+        }
+
+        /* Scorers List */
+        .scorers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .scorer-card {
+            background: rgba(42, 90, 143, 0.3);
+            padding: 20px 30px;
+            border-radius: 10px;
+            border-left: 5px solid #4a9eff;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .scorer-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 15px rgba(74, 158, 255, 0.4);
+        }
+
+        .scorer-rank {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ffca28;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .scorer-info {
+            flex: 1;
+        }
+
+        .scorer-name {
+            font-size: 1.6em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .scorer-team {
+            font-size: 1.2em;
+            color: #a8d0ff;
+        }
+
+        .scorer-points {
+            font-size: 2em;
+            font-weight: bold;
+            color: #4a9eff;
+        }
+
+        /* Results & Upcoming Games */
+        .games-list {
+            margin-top: 20px;
+        }
+
+        .game-card {
+            background: rgba(42, 90, 143, 0.3);
+            padding: 30px 40px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-left: 6px solid #4a9eff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .game-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 15px rgba(74, 158, 255, 0.4);
+        }
+
+        .game-date {
+            font-size: 1.4em;
+            color: #ffca28;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .game-matchup {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .team-name {
+            font-weight: bold;
+            flex: 1;
+        }
+
+        .game-score {
+            font-size: 2em;
+            font-weight: bold;
+            color: #4a9eff;
+            margin: 0 30px;
+        }
+
+        .vs-text {
+            color: #a8d0ff;
+            margin: 0 30px;
+            font-weight: normal;
+        }
+
+        .game-time {
+            font-size: 1.3em;
+            color: #a8d0ff;
+            margin-top: 10px;
+        }
+
+        .game-location {
+            font-size: 1.2em;
+            color: #ffca28;
+            margin-top: 5px;
+        }
+
+        /* Section Indicator */
+        .section-indicator {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .indicator-dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: all 0.3s;
+        }
+
+        .indicator-dot.active {
+            background: #4a9eff;
+            transform: scale(1.3);
+        }
+
+        /* Scrollbar styling */
+        .section::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .section::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .section::-webkit-scrollbar-thumb {
+            background: #4a9eff;
+            border-radius: 5px;
+        }
+
+        .section::-webkit-scrollbar-thumb:hover {
+            background: #2a7adf;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Amherst Adult Hockey League</h1>
+        <div class="subtitle" id="currentSection">Team Standings</div>
+    </div>
+
+    <div class="content-container">
+        <!-- Standings Section -->
+        <div class="section active" id="standings">
+            <div class="section-title">Team Standings</div>
+            <table class="standings-table">
+                <thead>
+                    <tr>
+                        <th class="rank">#</th>
+                        <th>Team</th>
+                        <th style="text-align: center;">Wins</th>
+                        <th style="text-align: center;">Losses</th>
+                        <th style="text-align: center;">Points</th>
+                    </tr>
+                </thead>
+                <tbody id="standingsBody">
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Top Scorers Section -->
+        <div class="section" id="scorers">
+            <div class="section-title">Top 20 Scorers</div>
+            <div class="scorers-grid" id="scorersGrid">
+            </div>
+        </div>
+
+        <!-- Recent Results Section -->
+        <div class="section" id="results">
+            <div class="section-title">Recent Results</div>
+            <div class="games-list" id="resultsList">
+            </div>
+        </div>
+
+        <!-- Upcoming Games Section -->
+        <div class="section" id="upcoming">
+            <div class="section-title">Upcoming Games in Amherst</div>
+            <div class="games-list" id="upcomingList">
+            </div>
+        </div>
+    </div>
+
+    <div class="section-indicator">
+        <div class="indicator-dot active" data-section="0"></div>
+        <div class="indicator-dot" data-section="1"></div>
+        <div class="indicator-dot" data-section="2"></div>
+        <div class="indicator-dot" data-section="3"></div>
+    </div>
+
+    <script>
+        // Sample data with name corrections applied
+        const sampleData = {
+            standings: [
+                { team: "Amherst Hawks", wins: 8, losses: 2, points: 16 },
+                { team: "Downtown Small", wins: 7, losses: 3, points: 14 },
+                { team: "Frontier City", wins: 6, losses: 4, points: 12 },
+                { team: "Maple Grove", wins: 5, losses: 5, points: 10 },
+                { team: "Ice Storm", wins: 4, losses: 6, points: 8 },
+                { team: "Thunder Bay", wins: 3, losses: 7, points: 6 },
+                { team: "Valley Vipers", wins: 2, losses: 8, points: 4 }
+            ],
+            top_scorers: [
+                { rank: 1, player_name: "Marshall MacDonald", team: "Amherst Hawks", points: 24 },
+                { rank: 2, player_name: "Thomas McCrossin", team: "Downtown Small", points: 22 },
+                { rank: 3, player_name: "Jake Thompson", team: "Frontier City", points: 20 },
+                { rank: 4, player_name: "Ryan Smith", team: "Maple Grove", points: 18 },
+                { rank: 5, player_name: "Chris Bergeron", team: "Amherst Hawks", points: 17 },
+                { rank: 6, player_name: "Mike Johnson", team: "Downtown Small", points: 16 },
+                { rank: 7, player_name: "David Wilson", team: "Ice Storm", points: 15 },
+                { rank: 8, player_name: "Pat Murphy", team: "Thunder Bay", points: 14 },
+                { rank: 9, player_name: "Steve Anderson", team: "Frontier City", points: 14 },
+                { rank: 10, player_name: "Brian Kelly", team: "Amherst Hawks", points: 13 },
+                { rank: 11, player_name: "Mark Sullivan", team: "Valley Vipers", points: 13 },
+                { rank: 12, player_name: "Tim O'Brien", team: "Maple Grove", points: 12 },
+                { rank: 13, player_name: "Kevin Brown", team: "Downtown Small", points: 12 },
+                { rank: 14, player_name: "Dan McCarthy", team: "Ice Storm", points: 11 },
+                { rank: 15, player_name: "Paul Martin", team: "Thunder Bay", points: 11 },
+                { rank: 16, player_name: "Sean O'Connor", team: "Frontier City", points: 10 },
+                { rank: 17, player_name: "Rob Taylor", team: "Amherst Hawks", points: 10 },
+                { rank: 18, player_name: "Joe Parker", team: "Valley Vipers", points: 9 },
+                { rank: 19, player_name: "Matt Hughes", team: "Maple Grove", points: 9 },
+                { rank: 20, player_name: "Eric Davis", team: "Downtown Small", points: 8 }
+            ],
+            recent_results: [
+                { date: "2025-10-31", home_team: "Amherst Hawks", away_team: "Frontier City", home_score: 5, away_score: 3 },
+                { date: "2025-10-28", home_team: "Downtown Small", away_team: "Maple Grove", home_score: 4, away_score: 2 },
+                { date: "2025-10-26", home_team: "Frontier City", away_team: "Amherst Hawks", home_score: 2, away_score: 6 },
+                { date: "2025-10-24", home_team: "Ice Storm", away_team: "Thunder Bay", home_score: 3, away_score: 3 },
+                { date: "2025-10-22", home_team: "Valley Vipers", away_team: "Downtown Small", home_score: 1, away_score: 5 },
+                { date: "2025-10-20", home_team: "Maple Grove", away_team: "Ice Storm", home_score: 4, away_score: 1 },
+                { date: "2025-10-18", home_team: "Thunder Bay", away_team: "Amherst Hawks", home_score: 2, away_score: 7 }
+            ],
+            upcoming_games: [
+                { date: "2025-11-07", time: "8:00 PM", home_team: "Amherst Hawks", away_team: "Maple Grove", location: "Amherst Ice Arena" },
+                { date: "2025-11-09", time: "7:30 PM", home_team: "Downtown Small", away_team: "Amherst Hawks", location: "Amherst Ice Arena" },
+                { date: "2025-11-12", time: "8:00 PM", home_team: "Amherst Hawks", away_team: "Frontier City", location: "Amherst Ice Arena" },
+                { date: "2025-11-14", time: "7:00 PM", home_team: "Thunder Bay", away_team: "Valley Vipers", location: "Amherst Ice Arena" },
+                { date: "2025-11-16", time: "8:30 PM", home_team: "Amherst Hawks", away_team: "Ice Storm", location: "Amherst Ice Arena" }
+            ]
+        };
+
+        // Name correction function
+        function correctName(name) {
+            if (!name) return name;
+            // Replace Meathead with Marshall
+            name = name.replace(/Meathead/gi, 'Marshall');
+            // Fix McCrossin capitalization
+            name = name.replace(/Mccrossin/g, 'McCrossin');
+            return name;
+        }
+
+        // Apply name corrections to data
+        function correctDataNames(data) {
+            if (data.top_scorers) {
+                data.top_scorers = data.top_scorers.map(scorer => ({
+                    ...scorer,
+                    player_name: correctName(scorer.player_name)
+                }));
+            }
+            return data;
+        }
+
+        // Format date
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+            return date.toLocaleDateString('en-US', options);
+        }
+
+        // Render standings
+        function renderStandings(standings) {
+            const tbody = document.getElementById('standingsBody');
+            tbody.innerHTML = '';
+            standings.forEach((team, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="rank">${index + 1}</td>
+                    <td>${team.team}</td>
+                    <td style="text-align: center;">${team.wins}</td>
+                    <td style="text-align: center;">${team.losses}</td>
+                    <td class="points" style="text-align: center;">${team.points}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Render top scorers
+        function renderScorers(scorers) {
+            const grid = document.getElementById('scorersGrid');
+            grid.innerHTML = '';
+            scorers.slice(0, 20).forEach(scorer => {
+                const card = document.createElement('div');
+                card.className = 'scorer-card';
+                card.innerHTML = `
+                    <div class="scorer-rank">#${scorer.rank}</div>
+                    <div class="scorer-info">
+                        <div class="scorer-name">${scorer.player_name}</div>
+                        <div class="scorer-team">${scorer.team}</div>
+                    </div>
+                    <div class="scorer-points">${scorer.points}</div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Render recent results
+        function renderResults(results) {
+            const list = document.getElementById('resultsList');
+            list.innerHTML = '';
+            results.forEach(game => {
+                const card = document.createElement('div');
+                card.className = 'game-card';
+                card.innerHTML = `
+                    <div class="game-date">${formatDate(game.date)}</div>
+                    <div class="game-matchup">
+                        <div class="team-name">${game.home_team}</div>
+                        <div class="game-score">${game.home_score} - ${game.away_score}</div>
+                        <div class="team-name" style="text-align: right;">${game.away_team}</div>
+                    </div>
+                `;
+                list.appendChild(card);
+            });
+        }
+
+        // Render upcoming games
+        function renderUpcoming(games) {
+            const list = document.getElementById('upcomingList');
+            list.innerHTML = '';
+            games.forEach(game => {
+                const card = document.createElement('div');
+                card.className = 'game-card';
+                card.innerHTML = `
+                    <div class="game-date">${formatDate(game.date)}</div>
+                    <div class="game-matchup">
+                        <div class="team-name">${game.home_team}</div>
+                        <div class="vs-text">VS</div>
+                        <div class="team-name" style="text-align: right;">${game.away_team}</div>
+                    </div>
+                    <div class="game-time">⏰ ${game.time}</div>
+                    <div class="game-location">📍 ${game.location}</div>
+                `;
+                list.appendChild(card);
+            });
+        }
+
+        // Section rotation
+        let currentSectionIndex = 0;
+        const sections = ['standings', 'scorers', 'results', 'upcoming'];
+        const sectionTitles = ['Team Standings', 'Top 20 Scorers', 'Recent Results', 'Upcoming Games in Amherst'];
+        const rotationInterval = 15000; // 15 seconds
+
+        function switchSection(index) {
+            // Remove active class from all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all indicators
+            document.querySelectorAll('.indicator-dot').forEach(dot => {
+                dot.classList.remove('active');
+            });
+
+            // Add active class to current section
+            document.getElementById(sections[index]).classList.add('active');
+            document.querySelector(`.indicator-dot[data-section="${index}"]`).classList.add('active');
+            document.getElementById('currentSection').textContent = sectionTitles[index];
+            
+            currentSectionIndex = index;
+        }
+
+        function nextSection() {
+            currentSectionIndex = (currentSectionIndex + 1) % sections.length;
+            switchSection(currentSectionIndex);
+        }
+
+        // Initialize with sample data
+        function initializeDisplay(data) {
+            const correctedData = correctDataNames(data);
+            renderStandings(correctedData.standings);
+            renderScorers(correctedData.top_scorers);
+            renderResults(correctedData.recent_results);
+            renderUpcoming(correctedData.upcoming_games);
+        }
+
+        // Load data from external source or use sample data
+        function loadData() {
+            // Try to load from external JSON if available
+            // For now, use sample data
+            initializeDisplay(sampleData);
+        }
+
+        // Start the application
+        loadData();
+        
+        // Start rotation
+        setInterval(nextSection, rotationInterval);
+
+        // Yodeck lifecycle hooks (optional)
+        if (window.parent && window.parent.YodeckAPI) {
+            window.parent.YodeckAPI.onShown = function() {
+                console.log('Display shown');
+            };
+            
+            window.parent.YodeckAPI.onHidden = function() {
+                console.log('Display hidden');
+            };
+        }
+
+        // Allow manual navigation with keyboard (for testing)
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') {
+                nextSection();
+            } else if (e.key === 'ArrowLeft') {
+                currentSectionIndex = (currentSectionIndex - 1 + sections.length) % sections.length;
+                switchSection(currentSectionIndex);
+            }
+        });
+    </script>
+</body>
+</html>
