@@ -153,17 +153,26 @@ class AAHLDataProcessor:
         """Get top scorers with corrections applied."""
         stats = self.load_stats()
 
-        # Try to sort by points/goals+assists
-        try:
-            for stat in stats:
-                if 'points' not in stat:
-                    goals = int(stat.get('goals', stat.get('Goals', 0)))
-                    assists = int(stat.get('assists', stat.get('Assists', 0)))
+        # Parse points from various field names
+        for stat in stats:
+            try:
+                # Try 'pts' field first (most common)
+                if 'pts' in stat and stat['pts']:
+                    stat['points'] = int(stat['pts'])
+                # Try 'points' field
+                elif 'points' in stat and stat['points']:
+                    stat['points'] = int(stat['points'])
+                # Calculate from g + a
+                elif 'g' in stat and 'a' in stat:
+                    goals = int(stat.get('g', 0) or 0)
+                    assists = int(stat.get('a', 0) or 0)
                     stat['points'] = goals + assists
                 else:
-                    stat['points'] = int(stat['points'])
-        except (ValueError, TypeError):
-            pass
+                    goals = int(stat.get('goals', stat.get('Goals', 0)) or 0)
+                    assists = int(stat.get('assists', stat.get('Assists', 0)) or 0)
+                    stat['points'] = goals + assists
+            except (ValueError, TypeError):
+                stat['points'] = 0
 
         # Sort and limit
         sorted_stats = sorted(stats, key=lambda x: x.get('points', 0), reverse=True)[:limit]
@@ -191,11 +200,35 @@ class AAHLDataProcessor:
         # Format standings
         formatted_standings = []
         for team in standings:
+            # Parse wins/losses from 'record' field (e.g., "5-1")
+            wins = 0
+            losses = 0
+            record = team.get('record', team.get('Record', ''))
+            if record and '-' in record:
+                try:
+                    parts = record.split('-')
+                    wins = int(parts[0])
+                    losses = int(parts[1])
+                except (ValueError, IndexError):
+                    pass
+
+            # Get points from 'pts' or 'points' field
+            points = 0
+            try:
+                if 'pts' in team and team['pts'] and team['pts'] != '-':
+                    points = int(team['pts'])
+                elif 'points' in team:
+                    points = int(team.get('points', 0))
+                elif 'Points' in team:
+                    points = int(team.get('Points', 0))
+            except (ValueError, TypeError):
+                pass
+
             formatted_standings.append({
                 'team': self.correct_names(team.get('team', team.get('Team', ''))),
-                'wins': int(team.get('wins', team.get('Wins', 0))),
-                'losses': int(team.get('losses', team.get('Losses', 0))),
-                'points': int(team.get('points', team.get('Points', 0))),
+                'wins': wins,
+                'losses': losses,
+                'points': points,
             })
 
         return {
