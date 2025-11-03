@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-03T09:29:16.085147",
+  "timestamp": "2025-11-03T13:41:23.160334",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -394,6 +394,169 @@
       "rank": 20
     }
   ],
-  "recent_results": [],
-  "upcoming_games": []
+  "recent_results": [
+    {
+      "time": "8:45\u00a0pm",
+      "away": "Maltby Sports",
+      "": "4L",
+      "home": "Ultramar",
+      "location": "Amherst",
+      "date": "",
+      "result": "4L"
+    },
+    {
+      "time": "10:00\u00a0pm",
+      "away": "Colson Overhead Doors",
+      "": "6W",
+      "home": "J&K Electric",
+      "location": "Amherst",
+      "date": "",
+      "result": "6W"
+    },
+    {
+      "time": "9:00\u00a0pm",
+      "away": "Maltby Sports",
+      "": "2L",
+      "home": "G.R. Mitchell Welding",
+      "location": "Amherst",
+      "date": "",
+      "result": "2L"
+    },
+    {
+      "time": "8:45\u00a0pm",
+      "away": "J&K Electric",
+      "": "5W",
+      "home": "G.R. Mitchell Welding",
+      "location": "Amherst",
+      "date": "",
+      "result": "5W"
+    },
+    {
+      "time": "10:00\u00a0pm",
+      "away": "Maltby Sports",
+      "": "5L",
+      "home": "Ultramar",
+      "location": "Amherst",
+      "date": "",
+      "result": "5L"
+    },
+    {
+      "time": "9:00\u00a0pm",
+      "away": "Colson Overhead Doors",
+      "": "12W",
+      "home": "G.R. Mitchell Welding",
+      "location": "Amherst",
+      "date": "",
+      "result": "12W"
+    },
+    {
+      "time": "8:45\u00a0pm",
+      "away": "Maltby Sports",
+      "": "4W",
+      "home": "J&K Electric",
+      "location": "Amherst",
+      "date": "",
+      "result": "4W"
+    },
+    {
+      "time": "10:00\u00a0pm",
+      "away": "G.R. Mitchell Welding",
+      "": "3L",
+      "home": "Ultramar",
+      "location": "Amherst",
+      "date": "",
+      "result": "3L"
+    },
+    {
+      "time": "9:00\u00a0pm",
+      "away": "Colson Overhead Doors",
+      "": "6W",
+      "home": "J&K Electric",
+      "location": "Amherst",
+      "date": "",
+      "result": "6W"
+    }
+  ],
+  "upcoming_games": [
+    {
+      "time": "8:45\u00a0pm",
+      "away": "Colson Overhead Doors",
+      "": "",
+      "home": "Ultramar",
+      "location": "Amherst",
+      "date": ""
+    },
+    {
+      "time": "10:00\u00a0pm",
+      "away": "Maltby Sports",
+      "": "",
+      "home": "G.R. Mitchell Welding",
+      "location": "Amherst",
+      "date": ""
+    },
+    {
+      "time": "9:00\u00a0pm",
+      "away": "J&K Electric",
+      "": "",
+      "home": "Ultramar",
+      "location": "Amherst",
+      "date": ""
+    },
+    {
+      "time": "9:00\u00a0pm",
+      "away": "Colson Overhead Doors",
+      "": "",
+      "home": "J&K Electric",
+      "location": "Amherst",
+      "date": ""
+    },
+    {
+      "time": "8:45\u00a0pm",
+      "away": "Ultramar",
+      "": "",
+      "home": "Colson Overhead Doors",
+      "location": "Amherst",
+      "date": ""
+    },
+    {
+      "time": "10:00\u00a0pm",
+      "away": "Maltby Sports",
+      "": "",
+      "home": "J&K Electric",
+      "location": "Amherst",
+      "date": ""
+    },
+    {
+      "time": "9:00\u00a0pm",
+      "away": "Colson Overhead Doors",
+      "": "",
+      "home": "G.R. Mitchell Welding",
+      "location": "Amherst",
+      "date": ""
+    },
+    {
+      "time": "8:45\u00a0pm",
+      "away": "Maltby Sports",
+      "": "",
+      "home": "J&K Electric",
+      "location": "Amherst",
+      "date": ""
+    },
+    {
+      "time": "10:00\u00a0pm",
+      "away": "G.R. Mitchell Welding",
+      "": "",
+      "home": "Ultramar",
+      "location": "Amherst",
+      "date": ""
+    },
+    {
+      "time": "9:00\u00a0pm",
+      "away": "Colson Overhead Doors",
+      "": "",
+      "home": "Ultramar",
+      "location": "Amherst",
+      "date": ""
+    }
+  ]
 }
