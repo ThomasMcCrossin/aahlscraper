@@ -75,22 +75,44 @@ class AmherstHockeyScraper:
         if not rows:
             return []
 
+        # Parse headers like the stats scraper does
+        headers: List[str] = [normalize_header(cell) for cell in rows[0]]
         data_rows = rows[1:] if len(rows) > 1 else rows
 
         games: List[Dict[str, str]] = []
+        current_date = ""  # Track the current date from header rows
+
         for cells in data_rows:
-            if len(cells) < 1:
+            if len(cells) < 2:
                 continue
 
-            padded = cells + [""] * max(0, 6 - len(cells))
-            game = {
-                "date": padded[0],
-                "time": padded[1] if len(padded) > 1 else "",
-                "opponent": padded[2] if len(padded) > 2 else "",
-                "location": padded[3] if len(padded) > 3 else "",
-                "result": padded[4] if len(padded) > 4 else "",
-                "score": padded[5] if len(padded) > 5 else "",
-            }
+            # Check if this is a date header row (single cell with a date like "Tuesday, October 28, 2025")
+            if len(cells) == 1 and any(month in cells[0] for month in ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']):
+                current_date = cells[0]
+                continue  # Skip to next row
+
+            # Check if this is a week header (like "Mon, 10/27/25 to Sun, 11/2/25  Week 3")
+            if len(cells) == 1 and 'Week' in cells[0]:
+                continue  # Skip week headers
+
+            # Use headers if available, otherwise use generic column names
+            if headers and len(headers) == len(cells):
+                game = {headers[i]: cells[i] for i in range(len(cells))}
+            else:
+                # Fallback to assumed structure
+                padded = cells + [""] * max(0, 6 - len(cells))
+                game = {
+                    "time": padded[0],
+                    "away": padded[1] if len(padded) > 1 else "",
+                    "away_score": padded[2] if len(padded) > 2 else "",
+                    "vs": padded[3] if len(padded) > 3 else "",
+                    "home": padded[4] if len(padded) > 4 else "",
+                    "home_score": padded[5] if len(padded) > 5 else "",
+                    "location": padded[6] if len(padded) > 6 else "",
+                }
+
+            # Add the current date to the game
+            game['date'] = current_date
             games.append(game)
 
         return games

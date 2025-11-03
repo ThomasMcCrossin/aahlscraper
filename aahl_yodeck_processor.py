@@ -96,57 +96,51 @@ class AAHLDataProcessor:
         return []
 
     def filter_amherst_games(self, schedule: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
-        """Filter schedule for Amherst games, split into past and future."""
-        today = datetime.now().date()
-        past_10_days = []
-        next_10_days = []
+        """Filter schedule for Amherst games, split into completed and upcoming.
+
+        Note: AAHL website doesn't provide dates, so we split by:
+        - Recent results: games with scores (completed)
+        - Upcoming games: games without scores (scheduled)
+        """
+        recent_results = []
+        upcoming_games = []
 
         for game in schedule:
             try:
-                # Try to parse date - handle various formats
-                game_date_str = game.get('date', game.get('Date', ''))
-                if not game_date_str:
-                    continue
-
-                # Try parsing as YYYY-MM-DD
-                try:
-                    game_date = datetime.strptime(game_date_str, '%Y-%m-%d').date()
-                except ValueError:
-                    try:
-                        game_date = datetime.strptime(game_date_str, '%m/%d/%Y').date()
-                    except ValueError:
-                        continue
-
-                # Check if game involves Amherst
-                home = game.get('home_team', game.get('Home Team', '')).lower()
-                away = game.get('away_team', game.get('Away Team', '')).lower()
+                # Check if game involves Amherst location
                 location = game.get('location', game.get('Location', '')).lower()
+                home = game.get('home', game.get('Home', '')).lower()
+                away = game.get('away', game.get('Away', '')).lower()
 
-                is_amherst = 'amherst' in home or 'amherst' in away or 'amherst' in location
+                is_amherst_location = 'amherst' in location
 
-                if is_amherst:
-                    # Add corrected names
+                if is_amherst_location:
+                    # Apply name corrections
                     game_copy = game.copy()
-                    if 'home_team' in game_copy:
-                        game_copy['home_team'] = self.correct_names(game_copy['home_team'])
-                    if 'Home Team' in game_copy:
-                        game_copy['Home Team'] = self.correct_names(game_copy['Home Team'])
-                    if 'away_team' in game_copy:
-                        game_copy['away_team'] = self.correct_names(game_copy['away_team'])
-                    if 'Away Team' in game_copy:
-                        game_copy['Away Team'] = self.correct_names(game_copy['Away Team'])
+                    if 'home' in game_copy:
+                        game_copy['home'] = self.correct_names(game_copy['home'])
+                    if 'away' in game_copy:
+                        game_copy['away'] = self.correct_names(game_copy['away'])
 
-                    if today - timedelta(days=10) <= game_date <= today:
-                        past_10_days.append(game_copy)
-                    elif today < game_date <= today + timedelta(days=10):
-                        next_10_days.append(game_copy)
+                    # Check if game has a score/result (indicates it's been played)
+                    score = game.get('', '')  # Empty key contains the score
+                    has_result = bool(score and score.strip())
+
+                    if has_result:
+                        # Game has been played
+                        game_copy['result'] = score
+                        recent_results.append(game_copy)
+                    else:
+                        # Game is upcoming
+                        upcoming_games.append(game_copy)
+
             except Exception as e:
                 print(f"Error processing game: {e}")
                 continue
 
         return {
-            'recent_results': sorted(past_10_days, key=lambda x: x.get('date', x.get('Date', '')), reverse=True)[:10],
-            'upcoming_games': sorted(next_10_days, key=lambda x: x.get('date', x.get('Date', '')))[:10]
+            'recent_results': recent_results[:10],  # Last 10 completed Amherst games
+            'upcoming_games': upcoming_games[:10]    # Next 10 upcoming Amherst games
         }
 
     def get_top_scorers(self, limit: int = 20) -> List[Dict[str, Any]]:
