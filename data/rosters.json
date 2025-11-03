@@ -1,0 +1,893 @@
+[
+  {
+    "team_id": "TYLERARSENEAU-1",
+    "team_name": "Maltby Sports",
+    "team_slug": "maltby-sports",
+    "players": [
+      {
+        "number": "2",
+        "name": "Gallant, Matt",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "R",
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "6",
+        "name": "Crocker, Luke",
+        "positions": [
+          "D"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "7",
+        "name": "Hurley, Connor",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "River H\u00c3\u00a9bert, NS"
+      },
+      {
+        "number": "9",
+        "name": "McCarthy, Ian",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "16",
+        "name": "Small, Danny \"Biggie\"",
+        "positions": [
+          "F",
+          "D"
+        ],
+        "height": "5' 7\"",
+        "weight": "165 lbs",
+        "shoots": "L",
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "17",
+        "name": "Maltby, Chris - Captain",
+        "positions": [
+          "D",
+          "F"
+        ],
+        "height": "6'",
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "18",
+        "name": "Johnson, Trevor",
+        "positions": [
+          "D"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": "Parrsboro, NS"
+      },
+      {
+        "number": "19",
+        "name": "Mccrossin, Thomas",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "29",
+        "name": "Codling, Ryder",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "30",
+        "name": "Belliveau, Marc",
+        "positions": [
+          "G"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": "L",
+        "hometown": null
+      },
+      {
+        "number": "63",
+        "name": "Leblanc, Travis",
+        "positions": [
+          "F",
+          "D"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "77",
+        "name": "Mackinnon, Ted",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "91",
+        "name": "Arbing, Ryan",
+        "positions": [
+          "D",
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "98",
+        "name": "Bridge, Issac",
+        "positions": [
+          "C"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      }
+    ]
+  },
+  {
+    "team_id": "TYLERARSENEAU-2",
+    "team_name": "Ultramar",
+    "team_slug": "ultramar",
+    "players": [
+      {
+        "number": "1",
+        "name": "Thomas, Remi",
+        "positions": [
+          "G"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "2",
+        "name": "Dywer, Chris",
+        "positions": [
+          "F",
+          "D"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "3",
+        "name": "Gallant, Brett",
+        "positions": [
+          "F",
+          "D"
+        ],
+        "height": "3' 12\"",
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "4",
+        "name": "Dobson, Aaron",
+        "positions": [
+          "D"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "5",
+        "name": "Bonnell, Andy",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": "Burnt Church, NB"
+      },
+      {
+        "number": "6",
+        "name": "Miller, Madden",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "8",
+        "name": "Jobes, Bill",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "9",
+        "name": "Linkletter, Brad - Captain",
+        "positions": [
+          "C"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "River H\u00c3\u00a9bert, NS"
+      },
+      {
+        "number": "10",
+        "name": "Malcolm, Robert",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "11",
+        "name": "Allen, Tyler \"Tuffy\"",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "12",
+        "name": "Cove, Matt",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "14",
+        "name": "Burke, Brody",
+        "positions": [
+          "D",
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "22",
+        "name": "Burke, Tim",
+        "positions": [
+          "F",
+          "D"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": null,
+        "name": "Bennett, Mark",
+        "positions": [
+          "D"
+        ],
+        "height": "7' 2\"",
+        "weight": "250 lbs",
+        "shoots": "L",
+        "catches": null,
+        "hometown": "Parts Unknown"
+      }
+    ]
+  },
+  {
+    "team_id": "TYLERARSENEAU-3",
+    "team_name": "Colson Overhead Doors",
+    "team_slug": "colson-overhead-doors",
+    "players": [
+      {
+        "number": "7",
+        "name": "Chandler 3rd, Charles",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "8",
+        "name": "Eatmon, Chester",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "9",
+        "name": "Black, Mark",
+        "positions": [
+          "F",
+          "D"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Down Yonder"
+      },
+      {
+        "number": "12",
+        "name": "Burge, Tom",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "New Glasgow, NS"
+      },
+      {
+        "number": "13",
+        "name": "Davis, Dan",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Springhill, NS"
+      },
+      {
+        "number": "13",
+        "name": "Henshaw, Chad",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "19",
+        "name": "Hebert, Denis",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "23",
+        "name": "Gesner, Logan",
+        "positions": [
+          "D",
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": "Middleton, NS"
+      },
+      {
+        "number": "30",
+        "name": "Russel, Nick",
+        "positions": [
+          "G"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "31",
+        "name": "Sproul, Chris - Captain",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": "Sackville, NB"
+      },
+      {
+        "number": "44",
+        "name": "Baisley, Chris",
+        "positions": [
+          "D"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Miramichi, NB"
+      },
+      {
+        "number": "76",
+        "name": "Faulkner, Rory",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "88",
+        "name": "Gould, Zack",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": null,
+        "name": "Terrio, Marshall",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Amherst, NS"
+      }
+    ]
+  },
+  {
+    "team_id": "TYLERARSENEAU-4",
+    "team_name": "J&K Electric",
+    "team_slug": "j-and-k-electric",
+    "players": [
+      {
+        "number": "00",
+        "name": "Harrison, Avery",
+        "positions": [
+          "D"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "2",
+        "name": "Morris, Matt",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Parrsboro, NS"
+      },
+      {
+        "number": "4",
+        "name": "Mackenzie, Rubein",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "9",
+        "name": "Leopold, Nick",
+        "positions": [
+          "F",
+          "D"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "17",
+        "name": "Kinnear, Jeremy",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "18",
+        "name": "Budd, Ryan",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "22",
+        "name": "Boutiler, Gerald - Captain",
+        "positions": [
+          "D",
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "R",
+        "catches": null,
+        "hometown": "Parrsboro, NS"
+      },
+      {
+        "number": "26",
+        "name": "Mansour, Mikhial",
+        "positions": [
+          "F",
+          "D"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "R",
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "27",
+        "name": "Morris, Pat",
+        "positions": [
+          "F",
+          "D"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Parrsboro, NS"
+      },
+      {
+        "number": "28",
+        "name": "Stone, Brendan",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "30",
+        "name": "Drake, Scott",
+        "positions": [
+          "G",
+          "D",
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "L",
+        "catches": "L",
+        "hometown": "Halifax, NS"
+      },
+      {
+        "number": "36",
+        "name": "Martin, Ryan",
+        "positions": [],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "74",
+        "name": "Davison, Bill",
+        "positions": [
+          "F",
+          "D"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "87",
+        "name": "Perrin, Noah",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      }
+    ]
+  },
+  {
+    "team_id": "983723",
+    "team_name": "G.R. Mitchell Welding",
+    "team_slug": "gr-mitchell-welding",
+    "players": [
+      {
+        "number": "1",
+        "name": "Clark, Scott",
+        "positions": [
+          "G"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "7",
+        "name": "Helm, Corey",
+        "positions": [
+          "D",
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "R",
+        "catches": null,
+        "hometown": "Tidnish, NS"
+      },
+      {
+        "number": "9",
+        "name": "Bourgeois, Julien",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "13",
+        "name": "Mitchell, Gordon - Captain",
+        "positions": [
+          "F",
+          "D"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "15",
+        "name": "Hurley, William",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "21",
+        "name": "Macpherson, Ryan",
+        "positions": [],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "38",
+        "name": "Atkinson, Dave",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Parrsboro, NS"
+      },
+      {
+        "number": "55",
+        "name": "Ryan, Geoff",
+        "positions": [
+          "D"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Springhill, NS"
+      },
+      {
+        "number": "61",
+        "name": "Sutton, Cody",
+        "positions": [
+          "F",
+          "D"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "66",
+        "name": "Mattix, Ralph",
+        "positions": [
+          "D"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "88",
+        "name": "Robichaud, Corey",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "90",
+        "name": "Fullerton, Zack",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": null
+      },
+      {
+        "number": "94",
+        "name": "Dobson, Nick \"Pickle\"",
+        "positions": [
+          "F"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "L",
+        "catches": null,
+        "hometown": "Amherst, NS"
+      },
+      {
+        "number": "97",
+        "name": "MacDonald, Meathead",
+        "positions": [
+          "C"
+        ],
+        "height": null,
+        "weight": null,
+        "shoots": "R",
+        "catches": null,
+        "hometown": "Amherst, NS"
+      }
+    ]
+  }
+]

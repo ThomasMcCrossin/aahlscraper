@@ -1,0 +1,172 @@
+[
+  {
+    "number": "7",
+    "name": "Chandler 3rd, Charles",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "8",
+    "name": "Eatmon, Chester",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "9",
+    "name": "Black, Mark",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Down Yonder"
+  },
+  {
+    "number": "12",
+    "name": "Burge, Tom",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "New Glasgow, NS"
+  },
+  {
+    "number": "13",
+    "name": "Davis, Dan",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Springhill, NS"
+  },
+  {
+    "number": "13",
+    "name": "Henshaw, Chad",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "19",
+    "name": "Hebert, Denis",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "23",
+    "name": "Gesner, Logan",
+    "positions": [
+      "D",
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Middleton, NS"
+  },
+  {
+    "number": "30",
+    "name": "Russel, Nick",
+    "positions": [
+      "G"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "31",
+    "name": "Sproul, Chris - Captain",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Sackville, NB"
+  },
+  {
+    "number": "44",
+    "name": "Baisley, Chris",
+    "positions": [
+      "D"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Miramichi, NB"
+  },
+  {
+    "number": "76",
+    "name": "Faulkner, Rory",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "88",
+    "name": "Gould, Zack",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": null,
+    "name": "Terrio, Marshall",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS"
+  }
+]

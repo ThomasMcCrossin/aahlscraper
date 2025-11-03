@@ -1,0 +1,175 @@
+[
+  {
+    "number": "00",
+    "name": "Harrison, Avery",
+    "positions": [
+      "D"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "2",
+    "name": "Morris, Matt",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Parrsboro, NS"
+  },
+  {
+    "number": "4",
+    "name": "Mackenzie, Rubein",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "9",
+    "name": "Leopold, Nick",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "17",
+    "name": "Kinnear, Jeremy",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "18",
+    "name": "Budd, Ryan",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "22",
+    "name": "Boutiler, Gerald - Captain",
+    "positions": [
+      "D",
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "R",
+    "catches": null,
+    "hometown": "Parrsboro, NS"
+  },
+  {
+    "number": "26",
+    "name": "Mansour, Mikhial",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "R",
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "27",
+    "name": "Morris, Pat",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Parrsboro, NS"
+  },
+  {
+    "number": "28",
+    "name": "Stone, Brendan",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "30",
+    "name": "Drake, Scott",
+    "positions": [
+      "G",
+      "D",
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": "L",
+    "hometown": "Halifax, NS"
+  },
+  {
+    "number": "36",
+    "name": "Martin, Ryan",
+    "positions": [],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "74",
+    "name": "Davison, Bill",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "87",
+    "name": "Perrin, Noah",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  }
+]

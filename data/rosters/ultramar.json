@@ -1,0 +1,174 @@
+[
+  {
+    "number": "1",
+    "name": "Thomas, Remi",
+    "positions": [
+      "G"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "2",
+    "name": "Dywer, Chris",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "3",
+    "name": "Gallant, Brett",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "height": "3' 12\"",
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "4",
+    "name": "Dobson, Aaron",
+    "positions": [
+      "D"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "5",
+    "name": "Bonnell, Andy",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Burnt Church, NB"
+  },
+  {
+    "number": "6",
+    "name": "Miller, Madden",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "8",
+    "name": "Jobes, Bill",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "9",
+    "name": "Linkletter, Brad - Captain",
+    "positions": [
+      "C"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "River H\u00c3\u00a9bert, NS"
+  },
+  {
+    "number": "10",
+    "name": "Malcolm, Robert",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "11",
+    "name": "Allen, Tyler \"Tuffy\"",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "12",
+    "name": "Cove, Matt",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "14",
+    "name": "Burke, Brody",
+    "positions": [
+      "D",
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "22",
+    "name": "Burke, Tim",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": null,
+    "name": "Bennett, Mark",
+    "positions": [
+      "D"
+    ],
+    "height": "7' 2\"",
+    "weight": "250 lbs",
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Parts Unknown"
+  }
+]

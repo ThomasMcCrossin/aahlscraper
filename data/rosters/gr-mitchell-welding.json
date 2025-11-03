@@ -1,0 +1,171 @@
+[
+  {
+    "number": "1",
+    "name": "Clark, Scott",
+    "positions": [
+      "G"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "7",
+    "name": "Helm, Corey",
+    "positions": [
+      "D",
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "R",
+    "catches": null,
+    "hometown": "Tidnish, NS"
+  },
+  {
+    "number": "9",
+    "name": "Bourgeois, Julien",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "13",
+    "name": "Mitchell, Gordon - Captain",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "15",
+    "name": "Hurley, William",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "21",
+    "name": "Macpherson, Ryan",
+    "positions": [],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "38",
+    "name": "Atkinson, Dave",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Parrsboro, NS"
+  },
+  {
+    "number": "55",
+    "name": "Ryan, Geoff",
+    "positions": [
+      "D"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Springhill, NS"
+  },
+  {
+    "number": "61",
+    "name": "Sutton, Cody",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "66",
+    "name": "Mattix, Ralph",
+    "positions": [
+      "D"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "88",
+    "name": "Robichaud, Corey",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "90",
+    "name": "Fullerton, Zack",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "94",
+    "name": "Dobson, Nick \"Pickle\"",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "97",
+    "name": "MacDonald, Meathead",
+    "positions": [
+      "C"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "R",
+    "catches": null,
+    "hometown": "Amherst, NS"
+  }
+]

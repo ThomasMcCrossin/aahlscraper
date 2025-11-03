@@ -1,0 +1,174 @@
+[
+  {
+    "number": "2",
+    "name": "Gallant, Matt",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "R",
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "6",
+    "name": "Crocker, Luke",
+    "positions": [
+      "D"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "7",
+    "name": "Hurley, Connor",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "River H\u00c3\u00a9bert, NS"
+  },
+  {
+    "number": "9",
+    "name": "McCarthy, Ian",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "16",
+    "name": "Small, Danny \"Biggie\"",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "height": "5' 7\"",
+    "weight": "165 lbs",
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "17",
+    "name": "Maltby, Chris - Captain",
+    "positions": [
+      "D",
+      "F"
+    ],
+    "height": "6'",
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "18",
+    "name": "Johnson, Trevor",
+    "positions": [
+      "D"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Parrsboro, NS"
+  },
+  {
+    "number": "19",
+    "name": "Mccrossin, Thomas",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "29",
+    "name": "Codling, Ryder",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "30",
+    "name": "Belliveau, Marc",
+    "positions": [
+      "G"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": "L",
+    "hometown": null
+  },
+  {
+    "number": "63",
+    "name": "Leblanc, Travis",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "77",
+    "name": "Mackinnon, Ted",
+    "positions": [
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  },
+  {
+    "number": "91",
+    "name": "Arbing, Ryan",
+    "positions": [
+      "D",
+      "F"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS"
+  },
+  {
+    "number": "98",
+    "name": "Bridge, Issac",
+    "positions": [
+      "C"
+    ],
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null
+  }
+]
