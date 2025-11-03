@@ -25,8 +25,7 @@ wheels/
 *.egg
 
 # Data files (generated output)
-data/*.json
-data/*.csv
+# data/*.csv
 
 # Exception: Allow yodeck_display.json for GitHub Actions auto-updates
 !data/yodeck_display.json
