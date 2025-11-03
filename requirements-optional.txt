@@ -1,0 +1,10 @@
+# Optional dependencies for Playwright backend
+# Only install if diagnostics recommend it or if HTTP backend doesn't work
+
+playwright>=1.55.0
+
+# After installing, run:
+# playwright install chromium
+#
+# Note: On Linux, you may also need system dependencies:
+# sudo playwright install-deps

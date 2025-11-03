@@ -8,16 +8,18 @@ This inspects the schedule, stats, and standings pages and recommends whether th
 
 ## 2. Install dependencies
 
-**Always install the HTTP stack:**
+**Always install the core dependencies (HTTP backend - recommended):**
 ```bash
-pip install requests beautifulsoup4 pandas lxml
+pip install -r requirements.txt
 ```
 
-**Add Playwright only if the diagnostic suggests it:**
+**Optional: Add Playwright only if the diagnostic suggests it:**
 ```bash
-pip install playwright
+pip install -r requirements-optional.txt
 playwright install chromium
 ```
+
+> **Note:** Playwright is NOT needed for normal operation. The HTTP backend (BeautifulSoup) works for the AAHL website and is faster and simpler.
 
 ## 3. Scrape data
 ```bash

@@ -1,0 +1,8 @@
+# Core dependencies (required for HTTP backend - recommended)
+requests>=2.32.0
+beautifulsoup4>=4.14.0
+pandas>=2.3.0
+
+# Optional dependencies (only needed if diagnostics recommend Playwright backend)
+# Uncomment if needed:
+# playwright>=1.55.0
