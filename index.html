@@ -1395,6 +1395,8 @@
             };
 
             Object.entries(feeds).forEach(([key, value]) => {
+                if (key === 'games' || key === 'extra') return;
+                if (!Array.isArray(value)) return;
                 const label = key.toUpperCase();
                 processGames(value, label);
             });
