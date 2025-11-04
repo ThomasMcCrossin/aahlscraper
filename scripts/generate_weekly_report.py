@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import json
 from collections import defaultdict
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
@@ -89,7 +89,7 @@ def _load_recent_results(days: int = 7) -> List[Dict[str, object]]:
     if not isinstance(results, list):
         return []
 
-    cutoff = datetime.now() - timedelta(days=days)
+    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
     recent: List[Dict[str, object]] = []
     for game in results:
         dt_raw = game.get("datetime")
@@ -99,6 +99,10 @@ def _load_recent_results(days: int = 7) -> List[Dict[str, object]]:
             dt = datetime.fromisoformat(str(dt_raw))
         except ValueError:
             continue
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        else:
+            dt = dt.astimezone(timezone.utc)
         if dt >= cutoff:
             recent.append(game)
     return recent
