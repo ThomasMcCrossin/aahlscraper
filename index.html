@@ -193,6 +193,20 @@
             color: #4a9eff;
         }
 
+        .scorer-points .points-label {
+            font-size: 0.4em;
+            margin-left: 6px;
+            color: #a8d0ff;
+            letter-spacing: 2px;
+        }
+
+        .scorer-stats {
+            font-size: 1em;
+            color: #d0e6ff;
+            margin-top: 6px;
+            letter-spacing: 1px;
+        }
+
         /* Results & Upcoming Games */
         .games-list {
             margin-top: 20px;
@@ -218,6 +232,14 @@
             font-weight: bold;
             margin-bottom: 15px;
             text-transform: uppercase;
+        }
+
+        .game-headline {
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #e1efff;
+            line-height: 1.4;
         }
 
         .game-matchup {
@@ -256,6 +278,47 @@
             font-size: 1.2em;
             color: #ffca28;
             margin-top: 5px;
+        }
+
+        .scoreboard {
+            margin-bottom: 15px;
+        }
+
+        .score-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.6em;
+            padding: 6px 0;
+        }
+
+        .score-team {
+            font-weight: 600;
+            flex: 1;
+        }
+
+        .score-value {
+            font-weight: 700;
+            color: #ffca28;
+            min-width: 60px;
+            text-align: right;
+        }
+
+        .game-meta {
+            font-size: 1.1em;
+            color: #a8d0ff;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .game-meta a {
+            color: #ffca28;
+            text-decoration: none;
+        }
+
+        .game-meta a:hover {
+            text-decoration: underline;
         }
 
         /* Section Indicator */
@@ -366,42 +429,78 @@
                 { team: "Valley Vipers", wins: 2, losses: 8, points: 4 }
             ],
             top_scorers: [
-                { rank: 1, player_name: "Marshall MacDonald", team: "Amherst Hawks", points: 24 },
-                { rank: 2, player_name: "Thomas McCrossin", team: "Downtown Small", points: 22 },
-                { rank: 3, player_name: "Jake Thompson", team: "Frontier City", points: 20 },
-                { rank: 4, player_name: "Ryan Smith", team: "Maple Grove", points: 18 },
-                { rank: 5, player_name: "Chris Bergeron", team: "Amherst Hawks", points: 17 },
-                { rank: 6, player_name: "Mike Johnson", team: "Downtown Small", points: 16 },
-                { rank: 7, player_name: "David Wilson", team: "Ice Storm", points: 15 },
-                { rank: 8, player_name: "Pat Murphy", team: "Thunder Bay", points: 14 },
-                { rank: 9, player_name: "Steve Anderson", team: "Frontier City", points: 14 },
-                { rank: 10, player_name: "Brian Kelly", team: "Amherst Hawks", points: 13 },
-                { rank: 11, player_name: "Mark Sullivan", team: "Valley Vipers", points: 13 },
-                { rank: 12, player_name: "Tim O'Brien", team: "Maple Grove", points: 12 },
-                { rank: 13, player_name: "Kevin Brown", team: "Downtown Small", points: 12 },
-                { rank: 14, player_name: "Dan McCarthy", team: "Ice Storm", points: 11 },
-                { rank: 15, player_name: "Paul Martin", team: "Thunder Bay", points: 11 },
-                { rank: 16, player_name: "Sean O'Connor", team: "Frontier City", points: 10 },
-                { rank: 17, player_name: "Rob Taylor", team: "Amherst Hawks", points: 10 },
-                { rank: 18, player_name: "Joe Parker", team: "Valley Vipers", points: 9 },
-                { rank: 19, player_name: "Matt Hughes", team: "Maple Grove", points: 9 },
-                { rank: 20, player_name: "Eric Davis", team: "Downtown Small", points: 8 }
+                { rank: 1, name: "Marshall MacDonald", team: "Amherst Hawks", g: 12, a: 10, points: 22 },
+                { rank: 2, name: "Thomas McCrossin", team: "Downtown Small", g: 11, a: 9, points: 20 },
+                { rank: 3, name: "Jake Thompson", team: "Frontier City", g: 10, a: 10, points: 20 },
+                { rank: 4, name: "Ryan Smith", team: "Maple Grove", g: 9, a: 9, points: 18 },
+                { rank: 5, name: "Chris Bergeron", team: "Amherst Hawks", g: 8, a: 9, points: 17 },
+                { rank: 6, name: "Mike Johnson", team: "Downtown Small", g: 8, a: 8, points: 16 },
+                { rank: 7, name: "David Wilson", team: "Ice Storm", g: 7, a: 8, points: 15 },
+                { rank: 8, name: "Pat Murphy", team: "Thunder Bay", g: 7, a: 7, points: 14 },
+                { rank: 9, name: "Steve Anderson", team: "Frontier City", g: 6, a: 8, points: 14 },
+                { rank: 10, name: "Brian Kelly", team: "Amherst Hawks", g: 6, a: 7, points: 13 },
+                { rank: 11, name: "Mark Sullivan", team: "Valley Vipers", g: 6, a: 7, points: 13 },
+                { rank: 12, name: "Tim O'Brien", team: "Maple Grove", g: 6, a: 6, points: 12 },
+                { rank: 13, name: "Kevin Brown", team: "Downtown Small", g: 5, a: 7, points: 12 },
+                { rank: 14, name: "Dan McCarthy", team: "Ice Storm", g: 5, a: 6, points: 11 },
+                { rank: 15, name: "Paul Martin", team: "Thunder Bay", g: 5, a: 6, points: 11 },
+                { rank: 16, name: "Sean O'Connor", team: "Frontier City", g: 5, a: 5, points: 10 },
+                { rank: 17, name: "Rob Taylor", team: "Amherst Hawks", g: 4, a: 6, points: 10 },
+                { rank: 18, name: "Joe Parker", team: "Valley Vipers", g: 4, a: 5, points: 9 },
+                { rank: 19, name: "Matt Hughes", team: "Maple Grove", g: 4, a: 5, points: 9 },
+                { rank: 20, name: "Eric Davis", team: "Downtown Small", g: 4, a: 4, points: 8 }
             ],
             recent_results: [
-                { date: "2025-10-31", home_team: "Amherst Hawks", away_team: "Frontier City", home_score: 5, away_score: 3 },
-                { date: "2025-10-28", home_team: "Downtown Small", away_team: "Maple Grove", home_score: 4, away_score: 2 },
-                { date: "2025-10-26", home_team: "Frontier City", away_team: "Amherst Hawks", home_score: 2, away_score: 6 },
-                { date: "2025-10-24", home_team: "Ice Storm", away_team: "Thunder Bay", home_score: 3, away_score: 3 },
-                { date: "2025-10-22", home_team: "Valley Vipers", away_team: "Downtown Small", home_score: 1, away_score: 5 },
-                { date: "2025-10-20", home_team: "Maple Grove", away_team: "Ice Storm", home_score: 4, away_score: 1 },
-                { date: "2025-10-18", home_team: "Thunder Bay", away_team: "Amherst Hawks", home_score: 2, away_score: 7 }
+                {
+                    datetime: "2025-10-31T21:00:00-04:00",
+                    home: "Amherst Hawks",
+                    away: "Frontier City",
+                    home_score: 5,
+                    away_score: 3,
+                    location: "Amherst Ice Arena",
+                    headline: "Amherst Hawks top Frontier City 5-3 fueled by Marshall MacDonald's 2G and 1A"
+                },
+                {
+                    datetime: "2025-10-28T20:00:00-04:00",
+                    home: "Downtown Small",
+                    away: "Maple Grove",
+                    home_score: 4,
+                    away_score: 2,
+                    location: "Amherst Ice Arena",
+                    headline: "Downtown Small handles Maple Grove 4-2 powered by Thomas McCrossin's 1G and 2A"
+                },
+                {
+                    datetime: "2025-10-26T19:00:00-04:00",
+                    home: "Frontier City",
+                    away: "Amherst Hawks",
+                    home_score: 2,
+                    away_score: 6,
+                    location: "Amherst Ice Arena",
+                    headline: "Amherst Hawks outgun Frontier City 6-2 driven by Chris Bergeron's brace (2G)"
+                }
             ],
             upcoming_games: [
-                { date: "2025-11-07", time: "8:00 PM", home_team: "Amherst Hawks", away_team: "Maple Grove", location: "Amherst Ice Arena" },
-                { date: "2025-11-09", time: "7:30 PM", home_team: "Downtown Small", away_team: "Amherst Hawks", location: "Amherst Ice Arena" },
-                { date: "2025-11-12", time: "8:00 PM", home_team: "Amherst Hawks", away_team: "Frontier City", location: "Amherst Ice Arena" },
-                { date: "2025-11-14", time: "7:00 PM", home_team: "Thunder Bay", away_team: "Valley Vipers", location: "Amherst Ice Arena" },
-                { date: "2025-11-16", time: "8:30 PM", home_team: "Amherst Hawks", away_team: "Ice Storm", location: "Amherst Ice Arena" }
+                {
+                    datetime: "2025-11-07T20:00:00-04:00",
+                    time: "8:00 PM",
+                    home: "Amherst Hawks",
+                    away: "Maple Grove",
+                    location: "Amherst Ice Arena"
+                },
+                {
+                    datetime: "2025-11-09T19:30:00-04:00",
+                    time: "7:30 PM",
+                    home: "Downtown Small",
+                    away: "Amherst Hawks",
+                    location: "Amherst Ice Arena"
+                },
+                {
+                    datetime: "2025-11-12T20:00:00-04:00",
+                    time: "8:00 PM",
+                    home: "Amherst Hawks",
+                    away: "Frontier City",
+                    location: "Amherst Ice Arena"
+                }
             ]
         };
 
@@ -417,20 +516,137 @@
 
         // Apply name corrections to data
         function correctDataNames(data) {
-            if (data.top_scorers) {
-                data.top_scorers = data.top_scorers.map(scorer => ({
-                    ...scorer,
-                    player_name: correctName(scorer.player_name)
+            const clone = { ...data };
+
+            if (Array.isArray(data.top_scorers)) {
+                clone.top_scorers = data.top_scorers.map((scorer, index) => {
+                    const name = correctName(scorer.name || scorer.player_name || '');
+                    const team = scorer.team_name || scorer.team || '';
+                    const goals = Number(scorer.g ?? scorer.goals ?? scorer.Goals ?? 0) || 0;
+                    const assists = Number(scorer.a ?? scorer.assists ?? scorer.Assists ?? 0) || 0;
+                    const points = Number(scorer.points ?? scorer.pts ?? (goals + assists)) || (goals + assists);
+                    return {
+                        ...scorer,
+                        name,
+                        player_name: name,
+                        team: team,
+                        team_name: team,
+                        rank: scorer.rank || index + 1,
+                        g: goals,
+                        a: assists,
+                        points
+                    };
+                });
+            }
+
+            if (Array.isArray(data.recent_results)) {
+                clone.recent_results = data.recent_results.map(game => {
+                    const homeLine = game.home_line ? { ...game.home_line, name: correctName(game.home_line.name) } : game.home_line;
+                    const awayLine = game.away_line ? { ...game.away_line, name: correctName(game.away_line.name) } : game.away_line;
+                    return {
+                        ...game,
+                        home: correctName(game.home || game.home_team || ''),
+                        away: correctName(game.away || game.away_team || ''),
+                        home_line: homeLine,
+                        away_line: awayLine,
+                        headline: game.headline ? correctName(game.headline) : game.headline
+                    };
+                });
+            }
+
+            if (Array.isArray(data.upcoming_games)) {
+                clone.upcoming_games = data.upcoming_games.map(game => ({
+                    ...game,
+                    home: correctName(game.home || game.home_team || ''),
+                    away: correctName(game.away || game.away_team || '')
                 }));
             }
-            return data;
+
+            return clone;
         }
 
+        const DAY_MS = 24 * 60 * 60 * 1000;
+
         // Format date
-        function formatDate(dateString) {
-            const date = new Date(dateString);
+        function formatDate(value) {
+            const date = value instanceof Date ? value : new Date(value);
+            if (Number.isNaN(date.getTime())) {
+                return value || '';
+            }
             const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
             return date.toLocaleDateString('en-US', options);
+        }
+
+        function parseGameDate(game) {
+            if (!game) return null;
+            const candidates = [game.datetime, game.start_local, game.start_utc, game.date];
+            for (const candidate of candidates) {
+                if (!candidate) continue;
+                const parsed = new Date(candidate);
+                if (!Number.isNaN(parsed.getTime())) {
+                    return parsed;
+                }
+            }
+            return null;
+        }
+
+        function filterRecentGames(games, days = 7) {
+            const now = new Date();
+            const cutoff = new Date(now.getTime() - days * DAY_MS);
+            return games
+                .map(game => ({ game, date: parseGameDate(game) }))
+                .filter(item => item.date && item.date <= now && item.date >= cutoff)
+                .sort((a, b) => b.date - a.date)
+                .slice(0, 8)
+                .map(item => item.game);
+        }
+
+        function filterUpcomingGames(games, days = 7) {
+            const now = new Date();
+            const horizon = new Date(now.getTime() + days * DAY_MS);
+            return games
+                .map(game => ({ game, date: parseGameDate(game) }))
+                .filter(item => item.date && item.date >= now && item.date <= horizon)
+                .sort((a, b) => a.date - b.date)
+                .slice(0, 8)
+                .map(item => item.game);
+        }
+
+        function gameIdentifier(game) {
+            if (game.game_id) return `id:${game.game_id}`;
+            const home = (game.home || game.home_team || '').toLowerCase();
+            const away = (game.away || game.away_team || '').toLowerCase();
+            const date = game.datetime || game.start_local || game.start_utc || game.date || '';
+            return `${home}|${away}|${date}`;
+        }
+
+        function uniqueByGameId(games) {
+            const seen = new Set();
+            return games.filter(game => {
+                const key = gameIdentifier(game);
+                if (!key) return true;
+                if (seen.has(key)) return false;
+                seen.add(key);
+                return true;
+            });
+        }
+
+        function formatTimeDisplay(game) {
+            if (game.time) return game.time;
+            const date = parseGameDate(game);
+            if (!date) return 'TBD';
+            return date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+        }
+
+        function formatRelative(date) {
+            if (!(date instanceof Date) || Number.isNaN(date.getTime())) return '';
+            const now = new Date();
+            const diffDays = Math.round((date - now) / DAY_MS);
+            if (diffDays === 0) return 'Today';
+            if (diffDays === 1) return 'Tomorrow';
+            if (diffDays === -1) return 'Yesterday';
+            if (diffDays > 1) return `In ${diffDays} days`;
+            return `${Math.abs(diffDays)} days ago`;
         }
 
         // Render standings
@@ -454,9 +670,29 @@
         function renderScorers(scorers) {
             const grid = document.getElementById('scorersGrid');
             grid.innerHTML = '';
-            scorers.slice(0, 20).forEach(scorer => {
-                const card = document.createElement('div');
-                card.className = 'scorer-card';
+            scorers
+                .slice(0, 20)
+                .forEach((scorer, index) => {
+                    const rank = scorer.rank || index + 1;
+                    const name = correctName(scorer.name || scorer.player_name || `Player ${rank}`);
+                    const team = scorer.team_name || scorer.team || '';
+                    const goals = Number(scorer.g ?? scorer.goals ?? scorer.Goals ?? 0) || 0;
+                    const assists = Number(scorer.a ?? scorer.assists ?? scorer.Assists ?? 0) || 0;
+                    const points = Number(scorer.points ?? scorer.pts ?? (goals + assists)) || (goals + assists);
+
+                    const card = document.createElement('div');
+                    card.className = 'scorer-card';
+                    card.innerHTML = `
+                        <div class="scorer-rank">#${rank}</div>
+                        <div class="scorer-info">
+                            <div class="scorer-name">${name}</div>
+                            <div class="scorer-team">${team}</div>
+                            <div class="scorer-stats">${goals} G · ${assists} A</div>
+                        </div>
+                        <div class="scorer-points">${points}<span class="points-label">PTS</span></div>
+                    `;
+                    grid.appendChild(card);
+                });
                 card.innerHTML = `
                     <div class="scorer-rank">#${scorer.rank}</div>
                     <div class="scorer-info">
@@ -473,22 +709,42 @@
         function renderResults(results) {
             const list = document.getElementById('resultsList');
             list.innerHTML = '';
-            if (results.length === 0) {
+            if (!results || results.length === 0) {
                 list.innerHTML = '<div style="text-align: center; padding: 40px; color: #a8d0ff;">No recent results available</div>';
                 return;
             }
+
             results.forEach(game => {
                 const card = document.createElement('div');
                 card.className = 'game-card';
-                const dateStr = game.date ? formatDate(game.date) : game.time || 'Recent Game';
+
+                const dateObj = parseGameDate(game);
+                const dateLine = dateObj ? formatDate(dateObj) : formatDate(game.date || '');
+                const relative = dateObj ? formatRelative(dateObj) : '';
+                const headline = game.headline ? correctName(game.headline) : `${game.away || 'Away'} vs ${game.home || 'Home'}`;
+                const awayTeam = correctName(game.away || game.away_team || 'Away');
+                const homeTeam = correctName(game.home || game.home_team || 'Home');
+                const awayScore = game.away_score ?? (game.result ? String(game.result).split('-')[0].trim() : '');
+                const homeScore = game.home_score ?? (game.result ? String(game.result).split('-')[1].trim() : '');
+                const location = game.location || 'Amherst';
+
+                const links = [];
+                if (game.summary_url) {
+                    links.push(`<a href="${game.summary_url}" target="_blank" rel="noopener">Summary</a>`);
+                }
+                if (game.box_score_url) {
+                    links.push(`<a href="${game.box_score_url}" target="_blank" rel="noopener">Box</a>`);
+                }
+                const metaLine = [`📍 ${location}`].concat(links.length ? [`🔗 ${links.join(' · ')}`] : []).join(' · ');
+
                 card.innerHTML = `
-                    <div class="game-date">${dateStr}</div>
-                    <div class="game-matchup">
-                        <div class="team-name">${game.away || game.away_team || 'Away'}</div>
-                        <div class="game-score">${game.result || game.score || 'vs'}</div>
-                        <div class="team-name" style="text-align: right;">${game.home || game.home_team || 'Home'}</div>
+                    <div class="game-date">${relative ? `${dateLine} · ${relative}` : dateLine}</div>
+                    <div class="game-headline">${headline}</div>
+                    <div class="scoreboard">
+                        <div class="score-row"><span class="score-team">${awayTeam}</span><span class="score-value">${awayScore}</span></div>
+                        <div class="score-row"><span class="score-team">${homeTeam}</span><span class="score-value">${homeScore}</span></div>
                     </div>
-                    <div class="game-location">📍 ${game.location || ''}</div>
+                    <div class="game-meta">${metaLine}</div>
                 `;
                 list.appendChild(card);
             });
@@ -498,23 +754,24 @@
         function renderUpcoming(games) {
             const list = document.getElementById('upcomingList');
             list.innerHTML = '';
-            if (games.length === 0) {
+            if (!games || games.length === 0) {
                 list.innerHTML = '<div style="text-align: center; padding: 40px; color: #a8d0ff;">No upcoming games available</div>';
                 return;
             }
             games.forEach(game => {
                 const card = document.createElement('div');
                 card.className = 'game-card';
-                const dateStr = game.date ? formatDate(game.date) : 'Upcoming';
+                const dateObj = parseGameDate(game);
+                const dateLine = dateObj ? formatDate(dateObj) : formatDate(game.date || 'Upcoming');
+                const relative = dateObj ? formatRelative(dateObj) : '';
+                const awayTeam = correctName(game.away || game.away_team || 'Away');
+                const homeTeam = correctName(game.home || game.home_team || 'Home');
+                const timeText = formatTimeDisplay(game);
+                const location = game.location || 'Amherst';
                 card.innerHTML = `
-                    <div class="game-date">${dateStr}</div>
-                    <div class="game-matchup">
-                        <div class="team-name">${game.away || game.away_team || 'Away'}</div>
-                        <div class="vs-text">VS</div>
-                        <div class="team-name" style="text-align: right;">${game.home || game.home_team || 'Home'}</div>
-                    </div>
-                    <div class="game-time">⏰ ${game.time || 'TBD'}</div>
-                    <div class="game-location">📍 ${game.location || 'Amherst'}</div>
+                    <div class="game-date">${relative ? `${dateLine} · ${relative}` : dateLine}</div>
+                    <div class="game-headline">${awayTeam} @ ${homeTeam}</div>
+                    <div class="game-meta">⏰ ${timeText} · 📍 ${location}</div>
                 `;
                 list.appendChild(card);
             });
@@ -553,10 +810,17 @@
         // Initialize with sample data
         function initializeDisplay(data) {
             const correctedData = correctDataNames(data);
-            renderStandings(correctedData.standings);
-            renderScorers(correctedData.top_scorers);
-            renderResults(correctedData.recent_results);
-            renderUpcoming(correctedData.upcoming_games);
+            const standings = Array.isArray(correctedData.standings) ? correctedData.standings : [];
+            const scorers = Array.isArray(correctedData.top_scorers) ? correctedData.top_scorers : [];
+            const recentSource = uniqueByGameId(Array.isArray(correctedData.recent_results) ? correctedData.recent_results : []);
+            const upcomingSource = uniqueByGameId(Array.isArray(correctedData.upcoming_games) ? correctedData.upcoming_games : []);
+            const recentGames = filterRecentGames(recentSource);
+            const upcomingGames = filterUpcomingGames(upcomingSource);
+
+            renderStandings(standings);
+            renderScorers(scorers);
+            renderResults(recentGames);
+            renderUpcoming(upcomingGames);
         }
 
         // Load data from external source or use sample data
