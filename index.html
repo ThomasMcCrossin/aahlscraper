@@ -607,35 +607,6 @@
             font-weight: 400;
         }
 
-        .carousel-controls {
-            display: none;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 14px;
-        }
-
-        .carousel-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.6);
-            background: transparent;
-            opacity: 0.55;
-            cursor: pointer;
-            transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
-        }
-
-        .carousel-dot.active {
-            background: #ffca28;
-            border-color: #ffca28;
-            opacity: 1;
-            transform: scale(1.08);
-        }
-
-        .carousel-dot:focus-visible {
-            outline: 2px solid #ffca28;
-            outline-offset: 2px;
-        }
     </style>
 </head>
 <body>
@@ -666,17 +637,15 @@
                 </div>
                 <div class="stacked-panels">
                     <div class="panel results-panel">
-                        <div class="panel-title">Latest Finals</div>
+                        <div class="panel-title">Recent Spotlight</div>
                         <div class="panel-body">
                             <div class="games-list" id="resultsList"></div>
-                            <div class="carousel-controls" id="resultsControls"></div>
                         </div>
                     </div>
                     <div class="panel upcoming-panel">
                         <div class="panel-title">Upcoming at Amherst Stadium</div>
                         <div class="panel-body">
                             <div class="games-list" id="upcomingList"></div>
-                            <div class="carousel-controls" id="upcomingControls"></div>
                         </div>
                     </div>
                 </div>
@@ -705,8 +674,8 @@
         const TICKER_PIXELS_PER_SECOND = 320;
         const RESULTS_VISIBLE_COUNT = 1;
         const UPCOMING_VISIBLE_COUNT = 1;
-        const RESULTS_ROTATION_MS = 8000;
-        const UPCOMING_ROTATION_MS = 8000;
+        const RESULTS_ROTATION_MS = 5000;
+        const UPCOMING_ROTATION_MS = 5000;
         let tickerExtras = [];
         let currentRecentGames = [];
         let currentUpcomingGames = [];
@@ -1086,56 +1055,6 @@
             return result;
         }
 
-        function renderCarouselControls(containerId, totalItems, startIndex, visibleCount) {
-            const container = document.getElementById(containerId);
-            if (!container) return;
-            const pages = visibleCount > 0 ? Math.ceil(totalItems / visibleCount) : 0;
-            if (pages <= 1) {
-                container.innerHTML = '';
-                container.style.display = 'none';
-                return;
-            }
-
-            const activePage = Math.floor(startIndex / visibleCount) % pages;
-            container.innerHTML = '';
-            container.style.display = 'flex';
-
-            for (let i = 0; i < pages; i++) {
-                const dot = document.createElement('button');
-                dot.type = 'button';
-                dot.className = 'carousel-dot' + (i === activePage ? ' active' : '');
-                dot.dataset.page = i;
-                dot.setAttribute('aria-label', `Show page ${i + 1}`);
-                container.appendChild(dot);
-            }
-        }
-
-        function setupCarouselHandlers() {
-            const resultsControls = document.getElementById('resultsControls');
-            if (resultsControls && !resultsControls.dataset.bound) {
-                resultsControls.addEventListener('click', event => {
-                    const dot = event.target.closest('.carousel-dot');
-                    if (!dot) return;
-                    const page = Number(dot.dataset.page || 0);
-                    recentCarouselIndex = page * RESULTS_VISIBLE_COUNT;
-                    startResultsCarousel(false);
-                });
-                resultsControls.dataset.bound = 'true';
-            }
-
-            const upcomingControls = document.getElementById('upcomingControls');
-            if (upcomingControls && !upcomingControls.dataset.bound) {
-                upcomingControls.addEventListener('click', event => {
-                    const dot = event.target.closest('.carousel-dot');
-                    if (!dot) return;
-                    const page = Number(dot.dataset.page || 0);
-                    upcomingCarouselIndex = page * UPCOMING_VISIBLE_COUNT;
-                    startUpcomingCarousel(false);
-                });
-                upcomingControls.dataset.bound = 'true';
-            }
-        }
-
         const DAY_MS = 24 * 60 * 60 * 1000;
         const CACHE_KEY = 'aahl_display_cache_v1';
         const CACHE_TTL_MS = 24 * DAY_MS;
@@ -1324,7 +1243,6 @@
             const list = document.getElementById('resultsList');
             list.innerHTML = '';
             if (!results || results.length === 0) {
-                renderCarouselControls('resultsControls', 0, 0, RESULTS_VISIBLE_COUNT);
                 list.innerHTML = '<div style="text-align: center; padding: 40px; color: #a8d0ff;">No recent results available</div>';
                 return;
             }
@@ -1346,15 +1264,6 @@
                 const awayInfo = resolveTeamVisual(awayTeam, game.away_line?.slug || game.away_line?.team_slug || game.away_team_slug);
                 const homeInfo = resolveTeamVisual(homeTeam, game.home_line?.slug || game.home_line?.team_slug || game.home_team_slug);
 
-                const links = [];
-                if (game.summary_url) {
-                    links.push(`<a href="${game.summary_url}" target="_blank" rel="noopener">Summary</a>`);
-                }
-                if (game.box_score_url) {
-                    links.push(`<a href="${game.box_score_url}" target="_blank" rel="noopener">Box</a>`);
-                }
-                const metaLine = [`📍 ${location}`].concat(links.length ? [`🔗 ${links.join(' · ')}`] : []).join(' · ');
-
                 card.innerHTML = `
                     <div class="game-date">${relative ? `${dateLine} · ${relative}` : dateLine}</div>
                     <div class="game-headline">${headline}</div>
@@ -1370,12 +1279,11 @@
                             <span class="score-value">${homeScore}</span>
                         </div>
                     </div>
-                    <div class="game-meta">${metaLine}</div>
+                    <div class="game-meta">Location: ${location}</div>
                 `;
                 list.appendChild(card);
             });
 
-            renderCarouselControls('resultsControls', results.length, startIndex, RESULTS_VISIBLE_COUNT);
         }
 
         // Render upcoming games
@@ -1383,7 +1291,6 @@
             const list = document.getElementById('upcomingList');
             list.innerHTML = '';
             if (!games || games.length === 0) {
-                renderCarouselControls('upcomingControls', 0, 0, UPCOMING_VISIBLE_COUNT);
                 list.innerHTML = '<div style="text-align: center; padding: 40px; color: #a8d0ff;">No upcoming games available</div>';
                 return;
             }
@@ -1413,12 +1320,11 @@
                             <span>${homeInfo.name}</span>
                         </div>
                     </div>
-                    <div class="game-meta">⏰ ${timeText} · 📍 ${location}</div>
+                    <div class="game-meta">Time: ${timeText} · Location: ${location}</div>
                 `;
                 list.appendChild(card);
             });
 
-            renderCarouselControls('upcomingControls', games.length, startIndex, UPCOMING_VISIBLE_COUNT);
         }
 
         function renderTicker(recentGames, upcomingGames) {
@@ -1525,7 +1431,6 @@
 
             if (!currentRecentGames.length) {
                 renderResults([]);
-                renderCarouselControls('resultsControls', 0, 0, RESULTS_VISIBLE_COUNT);
                 return;
             }
 
@@ -1550,7 +1455,6 @@
 
             if (!currentUpcomingGames.length) {
                 renderUpcoming([]);
-                renderCarouselControls('upcomingControls', 0, 0, UPCOMING_VISIBLE_COUNT);
                 return;
             }
 
@@ -1728,7 +1632,6 @@
         }
 
         // Kick off slide rotation and start the application
-        setupCarouselHandlers();
         loadTickerExtras();
         startSlideShow();
         loadData();
