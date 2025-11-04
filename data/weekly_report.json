@@ -1,7 +1,7 @@
 {
-  "generated_at": "2025-11-04T03:16:09.465515",
-  "standings_snapshot": "standings-20251104T031609Z.json",
-  "previous_snapshot": "standings-20251104T030521Z.json",
+  "generated_at": "2025-11-04T03:23:47.622444+00:00",
+  "standings_snapshot": "standings-20251104T032347Z.json",
+  "previous_snapshot": "standings-20251104T031609Z.json",
   "standings_movements": [
     {
       "team": "Maltby Sports",
@@ -64,6 +64,28 @@
       "played": 2,
       "wins": 0,
       "losses": 2
+    }
+  ],
+  "game_headlines": [
+    {
+      "game_id": "3276449",
+      "headline": "J&K Electric defeats Colson Overhead Doors 6-3",
+      "game_datetime": "2025-11-03T01:00:00+00:00"
+    },
+    {
+      "game_id": "3276440",
+      "headline": "G.R. Mitchell Welding dominates Ultramar 9-3",
+      "game_datetime": "2025-10-29T01:00:00+00:00"
+    },
+    {
+      "game_id": "3276439",
+      "headline": "G.R. Mitchell Welding dominates Ultramar 9-3",
+      "game_datetime": "2025-10-29T01:00:00+00:00"
+    },
+    {
+      "game_id": "3276435",
+      "headline": "J&K Electric edges Maltby Sports 4-3",
+      "game_datetime": "2025-10-28T23:45:00+00:00"
     }
   ]
 }

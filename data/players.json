@@ -1,0 +1,1138 @@
+[
+  {
+    "number": "2",
+    "name": "Gallant, Matt",
+    "positions": [
+      "F"
+    ],
+    "player_id": "maltby-sports-gallant-matt-2",
+    "height": null,
+    "weight": null,
+    "shoots": "R",
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-1",
+    "team_name": "Maltby Sports",
+    "team_slug": "maltby-sports"
+  },
+  {
+    "number": "6",
+    "name": "Crocker, Luke",
+    "positions": [
+      "D"
+    ],
+    "player_id": "maltby-sports-crocker-luke-6",
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-1",
+    "team_name": "Maltby Sports",
+    "team_slug": "maltby-sports"
+  },
+  {
+    "number": "7",
+    "name": "Hurley, Connor",
+    "positions": [
+      "F"
+    ],
+    "player_id": "maltby-sports-hurley-connor-7",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "River H\u00c3\u00a9bert, NS",
+    "team_id": "TYLERARSENEAU-1",
+    "team_name": "Maltby Sports",
+    "team_slug": "maltby-sports"
+  },
+  {
+    "number": "9",
+    "name": "McCarthy, Ian",
+    "positions": [
+      "F"
+    ],
+    "player_id": "maltby-sports-mccarthy-ian-9",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-1",
+    "team_name": "Maltby Sports",
+    "team_slug": "maltby-sports"
+  },
+  {
+    "number": "16",
+    "name": "Small, Danny \"Biggie\"",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "player_id": "maltby-sports-small-danny-biggie-16",
+    "height": "5' 7\"",
+    "weight": "165 lbs",
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-1",
+    "team_name": "Maltby Sports",
+    "team_slug": "maltby-sports"
+  },
+  {
+    "number": "17",
+    "name": "Maltby, Chris - Captain",
+    "positions": [
+      "D",
+      "F"
+    ],
+    "player_id": "maltby-sports-maltby-chris-captain-17",
+    "height": "6'",
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-1",
+    "team_name": "Maltby Sports",
+    "team_slug": "maltby-sports"
+  },
+  {
+    "number": "18",
+    "name": "Johnson, Trevor",
+    "positions": [
+      "D"
+    ],
+    "player_id": "maltby-sports-johnson-trevor-18",
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Parrsboro, NS",
+    "team_id": "TYLERARSENEAU-1",
+    "team_name": "Maltby Sports",
+    "team_slug": "maltby-sports"
+  },
+  {
+    "number": "19",
+    "name": "Mccrossin, Thomas",
+    "positions": [
+      "F"
+    ],
+    "player_id": "maltby-sports-mccrossin-thomas-19",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-1",
+    "team_name": "Maltby Sports",
+    "team_slug": "maltby-sports"
+  },
+  {
+    "number": "29",
+    "name": "Codling, Ryder",
+    "positions": [
+      "F"
+    ],
+    "player_id": "maltby-sports-codling-ryder-29",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-1",
+    "team_name": "Maltby Sports",
+    "team_slug": "maltby-sports"
+  },
+  {
+    "number": "30",
+    "name": "Belliveau, Marc",
+    "positions": [
+      "G"
+    ],
+    "player_id": "maltby-sports-belliveau-marc-30",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": "L",
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-1",
+    "team_name": "Maltby Sports",
+    "team_slug": "maltby-sports"
+  },
+  {
+    "number": "63",
+    "name": "Leblanc, Travis",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "player_id": "maltby-sports-leblanc-travis-63",
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-1",
+    "team_name": "Maltby Sports",
+    "team_slug": "maltby-sports"
+  },
+  {
+    "number": "77",
+    "name": "Mackinnon, Ted",
+    "positions": [
+      "F"
+    ],
+    "player_id": "maltby-sports-mackinnon-ted-77",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-1",
+    "team_name": "Maltby Sports",
+    "team_slug": "maltby-sports"
+  },
+  {
+    "number": "91",
+    "name": "Arbing, Ryan",
+    "positions": [
+      "D",
+      "F"
+    ],
+    "player_id": "maltby-sports-arbing-ryan-91",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-1",
+    "team_name": "Maltby Sports",
+    "team_slug": "maltby-sports"
+  },
+  {
+    "number": "98",
+    "name": "Bridge, Issac",
+    "positions": [
+      "C"
+    ],
+    "player_id": "maltby-sports-bridge-issac-98",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-1",
+    "team_name": "Maltby Sports",
+    "team_slug": "maltby-sports"
+  },
+  {
+    "number": "1",
+    "name": "Thomas, Remi",
+    "positions": [
+      "G"
+    ],
+    "player_id": "ultramar-thomas-remi-1",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-2",
+    "team_name": "Ultramar",
+    "team_slug": "ultramar"
+  },
+  {
+    "number": "2",
+    "name": "Dywer, Chris",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "player_id": "ultramar-dywer-chris-2",
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-2",
+    "team_name": "Ultramar",
+    "team_slug": "ultramar"
+  },
+  {
+    "number": "3",
+    "name": "Gallant, Brett",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "player_id": "ultramar-gallant-brett-3",
+    "height": "3' 12\"",
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-2",
+    "team_name": "Ultramar",
+    "team_slug": "ultramar"
+  },
+  {
+    "number": "4",
+    "name": "Dobson, Aaron",
+    "positions": [
+      "D"
+    ],
+    "player_id": "ultramar-dobson-aaron-4",
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-2",
+    "team_name": "Ultramar",
+    "team_slug": "ultramar"
+  },
+  {
+    "number": "5",
+    "name": "Bonnell, Andy",
+    "positions": [
+      "F"
+    ],
+    "player_id": "ultramar-bonnell-andy-5",
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Burnt Church, NB",
+    "team_id": "TYLERARSENEAU-2",
+    "team_name": "Ultramar",
+    "team_slug": "ultramar"
+  },
+  {
+    "number": "6",
+    "name": "Miller, Madden",
+    "positions": [
+      "F"
+    ],
+    "player_id": "ultramar-miller-madden-6",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-2",
+    "team_name": "Ultramar",
+    "team_slug": "ultramar"
+  },
+  {
+    "number": "8",
+    "name": "Jobes, Bill",
+    "positions": [
+      "F"
+    ],
+    "player_id": "ultramar-jobes-bill-8",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-2",
+    "team_name": "Ultramar",
+    "team_slug": "ultramar"
+  },
+  {
+    "number": "9",
+    "name": "Linkletter, Brad - Captain",
+    "positions": [
+      "C"
+    ],
+    "player_id": "ultramar-linkletter-brad-captain-9",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "River H\u00c3\u00a9bert, NS",
+    "team_id": "TYLERARSENEAU-2",
+    "team_name": "Ultramar",
+    "team_slug": "ultramar"
+  },
+  {
+    "number": "10",
+    "name": "Malcolm, Robert",
+    "positions": [
+      "F"
+    ],
+    "player_id": "ultramar-malcolm-robert-10",
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-2",
+    "team_name": "Ultramar",
+    "team_slug": "ultramar"
+  },
+  {
+    "number": "11",
+    "name": "Allen, Tyler \"Tuffy\"",
+    "positions": [
+      "F"
+    ],
+    "player_id": "ultramar-allen-tyler-tuffy-11",
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-2",
+    "team_name": "Ultramar",
+    "team_slug": "ultramar"
+  },
+  {
+    "number": "12",
+    "name": "Cove, Matt",
+    "positions": [
+      "F"
+    ],
+    "player_id": "ultramar-cove-matt-12",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-2",
+    "team_name": "Ultramar",
+    "team_slug": "ultramar"
+  },
+  {
+    "number": "14",
+    "name": "Burke, Brody",
+    "positions": [
+      "D",
+      "F"
+    ],
+    "player_id": "ultramar-burke-brody-14",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-2",
+    "team_name": "Ultramar",
+    "team_slug": "ultramar"
+  },
+  {
+    "number": "22",
+    "name": "Burke, Tim",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "player_id": "ultramar-burke-tim-22",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-2",
+    "team_name": "Ultramar",
+    "team_slug": "ultramar"
+  },
+  {
+    "number": null,
+    "name": "Bennett, Mark",
+    "positions": [
+      "D"
+    ],
+    "player_id": "ultramar-bennett-mark",
+    "height": "7' 2\"",
+    "weight": "250 lbs",
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Parts Unknown",
+    "team_id": "TYLERARSENEAU-2",
+    "team_name": "Ultramar",
+    "team_slug": "ultramar"
+  },
+  {
+    "number": "7",
+    "name": "Chandler 3rd, Charles",
+    "positions": [
+      "F"
+    ],
+    "player_id": "colson-overhead-doors-chandler-3rd-charles-7",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-3",
+    "team_name": "Colson Overhead Doors",
+    "team_slug": "colson-overhead-doors"
+  },
+  {
+    "number": "8",
+    "name": "Eatmon, Chester",
+    "positions": [
+      "F"
+    ],
+    "player_id": "colson-overhead-doors-eatmon-chester-8",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-3",
+    "team_name": "Colson Overhead Doors",
+    "team_slug": "colson-overhead-doors"
+  },
+  {
+    "number": "9",
+    "name": "Black, Mark",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "player_id": "colson-overhead-doors-black-mark-9",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Down Yonder",
+    "team_id": "TYLERARSENEAU-3",
+    "team_name": "Colson Overhead Doors",
+    "team_slug": "colson-overhead-doors"
+  },
+  {
+    "number": "12",
+    "name": "Burge, Tom",
+    "positions": [
+      "F"
+    ],
+    "player_id": "colson-overhead-doors-burge-tom-12",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "New Glasgow, NS",
+    "team_id": "TYLERARSENEAU-3",
+    "team_name": "Colson Overhead Doors",
+    "team_slug": "colson-overhead-doors"
+  },
+  {
+    "number": "13",
+    "name": "Davis, Dan",
+    "positions": [
+      "F"
+    ],
+    "player_id": "colson-overhead-doors-davis-dan-13",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Springhill, NS",
+    "team_id": "TYLERARSENEAU-3",
+    "team_name": "Colson Overhead Doors",
+    "team_slug": "colson-overhead-doors"
+  },
+  {
+    "number": "13",
+    "name": "Henshaw, Chad",
+    "positions": [
+      "F"
+    ],
+    "player_id": "colson-overhead-doors-henshaw-chad-13",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-3",
+    "team_name": "Colson Overhead Doors",
+    "team_slug": "colson-overhead-doors"
+  },
+  {
+    "number": "19",
+    "name": "Hebert, Denis",
+    "positions": [
+      "F"
+    ],
+    "player_id": "colson-overhead-doors-hebert-denis-19",
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-3",
+    "team_name": "Colson Overhead Doors",
+    "team_slug": "colson-overhead-doors"
+  },
+  {
+    "number": "23",
+    "name": "Gesner, Logan",
+    "positions": [
+      "D",
+      "F"
+    ],
+    "player_id": "colson-overhead-doors-gesner-logan-23",
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Middleton, NS",
+    "team_id": "TYLERARSENEAU-3",
+    "team_name": "Colson Overhead Doors",
+    "team_slug": "colson-overhead-doors"
+  },
+  {
+    "number": "30",
+    "name": "Russel, Nick",
+    "positions": [
+      "G"
+    ],
+    "player_id": "colson-overhead-doors-russel-nick-30",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-3",
+    "team_name": "Colson Overhead Doors",
+    "team_slug": "colson-overhead-doors"
+  },
+  {
+    "number": "31",
+    "name": "Sproul, Chris - Captain",
+    "positions": [
+      "F"
+    ],
+    "player_id": "colson-overhead-doors-sproul-chris-captain-31",
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Sackville, NB",
+    "team_id": "TYLERARSENEAU-3",
+    "team_name": "Colson Overhead Doors",
+    "team_slug": "colson-overhead-doors"
+  },
+  {
+    "number": "44",
+    "name": "Baisley, Chris",
+    "positions": [
+      "D"
+    ],
+    "player_id": "colson-overhead-doors-baisley-chris-44",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Miramichi, NB",
+    "team_id": "TYLERARSENEAU-3",
+    "team_name": "Colson Overhead Doors",
+    "team_slug": "colson-overhead-doors"
+  },
+  {
+    "number": "76",
+    "name": "Faulkner, Rory",
+    "positions": [
+      "F"
+    ],
+    "player_id": "colson-overhead-doors-faulkner-rory-76",
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-3",
+    "team_name": "Colson Overhead Doors",
+    "team_slug": "colson-overhead-doors"
+  },
+  {
+    "number": "88",
+    "name": "Gould, Zack",
+    "positions": [
+      "F"
+    ],
+    "player_id": "colson-overhead-doors-gould-zack-88",
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-3",
+    "team_name": "Colson Overhead Doors",
+    "team_slug": "colson-overhead-doors"
+  },
+  {
+    "number": null,
+    "name": "Terrio, Marshall",
+    "positions": [
+      "F"
+    ],
+    "player_id": "colson-overhead-doors-terrio-marshall",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-3",
+    "team_name": "Colson Overhead Doors",
+    "team_slug": "colson-overhead-doors"
+  },
+  {
+    "number": "00",
+    "name": "Harrison, Avery",
+    "positions": [
+      "D"
+    ],
+    "player_id": "j-and-k-electric-harrison-avery-00",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-4",
+    "team_name": "J&K Electric",
+    "team_slug": "j-and-k-electric"
+  },
+  {
+    "number": "2",
+    "name": "Morris, Matt",
+    "positions": [
+      "F"
+    ],
+    "player_id": "j-and-k-electric-morris-matt-2",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Parrsboro, NS",
+    "team_id": "TYLERARSENEAU-4",
+    "team_name": "J&K Electric",
+    "team_slug": "j-and-k-electric"
+  },
+  {
+    "number": "4",
+    "name": "Mackenzie, Rubein",
+    "positions": [
+      "F"
+    ],
+    "player_id": "j-and-k-electric-mackenzie-rubein-4",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-4",
+    "team_name": "J&K Electric",
+    "team_slug": "j-and-k-electric"
+  },
+  {
+    "number": "9",
+    "name": "Leopold, Nick",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "player_id": "j-and-k-electric-leopold-nick-9",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-4",
+    "team_name": "J&K Electric",
+    "team_slug": "j-and-k-electric"
+  },
+  {
+    "number": "17",
+    "name": "Kinnear, Jeremy",
+    "positions": [
+      "F"
+    ],
+    "player_id": "j-and-k-electric-kinnear-jeremy-17",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-4",
+    "team_name": "J&K Electric",
+    "team_slug": "j-and-k-electric"
+  },
+  {
+    "number": "18",
+    "name": "Budd, Ryan",
+    "positions": [
+      "F"
+    ],
+    "player_id": "j-and-k-electric-budd-ryan-18",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-4",
+    "team_name": "J&K Electric",
+    "team_slug": "j-and-k-electric"
+  },
+  {
+    "number": "22",
+    "name": "Boutiler, Gerald - Captain",
+    "positions": [
+      "D",
+      "F"
+    ],
+    "player_id": "j-and-k-electric-boutiler-gerald-captain-22",
+    "height": null,
+    "weight": null,
+    "shoots": "R",
+    "catches": null,
+    "hometown": "Parrsboro, NS",
+    "team_id": "TYLERARSENEAU-4",
+    "team_name": "J&K Electric",
+    "team_slug": "j-and-k-electric"
+  },
+  {
+    "number": "26",
+    "name": "Mansour, Mikhial",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "player_id": "j-and-k-electric-mansour-mikhial-26",
+    "height": null,
+    "weight": null,
+    "shoots": "R",
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-4",
+    "team_name": "J&K Electric",
+    "team_slug": "j-and-k-electric"
+  },
+  {
+    "number": "27",
+    "name": "Morris, Pat",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "player_id": "j-and-k-electric-morris-pat-27",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Parrsboro, NS",
+    "team_id": "TYLERARSENEAU-4",
+    "team_name": "J&K Electric",
+    "team_slug": "j-and-k-electric"
+  },
+  {
+    "number": "28",
+    "name": "Stone, Brendan",
+    "positions": [
+      "F"
+    ],
+    "player_id": "j-and-k-electric-stone-brendan-28",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "TYLERARSENEAU-4",
+    "team_name": "J&K Electric",
+    "team_slug": "j-and-k-electric"
+  },
+  {
+    "number": "30",
+    "name": "Drake, Scott",
+    "positions": [
+      "G",
+      "D",
+      "F"
+    ],
+    "player_id": "j-and-k-electric-drake-scott-30",
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": "L",
+    "hometown": "Halifax, NS",
+    "team_id": "TYLERARSENEAU-4",
+    "team_name": "J&K Electric",
+    "team_slug": "j-and-k-electric"
+  },
+  {
+    "number": "36",
+    "name": "Martin, Ryan",
+    "positions": [],
+    "player_id": "j-and-k-electric-martin-ryan-36",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-4",
+    "team_name": "J&K Electric",
+    "team_slug": "j-and-k-electric"
+  },
+  {
+    "number": "74",
+    "name": "Davison, Bill",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "player_id": "j-and-k-electric-davison-bill-74",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-4",
+    "team_name": "J&K Electric",
+    "team_slug": "j-and-k-electric"
+  },
+  {
+    "number": "87",
+    "name": "Perrin, Noah",
+    "positions": [
+      "F"
+    ],
+    "player_id": "j-and-k-electric-perrin-noah-87",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "TYLERARSENEAU-4",
+    "team_name": "J&K Electric",
+    "team_slug": "j-and-k-electric"
+  },
+  {
+    "number": "1",
+    "name": "Clark, Scott",
+    "positions": [
+      "G"
+    ],
+    "player_id": "gr-mitchell-welding-clark-scott-1",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "983723",
+    "team_name": "G.R. Mitchell Welding",
+    "team_slug": "gr-mitchell-welding"
+  },
+  {
+    "number": "7",
+    "name": "Helm, Corey",
+    "positions": [
+      "D",
+      "F"
+    ],
+    "player_id": "gr-mitchell-welding-helm-corey-7",
+    "height": null,
+    "weight": null,
+    "shoots": "R",
+    "catches": null,
+    "hometown": "Tidnish, NS",
+    "team_id": "983723",
+    "team_name": "G.R. Mitchell Welding",
+    "team_slug": "gr-mitchell-welding"
+  },
+  {
+    "number": "9",
+    "name": "Bourgeois, Julien",
+    "positions": [
+      "F"
+    ],
+    "player_id": "gr-mitchell-welding-bourgeois-julien-9",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "983723",
+    "team_name": "G.R. Mitchell Welding",
+    "team_slug": "gr-mitchell-welding"
+  },
+  {
+    "number": "13",
+    "name": "Mitchell, Gordon - Captain",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "player_id": "gr-mitchell-welding-mitchell-gordon-captain-13",
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": null,
+    "team_id": "983723",
+    "team_name": "G.R. Mitchell Welding",
+    "team_slug": "gr-mitchell-welding"
+  },
+  {
+    "number": "15",
+    "name": "Hurley, William",
+    "positions": [
+      "F"
+    ],
+    "player_id": "gr-mitchell-welding-hurley-william-15",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "983723",
+    "team_name": "G.R. Mitchell Welding",
+    "team_slug": "gr-mitchell-welding"
+  },
+  {
+    "number": "21",
+    "name": "Macpherson, Ryan",
+    "positions": [],
+    "player_id": "gr-mitchell-welding-macpherson-ryan-21",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "983723",
+    "team_name": "G.R. Mitchell Welding",
+    "team_slug": "gr-mitchell-welding"
+  },
+  {
+    "number": "38",
+    "name": "Atkinson, Dave",
+    "positions": [
+      "F"
+    ],
+    "player_id": "gr-mitchell-welding-atkinson-dave-38",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Parrsboro, NS",
+    "team_id": "983723",
+    "team_name": "G.R. Mitchell Welding",
+    "team_slug": "gr-mitchell-welding"
+  },
+  {
+    "number": "55",
+    "name": "Ryan, Geoff",
+    "positions": [
+      "D"
+    ],
+    "player_id": "gr-mitchell-welding-ryan-geoff-55",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Springhill, NS",
+    "team_id": "983723",
+    "team_name": "G.R. Mitchell Welding",
+    "team_slug": "gr-mitchell-welding"
+  },
+  {
+    "number": "61",
+    "name": "Sutton, Cody",
+    "positions": [
+      "F",
+      "D"
+    ],
+    "player_id": "gr-mitchell-welding-sutton-cody-61",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "983723",
+    "team_name": "G.R. Mitchell Welding",
+    "team_slug": "gr-mitchell-welding"
+  },
+  {
+    "number": "66",
+    "name": "Mattix, Ralph",
+    "positions": [
+      "D"
+    ],
+    "player_id": "gr-mitchell-welding-mattix-ralph-66",
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": null,
+    "team_id": "983723",
+    "team_name": "G.R. Mitchell Welding",
+    "team_slug": "gr-mitchell-welding"
+  },
+  {
+    "number": "88",
+    "name": "Robichaud, Corey",
+    "positions": [
+      "F"
+    ],
+    "player_id": "gr-mitchell-welding-robichaud-corey-88",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "983723",
+    "team_name": "G.R. Mitchell Welding",
+    "team_slug": "gr-mitchell-welding"
+  },
+  {
+    "number": "90",
+    "name": "Fullerton, Zack",
+    "positions": [
+      "F"
+    ],
+    "player_id": "gr-mitchell-welding-fullerton-zack-90",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "team_id": "983723",
+    "team_name": "G.R. Mitchell Welding",
+    "team_slug": "gr-mitchell-welding"
+  },
+  {
+    "number": "94",
+    "name": "Dobson, Nick \"Pickle\"",
+    "positions": [
+      "F"
+    ],
+    "player_id": "gr-mitchell-welding-dobson-nick-pickle-94",
+    "height": null,
+    "weight": null,
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "983723",
+    "team_name": "G.R. Mitchell Welding",
+    "team_slug": "gr-mitchell-welding"
+  },
+  {
+    "number": "97",
+    "name": "MacDonald, Meathead",
+    "positions": [
+      "C"
+    ],
+    "player_id": "gr-mitchell-welding-macdonald-meathead-97",
+    "height": null,
+    "weight": null,
+    "shoots": "R",
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "team_id": "983723",
+    "team_name": "G.R. Mitchell Welding",
+    "team_slug": "gr-mitchell-welding"
+  }
+]

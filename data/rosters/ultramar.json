@@ -5,6 +5,7 @@
     "positions": [
       "G"
     ],
+    "player_id": "ultramar-thomas-remi-1",
     "height": null,
     "weight": null,
     "shoots": null,
@@ -18,6 +19,7 @@
       "F",
       "D"
     ],
+    "player_id": "ultramar-dywer-chris-2",
     "height": null,
     "weight": null,
     "shoots": "L",
@@ -31,6 +33,7 @@
       "F",
       "D"
     ],
+    "player_id": "ultramar-gallant-brett-3",
     "height": "3' 12\"",
     "weight": null,
     "shoots": "L",
@@ -43,6 +46,7 @@
     "positions": [
       "D"
     ],
+    "player_id": "ultramar-dobson-aaron-4",
     "height": null,
     "weight": null,
     "shoots": "L",
@@ -55,6 +59,7 @@
     "positions": [
       "F"
     ],
+    "player_id": "ultramar-bonnell-andy-5",
     "height": null,
     "weight": null,
     "shoots": "L",
@@ -67,6 +72,7 @@
     "positions": [
       "F"
     ],
+    "player_id": "ultramar-miller-madden-6",
     "height": null,
     "weight": null,
     "shoots": null,
@@ -79,6 +85,7 @@
     "positions": [
       "F"
     ],
+    "player_id": "ultramar-jobes-bill-8",
     "height": null,
     "weight": null,
     "shoots": null,
@@ -91,6 +98,7 @@
     "positions": [
       "C"
     ],
+    "player_id": "ultramar-linkletter-brad-captain-9",
     "height": null,
     "weight": null,
     "shoots": null,
@@ -103,6 +111,7 @@
     "positions": [
       "F"
     ],
+    "player_id": "ultramar-malcolm-robert-10",
     "height": null,
     "weight": null,
     "shoots": "L",
@@ -115,6 +124,7 @@
     "positions": [
       "F"
     ],
+    "player_id": "ultramar-allen-tyler-tuffy-11",
     "height": null,
     "weight": null,
     "shoots": "L",
@@ -127,6 +137,7 @@
     "positions": [
       "F"
     ],
+    "player_id": "ultramar-cove-matt-12",
     "height": null,
     "weight": null,
     "shoots": null,
@@ -140,6 +151,7 @@
       "D",
       "F"
     ],
+    "player_id": "ultramar-burke-brody-14",
     "height": null,
     "weight": null,
     "shoots": null,
@@ -153,6 +165,7 @@
       "F",
       "D"
     ],
+    "player_id": "ultramar-burke-tim-22",
     "height": null,
     "weight": null,
     "shoots": null,
@@ -165,6 +178,7 @@
     "positions": [
       "D"
     ],
+    "player_id": "ultramar-bennett-mark",
     "height": "7' 2\"",
     "weight": "250 lbs",
     "shoots": "L",

@@ -10,6 +10,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "maltby-sports-gallant-matt-2",
         "height": null,
         "weight": null,
         "shoots": "R",
@@ -22,6 +23,7 @@
         "positions": [
           "D"
         ],
+        "player_id": "maltby-sports-crocker-luke-6",
         "height": null,
         "weight": null,
         "shoots": "L",
@@ -34,6 +36,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "maltby-sports-hurley-connor-7",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -46,6 +49,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "maltby-sports-mccarthy-ian-9",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -59,6 +63,7 @@
           "F",
           "D"
         ],
+        "player_id": "maltby-sports-small-danny-biggie-16",
         "height": "5' 7\"",
         "weight": "165 lbs",
         "shoots": "L",
@@ -72,6 +77,7 @@
           "D",
           "F"
         ],
+        "player_id": "maltby-sports-maltby-chris-captain-17",
         "height": "6'",
         "weight": null,
         "shoots": "L",
@@ -84,6 +90,7 @@
         "positions": [
           "D"
         ],
+        "player_id": "maltby-sports-johnson-trevor-18",
         "height": null,
         "weight": null,
         "shoots": "L",
@@ -96,6 +103,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "maltby-sports-mccrossin-thomas-19",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -108,6 +116,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "maltby-sports-codling-ryder-29",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -120,6 +129,7 @@
         "positions": [
           "G"
         ],
+        "player_id": "maltby-sports-belliveau-marc-30",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -133,6 +143,7 @@
           "F",
           "D"
         ],
+        "player_id": "maltby-sports-leblanc-travis-63",
         "height": null,
         "weight": null,
         "shoots": "L",
@@ -145,6 +156,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "maltby-sports-mackinnon-ted-77",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -158,6 +170,7 @@
           "D",
           "F"
         ],
+        "player_id": "maltby-sports-arbing-ryan-91",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -170,6 +183,7 @@
         "positions": [
           "C"
         ],
+        "player_id": "maltby-sports-bridge-issac-98",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -189,6 +203,7 @@
         "positions": [
           "G"
         ],
+        "player_id": "ultramar-thomas-remi-1",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -202,6 +217,7 @@
           "F",
           "D"
         ],
+        "player_id": "ultramar-dywer-chris-2",
         "height": null,
         "weight": null,
         "shoots": "L",
@@ -215,6 +231,7 @@
           "F",
           "D"
         ],
+        "player_id": "ultramar-gallant-brett-3",
         "height": "3' 12\"",
         "weight": null,
         "shoots": "L",
@@ -227,6 +244,7 @@
         "positions": [
           "D"
         ],
+        "player_id": "ultramar-dobson-aaron-4",
         "height": null,
         "weight": null,
         "shoots": "L",
@@ -239,6 +257,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "ultramar-bonnell-andy-5",
         "height": null,
         "weight": null,
         "shoots": "L",
@@ -251,6 +270,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "ultramar-miller-madden-6",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -263,6 +283,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "ultramar-jobes-bill-8",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -275,6 +296,7 @@
         "positions": [
           "C"
         ],
+        "player_id": "ultramar-linkletter-brad-captain-9",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -287,6 +309,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "ultramar-malcolm-robert-10",
         "height": null,
         "weight": null,
         "shoots": "L",
@@ -299,6 +322,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "ultramar-allen-tyler-tuffy-11",
         "height": null,
         "weight": null,
         "shoots": "L",
@@ -311,6 +335,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "ultramar-cove-matt-12",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -324,6 +349,7 @@
           "D",
           "F"
         ],
+        "player_id": "ultramar-burke-brody-14",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -337,6 +363,7 @@
           "F",
           "D"
         ],
+        "player_id": "ultramar-burke-tim-22",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -349,6 +376,7 @@
         "positions": [
           "D"
         ],
+        "player_id": "ultramar-bennett-mark",
         "height": "7' 2\"",
         "weight": "250 lbs",
         "shoots": "L",
@@ -368,6 +396,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "colson-overhead-doors-chandler-3rd-charles-7",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -380,6 +409,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "colson-overhead-doors-eatmon-chester-8",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -393,6 +423,7 @@
           "F",
           "D"
         ],
+        "player_id": "colson-overhead-doors-black-mark-9",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -405,6 +436,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "colson-overhead-doors-burge-tom-12",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -417,6 +449,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "colson-overhead-doors-davis-dan-13",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -429,6 +462,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "colson-overhead-doors-henshaw-chad-13",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -441,6 +475,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "colson-overhead-doors-hebert-denis-19",
         "height": null,
         "weight": null,
         "shoots": "L",
@@ -454,6 +489,7 @@
           "D",
           "F"
         ],
+        "player_id": "colson-overhead-doors-gesner-logan-23",
         "height": null,
         "weight": null,
         "shoots": "L",
@@ -466,6 +502,7 @@
         "positions": [
           "G"
         ],
+        "player_id": "colson-overhead-doors-russel-nick-30",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -478,6 +515,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "colson-overhead-doors-sproul-chris-captain-31",
         "height": null,
         "weight": null,
         "shoots": "L",
@@ -490,6 +528,7 @@
         "positions": [
           "D"
         ],
+        "player_id": "colson-overhead-doors-baisley-chris-44",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -502,6 +541,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "colson-overhead-doors-faulkner-rory-76",
         "height": null,
         "weight": null,
         "shoots": "L",
@@ -514,6 +554,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "colson-overhead-doors-gould-zack-88",
         "height": null,
         "weight": null,
         "shoots": "L",
@@ -526,6 +567,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "colson-overhead-doors-terrio-marshall",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -545,6 +587,7 @@
         "positions": [
           "D"
         ],
+        "player_id": "j-and-k-electric-harrison-avery-00",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -557,6 +600,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "j-and-k-electric-morris-matt-2",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -569,6 +613,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "j-and-k-electric-mackenzie-rubein-4",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -582,6 +627,7 @@
           "F",
           "D"
         ],
+        "player_id": "j-and-k-electric-leopold-nick-9",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -594,6 +640,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "j-and-k-electric-kinnear-jeremy-17",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -606,6 +653,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "j-and-k-electric-budd-ryan-18",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -619,6 +667,7 @@
           "D",
           "F"
         ],
+        "player_id": "j-and-k-electric-boutiler-gerald-captain-22",
         "height": null,
         "weight": null,
         "shoots": "R",
@@ -632,6 +681,7 @@
           "F",
           "D"
         ],
+        "player_id": "j-and-k-electric-mansour-mikhial-26",
         "height": null,
         "weight": null,
         "shoots": "R",
@@ -645,6 +695,7 @@
           "F",
           "D"
         ],
+        "player_id": "j-and-k-electric-morris-pat-27",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -657,6 +708,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "j-and-k-electric-stone-brendan-28",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -671,6 +723,7 @@
           "D",
           "F"
         ],
+        "player_id": "j-and-k-electric-drake-scott-30",
         "height": null,
         "weight": null,
         "shoots": "L",
@@ -681,6 +734,7 @@
         "number": "36",
         "name": "Martin, Ryan",
         "positions": [],
+        "player_id": "j-and-k-electric-martin-ryan-36",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -694,6 +748,7 @@
           "F",
           "D"
         ],
+        "player_id": "j-and-k-electric-davison-bill-74",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -706,6 +761,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "j-and-k-electric-perrin-noah-87",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -725,6 +781,7 @@
         "positions": [
           "G"
         ],
+        "player_id": "gr-mitchell-welding-clark-scott-1",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -738,6 +795,7 @@
           "D",
           "F"
         ],
+        "player_id": "gr-mitchell-welding-helm-corey-7",
         "height": null,
         "weight": null,
         "shoots": "R",
@@ -750,6 +808,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "gr-mitchell-welding-bourgeois-julien-9",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -763,6 +822,7 @@
           "F",
           "D"
         ],
+        "player_id": "gr-mitchell-welding-mitchell-gordon-captain-13",
         "height": null,
         "weight": null,
         "shoots": "L",
@@ -775,6 +835,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "gr-mitchell-welding-hurley-william-15",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -785,6 +846,7 @@
         "number": "21",
         "name": "Macpherson, Ryan",
         "positions": [],
+        "player_id": "gr-mitchell-welding-macpherson-ryan-21",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -797,6 +859,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "gr-mitchell-welding-atkinson-dave-38",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -809,6 +872,7 @@
         "positions": [
           "D"
         ],
+        "player_id": "gr-mitchell-welding-ryan-geoff-55",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -822,6 +886,7 @@
           "F",
           "D"
         ],
+        "player_id": "gr-mitchell-welding-sutton-cody-61",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -834,6 +899,7 @@
         "positions": [
           "D"
         ],
+        "player_id": "gr-mitchell-welding-mattix-ralph-66",
         "height": null,
         "weight": null,
         "shoots": "L",
@@ -846,6 +912,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "gr-mitchell-welding-robichaud-corey-88",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -858,6 +925,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "gr-mitchell-welding-fullerton-zack-90",
         "height": null,
         "weight": null,
         "shoots": null,
@@ -870,6 +938,7 @@
         "positions": [
           "F"
         ],
+        "player_id": "gr-mitchell-welding-dobson-nick-pickle-94",
         "height": null,
         "weight": null,
         "shoots": "L",
@@ -882,6 +951,7 @@
         "positions": [
           "C"
         ],
+        "player_id": "gr-mitchell-welding-macdonald-meathead-97",
         "height": null,
         "weight": null,
         "shoots": "R",

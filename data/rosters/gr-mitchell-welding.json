@@ -5,6 +5,7 @@
     "positions": [
       "G"
     ],
+    "player_id": "gr-mitchell-welding-clark-scott-1",
     "height": null,
     "weight": null,
     "shoots": null,
@@ -18,6 +19,7 @@
       "D",
       "F"
     ],
+    "player_id": "gr-mitchell-welding-helm-corey-7",
     "height": null,
     "weight": null,
     "shoots": "R",
@@ -30,6 +32,7 @@
     "positions": [
       "F"
     ],
+    "player_id": "gr-mitchell-welding-bourgeois-julien-9",
     "height": null,
     "weight": null,
     "shoots": null,
@@ -43,6 +46,7 @@
       "F",
       "D"
     ],
+    "player_id": "gr-mitchell-welding-mitchell-gordon-captain-13",
     "height": null,
     "weight": null,
     "shoots": "L",
@@ -55,6 +59,7 @@
     "positions": [
       "F"
     ],
+    "player_id": "gr-mitchell-welding-hurley-william-15",
     "height": null,
     "weight": null,
     "shoots": null,
@@ -65,6 +70,7 @@
     "number": "21",
     "name": "Macpherson, Ryan",
     "positions": [],
+    "player_id": "gr-mitchell-welding-macpherson-ryan-21",
     "height": null,
     "weight": null,
     "shoots": null,
@@ -77,6 +83,7 @@
     "positions": [
       "F"
     ],
+    "player_id": "gr-mitchell-welding-atkinson-dave-38",
     "height": null,
     "weight": null,
     "shoots": null,
@@ -89,6 +96,7 @@
     "positions": [
       "D"
     ],
+    "player_id": "gr-mitchell-welding-ryan-geoff-55",
     "height": null,
     "weight": null,
     "shoots": null,
@@ -102,6 +110,7 @@
       "F",
       "D"
     ],
+    "player_id": "gr-mitchell-welding-sutton-cody-61",
     "height": null,
     "weight": null,
     "shoots": null,
@@ -114,6 +123,7 @@
     "positions": [
       "D"
     ],
+    "player_id": "gr-mitchell-welding-mattix-ralph-66",
     "height": null,
     "weight": null,
     "shoots": "L",
@@ -126,6 +136,7 @@
     "positions": [
       "F"
     ],
+    "player_id": "gr-mitchell-welding-robichaud-corey-88",
     "height": null,
     "weight": null,
     "shoots": null,
@@ -138,6 +149,7 @@
     "positions": [
       "F"
     ],
+    "player_id": "gr-mitchell-welding-fullerton-zack-90",
     "height": null,
     "weight": null,
     "shoots": null,
@@ -150,6 +162,7 @@
     "positions": [
       "F"
     ],
+    "player_id": "gr-mitchell-welding-dobson-nick-pickle-94",
     "height": null,
     "weight": null,
     "shoots": "L",
@@ -162,6 +175,7 @@
     "positions": [
       "C"
     ],
+    "player_id": "gr-mitchell-welding-macdonald-meathead-97",
     "height": null,
     "weight": null,
     "shoots": "R",

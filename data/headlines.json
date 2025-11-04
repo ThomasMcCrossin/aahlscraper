@@ -1,6 +1,57 @@
-[
-  "J&K Electric edges Maltby Sports 4-3",
-  "G.R. Mitchell Welding dominates Ultramar 9-3",
-  "G.R. Mitchell Welding dominates Ultramar 9-3",
-  "J&K Electric defeats Colson Overhead Doors 6-3"
-]
+{
+  "generated_at": "2025-11-04T03:23:47.622444+00:00",
+  "headlines": [
+    {
+      "game_id": "3276449",
+      "headline": "J&K Electric defeats Colson Overhead Doors 6-3",
+      "created_at": "2025-11-04T03:23:47.622386+00:00",
+      "updated_at": "2025-11-04T03:23:47.622386+00:00",
+      "game_datetime": "2025-11-03T01:00:00+00:00",
+      "home_team": "Colson Overhead Doors",
+      "away_team": "J&K Electric",
+      "home_score": 3,
+      "away_score": 6,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276449&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276449&p=boxscore"
+    },
+    {
+      "game_id": "3276440",
+      "headline": "G.R. Mitchell Welding dominates Ultramar 9-3",
+      "created_at": "2025-11-04T03:23:47.622386+00:00",
+      "updated_at": "2025-11-04T03:23:47.622386+00:00",
+      "game_datetime": "2025-10-29T01:00:00+00:00",
+      "home_team": "G.R. Mitchell Welding",
+      "away_team": "Ultramar",
+      "home_score": 9,
+      "away_score": 3,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276440&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276440&u=DSMALL&s=hockey&p=boxscore"
+    },
+    {
+      "game_id": "3276439",
+      "headline": "G.R. Mitchell Welding dominates Ultramar 9-3",
+      "created_at": "2025-11-04T03:23:47.622386+00:00",
+      "updated_at": "2025-11-04T03:23:47.622386+00:00",
+      "game_datetime": "2025-10-29T01:00:00+00:00",
+      "home_team": "G.R. Mitchell Welding",
+      "away_team": "Ultramar",
+      "home_score": 9,
+      "away_score": 3,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276439&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276439&p=boxscore"
+    },
+    {
+      "game_id": "3276435",
+      "headline": "J&K Electric edges Maltby Sports 4-3",
+      "created_at": "2025-11-04T03:23:47.622386+00:00",
+      "updated_at": "2025-11-04T03:23:47.622386+00:00",
+      "game_datetime": "2025-10-28T23:45:00+00:00",
+      "home_team": "Maltby Sports",
+      "away_team": "J&K Electric",
+      "home_score": 3,
+      "away_score": 4,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276435&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276435&p=boxscore"
+    }
+  ]
+}
