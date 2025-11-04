@@ -538,7 +538,9 @@
             gap: 60px;
             white-space: nowrap;
             will-change: transform;
-            transform: translateX(0);
+            transform: translate3d(0, 0, 0);
+            animation: none;
+            --ticker-shift: 0px;
         }
 
         .ticker-segment {
@@ -563,6 +565,15 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             white-space: nowrap;
+        }
+
+        @keyframes ticker-scroll {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+            100% {
+                transform: translate3d(calc(-1 * var(--ticker-shift)), 0, 0);
+            }
         }
 
         .ticker-item.final {
@@ -672,6 +683,8 @@
     <script>
         const SLIDE_DURATIONS_MS = [20000, 10000];
         const TICKER_PIXELS_PER_SECOND = 320;
+        const TICKER_MIN_DURATION = 6;
+        const EXTERNAL_SCORES_URL = null;
         const RESULTS_VISIBLE_COUNT = 1;
         const UPCOMING_VISIBLE_COUNT = 1;
         const RESULTS_ROTATION_MS = 5000;
@@ -683,10 +696,6 @@
         let upcomingIntervalId = null;
         let recentCarouselIndex = 0;
         let upcomingCarouselIndex = 0;
-        let tickerAnimationId = null;
-        let tickerLastTimestamp = null;
-        let tickerOffset = 0;
-        let tickerSegmentWidth = 0;
 
         // Sample data with name corrections applied
         const sampleData = {
@@ -1000,50 +1009,6 @@
             }));
         }
 
-        function stopTickerAnimation() {
-            if (tickerAnimationId) {
-                cancelAnimationFrame(tickerAnimationId);
-                tickerAnimationId = null;
-            }
-            tickerLastTimestamp = null;
-        }
-
-        function startTickerAnimation() {
-            const track = document.getElementById('tickerTrack');
-            if (!track) return;
-            const firstSegment = track.querySelector('.ticker-segment');
-            if (!firstSegment) {
-                stopTickerAnimation();
-                return;
-            }
-
-            tickerSegmentWidth = firstSegment.offsetWidth;
-            if (!tickerSegmentWidth) {
-                stopTickerAnimation();
-                return;
-            }
-
-            stopTickerAnimation();
-            tickerOffset = 0;
-            track.style.transform = 'translateX(0px)';
-
-            const step = (timestamp) => {
-                if (tickerLastTimestamp === null) {
-                    tickerLastTimestamp = timestamp;
-                }
-                const deltaSeconds = (timestamp - tickerLastTimestamp) / 1000;
-                tickerLastTimestamp = timestamp;
-                tickerOffset -= TICKER_PIXELS_PER_SECOND * deltaSeconds;
-                if (-tickerOffset >= tickerSegmentWidth) {
-                    tickerOffset += tickerSegmentWidth;
-                }
-                track.style.transform = `translateX(${tickerOffset}px)`;
-                tickerAnimationId = requestAnimationFrame(step);
-            };
-
-            tickerAnimationId = requestAnimationFrame(step);
-        }
-
         function getCycledSlice(items, start, count) {
             if (!Array.isArray(items) || items.length === 0) return [];
             const normalizedStart = ((start % items.length) + items.length) % items.length;
@@ -1331,9 +1296,9 @@
             const track = document.getElementById('tickerTrack');
             if (!track) return;
 
-            stopTickerAnimation();
-            tickerOffset = 0;
-            track.style.transform = 'translateX(0px)';
+            track.style.animation = 'none';
+            track.style.transform = 'translate3d(0, 0, 0)';
+            track.style.setProperty('--ticker-shift', '0px');
 
             const entries = [];
             const seenKeys = new Set();
@@ -1410,6 +1375,8 @@
             if (entries.length === 0) {
                 const placeholder = '<div class="ticker-item">AAHL updates will appear here soon.</div>';
                 track.innerHTML = `<div class="ticker-segment">${placeholder}</div><div class="ticker-segment">${placeholder}</div>`;
+                track.style.animation = 'none';
+                return;
             }
 
             if (entries.length > 0) {
@@ -1420,7 +1387,25 @@
                 `;
             }
 
-            requestAnimationFrame(() => startTickerAnimation());
+            const firstSegment = track.querySelector('.ticker-segment');
+            if (!firstSegment) {
+                track.style.animation = 'none';
+                return;
+            }
+
+            const segmentWidth = firstSegment.getBoundingClientRect().width;
+            if (!segmentWidth || !Number.isFinite(segmentWidth)) {
+                track.style.animation = 'none';
+                return;
+            }
+
+            const duration = Math.max(TICKER_MIN_DURATION, segmentWidth / TICKER_PIXELS_PER_SECOND);
+            track.style.setProperty('--ticker-shift', `${segmentWidth}px`);
+            track.style.animationName = 'ticker-scroll';
+            track.style.animationDuration = `${duration}s`;
+            track.style.animationTimingFunction = 'linear';
+            track.style.animationIterationCount = 'infinite';
+            track.style.animationPlayState = 'running';
         }
 
         function startResultsCarousel(resetIndex = true) {
@@ -1520,8 +1505,12 @@
         }
 
         function loadTickerExtras() {
-            const extrasUrl = 'https://raw.githubusercontent.com/ThomasMcCrossin/aahlscraper/main/data/sample_external_scores.json';
-            return fetch(extrasUrl, { cache: 'no-store' })
+            if (!EXTERNAL_SCORES_URL) {
+                tickerExtras = [];
+                return Promise.resolve();
+            }
+
+            return fetch(EXTERNAL_SCORES_URL, { cache: 'no-store' })
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Failed to fetch external ticker feeds');
@@ -1635,10 +1624,6 @@
         loadTickerExtras();
         startSlideShow();
         loadData();
-
-        window.addEventListener('resize', () => {
-            requestAnimationFrame(() => startTickerAnimation());
-        });
 
         // Yodeck lifecycle hooks (optional)
         if (window.parent && window.parent.YodeckAPI) {
