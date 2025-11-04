@@ -1,25 +1,25 @@
 {
-  "generated_at": "2025-11-04T02:32:46.255006",
-  "standings_snapshot": "standings-20251104T023246Z.json",
-  "previous_snapshot": null,
+  "generated_at": "2025-11-04T03:05:21.633517",
+  "standings_snapshot": "standings-20251104T030521Z.json",
+  "previous_snapshot": "standings-20251104T023246Z.json",
   "standings_movements": [
     {
       "team": "Maltby Sports",
       "current_points": 10,
-      "previous_points": 0,
-      "points_change": 10
+      "previous_points": 10,
+      "points_change": 0
     },
     {
       "team": "J&K Electric",
       "current_points": 8,
-      "previous_points": 0,
-      "points_change": 8
+      "previous_points": 8,
+      "points_change": 0
     },
     {
       "team": "G.R. Mitchell Welding",
       "current_points": 6,
-      "previous_points": 0,
-      "points_change": 6
+      "previous_points": 6,
+      "points_change": 0
     },
     {
       "team": "Ultramar",
