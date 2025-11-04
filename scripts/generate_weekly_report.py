@@ -187,6 +187,7 @@ def _player_highlight_phrase(game: Dict[str, object], winner_side: str) -> Optio
         "powered by",
         "fueled by",
         "driven by",
+        "lifted by",
     ]
     phrase = f"{_pick_phrase(primary_leads, primary_seed)} {primary[0]}'s {primary[1]}"
 
@@ -203,24 +204,29 @@ def _player_highlight_phrase(game: Dict[str, object], winner_side: str) -> Optio
             "while",
             "as",
             "with",
+            "and",
         ]
         secondary_verbs = [
-            "added",
-            "chipped in",
-            "contributed",
+            "adding",
+            "chipping in",
+            "contributing",
+            "supplying",
         ]
-        phrase += f", {_pick_phrase(secondary_leads, secondary_seed)} {secondary[0]} {_pick_phrase(secondary_verbs, secondary_seed + primary_seed)} {secondary[1]}"
+        phrase += (
+            f", {_pick_phrase(secondary_leads, secondary_seed)} {secondary[0]}"
+            f" {_pick_phrase(secondary_verbs, secondary_seed + primary_seed)} {secondary[1]}"
+        )
 
     return phrase
 
 
 def _result_verb(margin: int, winner_score: int, loser_score: int, game_id: str) -> str:
-    blowout = ["obliterates", "thrashes", "trounces"]
-    big_win = ["steamrolls", "dominates", "dismantles"]
-    comfortable = ["crushes", "cruises past", "handles"]
-    moderate = ["tops", "outduels", "overcomes"]
-    tight = ["edges", "nips", "squeaks by"]
-    shootout = ["outguns", "outlasts", "surges past"]
+    blowout = ["obliterates", "thrashes", "trounces", "routs"]
+    big_win = ["steamrolls", "dominates", "dismantles", "pummels"]
+    comfortable = ["crushes", "cruises past", "handles", "dispatches"]
+    moderate = ["tops", "outduels", "overcomes", "best"]
+    tight = ["edges", "nips", "squeaks by", "slips past"]
+    shootout = ["outguns", "outlasts", "surges past", "prevails over"]
 
     seed = 0
     if game_id:
@@ -397,19 +403,68 @@ def _load_recent_results(days: Optional[int] = 7) -> List[Dict[str, object]]:
     return recent
 
 
+def _game_key(game: Dict[str, object]) -> tuple[str, str, str]:
+    home_line = game.get("home_line") or {}
+    away_line = game.get("away_line") or {}
+    home_slug = str(home_line.get("slug") or game.get("home", "")).strip().lower()
+    away_slug = str(away_line.get("slug") or game.get("away", "")).strip().lower()
+    dt = str(
+        game.get("datetime")
+        or game.get("start_local")
+        or game.get("start_utc")
+        or game.get("game_id")
+    )
+    return (home_slug, away_slug, dt)
+
+
+def _total_player_stats(game: Dict[str, object]) -> int:
+    stats = game.get("player_stats")
+    if not isinstance(stats, dict):
+        return 0
+    total = 0
+    for roster in stats.values():
+        if isinstance(roster, list):
+            total += len(roster)
+    return total
+
+
 def _unique_games(games: List[Dict[str, object]]) -> List[Dict[str, object]]:
-    seen: set[str] = set()
-    unique: List[Dict[str, object]] = []
+    best_by_key: Dict[tuple[str, str, str], Dict[str, object]] = {}
+    winner_counts: Dict[tuple[str, str, str], int] = {}
     for game in games:
-        game_id = game.get("game_id")
-        if not game_id:
+        key = _game_key(game)
+        total_stats = _total_player_stats(game)
+        scoreboard_len = len(game.get("scoreboard") or [])
+        winner_side = "home" if (_safe_int(game.get("home_score")) or 0) >= (_safe_int(game.get("away_score")) or 0) else "away"
+        stats = game.get("player_stats") or {}
+        winner_stat_count = len(stats.get(winner_side, [])) if isinstance(stats.get(winner_side), list) else 0
+        existing = best_by_key.get(key)
+        if existing is None:
+            best_by_key[key] = game
+            winner_counts[key] = winner_stat_count
             continue
-        key = str(game_id)
-        if key in seen:
-            continue
-        seen.add(key)
-        unique.append(game)
-    return unique
+
+        existing_stats = _total_player_stats(existing)
+        existing_scoreboard = len(existing.get("scoreboard") or [])
+        existing_winner_stat = winner_counts.get(key, 0)
+
+        if total_stats > existing_stats:
+            best_by_key[key] = game
+            winner_counts[key] = winner_stat_count
+        elif total_stats == existing_stats and scoreboard_len > existing_scoreboard:
+            best_by_key[key] = game
+            winner_counts[key] = winner_stat_count
+        elif total_stats == existing_stats and scoreboard_len == existing_scoreboard and winner_stat_count > existing_winner_stat:
+            best_by_key[key] = game
+            winner_counts[key] = winner_stat_count
+
+    unique_games = list(best_by_key.values())
+    unique_games.sort(
+        key=lambda item: _parse_game_datetime(item.get("datetime"))
+        or datetime.min.replace(tzinfo=timezone.utc),
+        reverse=True,
+    )
+    return unique_games
 
 
 def _sorted_games(games: List[Dict[str, object]]) -> List[Dict[str, object]]:
