@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-04T03:59:36.588827+00:00",
+  "generated_at": "2025-11-04T03:42:41.366600+00:00",
   "players": [
     {
       "player_id": "colson-overhead-doors-terrio-marshall",
@@ -18,7 +18,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 3,
-      "games_missed": null,
+      "games_missed": 3,
       "recent_points": 0,
       "recent_games": 0
     },
@@ -39,7 +39,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 3,
-      "games_missed": null,
+      "games_missed": 2,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -60,7 +60,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 3,
-      "games_missed": null,
+      "games_missed": 3,
       "recent_points": 0,
       "recent_games": 0
     },
@@ -81,7 +81,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 3,
-      "games_missed": null,
+      "games_missed": 2,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -102,7 +102,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.5,
       "team_games_played": 3,
-      "games_missed": null,
+      "games_missed": 1,
       "recent_points": 3,
       "recent_games": 2
     },
@@ -124,7 +124,7 @@
       "penalty_minutes": 16,
       "points_per_game": 1.0,
       "team_games_played": 3,
-      "games_missed": null,
+      "games_missed": 1,
       "recent_points": 2,
       "recent_games": 2
     },
@@ -145,7 +145,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 3,
-      "games_missed": null,
+      "games_missed": 2,
       "recent_points": 0,
       "recent_games": 1
     },
@@ -166,7 +166,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.5,
       "team_games_played": 3,
-      "games_missed": null,
+      "games_missed": 1,
       "recent_points": 1,
       "recent_games": 2
     },
@@ -187,7 +187,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 3,
-      "games_missed": null,
+      "games_missed": 3,
       "recent_points": 0,
       "recent_games": 0
     },
@@ -208,7 +208,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 3,
-      "games_missed": null,
+      "games_missed": 2,
       "recent_points": 0,
       "recent_games": 1
     },
@@ -229,7 +229,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.5,
       "team_games_played": 3,
-      "games_missed": null,
+      "games_missed": 1,
       "recent_points": 1,
       "recent_games": 2
     },
@@ -250,7 +250,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 3,
-      "games_missed": null,
+      "games_missed": 2,
       "recent_points": 0,
       "recent_games": 1
     },
@@ -271,7 +271,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.5,
       "team_games_played": 3,
-      "games_missed": null,
+      "games_missed": 1,
       "recent_points": 1,
       "recent_games": 2
     },
@@ -292,9 +292,9 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 3,
-      "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "games_missed": 0,
+      "recent_points": 6,
+      "recent_games": 3
     },
     {
       "player_id": "colson-overhead-doors-black-mark-9",
@@ -314,7 +314,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 3,
-      "games_missed": null,
+      "games_missed": 3,
       "recent_points": 0,
       "recent_games": 0
     },
@@ -333,7 +333,7 @@
       "penalty_minutes": 3,
       "points_per_game": 12.67,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 38,
       "recent_games": 3
     },
@@ -354,7 +354,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -375,7 +375,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 7,
       "recent_points": 0,
       "recent_games": 0
     },
@@ -396,7 +396,7 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -417,7 +417,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -439,9 +439,9 @@
       "penalty_minutes": 6,
       "points_per_game": 2.33,
       "team_games_played": 7,
-      "games_missed": null,
-      "recent_points": 0,
-      "recent_games": -1
+      "games_missed": 4,
+      "recent_points": 7,
+      "recent_games": 3
     },
     {
       "player_id": "gr-mitchell-welding-mitchell-gordon-captain-13",
@@ -461,7 +461,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 7,
       "recent_points": 0,
       "recent_games": 0
     },
@@ -483,7 +483,7 @@
       "penalty_minutes": 3,
       "points_per_game": 0.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 0,
       "recent_games": 1
     },
@@ -504,9 +504,9 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 7,
-      "games_missed": null,
-      "recent_points": -1,
-      "recent_games": -2
+      "games_missed": 5,
+      "recent_points": 4,
+      "recent_games": 2
     },
     {
       "player_id": "gr-mitchell-welding-small-danny-biggie-16",
@@ -526,7 +526,7 @@
       "penalty_minutes": 0,
       "points_per_game": 5.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 5,
       "recent_games": 1
     },
@@ -548,7 +548,7 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -569,7 +569,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -590,7 +590,7 @@
       "penalty_minutes": 0,
       "points_per_game": 4.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 4,
       "recent_games": 1
     },
@@ -611,7 +611,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -630,7 +630,7 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 4,
       "recent_games": 2
     },
@@ -652,7 +652,7 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -674,7 +674,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -695,7 +695,7 @@
       "penalty_minutes": 0,
       "points_per_game": 3.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 3,
       "recent_games": 1
     },
@@ -717,7 +717,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -738,9 +738,9 @@
       "penalty_minutes": 3,
       "points_per_game": 2.5,
       "team_games_played": 7,
-      "games_missed": null,
-      "recent_points": -3,
-      "recent_games": -2
+      "games_missed": 3,
+      "recent_points": 10,
+      "recent_games": 4
     },
     {
       "player_id": "gr-mitchell-welding-ryan-geoff-55",
@@ -759,9 +759,9 @@
       "penalty_minutes": 0,
       "points_per_game": 2.33,
       "team_games_played": 7,
-      "games_missed": null,
-      "recent_points": 0,
-      "recent_games": -1
+      "games_missed": 4,
+      "recent_points": 7,
+      "recent_games": 3
     },
     {
       "player_id": "gr-mitchell-welding-miller-madden-6",
@@ -780,7 +780,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -802,7 +802,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 3,
       "recent_games": 3
     },
@@ -824,7 +824,7 @@
       "penalty_minutes": 0,
       "points_per_game": 3.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 3,
       "recent_games": 1
     },
@@ -845,7 +845,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 2,
       "recent_games": 2
     },
@@ -867,9 +867,9 @@
       "penalty_minutes": 0,
       "points_per_game": 2.33,
       "team_games_played": 7,
-      "games_missed": null,
-      "recent_points": -1,
-      "recent_games": -2
+      "games_missed": 4,
+      "recent_points": 7,
+      "recent_games": 3
     },
     {
       "player_id": "gr-mitchell-welding-perrin-noah-87",
@@ -888,7 +888,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -909,7 +909,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 3,
       "recent_games": 3
     },
@@ -930,9 +930,9 @@
       "penalty_minutes": 0,
       "points_per_game": 1.67,
       "team_games_played": 7,
-      "games_missed": null,
-      "recent_points": -2,
-      "recent_games": -2
+      "games_missed": 4,
+      "recent_points": 5,
+      "recent_games": 3
     },
     {
       "player_id": "gr-mitchell-welding-linkletter-brad-9",
@@ -951,7 +951,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -972,7 +972,7 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -993,7 +993,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.5,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 3,
       "recent_games": 2
     },
@@ -1015,7 +1015,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -1036,7 +1036,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 2,
       "recent_games": 2
     },
@@ -1057,9 +1057,9 @@
       "penalty_minutes": 3,
       "points_per_game": 4.0,
       "team_games_played": 7,
-      "games_missed": null,
-      "recent_points": -2,
-      "recent_games": -2
+      "games_missed": 3,
+      "recent_points": 16,
+      "recent_games": 4
     },
     {
       "player_id": "gr-mitchell-welding-bridge-issac-98",
@@ -1078,7 +1078,7 @@
       "penalty_minutes": 0,
       "points_per_game": 5.0,
       "team_games_played": 7,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 5,
       "recent_games": 1
     },
@@ -1097,7 +1097,7 @@
       "penalty_minutes": 6,
       "points_per_game": 13.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 13,
       "recent_games": 1
     },
@@ -1118,7 +1118,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.5,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 3,
       "recent_points": 3,
       "recent_games": 2
     },
@@ -1140,7 +1140,7 @@
       "penalty_minutes": 3,
       "points_per_game": 2.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -1161,7 +1161,7 @@
       "penalty_minutes": 3,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 3,
       "recent_points": 2,
       "recent_games": 2
     },
@@ -1182,9 +1182,9 @@
       "penalty_minutes": 3,
       "points_per_game": 2.5,
       "team_games_played": 5,
-      "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "games_missed": 3,
+      "recent_points": 5,
+      "recent_games": 2
     },
     {
       "player_id": "j-and-k-electric-morris-matt-2",
@@ -1203,7 +1203,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 0,
       "recent_games": 0
     },
@@ -1225,9 +1225,9 @@
       "penalty_minutes": 0,
       "points_per_game": 1.25,
       "team_games_played": 5,
-      "games_missed": null,
-      "recent_points": -1,
-      "recent_games": -1
+      "games_missed": 1,
+      "recent_points": 5,
+      "recent_games": 4
     },
     {
       "player_id": "j-and-k-electric-boutiler-gerald-captain-22",
@@ -1247,7 +1247,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 0,
       "recent_games": 0
     },
@@ -1269,7 +1269,7 @@
       "penalty_minutes": 6,
       "points_per_game": 0.67,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 2,
       "recent_points": 2,
       "recent_games": 3
     },
@@ -1291,9 +1291,9 @@
       "penalty_minutes": 0,
       "points_per_game": 3.0,
       "team_games_played": 5,
-      "games_missed": null,
-      "recent_points": 0,
-      "recent_games": -1
+      "games_missed": 3,
+      "recent_points": 6,
+      "recent_games": 2
     },
     {
       "player_id": "j-and-k-electric-stone-brendan-28",
@@ -1312,9 +1312,9 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 5,
-      "games_missed": null,
-      "recent_points": -5,
-      "recent_games": -1
+      "games_missed": 3,
+      "recent_points": 4,
+      "recent_games": 2
     },
     {
       "player_id": "j-and-k-electric-drake-scott-30",
@@ -1335,7 +1335,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 0,
       "recent_games": 1
     },
@@ -1354,7 +1354,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 0,
       "recent_games": 0
     },
@@ -1375,7 +1375,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -1396,9 +1396,9 @@
       "penalty_minutes": 0,
       "points_per_game": 2.67,
       "team_games_played": 5,
-      "games_missed": null,
-      "recent_points": -1,
-      "recent_games": -1
+      "games_missed": 2,
+      "recent_points": 8,
+      "recent_games": 3
     },
     {
       "player_id": "j-and-k-electric-ryan-geoff-55",
@@ -1417,7 +1417,7 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -1439,7 +1439,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -1461,7 +1461,7 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -1483,7 +1483,7 @@
       "penalty_minutes": 3,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 3,
       "recent_points": 2,
       "recent_games": 2
     },
@@ -1504,7 +1504,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.5,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 3,
       "recent_points": 3,
       "recent_games": 2
     },
@@ -1525,7 +1525,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -1547,9 +1547,9 @@
       "penalty_minutes": 0,
       "points_per_game": 1.67,
       "team_games_played": 5,
-      "games_missed": null,
-      "recent_points": -3,
-      "recent_games": -1
+      "games_missed": 2,
+      "recent_points": 5,
+      "recent_games": 3
     },
     {
       "player_id": "j-and-k-electric-dobson-nick-pickle-94",
@@ -1568,7 +1568,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -1589,7 +1589,7 @@
       "penalty_minutes": 3,
       "points_per_game": 3.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 3,
       "recent_games": 1
     },
@@ -1608,7 +1608,7 @@
       "penalty_minutes": 11,
       "points_per_game": 9.5,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 19,
       "recent_games": 2
     },
@@ -1629,7 +1629,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -1650,7 +1650,7 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -1671,7 +1671,7 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -1693,7 +1693,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -1715,9 +1715,9 @@
       "penalty_minutes": 0,
       "points_per_game": 2.75,
       "team_games_played": 6,
-      "games_missed": null,
-      "recent_points": 0,
-      "recent_games": -1
+      "games_missed": 2,
+      "recent_points": 11,
+      "recent_games": 4
     },
     {
       "player_id": "maltby-sports-maltby-chris-17",
@@ -1737,9 +1737,9 @@
       "penalty_minutes": 6,
       "points_per_game": 1.5,
       "team_games_played": 6,
-      "games_missed": null,
-      "recent_points": -2,
-      "recent_games": -2
+      "games_missed": 2,
+      "recent_points": 6,
+      "recent_games": 4
     },
     {
       "player_id": "maltby-sports-maltby-chris-captain-17",
@@ -1759,7 +1759,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 6,
       "recent_points": 0,
       "recent_games": 0
     },
@@ -1780,7 +1780,7 @@
       "penalty_minutes": 6,
       "points_per_game": 0.33,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 3,
       "recent_points": 1,
       "recent_games": 3
     },
@@ -1801,9 +1801,9 @@
       "penalty_minutes": 3,
       "points_per_game": 2.0,
       "team_games_played": 6,
-      "games_missed": null,
-      "recent_points": -3,
-      "recent_games": -2
+      "games_missed": 2,
+      "recent_points": 8,
+      "recent_games": 4
     },
     {
       "player_id": "maltby-sports-gallant-matt-2",
@@ -1822,9 +1822,9 @@
       "penalty_minutes": 0,
       "points_per_game": 1.33,
       "team_games_played": 6,
-      "games_missed": null,
-      "recent_points": -1,
-      "recent_games": -2
+      "games_missed": 3,
+      "recent_points": 4,
+      "recent_games": 3
     },
     {
       "player_id": "maltby-sports-burke-tim-22",
@@ -1844,7 +1844,7 @@
       "penalty_minutes": 3,
       "points_per_game": 0.0,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 0,
       "recent_games": 1
     },
@@ -1865,7 +1865,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.5,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 3,
       "recent_games": 2
     },
@@ -1887,7 +1887,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -1908,7 +1908,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 0,
       "recent_games": 1
     },
@@ -1929,7 +1929,7 @@
       "penalty_minutes": 3,
       "points_per_game": 1.0,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -1950,7 +1950,7 @@
       "penalty_minutes": 3,
       "points_per_game": 2.0,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -1971,9 +1971,9 @@
       "penalty_minutes": 3,
       "points_per_game": 1.0,
       "team_games_played": 6,
-      "games_missed": null,
-      "recent_points": -3,
-      "recent_games": -2
+      "games_missed": 3,
+      "recent_points": 3,
+      "recent_games": 3
     },
     {
       "player_id": "maltby-sports-miller-madden-6",
@@ -1992,7 +1992,7 @@
       "penalty_minutes": 2,
       "points_per_game": 2.0,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -2014,7 +2014,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -2036,9 +2036,9 @@
       "penalty_minutes": 3,
       "points_per_game": 2.0,
       "team_games_played": 6,
-      "games_missed": null,
-      "recent_points": -1,
-      "recent_games": -2
+      "games_missed": 2,
+      "recent_points": 8,
+      "recent_games": 4
     },
     {
       "player_id": "maltby-sports-hurley-connor-7",
@@ -2057,7 +2057,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.5,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 1,
       "recent_games": 2
     },
@@ -2078,7 +2078,7 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 4,
       "recent_games": 2
     },
@@ -2099,7 +2099,7 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -2120,7 +2120,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -2141,7 +2141,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -2162,9 +2162,9 @@
       "penalty_minutes": 0,
       "points_per_game": 3.33,
       "team_games_played": 6,
-      "games_missed": null,
-      "recent_points": -3,
-      "recent_games": -2
+      "games_missed": 3,
+      "recent_points": 10,
+      "recent_games": 3
     },
     {
       "player_id": "maltby-sports-arbing-ryan-91",
@@ -2184,9 +2184,9 @@
       "penalty_minutes": 3,
       "points_per_game": 0.75,
       "team_games_played": 6,
-      "games_missed": null,
-      "recent_points": -2,
-      "recent_games": -2
+      "games_missed": 2,
+      "recent_points": 3,
+      "recent_games": 4
     },
     {
       "player_id": "maltby-sports-macdonald-meathead-97",
@@ -2205,7 +2205,7 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 6,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -2226,9 +2226,9 @@
       "penalty_minutes": 3,
       "points_per_game": 5.33,
       "team_games_played": 6,
-      "games_missed": null,
-      "recent_points": -6,
-      "recent_games": -2
+      "games_missed": 3,
+      "recent_points": 16,
+      "recent_games": 3
     },
     {
       "player_id": "ultramar-bennett-mark",
@@ -2247,7 +2247,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 0,
       "recent_games": 1
     },
@@ -2266,7 +2266,7 @@
       "penalty_minutes": 12,
       "points_per_game": 25.5,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 3,
       "recent_points": 51,
       "recent_games": 2
     },
@@ -2287,7 +2287,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 0,
       "recent_games": 0
     },
@@ -2308,7 +2308,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.5,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 3,
       "recent_points": 1,
       "recent_games": 2
     },
@@ -2329,9 +2329,9 @@
       "penalty_minutes": 0,
       "points_per_game": 1.33,
       "team_games_played": 5,
-      "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "games_missed": 2,
+      "recent_points": 4,
+      "recent_games": 3
     },
     {
       "player_id": "ultramar-cove-matt-12",
@@ -2350,9 +2350,9 @@
       "penalty_minutes": 0,
       "points_per_game": 1.67,
       "team_games_played": 5,
-      "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "games_missed": 2,
+      "recent_points": 5,
+      "recent_games": 3
     },
     {
       "player_id": "ultramar-mitchell-gordon-13",
@@ -2372,7 +2372,7 @@
       "penalty_minutes": 3,
       "points_per_game": 3.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 3,
       "recent_games": 1
     },
@@ -2394,7 +2394,7 @@
       "penalty_minutes": 3,
       "points_per_game": 0.67,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 2,
       "recent_points": 2,
       "recent_games": 3
     },
@@ -2415,7 +2415,7 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -2437,7 +2437,7 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -2459,7 +2459,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -2480,7 +2480,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -2502,7 +2502,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -2521,7 +2521,7 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -2543,7 +2543,7 @@
       "penalty_minutes": 3,
       "points_per_game": 0.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 0,
       "recent_games": 1
     },
@@ -2565,7 +2565,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 2,
       "recent_points": 3,
       "recent_games": 3
     },
@@ -2586,7 +2586,7 @@
       "penalty_minutes": 0,
       "points_per_game": 3.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 3,
       "recent_games": 1
     },
@@ -2607,7 +2607,7 @@
       "penalty_minutes": 6,
       "points_per_game": 1.5,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 3,
       "recent_points": 3,
       "recent_games": 2
     },
@@ -2628,7 +2628,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -2649,7 +2649,7 @@
       "penalty_minutes": 0,
       "points_per_game": 3.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 3,
       "recent_games": 1
     },
@@ -2670,7 +2670,7 @@
       "penalty_minutes": 3,
       "points_per_game": 2.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -2691,7 +2691,7 @@
       "penalty_minutes": 2,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 2,
       "recent_points": 3,
       "recent_games": 3
     },
@@ -2713,7 +2713,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -2735,7 +2735,7 @@
       "penalty_minutes": 3,
       "points_per_game": 4.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 4,
       "recent_games": 1
     },
@@ -2756,7 +2756,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -2778,7 +2778,7 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -2799,7 +2799,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -2820,7 +2820,7 @@
       "penalty_minutes": 0,
       "points_per_game": 3.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 3,
       "recent_games": 1
     },
@@ -2841,7 +2841,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 3,
       "recent_points": 2,
       "recent_games": 2
     },
@@ -2862,7 +2862,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -2883,7 +2883,7 @@
       "penalty_minutes": 0,
       "points_per_game": 2.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 2,
       "recent_games": 1
     },
@@ -2904,7 +2904,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.33,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 2,
       "recent_points": 4,
       "recent_games": 3
     },
@@ -2925,7 +2925,7 @@
       "penalty_minutes": 0,
       "points_per_game": 0.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 5,
       "recent_points": 0,
       "recent_games": 0
     },
@@ -2946,7 +2946,7 @@
       "penalty_minutes": 0,
       "points_per_game": 4.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 4,
       "recent_games": 1
     },
@@ -2967,7 +2967,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -2989,7 +2989,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -3010,7 +3010,7 @@
       "penalty_minutes": 0,
       "points_per_game": 1.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 1,
       "recent_games": 1
     },
@@ -3031,7 +3031,7 @@
       "penalty_minutes": 0,
       "points_per_game": 4.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 4,
       "recent_games": 1
     },
@@ -3052,7 +3052,7 @@
       "penalty_minutes": 3,
       "points_per_game": 6.0,
       "team_games_played": 5,
-      "games_missed": null,
+      "games_missed": 4,
       "recent_points": 6,
       "recent_games": 1
     }
