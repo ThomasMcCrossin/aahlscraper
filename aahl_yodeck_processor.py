@@ -129,6 +129,47 @@ class AAHLDataProcessor:
             return {"players": data}
         return {"players": []}
 
+    def _game_identifier(self, game: Dict[str, Any]) -> str:
+        """Create a stable identifier for a game combining id, participants, and date."""
+        game_id = str(game.get("game_id") or game.get("id") or "").strip()
+        if game_id:
+            return f"id:{game_id}"
+
+        def _clean(value: Any) -> str:
+            if value is None:
+                return ""
+            return self.correct_names(str(value).strip())
+
+        home = _clean(game.get("home") or game.get("home_team"))
+        away = _clean(game.get("away") or game.get("away_team"))
+        date_parts = [
+            game.get("datetime"),
+            game.get("start_local"),
+            game.get("start_utc"),
+            game.get("date"),
+        ]
+        when = ""
+        for part in date_parts:
+            if part:
+                when = str(part).strip()
+                if when:
+                    break
+        return f"fallback:{home}|{away}|{when}"
+
+    @staticmethod
+    def _merge_game_records(base: Dict[str, Any], update: Dict[str, Any]) -> Dict[str, Any]:
+        """Shallow merge game dictionaries keeping meaningful data from both."""
+        merged = dict(base)
+        for key, value in update.items():
+            if value is None:
+                continue
+            if isinstance(value, str) and not value.strip():
+                continue
+            if isinstance(value, (list, dict)) and not value:
+                continue
+            merged[key] = value
+        return merged
+
     def filter_amherst_games(self, schedule: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
         """Filter schedule for Amherst games, split into completed and upcoming.
 
@@ -238,8 +279,32 @@ class AAHLDataProcessor:
             d = to_dt(g)
             return d or datetime.max
 
-        recent_sorted = sorted(amherst_recent, key=sort_key, reverse=True)[:10]
-        upcoming_sorted = sorted(amherst_upcoming, key=sort_key)[:10]
+        recent_sorted = sorted(amherst_recent, key=sort_key, reverse=True)
+        upcoming_sorted = sorted(amherst_upcoming, key=sort_key)
+
+        def dedupe(games_list: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+            unique: List[Dict[str, Any]] = []
+            seen_keys = set()
+            for entry in games_list:
+                key = self._game_identifier(entry)
+                if key and key not in seen_keys:
+                    seen_keys.add(key)
+                    unique.append(entry)
+            return unique
+
+        recent_sorted = dedupe(recent_sorted)[:10]
+        recent_keys = {self._game_identifier(game) for game in recent_sorted}
+
+        def remove_seen(games_list: List[Dict[str, Any]], seen: set) -> List[Dict[str, Any]]:
+            filtered: List[Dict[str, Any]] = []
+            for entry in games_list:
+                key = self._game_identifier(entry)
+                if key and key in seen:
+                    continue
+                filtered.append(entry)
+            return filtered
+
+        upcoming_sorted = remove_seen(dedupe(upcoming_sorted), recent_keys)[:10]
 
         return {
             'recent_results': recent_sorted,
@@ -293,11 +358,15 @@ class AAHLDataProcessor:
 
         combined_by_id: Dict[str, Dict[str, Any]] = {}
 
-        for game in schedule:
-            combined_by_id[game.get("game_id", "")] = game
-
-        for game in results:
-            combined_by_id[game.get("game_id", "")] = game
+        for source in (schedule, results):
+            for game in source:
+                key = self._game_identifier(game)
+                if not key:
+                    continue
+                if key in combined_by_id:
+                    combined_by_id[key] = self._merge_game_records(combined_by_id[key], game)
+                else:
+                    combined_by_id[key] = dict(game)
 
         games = self.filter_amherst_games(list(combined_by_id.values()))
         headline_lookup = {

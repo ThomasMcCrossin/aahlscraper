@@ -46,13 +46,54 @@
             letter-spacing: 2px;
         }
 
-        .content-grid {
+        .slides {
             flex: 1;
-            padding: 35px 45px 45px;
-            display: grid;
-            grid-template-columns: 2.2fr 2fr 1.6fr;
-            gap: 32px;
+            position: relative;
+            padding: 30px 45px 35px;
             overflow: hidden;
+            min-height: 0;
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            pointer-events: none;
+            min-height: 0;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .slide-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1.6fr 1.2fr;
+            gap: 28px;
+            min-height: 0;
+        }
+
+        .stacked-panels {
+            display: grid;
+            grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 28px;
+            min-height: 0;
+        }
+
+        .slide-scorers {
+            justify-content: center;
+        }
+
+        .slide-scorers .scorers-panel {
+            flex: 1;
         }
 
         .panel {
@@ -83,6 +124,11 @@
             overflow-y: auto;
         }
 
+        .scorers-panel .panel-body {
+            padding: 22px 28px 30px;
+            overflow: hidden;
+        }
+
         .panel-body::-webkit-scrollbar {
             width: 10px;
         }
@@ -96,20 +142,9 @@
             background: rgba(74, 158, 255, 0.55);
         }
 
-        .games-wrapper {
-            display: grid;
-            grid-template-rows: 1fr 1fr;
-            gap: 28px;
-            height: 100%;
-        }
-
-        .subpanel-title {
-            font-size: 1.6em;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: #a8d0ff;
-            margin-bottom: 18px;
-            letter-spacing: 2px;
+        .results-panel .panel-body,
+        .upcoming-panel .panel-body {
+            padding: 22px 28px 28px;
         }
 
         /* Standings Table */
@@ -166,20 +201,25 @@
         /* Scorers List */
         .scorers-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 20px;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            grid-template-rows: repeat(5, minmax(0, 1fr));
+            grid-auto-flow: column;
+            grid-auto-rows: minmax(0, 1fr);
+            gap: 18px;
+            margin-top: 10px;
+            height: 100%;
         }
 
         .scorer-card {
             background: rgba(42, 90, 143, 0.3);
-            padding: 20px 30px;
+            padding: 14px 18px;
             border-radius: 10px;
             border-left: 5px solid #4a9eff;
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 18px;
             transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
         }
 
         .scorer-card:hover {
@@ -188,10 +228,10 @@
         }
 
         .scorer-rank {
-            font-size: 2.5em;
+            font-size: 2em;
             font-weight: bold;
             color: #ffca28;
-            min-width: 60px;
+            min-width: 52px;
             text-align: center;
         }
 
@@ -200,18 +240,18 @@
         }
 
         .scorer-name {
-            font-size: 1.6em;
+            font-size: 1.25em;
             font-weight: bold;
             margin-bottom: 5px;
         }
 
         .scorer-team {
-            font-size: 1.2em;
+            font-size: 1em;
             color: #a8d0ff;
         }
 
         .scorer-points {
-            font-size: 2em;
+            font-size: 1.7em;
             font-weight: bold;
             color: #4a9eff;
         }
@@ -224,20 +264,24 @@
         }
 
         .scorer-stats {
-            font-size: 1em;
+            font-size: 0.95em;
             color: #d0e6ff;
             margin-top: 6px;
             letter-spacing: 1px;
         }
 
+        .scorers-panel .panel-body::-webkit-scrollbar {
+            display: none;
+        }
+
         /* Results & Upcoming Games */
         .games-list {
-            margin-top: 20px;
+            margin-top: 16px;
         }
 
         .game-card {
             background: rgba(42, 90, 143, 0.3);
-            padding: 30px 40px;
+            padding: 24px 26px;
             border-radius: 12px;
             margin-bottom: 25px;
             border-left: 6px solid #4a9eff;
@@ -250,15 +294,30 @@
         }
 
         .game-date {
-            font-size: 1.4em;
+            font-size: 1.25em;
             color: #ffca28;
             font-weight: bold;
             margin-bottom: 15px;
             text-transform: uppercase;
         }
 
+        .results-panel .game-card {
+            padding: 18px 20px;
+            margin-bottom: 18px;
+        }
+
+        .results-panel .game-headline {
+            font-size: 1.15em;
+            margin-bottom: 10px;
+        }
+
+        .results-panel .game-date {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
         .game-headline {
-            font-size: 1.4em;
+            font-size: 1.25em;
             font-weight: 600;
             margin-bottom: 12px;
             color: #e1efff;
@@ -269,8 +328,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-size: 1.8em;
-            margin-bottom: 10px;
+            font-size: 1.5em;
+            margin-bottom: 8px;
         }
 
         .team-name {
@@ -279,7 +338,7 @@
         }
 
         .game-score {
-            font-size: 2em;
+            font-size: 1.8em;
             font-weight: bold;
             color: #4a9eff;
             margin: 0 30px;
@@ -292,13 +351,13 @@
         }
 
         .game-time {
-            font-size: 1.3em;
+            font-size: 1.2em;
             color: #a8d0ff;
             margin-top: 10px;
         }
 
         .game-location {
-            font-size: 1.2em;
+            font-size: 1.1em;
             color: #ffca28;
             margin-top: 5px;
         }
@@ -311,8 +370,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-size: 1.6em;
-            padding: 6px 0;
+            font-size: 1.4em;
+            padding: 4px 0;
         }
 
         .score-team {
@@ -328,7 +387,7 @@
         }
 
         .game-meta {
-            font-size: 1.1em;
+            font-size: 1em;
             color: #a8d0ff;
             display: flex;
             flex-wrap: wrap;
@@ -448,22 +507,67 @@
             letter-spacing: 1px;
         }
 
-        /* Scrollbar styling */
-        .section::-webkit-scrollbar {
-            width: 10px;
+        .ticker {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 12px 32px;
+            background: linear-gradient(90deg, rgba(14, 31, 50, 0.95), rgba(12, 45, 72, 0.95));
+            border-top: 4px solid rgba(74, 158, 255, 0.35);
+            box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.4);
         }
 
-        .section::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.2);
+        .ticker-label {
+            font-size: 1.3em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffca28;
+            white-space: nowrap;
         }
 
-        .section::-webkit-scrollbar-thumb {
-            background: #4a9eff;
-            border-radius: 5px;
+        .ticker-marquee {
+            position: relative;
+            flex: 1;
+            overflow: hidden;
         }
 
-        .section::-webkit-scrollbar-thumb:hover {
-            background: #2a7adf;
+        .ticker-track {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            white-space: nowrap;
+            animation: ticker-scroll 40s linear infinite;
+            will-change: transform;
+        }
+
+        .ticker-segment {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            color: #d0e6ff;
+        }
+
+        .ticker-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .ticker-item span {
+            color: #ffca28;
+            font-weight: 700;
+        }
+
+        @keyframes ticker-scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
         }
     </style>
 </head>
@@ -473,50 +577,63 @@
         <div class="subtitle">Live League Snapshot</div>
     </div>
 
-    <div class="content-grid">
-        <div class="panel standings-panel">
-            <div class="panel-title">Standings</div>
-            <div class="panel-body">
-                <table class="standings-table">
-                    <thead>
-                        <tr>
-                            <th class="rank">#</th>
-                            <th>Team</th>
-                            <th style="text-align: center;">Wins</th>
-                            <th style="text-align: center;">Losses</th>
-                            <th style="text-align: center;">Points</th>
-                        </tr>
-                    </thead>
-                    <tbody id="standingsBody"></tbody>
-                </table>
+    <div class="slides">
+        <div class="slide slide-main active">
+            <div class="slide-grid">
+                <div class="panel standings-panel">
+                    <div class="panel-title">Standings</div>
+                    <div class="panel-body">
+                        <table class="standings-table">
+                            <thead>
+                                <tr>
+                                    <th class="rank">#</th>
+                                    <th>Team</th>
+                                    <th style="text-align: center;">Wins</th>
+                                    <th style="text-align: center;">Losses</th>
+                                    <th style="text-align: center;">Points</th>
+                                </tr>
+                            </thead>
+                            <tbody id="standingsBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="stacked-panels">
+                    <div class="panel results-panel">
+                        <div class="panel-title">Latest Finals</div>
+                        <div class="panel-body">
+                            <div class="games-list" id="resultsList"></div>
+                        </div>
+                    </div>
+                    <div class="panel upcoming-panel">
+                        <div class="panel-title">Upcoming at Amherst Stadium</div>
+                        <div class="panel-body">
+                            <div class="games-list" id="upcomingList"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="panel scorers-panel">
-            <div class="panel-title">Top 20 Scorers</div>
-            <div class="panel-body">
-                <div class="scorers-grid" id="scorersGrid"></div>
-            </div>
-        </div>
-
-        <div class="panel games-panel">
-            <div class="panel-title">AAHL Game Center</div>
-            <div class="panel-body">
-                <div class="games-wrapper">
-                    <div class="subpanel">
-                        <div class="subpanel-title">Recent Results</div>
-                        <div class="games-list" id="resultsList"></div>
-                    </div>
-                    <div class="subpanel">
-                        <div class="subpanel-title">Upcoming Amherst Games</div>
-                        <div class="games-list" id="upcomingList"></div>
-                    </div>
+        <div class="slide slide-scorers">
+            <div class="panel scorers-panel">
+                <div class="panel-title">Top 20 Scorers</div>
+                <div class="panel-body">
+                    <div class="scorers-grid" id="scorersGrid"></div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="ticker">
+        <div class="ticker-label">AAHL Ticker</div>
+        <div class="ticker-marquee">
+            <div class="ticker-track" id="tickerTrack"></div>
+        </div>
+    </div>
+
     <script>
+        const SLIDE_DURATION_MS = 7000;
+
         // Sample data with name corrections applied
         const sampleData = {
             standings: [
@@ -896,7 +1013,15 @@
         function renderScorers(scorers) {
             const grid = document.getElementById('scorersGrid');
             grid.innerHTML = '';
-            scorers
+            const sorted = (Array.isArray(scorers) ? [...scorers] : []).sort((a, b) => {
+                const rankA = Number(a?.rank ?? Infinity);
+                const rankB = Number(b?.rank ?? Infinity);
+                if (rankA !== rankB) return rankA - rankB;
+                const pointsA = Number(a?.points ?? a?.pts ?? a?.Points ?? 0);
+                const pointsB = Number(b?.points ?? b?.pts ?? b?.Points ?? 0);
+                return pointsB - pointsA;
+            });
+            sorted
                 .slice(0, 20)
                 .forEach((scorer, index) => {
                     const rank = scorer.rank || index + 1;
@@ -932,7 +1057,9 @@
                 return;
             }
 
-            results.forEach(game => {
+            results
+                .slice(0, 4)
+                .forEach(game => {
                 const card = document.createElement('div');
                 card.className = 'game-card';
 
@@ -986,7 +1113,9 @@
                 list.innerHTML = '<div style="text-align: center; padding: 40px; color: #a8d0ff;">No upcoming games available</div>';
                 return;
             }
-            games.forEach(game => {
+            games
+                .slice(0, 4)
+                .forEach(game => {
                 const card = document.createElement('div');
                 card.className = 'game-card';
                 const dateObj = parseGameDate(game);
@@ -1017,6 +1146,95 @@
             });
         }
 
+        function renderTicker(recentGames, upcomingGames) {
+            const track = document.getElementById('tickerTrack');
+            if (!track) return;
+
+            const entries = [];
+            const seenKeys = new Set();
+
+            function tickerKey(game, type) {
+                const idPart = String(game?.game_id ?? game?.id ?? '').trim();
+                const dtPart = String(game?.datetime ?? game?.start_local ?? game?.start_utc ?? game?.date ?? '').trim();
+                const awayPart = correctName(game?.away || game?.away_team || '');
+                const homePart = correctName(game?.home || game?.home_team || '');
+                const composite = idPart || `${awayPart}|${homePart}|${dtPart}`;
+                return `${type}|${composite}`.toLowerCase();
+            }
+
+            function addEntry(game, type, html) {
+                const key = tickerKey(game, type);
+                if (!key || seenKeys.has(key)) return;
+                seenKeys.add(key);
+                entries.push(html);
+            }
+
+            (recentGames || []).forEach(game => {
+                const away = correctName(game.away || game.away_team || 'Away');
+                const home = correctName(game.home || game.home_team || 'Home');
+                const awayScore = game.away_score ?? (game.result ? String(game.result).split('-')[0].trim() : '');
+                const homeScore = game.home_score ?? (game.result ? String(game.result).split('-')[1].trim() : '');
+                if (awayScore === '' && homeScore === '') return;
+                addEntry(game, 'final', `<div class="ticker-item"><span>Final</span>${away} ${awayScore}-${homeScore} ${home}</div>`);
+            });
+
+            (upcomingGames || []).forEach(game => {
+                const dateObj = parseGameDate(game);
+                const dateLine = dateObj
+                    ? dateObj.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })
+                    : (game.date || '');
+                const away = correctName(game.away || game.away_team || 'Away');
+                const home = correctName(game.home || game.home_team || 'Home');
+                const timeText = formatTimeDisplay(game);
+                const location = game.location || 'Amherst';
+                addEntry(game, 'upcoming', `<div class="ticker-item"><span>Next</span>${dateLine} ${timeText} ${away} @ ${home} (${location})</div>`);
+            });
+
+            if (entries.length === 0) {
+                const placeholder = '<div class="ticker-item">AAHL updates will appear here soon.</div>';
+                track.innerHTML = `<div class="ticker-segment">${placeholder}</div><div class="ticker-segment">${placeholder}</div>`;
+                track.style.animationDuration = '35s';
+                return;
+            }
+
+            const segmentHtml = entries.join('');
+            track.innerHTML = `
+                <div class="ticker-segment">${segmentHtml}</div>
+                <div class="ticker-segment">${segmentHtml}</div>
+            `;
+
+            const textLength = entries
+                .map(entry => entry.replace(/<[^>]*>/g, ''))
+                .join(' ')
+                .length;
+            const duration = Math.max(28, textLength * 0.45);
+            track.style.animationDuration = `${duration}s`;
+        }
+
+        function startSlideShow(durationMs = SLIDE_DURATION_MS) {
+            const slides = Array.from(document.querySelectorAll('.slide'));
+            if (slides.length === 0) {
+                return;
+            }
+
+            let index = slides.findIndex(slide => slide.classList.contains('active'));
+            if (index === -1) {
+                index = 0;
+                slides[0].classList.add('active');
+            }
+
+            if (slides.length === 1) {
+                return;
+            }
+
+            setInterval(() => {
+                index = (index + 1) % slides.length;
+                slides.forEach((slide, idx) => {
+                    slide.classList.toggle('active', idx === index);
+                });
+            }, durationMs);
+        }
+
         // Initialize with sample data
         function initializeDisplay(data) {
             const correctedData = correctDataNames(data);
@@ -1031,6 +1249,7 @@
             renderScorers(scorers);
             renderResults(recentGames);
             renderUpcoming(upcomingGames);
+            renderTicker(recentGames, upcomingGames);
         }
 
         // Load data from external source or use sample data
@@ -1067,7 +1286,8 @@
                 });
         }
 
-        // Start the application
+        // Kick off slide rotation and start the application
+        startSlideShow();
         loadData();
 
         // Yodeck lifecycle hooks (optional)
