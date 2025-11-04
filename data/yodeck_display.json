@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-04T16:17:16.182334",
+  "timestamp": "2025-11-04T12:40:57.971027",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -35,7 +35,7 @@
   "top_scorers": [
     {
       "no": "98",
-      "name": "Bridge, Issac",
+      "name": "Issac Bridge",
       "team": "Maltby Sports",
       "pos": "C",
       "gp": "5",
@@ -57,7 +57,7 @@
     },
     {
       "no": "97",
-      "name": "MacDonald, Marshall",
+      "name": "Marshall MacDonald",
       "team": "G.R. Mitchell Welding",
       "pos": "C",
       "gp": "6",
@@ -79,7 +79,7 @@
     },
     {
       "no": "38",
-      "name": "Atkinson, Dave",
+      "name": "Dave Atkinson",
       "team": "G.R. Mitchell Welding",
       "pos": "F",
       "gp": "6",
@@ -101,7 +101,7 @@
     },
     {
       "no": "9",
-      "name": "McCarthy, Ian",
+      "name": "Ian McCarthy",
       "team": "Maltby Sports",
       "pos": "F",
       "gp": "5",
@@ -123,7 +123,7 @@
     },
     {
       "no": "19",
-      "name": "McCrossin, Thomas",
+      "name": "Thomas McCrossin",
       "team": "Maltby Sports",
       "pos": "F",
       "gp": "6",
@@ -145,7 +145,7 @@
     },
     {
       "no": "16",
-      "name": "Small, Danny \"Biggie\"",
+      "name": "Biggie Small",
       "team": "Maltby Sports",
       "pos": "F/D",
       "gp": "5",
@@ -167,7 +167,7 @@
     },
     {
       "no": "63",
-      "name": "Leblanc, Travis",
+      "name": "Travis Leblanc",
       "team": "Maltby Sports",
       "pos": "F/D",
       "gp": "6",
@@ -189,7 +189,7 @@
     },
     {
       "no": "4",
-      "name": "Mackenzie, Rubein",
+      "name": "Reuben Mackenzie",
       "team": "J&K Electric",
       "pos": "F",
       "gp": "4",
@@ -211,7 +211,7 @@
     },
     {
       "no": "28",
-      "name": "Stone, Brendan",
+      "name": "Brendan Stone",
       "team": "J&K Electric",
       "pos": "F",
       "gp": "3",
@@ -233,7 +233,7 @@
     },
     {
       "no": "7",
-      "name": "Helm, Corey",
+      "name": "Corey Helm",
       "team": "G.R. Mitchell Welding",
       "pos": "D/F",
       "gp": "5",
@@ -255,7 +255,7 @@
     },
     {
       "no": "9",
-      "name": "Leopold, Nick",
+      "name": "Nick Leopold",
       "team": "J&K Electric",
       "pos": "F/D",
       "gp": "4",
@@ -277,7 +277,7 @@
     },
     {
       "no": "17",
-      "name": "Maltby, Chris",
+      "name": "Chris Maltby",
       "team": "Maltby Sports",
       "pos": "D/F",
       "gp": "6",
@@ -297,7 +297,7 @@
     },
     {
       "no": "9",
-      "name": "Bourgeois, Julien",
+      "name": "Julien Bourgeois",
       "team": "G.R. Mitchell Welding",
       "pos": "F",
       "gp": "5",
@@ -319,7 +319,7 @@
     },
     {
       "no": "13",
-      "name": "Mitchell, Gordon",
+      "name": "Gordon Mitchell",
       "team": "G.R. Mitchell Welding",
       "pos": "F/D",
       "gp": "4",
@@ -339,7 +339,7 @@
     },
     {
       "no": "55",
-      "name": "Ryan, Geoff",
+      "name": "Geoff Ryan",
       "team": "G.R. Mitchell Welding",
       "pos": "D",
       "gp": "4",
@@ -361,7 +361,7 @@
     },
     {
       "no": "22",
-      "name": "Boutiler, Gerald",
+      "name": "Gerald Boutiler",
       "team": "J&K Electric",
       "pos": "D/F",
       "gp": "5",
@@ -381,7 +381,7 @@
     },
     {
       "no": "6",
-      "name": "Crocker, Luke",
+      "name": "Luke Crocker",
       "team": "Maltby Sports",
       "pos": "D",
       "gp": "5",
@@ -403,7 +403,7 @@
     },
     {
       "no": "88",
-      "name": "Gould, Zack",
+      "name": "Zack Gould",
       "team": "Colson Overhead Doors",
       "pos": "F",
       "gp": "3",
@@ -425,7 +425,7 @@
     },
     {
       "no": "27",
-      "name": "Morris, Pat",
+      "name": "Pat Morris",
       "team": "J&K Electric",
       "pos": "F/D",
       "gp": "3",
@@ -447,7 +447,7 @@
     },
     {
       "no": "91",
-      "name": "Arbing, Ryan",
+      "name": "Ryan Arbing",
       "team": "Maltby Sports",
       "pos": "D/F",
       "gp": "6",
@@ -516,7 +516,7 @@
         "home": [
           {
             "player_id": "colson-overhead-doors-gesner-logan-23",
-            "name": "Gesner, Logan",
+            "name": "Logan Gesner",
             "number": "23",
             "positions": [
               "D",
@@ -530,7 +530,7 @@
           },
           {
             "player_id": "colson-overhead-doors-gould-zack-88",
-            "name": "Gould, Zack",
+            "name": "Zack Gould",
             "number": "88",
             "positions": [
               "F"
@@ -543,7 +543,7 @@
           },
           {
             "player_id": "colson-overhead-doors-hebert-denis-19",
-            "name": "Hebert, Denis",
+            "name": "Denis Hebert",
             "number": "19",
             "positions": [
               "F"
@@ -558,7 +558,7 @@
         "away": [
           {
             "player_id": "j-and-k-electric-boutiler-gerald-22",
-            "name": "Boutiler, Gerald",
+            "name": "Gerald Boutiler",
             "number": "22",
             "positions": [
               "D",
@@ -572,7 +572,7 @@
           },
           {
             "player_id": "j-and-k-electric-budd-ryan-18",
-            "name": "Budd, Ryan",
+            "name": "Ryan Budd",
             "number": "18",
             "positions": [
               "F"
@@ -585,7 +585,7 @@
           },
           {
             "player_id": "j-and-k-electric-kinnear-jeremy-17",
-            "name": "Kinnear, Jeremy",
+            "name": "Jeremy Kinnear",
             "number": "17",
             "positions": [
               "F"
@@ -598,7 +598,7 @@
           },
           {
             "player_id": "j-and-k-electric-leopold-nick-9",
-            "name": "Leopold, Nick",
+            "name": "Nick Leopold",
             "number": "9",
             "positions": [
               "F",
@@ -612,7 +612,7 @@
           },
           {
             "player_id": "j-and-k-electric-mackenzie-rubein-4",
-            "name": "Mackenzie, Rubein",
+            "name": "Reuben Mackenzie",
             "number": "4",
             "positions": [
               "F"
@@ -625,7 +625,7 @@
           },
           {
             "player_id": "j-and-k-electric-morris-pat-27",
-            "name": "Morris, Pat",
+            "name": "Pat Morris",
             "number": "27",
             "positions": [
               "F",
@@ -639,7 +639,7 @@
           },
           {
             "player_id": "j-and-k-electric-perrin-noah-87",
-            "name": "Perrin, Noah",
+            "name": "Noah Perrin",
             "number": "87",
             "positions": [
               "F"
@@ -652,7 +652,7 @@
           },
           {
             "player_id": "j-and-k-electric-stone-brendan-28",
-            "name": "Stone, Brendan",
+            "name": "Brendan Stone",
             "number": "28",
             "positions": [
               "F"
@@ -750,7 +750,7 @@
         "home": [
           {
             "player_id": "gr-mitchell-welding-allen-tyler-tuffy-11",
-            "name": "Allen, Tyler \"Tuffy\"",
+            "name": "Tyler \"Tuffy\" Allen",
             "number": "11",
             "positions": [
               "F"
@@ -763,7 +763,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-burke-brody-14",
-            "name": "Burke, Brody",
+            "name": "Brody Burke",
             "number": "14",
             "positions": [
               "D",
@@ -777,7 +777,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-cove-matt-12",
-            "name": "Cove, Matt",
+            "name": "Matt Cove",
             "number": "12",
             "positions": [
               "F"
@@ -790,7 +790,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-gallant-brett-3",
-            "name": "Gallant, Brett",
+            "name": "Brett Gallant",
             "number": "3",
             "positions": [
               "F",
@@ -804,7 +804,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-linkletter-brad-9",
-            "name": "Linkletter, Brad",
+            "name": "Brad Linkletter",
             "number": "9",
             "positions": [
               "C"
@@ -817,7 +817,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-miller-madden-6",
-            "name": "Miller, Madden",
+            "name": "Madden Miller",
             "number": "6",
             "positions": [
               "F"
@@ -832,7 +832,7 @@
         "away": [
           {
             "player_id": "ultramar-atkinson-dave-38",
-            "name": "Atkinson, Dave",
+            "name": "Dave Atkinson",
             "number": "38",
             "positions": [
               "F"
@@ -845,7 +845,7 @@
           },
           {
             "player_id": "ultramar-bourgeois-julien-9",
-            "name": "Bourgeois, Julien",
+            "name": "Julien Bourgeois",
             "number": "9",
             "positions": [
               "F"
@@ -858,7 +858,7 @@
           },
           {
             "player_id": "ultramar-dobson-nick-pickle-94",
-            "name": "Dobson, Nick \"Pickle\"",
+            "name": "Nick \"Pickle\" Dobson",
             "number": "94",
             "positions": [
               "F"
@@ -871,7 +871,7 @@
           },
           {
             "player_id": "ultramar-fullerton-zack-90",
-            "name": "Fullerton, Zack",
+            "name": "Zack Fullerton",
             "number": "90",
             "positions": [
               "F"
@@ -884,7 +884,7 @@
           },
           {
             "player_id": "ultramar-helm-corey-7",
-            "name": "Helm, Corey",
+            "name": "Corey Helm",
             "number": "7",
             "positions": [
               "D",
@@ -898,7 +898,7 @@
           },
           {
             "player_id": "ultramar-hurley-william-15",
-            "name": "Hurley, William",
+            "name": "William Hurley",
             "number": "15",
             "positions": [
               "F"
@@ -911,7 +911,7 @@
           },
           {
             "player_id": "ultramar-macdonald-meathead-97",
-            "name": "MacDonald, Marshall",
+            "name": "Marshall MacDonald",
             "number": "97",
             "positions": [
               "C"
@@ -924,7 +924,7 @@
           },
           {
             "player_id": "ultramar-macpherson-ryan-21",
-            "name": "Macpherson, Ryan",
+            "name": "Ryan Macpherson",
             "number": "21",
             "positions": [],
             "goals": 1,
@@ -935,7 +935,7 @@
           },
           {
             "player_id": "ultramar-mattix-ralph-66",
-            "name": "Mattix, Ralph",
+            "name": "Ralph Mattix",
             "number": "66",
             "positions": [
               "D"
@@ -948,7 +948,7 @@
           },
           {
             "player_id": "ultramar-mitchell-gordon-13",
-            "name": "Mitchell, Gordon",
+            "name": "Gordon Mitchell",
             "number": "13",
             "positions": [
               "F",
@@ -962,7 +962,7 @@
           },
           {
             "player_id": "ultramar-robichaud-corey-88",
-            "name": "Robichaud, Corey",
+            "name": "Corey Robichaud",
             "number": "88",
             "positions": [
               "F"
@@ -975,7 +975,7 @@
           },
           {
             "player_id": "ultramar-ryan-geoff-55",
-            "name": "Ryan, Geoff",
+            "name": "Geoff Ryan",
             "number": "55",
             "positions": [
               "D"
@@ -988,7 +988,7 @@
           },
           {
             "player_id": "ultramar-sutton-cody-61",
-            "name": "Sutton, Cody",
+            "name": "Cody Sutton",
             "number": "61",
             "positions": [
               "F",
@@ -1097,7 +1097,7 @@
         "home": [
           {
             "player_id": "maltby-sports-arbing-ryan-91",
-            "name": "Arbing, Ryan",
+            "name": "Ryan Arbing",
             "number": "91",
             "positions": [
               "D",
@@ -1111,7 +1111,7 @@
           },
           {
             "player_id": "maltby-sports-crocker-luke-6",
-            "name": "Crocker, Luke",
+            "name": "Luke Crocker",
             "number": "6",
             "positions": [
               "D"
@@ -1124,7 +1124,7 @@
           },
           {
             "player_id": "maltby-sports-gallant-matt-2",
-            "name": "Gallant, Matt",
+            "name": "Matt Gallant",
             "number": "2",
             "positions": [
               "F"
@@ -1137,7 +1137,7 @@
           },
           {
             "player_id": "maltby-sports-johnson-trevor-18",
-            "name": "Johnson, Trevor",
+            "name": "Trevor Johnson",
             "number": "18",
             "positions": [
               "D"
@@ -1150,7 +1150,7 @@
           },
           {
             "player_id": "maltby-sports-leblanc-travis-63",
-            "name": "Leblanc, Travis",
+            "name": "Travis Leblanc",
             "number": "63",
             "positions": [
               "F",
@@ -1164,7 +1164,7 @@
           },
           {
             "player_id": "maltby-sports-maltby-chris-17",
-            "name": "Maltby, Chris",
+            "name": "Chris Maltby",
             "number": "17",
             "positions": [
               "D",
@@ -1178,7 +1178,7 @@
           },
           {
             "player_id": "maltby-sports-mccrossin-thomas-19",
-            "name": "McCrossin, Thomas",
+            "name": "Thomas McCrossin",
             "number": "19",
             "positions": [
               "F"
@@ -1191,7 +1191,7 @@
           },
           {
             "player_id": "maltby-sports-small-danny-biggie-16",
-            "name": "Small, Danny \"Biggie\"",
+            "name": "Biggie Small",
             "number": "16",
             "positions": [
               "F",
@@ -1207,7 +1207,7 @@
         "away": [
           {
             "player_id": "j-and-k-electric-boutiler-gerald-22",
-            "name": "Boutiler, Gerald",
+            "name": "Gerald Boutiler",
             "number": "22",
             "positions": [
               "D",
@@ -1221,7 +1221,7 @@
           },
           {
             "player_id": "j-and-k-electric-davison-bill-74",
-            "name": "Davison, Bill",
+            "name": "Bill Davison",
             "number": "74",
             "positions": [
               "F",
@@ -1235,7 +1235,7 @@
           },
           {
             "player_id": "j-and-k-electric-harrison-avery-00",
-            "name": "Harrison, Avery",
+            "name": "Avery Harrison",
             "number": "00",
             "positions": [
               "D"
@@ -1248,7 +1248,7 @@
           },
           {
             "player_id": "j-and-k-electric-leopold-nick-9",
-            "name": "Leopold, Nick",
+            "name": "Nick Leopold",
             "number": "9",
             "positions": [
               "F",
@@ -1262,7 +1262,7 @@
           },
           {
             "player_id": "j-and-k-electric-mackenzie-rubein-4",
-            "name": "Mackenzie, Rubein",
+            "name": "Reuben Mackenzie",
             "number": "4",
             "positions": [
               "F"
@@ -1275,7 +1275,7 @@
           },
           {
             "player_id": "j-and-k-electric-mansour-mikhial-26",
-            "name": "Mansour, Mikhial",
+            "name": "Mikhial Mansour",
             "number": "26",
             "positions": [
               "F",
@@ -1402,7 +1402,7 @@
         "home": [
           {
             "player_id": "colson-overhead-doors-burge-tom-12",
-            "name": "Burge, Tom",
+            "name": "Tom Burge",
             "number": "12",
             "positions": [
               "F"
@@ -1415,7 +1415,7 @@
           },
           {
             "player_id": "colson-overhead-doors-chandler-3rd-charles-7",
-            "name": "Chandler 3rd, Charles",
+            "name": "Charles Chandler 3rd",
             "number": "7",
             "positions": [
               "F"
@@ -1428,7 +1428,7 @@
           },
           {
             "player_id": "colson-overhead-doors-eatmon-chester-8",
-            "name": "Eatmon, Chester",
+            "name": "Chester Eatmon",
             "number": "8",
             "positions": [
               "F"
@@ -1441,7 +1441,7 @@
           },
           {
             "player_id": "colson-overhead-doors-gould-zack-88",
-            "name": "Gould, Zack",
+            "name": "Zack Gould",
             "number": "88",
             "positions": [
               "F"
@@ -1454,7 +1454,7 @@
           },
           {
             "player_id": "colson-overhead-doors-hebert-denis-19",
-            "name": "Hebert, Denis",
+            "name": "Denis Hebert",
             "number": "19",
             "positions": [
               "F"
@@ -1467,7 +1467,7 @@
           },
           {
             "player_id": "colson-overhead-doors-henshaw-chad-13",
-            "name": "Henshaw, Chad",
+            "name": "Chad Henshaw",
             "number": "13",
             "positions": [
               "F"
@@ -1480,7 +1480,7 @@
           },
           {
             "player_id": "colson-overhead-doors-sproul-chris-31",
-            "name": "Sproul, Chris",
+            "name": "Chris Sproul",
             "number": "31",
             "positions": [
               "F"
@@ -1495,7 +1495,7 @@
         "away": [
           {
             "player_id": "gr-mitchell-welding-atkinson-dave-38",
-            "name": "Atkinson, Dave",
+            "name": "Dave Atkinson",
             "number": "38",
             "positions": [
               "F"
@@ -1508,7 +1508,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-bourgeois-julien-9",
-            "name": "Bourgeois, Julien",
+            "name": "Julien Bourgeois",
             "number": "9",
             "positions": [
               "F"
@@ -1521,7 +1521,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-fullerton-zack-90",
-            "name": "Fullerton, Zack",
+            "name": "Zack Fullerton",
             "number": "90",
             "positions": [
               "F"
@@ -1534,7 +1534,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-helm-corey-7",
-            "name": "Helm, Corey",
+            "name": "Corey Helm",
             "number": "7",
             "positions": [
               "D",
@@ -1548,7 +1548,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-hurley-william-15",
-            "name": "Hurley, William",
+            "name": "William Hurley",
             "number": "15",
             "positions": [
               "F"
@@ -1561,7 +1561,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-macdonald-meathead-97",
-            "name": "MacDonald, Marshall",
+            "name": "Marshall MacDonald",
             "number": "97",
             "positions": [
               "C"
@@ -1574,7 +1574,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-macpherson-ryan-21",
-            "name": "Macpherson, Ryan",
+            "name": "Ryan Macpherson",
             "number": "21",
             "positions": [],
             "goals": 2,
@@ -1585,7 +1585,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-mattix-ralph-66",
-            "name": "Mattix, Ralph",
+            "name": "Ralph Mattix",
             "number": "66",
             "positions": [
               "D"
@@ -1598,7 +1598,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-mitchell-gordon-13",
-            "name": "Mitchell, Gordon",
+            "name": "Gordon Mitchell",
             "number": "13",
             "positions": [
               "F",
@@ -1612,7 +1612,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-robichaud-corey-88",
-            "name": "Robichaud, Corey",
+            "name": "Corey Robichaud",
             "number": "88",
             "positions": [
               "F"
@@ -1625,7 +1625,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-ryan-geoff-55",
-            "name": "Ryan, Geoff",
+            "name": "Geoff Ryan",
             "number": "55",
             "positions": [
               "D"
@@ -1705,7 +1705,7 @@
         "home": [
           {
             "player_id": "maltby-sports-allen-tyler-tuffy-11",
-            "name": "Allen, Tyler \"Tuffy\"",
+            "name": "Tyler \"Tuffy\" Allen",
             "number": "11",
             "positions": [
               "F"
@@ -1718,7 +1718,7 @@
           },
           {
             "player_id": "maltby-sports-burke-brody-14",
-            "name": "Burke, Brody",
+            "name": "Brody Burke",
             "number": "14",
             "positions": [
               "D",
@@ -1732,7 +1732,7 @@
           },
           {
             "player_id": "maltby-sports-burke-tim-22",
-            "name": "Burke, Tim",
+            "name": "Tim Burke",
             "number": "22",
             "positions": [
               "F",
@@ -1746,7 +1746,7 @@
           },
           {
             "player_id": "maltby-sports-cove-matt-12",
-            "name": "Cove, Matt",
+            "name": "Matt Cove",
             "number": "12",
             "positions": [
               "F"
@@ -1759,7 +1759,7 @@
           },
           {
             "player_id": "maltby-sports-dobson-aaron-4",
-            "name": "Dobson, Aaron",
+            "name": "Aaron Dobson",
             "number": "4",
             "positions": [
               "D"
@@ -1772,7 +1772,7 @@
           },
           {
             "player_id": "maltby-sports-gallant-brett-3",
-            "name": "Gallant, Brett",
+            "name": "Brett Gallant",
             "number": "3",
             "positions": [
               "F",
@@ -1786,7 +1786,7 @@
           },
           {
             "player_id": "maltby-sports-jobes-bill-8",
-            "name": "Jobes, Bill",
+            "name": "Bill Jobes",
             "number": "8",
             "positions": [
               "F"
@@ -1799,7 +1799,7 @@
           },
           {
             "player_id": "maltby-sports-linkletter-brad-9",
-            "name": "Linkletter, Brad",
+            "name": "Brad Linkletter",
             "number": "9",
             "positions": [
               "C"
@@ -1812,7 +1812,7 @@
           },
           {
             "player_id": "maltby-sports-malcolm-robert-10",
-            "name": "Malcolm, Robert",
+            "name": "Robert Malcolm",
             "number": "10",
             "positions": [
               "F"
@@ -1825,7 +1825,7 @@
           },
           {
             "player_id": "maltby-sports-miller-madden-6",
-            "name": "Miller, Madden",
+            "name": "Madden Miller",
             "number": "6",
             "positions": [
               "F"
@@ -1840,7 +1840,7 @@
         "away": [
           {
             "player_id": "ultramar-arbing-ryan-91",
-            "name": "Arbing, Ryan",
+            "name": "Ryan Arbing",
             "number": "91",
             "positions": [
               "D",
@@ -1854,7 +1854,7 @@
           },
           {
             "player_id": "ultramar-bridge-issac-98",
-            "name": "Bridge, Issac",
+            "name": "Issac Bridge",
             "number": "98",
             "positions": [
               "C"
@@ -1867,7 +1867,7 @@
           },
           {
             "player_id": "ultramar-crocker-luke-6",
-            "name": "Crocker, Luke",
+            "name": "Luke Crocker",
             "number": "6",
             "positions": [
               "D"
@@ -1880,7 +1880,7 @@
           },
           {
             "player_id": "ultramar-hurley-connor-7",
-            "name": "Hurley, Connor",
+            "name": "Connor Hurley",
             "number": "7",
             "positions": [
               "F"
@@ -1893,7 +1893,7 @@
           },
           {
             "player_id": "ultramar-leblanc-travis-63",
-            "name": "Leblanc, Travis",
+            "name": "Travis Leblanc",
             "number": "63",
             "positions": [
               "F",
@@ -1907,7 +1907,7 @@
           },
           {
             "player_id": "ultramar-mackinnon-ted-77",
-            "name": "Mackinnon, Ted",
+            "name": "Ted Mackinnon",
             "number": "77",
             "positions": [
               "F"
@@ -1920,7 +1920,7 @@
           },
           {
             "player_id": "ultramar-maltby-chris-17",
-            "name": "Maltby, Chris",
+            "name": "Chris Maltby",
             "number": "17",
             "positions": [
               "D",
@@ -1934,7 +1934,7 @@
           },
           {
             "player_id": "ultramar-mccarthy-ian-9",
-            "name": "McCarthy, Ian",
+            "name": "Ian McCarthy",
             "number": "9",
             "positions": [
               "F"
@@ -1947,7 +1947,7 @@
           },
           {
             "player_id": "ultramar-mccrossin-thomas-19",
-            "name": "McCrossin, Thomas",
+            "name": "Thomas McCrossin",
             "number": "19",
             "positions": [
               "F"
@@ -1960,7 +1960,7 @@
           },
           {
             "player_id": "ultramar-small-danny-biggie-16",
-            "name": "Small, Danny \"Biggie\"",
+            "name": "Biggie Small",
             "number": "16",
             "positions": [
               "F",
@@ -2091,7 +2091,7 @@
         "home": [
           {
             "player_id": "j-and-k-electric-atkinson-dave-38",
-            "name": "Atkinson, Dave",
+            "name": "Dave Atkinson",
             "number": "38",
             "positions": [
               "F"
@@ -2104,7 +2104,7 @@
           },
           {
             "player_id": "j-and-k-electric-bourgeois-julien-9",
-            "name": "Bourgeois, Julien",
+            "name": "Julien Bourgeois",
             "number": "9",
             "positions": [
               "F"
@@ -2117,7 +2117,7 @@
           },
           {
             "player_id": "j-and-k-electric-dobson-nick-pickle-94",
-            "name": "Dobson, Nick \"Pickle\"",
+            "name": "Nick \"Pickle\" Dobson",
             "number": "94",
             "positions": [
               "F"
@@ -2130,7 +2130,7 @@
           },
           {
             "player_id": "j-and-k-electric-helm-corey-7",
-            "name": "Helm, Corey",
+            "name": "Corey Helm",
             "number": "7",
             "positions": [
               "D",
@@ -2144,7 +2144,7 @@
           },
           {
             "player_id": "j-and-k-electric-macdonald-meathead-97",
-            "name": "MacDonald, Marshall",
+            "name": "Marshall MacDonald",
             "number": "97",
             "positions": [
               "C"
@@ -2157,7 +2157,7 @@
           },
           {
             "player_id": "j-and-k-electric-mitchell-gordon-13",
-            "name": "Mitchell, Gordon",
+            "name": "Gordon Mitchell",
             "number": "13",
             "positions": [
               "F",
@@ -2171,7 +2171,7 @@
           },
           {
             "player_id": "j-and-k-electric-ryan-geoff-55",
-            "name": "Ryan, Geoff",
+            "name": "Geoff Ryan",
             "number": "55",
             "positions": [
               "D"
@@ -2184,7 +2184,7 @@
           },
           {
             "player_id": "j-and-k-electric-sutton-cody-61",
-            "name": "Sutton, Cody",
+            "name": "Cody Sutton",
             "number": "61",
             "positions": [
               "F",
@@ -2200,7 +2200,7 @@
         "away": [
           {
             "player_id": "gr-mitchell-welding-boutiler-gerald-22",
-            "name": "Boutiler, Gerald",
+            "name": "Gerald Boutiler",
             "number": "22",
             "positions": [
               "D",
@@ -2214,7 +2214,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-harrison-avery-00",
-            "name": "Harrison, Avery",
+            "name": "Avery Harrison",
             "number": "00",
             "positions": [
               "D"
@@ -2227,7 +2227,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-mansour-mikhial-26",
-            "name": "Mansour, Mikhial",
+            "name": "Mikhial Mansour",
             "number": "26",
             "positions": [
               "F",
@@ -2241,7 +2241,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-perrin-noah-87",
-            "name": "Perrin, Noah",
+            "name": "Noah Perrin",
             "number": "87",
             "positions": [
               "F"
@@ -2337,7 +2337,7 @@
         "home": [
           {
             "player_id": "maltby-sports-atkinson-dave-38",
-            "name": "Atkinson, Dave",
+            "name": "Dave Atkinson",
             "number": "38",
             "positions": [
               "F"
@@ -2350,7 +2350,7 @@
           },
           {
             "player_id": "maltby-sports-macdonald-meathead-97",
-            "name": "MacDonald, Marshall",
+            "name": "Marshall MacDonald",
             "number": "97",
             "positions": [
               "C"
@@ -2363,7 +2363,7 @@
           },
           {
             "player_id": "maltby-sports-robichaud-corey-88",
-            "name": "Robichaud, Corey",
+            "name": "Corey Robichaud",
             "number": "88",
             "positions": [
               "F"
@@ -2376,7 +2376,7 @@
           },
           {
             "player_id": "maltby-sports-sutton-cody-61",
-            "name": "Sutton, Cody",
+            "name": "Cody Sutton",
             "number": "61",
             "positions": [
               "F",
@@ -2392,7 +2392,7 @@
         "away": [
           {
             "player_id": "gr-mitchell-welding-arbing-ryan-91",
-            "name": "Arbing, Ryan",
+            "name": "Ryan Arbing",
             "number": "91",
             "positions": [
               "D",
@@ -2406,7 +2406,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-bridge-issac-98",
-            "name": "Bridge, Issac",
+            "name": "Issac Bridge",
             "number": "98",
             "positions": [
               "C"
@@ -2419,7 +2419,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-codling-ryder-29",
-            "name": "Codling, Ryder",
+            "name": "Ryder Codling",
             "number": "29",
             "positions": [
               "F"
@@ -2432,7 +2432,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-gallant-matt-2",
-            "name": "Gallant, Matt",
+            "name": "Matt Gallant",
             "number": "2",
             "positions": [
               "F"
@@ -2445,7 +2445,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-johnson-trevor-18",
-            "name": "Johnson, Trevor",
+            "name": "Trevor Johnson",
             "number": "18",
             "positions": [
               "D"
@@ -2458,7 +2458,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-leblanc-travis-63",
-            "name": "Leblanc, Travis",
+            "name": "Travis Leblanc",
             "number": "63",
             "positions": [
               "F",
@@ -2472,7 +2472,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-maltby-chris-17",
-            "name": "Maltby, Chris",
+            "name": "Chris Maltby",
             "number": "17",
             "positions": [
               "D",
@@ -2486,7 +2486,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-mccarthy-ian-9",
-            "name": "McCarthy, Ian",
+            "name": "Ian McCarthy",
             "number": "9",
             "positions": [
               "F"
@@ -2499,7 +2499,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-mccrossin-thomas-19",
-            "name": "McCrossin, Thomas",
+            "name": "Thomas McCrossin",
             "number": "19",
             "positions": [
               "F"
@@ -2512,7 +2512,7 @@
           },
           {
             "player_id": "gr-mitchell-welding-small-danny-biggie-16",
-            "name": "Small, Danny \"Biggie\"",
+            "name": "Biggie Small",
             "number": "16",
             "positions": [
               "F",
@@ -2609,7 +2609,7 @@
         "home": [
           {
             "player_id": "colson-overhead-doors-baisley-chris-44",
-            "name": "Baisley, Chris",
+            "name": "Chris Baisley",
             "number": "44",
             "positions": [
               "D"
@@ -2622,7 +2622,7 @@
           },
           {
             "player_id": "colson-overhead-doors-chandler-3rd-charles-7",
-            "name": "Chandler 3rd, Charles",
+            "name": "Charles Chandler 3rd",
             "number": "7",
             "positions": [
               "F"
@@ -2635,7 +2635,7 @@
           },
           {
             "player_id": "colson-overhead-doors-eatmon-chester-8",
-            "name": "Eatmon, Chester",
+            "name": "Chester Eatmon",
             "number": "8",
             "positions": [
               "F"
@@ -2648,7 +2648,7 @@
           },
           {
             "player_id": "colson-overhead-doors-faulkner-rory-76",
-            "name": "Faulkner, Rory",
+            "name": "Rory Faulkner",
             "number": "76",
             "positions": [
               "F"
@@ -2661,7 +2661,7 @@
           },
           {
             "player_id": "colson-overhead-doors-gesner-logan-23",
-            "name": "Gesner, Logan",
+            "name": "Logan Gesner",
             "number": "23",
             "positions": [
               "D",
@@ -2675,7 +2675,7 @@
           },
           {
             "player_id": "colson-overhead-doors-gould-zack-88",
-            "name": "Gould, Zack",
+            "name": "Zack Gould",
             "number": "88",
             "positions": [
               "F"
@@ -2688,7 +2688,7 @@
           },
           {
             "player_id": "colson-overhead-doors-russel-nick-30",
-            "name": "Russel, Nick",
+            "name": "Nick Russel",
             "number": "30",
             "positions": [
               "G"
@@ -2701,7 +2701,7 @@
           },
           {
             "player_id": "colson-overhead-doors-sproul-chris-31",
-            "name": "Sproul, Chris",
+            "name": "Chris Sproul",
             "number": "31",
             "positions": [
               "F"
@@ -2716,7 +2716,7 @@
         "away": [
           {
             "player_id": "j-and-k-electric-boutiler-gerald-22",
-            "name": "Boutiler, Gerald",
+            "name": "Gerald Boutiler",
             "number": "22",
             "positions": [
               "D",
@@ -2730,7 +2730,7 @@
           },
           {
             "player_id": "j-and-k-electric-budd-ryan-18",
-            "name": "Budd, Ryan",
+            "name": "Ryan Budd",
             "number": "18",
             "positions": [
               "F"
@@ -2743,7 +2743,7 @@
           },
           {
             "player_id": "j-and-k-electric-davison-bill-74",
-            "name": "Davison, Bill",
+            "name": "Bill Davison",
             "number": "74",
             "positions": [
               "F",
@@ -2757,7 +2757,7 @@
           },
           {
             "player_id": "j-and-k-electric-drake-scott-30",
-            "name": "Drake, Scott",
+            "name": "Scott Drake",
             "number": "30",
             "positions": [
               "G",
@@ -2772,7 +2772,7 @@
           },
           {
             "player_id": "j-and-k-electric-kinnear-jeremy-17",
-            "name": "Kinnear, Jeremy",
+            "name": "Jeremy Kinnear",
             "number": "17",
             "positions": [
               "F"
@@ -2785,7 +2785,7 @@
           },
           {
             "player_id": "j-and-k-electric-leopold-nick-9",
-            "name": "Leopold, Nick",
+            "name": "Nick Leopold",
             "number": "9",
             "positions": [
               "F",
@@ -2799,7 +2799,7 @@
           },
           {
             "player_id": "j-and-k-electric-mackenzie-rubein-4",
-            "name": "Mackenzie, Rubein",
+            "name": "Reuben Mackenzie",
             "number": "4",
             "positions": [
               "F"
@@ -2812,7 +2812,7 @@
           },
           {
             "player_id": "j-and-k-electric-mansour-mikhial-26",
-            "name": "Mansour, Mikhial",
+            "name": "Mikhial Mansour",
             "number": "26",
             "positions": [
               "F",
@@ -2826,7 +2826,7 @@
           },
           {
             "player_id": "j-and-k-electric-morris-pat-27",
-            "name": "Morris, Pat",
+            "name": "Pat Morris",
             "number": "27",
             "positions": [
               "F",
@@ -2840,7 +2840,7 @@
           },
           {
             "player_id": "j-and-k-electric-stone-brendan-28",
-            "name": "Stone, Brendan",
+            "name": "Brendan Stone",
             "number": "28",
             "positions": [
               "F"
@@ -2968,7 +2968,7 @@
         "home": [
           {
             "player_id": "maltby-sports-arbing-ryan-91",
-            "name": "Arbing, Ryan",
+            "name": "Ryan Arbing",
             "number": "91",
             "positions": [
               "D",
@@ -2982,7 +2982,7 @@
           },
           {
             "player_id": "maltby-sports-belliveau-marc-30",
-            "name": "Belliveau, Marc",
+            "name": "Marc Belliveau",
             "number": "30",
             "positions": [
               "G"
@@ -2995,7 +2995,7 @@
           },
           {
             "player_id": "maltby-sports-bridge-issac-98",
-            "name": "Bridge, Issac",
+            "name": "Issac Bridge",
             "number": "98",
             "positions": [
               "C"
@@ -3008,7 +3008,7 @@
           },
           {
             "player_id": "maltby-sports-codling-ryder-29",
-            "name": "Codling, Ryder",
+            "name": "Ryder Codling",
             "number": "29",
             "positions": [
               "F"
@@ -3021,7 +3021,7 @@
           },
           {
             "player_id": "maltby-sports-crocker-luke-6",
-            "name": "Crocker, Luke",
+            "name": "Luke Crocker",
             "number": "6",
             "positions": [
               "D"
@@ -3034,7 +3034,7 @@
           },
           {
             "player_id": "maltby-sports-gallant-matt-2",
-            "name": "Gallant, Matt",
+            "name": "Matt Gallant",
             "number": "2",
             "positions": [
               "F"
@@ -3047,7 +3047,7 @@
           },
           {
             "player_id": "maltby-sports-hurley-connor-7",
-            "name": "Hurley, Connor",
+            "name": "Connor Hurley",
             "number": "7",
             "positions": [
               "F"
@@ -3060,7 +3060,7 @@
           },
           {
             "player_id": "maltby-sports-johnson-trevor-18",
-            "name": "Johnson, Trevor",
+            "name": "Trevor Johnson",
             "number": "18",
             "positions": [
               "D"
@@ -3073,7 +3073,7 @@
           },
           {
             "player_id": "maltby-sports-leblanc-travis-63",
-            "name": "Leblanc, Travis",
+            "name": "Travis Leblanc",
             "number": "63",
             "positions": [
               "F",
@@ -3087,7 +3087,7 @@
           },
           {
             "player_id": "maltby-sports-mackinnon-ted-77",
-            "name": "Mackinnon, Ted",
+            "name": "Ted Mackinnon",
             "number": "77",
             "positions": [
               "F"
@@ -3100,7 +3100,7 @@
           },
           {
             "player_id": "maltby-sports-maltby-chris-17",
-            "name": "Maltby, Chris",
+            "name": "Chris Maltby",
             "number": "17",
             "positions": [
               "D",
@@ -3114,7 +3114,7 @@
           },
           {
             "player_id": "maltby-sports-mccarthy-ian-9",
-            "name": "McCarthy, Ian",
+            "name": "Ian McCarthy",
             "number": "9",
             "positions": [
               "F"
@@ -3127,7 +3127,7 @@
           },
           {
             "player_id": "maltby-sports-mccrossin-thomas-19",
-            "name": "McCrossin, Thomas",
+            "name": "Thomas McCrossin",
             "number": "19",
             "positions": [
               "F"
@@ -3140,7 +3140,7 @@
           },
           {
             "player_id": "maltby-sports-small-danny-biggie-16",
-            "name": "Small, Danny \"Biggie\"",
+            "name": "Biggie Small",
             "number": "16",
             "positions": [
               "F",
@@ -3156,7 +3156,7 @@
         "away": [
           {
             "player_id": "ultramar-allen-tyler-tuffy-11",
-            "name": "Allen, Tyler \"Tuffy\"",
+            "name": "Tyler \"Tuffy\" Allen",
             "number": "11",
             "positions": [
               "F"
@@ -3169,7 +3169,7 @@
           },
           {
             "player_id": "ultramar-bennett-mark",
-            "name": "Bennett, Mark",
+            "name": "Mark Bennett",
             "number": null,
             "positions": [
               "D"
@@ -3182,7 +3182,7 @@
           },
           {
             "player_id": "ultramar-bonnell-andy-5",
-            "name": "Bonnell, Andy",
+            "name": "Andy Bonnell",
             "number": "5",
             "positions": [
               "F"
@@ -3195,7 +3195,7 @@
           },
           {
             "player_id": "ultramar-burke-brody-14",
-            "name": "Burke, Brody",
+            "name": "Brody Burke",
             "number": "14",
             "positions": [
               "D",
@@ -3209,7 +3209,7 @@
           },
           {
             "player_id": "ultramar-cove-matt-12",
-            "name": "Cove, Matt",
+            "name": "Matt Cove",
             "number": "12",
             "positions": [
               "F"
@@ -3222,7 +3222,7 @@
           },
           {
             "player_id": "ultramar-dobson-aaron-4",
-            "name": "Dobson, Aaron",
+            "name": "Aaron Dobson",
             "number": "4",
             "positions": [
               "D"
@@ -3235,7 +3235,7 @@
           },
           {
             "player_id": "ultramar-dywer-chris-2",
-            "name": "Dywer, Chris",
+            "name": "Chris Dywer",
             "number": "2",
             "positions": [
               "F",
@@ -3249,7 +3249,7 @@
           },
           {
             "player_id": "ultramar-gallant-brett-3",
-            "name": "Gallant, Brett",
+            "name": "Brett Gallant",
             "number": "3",
             "positions": [
               "F",
@@ -3263,7 +3263,7 @@
           },
           {
             "player_id": "ultramar-jobes-bill-8",
-            "name": "Jobes, Bill",
+            "name": "Bill Jobes",
             "number": "8",
             "positions": [
               "F"
@@ -3276,7 +3276,7 @@
           },
           {
             "player_id": "ultramar-linkletter-brad-9",
-            "name": "Linkletter, Brad",
+            "name": "Brad Linkletter",
             "number": "9",
             "positions": [
               "C"
@@ -3289,7 +3289,7 @@
           },
           {
             "player_id": "ultramar-malcolm-robert-10",
-            "name": "Malcolm, Robert",
+            "name": "Robert Malcolm",
             "number": "10",
             "positions": [
               "F"
@@ -3302,7 +3302,7 @@
           },
           {
             "player_id": "ultramar-miller-madden-6",
-            "name": "Miller, Madden",
+            "name": "Madden Miller",
             "number": "6",
             "positions": [
               "F"

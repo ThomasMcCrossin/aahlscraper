@@ -858,11 +858,13 @@
         // Name correction function
         function correctName(name) {
             if (!name) return name;
-            // Replace Meathead with Marshall
-            name = name.replace(/Meathead/gi, 'Marshall');
-            // Fix McCrossin capitalization
-            name = name.replace(/Mccrossin/g, 'McCrossin');
-            return name;
+            let transformed = String(name);
+            transformed = transformed.replace(/Meathead/gi, 'Marshall');
+            transformed = transformed.replace(/Mccrossin/gi, 'McCrossin');
+            transformed = transformed.replace(/Danny\s*"?Biggie"?\s*Small/gi, 'Biggie Small');
+            transformed = transformed.replace(/Biggie\s+"?Small"?/gi, 'Biggie Small');
+            transformed = transformed.replace(/Rubein/gi, 'Reuben');
+            return transformed;
         }
 
         // Apply name corrections to data
@@ -871,7 +873,8 @@
 
             if (Array.isArray(data.top_scorers)) {
                 clone.top_scorers = data.top_scorers.map((scorer, index) => {
-                    const name = correctName(scorer.name || scorer.player_name || '');
+                    const rawName = scorer.name || scorer.player_name || '';
+                    const name = formatPlayerDisplayName(correctName(rawName));
                     const team = scorer.team_name || scorer.team || '';
                     const goals = Number(scorer.g ?? scorer.goals ?? scorer.Goals ?? 0) || 0;
                     const assists = Number(scorer.a ?? scorer.assists ?? scorer.Assists ?? 0) || 0;
@@ -900,7 +903,7 @@
                             if (Array.isArray(game.player_stats[side])) {
                                 playerStats[side] = game.player_stats[side].map(player => ({
                                     ...player,
-                                    name: formatPlayerDisplayName(player.name || player.player_name),
+                                    name: formatPlayerDisplayName(correctName(player.name || player.player_name)),
                                     goals: Number(player.goals ?? player.g ?? 0) || 0,
                                     assists: Number(player.assists ?? player.a ?? 0) || 0,
                                     points: Number(player.points ?? player.pts ?? ((Number(player.goals ?? player.g ?? 0) || 0) + (Number(player.assists ?? player.a ?? 0) || 0))) || 0,
@@ -910,8 +913,8 @@
                     }
                     return {
                         ...game,
-                        home: correctName(game.home || game.home_team || ''),
-                        away: correctName(game.away || game.away_team || ''),
+                        home: formatPlayerDisplayName(correctName(game.home || game.home_team || '')),
+                        away: formatPlayerDisplayName(correctName(game.away || game.away_team || '')),
                         home_line: homeLine,
                         away_line: awayLine,
                         headline: game.headline ? correctName(game.headline) : game.headline,
@@ -923,8 +926,8 @@
             if (Array.isArray(data.upcoming_games)) {
                 clone.upcoming_games = data.upcoming_games.map(game => ({
                     ...game,
-                    home: correctName(game.home || game.home_team || ''),
-                    away: correctName(game.away || game.away_team || '')
+                    home: formatPlayerDisplayName(correctName(game.home || game.home_team || '')),
+                    away: formatPlayerDisplayName(correctName(game.away || game.away_team || ''))
                 }));
             }
 
@@ -932,12 +935,13 @@
         }
 
         function formatPlayerDisplayName(rawName) {
-            const clean = correctName(rawName || '').trim();
-            if (!clean.includes(',')) {
-                return clean;
+            let clean = correctName(rawName || '').trim();
+            if (clean.includes(',')) {
+                const [last, first] = clean.split(',').map(part => part.trim()).filter(Boolean);
+                clean = `${first || ''} ${last || ''}`.trim();
             }
-            const [last, first] = clean.split(',').map(part => part.trim()).filter(Boolean);
-            return `${first || ''} ${last || ''}`.trim();
+            clean = correctName(clean);
+            return clean.replace(/\s+/g, ' ');
         }
 
         function formatStatLine(stat) {

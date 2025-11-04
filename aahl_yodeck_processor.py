@@ -18,6 +18,7 @@ class AAHLDataProcessor:
     NAME_CORRECTIONS = {
         r'Meathead': 'Marshall',
         r'Mccrossin': 'McCrossin',
+        r'Rubein': 'Reuben',
     }
 
     def __init__(self, data_dir: str = "data"):
@@ -27,10 +28,27 @@ class AAHLDataProcessor:
 
     def correct_names(self, text: str) -> str:
         """Apply name corrections to text."""
-        corrected = text
+        if text is None:
+            return ''
+        corrected = str(text)
         for pattern, replacement in self.NAME_CORRECTIONS.items():
             corrected = re.sub(pattern, replacement, corrected, flags=re.IGNORECASE)
+        corrected = re.sub(r'Danny\s*"?Biggie"?\s*Small', 'Biggie Small', corrected, flags=re.IGNORECASE)
+        corrected = re.sub(r'Biggie\s+"?Small"?', 'Biggie Small', corrected, flags=re.IGNORECASE)
+        corrected = re.sub(r'\s+', ' ', corrected).strip()
         return corrected
+
+    def format_display_name(self, text: str) -> str:
+        """Return display-friendly First Last format."""
+        clean = self.correct_names(text)
+        if not clean:
+            return ''
+        if ',' in clean:
+            last, first = [part.strip() for part in clean.split(',', 1)]
+            clean = f"{first} {last}".strip()
+        clean = self.correct_names(clean)
+        clean = re.sub(r'\s+', ' ', clean)
+        return clean.strip()
 
     def correct_player_names_in_list(self, players: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Apply name corrections to player data."""
@@ -38,9 +56,9 @@ class AAHLDataProcessor:
         for player in players:
             corrected_player = player.copy()
             if 'player_name' in corrected_player:
-                corrected_player['player_name'] = self.correct_names(corrected_player['player_name'])
+                corrected_player['player_name'] = self.format_display_name(corrected_player['player_name'])
             if 'name' in corrected_player:
-                corrected_player['name'] = self.correct_names(corrected_player['name'])
+                corrected_player['name'] = self.format_display_name(corrected_player['name'])
             corrected.append(corrected_player)
         return corrected
 
@@ -222,7 +240,7 @@ class AAHLDataProcessor:
                 entry_copy = dict(entry)
                 name = entry_copy.get("name") or entry_copy.get("player_name")
                 if name:
-                    entry_copy["name"] = self.correct_names(name)
+                    entry_copy["name"] = self.format_display_name(name)
                 goals = entry_copy.get("goals", entry_copy.get("g", 0))
                 assists = entry_copy.get("assists", entry_copy.get("a", 0))
                 try:
@@ -331,7 +349,7 @@ class AAHLDataProcessor:
                 # Name corrections
                 for side in ("home", "away"):
                     if side in game_copy and isinstance(game_copy[side], str):
-                        game_copy[side] = self.correct_names(game_copy[side])
+                        game_copy[side] = self.format_display_name(game_copy[side])
 
                 game_copy = self._clean_player_stats(game_copy)
 
@@ -450,9 +468,9 @@ class AAHLDataProcessor:
             stat_copy = stat.copy()
             stat_copy['rank'] = idx
             if 'player_name' in stat_copy:
-                stat_copy['player_name'] = self.correct_names(stat_copy['player_name'])
+                stat_copy['player_name'] = self.format_display_name(stat_copy['player_name'])
             if 'name' in stat_copy:
-                stat_copy['name'] = self.correct_names(stat_copy['name'])
+                stat_copy['name'] = self.format_display_name(stat_copy['name'])
             ranked.append(stat_copy)
 
         return ranked

@@ -398,9 +398,12 @@
 
         function correctName(name) {
             if (!name) return '';
-            return name
+            return String(name)
                 .replace(/Meathead/gi, 'Marshall')
-                .replace(/Mccrossin/gi, 'McCrossin');
+                .replace(/Mccrossin/gi, 'McCrossin')
+                .replace(/Danny\s*"?Biggie"?\s*Small/gi, 'Biggie Small')
+                .replace(/Biggie\s+"?Small"?/gi, 'Biggie Small')
+                .replace(/Rubein/gi, 'Reuben');
         }
 
         function slugifyTeamName(name) {
@@ -435,10 +438,13 @@
 
         function formatPlayerName(raw) {
             if (!raw) return '';
-            const clean = correctName(raw).trim();
-            if (!clean.includes(',')) return clean;
-            const [last, first] = clean.split(',').map(part => part.trim()).filter(Boolean);
-            return `${first || ''} ${last || ''}`.trim();
+            let clean = correctName(raw).trim();
+            if (clean.includes(',')) {
+                const [last, first] = clean.split(',').map(part => part.trim()).filter(Boolean);
+                clean = `${first || ''} ${last || ''}`.trim();
+            }
+            clean = correctName(clean);
+            return clean.replace(/\s+/g, ' ');
         }
 
         function formatStatLine(stats) {
