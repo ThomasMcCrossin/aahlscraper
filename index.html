@@ -679,6 +679,11 @@
 
     <script>
         const SLIDE_DURATIONS_MS = [20000, 10000];
+        const TICKER_MIN_DURATION = 6;
+        const TICKER_SPEED_FACTOR = 0.036;
+        let tickerExtras = [];
+        let currentRecentGames = [];
+        let currentUpcomingGames = [];
 
         // Sample data with name corrections applied
         const sampleData = {
@@ -1292,6 +1297,17 @@
                 entries.push(html);
             }
 
+            function addExtraEntry(label, text, meta = {}) {
+                const cleanLabel = (label || 'Update').toString();
+                const cleanText = (text || '').toString();
+                if (!cleanText) return;
+                const key = `external|${cleanLabel}|${cleanText}`.toLowerCase();
+                if (seenKeys.has(key)) return;
+                seenKeys.add(key);
+                const badge = meta.badge ? `<span class="ticker-label">${meta.badge}</span>` : `<span class="ticker-label">${cleanLabel}</span>`;
+                entries.push(`<div class="ticker-item">${badge}<span class="ticker-text">${cleanText}</span></div>`);
+            }
+
             (recentGames || []).forEach(game => {
                 const away = correctName(game.away || game.away_team || 'Away');
                 const home = correctName(game.home || game.home_team || 'Home');
@@ -1329,10 +1345,15 @@
                 );
             });
 
+            (tickerExtras || []).forEach(extra => {
+                if (!extra) return;
+                addExtraEntry(extra.label || extra.source || 'Update', extra.text || extra.summary || '', extra.meta || {});
+            });
+
             if (entries.length === 0) {
                 const placeholder = '<div class="ticker-item">AAHL updates will appear here soon.</div>';
                 track.innerHTML = `<div class="ticker-segment">${placeholder}</div><div class="ticker-segment">${placeholder}</div>`;
-                track.style.animationDuration = '35s';
+                track.style.animationDuration = `${TICKER_MIN_DURATION}s`;
                 return;
             }
 
@@ -1346,8 +1367,75 @@
                 .map(entry => entry.replace(/<[^>]*>/g, ''))
                 .join(' ')
                 .length;
-            const duration = Math.max(10, textLength * 0.18);
+            const duration = Math.max(TICKER_MIN_DURATION, textLength * TICKER_SPEED_FACTOR);
             track.style.animationDuration = `${duration}s`;
+        }
+
+        function formatExternalTickerData(feeds) {
+            if (!feeds || typeof feeds !== 'object') return [];
+            const entries = [];
+
+            const processGames = (games, label) => {
+                if (!Array.isArray(games)) return;
+                games.forEach(game => {
+                    if (!game) return;
+                    const away = correctName(game.away || game.away_team || 'Away');
+                    const home = correctName(game.home || game.home_team || 'Home');
+                    const awayScore = game.away_score ?? game.awayPoints ?? game.score_away ?? '';
+                    const homeScore = game.home_score ?? game.homePoints ?? game.score_home ?? '';
+                    const status = (game.status || game.game_status || '').replace(/\s+/g, ' ').trim();
+                    const suffix = status ? ` (${status})` : '';
+                    const text = `${away} ${awayScore} - ${homeScore} ${home}${suffix}`.trim();
+                    entries.push({
+                        label: label || 'Update',
+                        text,
+                        meta: game.meta || {},
+                    });
+                });
+            };
+
+            Object.entries(feeds).forEach(([key, value]) => {
+                const label = key.toUpperCase();
+                processGames(value, label);
+            });
+
+            if (Array.isArray(feeds.games)) {
+                processGames(feeds.games, feeds.label || 'Update');
+            }
+
+            if (Array.isArray(feeds.extra)) {
+                feeds.extra.forEach(item => {
+                    if (!item || !item.text) return;
+                    entries.push({
+                        label: item.label || item.source || 'Update',
+                        text: item.text,
+                        meta: item.meta || {},
+                    });
+                });
+            }
+
+            return entries;
+        }
+
+        function loadTickerExtras() {
+            const extrasUrl = 'https://raw.githubusercontent.com/ThomasMcCrossin/aahlscraper/main/data/sample_external_scores.json';
+            return fetch(extrasUrl, { cache: 'no-store' })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch external ticker feeds');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    tickerExtras = formatExternalTickerData(data);
+                    if (currentRecentGames.length || currentUpcomingGames.length) {
+                        renderTicker(currentRecentGames, currentUpcomingGames);
+                    }
+                })
+                .catch(error => {
+                    console.warn('External ticker feeds unavailable:', error);
+                    tickerExtras = [];
+                });
         }
 
         function startSlideShow(durations = SLIDE_DURATIONS_MS) {
@@ -1397,6 +1485,9 @@
             const recentGames = filterRecentGames(recentSource);
             const upcomingGames = filterUpcomingGames(upcomingSource);
 
+            currentRecentGames = recentGames;
+            currentUpcomingGames = upcomingGames;
+
             renderStandings(standings);
             renderScorers(scorers);
             renderResults(recentGames);
@@ -1439,6 +1530,7 @@
         }
 
         // Kick off slide rotation and start the application
+        loadTickerExtras();
         startSlideShow();
         loadData();
 

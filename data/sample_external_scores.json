@@ -1,0 +1,56 @@
+{
+  "nhl": [
+    {
+      "status": "Final",
+      "away": "Boston Bruins",
+      "away_score": 3,
+      "home": "Toronto Maple Leafs",
+      "home_score": 2
+    },
+    {
+      "status": "Final",
+      "away": "New York Rangers",
+      "away_score": 4,
+      "home": "Montreal Canadiens",
+      "home_score": 1
+    }
+  ],
+  "nba": [
+    {
+      "status": "Final",
+      "away": "Boston Celtics",
+      "away_score": 109,
+      "home": "Philadelphia 76ers",
+      "home_score": 104
+    },
+    {
+      "status": "Final",
+      "away": "Los Angeles Lakers",
+      "away_score": 118,
+      "home": "Golden State Warriors",
+      "home_score": 121
+    }
+  ],
+  "nfl": [
+    {
+      "status": "Final",
+      "away": "Buffalo Bills",
+      "away_score": 24,
+      "home": "New York Jets",
+      "home_score": 17
+    },
+    {
+      "status": "Final",
+      "away": "Dallas Cowboys",
+      "away_score": 31,
+      "home": "Philadelphia Eagles",
+      "home_score": 27
+    }
+  ],
+  "extra": [
+    {
+      "label": "MLS",
+      "text": "New England Revolution 2 - 2 NYCFC (Final)"
+    }
+  ]
+}
