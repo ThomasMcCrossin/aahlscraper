@@ -566,6 +566,40 @@
         }
 
         const DAY_MS = 24 * 60 * 60 * 1000;
+        const CACHE_KEY = 'aahl_display_cache_v1';
+        const CACHE_TTL_MS = 24 * DAY_MS;
+
+        function saveCache(data) {
+            try {
+                const payload = {
+                    saved_at: new Date().toISOString(),
+                    data,
+                };
+                localStorage.setItem(CACHE_KEY, JSON.stringify(payload));
+            } catch (err) {
+                console.warn('Unable to save cache', err);
+            }
+        }
+
+        function loadCache() {
+            try {
+                const raw = localStorage.getItem(CACHE_KEY);
+                if (!raw) return null;
+                const parsed = JSON.parse(raw);
+                if (!parsed || !parsed.data) return null;
+                const savedAt = new Date(parsed.saved_at || 0);
+                if (Number.isNaN(savedAt.getTime())) return null;
+                const age = Date.now() - savedAt.getTime();
+                if (age > CACHE_TTL_MS) {
+                    console.log('Cached data is older than 24h, ignoring.');
+                    return null;
+                }
+                return parsed.data;
+            } catch (err) {
+                console.warn('Unable to read cache', err);
+                return null;
+            }
+        }
 
         // Format date
         function formatDate(value) {
@@ -693,16 +727,6 @@
                     `;
                     grid.appendChild(card);
                 });
-                card.innerHTML = `
-                    <div class="scorer-rank">#${scorer.rank}</div>
-                    <div class="scorer-info">
-                        <div class="scorer-name">${scorer.name}</div>
-                        <div class="scorer-team">${scorer.team}</div>
-                    </div>
-                    <div class="scorer-points">${scorer.points}</div>
-                `;
-                grid.appendChild(card);
-            });
         }
 
         // Render recent results
@@ -825,10 +849,15 @@
 
         // Load data from external source or use sample data
         function loadData() {
-            // GitHub repository data URL (auto-updated by GitHub Actions)
             const dataUrl = 'https://raw.githubusercontent.com/ThomasMcCrossin/aahlscraper/main/data/yodeck_display.json';
+            const cached = loadCache();
 
-            fetch(dataUrl)
+            if (cached) {
+                console.log('Loaded data from cache');
+                initializeDisplay(cached);
+            }
+
+            fetch(dataUrl, { cache: 'no-store' })
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Failed to fetch data from GitHub');
@@ -838,10 +867,16 @@
                 .then(data => {
                     console.log('Successfully loaded data from GitHub');
                     console.log('Data timestamp:', data.timestamp);
+                    saveCache(data);
                     initializeDisplay(data);
                 })
                 .catch(error => {
-                    console.warn('Could not load data from GitHub, using sample data:', error);
+                    console.warn('Could not load data from GitHub:', error);
+                    if (cached) {
+                        console.log('Using cached data after fetch failure');
+                        return;
+                    }
+                    console.log('No cache available, using bundled sample data');
                     initializeDisplay(sampleData);
                 });
         }
