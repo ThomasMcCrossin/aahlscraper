@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-03T20:15:23.398301",
+  "timestamp": "2025-11-04T02:32:46.305534",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -799,7 +799,7 @@
       "home": "Ultramar",
       "away": "Colson Overhead Doors",
       "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276453&u=DSMALL&s=hockey&p=preview",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276453&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
       "home_line": {
         "name": "Ultramar",
         "slug": "ultramar",
@@ -830,7 +830,7 @@
       "home": "G.R. Mitchell Welding",
       "away": "Maltby Sports",
       "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276455&u=DSMALL&s=hockey&p=preview",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276455&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
       "home_line": {
         "name": "G.R. Mitchell Welding",
         "slug": "gr-mitchell-welding",
@@ -861,7 +861,7 @@
       "home": "Ultramar",
       "away": "J&K Electric",
       "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276459&u=DSMALL&s=hockey&p=preview",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276459&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
       "home_line": {
         "name": "Ultramar",
         "slug": "ultramar",
@@ -892,7 +892,7 @@
       "home": "J&K Electric",
       "away": "Colson Overhead Doors",
       "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276514&u=DSMALL&s=hockey&p=preview",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276514&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
       "home_line": {
         "name": "J&K Electric",
         "slug": "j-and-k-electric",
@@ -923,7 +923,7 @@
       "home": "Colson Overhead Doors",
       "away": "Ultramar",
       "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276517&u=DSMALL&s=hockey&p=preview",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276517&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
       "home_line": {
         "name": "Colson Overhead Doors",
         "slug": "colson-overhead-doors",
@@ -954,7 +954,7 @@
       "home": "J&K Electric",
       "away": "Maltby Sports",
       "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276518&u=DSMALL&s=hockey&p=preview",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276518&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
       "home_line": {
         "name": "J&K Electric",
         "slug": "j-and-k-electric",
@@ -985,7 +985,7 @@
       "home": "G.R. Mitchell Welding",
       "away": "Colson Overhead Doors",
       "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276523&u=DSMALL&s=hockey&p=preview",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276523&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
       "home_line": {
         "name": "G.R. Mitchell Welding",
         "slug": "gr-mitchell-welding",
@@ -1016,7 +1016,7 @@
       "home": "J&K Electric",
       "away": "Maltby Sports",
       "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276525&u=DSMALL&s=hockey&p=preview",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276525&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
       "home_line": {
         "name": "J&K Electric",
         "slug": "j-and-k-electric",
@@ -1047,7 +1047,7 @@
       "home": "Ultramar",
       "away": "G.R. Mitchell Welding",
       "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276527&u=DSMALL&s=hockey&p=preview",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276527&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
       "home_line": {
         "name": "Ultramar",
         "slug": "ultramar",
@@ -1078,7 +1078,7 @@
       "home": "Ultramar",
       "away": "Colson Overhead Doors",
       "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276530&u=DSMALL&s=hockey&p=preview",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276530&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
       "home_line": {
         "name": "Ultramar",
         "slug": "ultramar",
