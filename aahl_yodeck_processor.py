@@ -142,6 +142,8 @@ class AAHLDataProcessor:
 
         home = _clean(game.get("home") or game.get("home_team"))
         away = _clean(game.get("away") or game.get("away_team"))
+        home_score = str(game.get("home_score") or "").strip()
+        away_score = str(game.get("away_score") or "").strip()
         date_parts = [
             game.get("datetime"),
             game.get("start_local"),
@@ -154,7 +156,7 @@ class AAHLDataProcessor:
                 when = str(part).strip()
                 if when:
                     break
-        return f"fallback:{home}|{away}|{when}"
+        return f"fallback:{home}|{away}|{when}|{home_score}|{away_score}"
 
     @staticmethod
     def _merge_game_records(base: Dict[str, Any], update: Dict[str, Any]) -> Dict[str, Any]:
@@ -169,6 +171,75 @@ class AAHLDataProcessor:
                 continue
             merged[key] = value
         return merged
+
+    @staticmethod
+    def _points_from_stat(stat: Dict[str, Any]) -> int:
+        try:
+            if "points" in stat and stat["points"] not in ("", None):
+                return int(stat["points"])
+            goals = int(stat.get("goals") or stat.get("g") or 0)
+            assists = int(stat.get("assists") or stat.get("a") or 0)
+            return goals + assists
+        except (TypeError, ValueError):
+            return 0
+
+    def refine_headline_text(self, text: Optional[str]) -> Optional[str]:
+        """Tweak templated headline language to read more naturally."""
+        if not text or not isinstance(text, str):
+            return text
+
+        replacements = [
+            (r"\bbrace\s*\(2G\)", "two goals"),
+            (r"\bsupplying\b", "adding"),
+            (r"\bchipping in\b", "adding"),
+            (r"\bpummels\b", "dominates"),
+            (r"\bcrushes\b", "rolls past"),
+        ]
+
+        refined = text
+        for pattern, replacement in replacements:
+            refined = re.sub(pattern, replacement, refined, flags=re.IGNORECASE)
+
+        refined = re.sub(r"\s{2,}", " ", refined).strip()
+        return refined
+
+    def _clean_player_stats(self, game: Dict[str, Any]) -> Dict[str, Any]:
+        """Apply name corrections and ensure numeric totals for per-game player stats."""
+        stats = game.get("player_stats")
+        if not isinstance(stats, dict):
+            return game
+
+        cleaned: Dict[str, Any] = {}
+        for side in ("home", "away"):
+            entries = stats.get(side)
+            if not isinstance(entries, list):
+                continue
+
+            cleaned_entries = []
+            for entry in entries:
+                if not isinstance(entry, dict):
+                    continue
+                entry_copy = dict(entry)
+                name = entry_copy.get("name") or entry_copy.get("player_name")
+                if name:
+                    entry_copy["name"] = self.correct_names(name)
+                goals = entry_copy.get("goals", entry_copy.get("g", 0))
+                assists = entry_copy.get("assists", entry_copy.get("a", 0))
+                try:
+                    entry_copy["goals"] = int(goals or 0)
+                except (TypeError, ValueError):
+                    entry_copy["goals"] = 0
+                try:
+                    entry_copy["assists"] = int(assists or 0)
+                except (TypeError, ValueError):
+                    entry_copy["assists"] = 0
+                entry_copy["points"] = self._points_from_stat(entry_copy)
+                cleaned_entries.append(entry_copy)
+            cleaned[side] = cleaned_entries
+
+        if cleaned:
+            game["player_stats"] = cleaned
+        return game
 
     def filter_amherst_games(self, schedule: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
         """Filter schedule for Amherst games, split into completed and upcoming.
@@ -262,6 +333,8 @@ class AAHLDataProcessor:
                     if side in game_copy and isinstance(game_copy[side], str):
                         game_copy[side] = self.correct_names(game_copy[side])
 
+                game_copy = self._clean_player_stats(game_copy)
+
                 dt = to_dt(game_copy)
                 played = has_score(game_copy)
 
@@ -285,11 +358,30 @@ class AAHLDataProcessor:
         def dedupe(games_list: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
             unique: List[Dict[str, Any]] = []
             seen_keys = set()
+            seen_composite = set()
             for entry in games_list:
                 key = self._game_identifier(entry)
-                if key and key not in seen_keys:
+                home = self.correct_names(str(entry.get("home") or entry.get("home_team") or ""))
+                away = self.correct_names(str(entry.get("away") or entry.get("away_team") or ""))
+                home_score = str(entry.get("home_score") or "").strip()
+                away_score = str(entry.get("away_score") or "").strip()
+                when = ""
+                for part in (entry.get("datetime"), entry.get("start_local"), entry.get("start_utc"), entry.get("date")):
+                    if part:
+                        when = str(part).strip()
+                        if when:
+                            break
+                composite = (home.lower(), away.lower(), when, home_score, away_score)
+
+                if key and key in seen_keys:
+                    continue
+                if composite in seen_composite:
+                    continue
+
+                if key:
                     seen_keys.add(key)
-                    unique.append(entry)
+                seen_composite.add(composite)
+                unique.append(entry)
             return unique
 
         recent_sorted = dedupe(recent_sorted)[:10]
@@ -299,12 +391,30 @@ class AAHLDataProcessor:
             filtered: List[Dict[str, Any]] = []
             for entry in games_list:
                 key = self._game_identifier(entry)
-                if key and key in seen:
+                home = self.correct_names(str(entry.get("home") or entry.get("home_team") or ""))
+                away = self.correct_names(str(entry.get("away") or entry.get("away_team") or ""))
+                when = ""
+                for part in (entry.get("datetime"), entry.get("start_local"), entry.get("start_utc"), entry.get("date")):
+                    if part:
+                        when = str(part).strip()
+                        if when:
+                            break
+                score_combo = (home.lower(), away.lower(), when)
+
+                if (key and key in seen) or score_combo in seen:
                     continue
                 filtered.append(entry)
             return filtered
 
-        upcoming_sorted = remove_seen(dedupe(upcoming_sorted), recent_keys)[:10]
+        upcoming_seen = set(recent_keys)
+        upcoming_seen.update(
+            (self.correct_names(str(game.get("home") or game.get("home_team") or "")).lower(),
+             self.correct_names(str(game.get("away") or game.get("away_team") or "")).lower(),
+             str(game.get("datetime") or game.get("start_local") or game.get("start_utc") or game.get("date") or "").strip())
+            for game in recent_sorted
+        )
+
+        upcoming_sorted = remove_seen(dedupe(upcoming_sorted), upcoming_seen)[:10]
 
         return {
             'recent_results': recent_sorted,
@@ -381,11 +491,19 @@ class AAHLDataProcessor:
             game_id = str(game.get("game_id", ""))
             headline_entry = headline_lookup.get(game_id)
             if headline_entry:
-                enriched["headline"] = headline_entry.get("headline")
+                enriched_headline = headline_entry.get("headline")
+                enriched["headline"] = self.refine_headline_text(enriched_headline)
                 enriched["headline_updated_at"] = headline_entry.get("updated_at")
+            elif enriched.get("headline"):
+                enriched["headline"] = self.refine_headline_text(enriched.get("headline"))
+            self._clean_player_stats(enriched)
             enriched_recent.append(enriched)
 
-        enriched_upcoming = [dict(game) for game in games['upcoming_games']]
+        enriched_upcoming = []
+        for game in games['upcoming_games']:
+            clone = dict(game)
+            self._clean_player_stats(clone)
+            enriched_upcoming.append(clone)
 
         # Format standings
         formatted_standings = []

@@ -535,7 +535,7 @@
         .ticker-track {
             display: flex;
             align-items: center;
-            gap: 80px;
+            gap: 60px;
             white-space: nowrap;
             animation: ticker-scroll 40s linear infinite;
             will-change: transform;
@@ -554,11 +554,57 @@
             display: flex;
             align-items: center;
             gap: 14px;
+            flex-wrap: nowrap;
         }
 
-        .ticker-item span {
+        .ticker-label {
             color: #ffca28;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .ticker-item.final {
+            gap: 18px;
+        }
+
+        .ticker-text {
+            font-size: 1.2em;
+            color: #e1efff;
+            font-weight: 600;
+        }
+
+        .ticker-performers {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: #a8d0ff;
+            font-size: 1.05em;
+            white-space: nowrap;
+        }
+
+        .ticker-performer {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .ticker-performer .label {
+            color: #e1efff;
+            font-weight: 600;
+        }
+
+        .ticker-performer .line {
+            color: #a8d0ff;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .ticker-divider {
+            color: rgba(208, 230, 255, 0.4);
+            font-weight: 400;
         }
 
         @keyframes ticker-scroll {
@@ -843,13 +889,28 @@
                 clone.recent_results = data.recent_results.map(game => {
                     const homeLine = game.home_line ? { ...game.home_line, name: correctName(game.home_line.name) } : game.home_line;
                     const awayLine = game.away_line ? { ...game.away_line, name: correctName(game.away_line.name) } : game.away_line;
+                    const playerStats = {};
+                    if (game.player_stats) {
+                        ['home', 'away'].forEach(side => {
+                            if (Array.isArray(game.player_stats[side])) {
+                                playerStats[side] = game.player_stats[side].map(player => ({
+                                    ...player,
+                                    name: formatPlayerDisplayName(player.name || player.player_name),
+                                    goals: Number(player.goals ?? player.g ?? 0) || 0,
+                                    assists: Number(player.assists ?? player.a ?? 0) || 0,
+                                    points: Number(player.points ?? player.pts ?? ((Number(player.goals ?? player.g ?? 0) || 0) + (Number(player.assists ?? player.a ?? 0) || 0))) || 0,
+                                }));
+                            }
+                        });
+                    }
                     return {
                         ...game,
                         home: correctName(game.home || game.home_team || ''),
                         away: correctName(game.away || game.away_team || ''),
                         home_line: homeLine,
                         away_line: awayLine,
-                        headline: game.headline ? correctName(game.headline) : game.headline
+                        headline: game.headline ? correctName(game.headline) : game.headline,
+                        player_stats: Object.keys(playerStats).length ? playerStats : game.player_stats,
                     };
                 });
             }
@@ -863,6 +924,68 @@
             }
 
             return clone;
+        }
+
+        function formatPlayerDisplayName(rawName) {
+            const clean = correctName(rawName || '').trim();
+            if (!clean.includes(',')) {
+                return clean;
+            }
+            const [last, first] = clean.split(',').map(part => part.trim()).filter(Boolean);
+            return `${first || ''} ${last || ''}`.trim();
+        }
+
+        function formatStatLine(stat) {
+            if (!stat) return '';
+            const goals = Number(stat.goals ?? stat.g ?? 0) || 0;
+            const assists = Number(stat.assists ?? stat.a ?? 0) || 0;
+            const points = Number(stat.points ?? stat.pts ?? (goals + assists)) || (goals + assists);
+            if (!goals && !assists && !points) return '';
+
+            const parts = [];
+            if (goals) parts.push(`${goals}G`);
+            if (assists) parts.push(`${assists}A`);
+            if (!parts.length) parts.push(`${points}P`);
+            return parts.join(' ');
+        }
+
+        function extractGamePerformers(game, limit = 5) {
+            if (!game || !game.player_stats) return [];
+
+            const collected = [];
+            ['home', 'away'].forEach(side => {
+                const roster = game.player_stats?.[side];
+                if (!Array.isArray(roster)) return;
+                roster.forEach(entry => {
+                    if (!entry) return;
+                    const name = formatPlayerDisplayName(entry.name || entry.player_name);
+                    if (!name) return;
+                    const goals = Number(entry.goals ?? entry.g ?? 0) || 0;
+                    const assists = Number(entry.assists ?? entry.a ?? 0) || 0;
+                    const points = Number(entry.points ?? entry.pts ?? (goals + assists)) || (goals + assists);
+                    const statLine = formatStatLine({ goals, assists, points });
+                    if (!statLine) return;
+                    collected.push({
+                        name,
+                        statLine,
+                        points,
+                        goals,
+                        assists,
+                    });
+                });
+            });
+
+            collected.sort((a, b) => {
+                if (b.points !== a.points) return b.points - a.points;
+                if (b.goals !== a.goals) return b.goals - a.goals;
+                if (b.assists !== a.assists) return b.assists - a.assists;
+                return a.name.localeCompare(b.name);
+            });
+
+            return collected.slice(0, limit).map(item => ({
+                name: item.name,
+                statLine: item.statLine,
+            }));
         }
 
         const DAY_MS = 24 * 60 * 60 * 1000;
@@ -1175,7 +1298,19 @@
                 const awayScore = game.away_score ?? (game.result ? String(game.result).split('-')[0].trim() : '');
                 const homeScore = game.home_score ?? (game.result ? String(game.result).split('-')[1].trim() : '');
                 if (awayScore === '' && homeScore === '') return;
-                addEntry(game, 'final', `<div class="ticker-item"><span>Final</span>${away} ${awayScore}-${homeScore} ${home}</div>`);
+                const scoreLine = `${away} ${awayScore}-${homeScore} ${home}`;
+                const performers = extractGamePerformers(game, 5);
+                const performerHtml = performers.length
+                    ? `<span class="ticker-performers">${performers.map((entry, index) => {
+                        const divider = index === performers.length - 1 ? '' : '<span class="ticker-divider">|</span>';
+                        return `<span class="ticker-performer"><span class="label">${entry.name}</span><span class="line">${entry.statLine}</span></span>${divider}`;
+                    }).join('')}</span>`
+                    : '';
+                addEntry(
+                    game,
+                    'final',
+                    `<div class="ticker-item final"><span class="ticker-label">Final</span><span class="ticker-text">${scoreLine}</span>${performerHtml}</div>`
+                );
             });
 
             (upcomingGames || []).forEach(game => {
@@ -1187,7 +1322,11 @@
                 const home = correctName(game.home || game.home_team || 'Home');
                 const timeText = formatTimeDisplay(game);
                 const location = game.location || 'Amherst';
-                addEntry(game, 'upcoming', `<div class="ticker-item"><span>Next</span>${dateLine} ${timeText} ${away} @ ${home} (${location})</div>`);
+                addEntry(
+                    game,
+                    'upcoming',
+                    `<div class="ticker-item"><span class="ticker-label">Next</span><span class="ticker-text">${dateLine} ${timeText} ${away} @ ${home} (${location})</span></div>`
+                );
             });
 
             if (entries.length === 0) {
@@ -1207,7 +1346,7 @@
                 .map(entry => entry.replace(/<[^>]*>/g, ''))
                 .join(' ')
                 .length;
-            const duration = Math.max(28, textLength * 0.45);
+            const duration = Math.max(16, textLength * 0.3);
             track.style.animationDuration = `${duration}s`;
         }
 
