@@ -119,11 +119,37 @@ def _player_statline(player: Dict[str, object]) -> Optional[tuple[str, str]]:
         return None
 
     parts: List[str] = []
-    if goals:
-        parts.append(f"{goals}G")
+    if goals >= 3:
+        label = "hat trick"
+        if goals > 3:
+            label = f"hat trick ({goals}G)"
+        parts.append(label)
+    elif goals == 2:
+        parts.append("brace (2G)")
+    elif goals == 1:
+        parts.append("1G")
+
     if assists:
-        parts.append(f"{assists}A")
-    return _display_name(str(player.get("name", "Unknown"))), ", ".join(parts)
+        assist_label = f"{assists}A"
+        if assists == 1:
+            assist_label = "1A"
+        if goals and assists:
+            parts.append(f"{assist_label}")
+        elif not goals:
+            helper = "helpers" if assists > 1 else "helper"
+            parts.append(f"{assists} {helper}")
+
+    stat_text = " and ".join(parts)
+    if not stat_text:
+        stat_text = f"{assists}A"
+    return _display_name(str(player.get("name", "Unknown"))), stat_text
+
+
+def _pick_phrase(options: List[str], seed: int) -> str:
+    if not options:
+        return ""
+    index = seed % len(options)
+    return options[index]
 
 
 def _player_highlight_phrase(game: Dict[str, object], winner_side: str) -> Optional[str]:
@@ -135,7 +161,7 @@ def _player_highlight_phrase(game: Dict[str, object], winner_side: str) -> Optio
     if not isinstance(winners, list):
         return None
 
-    enriched: List[tuple[int, int, Dict[str, object]]] = []
+    enriched: List[tuple[int, int, int, Dict[str, object]]] = []
     for player in winners:
         if not isinstance(player, dict):
             continue
@@ -144,30 +170,76 @@ def _player_highlight_phrase(game: Dict[str, object], winner_side: str) -> Optio
         points = goals + assists
         if points <= 0:
             continue
-        enriched.append((points, goals, player))
+        enriched.append((goals, points, assists, player))
 
     if not enriched:
         return None
 
-    enriched.sort(key=lambda item: (item[0], item[1], str(item[2].get("name", ""))), reverse=True)
-    primary_player = enriched[0][2]
+    enriched.sort(key=lambda item: (item[0], item[1], item[2], str(item[3].get("name", ""))), reverse=True)
+    primary_player = enriched[0][3]
     primary = _player_statline(primary_player)
     if not primary:
         return None
 
-    phrase = f"behind {primary[0]}'s {primary[1]}"
+    primary_seed = sum(ord(ch) for ch in primary[0])
+    primary_leads = [
+        "sparked by",
+        "powered by",
+        "fueled by",
+        "driven by",
+    ]
+    phrase = f"{_pick_phrase(primary_leads, primary_seed)} {primary[0]}'s {primary[1]}"
 
     secondary = None
-    for _, _, candidate in enriched[1:]:
+    for _, _, _, candidate in enriched[1:]:
         match = _player_statline(candidate)
         if match:
             secondary = match
             break
 
     if secondary:
-        phrase += f" with help from {secondary[0]}'s {secondary[1]}"
+        secondary_seed = sum(ord(ch) for ch in secondary[0])
+        secondary_leads = [
+            "while",
+            "as",
+            "with",
+        ]
+        secondary_verbs = [
+            "added",
+            "chipped in",
+            "contributed",
+        ]
+        phrase += f", {_pick_phrase(secondary_leads, secondary_seed)} {secondary[0]} {_pick_phrase(secondary_verbs, secondary_seed + primary_seed)} {secondary[1]}"
 
     return phrase
+
+
+def _result_verb(margin: int, winner_score: int, loser_score: int, game_id: str) -> str:
+    blowout = ["obliterates", "thrashes", "trounces"]
+    big_win = ["steamrolls", "dominates", "dismantles"]
+    comfortable = ["crushes", "cruises past", "handles"]
+    moderate = ["tops", "outduels", "overcomes"]
+    tight = ["edges", "nips", "squeaks by"]
+    shootout = ["outguns", "outlasts", "surges past"]
+
+    seed = 0
+    if game_id:
+        try:
+            seed = int(game_id) % 97
+        except ValueError:
+            seed = sum(ord(ch) for ch in game_id)
+
+    if margin >= 6:
+        return _pick_phrase(blowout, seed)
+    if margin >= 4:
+        return _pick_phrase(big_win, seed)
+    if margin == 3:
+        return _pick_phrase(comfortable, seed)
+    if margin == 2:
+        return _pick_phrase(moderate, seed)
+    if margin == 1:
+        return _pick_phrase(tight, seed)
+    return _pick_phrase(shootout if winner_score >= 6 else moderate, seed)
 
 
 def _compose_headline(game: Dict[str, object]) -> Optional[str]:
@@ -184,12 +256,7 @@ def _compose_headline(game: Dict[str, object]) -> Optional[str]:
         return None
 
     margin = abs(home_score - away_score)
-    if margin >= 5:
-        tone = "dominates"
-    elif margin == 1:
-        tone = "edges"
-    else:
-        tone = "defeats"
+    tone = _result_verb(margin, max(home_score, away_score), min(home_score, away_score), str(game.get("game_id", "")))
 
     if home_score >= away_score:
         winner, loser = home, away
