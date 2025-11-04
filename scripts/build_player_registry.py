@@ -208,7 +208,7 @@ def build_registry() -> List[Dict[str, object]]:
             "penalty_minutes": 0,
             "points_per_game": 0.0,
             "team_games_played": team_games.get(team_slug, 0),
-            "games_missed": team_games.get(team_slug, 0),
+            "games_missed": None,
             "recent_points": None,
             "recent_games": None,
         }
@@ -267,7 +267,7 @@ def build_registry() -> List[Dict[str, object]]:
                         "penalty_minutes": 0,
                         "points_per_game": 0.0,
                         "team_games_played": team_games.get(team_slug, 0),
-                        "games_missed": team_games.get(team_slug, 0),
+                        "games_missed": None,
                         "recent_points": None,
                         "recent_games": None,
                     },
@@ -296,7 +296,6 @@ def build_registry() -> List[Dict[str, object]]:
         gp = entry.get("games_played", 0)
         points = entry.get("points", 0)
         entry["points_per_game"] = round(points / gp, 2) if gp else 0.0
-        entry["games_missed"] = max(team_games_played - gp, 0)
 
         prev = previous_registry.get(str(entry["player_id"]))
         if prev:
