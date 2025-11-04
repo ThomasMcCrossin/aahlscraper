@@ -46,47 +46,70 @@
             letter-spacing: 2px;
         }
 
-        .content-container {
+        .content-grid {
             flex: 1;
-            padding: 40px 60px;
+            padding: 35px 45px 45px;
+            display: grid;
+            grid-template-columns: 2.2fr 2fr 1.6fr;
+            gap: 32px;
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
         }
 
-        .section {
-            display: none;
-            animation: fadeIn 0.8s ease-in-out;
-            height: 100%;
+        .panel {
+            background: rgba(20, 45, 70, 0.6);
+            border: 1px solid rgba(74, 158, 255, 0.25);
+            border-radius: 18px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(12px);
+            overflow: hidden;
+        }
+
+        .panel-title {
+            font-size: 2.2em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #4a9eff;
+            padding: 24px 32px 16px;
+            border-bottom: 1px solid rgba(74, 158, 255, 0.25);
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .panel-body {
+            flex: 1;
+            padding: 24px 32px 32px;
             overflow-y: auto;
         }
 
-        .section.active {
-            display: block;
+        .panel-body::-webkit-scrollbar {
+            width: 10px;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .panel-body::-webkit-scrollbar-thumb {
+            background: rgba(74, 158, 255, 0.35);
+            border-radius: 5px;
         }
 
-        .section-title {
-            font-size: 2.8em;
-            font-weight: bold;
-            margin-bottom: 30px;
-            text-align: center;
-            color: #4a9eff;
+        .panel-body::-webkit-scrollbar-thumb:hover {
+            background: rgba(74, 158, 255, 0.55);
+        }
+
+        .games-wrapper {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 28px;
+            height: 100%;
+        }
+
+        .subpanel-title {
+            font-size: 1.6em;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            padding-bottom: 20px;
-            border-bottom: 3px solid #4a9eff;
+            color: #a8d0ff;
+            margin-bottom: 18px;
+            letter-spacing: 2px;
         }
 
         /* Standings Table */
@@ -321,26 +344,108 @@
             text-decoration: underline;
         }
 
-        /* Section Indicator */
-        .section-indicator {
+        .team-cell {
             display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-wrapper {
+            width: 52px;
+            height: 52px;
+            position: relative;
+            display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 15px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.3);
         }
 
-        .indicator-dot {
-            width: 15px;
-            height: 15px;
+        .logo-wrapper.medium {
+            width: 52px;
+            height: 52px;
+        }
+
+        .logo-wrapper.small {
+            width: 42px;
+            height: 42px;
+        }
+
+        .logo-wrapper.large {
+            width: 64px;
+            height: 64px;
+        }
+
+        .team-logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.45));
+        }
+
+        .logo-wrapper.small .team-logo {
+            filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
+        }
+
+        .logo-placeholder {
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(74, 158, 255, 0.16);
+            color: #ffca28;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 1px solid rgba(255, 202, 40, 0.4);
+            box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.4);
         }
 
-        .indicator-dot.active {
-            background: #4a9eff;
-            transform: scale(1.3);
+        .logo-placeholder.small {
+            font-size: 0.95em;
+        }
+
+        .logo-placeholder.medium {
+            font-size: 1.1em;
+        }
+
+        .logo-placeholder.large {
+            font-size: 1.25em;
+        }
+
+        .team-side {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .game-matchup-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 12px;
+            font-size: 1.5em;
+        }
+
+        .game-matchup-row .team-side {
+            flex: 1;
+        }
+
+        .game-matchup-row .team-side:last-child {
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        .game-matchup-row .team-side span {
+            font-weight: 600;
+        }
+
+        .game-matchup-row .vs-text {
+            color: #a8d0ff;
+            font-weight: 500;
+            letter-spacing: 1px;
         }
 
         /* Scrollbar styling */
@@ -365,144 +470,222 @@
 <body>
     <div class="header">
         <h1>Amherst Adult Hockey League</h1>
-        <div class="subtitle" id="currentSection">Team Standings</div>
+        <div class="subtitle">Live League Snapshot</div>
     </div>
 
-    <div class="content-container">
-        <!-- Standings Section -->
-        <div class="section active" id="standings">
-            <div class="section-title">Team Standings</div>
-            <table class="standings-table">
-                <thead>
-                    <tr>
-                        <th class="rank">#</th>
-                        <th>Team</th>
-                        <th style="text-align: center;">Wins</th>
-                        <th style="text-align: center;">Losses</th>
-                        <th style="text-align: center;">Points</th>
-                    </tr>
-                </thead>
-                <tbody id="standingsBody">
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Top Scorers Section -->
-        <div class="section" id="scorers">
-            <div class="section-title">Top 20 Scorers</div>
-            <div class="scorers-grid" id="scorersGrid">
+    <div class="content-grid">
+        <div class="panel standings-panel">
+            <div class="panel-title">Standings</div>
+            <div class="panel-body">
+                <table class="standings-table">
+                    <thead>
+                        <tr>
+                            <th class="rank">#</th>
+                            <th>Team</th>
+                            <th style="text-align: center;">Wins</th>
+                            <th style="text-align: center;">Losses</th>
+                            <th style="text-align: center;">Points</th>
+                        </tr>
+                    </thead>
+                    <tbody id="standingsBody"></tbody>
+                </table>
             </div>
         </div>
 
-        <!-- Recent Results Section -->
-        <div class="section" id="results">
-            <div class="section-title">Recent Results</div>
-            <div class="games-list" id="resultsList">
+        <div class="panel scorers-panel">
+            <div class="panel-title">Top 20 Scorers</div>
+            <div class="panel-body">
+                <div class="scorers-grid" id="scorersGrid"></div>
             </div>
         </div>
 
-        <!-- Upcoming Games Section -->
-        <div class="section" id="upcoming">
-            <div class="section-title">Upcoming Games in Amherst</div>
-            <div class="games-list" id="upcomingList">
+        <div class="panel games-panel">
+            <div class="panel-title">AAHL Game Center</div>
+            <div class="panel-body">
+                <div class="games-wrapper">
+                    <div class="subpanel">
+                        <div class="subpanel-title">Recent Results</div>
+                        <div class="games-list" id="resultsList"></div>
+                    </div>
+                    <div class="subpanel">
+                        <div class="subpanel-title">Upcoming Amherst Games</div>
+                        <div class="games-list" id="upcomingList"></div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="section-indicator">
-        <div class="indicator-dot active" data-section="0"></div>
-        <div class="indicator-dot" data-section="1"></div>
-        <div class="indicator-dot" data-section="2"></div>
-        <div class="indicator-dot" data-section="3"></div>
     </div>
 
     <script>
         // Sample data with name corrections applied
         const sampleData = {
             standings: [
-                { team: "Amherst Hawks", wins: 8, losses: 2, points: 16 },
-                { team: "Downtown Small", wins: 7, losses: 3, points: 14 },
-                { team: "Frontier City", wins: 6, losses: 4, points: 12 },
-                { team: "Maple Grove", wins: 5, losses: 5, points: 10 },
-                { team: "Ice Storm", wins: 4, losses: 6, points: 8 },
-                { team: "Thunder Bay", wins: 3, losses: 7, points: 6 },
-                { team: "Valley Vipers", wins: 2, losses: 8, points: 4 }
+                { team: "Amherst Hawks", team_slug: "maltby-sports", wins: 8, losses: 2, points: 16 },
+                { team: "Downtown Small", team_slug: "j-and-k-electric", wins: 7, losses: 3, points: 14 },
+                { team: "Frontier City", team_slug: "gr-mitchell-welding", wins: 6, losses: 4, points: 12 },
+                { team: "Maple Grove", team_slug: "ultramar", wins: 5, losses: 5, points: 10 },
+                { team: "Ice Storm", team_slug: "colson-overhead-doors", wins: 4, losses: 6, points: 8 }
             ],
             top_scorers: [
-                { rank: 1, name: "Marshall MacDonald", team: "Amherst Hawks", g: 12, a: 10, points: 22 },
-                { rank: 2, name: "Thomas McCrossin", team: "Downtown Small", g: 11, a: 9, points: 20 },
-                { rank: 3, name: "Jake Thompson", team: "Frontier City", g: 10, a: 10, points: 20 },
-                { rank: 4, name: "Ryan Smith", team: "Maple Grove", g: 9, a: 9, points: 18 },
-                { rank: 5, name: "Chris Bergeron", team: "Amherst Hawks", g: 8, a: 9, points: 17 },
-                { rank: 6, name: "Mike Johnson", team: "Downtown Small", g: 8, a: 8, points: 16 },
-                { rank: 7, name: "David Wilson", team: "Ice Storm", g: 7, a: 8, points: 15 },
-                { rank: 8, name: "Pat Murphy", team: "Thunder Bay", g: 7, a: 7, points: 14 },
-                { rank: 9, name: "Steve Anderson", team: "Frontier City", g: 6, a: 8, points: 14 },
-                { rank: 10, name: "Brian Kelly", team: "Amherst Hawks", g: 6, a: 7, points: 13 },
-                { rank: 11, name: "Mark Sullivan", team: "Valley Vipers", g: 6, a: 7, points: 13 },
-                { rank: 12, name: "Tim O'Brien", team: "Maple Grove", g: 6, a: 6, points: 12 },
-                { rank: 13, name: "Kevin Brown", team: "Downtown Small", g: 5, a: 7, points: 12 },
-                { rank: 14, name: "Dan McCarthy", team: "Ice Storm", g: 5, a: 6, points: 11 },
-                { rank: 15, name: "Paul Martin", team: "Thunder Bay", g: 5, a: 6, points: 11 },
-                { rank: 16, name: "Sean O'Connor", team: "Frontier City", g: 5, a: 5, points: 10 },
-                { rank: 17, name: "Rob Taylor", team: "Amherst Hawks", g: 4, a: 6, points: 10 },
-                { rank: 18, name: "Joe Parker", team: "Valley Vipers", g: 4, a: 5, points: 9 },
-                { rank: 19, name: "Matt Hughes", team: "Maple Grove", g: 4, a: 5, points: 9 },
-                { rank: 20, name: "Eric Davis", team: "Downtown Small", g: 4, a: 4, points: 8 }
+                { rank: 1, name: "Issac Bridge", team: "Maltby Sports", team_slug: "maltby-sports", g: 12, a: 10, points: 22 },
+                { rank: 2, name: "Marshall MacDonald", team: "G.R. Mitchell Welding", team_slug: "gr-mitchell-welding", g: 11, a: 9, points: 20 },
+                { rank: 3, name: "Dave Atkinson", team: "G.R. Mitchell Welding", team_slug: "gr-mitchell-welding", g: 10, a: 8, points: 18 },
+                { rank: 4, name: "Rubein Mackenzie", team: "J&K Electric", team_slug: "j-and-k-electric", g: 9, a: 9, points: 18 },
+                { rank: 5, name: "Brendan Stone", team: "J&K Electric", team_slug: "j-and-k-electric", g: 9, a: 8, points: 17 },
+                { rank: 6, name: "Thomas McCrossin", team: "G.R. Mitchell Welding", team_slug: "gr-mitchell-welding", g: 8, a: 8, points: 16 },
+                { rank: 7, name: "Noah Perrin", team: "J&K Electric", team_slug: "j-and-k-electric", g: 7, a: 8, points: 15 },
+                { rank: 8, name: "Ryan Budd", team: "J&K Electric", team_slug: "j-and-k-electric", g: 7, a: 7, points: 14 },
+                { rank: 9, name: "Zack Gould", team: "Colson Overhead Doors", team_slug: "colson-overhead-doors", g: 7, a: 6, points: 13 },
+                { rank: 10, name: "Logan Gesner", team: "Colson Overhead Doors", team_slug: "colson-overhead-doors", g: 6, a: 6, points: 12 },
+                { rank: 11, name: "Ryan Macpherson", team: "J&K Electric", team_slug: "j-and-k-electric", g: 6, a: 6, points: 12 },
+                { rank: 12, name: "Trevor Johnson", team: "G.R. Mitchell Welding", team_slug: "gr-mitchell-welding", g: 6, a: 5, points: 11 },
+                { rank: 13, name: "Brad Linkletter", team: "G.R. Mitchell Welding", team_slug: "gr-mitchell-welding", g: 6, a: 5, points: 11 },
+                { rank: 14, name: "Robichaud, Corey", team: "Colson Overhead Doors", team_slug: "colson-overhead-doors", g: 5, a: 6, points: 11 },
+                { rank: 15, name: "Danny \"Biggie\" Small", team: "Maltby Sports", team_slug: "maltby-sports", g: 5, a: 6, points: 11 },
+                { rank: 16, name: "Brodie Burke", team: "G.R. Mitchell Welding", team_slug: "gr-mitchell-welding", g: 5, a: 5, points: 10 },
+                { rank: 17, name: "Tyler \"Tuffy\" Allen", team: "G.R. Mitchell Welding", team_slug: "gr-mitchell-welding", g: 4, a: 6, points: 10 },
+                { rank: 18, name: "Jeremy Kinnear", team: "J&K Electric", team_slug: "j-and-k-electric", g: 6, a: 3, points: 9 },
+                { rank: 19, name: "Nick Leopold", team: "J&K Electric", team_slug: "j-and-k-electric", g: 5, a: 4, points: 9 },
+                { rank: 20, name: "Matt Cove", team: "G.R. Mitchell Welding", team_slug: "gr-mitchell-welding", g: 5, a: 4, points: 9 }
             ],
             recent_results: [
                 {
-                    datetime: "2025-10-31T21:00:00-04:00",
-                    home: "Amherst Hawks",
-                    away: "Frontier City",
-                    home_score: 5,
-                    away_score: 3,
-                    location: "Amherst Ice Arena",
-                    headline: "Amherst Hawks top Frontier City 5-3 fueled by Marshall MacDonald's 2G and 1A"
-                },
-                {
-                    datetime: "2025-10-28T20:00:00-04:00",
-                    home: "Downtown Small",
-                    away: "Maple Grove",
-                    home_score: 4,
-                    away_score: 2,
-                    location: "Amherst Ice Arena",
-                    headline: "Downtown Small handles Maple Grove 4-2 powered by Thomas McCrossin's 1G and 2A"
-                },
-                {
-                    datetime: "2025-10-26T19:00:00-04:00",
-                    home: "Frontier City",
-                    away: "Amherst Hawks",
-                    home_score: 2,
+                    datetime: "2025-11-02T21:00:00-04:00",
+                    home: "Colson Overhead Doors",
+                    away: "J&K Electric",
+                    home_score: 3,
                     away_score: 6,
-                    location: "Amherst Ice Arena",
-                    headline: "Amherst Hawks outgun Frontier City 6-2 driven by Chris Bergeron's brace (2G)"
+                    location: "Amherst",
+                    home_line: { name: "Colson Overhead Doors", slug: "colson-overhead-doors" },
+                    away_line: { name: "J&K Electric", slug: "j-and-k-electric" },
+                    headline: "J&K Electric handles Colson Overhead Doors 6-3 driven by Brendan Stone's hat trick",
+                    summary_url: "https://example.com/summary/3276449",
+                    box_score_url: "https://example.com/box/3276449"
+                },
+                {
+                    datetime: "2025-10-29T21:00:00-04:00",
+                    home: "Maltby Sports",
+                    away: "G.R. Mitchell Welding",
+                    home_score: 10,
+                    away_score: 2,
+                    location: "Amherst",
+                    home_line: { name: "Maltby Sports", slug: "maltby-sports" },
+                    away_line: { name: "G.R. Mitchell Welding", slug: "gr-mitchell-welding" },
+                    headline: "Maltby Sports routs G.R. Mitchell Welding 10-2 fueled by Thomas McCrossin's hat trick",
+                    summary_url: "https://example.com/summary/3274302",
+                    box_score_url: "https://example.com/box/3274302"
+                },
+                {
+                    datetime: "2025-10-25T21:00:00-04:00",
+                    home: "Ultramar",
+                    away: "Maltby Sports",
+                    home_score: 4,
+                    away_score: 7,
+                    location: "Amherst",
+                    home_line: { name: "Ultramar", slug: "ultramar" },
+                    away_line: { name: "Maltby Sports", slug: "maltby-sports" },
+                    headline: "Maltby Sports outguns Ultramar 7-4 powered by Issac Bridge's 3G and 2A",
+                    summary_url: "https://example.com/summary/3274296",
+                    box_score_url: "https://example.com/box/3274296"
                 }
             ],
             upcoming_games: [
                 {
                     datetime: "2025-11-07T20:00:00-04:00",
                     time: "8:00 PM",
-                    home: "Amherst Hawks",
-                    away: "Maple Grove",
-                    location: "Amherst Ice Arena"
+                    home: "Colson Overhead Doors",
+                    away: "Ultramar",
+                    location: "Amherst",
+                    home_line: { name: "Colson Overhead Doors", slug: "colson-overhead-doors" },
+                    away_line: { name: "Ultramar", slug: "ultramar" }
                 },
                 {
                     datetime: "2025-11-09T19:30:00-04:00",
                     time: "7:30 PM",
-                    home: "Downtown Small",
-                    away: "Amherst Hawks",
-                    location: "Amherst Ice Arena"
+                    home: "G.R. Mitchell Welding",
+                    away: "Maltby Sports",
+                    location: "Amherst",
+                    home_line: { name: "G.R. Mitchell Welding", slug: "gr-mitchell-welding" },
+                    away_line: { name: "Maltby Sports", slug: "maltby-sports" }
                 },
                 {
                     datetime: "2025-11-12T20:00:00-04:00",
                     time: "8:00 PM",
-                    home: "Amherst Hawks",
-                    away: "Frontier City",
-                    location: "Amherst Ice Arena"
+                    home: "Ultramar",
+                    away: "J&K Electric",
+                    location: "Amherst",
+                    home_line: { name: "Ultramar", slug: "ultramar" },
+                    away_line: { name: "J&K Electric", slug: "j-and-k-electric" }
                 }
             ]
         };
+
+        const LOGO_BASE_URL = 'https://raw.githubusercontent.com/ThomasMcCrossin/aahlscraper/main/assets/logos/aahl';
+        const TEAM_LOGOS = {
+            'maltby-sports': `${LOGO_BASE_URL}/maltby-sports.png`,
+            'j-and-k-electric': `${LOGO_BASE_URL}/j-and-k-electric.png`,
+            'gr-mitchell-welding': `${LOGO_BASE_URL}/gr-mitchell-welding.png`,
+            'colson-overhead-doors': `${LOGO_BASE_URL}/colson-overhead-doors.png`,
+            'ultramar': `${LOGO_BASE_URL}/ultramar.svg`
+        };
+
+        const TEAM_SLUG_OVERRIDES = {
+            'amherst hawks': 'maltby-sports',
+            'downtown small': 'j-and-k-electric',
+            'frontier city': 'gr-mitchell-welding',
+            'maple grove': 'ultramar',
+            'ice storm': 'colson-overhead-doors',
+            'thunder bay': 'ultramar',
+            'valley vipers': 'colson-overhead-doors',
+            'g.r. mitchell welding': 'gr-mitchell-welding',
+            'gr mitchell welding': 'gr-mitchell-welding',
+            'j&k electric': 'j-and-k-electric',
+            'j and k electric': 'j-and-k-electric'
+        };
+
+        function slugifyTeamName(name) {
+            return (name || '')
+                .toLowerCase()
+                .replace(/&/g, ' and ')
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-+|-+$/g, '');
+        }
+
+        function deriveInitials(name) {
+            const words = (name || '')
+                .split(/\s+/)
+                .filter(Boolean)
+                .map(word => word[0]);
+            const initials = words.join('').slice(0, 3).toUpperCase();
+            return initials || (name || 'AAHL').slice(0, 2).toUpperCase();
+        }
+
+        function resolveTeamVisual(name, slug) {
+            const cleanName = correctName(name || 'Team');
+            const baseSlug = (slug || '').toLowerCase() || slugifyTeamName(cleanName);
+            const overrideSlug = TEAM_SLUG_OVERRIDES[cleanName.toLowerCase()] || TEAM_SLUG_OVERRIDES[baseSlug] || baseSlug;
+            const logo = TEAM_LOGOS[overrideSlug] || null;
+            return {
+                name: cleanName,
+                slug: overrideSlug,
+                logo,
+                initials: deriveInitials(cleanName)
+            };
+        }
+
+        function teamLogoHtml(info, size = 'medium') {
+            const sizeClass = size === 'small' || size === 'large' ? size : 'medium';
+            const imgHtml = info.logo
+                ? `<img src="${info.logo}" class="team-logo ${sizeClass}" alt="${info.name} logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">`
+                : `<img class="team-logo ${sizeClass}" style="display:none;" alt="">`;
+            const placeholderDisplay = info.logo ? 'style="display:none;"' : '';
+            return `
+                <div class="logo-wrapper ${sizeClass}">
+                    ${imgHtml}
+                    <div class="logo-placeholder ${sizeClass}" ${placeholderDisplay}>${info.initials}</div>
+                </div>
+            `;
+        }
 
         // Name correction function
         function correctName(name) {
@@ -688,13 +871,22 @@
             const tbody = document.getElementById('standingsBody');
             tbody.innerHTML = '';
             standings.forEach((team, index) => {
+                const info = resolveTeamVisual(team.team || team.team_name || '', team.team_slug || team.teamSlug);
+                const wins = Number(team.wins ?? team.Wins ?? team.win ?? 0) || 0;
+                const losses = Number(team.losses ?? team.Losses ?? team.loss ?? 0) || 0;
+                const points = Number(team.points ?? team.Points ?? team.pts ?? 0) || 0;
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td class="rank">${index + 1}</td>
-                    <td>${team.team}</td>
-                    <td style="text-align: center;">${team.wins}</td>
-                    <td style="text-align: center;">${team.losses}</td>
-                    <td class="points" style="text-align: center;">${team.points}</td>
+                    <td>
+                        <div class="team-cell">
+                            ${teamLogoHtml(info, 'small')}
+                            <span>${info.name}</span>
+                        </div>
+                    </td>
+                    <td style="text-align: center;">${wins}</td>
+                    <td style="text-align: center;">${losses}</td>
+                    <td class="points" style="text-align: center;">${points}</td>
                 `;
                 tbody.appendChild(row);
             });
@@ -710,6 +902,7 @@
                     const rank = scorer.rank || index + 1;
                     const name = correctName(scorer.name || scorer.player_name || `Player ${rank}`);
                     const team = scorer.team_name || scorer.team || '';
+                    const teamInfo = resolveTeamVisual(team, scorer.team_slug || scorer.teamSlug);
                     const goals = Number(scorer.g ?? scorer.goals ?? scorer.Goals ?? 0) || 0;
                     const assists = Number(scorer.a ?? scorer.assists ?? scorer.Assists ?? 0) || 0;
                     const points = Number(scorer.points ?? scorer.pts ?? (goals + assists)) || (goals + assists);
@@ -718,9 +911,10 @@
                     card.className = 'scorer-card';
                     card.innerHTML = `
                         <div class="scorer-rank">#${rank}</div>
+                        ${teamLogoHtml(teamInfo, 'small')}
                         <div class="scorer-info">
                             <div class="scorer-name">${name}</div>
-                            <div class="scorer-team">${team}</div>
+                            <div class="scorer-team">${teamInfo.name}</div>
                             <div class="scorer-stats">${goals} G · ${assists} A</div>
                         </div>
                         <div class="scorer-points">${points}<span class="points-label">PTS</span></div>
@@ -751,6 +945,8 @@
                 const awayScore = game.away_score ?? (game.result ? String(game.result).split('-')[0].trim() : '');
                 const homeScore = game.home_score ?? (game.result ? String(game.result).split('-')[1].trim() : '');
                 const location = game.location || 'Amherst';
+                const awayInfo = resolveTeamVisual(awayTeam, game.away_line?.slug || game.away_line?.team_slug || game.away_team_slug);
+                const homeInfo = resolveTeamVisual(homeTeam, game.home_line?.slug || game.home_line?.team_slug || game.home_team_slug);
 
                 const links = [];
                 if (game.summary_url) {
@@ -765,8 +961,16 @@
                     <div class="game-date">${relative ? `${dateLine} · ${relative}` : dateLine}</div>
                     <div class="game-headline">${headline}</div>
                     <div class="scoreboard">
-                        <div class="score-row"><span class="score-team">${awayTeam}</span><span class="score-value">${awayScore}</span></div>
-                        <div class="score-row"><span class="score-team">${homeTeam}</span><span class="score-value">${homeScore}</span></div>
+                        <div class="score-row">
+                            ${teamLogoHtml(awayInfo, 'small')}
+                            <span class="score-team">${awayInfo.name}</span>
+                            <span class="score-value">${awayScore}</span>
+                        </div>
+                        <div class="score-row">
+                            ${teamLogoHtml(homeInfo, 'small')}
+                            <span class="score-team">${homeInfo.name}</span>
+                            <span class="score-value">${homeScore}</span>
+                        </div>
                     </div>
                     <div class="game-meta">${metaLine}</div>
                 `;
@@ -790,45 +994,27 @@
                 const relative = dateObj ? formatRelative(dateObj) : '';
                 const awayTeam = correctName(game.away || game.away_team || 'Away');
                 const homeTeam = correctName(game.home || game.home_team || 'Home');
+                const awayInfo = resolveTeamVisual(awayTeam, game.away_line?.slug || game.away_line?.team_slug || game.away_team_slug);
+                const homeInfo = resolveTeamVisual(homeTeam, game.home_line?.slug || game.home_line?.team_slug || game.home_team_slug);
                 const timeText = formatTimeDisplay(game);
                 const location = game.location || 'Amherst';
                 card.innerHTML = `
                     <div class="game-date">${relative ? `${dateLine} · ${relative}` : dateLine}</div>
-                    <div class="game-headline">${awayTeam} @ ${homeTeam}</div>
+                    <div class="game-matchup-row">
+                        <div class="team-side">
+                            ${teamLogoHtml(awayInfo, 'small')}
+                            <span>${awayInfo.name}</span>
+                        </div>
+                        <div class="vs-text">@</div>
+                        <div class="team-side" style="justify-content: flex-end;">
+                            ${teamLogoHtml(homeInfo, 'small')}
+                            <span>${homeInfo.name}</span>
+                        </div>
+                    </div>
                     <div class="game-meta">⏰ ${timeText} · 📍 ${location}</div>
                 `;
                 list.appendChild(card);
             });
-        }
-
-        // Section rotation
-        let currentSectionIndex = 0;
-        const sections = ['standings', 'scorers', 'results', 'upcoming'];
-        const sectionTitles = ['Team Standings', 'Top 20 Scorers', 'Recent Results', 'Upcoming Games in Amherst'];
-        const rotationInterval = 15000; // 15 seconds
-
-        function switchSection(index) {
-            // Remove active class from all sections
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Remove active class from all indicators
-            document.querySelectorAll('.indicator-dot').forEach(dot => {
-                dot.classList.remove('active');
-            });
-
-            // Add active class to current section
-            document.getElementById(sections[index]).classList.add('active');
-            document.querySelector(`.indicator-dot[data-section="${index}"]`).classList.add('active');
-            document.getElementById('currentSection').textContent = sectionTitles[index];
-            
-            currentSectionIndex = index;
-        }
-
-        function nextSection() {
-            currentSectionIndex = (currentSectionIndex + 1) % sections.length;
-            switchSection(currentSectionIndex);
         }
 
         // Initialize with sample data
@@ -883,9 +1069,6 @@
 
         // Start the application
         loadData();
-        
-        // Start rotation
-        setInterval(nextSection, rotationInterval);
 
         // Yodeck lifecycle hooks (optional)
         if (window.parent && window.parent.YodeckAPI) {
@@ -897,16 +1080,6 @@
                 console.log('Display hidden');
             };
         }
-
-        // Allow manual navigation with keyboard (for testing)
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'ArrowRight') {
-                nextSection();
-            } else if (e.key === 'ArrowLeft') {
-                currentSectionIndex = (currentSectionIndex - 1 + sections.length) % sections.length;
-                switchSection(currentSectionIndex);
-            }
-        });
     </script>
 </body>
 </html>
