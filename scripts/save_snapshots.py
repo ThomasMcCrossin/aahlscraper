@@ -35,6 +35,7 @@ def main() -> None:
         ("results.json", f"results/results-{stamp}.json"),
         ("schedule.json", f"schedule/schedule-{stamp}.json"),
         ("player_stats.json", f"player_stats/player_stats-{stamp}.json"),
+        ("player_registry.json", f"player_registry/player_registry-{stamp}.json"),
     )
 
     for source_name, target_name in copies:

@@ -87,12 +87,18 @@ def _to_float(value: object, default: float = 0.0) -> float:
     return default
 
 
-def _build_roster_lookup(rosters: Iterable[Dict[str, object]]) -> Dict[Tuple[str, str], Dict[str, object]]:
+def _build_roster_lookup(rosters: Iterable[Dict[str, object]]) -> Tuple[Dict[Tuple[str, str], Dict[str, object]], Dict[str, Dict[str, object]]]:
     lookup: Dict[Tuple[str, str], Dict[str, object]] = {}
+    teams: Dict[str, Dict[str, object]] = {}
     for roster in rosters:
         team_slug = roster.get("team_slug")
         if not isinstance(team_slug, str):
             continue
+        teams[team_slug] = {
+            "team_id": roster.get("team_id"),
+            "team_name": roster.get("team_name"),
+            "team_slug": team_slug,
+        }
         for player in roster.get("players", []):
             if not isinstance(player, dict):
                 continue
@@ -112,7 +118,7 @@ def _build_roster_lookup(rosters: Iterable[Dict[str, object]]) -> Dict[Tuple[str
             }
             for key in player_name_variants(str(name)):
                 lookup.setdefault((team_slug, key), payload)
-    return lookup
+    return lookup, teams
 
 
 def _team_games_played(results: Iterable[Dict[str, object]]) -> Dict[str, int]:
@@ -137,25 +143,24 @@ def _team_games_played(results: Iterable[Dict[str, object]]) -> Dict[str, int]:
     return counts
 
 
-def _load_previous_stats() -> Dict[str, Dict[str, object]]:
-    latest, previous = _latest_history(HISTORY_DIR / "player_stats")
+def _load_previous_registry() -> Dict[str, Dict[str, object]]:
+    latest, previous = _latest_history(HISTORY_DIR / "player_registry")
     if not previous:
         return {}
     data = _load_json(previous)
-    if not isinstance(data, list):
-        return {}
+    if isinstance(data, dict):
+        players = data.get("players", [])
+    elif isinstance(data, list):
+        players = data
+    else:
+        players = []
+
     mapping: Dict[str, Dict[str, object]] = {}
-    for row in data:
+    for row in players:
         if not isinstance(row, dict):
             continue
         pid = row.get("player_id")
-        if not pid:
-            team_field = row.get("team") or row.get("Team")
-            team_slug = slugify(team_field) if isinstance(team_field, str) else ""
-            name = row.get("name") or row.get("player") or ""
-            key = (team_slug, normalize_player_key(str(name)))
-            mapping[str(key)] = row
-        else:
+        if pid:
             mapping[str(pid)] = row
     return mapping
 
@@ -171,19 +176,16 @@ def _lookup_previous(previous: Dict[str, Dict[str, object]], team_slug: str, pla
 
 def build_registry() -> List[Dict[str, object]]:
     rosters_data = _load_json(DATA_DIR / "rosters.json") or []
-    stats_data = _load_json(DATA_DIR / "player_stats.json") or []
     results_data = _load_json(DATA_DIR / "results.json") or []
 
     if not isinstance(rosters_data, list):
         rosters_data = []
-    if not isinstance(stats_data, list):
-        stats_data = []
     if not isinstance(results_data, list):
         results_data = []
 
-    roster_lookup = _build_roster_lookup(rosters_data)
+    roster_lookup, team_meta = _build_roster_lookup(rosters_data)
     team_games = _team_games_played(results_data)
-    previous_stats = _load_previous_stats()
+    previous_registry = _load_previous_registry()
 
     registry: Dict[str, Dict[str, object]] = {}
 
@@ -211,86 +213,100 @@ def build_registry() -> List[Dict[str, object]]:
             "recent_games": None,
         }
 
-    for stat in stats_data:
-        if not isinstance(stat, dict):
+    for game in results_data:
+        if not isinstance(game, dict):
             continue
-        team_field = stat.get("team") or stat.get("Team")
-        team_slug = slugify(team_field) if isinstance(team_field, str) else ""
-        name = str(
-            stat.get("name")
-            or stat.get("player")
-            or stat.get("player_name")
-            or stat.get("playername")
-            or ""
-        )
-        player_id = stat.get("player_id")
-        if not player_id and team_slug:
-            for key in player_name_variants(name):
-                hit = roster_lookup.get((team_slug, key))
-                if hit:
-                    player_id = hit["player_id"]
-                    break
-        if not player_id and team_slug:
-            player_id = derive_player_id(team_slug, name, stat.get("no"))
+        player_stats = game.get("player_stats") or {}
+        if not player_stats:
+            continue
 
+        def _team_context(side: str) -> Dict[str, object]:
+            line = game.get(f"{side}_line") or {}
+            team_slug = line.get("slug") or slugify(game.get(side, ""))
+            meta = team_meta.get(team_slug, {})
+            return {
+                "team_slug": team_slug,
+                "team_id": meta.get("team_id"),
+                "team_name": meta.get("team_name") or game.get(side),
+            }
+
+        for side, stats_list in player_stats.items():
+            context = _team_context(side)
+            team_slug = context["team_slug"]
+            for stat in stats_list:
+                if not isinstance(stat, dict):
+                    continue
+                name = stat.get("name") or ""
+                player_id = stat.get("player_id")
+                number = stat.get("number")
+                if not player_id and team_slug:
+                    for key in player_name_variants(name):
+                        hit = roster_lookup.get((team_slug, key))
+                        if hit:
+                            player_id = hit["player_id"]
+                            if not number:
+                                number = hit.get("number")
+                            break
+                if not player_id and team_slug:
+                    player_id = derive_player_id(team_slug, name, number)
+
+                entry = registry.setdefault(
+                    player_id,
+                    {
+                        "player_id": player_id,
+                        "name": name,
+                        "number": number,
+                        "positions": stat.get("positions") or [],
+                        "team_id": context.get("team_id"),
+                        "team_name": context.get("team_name"),
+                        "team_slug": team_slug,
+                        "games_played": 0,
+                        "goals": 0,
+                        "assists": 0,
+                        "points": 0,
+                        "penalty_minutes": 0,
+                        "points_per_game": 0.0,
+                        "team_games_played": team_games.get(team_slug, 0),
+                        "games_missed": team_games.get(team_slug, 0),
+                        "recent_points": None,
+                        "recent_games": None,
+                    },
+                )
+
+                entry["name"] = name or entry.get("name")
+                entry["number"] = number or entry.get("number")
+                positions = stat.get("positions") or []
+                if isinstance(positions, str):
+                    positions = [positions]
+                if positions and not entry.get("positions"):
+                    entry["positions"] = positions
+                entry["team_id"] = entry.get("team_id") or context.get("team_id")
+                entry["team_name"] = entry.get("team_name") or context.get("team_name")
+                entry["team_slug"] = team_slug
+                entry["games_played"] += 1
+                entry["goals"] += _to_int(stat.get("goals"))
+                entry["assists"] += _to_int(stat.get("assists"))
+                entry["points"] += _to_int(stat.get("points"))
+                entry["penalty_minutes"] += _to_int(stat.get("penalty_minutes"))
+
+    for entry in registry.values():
+        team_slug = entry.get("team_slug") or ""
         team_games_played = team_games.get(team_slug, 0)
-        games_played = _to_int(stat.get("gp"))
-        goals = _to_int(stat.get("g"))
-        assists = _to_int(stat.get("a"))
-        points = _to_int(stat.get("pts")) or (goals + assists)
-        pim = _to_int(stat.get("pim"))
-        ppg = _to_float(stat.get("pts_g"))
-
-        entry = registry.setdefault(
-            player_id,
-            {
-                "player_id": player_id,
-                "name": name,
-                "number": stat.get("no") or stat.get("number"),
-                "positions": stat.get("pos") or stat.get("positions") or [],
-                "team_id": None,
-                "team_name": team_field,
-                "team_slug": team_slug or None,
-                "games_played": 0,
-                "goals": 0,
-                "assists": 0,
-                "points": 0,
-                "penalty_minutes": 0,
-                "points_per_game": 0.0,
-                "team_games_played": team_games_played,
-                "games_missed": team_games_played,
-                "recent_points": None,
-                "recent_games": None,
-            },
-        )
-
-        if not entry.get("team_id"):
-            roster_hit = roster_lookup.get((team_slug, normalize_player_key(name)))
-            if roster_hit:
-                entry["team_id"] = roster_hit["team_id"]
-                entry["team_name"] = roster_hit["team_name"]
-                entry["number"] = roster_hit["number"]
-                entry["positions"] = roster_hit["positions"]
-
-        entry["team_slug"] = team_slug or entry.get("team_slug")
         entry["team_games_played"] = team_games_played
-        entry["name"] = name or entry.get("name")
-        entry["games_played"] = games_played
-        entry["goals"] = goals
-        entry["assists"] = assists
-        entry["points"] = points
-        entry["penalty_minutes"] = pim
-        entry["points_per_game"] = ppg if ppg else (points / games_played) if games_played else 0.0
-        entry["games_missed"] = max(team_games_played - games_played, 0)
+        gp = entry.get("games_played", 0)
+        points = entry.get("points", 0)
+        entry["points_per_game"] = round(points / gp, 2) if gp else 0.0
+        entry["games_missed"] = max(team_games_played - gp, 0)
 
-        previous = _lookup_previous(previous_stats, team_slug, player_id, name)
-        if previous:
-            prev_points = _to_int(previous.get("pts")) or (_to_int(previous.get("g")) + _to_int(previous.get("a")))
-            prev_gp = _to_int(previous.get("gp"))
-            delta_points = points - prev_points
-            delta_gp = games_played - prev_gp
-            entry["recent_points"] = delta_points
-            entry["recent_games"] = delta_gp
+        prev = previous_registry.get(str(entry["player_id"]))
+        if prev:
+            prev_points = _to_int(prev.get("points"))
+            prev_gp = _to_int(prev.get("games_played"))
+            entry["recent_points"] = points - prev_points
+            entry["recent_games"] = gp - prev_gp
+        else:
+            entry["recent_points"] = points
+            entry["recent_games"] = gp
 
     registry_list = list(registry.values())
     registry_list.sort(key=lambda item: (item.get("team_slug") or "", (item.get("number") or ""), item.get("name") or ""))

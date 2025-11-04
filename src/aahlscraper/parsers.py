@@ -14,6 +14,7 @@ from zoneinfo import ZoneInfo
 from bs4 import BeautifulSoup
 from bs4.element import Tag
 
+from .common import normalize_header
 from .models import GameRecord, GameTeamLine, RosterPlayer, ScoreBoardEntry, TeamRoster
 from .utils import derive_player_id, slugify
 
@@ -477,3 +478,128 @@ def parse_rosters(html: str) -> Dict[str, TeamRoster]:
         i += 1
 
     return rosters
+
+
+def _safe_int(value: Optional[str]) -> Optional[int]:
+    if value is None:
+        return None
+    value = value.strip()
+    if not value:
+        return None
+    try:
+        return int(value)
+    except ValueError:
+        try:
+            return int(float(value))
+        except ValueError:
+            return None
+
+
+def _parse_table_rows(table: Tag) -> List[List[str]]:
+    rows: List[List[str]] = []
+    for row in table.find_all("tr"):
+        cells = row.find_all(["td", "th"])
+        if not cells:
+            continue
+        rows.append([cell.get_text(" ", strip=True) for cell in cells])
+    return rows
+
+
+def parse_box_score(html: str) -> Dict[str, object]:
+    """
+    Parse an AAHL box score page extracting scoreboard, scoring summary, penalties, and player stats.
+    """
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    scoreboard_rows: List[List[str]] = []
+    scoreboard = soup.select_one("div.scoreBoard table")
+    team_order: List[str] = []
+    if scoreboard:
+        scoreboard_rows = _parse_table_rows(scoreboard)
+        for row in scoreboard_rows[1:]:
+            if row:
+                team_order.append(row[0])
+
+    scoring_summary: List[Dict[str, str]] = []
+    penalties: List[Dict[str, str]] = []
+    player_tables: List[Dict[str, object]] = []
+
+    for table in soup.find_all("table"):
+        raw_rows = _parse_table_rows(table)
+        if not raw_rows:
+            continue
+        headers = [normalize_header(cell) for cell in raw_rows[0]]
+        rows = raw_rows[1:]
+
+        if {"perperiod", "time", "team"}.issubset(headers):
+            for row in rows:
+                record = {}
+                for idx, header in enumerate(headers):
+                    if idx < len(row):
+                        record[header] = row[idx]
+                if record:
+                    scoring_summary.append(record)
+            continue
+
+        if "infraction" in headers or "length" in headers:
+            for row in rows:
+                record = {}
+                for idx, header in enumerate(headers):
+                    if idx < len(row):
+                        record[header] = row[idx]
+                if record:
+                    penalties.append(record)
+            continue
+
+        if "name" in headers and ("g" in headers or "goals" in headers):
+            players: List[Dict[str, object]] = []
+            for row in rows:
+                if not row:
+                    continue
+                if any("team stats" in cell.lower() for cell in row):
+                    continue
+
+                record: Dict[str, object] = {}
+                for idx, header in enumerate(headers):
+                    record[header] = row[idx] if idx < len(row) else ""
+
+                name = (record.get("name") or record.get("player") or "").strip()
+                if not name:
+                    continue
+
+                number = (record.get("no") or record.get("number") or "").strip() or None
+                positions = (record.get("pos") or record.get("position") or "").strip()
+                goals = _safe_int(str(record.get("g") or record.get("goals") or "")) or 0
+                assists = _safe_int(str(record.get("a") or record.get("assists") or "")) or 0
+                points = _safe_int(str(record.get("pts") or record.get("points") or "")) or (goals + assists)
+                pim = _safe_int(str(record.get("pim") or record.get("pen") or "")) or 0
+                gtg = _safe_int(str(record.get("gtg") or record.get("game_tying_goals") or "")) or 0
+
+                players.append(
+                    {
+                        "number": number,
+                        "name": name,
+                        "positions": positions,
+                        "goals": goals,
+                        "assists": assists,
+                        "points": points,
+                        "pim": pim,
+                        "gtg": gtg,
+                        "raw": record,
+                    }
+                )
+
+            player_tables.append({"headers": headers, "players": players})
+
+    teams: List[Dict[str, object]] = []
+    for idx, table in enumerate(player_tables):
+        team_name = team_order[idx] if idx < len(team_order) else None
+        teams.append({"team_name": team_name, "players": table["players"]})
+
+    return {
+        "scoreboard": scoreboard_rows,
+        "scoring_summary": scoring_summary,
+        "penalties": penalties,
+        "teams": teams,
+    }

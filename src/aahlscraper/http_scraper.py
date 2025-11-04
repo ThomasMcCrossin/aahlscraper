@@ -4,6 +4,7 @@ HTTP-based scraper implementation for the Amherst Adult Hockey League site.
 
 from __future__ import annotations
 
+import re
 from datetime import datetime, timedelta, timezone
 from typing import Dict, Iterable, List, Optional, Tuple
 
@@ -19,8 +20,9 @@ from .parsers import (
     parse_ics_games,
     parse_rosters,
     parse_scoreboard,
+    parse_box_score,
 )
-from .utils import player_name_variants, slugify
+from .utils import derive_player_id, player_name_variants, slugify
 
 DEFAULT_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
@@ -61,7 +63,7 @@ class AmherstHockeyScraper:
         self.session.headers.update(DEFAULT_HEADERS)
         self._game_cache: Optional[List[GameRecord]] = None
         self._roster_cache: Optional[Dict[str, TeamRoster]] = None
-        self._player_lookup: Optional[Dict[Tuple[str, str], Dict[str, Optional[str]]]] = None
+        self._player_lookup: Optional[Dict[Tuple[str, str], Dict[str, object]]] = None
 
     def _fetch_soup(self, page_type: str, **params: str) -> Optional[BeautifulSoup]:
         url = build_url(self.team_id, page_type, **params)
@@ -104,7 +106,7 @@ class AmherstHockeyScraper:
         self._roster_cache = parse_rosters(html)
         return self._roster_cache
 
-    def _build_player_lookup(self) -> Dict[Tuple[str, str], Dict[str, Optional[str]]]:
+    def _build_player_lookup(self) -> Dict[Tuple[str, str], Dict[str, object]]:
         if self._player_lookup is not None:
             return self._player_lookup
 
@@ -118,6 +120,7 @@ class AmherstHockeyScraper:
                     "number": player.number,
                     "team_id": roster.team_id,
                     "team_name": roster.team_name,
+                    "positions": player.positions,
                 }
                 for key in player_name_variants(player.name):
                     lookup.setdefault((team_slug, key), payload)
@@ -270,11 +273,117 @@ class AmherstHockeyScraper:
         """
 
         games = self._load_games()
+        lookup = self._build_player_lookup()
         results: List[Dict[str, object]] = []
         for game in games:
-            if game.status == "final":
-                results.append(game.to_dict())
+            if game.status != "final":
+                continue
+
+            record = game.to_dict()
+
+            if game.box_score_url:
+                box_html = self._fetch_text(game.box_score_url)
+                if box_html:
+                    box_score = parse_box_score(box_html)
+                    player_stats = self._build_player_stats(game, box_score, lookup)
+                    if player_stats:
+                        record["player_stats"] = player_stats
+                    if box_score.get("scoring_summary"):
+                        record["scoring_summary"] = box_score["scoring_summary"]
+                    if box_score.get("penalties"):
+                        record["penalties"] = box_score["penalties"]
+                    if box_score.get("scoreboard"):
+                        record["scoreboard"] = box_score["scoreboard"]
+
+            results.append(record)
         return results
+
+    def _build_player_stats(
+        self,
+        game: GameRecord,
+        box_score: Dict[str, object],
+        lookup: Dict[Tuple[str, str], Dict[str, object]],
+    ) -> Dict[str, List[Dict[str, object]]]:
+        stats: Dict[str, List[Dict[str, object]]] = {}
+        teams = box_score.get("teams") or []
+        slug_map = {
+            "home": game.home.slug,
+            "away": game.away.slug,
+        }
+        used_sides: set[str] = set()
+
+        for team_entry in teams:
+            team_name = (team_entry.get("team_name") or "").strip()
+            candidate_slug = slugify(team_name) if team_name else None
+            side: Optional[str] = None
+
+            for key, slug in slug_map.items():
+                if key in used_sides:
+                    continue
+                if candidate_slug and candidate_slug == slug:
+                    side = key
+                    break
+
+            if side is None:
+                for key in ("home", "away"):
+                    if key not in used_sides:
+                        side = key
+                        candidate_slug = slug_map[key]
+                        break
+
+            if side is None:
+                continue
+
+            used_sides.add(side)
+            team_slug = slug_map.get(side)
+            players_payload: List[Dict[str, object]] = []
+
+            for raw_player in team_entry.get("players", []):
+                name = (raw_player.get("name") or "").strip()
+                if not name:
+                    continue
+                number = raw_player.get("number")
+                match_payload: Optional[Dict[str, Optional[str]]] = None
+                player_id: Optional[str] = None
+
+                if team_slug:
+                    for key in player_name_variants(name):
+                        match_payload = lookup.get((team_slug, key))
+                        if match_payload:
+                            player_id = match_payload.get("player_id")
+                            if not number and match_payload.get("number"):
+                                number = match_payload.get("number")
+                            break
+
+                if not player_id and team_slug:
+                    player_id = derive_player_id(team_slug, name, number)
+
+                positions_raw = raw_player.get("positions") or ""
+                if not positions_raw and match_payload and match_payload.get("positions"):
+                    positions_raw = "/".join(match_payload["positions"])
+                positions = [
+                    token.strip()
+                    for token in re.split(r"[\\/,-]+", positions_raw)
+                    if token.strip()
+                ]
+
+                players_payload.append(
+                    {
+                        "player_id": player_id,
+                        "name": name,
+                        "number": number,
+                        "positions": positions,
+                        "goals": raw_player.get("goals", 0),
+                        "assists": raw_player.get("assists", 0),
+                        "points": raw_player.get("points", 0),
+                        "penalty_minutes": raw_player.get("pim", 0),
+                        "gtg": raw_player.get("gtg", 0),
+                    }
+                )
+
+            stats[side] = players_payload
+
+        return stats
 
     def scrape_rosters(self) -> Dict[str, Dict[str, object]]:
         """
