@@ -213,12 +213,7 @@ def _ensure_headlines(games: List[Dict[str, object]], existing: Dict[str, Dict[s
     now_iso = datetime.now(timezone.utc).isoformat()
     entries: List[Dict[str, object]] = []
 
-    def sort_key(game: Dict[str, object]) -> tuple[int, Optional[datetime]]:
-        dt = _parse_game_datetime(game.get("datetime"))
-        # Sort primarily by datetime descending, fallback to game id
-        return (0 if dt else 1, dt or datetime.min.replace(tzinfo=timezone.utc))
-
-    for game in sorted(games, key=sort_key):
+    for game in games:
         game_id = game.get("game_id")
         if not game_id:
             continue
@@ -255,7 +250,6 @@ def _ensure_headlines(games: List[Dict[str, object]], existing: Dict[str, Dict[s
         entry["box_score_url"] = game.get("box_score_url")
         entries.append(entry)
 
-    # Most recent games first
     entries.sort(key=lambda item: (item.get("game_datetime") or "", item.get("game_id")), reverse=True)
     return entries
 
@@ -307,20 +301,59 @@ def _compute_movements(
     return movements
 
 
-def _load_recent_results(days: int = 7) -> List[Dict[str, object]]:
+def _load_recent_results(days: Optional[int] = 7) -> List[Dict[str, object]]:
     results = _load_json(DATA_DIR / "results.json")
     if not isinstance(results, list):
         return []
 
-    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+    cutoff = None
+    if days is not None:
+        cutoff = datetime.now(timezone.utc) - timedelta(days=days)
     recent: List[Dict[str, object]] = []
     for game in results:
-        dt = _parse_game_datetime(game.get("datetime"))
-        if not dt:
+        if str(game.get("status", "")).lower() != "final":
             continue
-        if dt >= cutoff:
-            recent.append(game)
+        dt = _parse_game_datetime(game.get("datetime"))
+        if cutoff is not None and (not dt or dt < cutoff):
+            continue
+        game_copy = dict(game)
+        if dt:
+            game_copy["_dt"] = dt
+        recent.append(game_copy)
+
+    recent.sort(
+        key=lambda item: item.get("_dt") or datetime.min.replace(tzinfo=timezone.utc),
+        reverse=True,
+    )
+    for game in recent:
+        game.pop("_dt", None)
     return recent
+
+
+def _unique_games(games: List[Dict[str, object]]) -> List[Dict[str, object]]:
+    seen: set[str] = set()
+    unique: List[Dict[str, object]] = []
+    for game in games:
+        game_id = game.get("game_id")
+        if not game_id:
+            continue
+        key = str(game_id)
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(game)
+    return unique
+
+
+def _sorted_games(games: List[Dict[str, object]]) -> List[Dict[str, object]]:
+    enriched: List[tuple[datetime, Dict[str, object]]] = []
+    for game in games:
+        dt = _parse_game_datetime(game.get("datetime"))
+        if dt is None:
+            dt = datetime.min.replace(tzinfo=timezone.utc)
+        enriched.append((dt, game))
+    enriched.sort(key=lambda item: item[0], reverse=True)
+    return [item[1] for item in enriched]
 
 
 def _summarize_recent_results(games: List[Dict[str, object]]) -> List[Dict[str, object]]:
@@ -364,9 +397,10 @@ def main() -> None:
 
     movements = _compute_movements(current_snapshot, previous_snapshot)
     recent_games = _load_recent_results(days=7)
+    all_games = _unique_games(_sorted_games(_load_recent_results(days=None)))
     recent_summary = _summarize_recent_results(recent_games)
     headline_index = _load_headline_index()
-    headline_entries = _ensure_headlines(recent_games, headline_index)
+    headline_entries = _ensure_headlines(all_games, headline_index)
 
     generated_at = datetime.now(timezone.utc).isoformat()
     report = {
