@@ -681,9 +681,17 @@
         const SLIDE_DURATIONS_MS = [20000, 10000];
         const TICKER_MIN_DURATION = 6;
         const TICKER_SPEED_FACTOR = 0.036;
+        const RESULTS_VISIBLE_COUNT = 2;
+        const UPCOMING_VISIBLE_COUNT = 2;
+        const RESULTS_ROTATION_MS = 8000;
+        const UPCOMING_ROTATION_MS = 8000;
         let tickerExtras = [];
         let currentRecentGames = [];
         let currentUpcomingGames = [];
+        let resultsIntervalId = null;
+        let upcomingIntervalId = null;
+        let recentCarouselIndex = 0;
+        let upcomingCarouselIndex = 0;
 
         // Sample data with name corrections applied
         const sampleData = {
@@ -997,6 +1005,17 @@
             }));
         }
 
+        function getCycledSlice(items, start, count) {
+            if (!Array.isArray(items) || items.length === 0) return [];
+            const normalizedStart = ((start % items.length) + items.length) % items.length;
+            const result = [];
+            const limit = Math.min(count, items.length);
+            for (let i = 0; i < limit; i++) {
+                result.push(items[(normalizedStart + i) % items.length]);
+            }
+            return result;
+        }
+
         const DAY_MS = 24 * 60 * 60 * 1000;
         const CACHE_KEY = 'aahl_display_cache_v1';
         const CACHE_TTL_MS = 24 * DAY_MS;
@@ -1181,7 +1200,7 @@
         }
 
         // Render recent results
-        function renderResults(results) {
+        function renderResults(results, startIndex = 0) {
             const list = document.getElementById('resultsList');
             list.innerHTML = '';
             if (!results || results.length === 0) {
@@ -1189,9 +1208,8 @@
                 return;
             }
 
-            results
-                .slice(0, 4)
-                .forEach(game => {
+            const subset = getCycledSlice(results, startIndex, RESULTS_VISIBLE_COUNT);
+            subset.forEach(game => {
                 const card = document.createElement('div');
                 card.className = 'game-card';
 
@@ -1238,16 +1256,15 @@
         }
 
         // Render upcoming games
-        function renderUpcoming(games) {
+        function renderUpcoming(games, startIndex = 0) {
             const list = document.getElementById('upcomingList');
             list.innerHTML = '';
             if (!games || games.length === 0) {
                 list.innerHTML = '<div style="text-align: center; padding: 40px; color: #a8d0ff;">No upcoming games available</div>';
                 return;
             }
-            games
-                .slice(0, 4)
-                .forEach(game => {
+            const subset = getCycledSlice(games, startIndex, UPCOMING_VISIBLE_COUNT);
+            subset.forEach(game => {
                 const card = document.createElement('div');
                 card.className = 'game-card';
                 const dateObj = parseGameDate(game);
@@ -1375,6 +1392,50 @@
             track.style.animationDuration = `${duration}s`;
         }
 
+        function startResultsCarousel() {
+            if (resultsIntervalId) {
+                clearInterval(resultsIntervalId);
+                resultsIntervalId = null;
+            }
+
+            if (!currentRecentGames.length) {
+                renderResults([]);
+                return;
+            }
+
+            recentCarouselIndex = 0;
+            renderResults(currentRecentGames, recentCarouselIndex);
+
+            if (currentRecentGames.length > RESULTS_VISIBLE_COUNT) {
+                resultsIntervalId = setInterval(() => {
+                    recentCarouselIndex = (recentCarouselIndex + RESULTS_VISIBLE_COUNT) % currentRecentGames.length;
+                    renderResults(currentRecentGames, recentCarouselIndex);
+                }, RESULTS_ROTATION_MS);
+            }
+        }
+
+        function startUpcomingCarousel() {
+            if (upcomingIntervalId) {
+                clearInterval(upcomingIntervalId);
+                upcomingIntervalId = null;
+            }
+
+            if (!currentUpcomingGames.length) {
+                renderUpcoming([]);
+                return;
+            }
+
+            upcomingCarouselIndex = 0;
+            renderUpcoming(currentUpcomingGames, upcomingCarouselIndex);
+
+            if (currentUpcomingGames.length > UPCOMING_VISIBLE_COUNT) {
+                upcomingIntervalId = setInterval(() => {
+                    upcomingCarouselIndex = (upcomingCarouselIndex + UPCOMING_VISIBLE_COUNT) % currentUpcomingGames.length;
+                    renderUpcoming(currentUpcomingGames, upcomingCarouselIndex);
+                }, UPCOMING_ROTATION_MS);
+            }
+        }
+
         function formatExternalTickerData(feeds) {
             if (!feeds || typeof feeds !== 'object') return [];
             const entries = [];
@@ -1496,8 +1557,8 @@
 
             renderStandings(standings);
             renderScorers(scorers);
-            renderResults(recentGames);
-            renderUpcoming(upcomingGames);
+            startResultsCarousel();
+            startUpcomingCarousel();
             renderTicker(recentGames, upcomingGames);
         }
 
