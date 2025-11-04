@@ -533,12 +533,12 @@
         }
 
         .ticker-track {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 60px;
             white-space: nowrap;
-            animation: ticker-scroll 40s linear infinite;
             will-change: transform;
+            transform: translateX(0);
         }
 
         .ticker-segment {
@@ -607,13 +607,34 @@
             font-weight: 400;
         }
 
-        @keyframes ticker-scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
+        .carousel-controls {
+            display: none;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            background: transparent;
+            opacity: 0.55;
+            cursor: pointer;
+            transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+        }
+
+        .carousel-dot.active {
+            background: #ffca28;
+            border-color: #ffca28;
+            opacity: 1;
+            transform: scale(1.08);
+        }
+
+        .carousel-dot:focus-visible {
+            outline: 2px solid #ffca28;
+            outline-offset: 2px;
         }
     </style>
 </head>
@@ -648,12 +669,14 @@
                         <div class="panel-title">Latest Finals</div>
                         <div class="panel-body">
                             <div class="games-list" id="resultsList"></div>
+                            <div class="carousel-controls" id="resultsControls"></div>
                         </div>
                     </div>
                     <div class="panel upcoming-panel">
                         <div class="panel-title">Upcoming at Amherst Stadium</div>
                         <div class="panel-body">
                             <div class="games-list" id="upcomingList"></div>
+                            <div class="carousel-controls" id="upcomingControls"></div>
                         </div>
                     </div>
                 </div>
@@ -679,10 +702,9 @@
 
     <script>
         const SLIDE_DURATIONS_MS = [20000, 10000];
-        const TICKER_MIN_DURATION = 6;
-        const TICKER_SPEED_FACTOR = 0.036;
-        const RESULTS_VISIBLE_COUNT = 2;
-        const UPCOMING_VISIBLE_COUNT = 2;
+        const TICKER_PIXELS_PER_SECOND = 320;
+        const RESULTS_VISIBLE_COUNT = 1;
+        const UPCOMING_VISIBLE_COUNT = 1;
         const RESULTS_ROTATION_MS = 8000;
         const UPCOMING_ROTATION_MS = 8000;
         let tickerExtras = [];
@@ -692,6 +714,10 @@
         let upcomingIntervalId = null;
         let recentCarouselIndex = 0;
         let upcomingCarouselIndex = 0;
+        let tickerAnimationId = null;
+        let tickerLastTimestamp = null;
+        let tickerOffset = 0;
+        let tickerSegmentWidth = 0;
 
         // Sample data with name corrections applied
         const sampleData = {
@@ -1005,6 +1031,50 @@
             }));
         }
 
+        function stopTickerAnimation() {
+            if (tickerAnimationId) {
+                cancelAnimationFrame(tickerAnimationId);
+                tickerAnimationId = null;
+            }
+            tickerLastTimestamp = null;
+        }
+
+        function startTickerAnimation() {
+            const track = document.getElementById('tickerTrack');
+            if (!track) return;
+            const firstSegment = track.querySelector('.ticker-segment');
+            if (!firstSegment) {
+                stopTickerAnimation();
+                return;
+            }
+
+            tickerSegmentWidth = firstSegment.offsetWidth;
+            if (!tickerSegmentWidth) {
+                stopTickerAnimation();
+                return;
+            }
+
+            stopTickerAnimation();
+            tickerOffset = 0;
+            track.style.transform = 'translateX(0px)';
+
+            const step = (timestamp) => {
+                if (tickerLastTimestamp === null) {
+                    tickerLastTimestamp = timestamp;
+                }
+                const deltaSeconds = (timestamp - tickerLastTimestamp) / 1000;
+                tickerLastTimestamp = timestamp;
+                tickerOffset -= TICKER_PIXELS_PER_SECOND * deltaSeconds;
+                if (-tickerOffset >= tickerSegmentWidth) {
+                    tickerOffset += tickerSegmentWidth;
+                }
+                track.style.transform = `translateX(${tickerOffset}px)`;
+                tickerAnimationId = requestAnimationFrame(step);
+            };
+
+            tickerAnimationId = requestAnimationFrame(step);
+        }
+
         function getCycledSlice(items, start, count) {
             if (!Array.isArray(items) || items.length === 0) return [];
             const normalizedStart = ((start % items.length) + items.length) % items.length;
@@ -1014,6 +1084,56 @@
                 result.push(items[(normalizedStart + i) % items.length]);
             }
             return result;
+        }
+
+        function renderCarouselControls(containerId, totalItems, startIndex, visibleCount) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            const pages = visibleCount > 0 ? Math.ceil(totalItems / visibleCount) : 0;
+            if (pages <= 1) {
+                container.innerHTML = '';
+                container.style.display = 'none';
+                return;
+            }
+
+            const activePage = Math.floor(startIndex / visibleCount) % pages;
+            container.innerHTML = '';
+            container.style.display = 'flex';
+
+            for (let i = 0; i < pages; i++) {
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.className = 'carousel-dot' + (i === activePage ? ' active' : '');
+                dot.dataset.page = i;
+                dot.setAttribute('aria-label', `Show page ${i + 1}`);
+                container.appendChild(dot);
+            }
+        }
+
+        function setupCarouselHandlers() {
+            const resultsControls = document.getElementById('resultsControls');
+            if (resultsControls && !resultsControls.dataset.bound) {
+                resultsControls.addEventListener('click', event => {
+                    const dot = event.target.closest('.carousel-dot');
+                    if (!dot) return;
+                    const page = Number(dot.dataset.page || 0);
+                    recentCarouselIndex = page * RESULTS_VISIBLE_COUNT;
+                    startResultsCarousel(false);
+                });
+                resultsControls.dataset.bound = 'true';
+            }
+
+            const upcomingControls = document.getElementById('upcomingControls');
+            if (upcomingControls && !upcomingControls.dataset.bound) {
+                upcomingControls.addEventListener('click', event => {
+                    const dot = event.target.closest('.carousel-dot');
+                    if (!dot) return;
+                    const page = Number(dot.dataset.page || 0);
+                    upcomingCarouselIndex = page * UPCOMING_VISIBLE_COUNT;
+                    startUpcomingCarousel(false);
+                });
+                upcomingControls.dataset.bound = 'true';
+            }
         }
 
         const DAY_MS = 24 * 60 * 60 * 1000;
@@ -1204,6 +1324,7 @@
             const list = document.getElementById('resultsList');
             list.innerHTML = '';
             if (!results || results.length === 0) {
+                renderCarouselControls('resultsControls', 0, 0, RESULTS_VISIBLE_COUNT);
                 list.innerHTML = '<div style="text-align: center; padding: 40px; color: #a8d0ff;">No recent results available</div>';
                 return;
             }
@@ -1253,6 +1374,8 @@
                 `;
                 list.appendChild(card);
             });
+
+            renderCarouselControls('resultsControls', results.length, startIndex, RESULTS_VISIBLE_COUNT);
         }
 
         // Render upcoming games
@@ -1260,6 +1383,7 @@
             const list = document.getElementById('upcomingList');
             list.innerHTML = '';
             if (!games || games.length === 0) {
+                renderCarouselControls('upcomingControls', 0, 0, UPCOMING_VISIBLE_COUNT);
                 list.innerHTML = '<div style="text-align: center; padding: 40px; color: #a8d0ff;">No upcoming games available</div>';
                 return;
             }
@@ -1293,11 +1417,17 @@
                 `;
                 list.appendChild(card);
             });
+
+            renderCarouselControls('upcomingControls', games.length, startIndex, UPCOMING_VISIBLE_COUNT);
         }
 
         function renderTicker(recentGames, upcomingGames) {
             const track = document.getElementById('tickerTrack');
             if (!track) return;
+
+            stopTickerAnimation();
+            tickerOffset = 0;
+            track.style.transform = 'translateX(0px)';
 
             const entries = [];
             const seenKeys = new Set();
@@ -1374,25 +1504,20 @@
             if (entries.length === 0) {
                 const placeholder = '<div class="ticker-item">AAHL updates will appear here soon.</div>';
                 track.innerHTML = `<div class="ticker-segment">${placeholder}</div><div class="ticker-segment">${placeholder}</div>`;
-                track.style.animationDuration = `${TICKER_MIN_DURATION}s`;
-                return;
             }
 
-            const segmentHtml = entries.join('');
-            track.innerHTML = `
-                <div class="ticker-segment">${segmentHtml}</div>
-                <div class="ticker-segment">${segmentHtml}</div>
-            `;
+            if (entries.length > 0) {
+                const segmentHtml = entries.join('');
+                track.innerHTML = `
+                    <div class="ticker-segment">${segmentHtml}</div>
+                    <div class="ticker-segment">${segmentHtml}</div>
+                `;
+            }
 
-            const textLength = entries
-                .map(entry => entry.replace(/<[^>]*>/g, ''))
-                .join(' ')
-                .length;
-            const duration = Math.max(TICKER_MIN_DURATION, textLength * TICKER_SPEED_FACTOR);
-            track.style.animationDuration = `${duration}s`;
+            requestAnimationFrame(() => startTickerAnimation());
         }
 
-        function startResultsCarousel() {
+        function startResultsCarousel(resetIndex = true) {
             if (resultsIntervalId) {
                 clearInterval(resultsIntervalId);
                 resultsIntervalId = null;
@@ -1400,10 +1525,13 @@
 
             if (!currentRecentGames.length) {
                 renderResults([]);
+                renderCarouselControls('resultsControls', 0, 0, RESULTS_VISIBLE_COUNT);
                 return;
             }
 
-            recentCarouselIndex = 0;
+            if (resetIndex || recentCarouselIndex >= currentRecentGames.length) {
+                recentCarouselIndex = 0;
+            }
             renderResults(currentRecentGames, recentCarouselIndex);
 
             if (currentRecentGames.length > RESULTS_VISIBLE_COUNT) {
@@ -1414,7 +1542,7 @@
             }
         }
 
-        function startUpcomingCarousel() {
+        function startUpcomingCarousel(resetIndex = true) {
             if (upcomingIntervalId) {
                 clearInterval(upcomingIntervalId);
                 upcomingIntervalId = null;
@@ -1422,10 +1550,13 @@
 
             if (!currentUpcomingGames.length) {
                 renderUpcoming([]);
+                renderCarouselControls('upcomingControls', 0, 0, UPCOMING_VISIBLE_COUNT);
                 return;
             }
 
-            upcomingCarouselIndex = 0;
+            if (resetIndex || upcomingCarouselIndex >= currentUpcomingGames.length) {
+                upcomingCarouselIndex = 0;
+            }
             renderUpcoming(currentUpcomingGames, upcomingCarouselIndex);
 
             if (currentUpcomingGames.length > UPCOMING_VISIBLE_COUNT) {
@@ -1597,9 +1728,14 @@
         }
 
         // Kick off slide rotation and start the application
+        setupCarouselHandlers();
         loadTickerExtras();
         startSlideShow();
         loadData();
+
+        window.addEventListener('resize', () => {
+            requestAnimationFrame(() => startTickerAnimation());
+        });
 
         // Yodeck lifecycle hooks (optional)
         if (window.parent && window.parent.YodeckAPI) {
