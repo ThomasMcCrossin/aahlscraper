@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAHL Showcase Display</title>
+    <style>
+        :root {
+            color-scheme: dark;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: radial-gradient(circle at top right, #1a2634 0%, #0b111a 45%, #05070b 100%);
+            color: #edf4ff;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding: 24px 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .brand h1 {
+            font-size: clamp(2.4rem, 3.5vw, 3.4rem);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .brand span {
+            font-weight: 500;
+            font-size: 1.1rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: #9cc8ff;
+        }
+
+        .time-pill {
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+            font-size: 1.05rem;
+            letter-spacing: 0.08em;
+            color: #d9ecff;
+        }
+
+        .showcase-grid {
+            flex: 1;
+            padding: 0 48px 36px;
+            display: grid;
+            grid-template-columns: 1.7fr 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            gap: 28px;
+        }
+
+        .panel {
+            position: relative;
+            border-radius: 22px;
+            background: rgba(12, 23, 34, 0.75);
+            border: 1px solid rgba(94, 177, 255, 0.3);
+            box-shadow: 0 24px 40px rgba(1, 12, 22, 0.55);
+            backdrop-filter: blur(16px);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .panel[data-theme="accent"] {
+            background: linear-gradient(135deg, rgba(0, 93, 197, 0.65), rgba(1, 37, 74, 0.8));
+        }
+
+        .panel-header {
+            padding: 22px 28px 12px;
+        }
+
+        .panel-title {
+            font-size: 1.5rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #a2d8ff;
+        }
+
+        .panel-subtitle {
+            margin-top: 6px;
+            color: #d8e9ff;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        .standings-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .standings-table thead th {
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: #7eb9ff;
+            padding-bottom: 14px;
+        }
+
+        .standings-table tbody tr + tr td {
+            border-top: 1px solid rgba(94, 177, 255, 0.15);
+        }
+
+        .standings-table td {
+            padding: 12px 6px;
+            font-size: 1.05rem;
+        }
+
+        .standings-table td:first-child {
+            padding-left: 4px;
+            color: #7eb9ff;
+            font-weight: 700;
+        }
+
+        .standings-table td:nth-child(2) {
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+
+        .standings-table td:last-child {
+            text-align: center;
+            font-weight: 700;
+            color: #ffd15c;
+        }
+
+        .scores-wrap {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            padding: 0 28px 28px;
+        }
+
+        .score-card {
+            position: relative;
+            padding: 24px 22px;
+            border-radius: 18px;
+            background: linear-gradient(120deg, rgba(9, 24, 39, 0.85), rgba(6, 12, 20, 0.9));
+            border: 1px solid rgba(92, 160, 255, 0.25);
+            overflow: hidden;
+        }
+
+        .score-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 65%);
+            mix-blend-mode: screen;
+            pointer-events: none;
+        }
+
+        .score-card[data-away-color] {
+            background: linear-gradient(135deg,
+                rgba(var(--away-color-rgb, 30, 90, 150), 0.65),
+                rgba(var(--home-color-rgb, 5, 20, 40), 0.85)
+            );
+        }
+
+        .score-headline {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            letter-spacing: 0.05em;
+        }
+
+        .scoreline {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+        }
+
+        .scoreline .team {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .scoreline .points {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ffed8a;
+        }
+
+        .score-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 18px;
+            font-size: 0.95rem;
+            color: #d6e9ff;
+            opacity: 0.9;
+        }
+
+        .performers {
+            margin-top: 16px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(238, 245, 255, 0.12);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .performer-line {
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .performer-name {
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+
+        .performer-stats {
+            color: #9cc8ff;
+            letter-spacing: 0.08em;
+        }
+
+        .ticker {
+            display: flex;
+            align-items: center;
+            padding: 12px 42px;
+            background: rgba(6, 14, 24, 0.95);
+            border-top: 1px solid rgba(83, 140, 210, 0.38);
+        }
+
+        .ticker-label {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: #ffcc6f;
+            margin-right: 26px;
+        }
+
+        .ticker-viewport {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .ticker-track {
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+            gap: 64px;
+            animation: marquee 24s linear infinite;
+        }
+
+        .ticker-item {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 14px;
+            font-size: 1.05rem;
+        }
+
+        .ticker-item strong {
+            color: #ffcc6f;
+            letter-spacing: 0.08em;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="brand">
+            <h1>Amherst Adult Hockey League</h1>
+            <span>Game Center</span>
+        </div>
+        <div class="time-pill" id="clockPill">Loading...</div>
+    </div>
+
+    <div class="showcase-grid">
+        <div class="panel" id="standingsPanel">
+            <div class="panel-header">
+                <div class="panel-title">Standings Spotlight</div>
+                <div class="panel-subtitle">Updated live from AAHL stats</div>
+            </div>
+            <div style="padding: 0 28px 28px; overflow-y: auto;">
+                <table class="standings-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Team</th>
+                            <th style="text-align:center;">W</th>
+                            <th style="text-align:center;">L</th>
+                            <th style="text-align:center;">Pts</th>
+                        </tr>
+                    </thead>
+                    <tbody id="standingsBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="panel" data-theme="accent" id="scorersPanel">
+            <div class="panel-header">
+                <div class="panel-title">Top Producers</div>
+                <div class="panel-subtitle">Season point leaders</div>
+            </div>
+            <div style="padding: 0 28px 28px; overflow-y: auto;">
+                <table class="standings-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Player</th>
+                            <th style="text-align:center;">G</th>
+                            <th style="text-align:center;">A</th>
+                            <th style="text-align:center;">Pts</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scorersBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="panel" style="grid-row: span 2;">
+            <div class="panel-header">
+                <div class="panel-title">Latest Finals</div>
+                <div class="panel-subtitle">Live recaps with star performers</div>
+            </div>
+            <div class="scores-wrap" id="resultsWrap"></div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">
+                <div class="panel-title">Upcoming Slate</div>
+                <div class="panel-subtitle">Amherst Ice Centre schedule</div>
+            </div>
+            <div style="padding: 0 28px 28px; display: flex; flex-direction: column; gap: 16px; overflow-y: auto;" id="upcomingWrap"></div>
+        </div>
+    </div>
+
+    <div class="ticker">
+        <div class="ticker-label">AAHL Ticker</div>
+        <div class="ticker-viewport">
+            <div class="ticker-track" id="tickerTrack"></div>
+        </div>
+    </div>
+
+    <script>
+        const LOGO_BASE_URL = 'https://raw.githubusercontent.com/ThomasMcCrossin/aahlscraper/main/assets/logos/aahl';
+        const TEAM_LOGOS = {
+            'maltby-sports': `${LOGO_BASE_URL}/maltby-sports.png`,
+            'j-and-k-electric': `${LOGO_BASE_URL}/j-and-k-electric.png`,
+            'gr-mitchell-welding': `${LOGO_BASE_URL}/gr-mitchell-welding.png`,
+            'colson-overhead-doors': `${LOGO_BASE_URL}/colson-overhead-doors.png`,
+            'ultramar': `${LOGO_BASE_URL}/ultramar.svg`
+        };
+
+        const TEAM_COLORS = {
+            'maltby-sports': { primary: '#1565c0', secondary: '#42a5f5' },
+            'j-and-k-electric': { primary: '#f9a825', secondary: '#ffd54f' },
+            'gr-mitchell-welding': { primary: '#8e24aa', secondary: '#ba68c8' },
+            'colson-overhead-doors': { primary: '#ef5350', secondary: '#ff867c' },
+            'ultramar': { primary: '#00897b', secondary: '#4db6ac' }
+        };
+
+        const TEAM_SLUG_OVERRIDES = {
+            'amherst hawks': 'maltby-sports',
+            'downtown small': 'j-and-k-electric',
+            'frontier city': 'gr-mitchell-welding',
+            'maple grove': 'ultramar',
+            'ice storm': 'colson-overhead-doors',
+            'thunder bay': 'ultramar',
+            'valley vipers': 'colson-overhead-doors'
+        };
+
+        function correctName(name) {
+            if (!name) return '';
+            return name
+                .replace(/Meathead/gi, 'Marshall')
+                .replace(/Mccrossin/gi, 'McCrossin');
+        }
+
+        function slugifyTeamName(name) {
+            return (name || '')
+                .toLowerCase()
+                .replace(/&/g, ' and ')
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-+|-+$/g, '');
+        }
+
+        function resolveTeamVisual(name, slug) {
+            const clean = correctName(name);
+            const baseSlug = slug || slugifyTeamName(clean);
+            const override = TEAM_SLUG_OVERRIDES[clean.toLowerCase()] || TEAM_SLUG_OVERRIDES[baseSlug] || baseSlug;
+            return {
+                name: clean,
+                slug: override,
+                logo: TEAM_LOGOS[override] || ''
+            };
+        }
+
+        function getTeamColors(slug) {
+            return TEAM_COLORS[slug] || { primary: '#0d2538', secondary: '#154262' };
+        }
+
+        function teamColorRgb(hex) {
+            const match = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            if (!match) return '13,37,56';
+            const [, r, g, b] = match;
+            return `${parseInt(r, 16)}, ${parseInt(g, 16)}, ${parseInt(b, 16)}`;
+        }
+
+        function formatPlayerName(raw) {
+            if (!raw) return '';
+            const clean = correctName(raw).trim();
+            if (!clean.includes(',')) return clean;
+            const [last, first] = clean.split(',').map(part => part.trim()).filter(Boolean);
+            return `${first || ''} ${last || ''}`.trim();
+        }
+
+        function formatStatLine(stats) {
+            const goals = Number(stats.goals ?? stats.g ?? 0) || 0;
+            const assists = Number(stats.assists ?? stats.a ?? 0) || 0;
+            const pieces = [];
+            if (goals) pieces.push(`${goals}G`);
+            if (assists) pieces.push(`${assists}A`);
+            const points = Number(stats.points ?? stats.pts ?? (goals + assists)) || (goals + assists);
+            if (!pieces.length && points) pieces.push(`${points}P`);
+            return pieces.join(' ');
+        }
+
+        function extractPerformers(game, limit = 3) {
+            const pool = [];
+            ['home', 'away'].forEach(side => {
+                const list = game.player_stats?.[side];
+                if (!Array.isArray(list)) return;
+                list.forEach(line => {
+                    const statLine = formatStatLine(line);
+                    if (!statLine) return;
+                    pool.push({
+                        name: formatPlayerName(line.name || line.player_name),
+                        statLine,
+                        points: Number(line.points ?? 0) || 0,
+                        goals: Number(line.goals ?? 0) || 0,
+                        assists: Number(line.assists ?? 0) || 0
+                    });
+                });
+            });
+
+            pool.sort((a, b) => {
+                if (b.points !== a.points) return b.points - a.points;
+                if (b.goals !== a.goals) return b.goals - a.goals;
+                if (b.assists !== a.assists) return b.assists - a.assists;
+                return a.name.localeCompare(b.name);
+            });
+
+            return pool.slice(0, limit);
+        }
+
+        function renderStandings(standings) {
+            const tbody = document.getElementById('standingsBody');
+            tbody.innerHTML = '';
+            standings.forEach((team, idx) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${idx + 1}</td>
+                    <td>${correctName(team.team || team.name || '')}</td>
+                    <td style="text-align:center;">${team.wins ?? 0}</td>
+                    <td style="text-align:center;">${team.losses ?? 0}</td>
+                    <td style="text-align:center;">${team.points ?? 0}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function renderScorers(scorers) {
+            const tbody = document.getElementById('scorersBody');
+            tbody.innerHTML = '';
+            scorers.slice(0, 12).forEach((player, idx) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${player.rank ?? idx + 1}</td>
+                    <td>${formatPlayerName(player.name || player.player_name)}</td>
+                    <td style="text-align:center;">${player.g ?? player.goals ?? 0}</td>
+                    <td style="text-align:center;">${player.a ?? player.assists ?? 0}</td>
+                    <td style="text-align:center;">${player.points ?? player.pts ?? 0}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function renderResults(games) {
+            const wrap = document.getElementById('resultsWrap');
+            wrap.innerHTML = '';
+            games.slice(0, 4).forEach(game => {
+                const card = document.createElement('div');
+                card.className = 'score-card';
+                const homeTeam = resolveTeamVisual(game.home, game.home_line?.slug || game.home_team_slug);
+                const awayTeam = resolveTeamVisual(game.away, game.away_line?.slug || game.away_team_slug);
+                const homeColors = getTeamColors(homeTeam.slug);
+                const awayColors = getTeamColors(awayTeam.slug);
+                card.style.setProperty('--home-color-rgb', teamColorRgb(homeColors.primary));
+                card.style.setProperty('--away-color-rgb', teamColorRgb(awayColors.primary));
+                card.dataset.awayColor = 'true';
+
+                const headline = game.headline
+                    ? correctName(game.headline)
+                    : `${awayTeam.name} ${game.away_score} - ${game.home_score} ${homeTeam.name}`;
+
+                const performers = extractPerformers(game, 3);
+
+                card.innerHTML = `
+                    <div class="score-headline">${headline}</div>
+                    <div class="scoreline">
+                        <div class="team">
+                            <span>${awayTeam.name}</span>
+                        </div>
+                        <div class="points">${game.away_score ?? ''}</div>
+                    </div>
+                    <div class="scoreline">
+                        <div class="team">
+                            <span>${homeTeam.name}</span>
+                        </div>
+                        <div class="points">${game.home_score ?? ''}</div>
+                    </div>
+                    <div class="score-meta">
+                        <span>${new Date(game.datetime || game.date || '').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
+                        <span>${game.location || 'Amherst Ice Centre'}</span>
+                    </div>
+                `;
+
+                if (performers.length) {
+                    const perfWrap = document.createElement('div');
+                    perfWrap.className = 'performers';
+                    performers.forEach(p => {
+                        const line = document.createElement('div');
+                        line.className = 'performer-line';
+                        line.innerHTML = `
+                            <span class="performer-name">${p.name}</span>
+                            <span class="performer-stats">${p.statLine}</span>
+                        `;
+                        perfWrap.appendChild(line);
+                    });
+                    card.appendChild(perfWrap);
+                }
+
+                wrap.appendChild(card);
+            });
+        }
+
+        function renderUpcoming(games) {
+            const wrap = document.getElementById('upcomingWrap');
+            wrap.innerHTML = '';
+            games.slice(0, 5).forEach(game => {
+                const homeTeam = resolveTeamVisual(game.home, game.home_line?.slug || game.home_team_slug);
+                const awayTeam = resolveTeamVisual(game.away, game.away_line?.slug || game.away_team_slug);
+                const when = new Date(game.datetime || game.start_local || game.date || '');
+                const dateText = when.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+                const timeText = when.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+
+                const block = document.createElement('div');
+                block.innerHTML = `
+                    <div style="font-size:1.05rem; font-weight:600; letter-spacing:0.08em;">${awayTeam.name} @ ${homeTeam.name}</div>
+                    <div style="color:#9cc8ff; margin-top:6px; letter-spacing:0.08em;">${dateText} · ${timeText}</div>
+                    <div style="color:#dce9ff; font-size:0.95rem; margin-top:4px;">${game.location || 'Amherst Ice Centre'}</div>
+                `;
+                wrap.appendChild(block);
+            });
+        }
+
+        function renderTicker(recent, upcoming) {
+            const track = document.getElementById('tickerTrack');
+            const segments = [];
+
+            recent.forEach(game => {
+                const awayTeam = resolveTeamVisual(game.away, game.away_line?.slug);
+                const homeTeam = resolveTeamVisual(game.home, game.home_line?.slug);
+                const performers = extractPerformers(game, 3);
+                let performerText = performers.map(p => `${p.name} ${p.statLine}`).join(' | ');
+                if (performerText) performerText = ` | ${performerText}`;
+                segments.push(`<span class="ticker-item"><strong>Final</strong> ${awayTeam.name} ${game.away_score}-${game.home_score} ${homeTeam.name}${performerText}</span>`);
+            });
+
+            upcoming.forEach(game => {
+                const awayTeam = resolveTeamVisual(game.away, game.away_line?.slug);
+                const homeTeam = resolveTeamVisual(game.home, game.home_line?.slug);
+                const when = new Date(game.datetime || game.start_local || game.date || '');
+                const dateText = when.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+                const timeText = when.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+                segments.push(`<span class="ticker-item"><strong>Next</strong> ${dateText} ${timeText} ${awayTeam.name} @ ${homeTeam.name}</span>`);
+            });
+
+            if (!segments.length) {
+                segments.push('<span class="ticker-item">AAHL updates will return shortly.</span>');
+            }
+
+            track.innerHTML = `${segments.join('')} ${segments.join('')}`;
+            track.style.animationDuration = `${Math.max(12, segments.length * 4)}s`;
+        }
+
+        function updateClock() {
+            const now = new Date();
+            const pill = document.getElementById('clockPill');
+            pill.textContent = now.toLocaleString('en-US', { weekday: 'short', hour: 'numeric', minute: '2-digit' });
+        }
+
+        function initialize(data) {
+            renderStandings(data.standings || []);
+            renderScorers(data.top_scorers || []);
+            renderResults(data.recent_results || []);
+            renderUpcoming(data.upcoming_games || []);
+            renderTicker(data.recent_results || [], data.upcoming_games || []);
+            updateClock();
+        }
+
+        function loadData() {
+            const url = 'https://raw.githubusercontent.com/ThomasMcCrossin/aahlscraper/main/data/yodeck_display.json';
+            fetch(url, { cache: 'no-store' })
+                .then(res => {
+                    if (!res.ok) throw new Error('Failed to fetch data');
+                    return res.json();
+                })
+                .then(initialize)
+                .catch(err => {
+                    console.warn('Falling back to sample data:', err);
+                    initialize(sampleData);
+                });
+        }
+
+        const sampleData = {
+            standings: [
+                { team: 'Maltby Sports', wins: 8, losses: 2, points: 16 },
+                { team: 'J&K Electric', wins: 7, losses: 3, points: 14 },
+                { team: 'G.R. Mitchell Welding', wins: 6, losses: 4, points: 12 },
+                { team: 'Ultramar', wins: 5, losses: 5, points: 10 },
+                { team: 'Colson Overhead Doors', wins: 4, losses: 6, points: 8 }
+            ],
+            top_scorers: [
+                { rank: 1, name: 'Bridge, Issac', g: 12, a: 10, points: 22 },
+                { rank: 2, name: 'MacDonald, Marshall', g: 11, a: 9, points: 20 },
+                { rank: 3, name: 'Atkinson, Dave', g: 10, a: 8, points: 18 },
+                { rank: 4, name: 'Mackenzie, Rubein', g: 9, a: 9, points: 18 }
+            ],
+            recent_results: [
+                {
+                    home: 'Colson Overhead Doors',
+                    away: 'J&K Electric',
+                    home_score: 3,
+                    away_score: 6,
+                    datetime: '2025-11-02T21:00:00-04:00',
+                    location: 'Amherst',
+                    home_line: { slug: 'colson-overhead-doors' },
+                    away_line: { slug: 'j-and-k-electric' },
+                    headline: "J&K Electric rolls past Colson Overhead Doors 6-3 powered by Brendan Stone's hat trick, while Jeremy Kinnear adding two goals",
+                    player_stats: {
+                        home: [
+                            { name: 'Gesner, Logan', goals: 1, assists: 0, points: 1 },
+                            { name: 'Harrison, Avery', goals: 0, assists: 1, points: 1 }
+                        ],
+                        away: [
+                            { name: 'Stone, Brendan', goals: 3, assists: 1, points: 4 },
+                            { name: 'Kinnear, Jeremy', goals: 2, assists: 0, points: 2 }
+                        ]
+                    }
+                }
+            ],
+            upcoming_games: [
+                {
+                    home: 'Ultramar',
+                    away: 'J&K Electric',
+                    datetime: '2025-11-12T20:00:00-04:00',
+                    location: 'Amherst'
+                }
+            ]
+        };
+
+        loadData();
+        setInterval(updateClock, 30000);
+    </script>
+</body>
+</html>

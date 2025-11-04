@@ -678,7 +678,7 @@
     </div>
 
     <script>
-        const SLIDE_DURATION_MS = 7000;
+        const SLIDE_DURATIONS_MS = [20000, 10000];
 
         // Sample data with name corrections applied
         const sampleData = {
@@ -1346,11 +1346,11 @@
                 .map(entry => entry.replace(/<[^>]*>/g, ''))
                 .join(' ')
                 .length;
-            const duration = Math.max(16, textLength * 0.3);
+            const duration = Math.max(10, textLength * 0.18);
             track.style.animationDuration = `${duration}s`;
         }
 
-        function startSlideShow(durationMs = SLIDE_DURATION_MS) {
+        function startSlideShow(durations = SLIDE_DURATIONS_MS) {
             const slides = Array.from(document.querySelectorAll('.slide'));
             if (slides.length === 0) {
                 return;
@@ -1366,12 +1366,25 @@
                 return;
             }
 
-            setInterval(() => {
-                index = (index + 1) % slides.length;
-                slides.forEach((slide, idx) => {
-                    slide.classList.toggle('active', idx === index);
-                });
-            }, durationMs);
+            const rotationDurations = Array.isArray(durations) && durations.length
+                ? durations.map(value => {
+                    const numeric = Number(value);
+                    return Number.isFinite(numeric) && numeric > 0 ? numeric : 15000;
+                })
+                : [15000];
+
+            function scheduleTransition(currentIndex) {
+                const delay = rotationDurations[currentIndex % rotationDurations.length];
+                setTimeout(() => {
+                    const nextIndex = (currentIndex + 1) % slides.length;
+                    slides.forEach((slide, idx) => {
+                        slide.classList.toggle('active', idx === nextIndex);
+                    });
+                    scheduleTransition(nextIndex);
+                }, delay);
+            }
+
+            scheduleTransition(index);
         }
 
         // Initialize with sample data
