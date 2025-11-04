@@ -114,6 +114,7 @@ class RosterPlayer:
     number: Optional[str]
     name: str
     positions: List[str]
+    player_id: str
     height: Optional[str] = None
     weight: Optional[str] = None
     shoots: Optional[str] = None
@@ -125,6 +126,7 @@ class RosterPlayer:
             "number": self.number,
             "name": self.name,
             "positions": self.positions,
+            "player_id": self.player_id,
             "height": self.height,
             "weight": self.weight,
             "shoots": self.shoots,

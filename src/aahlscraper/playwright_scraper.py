@@ -4,11 +4,13 @@ Playwright-based scraper for handling JavaScript-rendered AAHL pages.
 
 from __future__ import annotations
 
-from typing import Dict, List
+from typing import Dict, List, Optional, Tuple
 
 from playwright.sync_api import sync_playwright
 
 from .common import build_url, normalize_header
+from .http_scraper import AmherstHockeyScraper
+from .utils import player_name_variants, slugify
 
 EXTRACT_ROWS_SCRIPT = """
 () => {
@@ -42,6 +44,7 @@ class AmherstHockeyPlaywrightScraper:
         self.headless = headless
         self.browser = browser
         self.timeout_ms = timeout_ms
+        self._player_lookup: Optional[Dict[Tuple[str, str], Dict[str, Optional[str]]]] = None
 
     def _collect_rows(self, page_type: str, **params: str) -> List[List[str]]:
         url = build_url(self.team_id, page_type, **params)
@@ -63,6 +66,36 @@ class AmherstHockeyPlaywrightScraper:
                 return []
             finally:
                 browser.close()
+
+    def _ensure_player_lookup(self) -> Dict[Tuple[str, str], Dict[str, Optional[str]]]:
+        if self._player_lookup is not None:
+            return self._player_lookup
+
+        helper = AmherstHockeyScraper(team_id=self.team_id)
+        rosters = helper.scrape_rosters()
+        lookup: Dict[Tuple[str, str], Dict[str, Optional[str]]] = {}
+
+        for roster in rosters.values():
+            team_slug = roster.get("team_slug")
+            if not team_slug:
+                continue
+            team_payload = {
+                "team_id": roster.get("team_id"),
+                "team_name": roster.get("team_name"),
+            }
+            for player in roster.get("players", []):
+                payload = {
+                    "player_id": player.get("player_id"),
+                    "number": player.get("number"),
+                    **team_payload,
+                }
+                for key in player_name_variants(player.get("name", "")):
+                    if not key:
+                        continue
+                    lookup.setdefault((team_slug, key), payload)
+
+        self._player_lookup = lookup
+        return lookup
 
     def scrape_schedule(self, format_type: str = "List", date_filter: str = "ALL") -> List[Dict[str, str]]:
         rows = self._collect_rows("schedule", format=format_type, d=date_filter)
@@ -105,7 +138,34 @@ class AmherstHockeyPlaywrightScraper:
                 player = {headers[i]: cells[i] for i in range(len(cells))}
             else:
                 player = {f"col_{i}": cell for i, cell in enumerate(cells)}
+
             players.append(player)
+
+        lookup = self._ensure_player_lookup()
+        for player in players:
+            name_field = (
+                player.get("name")
+                or player.get("player")
+                or player.get("player_name")
+                or player.get("playername")
+                or ""
+            )
+            team_field = player.get("team") or player.get("Team") or ""
+            team_slug = slugify(team_field) if team_field else ""
+
+            player_id: Optional[str] = None
+            if team_slug and lookup:
+                for key in player_name_variants(name_field):
+                    match = lookup.get((team_slug, key))
+                    if match:
+                        player_id = match["player_id"]
+                        if match.get("number") and not player.get("no"):
+                            player.setdefault("no", match.get("number"))
+                        player.setdefault("team_id", match.get("team_id"))
+                        player.setdefault("team_name", match.get("team_name") or team_field)
+                        break
+            player["player_id"] = player_id
+            player["team_slug"] = team_slug or None
 
         return players
 

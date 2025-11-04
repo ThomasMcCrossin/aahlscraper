@@ -103,6 +103,32 @@ class AAHLDataProcessor:
             return standings
         return []
 
+    def load_headlines(self) -> Dict[str, Any]:
+        """Load curated headlines keyed by game."""
+        path = self.data_dir / "headlines.json"
+        if not path.exists():
+            return {"headlines": []}
+        with path.open("r", encoding="utf-8") as handle:
+            data = json.load(handle)
+        if isinstance(data, dict):
+            data.setdefault("headlines", [])
+            return data
+        # Legacy list format
+        return {"headlines": []}
+
+    def load_player_registry(self) -> Dict[str, Any]:
+        """Load aggregated player registry with IDs and metrics."""
+        path = self.data_dir / "player_registry.json"
+        if not path.exists():
+            return {"players": []}
+        with path.open("r", encoding="utf-8") as handle:
+            data = json.load(handle)
+        if isinstance(data, dict) and "players" in data:
+            return data
+        if isinstance(data, list):
+            return {"players": data}
+        return {"players": []}
+
     def filter_amherst_games(self, schedule: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
         """Filter schedule for Amherst games, split into completed and upcoming.
 
@@ -262,6 +288,8 @@ class AAHLDataProcessor:
         top_scorers = self.get_top_scorers(20)
         schedule = self.load_schedule()
         results = self.load_results()
+        headlines_blob = self.load_headlines()
+        player_registry = self.load_player_registry()
 
         combined_by_id: Dict[str, Dict[str, Any]] = {}
 
@@ -272,6 +300,23 @@ class AAHLDataProcessor:
             combined_by_id[game.get("game_id", "")] = game
 
         games = self.filter_amherst_games(list(combined_by_id.values()))
+        headline_lookup = {
+            str(entry.get("game_id")): entry
+            for entry in headlines_blob.get("headlines", [])
+            if isinstance(entry, dict) and entry.get("game_id")
+        }
+
+        enriched_recent: List[Dict[str, Any]] = []
+        for game in games['recent_results']:
+            enriched = dict(game)
+            game_id = str(game.get("game_id", ""))
+            headline_entry = headline_lookup.get(game_id)
+            if headline_entry:
+                enriched["headline"] = headline_entry.get("headline")
+                enriched["headline_updated_at"] = headline_entry.get("updated_at")
+            enriched_recent.append(enriched)
+
+        enriched_upcoming = [dict(game) for game in games['upcoming_games']]
 
         # Format standings
         formatted_standings = []
@@ -309,8 +354,10 @@ class AAHLDataProcessor:
             'timestamp': datetime.now().isoformat(),
             'standings': formatted_standings,
             'top_scorers': top_scorers,
-            'recent_results': games['recent_results'],
-            'upcoming_games': games['upcoming_games'],
+            'recent_results': enriched_recent,
+            'upcoming_games': enriched_upcoming,
+            'headlines': headlines_blob.get('headlines', []),
+            'player_registry': player_registry,
         }
 
     def save_yodeck_data(self, filename: str = "yodeck_display.json"):

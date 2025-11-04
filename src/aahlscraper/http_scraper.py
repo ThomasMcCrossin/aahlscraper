@@ -5,14 +5,14 @@ HTTP-based scraper implementation for the Amherst Adult Hockey League site.
 from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
-from typing import Dict, Iterable, List, Optional
+from typing import Dict, Iterable, List, Optional, Tuple
 
 import requests
 from bs4 import BeautifulSoup
 from bs4.element import Tag
 
 from .common import build_url, find_best_table, normalize_header
-from .models import GameRecord
+from .models import GameRecord, TeamRoster
 from .parsers import (
     CALENDAR_URL,
     merge_games_with_scores,
@@ -20,6 +20,7 @@ from .parsers import (
     parse_rosters,
     parse_scoreboard,
 )
+from .utils import player_name_variants, slugify
 
 DEFAULT_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
@@ -42,6 +43,7 @@ def _extract_rows(table: Tag) -> List[List[str]]:
     return rows
 
 
+
 class AmherstHockeyScraper:
     """
     Requests + BeautifulSoup scraper for AAHL team pages.
@@ -58,6 +60,8 @@ class AmherstHockeyScraper:
         self.timeout = timeout
         self.session.headers.update(DEFAULT_HEADERS)
         self._game_cache: Optional[List[GameRecord]] = None
+        self._roster_cache: Optional[Dict[str, TeamRoster]] = None
+        self._player_lookup: Optional[Dict[Tuple[str, str], Dict[str, Optional[str]]]] = None
 
     def _fetch_soup(self, page_type: str, **params: str) -> Optional[BeautifulSoup]:
         url = build_url(self.team_id, page_type, **params)
@@ -87,6 +91,39 @@ class AmherstHockeyScraper:
 
     def _fetch_roster_page(self) -> Optional[str]:
         return self._fetch_text(build_url(self.team_id, "roster"), params={"expandAll": "1"})
+
+    def _load_rosters(self) -> Dict[str, TeamRoster]:
+        if self._roster_cache is not None:
+            return self._roster_cache
+
+        html = self._fetch_roster_page()
+        if not html:
+            self._roster_cache = {}
+            return {}
+
+        self._roster_cache = parse_rosters(html)
+        return self._roster_cache
+
+    def _build_player_lookup(self) -> Dict[Tuple[str, str], Dict[str, Optional[str]]]:
+        if self._player_lookup is not None:
+            return self._player_lookup
+
+        rosters = self._load_rosters()
+        lookup: Dict[Tuple[str, str], Dict[str, Optional[str]]] = {}
+
+        for team_slug, roster in rosters.items():
+            for player in roster.players:
+                payload = {
+                    "player_id": player.player_id,
+                    "number": player.number,
+                    "team_id": roster.team_id,
+                    "team_name": roster.team_name,
+                }
+                for key in player_name_variants(player.name):
+                    lookup.setdefault((team_slug, key), payload)
+
+        self._player_lookup = lookup
+        return lookup
 
     def _load_games(self) -> List[GameRecord]:
         if self._game_cache is not None:
@@ -153,6 +190,8 @@ class AmherstHockeyScraper:
         headers: List[str] = [normalize_header(cell) for cell in rows[0]]
         data_rows = rows[1:] if len(rows) > 1 else rows
 
+        lookup = self._build_player_lookup()
+
         players: List[Dict[str, str]] = []
         for cells in data_rows:
             if len(cells) < 2:
@@ -162,6 +201,35 @@ class AmherstHockeyScraper:
                 player = {headers[i]: cells[i] for i in range(len(cells))}
             else:
                 player = {f"col_{i}": cell for i, cell in enumerate(cells)}
+
+            name_field = (
+                player.get("name")
+                or player.get("player")
+                or player.get("player_name")
+                or player.get("playername")
+                or ""
+            )
+            team_field = player.get("team") or player.get("Team") or ""
+
+            team_slug = slugify(team_field) if team_field else ""
+            player_id: Optional[str] = None
+            if team_slug and lookup:
+                for key in player_name_variants(name_field):
+                    match = lookup.get((team_slug, key))
+                    if match:
+                        player_id = match["player_id"]
+                        if match.get("number") and not player.get("no"):
+                            player.setdefault("no", match.get("number"))
+                        player.setdefault("team_id", match.get("team_id"))
+                        player.setdefault("team_name", match.get("team_name") or team_field)
+                        break
+
+            if player_id:
+                player["player_id"] = player_id
+            else:
+                player["player_id"] = None
+            player["team_slug"] = team_slug or None
+
             players.append(player)
 
         return players
@@ -213,11 +281,7 @@ class AmherstHockeyScraper:
         Parse and return team rosters keyed by team slug.
         """
 
-        html = self._fetch_roster_page()
-        if not html:
-            return {}
-
-        rosters = parse_rosters(html)
+        rosters = self._load_rosters()
         return {slug: roster.to_dict() for slug, roster in rosters.items()}
 
     def get_recent_games(self, weeks: int = 1) -> List[Dict[str, object]]:

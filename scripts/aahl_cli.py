@@ -88,8 +88,19 @@ def handle_scrape(args: argparse.Namespace) -> None:
             roster_dir = outdir / "rosters"
             roster_dir.mkdir(parents=True, exist_ok=True)
             export_json(list(rosters.values()), outdir / "rosters.json")
+            players_flat: List[Dict[str, str]] = []
             for slug, roster in rosters.items():
                 export_json(roster["players"], roster_dir / f"{slug}.json")
+                team_meta = {
+                    "team_id": roster.get("team_id"),
+                    "team_name": roster.get("team_name"),
+                    "team_slug": roster.get("team_slug", slug),
+                }
+                for player in roster.get("players", []):
+                    merged = dict(player)
+                    merged.update(team_meta)
+                    players_flat.append(merged)
+            export_json(players_flat, outdir / "players.json")
 
     if "teams" in args.targets:
         if not args.no_json:

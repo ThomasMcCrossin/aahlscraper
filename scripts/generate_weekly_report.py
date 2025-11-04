@@ -17,6 +17,10 @@ HISTORY_DIR = DATA_DIR / "history"
 REPORT_PATH = DATA_DIR / "weekly_report.json"
 HEADLINES_PATH = DATA_DIR / "headlines.json"
 
+try:
+    from build_player_registry import main as build_player_registry_main
+except ImportError:
+    build_player_registry_main = None
 
 def _load_json(path: Path) -> Optional[object]:
     if not path.exists():
@@ -35,6 +39,152 @@ def _latest_history(folder: Path) -> Tuple[Optional[Path], Optional[Path]]:
     latest = files[-1]
     previous = files[-2] if len(files) >= 2 else None
     return latest, previous
+
+
+def _parse_game_datetime(value: object) -> Optional[datetime]:
+    if not value:
+        return None
+    try:
+        dt = datetime.fromisoformat(str(value))
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
+
+
+def _safe_int(value: object) -> Optional[int]:
+    if isinstance(value, bool):
+        return int(value)
+    if isinstance(value, int):
+        return value
+    if isinstance(value, float):
+        return int(value)
+    if isinstance(value, str):
+        text = value.strip()
+        if not text:
+            return None
+        try:
+            return int(text)
+        except ValueError:
+            try:
+                return int(float(text))
+            except (ValueError, TypeError):
+                return None
+    return None
+
+
+def _team_name(game: Dict[str, object], side: str) -> Optional[str]:
+    line = game.get(f"{side}_line")
+    if isinstance(line, dict) and line.get("name"):
+        return str(line["name"])
+    value = game.get(side)
+    if isinstance(value, str):
+        return value
+    return None
+
+
+def _load_headline_index() -> Dict[str, Dict[str, object]]:
+    raw = _load_json(HEADLINES_PATH)
+    if isinstance(raw, dict):
+        entries = raw.get("headlines", [])
+    elif isinstance(raw, list):
+        # Legacy format: discard auto-generated list to avoid duplicates
+        entries = []
+    else:
+        entries = []
+
+    index: Dict[str, Dict[str, object]] = {}
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
+        identifier = entry.get("game_id")
+        if not identifier:
+            continue
+        index[str(identifier)] = dict(entry)
+    return index
+
+
+def _compose_headline(game: Dict[str, object]) -> Optional[str]:
+    home = _team_name(game, "home")
+    away = _team_name(game, "away")
+    home_score = _safe_int(game.get("home_score"))
+    away_score = _safe_int(game.get("away_score"))
+    if (
+        home is None
+        or away is None
+        or home_score is None
+        or away_score is None
+    ):
+        return None
+
+    margin = abs(home_score - away_score)
+    if margin >= 5:
+        tone = "dominates"
+    elif margin == 1:
+        tone = "edges"
+    else:
+        tone = "defeats"
+
+    if home_score >= away_score:
+        winner, loser = home, away
+        winner_score, loser_score = home_score, away_score
+    else:
+        winner, loser = away, home
+        winner_score, loser_score = away_score, home_score
+
+    return f"{winner} {tone} {loser} {winner_score}-{loser_score}"
+
+
+def _ensure_headlines(games: List[Dict[str, object]], existing: Dict[str, Dict[str, object]]) -> List[Dict[str, object]]:
+    now_iso = datetime.now(timezone.utc).isoformat()
+    entries: List[Dict[str, object]] = []
+
+    def sort_key(game: Dict[str, object]) -> tuple[int, Optional[datetime]]:
+        dt = _parse_game_datetime(game.get("datetime"))
+        # Sort primarily by datetime descending, fallback to game id
+        return (0 if dt else 1, dt or datetime.min.replace(tzinfo=timezone.utc))
+
+    for game in sorted(games, key=sort_key):
+        game_id = game.get("game_id")
+        if not game_id:
+            continue
+        game_id_str = str(game_id)
+
+        headline = _compose_headline(game)
+        if not headline:
+            continue
+
+        existing_entry = existing.get(game_id_str, {})
+        entry = dict(existing_entry)
+
+        dt = _parse_game_datetime(game.get("datetime"))
+        iso_dt = dt.isoformat() if dt else None
+
+        if not entry:
+            entry = {
+                "game_id": game_id_str,
+                "headline": headline,
+                "created_at": now_iso,
+                "updated_at": now_iso,
+            }
+        else:
+            if entry.get("headline") != headline:
+                entry["headline"] = headline
+                entry["updated_at"] = now_iso
+
+        entry["game_datetime"] = iso_dt
+        entry["home_team"] = _team_name(game, "home")
+        entry["away_team"] = _team_name(game, "away")
+        entry["home_score"] = _safe_int(game.get("home_score"))
+        entry["away_score"] = _safe_int(game.get("away_score"))
+        entry["summary_url"] = game.get("summary_url")
+        entry["box_score_url"] = game.get("box_score_url")
+        entries.append(entry)
+
+    # Most recent games first
+    entries.sort(key=lambda item: (item.get("game_datetime") or "", item.get("game_id")), reverse=True)
+    return entries
 
 
 def _standing_points(team: Dict[str, object]) -> int:
@@ -92,53 +242,12 @@ def _load_recent_results(days: int = 7) -> List[Dict[str, object]]:
     cutoff = datetime.now(timezone.utc) - timedelta(days=days)
     recent: List[Dict[str, object]] = []
     for game in results:
-        dt_raw = game.get("datetime")
-        if not dt_raw:
+        dt = _parse_game_datetime(game.get("datetime"))
+        if not dt:
             continue
-        try:
-            dt = datetime.fromisoformat(str(dt_raw))
-        except ValueError:
-            continue
-        if dt.tzinfo is None:
-            dt = dt.replace(tzinfo=timezone.utc)
-        else:
-            dt = dt.astimezone(timezone.utc)
         if dt >= cutoff:
             recent.append(game)
     return recent
-
-
-def _generate_headlines(games: List[Dict[str, object]]) -> List[str]:
-    headlines: List[str] = []
-    for game in games:
-        home = game.get("home")
-        away = game.get("away")
-        home_score = game.get("home_score")
-        away_score = game.get("away_score")
-        if home is None or away is None or home_score == "" or away_score == "":
-            continue
-
-        margin = None
-        try:
-            margin = abs(int(home_score) - int(away_score))
-        except (TypeError, ValueError):
-            pass
-
-        if margin is not None and margin >= 5:
-            tone = "dominates"
-        elif margin == 1:
-            tone = "edges"
-        else:
-            tone = "defeats"
-
-        winner = home if int(home_score) >= int(away_score) else away
-        loser = away if winner == home else home
-        winner_score, loser_score = (home_score, away_score) if winner == home else (away_score, home_score)
-
-        headline = f"{winner} {tone} {loser} {winner_score}-{loser_score}"
-        headlines.append(headline)
-
-    return headlines
 
 
 def _summarize_recent_results(games: List[Dict[str, object]]) -> List[Dict[str, object]]:
@@ -183,20 +292,36 @@ def main() -> None:
     movements = _compute_movements(current_snapshot, previous_snapshot)
     recent_games = _load_recent_results(days=7)
     recent_summary = _summarize_recent_results(recent_games)
-    headlines = _generate_headlines(recent_games)
+    headline_index = _load_headline_index()
+    headline_entries = _ensure_headlines(recent_games, headline_index)
 
+    generated_at = datetime.now(timezone.utc).isoformat()
     report = {
-        "generated_at": datetime.now().isoformat(),
+        "generated_at": generated_at,
         "standings_snapshot": latest.name if latest else None,
         "previous_snapshot": previous.name if previous else None,
         "standings_movements": movements,
         "recent_team_form": recent_summary,
+        "game_headlines": [
+            {
+                "game_id": entry["game_id"],
+                "headline": entry["headline"],
+                "game_datetime": entry.get("game_datetime"),
+            }
+            for entry in headline_entries
+        ],
     }
 
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
     REPORT_PATH.write_text(json.dumps(report, indent=2), encoding="utf-8")
 
-    HEADLINES_PATH.write_text(json.dumps(headlines, indent=2), encoding="utf-8")
+    HEADLINES_PATH.write_text(
+        json.dumps({"generated_at": generated_at, "headlines": headline_entries}, indent=2),
+        encoding="utf-8",
+    )
+
+    if build_player_registry_main is not None:
+        build_player_registry_main()
 
 
 if __name__ == "__main__":

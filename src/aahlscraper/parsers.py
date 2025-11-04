@@ -15,7 +15,7 @@ from bs4 import BeautifulSoup
 from bs4.element import Tag
 
 from .models import GameRecord, GameTeamLine, RosterPlayer, ScoreBoardEntry, TeamRoster
-from .utils import slugify
+from .utils import derive_player_id, slugify
 
 CALENDAR_URL = "https://media.hometeamsonline.com/photos/hockey/{team_id}/data/schedule.ics"
 BASE_TEAM_URL = "https://www.amherstadulthockey.com/teams/default.asp"
@@ -451,11 +451,14 @@ def parse_rosters(html: str) -> Dict[str, TeamRoster]:
             catches = _extract_text(cells.get("catchesLabel"))
             hometown = _extract_text(cells.get("hometownLabel"))
 
+            player_id = derive_player_id(team_slug, name, number)
+
             players.append(
                 RosterPlayer(
                     number=number,
                     name=name,
                     positions=positions,
+                    player_id=player_id,
                     height=height,
                     weight=weight,
                     shoots=shoots,
