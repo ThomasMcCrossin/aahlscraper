@@ -105,6 +105,71 @@ def _load_headline_index() -> Dict[str, Dict[str, object]]:
     return index
 
 
+def _display_name(name: str) -> str:
+    if "," in name:
+        last, first = [segment.strip() for segment in name.split(",", 1)]
+        return f"{first} {last}".strip()
+    return name.strip()
+
+
+def _player_statline(player: Dict[str, object]) -> Optional[tuple[str, str]]:
+    goals = _safe_int(player.get("goals")) or 0
+    assists = _safe_int(player.get("assists")) or 0
+    if goals <= 0 and assists <= 0:
+        return None
+
+    parts: List[str] = []
+    if goals:
+        parts.append(f"{goals}G")
+    if assists:
+        parts.append(f"{assists}A")
+    return _display_name(str(player.get("name", "Unknown"))), ", ".join(parts)
+
+
+def _player_highlight_phrase(game: Dict[str, object], winner_side: str) -> Optional[str]:
+    stats = game.get("player_stats")
+    if not isinstance(stats, dict):
+        return None
+
+    winners = stats.get(winner_side)
+    if not isinstance(winners, list):
+        return None
+
+    enriched: List[tuple[int, int, Dict[str, object]]] = []
+    for player in winners:
+        if not isinstance(player, dict):
+            continue
+        goals = _safe_int(player.get("goals")) or 0
+        assists = _safe_int(player.get("assists")) or 0
+        points = goals + assists
+        if points <= 0:
+            continue
+        enriched.append((points, goals, player))
+
+    if not enriched:
+        return None
+
+    enriched.sort(key=lambda item: (item[0], item[1], str(item[2].get("name", ""))), reverse=True)
+    primary_player = enriched[0][2]
+    primary = _player_statline(primary_player)
+    if not primary:
+        return None
+
+    phrase = f"behind {primary[0]}'s {primary[1]}"
+
+    secondary = None
+    for _, _, candidate in enriched[1:]:
+        match = _player_statline(candidate)
+        if match:
+            secondary = match
+            break
+
+    if secondary:
+        phrase += f" with help from {secondary[0]}'s {secondary[1]}"
+
+    return phrase
+
+
 def _compose_headline(game: Dict[str, object]) -> Optional[str]:
     home = _team_name(game, "home")
     away = _team_name(game, "away")
@@ -129,11 +194,19 @@ def _compose_headline(game: Dict[str, object]) -> Optional[str]:
     if home_score >= away_score:
         winner, loser = home, away
         winner_score, loser_score = home_score, away_score
+        winner_side = "home"
     else:
         winner, loser = away, home
         winner_score, loser_score = away_score, home_score
+        winner_side = "away"
 
-    return f"{winner} {tone} {loser} {winner_score}-{loser_score}"
+    headline = f"{winner} {tone} {loser} {winner_score}-{loser_score}"
+
+    highlight = _player_highlight_phrase(game, winner_side)
+    if highlight:
+        headline = f"{headline} {highlight}"
+
+    return headline
 
 
 def _ensure_headlines(games: List[Dict[str, object]], existing: Dict[str, Dict[str, object]]) -> List[Dict[str, object]]:

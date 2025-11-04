@@ -557,7 +557,8 @@ def parse_box_score(html: str) -> Dict[str, object]:
             for row in rows:
                 if not row:
                     continue
-                if any("team stats" in cell.lower() for cell in row):
+                lowered = [cell.lower() for cell in row if isinstance(cell, str)]
+                if any("team stats" in cell for cell in lowered) or any("overall stats" in cell for cell in lowered):
                     continue
 
                 record: Dict[str, object] = {}
