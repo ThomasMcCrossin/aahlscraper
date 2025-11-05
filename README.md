@@ -159,7 +159,7 @@ python aahl_yodeck_setup.py full
 # - Click Save & Push Changes
 ```
 
-That's it! The display will automatically show the latest data that's scraped every 2 hours by GitHub Actions.
+That's it! The display automatically shows the latest data collected three times per day (8 AM, 12 PM, 4 PM Atlantic) plus live five-minute refreshes during Tuesday and Sunday night games.
 
 ### Features
 
@@ -167,15 +167,16 @@ That's it! The display will automatically show the latest data that's scraped ev
 ✅ **Auto-Rotation** - Each section displays for 15 seconds
 ✅ **Professional Design** - Sports-themed colors optimized for viewing
 ✅ **No Dependencies** - Self-contained HTML5 app
-✅ **🌟 Fully Automated** - GitHub Actions scrapes data every 2 hours, display auto-updates
+✅ **🌟 Fully Automated** - GitHub Actions scrapes on a smart cadence (daily checkpoints + game-night bursts with automatic DST handling)
 ✅ **Cloud-Based** - No server or cron jobs needed, runs entirely on GitHub
 
 ### How It Works
 
-1. **GitHub Actions** automatically runs the scraper every 2 hours
+1. **GitHub Actions** automatically runs the scraper on the timed schedule
 2. Fresh data is committed to the repository (`data/yodeck_display.json`)
 3. The Yodeck display fetches the latest data from GitHub
 4. Your screen automatically shows the most current stats
+5. Cron windows automatically adjust for Atlantic Daylight/Standard Time so the cadence stays aligned with real game times year-round
 
 **Zero maintenance required!** Just upload the display once and it stays updated forever.
 

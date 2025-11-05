@@ -2,8 +2,27 @@ name: Scrape AAHL Data
 
 on:
   schedule:
-    # Run every 2 hours
-    - cron: '0 */2 * * *'
+    # Daily checkpoints (08:00, 12:00, 16:00 Atlantic) with DST-aware UTC offsets
+    - cron: '0 12,16,20 * 11,12 *' # Nov-Dec (AST, UTC-4)
+    - cron: '0 12,16,20 * 1,2 *'   # Jan-Feb (AST, UTC-4)
+    - cron: '0 11,15,19 * 3-10 *'  # Mar-Oct (ADT, UTC-3)
+    # Tuesday game nights (20:45-23:00 Atlantic) every 5 min
+    - cron: '45-59/5 0 * 11,12 3'  # Nov-Dec (AST -> Wed 00:45-00:55 UTC)
+    - cron: '45-59/5 0 * 1,2 3'    # Jan-Feb
+    - cron: '*/5 1-2 * 11,12 3'    # Nov-Dec (AST -> Wed 01:00-02:55 UTC)
+    - cron: '*/5 1-2 * 1,2 3'      # Jan-Feb
+    - cron: '0 3 * 11,12 3'        # Nov-Dec (AST -> Wed 03:00 UTC)
+    - cron: '0 3 * 1,2 3'          # Jan-Feb
+    - cron: '45-59/5 23 * 3-10 2'  # Mar-Oct (ADT -> Tue 23:45-23:55 UTC)
+    - cron: '*/5 0-1 * 3-10 3'     # Mar-Oct (ADT -> Wed 00:00-01:55 UTC)
+    - cron: '0 2 * 3-10 3'         # Mar-Oct (ADT -> Wed 02:00 UTC)
+    # Sunday night games (21:00-22:00 Atlantic) every 5 min
+    - cron: '*/5 1 * 11,12 1'      # Nov-Dec (AST -> Mon 01:00-01:55 UTC)
+    - cron: '*/5 1 * 1,2 1'        # Jan-Feb
+    - cron: '0 2 * 11,12 1'        # Nov-Dec (AST -> Mon 02:00 UTC)
+    - cron: '0 2 * 1,2 1'          # Jan-Feb
+    - cron: '*/5 0 * 3-10 1'       # Mar-Oct (ADT -> Mon 00:00-00:55 UTC)
+    - cron: '0 1 * 3-10 1'         # Mar-Oct (ADT -> Mon 01:00 UTC)
   workflow_dispatch: # Allow manual trigger
   push:
     branches: [main]

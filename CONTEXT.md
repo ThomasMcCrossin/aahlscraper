@@ -17,8 +17,10 @@
    - Points: ✅ Working (22, 18, 13 pts showing correctly)
    - Teams: ✅ Working
 
-3. **GitHub Actions** - Running every 2 hours automatically
-   - Scrapes AAHL website
+3. **GitHub Actions** - Runs 3x daily + game-night bursts
+   - Scrapes AAHL website on the 8 AM / 12 PM / 4 PM Atlantic cadence
+   - Adds 5-minute refreshes during Tue/Sun evening games
+   - Schedule auto-adjusts between AST/ADT to keep local times accurate
    - Processes data with name corrections
    - Commits to repo
    - Last successful run: Today
