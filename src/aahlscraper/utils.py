@@ -69,6 +69,44 @@ def player_name_variants(name: str) -> List[str]:
     return [variant for variant in variants if variant]
 
 
+_ROSTER_CAPTAIN_PATTERNS: List[Tuple[str, re.Pattern[str]]] = [
+    (
+        "assistant_captain",
+        re.compile(r"(?:\s*[-–]\s*|\s*\(\s*)(?:assistant\s+captain|asst\.?\s*captain)\s*\)?\s*$", re.IGNORECASE),
+    ),
+    (
+        "alternate_captain",
+        re.compile(r"(?:\s*[-–]\s*|\s*\(\s*)(?:alternate\s+captain|alt\.?\s*captain)\s*\)?\s*$", re.IGNORECASE),
+    ),
+    (
+        "captain",
+        re.compile(r"(?:\s*[-–]\s*|\s*\(\s*)(?:captain|c)\s*\)?\s*$", re.IGNORECASE),
+    ),
+]
+
+
+def normalize_roster_name(raw: Optional[str]) -> Tuple[str, Optional[str]]:
+    """
+    Remove trailing captaincy markers from a roster name and return the cleaned value plus role.
+    """
+
+    if not raw:
+        return "", None
+
+    value = raw.strip()
+    captaincy: Optional[str] = None
+
+    for role, pattern in _ROSTER_CAPTAIN_PATTERNS:
+        match = pattern.search(value)
+        if match:
+            captaincy = role
+            value = value[: match.start()].rstrip()
+            break
+
+    value = value.rstrip("-–").strip()
+    return value, captaincy
+
+
 def derive_player_id(team_slug: str, name: str, number: Optional[str] = None) -> str:
     """
     Generate a stable player identifier scoped to a team.

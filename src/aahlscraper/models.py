@@ -120,6 +120,7 @@ class RosterPlayer:
     shoots: Optional[str] = None
     catches: Optional[str] = None
     hometown: Optional[str] = None
+    captaincy: Optional[str] = None
 
     def to_dict(self) -> Dict[str, object]:
         return {
@@ -132,6 +133,7 @@ class RosterPlayer:
             "shoots": self.shoots,
             "catches": self.catches,
             "hometown": self.hometown,
+            "captaincy": self.captaincy,
         }
 
 

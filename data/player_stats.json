@@ -234,8 +234,10 @@
     "gtg": "",
     "pim": "6",
     "pts_g": "1.33",
-    "player_id": null,
-    "team_slug": "maltby-sports"
+    "player_id": "maltby-sports-maltby-chris-17",
+    "team_slug": "maltby-sports",
+    "team_id": "TYLERARSENEAU-1",
+    "team_name": "Maltby Sports"
   },
   {
     "no": "9",
@@ -272,8 +274,10 @@
     "gtg": "",
     "pim": "6",
     "pts_g": "1.75",
-    "player_id": null,
-    "team_slug": "gr-mitchell-welding"
+    "player_id": "gr-mitchell-welding-mitchell-gordon-13",
+    "team_slug": "gr-mitchell-welding",
+    "team_id": "983723",
+    "team_name": "G.R. Mitchell Welding"
   },
   {
     "no": "55",
@@ -310,8 +314,10 @@
     "gtg": "2",
     "pim": "",
     "pts_g": "1.20",
-    "player_id": null,
-    "team_slug": "j-and-k-electric"
+    "player_id": "j-and-k-electric-boutiler-gerald-22",
+    "team_slug": "j-and-k-electric",
+    "team_id": "TYLERARSENEAU-4",
+    "team_name": "J&K Electric"
   },
   {
     "no": "6",

@@ -16,7 +16,7 @@ from bs4.element import Tag
 
 from .common import normalize_header
 from .models import GameRecord, GameTeamLine, RosterPlayer, ScoreBoardEntry, TeamRoster
-from .utils import derive_player_id, slugify
+from .utils import derive_player_id, normalize_roster_name, slugify
 
 CALENDAR_URL = "https://media.hometeamsonline.com/photos/hockey/{team_id}/data/schedule.ics"
 BASE_TEAM_URL = "https://www.amherstadulthockey.com/teams/default.asp"
@@ -444,7 +444,8 @@ def parse_rosters(html: str) -> Dict[str, TeamRoster]:
             cells = {cell.get("class", [""])[0]: cell for cell in row.find_all("td")}
 
             number = _extract_text(cells.get("playernumberLabel"))
-            name = _extract_text(cells.get("nameLabel")) or ""
+            raw_name = _extract_text(cells.get("nameLabel")) or ""
+            name, captaincy = normalize_roster_name(raw_name)
             positions = _split_positions(_extract_text(cells.get("positionsAllLabel")))
             height = _extract_text(cells.get("heightLabel"))
             weight = _extract_text(cells.get("weightLabel"))
@@ -465,6 +466,7 @@ def parse_rosters(html: str) -> Dict[str, TeamRoster]:
                     shoots=shoots,
                     catches=catches,
                     hometown=hometown,
+                    captaincy=captaincy,
                 )
             )
 

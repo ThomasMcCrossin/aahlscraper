@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-05T12:04:45.515373+00:00",
+  "generated_at": "2025-11-05T12:16:33.672318+00:00",
   "players": [
     {
       "player_id": "colson-overhead-doors-terrio-marshall",
@@ -165,27 +165,6 @@
       "points": 1,
       "penalty_minutes": 0,
       "points_per_game": 0.5,
-      "team_games_played": 3,
-      "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
-    },
-    {
-      "player_id": "colson-overhead-doors-sproul-chris-captain-31",
-      "name": "Sproul, Chris - Captain",
-      "number": "31",
-      "positions": [
-        "F"
-      ],
-      "team_id": "TYLERARSENEAU-3",
-      "team_name": "Colson Overhead Doors",
-      "team_slug": "colson-overhead-doors",
-      "games_played": 0,
-      "goals": 0,
-      "assists": 0,
-      "points": 0,
-      "penalty_minutes": 0,
-      "points_per_game": 0.0,
       "team_games_played": 3,
       "games_missed": null,
       "recent_points": 0,
@@ -419,28 +398,6 @@
       "points": 7,
       "penalty_minutes": 6,
       "points_per_game": 2.33,
-      "team_games_played": 7,
-      "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
-    },
-    {
-      "player_id": "gr-mitchell-welding-mitchell-gordon-captain-13",
-      "name": "Mitchell, Gordon - Captain",
-      "number": "13",
-      "positions": [
-        "F",
-        "D"
-      ],
-      "team_id": "983723",
-      "team_name": "G.R. Mitchell Welding",
-      "team_slug": "gr-mitchell-welding",
-      "games_played": 0,
-      "goals": 0,
-      "assists": 0,
-      "points": 0,
-      "penalty_minutes": 0,
-      "points_per_game": 0.0,
       "team_games_played": 7,
       "games_missed": null,
       "recent_points": 0,
@@ -1192,28 +1149,6 @@
       "recent_games": 0
     },
     {
-      "player_id": "j-and-k-electric-boutiler-gerald-captain-22",
-      "name": "Boutiler, Gerald - Captain",
-      "number": "22",
-      "positions": [
-        "D",
-        "F"
-      ],
-      "team_id": "TYLERARSENEAU-4",
-      "team_name": "J&K Electric",
-      "team_slug": "j-and-k-electric",
-      "games_played": 0,
-      "goals": 0,
-      "assists": 0,
-      "points": 0,
-      "penalty_minutes": 0,
-      "points_per_game": 0.0,
-      "team_games_played": 5,
-      "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
-    },
-    {
       "player_id": "j-and-k-electric-mansour-mikhial-26",
       "name": "Mansour, Mikhial",
       "number": "26",
@@ -1679,28 +1614,6 @@
       "points": 6,
       "penalty_minutes": 6,
       "points_per_game": 1.5,
-      "team_games_played": 6,
-      "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
-    },
-    {
-      "player_id": "maltby-sports-maltby-chris-captain-17",
-      "name": "Maltby, Chris - Captain",
-      "number": "17",
-      "positions": [
-        "D",
-        "F"
-      ],
-      "team_id": "TYLERARSENEAU-1",
-      "team_name": "Maltby Sports",
-      "team_slug": "maltby-sports",
-      "games_played": 0,
-      "goals": 0,
-      "assists": 0,
-      "points": 0,
-      "penalty_minutes": 0,
-      "points_per_game": 0.0,
       "team_games_played": 6,
       "games_missed": null,
       "recent_points": 0,
@@ -2827,27 +2740,6 @@
       "points": 4,
       "penalty_minutes": 0,
       "points_per_game": 1.33,
-      "team_games_played": 5,
-      "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
-    },
-    {
-      "player_id": "ultramar-linkletter-brad-captain-9",
-      "name": "Linkletter, Brad - Captain",
-      "number": "9",
-      "positions": [
-        "C"
-      ],
-      "team_id": "TYLERARSENEAU-2",
-      "team_name": "Ultramar",
-      "team_slug": "ultramar",
-      "games_played": 0,
-      "goals": 0,
-      "assists": 0,
-      "points": 0,
-      "penalty_minutes": 0,
-      "points_per_game": 0.0,
       "team_games_played": 5,
       "games_missed": null,
       "recent_points": 0,

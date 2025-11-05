@@ -82,17 +82,18 @@
   },
   {
     "number": "17",
-    "name": "Maltby, Chris - Captain",
+    "name": "Maltby, Chris",
     "positions": [
       "D",
       "F"
     ],
-    "player_id": "maltby-sports-maltby-chris-captain-17",
+    "player_id": "maltby-sports-maltby-chris-17",
     "height": "6'",
     "weight": null,
     "shoots": "L",
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": "captain",
     "team_id": "TYLERARSENEAU-1",
     "team_name": "Maltby Sports",
     "team_slug": "maltby-sports"
@@ -343,16 +344,17 @@
   },
   {
     "number": "9",
-    "name": "Linkletter, Brad - Captain",
+    "name": "Linkletter, Brad",
     "positions": [
       "C"
     ],
-    "player_id": "ultramar-linkletter-brad-captain-9",
+    "player_id": "ultramar-linkletter-brad-9",
     "height": null,
     "weight": null,
     "shoots": null,
     "catches": null,
     "hometown": "River H\u00c3\u00a9bert, NS",
+    "captaincy": "captain",
     "team_id": "TYLERARSENEAU-2",
     "team_name": "Ultramar",
     "team_slug": "ultramar"
@@ -603,16 +605,17 @@
   },
   {
     "number": "31",
-    "name": "Sproul, Chris - Captain",
+    "name": "Sproul, Chris",
     "positions": [
       "F"
     ],
-    "player_id": "colson-overhead-doors-sproul-chris-captain-31",
+    "player_id": "colson-overhead-doors-sproul-chris-31",
     "height": null,
     "weight": null,
     "shoots": "L",
     "catches": null,
     "hometown": "Sackville, NB",
+    "captaincy": "captain",
     "team_id": "TYLERARSENEAU-3",
     "team_name": "Colson Overhead Doors",
     "team_slug": "colson-overhead-doors"
@@ -780,17 +783,18 @@
   },
   {
     "number": "22",
-    "name": "Boutiler, Gerald - Captain",
+    "name": "Boutiler, Gerald",
     "positions": [
       "D",
       "F"
     ],
-    "player_id": "j-and-k-electric-boutiler-gerald-captain-22",
+    "player_id": "j-and-k-electric-boutiler-gerald-22",
     "height": null,
     "weight": null,
     "shoots": "R",
     "catches": null,
     "hometown": "Parrsboro, NS",
+    "captaincy": "captain",
     "team_id": "TYLERARSENEAU-4",
     "team_name": "J&K Electric",
     "team_slug": "j-and-k-electric"
@@ -961,17 +965,18 @@
   },
   {
     "number": "13",
-    "name": "Mitchell, Gordon - Captain",
+    "name": "Mitchell, Gordon",
     "positions": [
       "F",
       "D"
     ],
-    "player_id": "gr-mitchell-welding-mitchell-gordon-captain-13",
+    "player_id": "gr-mitchell-welding-mitchell-gordon-13",
     "height": null,
     "weight": null,
     "shoots": "L",
     "catches": null,
     "hometown": null,
+    "captaincy": "captain",
     "team_id": "983723",
     "team_name": "G.R. Mitchell Welding",
     "team_slug": "gr-mitchell-welding"
