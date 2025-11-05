@@ -10,7 +10,10 @@
     "ga": "19",
     "last_10": "5-1",
     "streak": "Won 1",
-    "win": ".833"
+    "win": ".833",
+    "wins": 5,
+    "losses": 1,
+    "ties": 0
   },
   {
     "team": "J&K Electric",
@@ -23,7 +26,10 @@
     "ga": "16",
     "last_10": "4-1",
     "streak": "Won 2",
-    "win": ".800"
+    "win": ".800",
+    "wins": 4,
+    "losses": 1,
+    "ties": 0
   },
   {
     "team": "G.R. Mitchell Welding",
@@ -36,7 +42,10 @@
     "ga": "26",
     "last_10": "3-3",
     "streak": "Lost 1",
-    "win": ".500"
+    "win": ".500",
+    "wins": 3,
+    "losses": 3,
+    "ties": 0
   },
   {
     "team": "Ultramar",
@@ -49,7 +58,10 @@
     "ga": "25",
     "last_10": "0-3",
     "streak": "Lost 3",
-    "win": ".000"
+    "win": ".000",
+    "wins": 0,
+    "losses": 3,
+    "ties": 0
   },
   {
     "team": "Colson Overhead Doors",
@@ -62,6 +74,9 @@
     "ga": "31",
     "last_10": "0-4",
     "streak": "Lost 4",
-    "win": ".000"
+    "win": ".000",
+    "wins": 0,
+    "losses": 4,
+    "ties": 0
   }
 ]

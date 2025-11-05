@@ -46,6 +46,29 @@ def _extract_rows(table: Tag) -> List[List[str]]:
 
 
 
+def _parse_record_numbers(record: Optional[str]) -> Tuple[Optional[int], Optional[int], Optional[int]]:
+    if not record or "-" not in record:
+        return None, None, None
+
+    tokens = [segment.strip() for segment in record.split("-")]
+    wins = losses = ties = None
+
+    def _to_int(value: str) -> Optional[int]:
+        try:
+            return int(value)
+        except (TypeError, ValueError):
+            return None
+
+    if tokens:
+        wins = _to_int(tokens[0])
+    if len(tokens) >= 2:
+        losses = _to_int(tokens[1])
+    if len(tokens) >= 3:
+        ties = _to_int(tokens[2])
+
+    return wins, losses, ties
+
+
 class AmherstHockeyScraper:
     """
     Requests + BeautifulSoup scraper for AAHL team pages.
@@ -263,6 +286,33 @@ class AmherstHockeyScraper:
                 team = {headers[i]: cells[i] for i in range(len(cells))}
             else:
                 team = {f"col_{i}": cell for i, cell in enumerate(cells)}
+
+            record_text = str(team.get("record") or "")
+            wins_record, losses_record, ties_record = _parse_record_numbers(record_text)
+
+            def _coerce_numeric(field: str, fallback: Optional[int]) -> Optional[int]:
+                value = team.get(field)
+                if isinstance(value, bool):
+                    return int(value)
+                if isinstance(value, (int, float)):
+                    return int(value)
+                if isinstance(value, str):
+                    text = value.strip()
+                    if text.isdigit():
+                        return int(text)
+                return fallback
+
+            wins_val = _coerce_numeric("wins", wins_record)
+            losses_val = _coerce_numeric("losses", losses_record)
+            ties_val = _coerce_numeric("ties", ties_record if ties_record is not None else 0)
+
+            if wins_val is not None:
+                team["wins"] = wins_val
+            if losses_val is not None:
+                team["losses"] = losses_val
+            if ties_val is not None:
+                team["ties"] = ties_val
+
             standings.append(team)
 
         return standings

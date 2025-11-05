@@ -524,18 +524,41 @@ class AAHLDataProcessor:
             enriched_upcoming.append(clone)
 
         # Format standings
+        def _to_int(value, default=None):
+            if isinstance(value, bool):
+                return int(value)
+            if isinstance(value, (int, float)):
+                return int(value)
+            if isinstance(value, str):
+                text = value.strip()
+                if text.isdigit():
+                    return int(text)
+            return default
+
         formatted_standings = []
         for team in standings:
-            wins = 0
-            losses = 0
             record = team.get('record', team.get('Record', ''))
+            wins = _to_int(team.get('wins'))
+            losses = _to_int(team.get('losses'))
+            ties = _to_int(team.get('ties'))
+
             if record and '-' in record:
                 try:
                     parts = record.split('-')
-                    wins = int(parts[0])
-                    losses = int(parts[1])
+                    if wins is None and len(parts) >= 1:
+                        wins = _to_int(parts[0], 0)
+                    if losses is None and len(parts) >= 2:
+                        losses = _to_int(parts[1], 0)
+                    if ties is None and len(parts) >= 3:
+                        ties = _to_int(parts[2], 0)
                 except (ValueError, IndexError):
-                    pass
+                    wins = wins if wins is not None else 0
+                    losses = losses if losses is not None else 0
+                    ties = ties if ties is not None else 0
+
+            wins = wins if wins is not None else 0
+            losses = losses if losses is not None else 0
+            ties = ties if ties is not None else 0
 
             points = 0
             try:
@@ -552,6 +575,7 @@ class AAHLDataProcessor:
                 'team': self.correct_names(team.get('team', team.get('Team', ''))),
                 'wins': wins,
                 'losses': losses,
+                'ties': ties,
                 'points': points,
             })
 

@@ -152,6 +152,15 @@ def _pick_phrase(options: List[str], seed: int) -> str:
     return options[index]
 
 
+def _headline_seed(game_id: str) -> int:
+    if not game_id:
+        return 0
+    try:
+        return int(game_id) % 97
+    except ValueError:
+        return sum(ord(ch) for ch in game_id)
+
+
 def _player_highlight_phrase(game: Dict[str, object], winner_side: str) -> Optional[str]:
     stats = game.get("player_stats")
     if not isinstance(stats, dict):
@@ -228,12 +237,7 @@ def _result_verb(margin: int, winner_score: int, loser_score: int, game_id: str)
     tight = ["edges", "nips", "squeaks by", "slips past"]
     shootout = ["outguns", "outlasts", "surges past", "prevails over"]
 
-    seed = 0
-    if game_id:
-        try:
-            seed = int(game_id) % 97
-        except ValueError:
-            seed = sum(ord(ch) for ch in game_id)
+    seed = _headline_seed(game_id)
 
     if margin >= 6:
         return _pick_phrase(blowout, seed)
@@ -253,6 +257,7 @@ def _compose_headline(game: Dict[str, object]) -> Optional[str]:
     away = _team_name(game, "away")
     home_score = _safe_int(game.get("home_score"))
     away_score = _safe_int(game.get("away_score"))
+    game_id = str(game.get("game_id", ""))
     if (
         home is None
         or away is None
@@ -261,8 +266,18 @@ def _compose_headline(game: Dict[str, object]) -> Optional[str]:
     ):
         return None
 
+    if home_score == away_score:
+        tie_phrases = [
+            "battle to a draw with",
+            "skate to a draw with",
+            "finish deadlocked with",
+            "settle for a tie with",
+        ]
+        tone = _pick_phrase(tie_phrases, _headline_seed(game_id))
+        return f"{home} {tone} {away} {home_score}-{away_score}"
+
     margin = abs(home_score - away_score)
-    tone = _result_verb(margin, max(home_score, away_score), min(home_score, away_score), str(game.get("game_id", "")))
+    tone = _result_verb(margin, max(home_score, away_score), min(home_score, away_score), game_id)
 
     if home_score >= away_score:
         winner, loser = home, away
@@ -479,7 +494,7 @@ def _sorted_games(games: List[Dict[str, object]]) -> List[Dict[str, object]]:
 
 
 def _summarize_recent_results(games: List[Dict[str, object]]) -> List[Dict[str, object]]:
-    summary: Dict[str, Dict[str, int]] = defaultdict(lambda: {"played": 0, "wins": 0, "losses": 0})
+    summary: Dict[str, Dict[str, int]] = defaultdict(lambda: {"played": 0, "wins": 0, "losses": 0, "ties": 0})
 
     for game in games:
         home = str(game.get("home"))
@@ -497,9 +512,8 @@ def _summarize_recent_results(games: List[Dict[str, object]]) -> List[Dict[str, 
             summary[away]["wins"] += 1
             summary[home]["losses"] += 1
         else:
-            # treat ties as half-win/half-loss
-            summary[home]["wins"] += 0
-            summary[away]["wins"] += 0
+            summary[home]["ties"] += 1
+            summary[away]["ties"] += 1
 
         summary[home]["played"] += 1
         summary[away]["played"] += 1
@@ -508,7 +522,7 @@ def _summarize_recent_results(games: List[Dict[str, object]]) -> List[Dict[str, 
         {"team": team, **stats}
         for team, stats in summary.items()
     ]
-    standings.sort(key=lambda item: (item["wins"], -item["losses"]), reverse=True)
+    standings.sort(key=lambda item: (item["wins"], item.get("ties", 0), -item["losses"]), reverse=True)
     return standings
 
 
