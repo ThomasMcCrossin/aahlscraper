@@ -11,6 +11,7 @@
     "shoots": "R",
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-1",
     "team_name": "Maltby Sports",
     "team_slug": "maltby-sports"
@@ -27,6 +28,7 @@
     "shoots": "L",
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-1",
     "team_name": "Maltby Sports",
     "team_slug": "maltby-sports"
@@ -43,6 +45,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "River H\u00c3\u00a9bert, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-1",
     "team_name": "Maltby Sports",
     "team_slug": "maltby-sports"
@@ -59,6 +62,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-1",
     "team_name": "Maltby Sports",
     "team_slug": "maltby-sports"
@@ -76,6 +80,7 @@
     "shoots": "L",
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-1",
     "team_name": "Maltby Sports",
     "team_slug": "maltby-sports"
@@ -110,6 +115,7 @@
     "shoots": "L",
     "catches": null,
     "hometown": "Parrsboro, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-1",
     "team_name": "Maltby Sports",
     "team_slug": "maltby-sports"
@@ -126,6 +132,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-1",
     "team_name": "Maltby Sports",
     "team_slug": "maltby-sports"
@@ -142,6 +149,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-1",
     "team_name": "Maltby Sports",
     "team_slug": "maltby-sports"
@@ -158,6 +166,7 @@
     "shoots": null,
     "catches": "L",
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-1",
     "team_name": "Maltby Sports",
     "team_slug": "maltby-sports"
@@ -175,6 +184,7 @@
     "shoots": "L",
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-1",
     "team_name": "Maltby Sports",
     "team_slug": "maltby-sports"
@@ -191,6 +201,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-1",
     "team_name": "Maltby Sports",
     "team_slug": "maltby-sports"
@@ -208,6 +219,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-1",
     "team_name": "Maltby Sports",
     "team_slug": "maltby-sports"
@@ -224,6 +236,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-1",
     "team_name": "Maltby Sports",
     "team_slug": "maltby-sports"
@@ -240,6 +253,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-2",
     "team_name": "Ultramar",
     "team_slug": "ultramar"
@@ -257,6 +271,7 @@
     "shoots": "L",
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-2",
     "team_name": "Ultramar",
     "team_slug": "ultramar"
@@ -274,6 +289,7 @@
     "shoots": "L",
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-2",
     "team_name": "Ultramar",
     "team_slug": "ultramar"
@@ -290,6 +306,7 @@
     "shoots": "L",
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-2",
     "team_name": "Ultramar",
     "team_slug": "ultramar"
@@ -306,6 +323,7 @@
     "shoots": "L",
     "catches": null,
     "hometown": "Burnt Church, NB",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-2",
     "team_name": "Ultramar",
     "team_slug": "ultramar"
@@ -322,6 +340,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-2",
     "team_name": "Ultramar",
     "team_slug": "ultramar"
@@ -338,6 +357,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-2",
     "team_name": "Ultramar",
     "team_slug": "ultramar"
@@ -371,6 +391,7 @@
     "shoots": "L",
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-2",
     "team_name": "Ultramar",
     "team_slug": "ultramar"
@@ -387,6 +408,7 @@
     "shoots": "L",
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-2",
     "team_name": "Ultramar",
     "team_slug": "ultramar"
@@ -403,6 +425,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-2",
     "team_name": "Ultramar",
     "team_slug": "ultramar"
@@ -420,6 +443,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-2",
     "team_name": "Ultramar",
     "team_slug": "ultramar"
@@ -437,6 +461,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-2",
     "team_name": "Ultramar",
     "team_slug": "ultramar"
@@ -453,6 +478,7 @@
     "shoots": "L",
     "catches": null,
     "hometown": "Parts Unknown",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-2",
     "team_name": "Ultramar",
     "team_slug": "ultramar"
@@ -469,6 +495,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-3",
     "team_name": "Colson Overhead Doors",
     "team_slug": "colson-overhead-doors"
@@ -485,6 +512,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-3",
     "team_name": "Colson Overhead Doors",
     "team_slug": "colson-overhead-doors"
@@ -502,6 +530,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Down Yonder",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-3",
     "team_name": "Colson Overhead Doors",
     "team_slug": "colson-overhead-doors"
@@ -518,6 +547,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "New Glasgow, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-3",
     "team_name": "Colson Overhead Doors",
     "team_slug": "colson-overhead-doors"
@@ -534,6 +564,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Springhill, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-3",
     "team_name": "Colson Overhead Doors",
     "team_slug": "colson-overhead-doors"
@@ -550,6 +581,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-3",
     "team_name": "Colson Overhead Doors",
     "team_slug": "colson-overhead-doors"
@@ -566,6 +598,7 @@
     "shoots": "L",
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-3",
     "team_name": "Colson Overhead Doors",
     "team_slug": "colson-overhead-doors"
@@ -583,6 +616,7 @@
     "shoots": "L",
     "catches": null,
     "hometown": "Middleton, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-3",
     "team_name": "Colson Overhead Doors",
     "team_slug": "colson-overhead-doors"
@@ -599,6 +633,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-3",
     "team_name": "Colson Overhead Doors",
     "team_slug": "colson-overhead-doors"
@@ -632,6 +667,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Miramichi, NB",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-3",
     "team_name": "Colson Overhead Doors",
     "team_slug": "colson-overhead-doors"
@@ -648,6 +684,7 @@
     "shoots": "L",
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-3",
     "team_name": "Colson Overhead Doors",
     "team_slug": "colson-overhead-doors"
@@ -664,6 +701,7 @@
     "shoots": "L",
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-3",
     "team_name": "Colson Overhead Doors",
     "team_slug": "colson-overhead-doors"
@@ -680,6 +718,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-3",
     "team_name": "Colson Overhead Doors",
     "team_slug": "colson-overhead-doors"
@@ -696,6 +735,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-4",
     "team_name": "J&K Electric",
     "team_slug": "j-and-k-electric"
@@ -712,6 +752,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Parrsboro, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-4",
     "team_name": "J&K Electric",
     "team_slug": "j-and-k-electric"
@@ -728,6 +769,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-4",
     "team_name": "J&K Electric",
     "team_slug": "j-and-k-electric"
@@ -745,6 +787,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-4",
     "team_name": "J&K Electric",
     "team_slug": "j-and-k-electric"
@@ -761,6 +804,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-4",
     "team_name": "J&K Electric",
     "team_slug": "j-and-k-electric"
@@ -777,6 +821,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-4",
     "team_name": "J&K Electric",
     "team_slug": "j-and-k-electric"
@@ -812,6 +857,7 @@
     "shoots": "R",
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-4",
     "team_name": "J&K Electric",
     "team_slug": "j-and-k-electric"
@@ -829,6 +875,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Parrsboro, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-4",
     "team_name": "J&K Electric",
     "team_slug": "j-and-k-electric"
@@ -845,6 +892,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-4",
     "team_name": "J&K Electric",
     "team_slug": "j-and-k-electric"
@@ -863,6 +911,7 @@
     "shoots": "L",
     "catches": "L",
     "hometown": "Halifax, NS",
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-4",
     "team_name": "J&K Electric",
     "team_slug": "j-and-k-electric"
@@ -877,6 +926,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-4",
     "team_name": "J&K Electric",
     "team_slug": "j-and-k-electric"
@@ -894,6 +944,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-4",
     "team_name": "J&K Electric",
     "team_slug": "j-and-k-electric"
@@ -910,6 +961,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "TYLERARSENEAU-4",
     "team_name": "J&K Electric",
     "team_slug": "j-and-k-electric"
@@ -926,6 +978,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "983723",
     "team_name": "G.R. Mitchell Welding",
     "team_slug": "gr-mitchell-welding"
@@ -943,6 +996,7 @@
     "shoots": "R",
     "catches": null,
     "hometown": "Tidnish, NS",
+    "captaincy": null,
     "team_id": "983723",
     "team_name": "G.R. Mitchell Welding",
     "team_slug": "gr-mitchell-welding"
@@ -959,6 +1013,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "983723",
     "team_name": "G.R. Mitchell Welding",
     "team_slug": "gr-mitchell-welding"
@@ -993,6 +1048,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "983723",
     "team_name": "G.R. Mitchell Welding",
     "team_slug": "gr-mitchell-welding"
@@ -1007,6 +1063,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "983723",
     "team_name": "G.R. Mitchell Welding",
     "team_slug": "gr-mitchell-welding"
@@ -1023,6 +1080,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Parrsboro, NS",
+    "captaincy": null,
     "team_id": "983723",
     "team_name": "G.R. Mitchell Welding",
     "team_slug": "gr-mitchell-welding"
@@ -1039,6 +1097,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Springhill, NS",
+    "captaincy": null,
     "team_id": "983723",
     "team_name": "G.R. Mitchell Welding",
     "team_slug": "gr-mitchell-welding"
@@ -1056,6 +1115,7 @@
     "shoots": null,
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "983723",
     "team_name": "G.R. Mitchell Welding",
     "team_slug": "gr-mitchell-welding"
@@ -1072,6 +1132,7 @@
     "shoots": "L",
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "983723",
     "team_name": "G.R. Mitchell Welding",
     "team_slug": "gr-mitchell-welding"
@@ -1088,6 +1149,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "983723",
     "team_name": "G.R. Mitchell Welding",
     "team_slug": "gr-mitchell-welding"
@@ -1104,6 +1166,7 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null,
     "team_id": "983723",
     "team_name": "G.R. Mitchell Welding",
     "team_slug": "gr-mitchell-welding"
@@ -1120,6 +1183,7 @@
     "shoots": "L",
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "983723",
     "team_name": "G.R. Mitchell Welding",
     "team_slug": "gr-mitchell-welding"
@@ -1136,6 +1200,7 @@
     "shoots": "R",
     "catches": null,
     "hometown": "Amherst, NS",
+    "captaincy": null,
     "team_id": "983723",
     "team_name": "G.R. Mitchell Welding",
     "team_slug": "gr-mitchell-welding"

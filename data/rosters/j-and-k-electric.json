@@ -10,7 +10,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   },
   {
     "number": "2",
@@ -23,7 +24,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Parrsboro, NS"
+    "hometown": "Parrsboro, NS",
+    "captaincy": null
   },
   {
     "number": "4",
@@ -36,7 +38,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": "9",
@@ -50,7 +53,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   },
   {
     "number": "17",
@@ -63,7 +67,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   },
   {
     "number": "18",
@@ -76,21 +81,23 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": "22",
-    "name": "Boutiler, Gerald - Captain",
+    "name": "Boutiler, Gerald",
     "positions": [
       "D",
       "F"
     ],
-    "player_id": "j-and-k-electric-boutiler-gerald-captain-22",
+    "player_id": "j-and-k-electric-boutiler-gerald-22",
     "height": null,
     "weight": null,
     "shoots": "R",
     "catches": null,
-    "hometown": "Parrsboro, NS"
+    "hometown": "Parrsboro, NS",
+    "captaincy": "captain"
   },
   {
     "number": "26",
@@ -104,7 +111,8 @@
     "weight": null,
     "shoots": "R",
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": "27",
@@ -118,7 +126,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Parrsboro, NS"
+    "hometown": "Parrsboro, NS",
+    "captaincy": null
   },
   {
     "number": "28",
@@ -131,7 +140,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": "30",
@@ -146,7 +156,8 @@
     "weight": null,
     "shoots": "L",
     "catches": "L",
-    "hometown": "Halifax, NS"
+    "hometown": "Halifax, NS",
+    "captaincy": null
   },
   {
     "number": "36",
@@ -157,7 +168,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   },
   {
     "number": "74",
@@ -171,7 +183,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   },
   {
     "number": "87",
@@ -184,6 +197,7 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   }
 ]

@@ -10,7 +10,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   },
   {
     "number": "7",
@@ -24,7 +25,8 @@
     "weight": null,
     "shoots": "R",
     "catches": null,
-    "hometown": "Tidnish, NS"
+    "hometown": "Tidnish, NS",
+    "captaincy": null
   },
   {
     "number": "9",
@@ -37,21 +39,23 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   },
   {
     "number": "13",
-    "name": "Mitchell, Gordon - Captain",
+    "name": "Mitchell, Gordon",
     "positions": [
       "F",
       "D"
     ],
-    "player_id": "gr-mitchell-welding-mitchell-gordon-captain-13",
+    "player_id": "gr-mitchell-welding-mitchell-gordon-13",
     "height": null,
     "weight": null,
     "shoots": "L",
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": "captain"
   },
   {
     "number": "15",
@@ -64,7 +68,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": "21",
@@ -75,7 +80,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   },
   {
     "number": "38",
@@ -88,7 +94,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Parrsboro, NS"
+    "hometown": "Parrsboro, NS",
+    "captaincy": null
   },
   {
     "number": "55",
@@ -101,7 +108,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Springhill, NS"
+    "hometown": "Springhill, NS",
+    "captaincy": null
   },
   {
     "number": "61",
@@ -115,7 +123,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": "66",
@@ -128,7 +137,8 @@
     "weight": null,
     "shoots": "L",
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   },
   {
     "number": "88",
@@ -141,7 +151,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   },
   {
     "number": "90",
@@ -154,7 +165,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   },
   {
     "number": "94",
@@ -167,7 +179,8 @@
     "weight": null,
     "shoots": "L",
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": "97",
@@ -180,6 +193,7 @@
     "weight": null,
     "shoots": "R",
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   }
 ]

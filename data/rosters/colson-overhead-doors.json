@@ -10,7 +10,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   },
   {
     "number": "8",
@@ -23,7 +24,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   },
   {
     "number": "9",
@@ -37,7 +39,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Down Yonder"
+    "hometown": "Down Yonder",
+    "captaincy": null
   },
   {
     "number": "12",
@@ -50,7 +53,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "New Glasgow, NS"
+    "hometown": "New Glasgow, NS",
+    "captaincy": null
   },
   {
     "number": "13",
@@ -63,7 +67,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Springhill, NS"
+    "hometown": "Springhill, NS",
+    "captaincy": null
   },
   {
     "number": "13",
@@ -76,7 +81,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   },
   {
     "number": "19",
@@ -89,7 +95,8 @@
     "weight": null,
     "shoots": "L",
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   },
   {
     "number": "23",
@@ -103,7 +110,8 @@
     "weight": null,
     "shoots": "L",
     "catches": null,
-    "hometown": "Middleton, NS"
+    "hometown": "Middleton, NS",
+    "captaincy": null
   },
   {
     "number": "30",
@@ -116,20 +124,22 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": "31",
-    "name": "Sproul, Chris - Captain",
+    "name": "Sproul, Chris",
     "positions": [
       "F"
     ],
-    "player_id": "colson-overhead-doors-sproul-chris-captain-31",
+    "player_id": "colson-overhead-doors-sproul-chris-31",
     "height": null,
     "weight": null,
     "shoots": "L",
     "catches": null,
-    "hometown": "Sackville, NB"
+    "hometown": "Sackville, NB",
+    "captaincy": "captain"
   },
   {
     "number": "44",
@@ -142,7 +152,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Miramichi, NB"
+    "hometown": "Miramichi, NB",
+    "captaincy": null
   },
   {
     "number": "76",
@@ -155,7 +166,8 @@
     "weight": null,
     "shoots": "L",
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": "88",
@@ -168,7 +180,8 @@
     "weight": null,
     "shoots": "L",
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": null,
@@ -181,6 +194,7 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   }
 ]

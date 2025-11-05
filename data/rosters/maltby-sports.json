@@ -10,7 +10,8 @@
     "weight": null,
     "shoots": "R",
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": "6",
@@ -23,7 +24,8 @@
     "weight": null,
     "shoots": "L",
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": "7",
@@ -36,7 +38,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "River H\u00c3\u00a9bert, NS"
+    "hometown": "River H\u00c3\u00a9bert, NS",
+    "captaincy": null
   },
   {
     "number": "9",
@@ -49,7 +52,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": "16",
@@ -63,21 +67,23 @@
     "weight": "165 lbs",
     "shoots": "L",
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": "17",
-    "name": "Maltby, Chris - Captain",
+    "name": "Maltby, Chris",
     "positions": [
       "D",
       "F"
     ],
-    "player_id": "maltby-sports-maltby-chris-captain-17",
+    "player_id": "maltby-sports-maltby-chris-17",
     "height": "6'",
     "weight": null,
     "shoots": "L",
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": "captain"
   },
   {
     "number": "18",
@@ -90,7 +96,8 @@
     "weight": null,
     "shoots": "L",
     "catches": null,
-    "hometown": "Parrsboro, NS"
+    "hometown": "Parrsboro, NS",
+    "captaincy": null
   },
   {
     "number": "19",
@@ -103,7 +110,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": "29",
@@ -116,7 +124,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": "30",
@@ -129,7 +138,8 @@
     "weight": null,
     "shoots": null,
     "catches": "L",
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   },
   {
     "number": "63",
@@ -143,7 +153,8 @@
     "weight": null,
     "shoots": "L",
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": "77",
@@ -156,7 +167,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   },
   {
     "number": "91",
@@ -170,7 +182,8 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": "Amherst, NS"
+    "hometown": "Amherst, NS",
+    "captaincy": null
   },
   {
     "number": "98",
@@ -183,6 +196,7 @@
     "weight": null,
     "shoots": null,
     "catches": null,
-    "hometown": null
+    "hometown": null,
+    "captaincy": null
   }
 ]
