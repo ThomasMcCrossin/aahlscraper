@@ -76,13 +76,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/*.json
-          if [ -d data/rosters ]; then
-            git add data/rosters/*.json
-          fi
-          if [ -d data/history ]; then
-            find data/history -name '*.json' -print0 | xargs -0 git add
-          fi
+          git add data
 
           if ! git diff --quiet || ! git diff --staged --quiet; then
             git commit -m "Update AAHL data - $(date '+%Y-%m-%d %H:%M:%S UTC')"
