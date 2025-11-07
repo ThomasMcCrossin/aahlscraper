@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-07T12:27:14.478833",
+  "timestamp": "2025-11-07T16:14:39.110071",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -417,7 +417,7 @@
       "name": "Zack Gould",
       "team": "Colson Overhead Doors",
       "pos": "F",
-      "gp": "3",
+      "gp": "4",
       "g": "5",
       "a": "1",
       "pts": "6",
@@ -426,7 +426,7 @@
       "gwg": "",
       "gtg": "1",
       "pim": "",
-      "pts_g": "2.00",
+      "pts_g": "1.50",
       "team_id": "TYLERARSENEAU-3",
       "team_name": "Colson Overhead Doors",
       "player_id": "colson-overhead-doors-gould-zack-88",
@@ -457,24 +457,24 @@
       "rank": 19
     },
     {
-      "no": "91",
-      "name": "Ryan Arbing",
-      "team": "Maltby Sports",
-      "pos": "D/F",
-      "gp": "6",
-      "g": "1",
-      "a": "4",
+      "no": "11",
+      "name": "Tyler \"Tuffy\" Allen",
+      "team": "Ultramar",
+      "pos": "F",
+      "gp": "4",
+      "g": "2",
+      "a": "3",
       "pts": "5",
       "ppg": "",
       "shg": "",
       "gwg": "",
       "gtg": "",
-      "pim": "3",
-      "pts_g": ".83",
-      "team_id": "TYLERARSENEAU-1",
-      "team_name": "Maltby Sports",
-      "player_id": "maltby-sports-arbing-ryan-91",
-      "team_slug": "maltby-sports",
+      "pim": "",
+      "pts_g": "1.25",
+      "team_id": "TYLERARSENEAU-2",
+      "team_name": "Ultramar",
+      "player_id": "ultramar-allen-tyler-tuffy-11",
+      "team_slug": "ultramar",
       "points": 5,
       "rank": 20
     }
@@ -3825,7 +3825,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2025-11-07T12:27:14.416460+00:00",
+    "generated_at": "2025-11-07T16:14:39.046076+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall",
