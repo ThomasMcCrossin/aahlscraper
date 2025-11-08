@@ -1,5 +1,19 @@
 [
   {
+    "number": "00",
+    "name": "Bennett, Mark",
+    "positions": [
+      "D"
+    ],
+    "player_id": "ultramar-bennett-mark-00",
+    "height": "7' 2\"",
+    "weight": "250 lbs",
+    "shoots": "L",
+    "catches": null,
+    "hometown": "Parts Unknown",
+    "captaincy": null
+  },
+  {
     "number": "1",
     "name": "Thomas, Remi",
     "positions": [
@@ -100,20 +114,6 @@
     "captaincy": null
   },
   {
-    "number": "9",
-    "name": "Linkletter, Brad",
-    "positions": [
-      "C"
-    ],
-    "player_id": "ultramar-linkletter-brad-9",
-    "height": null,
-    "weight": null,
-    "shoots": null,
-    "catches": null,
-    "hometown": "River H\u00c3\u00a9bert, NS",
-    "captaincy": "captain"
-  },
-  {
     "number": "10",
     "name": "Malcolm, Robert",
     "positions": [
@@ -186,17 +186,17 @@
     "captaincy": null
   },
   {
-    "number": null,
-    "name": "Bennett, Mark",
+    "number": "68",
+    "name": "Linkletter, Brad",
     "positions": [
-      "D"
+      "C"
     ],
-    "player_id": "ultramar-bennett-mark",
-    "height": "7' 2\"",
-    "weight": "250 lbs",
-    "shoots": "L",
+    "player_id": "ultramar-linkletter-brad-68",
+    "height": null,
+    "weight": null,
+    "shoots": null,
     "catches": null,
-    "hometown": "Parts Unknown",
-    "captaincy": null
+    "hometown": "River H\u00c3\u00a9bert, NS",
+    "captaincy": "captain"
   }
 ]

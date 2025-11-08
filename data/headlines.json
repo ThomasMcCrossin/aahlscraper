@@ -1,6 +1,32 @@
 {
-  "generated_at": "2025-11-07T20:14:31.683245+00:00",
+  "generated_at": "2025-11-08T12:24:10.037790+00:00",
   "headlines": [
+    {
+      "game_id": "3276455",
+      "headline": "Maltby Sports squeaks by G.R. Mitchell Welding 5-4 powered by Danny \"Biggie\" Small's 1G and 1A, as Matt Gallant supplying 1G and 1A",
+      "created_at": "2025-11-08T12:24:10.037492+00:00",
+      "updated_at": "2025-11-08T12:24:10.037492+00:00",
+      "game_datetime": "2025-11-05T02:00:00+00:00",
+      "home_team": "Maltby Sports",
+      "away_team": "G.R. Mitchell Welding",
+      "home_score": 5,
+      "away_score": 4,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276455&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276455&p=boxscore"
+    },
+    {
+      "game_id": "3276453",
+      "headline": "Colson Overhead Doors battle to a draw with Ultramar 5-5",
+      "created_at": "2025-11-08T12:24:10.037492+00:00",
+      "updated_at": "2025-11-08T12:24:10.037492+00:00",
+      "game_datetime": "2025-11-05T00:45:00+00:00",
+      "home_team": "Colson Overhead Doors",
+      "away_team": "Ultramar",
+      "home_score": 5,
+      "away_score": 5,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276453&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276453&p=boxscore"
+    },
     {
       "game_id": "3276449",
       "headline": "J&K Electric crushes Colson Overhead Doors 6-3 powered by Brendan Stone's hat trick, while Jeremy Kinnear supplying brace (2G)",
