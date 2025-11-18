@@ -1,6 +1,32 @@
 {
-  "generated_at": "2025-11-08T20:13:34.362371+00:00",
+  "generated_at": "2025-11-18T15:26:18.601168+00:00",
   "headlines": [
+    {
+      "game_id": "3276514",
+      "headline": "J&K Electric crushes Colson Overhead Doors 7-4 powered by Brendan Stone's hat trick (4G), while Jeremy Kinnear supplying 1G and 4A",
+      "created_at": "2025-11-18T15:26:18.600835+00:00",
+      "updated_at": "2025-11-18T15:26:18.600835+00:00",
+      "game_datetime": "2025-11-17T01:00:00+00:00",
+      "home_team": "Colson Overhead Doors",
+      "away_team": "J&K Electric",
+      "home_score": 4,
+      "away_score": 7,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276514&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276514&p=boxscore"
+    },
+    {
+      "game_id": "3276459",
+      "headline": "J&K Electric squeaks by Ultramar 4-3 lifted by Rubein Mackenzie's 1G and 2A, with Noah Perrin contributing 1G and 1A",
+      "created_at": "2025-11-18T15:26:18.600835+00:00",
+      "updated_at": "2025-11-18T15:26:18.600835+00:00",
+      "game_datetime": "2025-11-10T01:00:00+00:00",
+      "home_team": "J&K Electric",
+      "away_team": "Ultramar",
+      "home_score": 4,
+      "away_score": 3,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276459&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276459&p=boxscore"
+    },
     {
       "game_id": "3276455",
       "headline": "Maltby Sports squeaks by G.R. Mitchell Welding 5-4 powered by Danny \"Biggie\" Small's 1G and 1A, as Matt Gallant supplying 1G and 1A",
@@ -80,17 +106,17 @@
       "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3274310&p=boxscore"
     },
     {
-      "game_id": "3274307",
-      "headline": "Maltby Sports steamrolls Ultramar 9-5 sparked by Madden Miller's brace (2G), with Tyler \"Tuffy\" Allen adding brace (2G)",
-      "created_at": "2025-11-04T04:15:33.346582+00:00",
-      "updated_at": "2025-11-04T04:26:34.151891+00:00",
+      "game_id": "3274306",
+      "headline": "Maltby Sports pummels Ultramar 9-5 sparked by Issac Bridge's hat trick and 3A, and Ian McCarthy supplying brace (2G) and 2A",
+      "created_at": "2025-11-18T15:26:18.600835+00:00",
+      "updated_at": "2025-11-18T15:26:18.600835+00:00",
       "game_datetime": "2025-10-22T01:00:00+00:00",
       "home_team": "Maltby Sports",
       "away_team": "Ultramar",
       "home_score": 9,
       "away_score": 5,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274307&u=DSMALL&s=hockey&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274307&u=DSMALL&s=hockey&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3274306&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3274306&p=boxscore"
     },
     {
       "game_id": "3274304",
@@ -115,8 +141,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 10,
       "away_score": 2,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3274302&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3274302&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274302&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274302&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3274298",
@@ -128,8 +154,8 @@
       "away_team": "J&K Electric",
       "home_score": 1,
       "away_score": 6,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3274298&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3274298&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274298&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274298&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3274296",
@@ -141,8 +167,8 @@
       "away_team": "Ultramar",
       "home_score": 7,
       "away_score": 4,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3274296&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3274296&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274296&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274296&u=DSMALL&s=hockey&p=boxscore"
     }
   ]
 }
