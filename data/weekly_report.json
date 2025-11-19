@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-19T02:29:36.461418+00:00",
+  "generated_at": "2025-11-19T03:33:43.730087+00:00",
   "standings_snapshot": "standings-20251119T022246Z.json",
   "previous_snapshot": "standings-20251118T152618Z.json",
   "standings_movements": [
@@ -36,18 +36,18 @@
   ],
   "recent_team_form": [
     {
+      "team": "Maltby Sports",
+      "played": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    {
       "team": "J&K Electric",
       "played": 2,
       "wins": 1,
-      "losses": 0,
-      "ties": 1
-    },
-    {
-      "team": "Maltby Sports",
-      "played": 1,
-      "wins": 0,
-      "losses": 0,
-      "ties": 1
+      "losses": 1,
+      "ties": 0
     },
     {
       "team": "Ultramar",
@@ -67,7 +67,7 @@
   "game_headlines": [
     {
       "game_id": "3276518",
-      "headline": "Maltby Sports battle to a draw with J&K Electric 1-1",
+      "headline": "Maltby Sports tops J&K Electric 4-2 fueled by Ian McCarthy's 1G, and Ted Mackinnon contributing 1G",
       "game_datetime": "2025-11-19T02:00:00+00:00"
     },
     {
