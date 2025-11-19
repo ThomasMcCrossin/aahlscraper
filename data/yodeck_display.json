@@ -1,17 +1,17 @@
 {
-  "timestamp": "2025-11-19T03:44:18.292835",
+  "timestamp": "2025-11-19T12:51:34.586469",
   "standings": [
+    {
+      "team": "Maltby Sports",
+      "wins": 8,
+      "losses": 1,
+      "ties": 0,
+      "points": 16
+    },
     {
       "team": "J&K Electric",
       "wins": 7,
-      "losses": 1,
-      "ties": 0,
-      "points": 14
-    },
-    {
-      "team": "Maltby Sports",
-      "wins": 7,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
       "points": 14
     },
@@ -498,7 +498,9 @@
         "periods": [
           1,
           2,
-          1
+          1,
+          0,
+          0
         ],
         "is_winner": true
       },
@@ -509,6 +511,8 @@
         "periods": [
           1,
           1,
+          0,
+          0,
           0
         ],
         "is_winner": false
@@ -568,9 +572,9 @@
             "positions": [
               "F"
             ],
-            "goals": 1,
+            "goals": 0,
             "assists": 0,
-            "points": 1,
+            "points": 0,
             "penalty_minutes": 0,
             "gtg": 0
           },
@@ -594,9 +598,9 @@
             "positions": [
               "F"
             ],
-            "goals": 1,
+            "goals": 2,
             "assists": 0,
-            "points": 1,
+            "points": 2,
             "penalty_minutes": 0,
             "gtg": 0
           },
@@ -751,13 +755,17 @@
           "1",
           "2",
           "3",
-          ""
+          "OT",
+          "2OT",
+          "F"
         ],
         [
           "Maltby Sports",
           "1",
           "2",
           "1",
+          "0",
+          "0",
           "4"
         ],
         [
@@ -765,11 +773,13 @@
           "1",
           "1",
           "0",
+          "0",
+          "0",
           "2"
         ]
       ],
-      "headline": "Maltby Sports tops J&K Electric 4-2 fueled by Ian McCarthy's 1G, and Ted Mackinnon contributing 1G",
-      "headline_updated_at": "2025-11-19T03:33:43.729711+00:00"
+      "headline": "Maltby Sports tops J&K Electric 4-2 driven by Ted Mackinnon's two goals, and Ian McCarthy contributing 1G",
+      "headline_updated_at": "2025-11-19T12:51:34.521046+00:00"
     },
     {
       "game_id": "3276516",
@@ -3743,9 +3753,9 @@
   "headlines": [
     {
       "game_id": "3276518",
-      "headline": "Maltby Sports tops J&K Electric 4-2 fueled by Ian McCarthy's 1G, and Ted Mackinnon contributing 1G",
+      "headline": "Maltby Sports tops J&K Electric 4-2 driven by Ted Mackinnon's brace (2G), and Ian McCarthy contributing 1G",
       "created_at": "2025-11-19T02:22:46.247489+00:00",
-      "updated_at": "2025-11-19T03:33:43.729711+00:00",
+      "updated_at": "2025-11-19T12:51:34.521046+00:00",
       "game_datetime": "2025-11-19T02:00:00+00:00",
       "home_team": "Maltby Sports",
       "away_team": "J&K Electric",
@@ -3938,7 +3948,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2025-11-19T03:44:18.228929+00:00",
+    "generated_at": "2025-11-19T12:51:34.525007+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall",
@@ -4699,7 +4709,7 @@
         "points_per_game": 2.2,
         "team_games_played": 7,
         "games_missed": null,
-        "recent_points": 1,
+        "recent_points": 0,
         "recent_games": 0
       },
       {
@@ -4805,8 +4815,8 @@
         "points_per_game": 1.5,
         "team_games_played": 7,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "j-and-k-electric-leopold-nick-9",
@@ -4827,8 +4837,8 @@
         "points_per_game": 1.8,
         "team_games_played": 7,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-small-danny-biggie-16",
@@ -4871,8 +4881,8 @@
         "points_per_game": 1.4,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-johnson-trevor-18",
@@ -4913,7 +4923,7 @@
         "points_per_game": 2.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 2,
+        "recent_points": 0,
         "recent_games": 0
       },
       {
@@ -4934,8 +4944,8 @@
         "points_per_game": 1.4,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-codling-ryder-29",
@@ -5033,15 +5043,15 @@
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
         "games_played": 4,
-        "goals": 1,
+        "goals": 0,
         "assists": 2,
-        "points": 3,
+        "points": 2,
         "penalty_minutes": 0,
-        "points_per_game": 0.75,
+        "points_per_game": 0.5,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": -1,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-mackinnon-ted-77",
@@ -5054,15 +5064,15 @@
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
         "games_played": 3,
-        "goals": 1,
+        "goals": 2,
         "assists": 4,
-        "points": 5,
+        "points": 6,
         "penalty_minutes": 0,
-        "points_per_game": 1.67,
+        "points_per_game": 2.0,
         "team_games_played": 6,
         "games_missed": null,
         "recent_points": 1,
-        "recent_games": 1
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-mccarthy-ian-9",
@@ -5104,8 +5114,8 @@
         "points_per_game": 1.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-bridge-issac-98",
@@ -5125,8 +5135,8 @@
         "points_per_game": 3.6,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "ultramar-bennett-mark-00",

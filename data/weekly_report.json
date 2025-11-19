@@ -1,19 +1,13 @@
 {
-  "generated_at": "2025-11-19T03:44:18.225331+00:00",
-  "standings_snapshot": "standings-20251119T022246Z.json",
-  "previous_snapshot": "standings-20251118T152618Z.json",
+  "generated_at": "2025-11-19T12:51:34.521418+00:00",
+  "standings_snapshot": "standings-20251119T125134Z.json",
+  "previous_snapshot": "standings-20251119T022246Z.json",
   "standings_movements": [
     {
-      "team": "Ultramar",
-      "current_points": 2,
-      "previous_points": 1,
-      "points_change": 1
-    },
-    {
-      "team": "Colson Overhead Doors",
-      "current_points": 2,
-      "previous_points": 1,
-      "points_change": 1
+      "team": "Maltby Sports",
+      "current_points": 16,
+      "previous_points": 14,
+      "points_change": 2
     },
     {
       "team": "J&K Electric",
@@ -22,15 +16,21 @@
       "points_change": 0
     },
     {
-      "team": "Maltby Sports",
-      "current_points": 14,
-      "previous_points": 14,
-      "points_change": 0
-    },
-    {
       "team": "G.R. Mitchell Welding",
       "current_points": 6,
       "previous_points": 6,
+      "points_change": 0
+    },
+    {
+      "team": "Ultramar",
+      "current_points": 2,
+      "previous_points": 2,
+      "points_change": 0
+    },
+    {
+      "team": "Colson Overhead Doors",
+      "current_points": 2,
+      "previous_points": 2,
       "points_change": 0
     }
   ],
@@ -67,7 +67,7 @@
   "game_headlines": [
     {
       "game_id": "3276518",
-      "headline": "Maltby Sports tops J&K Electric 4-2 fueled by Ian McCarthy's 1G, and Ted Mackinnon contributing 1G",
+      "headline": "Maltby Sports tops J&K Electric 4-2 driven by Ted Mackinnon's brace (2G), and Ian McCarthy contributing 1G",
       "game_datetime": "2025-11-19T02:00:00+00:00"
     },
     {

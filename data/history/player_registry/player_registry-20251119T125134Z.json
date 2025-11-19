@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-19T12:51:34.525007+00:00",
+  "generated_at": "2025-11-19T03:44:18.228929+00:00",
   "players": [
     {
       "player_id": "colson-overhead-doors-terrio-marshall",
@@ -760,7 +760,7 @@
       "points_per_game": 2.2,
       "team_games_played": 7,
       "games_missed": null,
-      "recent_points": 0,
+      "recent_points": 1,
       "recent_games": 0
     },
     {
@@ -866,8 +866,8 @@
       "points_per_game": 1.5,
       "team_games_played": 7,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "j-and-k-electric-leopold-nick-9",
@@ -888,8 +888,8 @@
       "points_per_game": 1.8,
       "team_games_played": 7,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "maltby-sports-small-danny-biggie-16",
@@ -932,8 +932,8 @@
       "points_per_game": 1.4,
       "team_games_played": 6,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "maltby-sports-johnson-trevor-18",
@@ -974,7 +974,7 @@
       "points_per_game": 2.0,
       "team_games_played": 6,
       "games_missed": null,
-      "recent_points": 0,
+      "recent_points": 2,
       "recent_games": 0
     },
     {
@@ -995,8 +995,8 @@
       "points_per_game": 1.4,
       "team_games_played": 6,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "maltby-sports-codling-ryder-29",
@@ -1094,15 +1094,15 @@
       "team_name": "Maltby Sports",
       "team_slug": "maltby-sports",
       "games_played": 4,
-      "goals": 0,
+      "goals": 1,
       "assists": 2,
-      "points": 2,
+      "points": 3,
       "penalty_minutes": 0,
-      "points_per_game": 0.5,
+      "points_per_game": 0.75,
       "team_games_played": 6,
       "games_missed": null,
-      "recent_points": -1,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "maltby-sports-mackinnon-ted-77",
@@ -1115,15 +1115,15 @@
       "team_name": "Maltby Sports",
       "team_slug": "maltby-sports",
       "games_played": 3,
-      "goals": 2,
+      "goals": 1,
       "assists": 4,
-      "points": 6,
+      "points": 5,
       "penalty_minutes": 0,
-      "points_per_game": 2.0,
+      "points_per_game": 1.67,
       "team_games_played": 6,
       "games_missed": null,
       "recent_points": 1,
-      "recent_games": 0
+      "recent_games": 1
     },
     {
       "player_id": "maltby-sports-mccarthy-ian-9",
@@ -1165,8 +1165,8 @@
       "points_per_game": 1.0,
       "team_games_played": 6,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "maltby-sports-bridge-issac-98",
@@ -1186,8 +1186,8 @@
       "points_per_game": 3.6,
       "team_games_played": 6,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "ultramar-bennett-mark-00",
