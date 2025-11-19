@@ -1,56 +1,80 @@
 {
-  "generated_at": "2025-11-18T20:28:58.878746+00:00",
-  "standings_snapshot": "standings-20251118T152618Z.json",
-  "previous_snapshot": "standings-20251108T122409Z.json",
+  "generated_at": "2025-11-19T02:22:46.247840+00:00",
+  "standings_snapshot": "standings-20251119T022246Z.json",
+  "previous_snapshot": "standings-20251118T152618Z.json",
   "standings_movements": [
+    {
+      "team": "Ultramar",
+      "current_points": 2,
+      "previous_points": 1,
+      "points_change": 1
+    },
+    {
+      "team": "Colson Overhead Doors",
+      "current_points": 2,
+      "previous_points": 1,
+      "points_change": 1
+    },
     {
       "team": "J&K Electric",
       "current_points": 14,
-      "previous_points": 8,
-      "points_change": 6
+      "previous_points": 14,
+      "points_change": 0
     },
     {
       "team": "Maltby Sports",
       "current_points": 14,
-      "previous_points": 12,
-      "points_change": 2
+      "previous_points": 14,
+      "points_change": 0
     },
     {
       "team": "G.R. Mitchell Welding",
       "current_points": 6,
       "previous_points": 6,
       "points_change": 0
-    },
-    {
-      "team": "Ultramar",
-      "current_points": 1,
-      "previous_points": 1,
-      "points_change": 0
-    },
-    {
-      "team": "Colson Overhead Doors",
-      "current_points": 1,
-      "previous_points": 1,
-      "points_change": 0
     }
   ],
   "recent_team_form": [
     {
       "team": "J&K Electric",
-      "played": 1,
+      "played": 2,
       "wins": 1,
       "losses": 0,
-      "ties": 0
+      "ties": 1
+    },
+    {
+      "team": "Maltby Sports",
+      "played": 1,
+      "wins": 0,
+      "losses": 0,
+      "ties": 1
+    },
+    {
+      "team": "Ultramar",
+      "played": 1,
+      "wins": 0,
+      "losses": 0,
+      "ties": 1
     },
     {
       "team": "Colson Overhead Doors",
-      "played": 1,
+      "played": 2,
       "wins": 0,
       "losses": 1,
-      "ties": 0
+      "ties": 1
     }
   ],
   "game_headlines": [
+    {
+      "game_id": "3276518",
+      "headline": "Maltby Sports battle to a draw with J&K Electric 1-1",
+      "game_datetime": "2025-11-19T02:00:00+00:00"
+    },
+    {
+      "game_id": "3276516",
+      "headline": "Ultramar finish deadlocked with Colson Overhead Doors 4-4",
+      "game_datetime": "2025-11-19T00:45:00+00:00"
+    },
     {
       "game_id": "3276514",
       "headline": "J&K Electric crushes Colson Overhead Doors 7-4 powered by Brendan Stone's hat trick (4G), while Jeremy Kinnear supplying 1G and 4A",
