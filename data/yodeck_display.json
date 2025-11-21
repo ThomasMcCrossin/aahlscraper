@@ -1,521 +1,32 @@
 {
-  "timestamp": "2025-11-21T12:49:35.339742",
-  "standings": [
-    {
-      "team": "Maltby Sports",
-      "wins": 8,
-      "losses": 1,
-      "ties": 0,
-      "points": 16
-    },
-    {
-      "team": "J&K Electric",
-      "wins": 7,
-      "losses": 3,
-      "ties": 0,
-      "points": 14
-    },
-    {
-      "team": "G.R. Mitchell Welding",
-      "wins": 4,
-      "losses": 4,
-      "ties": 0,
-      "points": 8
-    },
-    {
-      "team": "Ultramar",
-      "wins": 0,
-      "losses": 6,
-      "ties": 2,
-      "points": 2
-    },
-    {
-      "team": "Colson Overhead Doors",
-      "wins": 0,
-      "losses": 5,
-      "ties": 2,
-      "points": 2
-    }
-  ],
-  "top_scorers": [
-    {
-      "no": "98",
-      "name": "Issac Bridge",
-      "team": "Maltby Sports",
-      "pos": "C",
-      "gp": "8",
-      "g": "15",
-      "a": "12",
-      "pts": "27",
-      "ppg": "",
-      "shg": "1",
-      "gwg": "",
-      "gtg": "1",
-      "pim": "3",
-      "pts_g": "3.37",
-      "team_id": "TYLERARSENEAU-1",
-      "team_name": "Maltby Sports",
-      "player_id": "maltby-sports-bridge-issac-98",
-      "team_slug": "maltby-sports",
-      "points": 27,
-      "rank": 1
-    },
-    {
-      "no": "97",
-      "name": "Marshall MacDonald",
-      "team": "G.R. Mitchell Welding",
-      "pos": "C",
-      "gp": "7",
-      "g": "9",
-      "a": "12",
-      "pts": "21",
-      "ppg": "",
-      "shg": "",
-      "gwg": "",
-      "gtg": "1",
-      "pim": "3",
-      "pts_g": "3.00",
-      "team_id": "983723",
-      "team_name": "G.R. Mitchell Welding",
-      "player_id": "gr-mitchell-welding-macdonald-meathead-97",
-      "team_slug": "gr-mitchell-welding",
-      "points": 21,
-      "rank": 2
-    },
-    {
-      "no": "28",
-      "name": "Brendan Stone",
-      "team": "J&K Electric",
-      "pos": "F",
-      "gp": "7",
-      "g": "11",
-      "a": "8",
-      "pts": "19",
-      "ppg": "",
-      "shg": "1",
-      "gwg": "1",
-      "gtg": "",
-      "pim": "",
-      "pts_g": "2.71",
-      "team_id": "TYLERARSENEAU-4",
-      "team_name": "J&K Electric",
-      "player_id": "j-and-k-electric-stone-brendan-28",
-      "team_slug": "j-and-k-electric",
-      "points": 19,
-      "rank": 3
-    },
-    {
-      "no": "9",
-      "name": "Ian McCarthy",
-      "team": "Maltby Sports",
-      "pos": "F",
-      "gp": "8",
-      "g": "7",
-      "a": "10",
-      "pts": "17",
-      "ppg": "",
-      "shg": "1",
-      "gwg": "1",
-      "gtg": "",
-      "pim": "3",
-      "pts_g": "2.12",
-      "team_id": "TYLERARSENEAU-1",
-      "team_name": "Maltby Sports",
-      "player_id": "maltby-sports-mccarthy-ian-9",
-      "team_slug": "maltby-sports",
-      "points": 17,
-      "rank": 4
-    },
-    {
-      "no": "19",
-      "name": "Thomas McCrossin",
-      "team": "Maltby Sports",
-      "pos": "F",
-      "gp": "9",
-      "g": "6",
-      "a": "11",
-      "pts": "17",
-      "ppg": "",
-      "shg": "",
-      "gwg": "",
-      "gtg": "",
-      "pim": "3",
-      "pts_g": "1.89",
-      "team_id": "TYLERARSENEAU-1",
-      "team_name": "Maltby Sports",
-      "player_id": "maltby-sports-mccrossin-thomas-19",
-      "team_slug": "maltby-sports",
-      "points": 17,
-      "rank": 5
-    },
-    {
-      "no": "38",
-      "name": "Dave Atkinson",
-      "team": "G.R. Mitchell Welding",
-      "pos": "F",
-      "gp": "7",
-      "g": "6",
-      "a": "10",
-      "pts": "16",
-      "ppg": "",
-      "shg": "",
-      "gwg": "",
-      "gtg": "1",
-      "pim": "3",
-      "pts_g": "2.29",
-      "team_id": "983723",
-      "team_name": "G.R. Mitchell Welding",
-      "player_id": "gr-mitchell-welding-atkinson-dave-38",
-      "team_slug": "gr-mitchell-welding",
-      "points": 16,
-      "rank": 6
-    },
-    {
-      "no": "11",
-      "name": "Tyler \"Tuffy\" Allen",
-      "team": "Ultramar",
-      "pos": "F",
-      "gp": "7",
-      "g": "10",
-      "a": "5",
-      "pts": "15",
-      "ppg": "",
-      "shg": "",
-      "gwg": "",
-      "gtg": "",
-      "pim": "3",
-      "pts_g": "2.14",
-      "team_id": "TYLERARSENEAU-2",
-      "team_name": "Ultramar",
-      "player_id": "ultramar-allen-tyler-tuffy-11",
-      "team_slug": "ultramar",
-      "points": 15,
-      "rank": 7
-    },
-    {
-      "no": "16",
-      "name": "Biggie Small",
-      "team": "Maltby Sports",
-      "pos": "F/D",
-      "gp": "7",
-      "g": "7",
-      "a": "8",
-      "pts": "15",
-      "ppg": "",
-      "shg": "",
-      "gwg": "",
-      "gtg": "",
-      "pim": "",
-      "pts_g": "2.14",
-      "team_id": "TYLERARSENEAU-1",
-      "team_name": "Maltby Sports",
-      "player_id": "maltby-sports-small-danny-biggie-16",
-      "team_slug": "maltby-sports",
-      "points": 15,
-      "rank": 8
-    },
-    {
-      "no": "9",
-      "name": "Nick Leopold",
-      "team": "J&K Electric",
-      "pos": "F/D",
-      "gp": "8",
-      "g": "4",
-      "a": "10",
-      "pts": "14",
-      "ppg": "1",
-      "shg": "",
-      "gwg": "",
-      "gtg": "1",
-      "pim": "26",
-      "pts_g": "1.75",
-      "team_id": "TYLERARSENEAU-4",
-      "team_name": "J&K Electric",
-      "player_id": "j-and-k-electric-leopold-nick-9",
-      "team_slug": "j-and-k-electric",
-      "points": 14,
-      "rank": 9
-    },
-    {
-      "no": "4",
-      "name": "Reuben Mackenzie",
-      "team": "J&K Electric",
-      "pos": "F",
-      "gp": "6",
-      "g": "5",
-      "a": "8",
-      "pts": "13",
-      "ppg": "",
-      "shg": "",
-      "gwg": "1",
-      "gtg": "",
-      "pim": "",
-      "pts_g": "2.17",
-      "team_id": "TYLERARSENEAU-4",
-      "team_name": "J&K Electric",
-      "player_id": "j-and-k-electric-mackenzie-rubein-4",
-      "team_slug": "j-and-k-electric",
-      "points": 13,
-      "rank": 10
-    },
-    {
-      "no": "88",
-      "name": "Zack Gould",
-      "team": "Colson Overhead Doors",
-      "pos": "F",
-      "gp": "5",
-      "g": "9",
-      "a": "3",
-      "pts": "12",
-      "ppg": "",
-      "shg": "1",
-      "gwg": "",
-      "gtg": "2",
-      "pim": "3",
-      "pts_g": "2.40",
-      "team_id": "TYLERARSENEAU-3",
-      "team_name": "Colson Overhead Doors",
-      "player_id": "colson-overhead-doors-gould-zack-88",
-      "team_slug": "colson-overhead-doors",
-      "points": 12,
-      "rank": 11
-    },
-    {
-      "no": "13",
-      "name": "Gordon Mitchell",
-      "team": "G.R. Mitchell Welding",
-      "pos": "F/D",
-      "gp": "6",
-      "g": "5",
-      "a": "7",
-      "pts": "12",
-      "ppg": "",
-      "shg": "",
-      "gwg": "",
-      "gtg": "1",
-      "pim": "6",
-      "pts_g": "2.00",
-      "team_id": "983723",
-      "team_name": "G.R. Mitchell Welding",
-      "player_id": "gr-mitchell-welding-mitchell-gordon-13",
-      "team_slug": "gr-mitchell-welding",
-      "points": 12,
-      "rank": 12
-    },
-    {
-      "no": "22",
-      "name": "Gerald Boutiler",
-      "team": "J&K Electric",
-      "pos": "D/F",
-      "gp": "9",
-      "g": "4",
-      "a": "7",
-      "pts": "11",
-      "ppg": "",
-      "shg": "",
-      "gwg": "",
-      "gtg": "3",
-      "pim": "6",
-      "pts_g": "1.22",
-      "team_id": "TYLERARSENEAU-4",
-      "team_name": "J&K Electric",
-      "player_id": "j-and-k-electric-boutiler-gerald-22",
-      "team_slug": "j-and-k-electric",
-      "points": 11,
-      "rank": 13
-    },
-    {
-      "no": "12",
-      "name": "Matt Cove",
-      "team": "Ultramar",
-      "pos": "F",
-      "gp": "7",
-      "g": "3",
-      "a": "8",
-      "pts": "11",
-      "ppg": "",
-      "shg": "",
-      "gwg": "",
-      "gtg": "",
-      "pim": "",
-      "pts_g": "1.57",
-      "team_id": "TYLERARSENEAU-2",
-      "team_name": "Ultramar",
-      "player_id": "ultramar-cove-matt-12",
-      "team_slug": "ultramar",
-      "points": 11,
-      "rank": 14
-    },
-    {
-      "no": "7",
-      "name": "Corey Helm",
-      "team": "G.R. Mitchell Welding",
-      "pos": "D/F",
-      "gp": "6",
-      "g": "2",
-      "a": "9",
-      "pts": "11",
-      "ppg": "",
-      "shg": "1",
-      "gwg": "",
-      "gtg": "",
-      "pim": "",
-      "pts_g": "1.83",
-      "team_id": "983723",
-      "team_name": "G.R. Mitchell Welding",
-      "player_id": "gr-mitchell-welding-helm-corey-7",
-      "team_slug": "gr-mitchell-welding",
-      "points": 11,
-      "rank": 15
-    },
-    {
-      "no": "17",
-      "name": "Chris Maltby",
-      "team": "Maltby Sports",
-      "pos": "D/F",
-      "gp": "8",
-      "g": "2",
-      "a": "9",
-      "pts": "11",
-      "ppg": "",
-      "shg": "",
-      "gwg": "",
-      "gtg": "",
-      "pim": "6",
-      "pts_g": "1.37",
-      "team_id": "TYLERARSENEAU-1",
-      "team_name": "Maltby Sports",
-      "player_id": "maltby-sports-maltby-chris-17",
-      "team_slug": "maltby-sports",
-      "points": 11,
-      "rank": 16
-    },
-    {
-      "no": "6",
-      "name": "Luke Crocker",
-      "team": "Maltby Sports",
-      "pos": "D",
-      "gp": "7",
-      "g": "4",
-      "a": "6",
-      "pts": "10",
-      "ppg": "",
-      "shg": "",
-      "gwg": "",
-      "gtg": "",
-      "pim": "3",
-      "pts_g": "1.43",
-      "team_id": "TYLERARSENEAU-1",
-      "team_name": "Maltby Sports",
-      "player_id": "maltby-sports-crocker-luke-6",
-      "team_slug": "maltby-sports",
-      "points": 10,
-      "rank": 17
-    },
-    {
-      "no": "23",
-      "name": "Logan Gesner",
-      "team": "Colson Overhead Doors",
-      "pos": "D/F",
-      "gp": "5",
-      "g": "",
-      "a": "10",
-      "pts": "10",
-      "ppg": "",
-      "shg": "",
-      "gwg": "",
-      "gtg": "",
-      "pim": "16",
-      "pts_g": "2.00",
-      "team_id": "TYLERARSENEAU-3",
-      "team_name": "Colson Overhead Doors",
-      "player_id": "colson-overhead-doors-gesner-logan-23",
-      "team_slug": "colson-overhead-doors",
-      "points": 10,
-      "rank": 18
-    },
-    {
-      "no": "63",
-      "name": "Travis Leblanc",
-      "team": "Maltby Sports",
-      "pos": "F/D",
-      "gp": "7",
-      "g": "4",
-      "a": "6",
-      "pts": "10",
-      "ppg": "",
-      "shg": "",
-      "gwg": "",
-      "gtg": "",
-      "pim": "6",
-      "pts_g": "1.43",
-      "team_id": "TYLERARSENEAU-1",
-      "team_name": "Maltby Sports",
-      "player_id": "maltby-sports-leblanc-travis-63",
-      "team_slug": "maltby-sports",
-      "points": 10,
-      "rank": 19
-    },
-    {
-      "no": "4",
-      "name": "Aaron Dobson",
-      "team": "Ultramar",
-      "pos": "D",
-      "gp": "4",
-      "g": "1",
-      "a": "8",
-      "pts": "9",
-      "ppg": "",
-      "shg": "",
-      "gwg": "",
-      "gtg": "",
-      "pim": "6",
-      "pts_g": "2.25",
-      "team_id": "TYLERARSENEAU-2",
-      "team_name": "Ultramar",
-      "player_id": "ultramar-dobson-aaron-4",
-      "team_slug": "ultramar",
-      "points": 9,
-      "rank": 20
-    }
-  ],
+  "timestamp": "2025-11-21T16:29:35.963486",
+  "standings": [],
+  "top_scorers": [],
   "recent_results": [
     {
       "game_id": "3276518",
       "status": "final",
       "location": "Amherst",
-      "division": "REGULAR SEASON",
+      "division": null,
       "start_utc": "2025-11-19T02:00:00+00:00",
       "start_local": "2025-11-18T22:00:00-04:00",
       "home": "Maltby Sports",
       "away": "J&K Electric",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276518&p=boxscore",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276518&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276518&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276518&u=DSMALL&s=hockey&p=summary",
       "home_line": {
         "name": "Maltby Sports",
         "slug": "maltby-sports",
         "final": 4,
-        "periods": [
-          1,
-          2,
-          1,
-          0,
-          0
-        ],
-        "is_winner": true
+        "periods": [],
+        "is_winner": null
       },
       "away_line": {
         "name": "J&K Electric",
         "slug": "j-and-k-electric",
         "final": 2,
-        "periods": [
-          1,
-          1,
-          0,
-          0,
-          0
-        ],
-        "is_winner": false
+        "periods": [],
+        "is_winner": null
       },
       "home_score": 4,
       "away_score": 2,
@@ -523,300 +34,33 @@
       "datetime": "2025-11-18T22:00:00-04:00",
       "date": "11/18/2025",
       "time": "10:00 PM",
-      "player_stats": {
-        "home": [
-          {
-            "player_id": "maltby-sports-arbing-ryan-91",
-            "name": "Ryan Arbing",
-            "number": "91",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-bridge-issac-98",
-            "name": "Issac Bridge",
-            "number": "98",
-            "positions": [
-              "C"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-gallant-matt-2",
-            "name": "Matt Gallant",
-            "number": "2",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-hurley-connor-7",
-            "name": "Connor Hurley",
-            "number": "7",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 0,
-            "points": 0,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-johnson-trevor-18",
-            "name": "Trevor Johnson",
-            "number": "18",
-            "positions": [
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-mackinnon-ted-77",
-            "name": "Ted Mackinnon",
-            "number": "77",
-            "positions": [
-              "F"
-            ],
-            "goals": 2,
-            "assists": 0,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-maltby-chris-17",
-            "name": "Chris Maltby",
-            "number": "17",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-mccarthy-ian-9",
-            "name": "Ian McCarthy",
-            "number": "9",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-mccrossin-thomas-19",
-            "name": "Thomas McCrossin",
-            "number": "19",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 3,
-            "points": 3,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ],
-        "away": [
-          {
-            "player_id": "j-and-k-electric-davison-bill-74",
-            "name": "Bill Davison",
-            "number": "74",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-kinnear-jeremy-17",
-            "name": "Jeremy Kinnear",
-            "number": "17",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 1
-          },
-          {
-            "player_id": "j-and-k-electric-leopold-nick-9",
-            "name": "Nick Leopold",
-            "number": "9",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-perrin-noah-87",
-            "name": "Noah Perrin",
-            "number": "87",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-stone-brendan-28",
-            "name": "Brendan Stone",
-            "number": "28",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ]
-      },
-      "penalties": [
-        {
-          "per_period": "1",
-          "time": "4:48",
-          "player": "2 Matt  Gallant / Served by 2 Matt  Gallant",
-          "team": "Maltby Sports",
-          "infraction": "Tripping (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "2",
-          "time": "2:38",
-          "player": "18 Trevor Johnson / Served by 18 Trevor Johnson",
-          "team": "Maltby Sports",
-          "infraction": "Hooking (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "3",
-          "time": "12:12",
-          "player": "9 Nick Leopold / Served by 9 Nick Leopold",
-          "team": "J&K Electric",
-          "infraction": "Tripping (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "3",
-          "time": "4:06",
-          "player": "9 Ian McCarthy / Served by 9 Ian McCarthy",
-          "team": "Maltby Sports",
-          "infraction": "Holding (Minor)",
-          "length": "3:00"
-        }
-      ],
-      "scoreboard": [
-        [
-          "REGULAR SEASON",
-          "1",
-          "2",
-          "3",
-          "OT",
-          "2OT",
-          "F"
-        ],
-        [
-          "Maltby Sports",
-          "1",
-          "2",
-          "1",
-          "0",
-          "0",
-          "4"
-        ],
-        [
-          "J&K Electric",
-          "1",
-          "1",
-          "0",
-          "0",
-          "0",
-          "2"
-        ]
-      ],
-      "headline": "Maltby Sports tops J&K Electric 4-2 driven by Ted Mackinnon's two goals, and Ian McCarthy contributing 1G",
-      "headline_updated_at": "2025-11-19T12:51:34.521046+00:00"
+      "headline": "Maltby Sports tops J&K Electric 4-2",
+      "headline_updated_at": "2025-11-21T16:29:35.906365+00:00"
     },
     {
       "game_id": "3276516",
       "status": "final",
       "location": "Amherst",
-      "division": "REGULAR SEASON",
+      "division": null,
       "start_utc": "2025-11-19T00:45:00+00:00",
       "start_local": "2025-11-18T20:45:00-04:00",
       "home": "Ultramar",
       "away": "Colson Overhead Doors",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-2&gameID=3276516&p=boxscore",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-2&gameID=3276516&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276516&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276516&u=DSMALL&s=hockey&p=summary",
       "home_line": {
         "name": "Ultramar",
         "slug": "ultramar",
         "final": 4,
-        "periods": [
-          2,
-          1,
-          1,
-          0,
-          0
-        ],
-        "is_winner": false
+        "periods": [],
+        "is_winner": null
       },
       "away_line": {
         "name": "Colson Overhead Doors",
         "slug": "colson-overhead-doors",
         "final": 4,
-        "periods": [
-          2,
-          1,
-          1,
-          0,
-          0
-        ],
-        "is_winner": false
+        "periods": [],
+        "is_winner": null
       },
       "home_score": 4,
       "away_score": 4,
@@ -824,276 +68,6 @@
       "datetime": "2025-11-18T20:45:00-04:00",
       "date": "11/18/2025",
       "time": "8:45 PM",
-      "player_stats": {
-        "home": [
-          {
-            "player_id": "ultramar-bennett-mark-00",
-            "name": "Mark Bennett",
-            "number": "00",
-            "positions": [
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-burke-tim-22",
-            "name": "Tim Burke",
-            "number": "22",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 2,
-            "assists": 1,
-            "points": 3,
-            "penalty_minutes": 3,
-            "gtg": 2
-          },
-          {
-            "player_id": "ultramar-cove-matt-12",
-            "name": "Matt Cove",
-            "number": "12",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-dobson-aaron-4",
-            "name": "Aaron Dobson",
-            "number": "4",
-            "positions": [
-              "D"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-gallant-brett-3",
-            "name": "Brett Gallant",
-            "number": "3",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 6,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-jobes-bill-8",
-            "name": "Bill Jobes",
-            "number": "8",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-malcolm-robert-10",
-            "name": "Robert Malcolm",
-            "number": "10",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-miller-madden-6",
-            "name": "Madden Miller",
-            "number": "6",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ],
-        "away": [
-          {
-            "player_id": "colson-overhead-doors-chandler-3rd-charles-7",
-            "name": "Charles Chandler 3rd",
-            "number": "7",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 1
-          },
-          {
-            "player_id": "colson-overhead-doors-davis-dan-13",
-            "name": "Dan Davis",
-            "number": "13",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 6,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-faulkner-rory-76",
-            "name": "Rory Faulkner",
-            "number": "76",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-gesner-logan-23",
-            "name": "Logan Gesner",
-            "number": "23",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-hebert-denis-19",
-            "name": "Denis Hebert",
-            "number": "19",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 3,
-            "points": 4,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-terrio-marshall",
-            "name": "Marshall Terrio",
-            "number": null,
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 1
-          }
-        ]
-      },
-      "penalties": [
-        {
-          "per_period": "1",
-          "time": "12:10",
-          "player": "3 Brett Gallant / Served by 3 Brett Gallant",
-          "team": "Ultramar",
-          "infraction": "Interference (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "3",
-          "time": "5:37",
-          "player": "13 Dan Davis / Served by 13 Dan Davis",
-          "team": "Colson Overhead Doors",
-          "infraction": "Interference (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "3",
-          "time": "4:00",
-          "player": "22 Tim Burke / Served by 22 Tim Burke",
-          "team": "Ultramar",
-          "infraction": "Interference (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "3",
-          "time": "4:00",
-          "player": "3 Brett Gallant / Served by 3 Brett Gallant",
-          "team": "Ultramar",
-          "infraction": "Unsportsmanlike Conduct (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "3",
-          "time": "2:14",
-          "player": "13 Dan Davis / Served by 13 Dan Davis",
-          "team": "Colson Overhead Doors",
-          "infraction": "Ineligible Player (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "3",
-          "time": "0:14",
-          "player": "-20 Mark Bennett / Served by -20 Mark Bennett",
-          "team": "Ultramar",
-          "infraction": "Slashing (Minor)",
-          "length": "3:00"
-        }
-      ],
-      "scoreboard": [
-        [
-          "REGULAR SEASON",
-          "1",
-          "2",
-          "3",
-          "OT",
-          "2OT",
-          "F"
-        ],
-        [
-          "Ultramar",
-          "2",
-          "1",
-          "1",
-          "0",
-          "0",
-          "4"
-        ],
-        [
-          "Colson Overhead Doors",
-          "2",
-          "1",
-          "1",
-          "0",
-          "0",
-          "4"
-        ]
-      ],
       "headline": "Ultramar finish deadlocked with Colson Overhead Doors 4-4",
       "headline_updated_at": "2025-11-19T02:22:46.247489+00:00"
     },
@@ -1101,38 +75,26 @@
       "game_id": "3276514",
       "status": "final",
       "location": "Amherst",
-      "division": "REGULAR SEASON",
+      "division": null,
       "start_utc": "2025-11-17T01:00:00+00:00",
       "start_local": "2025-11-16T21:00:00-04:00",
       "home": "Colson Overhead Doors",
       "away": "J&K Electric",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276514&p=boxscore",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276514&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276514&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276514&u=DSMALL&s=hockey&p=summary",
       "home_line": {
         "name": "Colson Overhead Doors",
         "slug": "colson-overhead-doors",
         "final": 4,
-        "periods": [
-          0,
-          2,
-          2,
-          0,
-          0
-        ],
-        "is_winner": false
+        "periods": [],
+        "is_winner": null
       },
       "away_line": {
         "name": "J&K Electric",
         "slug": "j-and-k-electric",
         "final": 7,
-        "periods": [
-          3,
-          2,
-          2,
-          0,
-          0
-        ],
-        "is_winner": true
+        "periods": [],
+        "is_winner": null
       },
       "home_score": 4,
       "away_score": 7,
@@ -1140,266 +102,33 @@
       "datetime": "2025-11-16T21:00:00-04:00",
       "date": "11/16/2025",
       "time": "9:00 PM",
-      "player_stats": {
-        "home": [
-          {
-            "player_id": "colson-overhead-doors-burge-tom-12",
-            "name": "Tom Burge",
-            "number": "12",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-davis-dan-13",
-            "name": "Dan Davis",
-            "number": "13",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 0,
-            "points": 0,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-gesner-logan-23",
-            "name": "Logan Gesner",
-            "number": "23",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 0,
-            "assists": 4,
-            "points": 4,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-gould-zack-88",
-            "name": "Zack Gould",
-            "number": "88",
-            "positions": [
-              "F"
-            ],
-            "goals": 2,
-            "assists": 1,
-            "points": 3,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-hebert-denis-19",
-            "name": "Denis Hebert",
-            "number": "19",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-sproul-chris-31",
-            "name": "Chris Sproul",
-            "number": "31",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ],
-        "away": [
-          {
-            "player_id": "j-and-k-electric-boutiler-gerald-22",
-            "name": "Gerald Boutiler",
-            "number": "22",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-davison-bill-74",
-            "name": "Bill Davison",
-            "number": "74",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-harrison-avery-00",
-            "name": "Avery Harrison",
-            "number": "00",
-            "positions": [
-              "D"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-kinnear-jeremy-17",
-            "name": "Jeremy Kinnear",
-            "number": "17",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 4,
-            "points": 5,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-leopold-nick-9",
-            "name": "Nick Leopold",
-            "number": "9",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 1,
-            "assists": 2,
-            "points": 3,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-stone-brendan-28",
-            "name": "Brendan Stone",
-            "number": "28",
-            "positions": [
-              "F"
-            ],
-            "goals": 4,
-            "assists": 0,
-            "points": 4,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ]
-      },
-      "penalties": [
-        {
-          "per_period": "2",
-          "time": "16:11",
-          "player": "-20 Avery Harrison / Served by -20 Avery Harrison",
-          "team": "J&K Electric",
-          "infraction": "Holding (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "2",
-          "time": "11:15",
-          "player": "13 Dan Davis / Served by 12 Tom Burge",
-          "team": "Colson Overhead Doors",
-          "infraction": "Tripping (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "2",
-          "time": "4:17",
-          "player": "12 Tom Burge / Served by 12 Tom Burge",
-          "team": "Colson Overhead Doors",
-          "infraction": "Tripping (Minor)",
-          "length": "3:00"
-        }
-      ],
-      "scoreboard": [
-        [
-          "REGULAR SEASON",
-          "1",
-          "2",
-          "3",
-          "OT",
-          "2OT",
-          "F"
-        ],
-        [
-          "Colson Overhead Doors",
-          "0",
-          "2",
-          "2",
-          "0",
-          "0",
-          "4"
-        ],
-        [
-          "J&K Electric",
-          "3",
-          "2",
-          "2",
-          "0",
-          "0",
-          "7"
-        ]
-      ],
-      "headline": "J&K Electric rolls past Colson Overhead Doors 7-4 powered by Brendan Stone's hat trick (4G), while Jeremy Kinnear adding 1G and 4A",
-      "headline_updated_at": "2025-11-18T15:26:18.600835+00:00"
+      "headline": "J&K Electric rolls past Colson Overhead Doors 7-4",
+      "headline_updated_at": "2025-11-21T16:29:35.906365+00:00"
     },
     {
       "game_id": "3276459",
       "status": "final",
       "location": "Amherst",
-      "division": "REGULAR SEASON",
+      "division": null,
       "start_utc": "2025-11-10T01:00:00+00:00",
       "start_local": "2025-11-09T21:00:00-04:00",
       "home": "J&K Electric",
       "away": "Ultramar",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276459&p=boxscore",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276459&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276459&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276459&u=DSMALL&s=hockey&p=summary",
       "home_line": {
         "name": "J&K Electric",
         "slug": "j-and-k-electric",
         "final": 4,
-        "periods": [
-          2,
-          2,
-          0,
-          0,
-          0
-        ],
-        "is_winner": true
+        "periods": [],
+        "is_winner": null
       },
       "away_line": {
         "name": "Ultramar",
         "slug": "ultramar",
         "final": 3,
-        "periods": [
-          1,
-          0,
-          2,
-          0,
-          0
-        ],
-        "is_winner": false
+        "periods": [],
+        "is_winner": null
       },
       "home_score": 4,
       "away_score": 3,
@@ -1407,246 +136,33 @@
       "datetime": "2025-11-09T21:00:00-04:00",
       "date": "11/09/2025",
       "time": "9:00 PM",
-      "player_stats": {
-        "home": [
-          {
-            "player_id": "j-and-k-electric-boutiler-gerald-22",
-            "name": "Gerald Boutiler",
-            "number": "22",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-kinnear-jeremy-17",
-            "name": "Jeremy Kinnear",
-            "number": "17",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-mackenzie-rubein-4",
-            "name": "Reuben Mackenzie",
-            "number": "4",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 2,
-            "points": 3,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-martin-ryan-36",
-            "name": "Ryan Martin",
-            "number": "36",
-            "positions": [],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-perrin-noah-87",
-            "name": "Noah Perrin",
-            "number": "87",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-stone-brendan-28",
-            "name": "Brendan Stone",
-            "number": "28",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ],
-        "away": [
-          {
-            "player_id": "ultramar-allen-tyler-tuffy-11",
-            "name": "Tyler \"Tuffy\" Allen",
-            "number": "11",
-            "positions": [
-              "F"
-            ],
-            "goals": 2,
-            "assists": 1,
-            "points": 3,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-bonnell-andy-5",
-            "name": "Andy Bonnell",
-            "number": "5",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-cove-matt-12",
-            "name": "Matt Cove",
-            "number": "12",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-gallant-brett-3",
-            "name": "Brett Gallant",
-            "number": "3",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-jobes-bill-8",
-            "name": "Bill Jobes",
-            "number": "8",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-linkletter-brad-68",
-            "name": "Brad Linkletter",
-            "number": "68",
-            "positions": [
-              "C"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 1
-          }
-        ]
-      },
-      "penalties": [
-        {
-          "per_period": "2",
-          "time": "6:18",
-          "player": "22 Gerald Boutiler / Served by 22 Gerald Boutiler",
-          "team": "J&K Electric",
-          "infraction": "Holding (Minor)",
-          "length": "3:00"
-        }
-      ],
-      "scoreboard": [
-        [
-          "REGULAR SEASON",
-          "1",
-          "2",
-          "3",
-          "OT",
-          "2OT",
-          "F"
-        ],
-        [
-          "J&K Electric",
-          "2",
-          "2",
-          "0",
-          "0",
-          "0",
-          "4"
-        ],
-        [
-          "Ultramar",
-          "1",
-          "0",
-          "2",
-          "0",
-          "0",
-          "3"
-        ]
-      ],
-      "headline": "J&K Electric squeaks by Ultramar 4-3 lifted by Rubein Mackenzie's 1G and 2A, with Noah Perrin contributing 1G and 1A",
-      "headline_updated_at": "2025-11-18T15:26:18.600835+00:00"
+      "headline": "J&K Electric squeaks by Ultramar 4-3",
+      "headline_updated_at": "2025-11-21T16:29:35.906365+00:00"
     },
     {
       "game_id": "3276455",
       "status": "final",
       "location": "Amherst",
-      "division": "REGULAR SEASON",
+      "division": null,
       "start_utc": "2025-11-05T02:00:00+00:00",
       "start_local": "2025-11-04T22:00:00-04:00",
       "home": "Maltby Sports",
       "away": "G.R. Mitchell Welding",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276455&p=boxscore",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276455&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276455&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276455&u=DSMALL&s=hockey&p=summary",
       "home_line": {
         "name": "Maltby Sports",
         "slug": "maltby-sports",
         "final": 5,
-        "periods": [
-          2,
-          1,
-          2,
-          0,
-          0
-        ],
-        "is_winner": true
+        "periods": [],
+        "is_winner": null
       },
       "away_line": {
         "name": "G.R. Mitchell Welding",
         "slug": "gr-mitchell-welding",
         "final": 4,
-        "periods": [
-          2,
-          1,
-          1,
-          0,
-          0
-        ],
-        "is_winner": false
+        "periods": [],
+        "is_winner": null
       },
       "home_score": 5,
       "away_score": 4,
@@ -1654,319 +170,33 @@
       "datetime": "2025-11-04T22:00:00-04:00",
       "date": "11/04/2025",
       "time": "10:00 PM",
-      "player_stats": {
-        "home": [
-          {
-            "player_id": "maltby-sports-arbing-ryan-91",
-            "name": "Ryan Arbing",
-            "number": "91",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 6,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-bridge-issac-98",
-            "name": "Issac Bridge",
-            "number": "98",
-            "positions": [
-              "C"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-crocker-luke-6",
-            "name": "Luke Crocker",
-            "number": "6",
-            "positions": [
-              "D"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-gallant-matt-2",
-            "name": "Matt Gallant",
-            "number": "2",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-hurley-connor-7",
-            "name": "Connor Hurley",
-            "number": "7",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-johnson-trevor-18",
-            "name": "Trevor Johnson",
-            "number": "18",
-            "positions": [
-              "D"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 1
-          },
-          {
-            "player_id": "maltby-sports-leblanc-travis-63",
-            "name": "Travis Leblanc",
-            "number": "63",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-mccarthy-ian-9",
-            "name": "Ian McCarthy",
-            "number": "9",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-mccrossin-thomas-19",
-            "name": "Thomas McCrossin",
-            "number": "19",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-small-danny-biggie-16",
-            "name": "Biggie Small",
-            "number": "16",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ],
-        "away": [
-          {
-            "player_id": "gr-mitchell-welding-bourgeois-julien-9",
-            "name": "Julien Bourgeois",
-            "number": "9",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-fullerton-zack-90",
-            "name": "Zack Fullerton",
-            "number": "90",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-helm-corey-7",
-            "name": "Corey Helm",
-            "number": "7",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 2,
-            "assists": 1,
-            "points": 3,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-mattix-ralph-66",
-            "name": "Ralph Mattix",
-            "number": "66",
-            "positions": [
-              "D"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-mitchell-gordon-13",
-            "name": "Gordon Mitchell",
-            "number": "13",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 1
-          },
-          {
-            "player_id": "gr-mitchell-welding-ryan-geoff-55",
-            "name": "Geoff Ryan",
-            "number": "55",
-            "positions": [
-              "D"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ]
-      },
-      "penalties": [
-        {
-          "per_period": "1",
-          "time": "3:18",
-          "player": "63 Travis  Leblanc / Served by 63 Travis  Leblanc",
-          "team": "Maltby Sports",
-          "infraction": "Holding (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "3",
-          "time": "11:03",
-          "player": "91 Ryan Arbing / Served by 91 Ryan Arbing",
-          "team": "Maltby Sports",
-          "infraction": "Roughing (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "3",
-          "time": "1:37",
-          "player": "91 Ryan Arbing / Served by 91 Ryan Arbing",
-          "team": "Maltby Sports",
-          "infraction": "Tripping (Minor)",
-          "length": "3:00"
-        }
-      ],
-      "scoreboard": [
-        [
-          "REGULAR SEASON",
-          "1",
-          "2",
-          "3",
-          "OT",
-          "2OT",
-          "F"
-        ],
-        [
-          "Maltby Sports",
-          "2",
-          "1",
-          "2",
-          "0",
-          "0",
-          "5"
-        ],
-        [
-          "G.R. Mitchell Welding",
-          "2",
-          "1",
-          "1",
-          "0",
-          "0",
-          "4"
-        ]
-      ],
-      "headline": "Maltby Sports squeaks by G.R. Mitchell Welding 5-4 powered by Danny \"Biggie\" Small's 1G and 1A, as Matt Gallant adding 1G and 1A",
-      "headline_updated_at": "2025-11-08T12:24:10.037492+00:00"
+      "headline": "Maltby Sports squeaks by G.R. Mitchell Welding 5-4",
+      "headline_updated_at": "2025-11-21T16:29:35.906365+00:00"
     },
     {
       "game_id": "3276453",
       "status": "final",
       "location": "Amherst",
-      "division": "REGULAR SEASON",
+      "division": null,
       "start_utc": "2025-11-05T00:45:00+00:00",
       "start_local": "2025-11-04T20:45:00-04:00",
       "home": "Colson Overhead Doors",
       "away": "Ultramar",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276453&p=boxscore",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276453&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276453&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276453&u=DSMALL&s=hockey&p=summary",
       "home_line": {
         "name": "Colson Overhead Doors",
         "slug": "colson-overhead-doors",
         "final": 5,
-        "periods": [
-          1,
-          4,
-          0,
-          0,
-          0
-        ],
-        "is_winner": false
+        "periods": [],
+        "is_winner": null
       },
       "away_line": {
         "name": "Ultramar",
         "slug": "ultramar",
         "final": 5,
-        "periods": [
-          3,
-          2,
-          0,
-          0,
-          0
-        ],
-        "is_winner": false
+        "periods": [],
+        "is_winner": null
       },
       "home_score": 5,
       "away_score": 5,
@@ -1974,251 +204,6 @@
       "datetime": "2025-11-04T20:45:00-04:00",
       "date": "11/04/2025",
       "time": "8:45 PM",
-      "player_stats": {
-        "home": [
-          {
-            "player_id": "colson-overhead-doors-baisley-chris-44",
-            "name": "Chris Baisley",
-            "number": "44",
-            "positions": [
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-eatmon-chester-8",
-            "name": "Chester Eatmon",
-            "number": "8",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-faulkner-rory-76",
-            "name": "Rory Faulkner",
-            "number": "76",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-gould-zack-88",
-            "name": "Zack Gould",
-            "number": "88",
-            "positions": [
-              "F"
-            ],
-            "goals": 2,
-            "assists": 1,
-            "points": 3,
-            "penalty_minutes": 3,
-            "gtg": 1
-          },
-          {
-            "player_id": "colson-overhead-doors-hebert-denis-19",
-            "name": "Denis Hebert",
-            "number": "19",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 1
-          }
-        ],
-        "away": [
-          {
-            "player_id": "ultramar-allen-tyler-tuffy-11",
-            "name": "Tyler \"Tuffy\" Allen",
-            "number": "11",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-bonnell-andy-5",
-            "name": "Andy Bonnell",
-            "number": "5",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-burke-brody-14",
-            "name": "Brody Burke",
-            "number": "14",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-cove-matt-12",
-            "name": "Matt Cove",
-            "number": "12",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-dywer-chris-2",
-            "name": "Chris Dywer",
-            "number": "2",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-jobes-bill-8",
-            "name": "Bill Jobes",
-            "number": "8",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-linkletter-brad-68",
-            "name": "Brad Linkletter",
-            "number": "68",
-            "positions": [
-              "C"
-            ],
-            "goals": 2,
-            "assists": 0,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-malcolm-robert-10",
-            "name": "Robert Malcolm",
-            "number": "10",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-miller-madden-6",
-            "name": "Madden Miller",
-            "number": "6",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ]
-      },
-      "penalties": [
-        {
-          "per_period": "2",
-          "time": "14:18",
-          "player": "44 Chris Baisley / Served by 44 Chris Baisley",
-          "team": "Colson Overhead Doors",
-          "infraction": "Interference (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "2",
-          "time": "14:18",
-          "player": "88 Zack Gould / Served by 88 Zack Gould",
-          "team": "Colson Overhead Doors",
-          "infraction": "Cross-Checking (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "2",
-          "time": "14:18",
-          "player": "11 Tyler \"Tuffy\" Allen / Served by 11 Tyler \"Tuffy\" Allen",
-          "team": "Ultramar",
-          "infraction": "Unsportsmanlike Conduct (Minor)",
-          "length": "3:00"
-        }
-      ],
-      "scoreboard": [
-        [
-          "REGULAR SEASON",
-          "1",
-          "2",
-          "3",
-          "OT",
-          "2OT",
-          "F"
-        ],
-        [
-          "Colson Overhead Doors",
-          "1",
-          "4",
-          "0",
-          "0",
-          "0",
-          "5"
-        ],
-        [
-          "Ultramar",
-          "3",
-          "2",
-          "0",
-          "0",
-          "0",
-          "5"
-        ]
-      ],
       "headline": "Colson Overhead Doors battle to a draw with Ultramar 5-5",
       "headline_updated_at": "2025-11-08T12:24:10.037492+00:00"
     },
@@ -2226,38 +211,26 @@
       "game_id": "3276449",
       "status": "final",
       "location": "Amherst",
-      "division": "REGULAR SEASON",
+      "division": null,
       "start_utc": "2025-11-03T01:00:00+00:00",
       "start_local": "2025-11-02T21:00:00-04:00",
       "home": "Colson Overhead Doors",
       "away": "J&K Electric",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276449&p=boxscore",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276449&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276449&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276449&u=DSMALL&s=hockey&p=summary",
       "home_line": {
         "name": "Colson Overhead Doors",
         "slug": "colson-overhead-doors",
         "final": 3,
-        "periods": [
-          1,
-          0,
-          2,
-          0,
-          0
-        ],
-        "is_winner": false
+        "periods": [],
+        "is_winner": null
       },
       "away_line": {
         "name": "J&K Electric",
         "slug": "j-and-k-electric",
         "final": 6,
-        "periods": [
-          1,
-          2,
-          3,
-          0,
-          0
-        ],
-        "is_winner": true
+        "periods": [],
+        "is_winner": null
       },
       "home_score": 3,
       "away_score": 6,
@@ -2265,245 +238,33 @@
       "datetime": "2025-11-02T21:00:00-04:00",
       "date": "11/02/2025",
       "time": "9:00 PM",
-      "player_stats": {
-        "home": [
-          {
-            "player_id": "colson-overhead-doors-gesner-logan-23",
-            "name": "Logan Gesner",
-            "number": "23",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 13,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-gould-zack-88",
-            "name": "Zack Gould",
-            "number": "88",
-            "positions": [
-              "F"
-            ],
-            "goals": 2,
-            "assists": 1,
-            "points": 3,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-hebert-denis-19",
-            "name": "Denis Hebert",
-            "number": "19",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ],
-        "away": [
-          {
-            "player_id": "j-and-k-electric-boutiler-gerald-22",
-            "name": "Gerald Boutiler",
-            "number": "22",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-budd-ryan-18",
-            "name": "Ryan Budd",
-            "number": "18",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 3,
-            "points": 3,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-kinnear-jeremy-17",
-            "name": "Jeremy Kinnear",
-            "number": "17",
-            "positions": [
-              "F"
-            ],
-            "goals": 2,
-            "assists": 0,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 1
-          },
-          {
-            "player_id": "j-and-k-electric-leopold-nick-9",
-            "name": "Nick Leopold",
-            "number": "9",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-mackenzie-rubein-4",
-            "name": "Reuben Mackenzie",
-            "number": "4",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 3,
-            "points": 3,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-morris-pat-27",
-            "name": "Pat Morris",
-            "number": "27",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-perrin-noah-87",
-            "name": "Noah Perrin",
-            "number": "87",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-stone-brendan-28",
-            "name": "Brendan Stone",
-            "number": "28",
-            "positions": [
-              "F"
-            ],
-            "goals": 3,
-            "assists": 0,
-            "points": 3,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ]
-      },
-      "penalties": [
-        {
-          "per_period": "3",
-          "time": "2:10",
-          "player": "23 Logan Gesner / Served by 8 Chester Eatmon",
-          "team": "Colson Overhead Doors",
-          "infraction": "Body Contact (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "3",
-          "time": "2:10",
-          "player": "23 Logan Gesner / Served by 8 Chester Eatmon",
-          "team": "Colson Overhead Doors",
-          "infraction": "Spearing (Major)",
-          "length": "10:00"
-        }
-      ],
-      "scoreboard": [
-        [
-          "REGULAR SEASON",
-          "1",
-          "2",
-          "3",
-          "OT",
-          "2OT",
-          "F"
-        ],
-        [
-          "Colson Overhead Doors",
-          "1",
-          "0",
-          "2",
-          "0",
-          "0",
-          "3"
-        ],
-        [
-          "J&K Electric",
-          "1",
-          "2",
-          "3",
-          "0",
-          "0",
-          "6"
-        ]
-      ],
-      "headline": "J&K Electric rolls past Colson Overhead Doors 6-3 powered by Brendan Stone's hat trick, while Jeremy Kinnear adding two goals",
-      "headline_updated_at": "2025-11-04T04:26:34.151891+00:00"
+      "headline": "J&K Electric rolls past Colson Overhead Doors 6-3",
+      "headline_updated_at": "2025-11-21T16:29:35.906365+00:00"
     },
     {
       "game_id": "3276439",
       "status": "final",
       "location": "Amherst",
-      "division": "REGULAR SEASON",
+      "division": null,
       "start_utc": "2025-10-29T01:00:00+00:00",
       "start_local": "2025-10-28T22:00:00-03:00",
       "home": "G.R. Mitchell Welding",
       "away": "Ultramar",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276439&p=boxscore",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276439&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276439&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276439&u=DSMALL&s=hockey&p=summary",
       "home_line": {
         "name": "G.R. Mitchell Welding",
         "slug": "gr-mitchell-welding",
         "final": 9,
-        "periods": [
-          4,
-          2,
-          3,
-          0,
-          0
-        ],
-        "is_winner": true
+        "periods": [],
+        "is_winner": null
       },
       "away_line": {
         "name": "Ultramar",
         "slug": "ultramar",
         "final": 3,
-        "periods": [
-          3,
-          0,
-          0,
-          0,
-          0
-        ],
-        "is_winner": false
+        "periods": [],
+        "is_winner": null
       },
       "home_score": 9,
       "away_score": 3,
@@ -2511,348 +272,33 @@
       "datetime": "2025-10-28T22:00:00-03:00",
       "date": "10/28/2025",
       "time": "10:00 PM",
-      "player_stats": {
-        "home": [
-          {
-            "player_id": "gr-mitchell-welding-atkinson-dave-38",
-            "name": "Dave Atkinson",
-            "number": "38",
-            "positions": [
-              "F"
-            ],
-            "goals": 2,
-            "assists": 1,
-            "points": 3,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-bourgeois-julien-9",
-            "name": "Julien Bourgeois",
-            "number": "9",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-dobson-nick-pickle-94",
-            "name": "Nick \"Pickle\" Dobson",
-            "number": "94",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-fullerton-zack-90",
-            "name": "Zack Fullerton",
-            "number": "90",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-helm-corey-7",
-            "name": "Corey Helm",
-            "number": "7",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-hurley-william-15",
-            "name": "William Hurley",
-            "number": "15",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-macdonald-meathead-97",
-            "name": "Marshall MacDonald",
-            "number": "97",
-            "positions": [
-              "C"
-            ],
-            "goals": 1,
-            "assists": 3,
-            "points": 4,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-macpherson-ryan-21",
-            "name": "Ryan Macpherson",
-            "number": "21",
-            "positions": [],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-mattix-ralph-66",
-            "name": "Ralph Mattix",
-            "number": "66",
-            "positions": [
-              "D"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-mitchell-gordon-13",
-            "name": "Gordon Mitchell",
-            "number": "13",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 1,
-            "assists": 2,
-            "points": 3,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-robichaud-corey-88",
-            "name": "Corey Robichaud",
-            "number": "88",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-ryan-geoff-55",
-            "name": "Geoff Ryan",
-            "number": "55",
-            "positions": [
-              "D"
-            ],
-            "goals": 1,
-            "assists": 2,
-            "points": 3,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-sutton-cody-61",
-            "name": "Cody Sutton",
-            "number": "61",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ],
-        "away": [
-          {
-            "player_id": "ultramar-allen-tyler-tuffy-11",
-            "name": "Tyler \"Tuffy\" Allen",
-            "number": "11",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-burke-brody-14",
-            "name": "Brody Burke",
-            "number": "14",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 0,
-            "assists": 0,
-            "points": 0,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-cove-matt-12",
-            "name": "Matt Cove",
-            "number": "12",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-gallant-brett-3",
-            "name": "Brett Gallant",
-            "number": "3",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-linkletter-brad-68",
-            "name": "Brad Linkletter",
-            "number": "68",
-            "positions": [
-              "C"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-miller-madden-6",
-            "name": "Madden Miller",
-            "number": "6",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ]
-      },
-      "penalties": [
-        {
-          "per_period": "2",
-          "time": "7:26",
-          "player": "13 Gordon  Mitchell / Served by 13 Gordon  Mitchell",
-          "team": "G.R. Mitchell Welding",
-          "infraction": "Interference (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "3",
-          "time": "10:48",
-          "player": "14 Brody Burke / Served by 14 Brody Burke",
-          "team": "Ultramar",
-          "infraction": "High-Sticking (Minor)",
-          "length": "3:00"
-        }
-      ],
-      "scoreboard": [
-        [
-          "REGULAR SEASON",
-          "1",
-          "2",
-          "3",
-          "OT",
-          "2OT",
-          "F"
-        ],
-        [
-          "G.R. Mitchell Welding",
-          "4",
-          "2",
-          "3",
-          "0",
-          "0",
-          "9"
-        ],
-        [
-          "Ultramar",
-          "3",
-          "0",
-          "0",
-          "0",
-          "0",
-          "3"
-        ]
-      ],
-      "headline": "G.R. Mitchell Welding trounces Ultramar 9-3 sparked by Dave Atkinson's two goals and 1A, while Meathead MacDonald adding 1G and 3A",
-      "headline_updated_at": "2025-11-04T04:26:34.151891+00:00"
+      "headline": "G.R. Mitchell Welding trounces Ultramar 9-3",
+      "headline_updated_at": "2025-11-21T16:29:35.906365+00:00"
     },
     {
       "game_id": "3276435",
       "status": "final",
       "location": "Amherst",
-      "division": "REGULAR SEASON",
+      "division": null,
       "start_utc": "2025-10-28T23:45:00+00:00",
       "start_local": "2025-10-28T20:45:00-03:00",
       "home": "Maltby Sports",
       "away": "J&K Electric",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276435&p=boxscore",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276435&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276435&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276435&u=DSMALL&s=hockey&p=summary",
       "home_line": {
         "name": "Maltby Sports",
         "slug": "maltby-sports",
         "final": 3,
-        "periods": [
-          1,
-          0,
-          2,
-          0,
-          0
-        ],
-        "is_winner": false
+        "periods": [],
+        "is_winner": null
       },
       "away_line": {
         "name": "J&K Electric",
         "slug": "j-and-k-electric",
         "final": 4,
-        "periods": [
-          1,
-          1,
-          2,
-          0,
-          0
-        ],
-        "is_winner": true
+        "periods": [],
+        "is_winner": null
       },
       "home_score": 3,
       "away_score": 4,
@@ -2860,304 +306,33 @@
       "datetime": "2025-10-28T20:45:00-03:00",
       "date": "10/28/2025",
       "time": "8:45 PM",
-      "player_stats": {
-        "home": [
-          {
-            "player_id": "maltby-sports-arbing-ryan-91",
-            "name": "Ryan Arbing",
-            "number": "91",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-crocker-luke-6",
-            "name": "Luke Crocker",
-            "number": "6",
-            "positions": [
-              "D"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-gallant-matt-2",
-            "name": "Matt Gallant",
-            "number": "2",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-johnson-trevor-18",
-            "name": "Trevor Johnson",
-            "number": "18",
-            "positions": [
-              "D"
-            ],
-            "goals": 0,
-            "assists": 0,
-            "points": 0,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-leblanc-travis-63",
-            "name": "Travis Leblanc",
-            "number": "63",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-maltby-chris-17",
-            "name": "Chris Maltby",
-            "number": "17",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-mccrossin-thomas-19",
-            "name": "Thomas McCrossin",
-            "number": "19",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 0,
-            "points": 0,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "maltby-sports-small-danny-biggie-16",
-            "name": "Biggie Small",
-            "number": "16",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 3,
-            "points": 3,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ],
-        "away": [
-          {
-            "player_id": "j-and-k-electric-boutiler-gerald-22",
-            "name": "Gerald Boutiler",
-            "number": "22",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 1
-          },
-          {
-            "player_id": "j-and-k-electric-davison-bill-74",
-            "name": "Bill Davison",
-            "number": "74",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-harrison-avery-00",
-            "name": "Avery Harrison",
-            "number": "00",
-            "positions": [
-              "D"
-            ],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-leopold-nick-9",
-            "name": "Nick Leopold",
-            "number": "9",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-mackenzie-rubein-4",
-            "name": "Reuben Mackenzie",
-            "number": "4",
-            "positions": [
-              "F"
-            ],
-            "goals": 2,
-            "assists": 0,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-mansour-mikhial-26",
-            "name": "Mikhial Mansour",
-            "number": "26",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 3,
-            "gtg": 0
-          }
-        ]
-      },
-      "penalties": [
-        {
-          "per_period": "1",
-          "time": "10:43",
-          "player": "19 Thomas  Mccrossin / Served by 19 Thomas  Mccrossin",
-          "team": "Maltby Sports",
-          "infraction": "Hooking (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "2",
-          "time": "12:33",
-          "player": "91 Ryan Arbing / Served by 91 Ryan Arbing",
-          "team": "Maltby Sports",
-          "infraction": "Hooking (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "3",
-          "time": "10:02",
-          "player": "26 Mikhial Mansour / Served by 26 Mikhial Mansour",
-          "team": "J&K Electric",
-          "infraction": "Hooking (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "3",
-          "time": "4:07",
-          "player": "18 Trevor Johnson / Served by 18 Trevor Johnson",
-          "team": "Maltby Sports",
-          "infraction": "Tripping (Minor)",
-          "length": "3:00"
-        }
-      ],
-      "scoreboard": [
-        [
-          "REGULAR SEASON",
-          "1",
-          "2",
-          "3",
-          "OT",
-          "2OT",
-          "F"
-        ],
-        [
-          "Maltby Sports",
-          "1",
-          "0",
-          "2",
-          "0",
-          "0",
-          "3"
-        ],
-        [
-          "J&K Electric",
-          "1",
-          "1",
-          "2",
-          "0",
-          "0",
-          "4"
-        ]
-      ],
-      "headline": "J&K Electric squeaks by Maltby Sports 4-3 lifted by Rubein Mackenzie's two goals, as Avery Harrison adding 1G and 1A",
-      "headline_updated_at": "2025-11-04T04:26:34.151891+00:00"
+      "headline": "J&K Electric squeaks by Maltby Sports 4-3",
+      "headline_updated_at": "2025-11-21T16:29:35.906365+00:00"
     },
     {
       "game_id": "3274310",
       "status": "final",
       "location": "Amherst",
-      "division": "REGULAR SEASON",
+      "division": null,
       "start_utc": "2025-10-27T00:00:00+00:00",
       "start_local": "2025-10-26T21:00:00-03:00",
       "home": "Colson Overhead Doors",
       "away": "G.R. Mitchell Welding",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3274310&p=boxscore",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3274310&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274310&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274310&u=DSMALL&s=hockey&p=summary",
       "home_line": {
         "name": "Colson Overhead Doors",
         "slug": "colson-overhead-doors",
         "final": 3,
-        "periods": [
-          2,
-          0,
-          1,
-          0,
-          0
-        ],
-        "is_winner": false
+        "periods": [],
+        "is_winner": null
       },
       "away_line": {
         "name": "G.R. Mitchell Welding",
         "slug": "gr-mitchell-welding",
         "final": 12,
-        "periods": [
-          2,
-          6,
-          4,
-          0,
-          0
-        ],
-        "is_winner": true
+        "periods": [],
+        "is_winner": null
       },
       "home_score": 3,
       "away_score": 12,
@@ -3165,277 +340,8 @@
       "datetime": "2025-10-26T21:00:00-03:00",
       "date": "10/26/2025",
       "time": "9:00 PM",
-      "player_stats": {
-        "home": [
-          {
-            "player_id": "colson-overhead-doors-burge-tom-12",
-            "name": "Tom Burge",
-            "number": "12",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-chandler-3rd-charles-7",
-            "name": "Charles Chandler 3rd",
-            "number": "7",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-eatmon-chester-8",
-            "name": "Chester Eatmon",
-            "number": "8",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-gould-zack-88",
-            "name": "Zack Gould",
-            "number": "88",
-            "positions": [
-              "F"
-            ],
-            "goals": 2,
-            "assists": 0,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 1
-          },
-          {
-            "player_id": "colson-overhead-doors-hebert-denis-19",
-            "name": "Denis Hebert",
-            "number": "19",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-henshaw-chad-13",
-            "name": "Chad Henshaw",
-            "number": "13",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-sproul-chris-31",
-            "name": "Chris Sproul",
-            "number": "31",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ],
-        "away": [
-          {
-            "player_id": "gr-mitchell-welding-atkinson-dave-38",
-            "name": "Dave Atkinson",
-            "number": "38",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 4,
-            "points": 5,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-bourgeois-julien-9",
-            "name": "Julien Bourgeois",
-            "number": "9",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-fullerton-zack-90",
-            "name": "Zack Fullerton",
-            "number": "90",
-            "positions": [
-              "F"
-            ],
-            "goals": 2,
-            "assists": 0,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-helm-corey-7",
-            "name": "Corey Helm",
-            "number": "7",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 0,
-            "assists": 3,
-            "points": 3,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-hurley-william-15",
-            "name": "William Hurley",
-            "number": "15",
-            "positions": [
-              "F"
-            ],
-            "goals": 2,
-            "assists": 0,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-macdonald-meathead-97",
-            "name": "Marshall MacDonald",
-            "number": "97",
-            "positions": [
-              "C"
-            ],
-            "goals": 3,
-            "assists": 4,
-            "points": 7,
-            "penalty_minutes": 0,
-            "gtg": 1
-          },
-          {
-            "player_id": "gr-mitchell-welding-macpherson-ryan-21",
-            "name": "Ryan Macpherson",
-            "number": "21",
-            "positions": [],
-            "goals": 2,
-            "assists": 0,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-mattix-ralph-66",
-            "name": "Ralph Mattix",
-            "number": "66",
-            "positions": [
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-mitchell-gordon-13",
-            "name": "Gordon Mitchell",
-            "number": "13",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-robichaud-corey-88",
-            "name": "Corey Robichaud",
-            "number": "88",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-ryan-geoff-55",
-            "name": "Geoff Ryan",
-            "number": "55",
-            "positions": [
-              "D"
-            ],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ]
-      },
-      "scoreboard": [
-        [
-          "REGULAR SEASON",
-          "1",
-          "2",
-          "3",
-          "OT",
-          "2OT",
-          "F"
-        ],
-        [
-          "Colson Overhead Doors",
-          "2",
-          "0",
-          "1",
-          "0",
-          "0",
-          "3"
-        ],
-        [
-          "G.R. Mitchell Welding",
-          "2",
-          "6",
-          "4",
-          "0",
-          "0",
-          "12"
-        ]
-      ],
-      "headline": "G.R. Mitchell Welding routs Colson Overhead Doors 12-3 fueled by Meathead MacDonald's hat trick and 4A, with Ryan Macpherson contributing two goals",
-      "headline_updated_at": "2025-11-04T04:26:34.151891+00:00"
+      "headline": "G.R. Mitchell Welding routs Colson Overhead Doors 12-3",
+      "headline_updated_at": "2025-11-21T16:29:35.906365+00:00"
     }
   ],
   "upcoming_games": [
@@ -3753,16 +659,16 @@
   "headlines": [
     {
       "game_id": "3276518",
-      "headline": "Maltby Sports tops J&K Electric 4-2 driven by Ted Mackinnon's brace (2G), and Ian McCarthy contributing 1G",
+      "headline": "Maltby Sports tops J&K Electric 4-2",
       "created_at": "2025-11-19T02:22:46.247489+00:00",
-      "updated_at": "2025-11-19T12:51:34.521046+00:00",
+      "updated_at": "2025-11-21T16:29:35.906365+00:00",
       "game_datetime": "2025-11-19T02:00:00+00:00",
       "home_team": "Maltby Sports",
       "away_team": "J&K Electric",
       "home_score": 4,
       "away_score": 2,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276518&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276518&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276518&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276518&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276516",
@@ -3774,47 +680,47 @@
       "away_team": "Colson Overhead Doors",
       "home_score": 4,
       "away_score": 4,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-2&gameID=3276516&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-2&gameID=3276516&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276516&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276516&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276514",
-      "headline": "J&K Electric crushes Colson Overhead Doors 7-4 powered by Brendan Stone's hat trick (4G), while Jeremy Kinnear supplying 1G and 4A",
+      "headline": "J&K Electric crushes Colson Overhead Doors 7-4",
       "created_at": "2025-11-18T15:26:18.600835+00:00",
-      "updated_at": "2025-11-18T15:26:18.600835+00:00",
+      "updated_at": "2025-11-21T16:29:35.906365+00:00",
       "game_datetime": "2025-11-17T01:00:00+00:00",
       "home_team": "Colson Overhead Doors",
       "away_team": "J&K Electric",
       "home_score": 4,
       "away_score": 7,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276514&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276514&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276514&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276514&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276459",
-      "headline": "J&K Electric squeaks by Ultramar 4-3 lifted by Rubein Mackenzie's 1G and 2A, with Noah Perrin contributing 1G and 1A",
+      "headline": "J&K Electric squeaks by Ultramar 4-3",
       "created_at": "2025-11-18T15:26:18.600835+00:00",
-      "updated_at": "2025-11-18T15:26:18.600835+00:00",
+      "updated_at": "2025-11-21T16:29:35.906365+00:00",
       "game_datetime": "2025-11-10T01:00:00+00:00",
       "home_team": "J&K Electric",
       "away_team": "Ultramar",
       "home_score": 4,
       "away_score": 3,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276459&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276459&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276459&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276459&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276455",
-      "headline": "Maltby Sports squeaks by G.R. Mitchell Welding 5-4 powered by Danny \"Biggie\" Small's 1G and 1A, as Matt Gallant supplying 1G and 1A",
+      "headline": "Maltby Sports squeaks by G.R. Mitchell Welding 5-4",
       "created_at": "2025-11-08T12:24:10.037492+00:00",
-      "updated_at": "2025-11-08T12:24:10.037492+00:00",
+      "updated_at": "2025-11-21T16:29:35.906365+00:00",
       "game_datetime": "2025-11-05T02:00:00+00:00",
       "home_team": "Maltby Sports",
       "away_team": "G.R. Mitchell Welding",
       "home_score": 5,
       "away_score": 4,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276455&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276455&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276455&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276455&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276453",
@@ -3826,66 +732,66 @@
       "away_team": "Ultramar",
       "home_score": 5,
       "away_score": 5,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276453&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276453&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276453&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276453&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276449",
-      "headline": "J&K Electric crushes Colson Overhead Doors 6-3 powered by Brendan Stone's hat trick, while Jeremy Kinnear supplying brace (2G)",
+      "headline": "J&K Electric crushes Colson Overhead Doors 6-3",
       "created_at": "2025-11-04T03:23:47.622386+00:00",
-      "updated_at": "2025-11-04T04:26:34.151891+00:00",
+      "updated_at": "2025-11-21T16:29:35.906365+00:00",
       "game_datetime": "2025-11-03T01:00:00+00:00",
       "home_team": "Colson Overhead Doors",
       "away_team": "J&K Electric",
       "home_score": 3,
       "away_score": 6,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276449&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276449&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276449&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276449&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276439",
-      "headline": "G.R. Mitchell Welding trounces Ultramar 9-3 sparked by Dave Atkinson's brace (2G) and 1A, while Meathead MacDonald supplying 1G and 3A",
+      "headline": "G.R. Mitchell Welding trounces Ultramar 9-3",
       "created_at": "2025-11-04T03:23:47.622386+00:00",
-      "updated_at": "2025-11-04T04:26:34.151891+00:00",
+      "updated_at": "2025-11-21T16:29:35.906365+00:00",
       "game_datetime": "2025-10-29T01:00:00+00:00",
       "home_team": "G.R. Mitchell Welding",
       "away_team": "Ultramar",
       "home_score": 9,
       "away_score": 3,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276439&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276439&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276439&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276439&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276435",
-      "headline": "J&K Electric squeaks by Maltby Sports 4-3 lifted by Rubein Mackenzie's brace (2G), as Avery Harrison chipping in 1G and 1A",
+      "headline": "J&K Electric squeaks by Maltby Sports 4-3",
       "created_at": "2025-11-04T03:23:47.622386+00:00",
-      "updated_at": "2025-11-04T04:26:34.151891+00:00",
+      "updated_at": "2025-11-21T16:29:35.906365+00:00",
       "game_datetime": "2025-10-28T23:45:00+00:00",
       "home_team": "Maltby Sports",
       "away_team": "J&K Electric",
       "home_score": 3,
       "away_score": 4,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276435&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276435&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276435&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276435&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3274310",
-      "headline": "G.R. Mitchell Welding routs Colson Overhead Doors 12-3 fueled by Meathead MacDonald's hat trick and 4A, with Ryan Macpherson contributing brace (2G)",
+      "headline": "G.R. Mitchell Welding routs Colson Overhead Doors 12-3",
       "created_at": "2025-11-04T04:15:33.346582+00:00",
-      "updated_at": "2025-11-04T04:26:34.151891+00:00",
+      "updated_at": "2025-11-21T16:29:35.906365+00:00",
       "game_datetime": "2025-10-27T00:00:00+00:00",
       "home_team": "Colson Overhead Doors",
       "away_team": "G.R. Mitchell Welding",
       "home_score": 3,
       "away_score": 12,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3274310&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3274310&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274310&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274310&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3274306",
-      "headline": "Maltby Sports pummels Ultramar 9-5 sparked by Issac Bridge's hat trick and 3A, and Ian McCarthy supplying brace (2G) and 2A",
+      "headline": "Maltby Sports pummels Ultramar 9-5",
       "created_at": "2025-11-18T15:26:18.600835+00:00",
-      "updated_at": "2025-11-18T15:26:18.600835+00:00",
+      "updated_at": "2025-11-21T16:29:35.906365+00:00",
       "game_datetime": "2025-10-22T01:00:00+00:00",
       "home_team": "Maltby Sports",
       "away_team": "Ultramar",
@@ -3896,9 +802,9 @@
     },
     {
       "game_id": "3274304",
-      "headline": "G.R. Mitchell Welding cruises past J&K Electric 5-2 fueled by Meathead MacDonald's 1G and 2A, and Gordon Mitchell supplying 1G and 1A",
+      "headline": "G.R. Mitchell Welding cruises past J&K Electric 5-2",
       "created_at": "2025-11-04T04:15:33.346582+00:00",
-      "updated_at": "2025-11-04T04:26:34.151891+00:00",
+      "updated_at": "2025-11-21T16:29:35.906365+00:00",
       "game_datetime": "2025-10-21T23:45:00+00:00",
       "home_team": "J&K Electric",
       "away_team": "G.R. Mitchell Welding",
@@ -3909,9 +815,9 @@
     },
     {
       "game_id": "3274302",
-      "headline": "Maltby Sports routs G.R. Mitchell Welding 10-2 fueled by Thomas Mccrossin's hat trick and 1A, with Danny \"Biggie\" Small supplying brace (2G) and 3A",
+      "headline": "Maltby Sports routs G.R. Mitchell Welding 10-2",
       "created_at": "2025-11-04T04:15:33.346582+00:00",
-      "updated_at": "2025-11-04T04:26:34.151891+00:00",
+      "updated_at": "2025-11-21T16:29:35.906365+00:00",
       "game_datetime": "2025-10-20T00:00:00+00:00",
       "home_team": "Maltby Sports",
       "away_team": "G.R. Mitchell Welding",
@@ -3922,9 +828,9 @@
     },
     {
       "game_id": "3274298",
-      "headline": "J&K Electric pummels Colson Overhead Doors 6-1 lifted by Rubein Mackenzie's brace (2G) and 1A, as Pat Morris chipping in 1G and 3A",
+      "headline": "J&K Electric pummels Colson Overhead Doors 6-1",
       "created_at": "2025-11-04T04:15:33.346582+00:00",
-      "updated_at": "2025-11-04T04:26:34.151891+00:00",
+      "updated_at": "2025-11-21T16:29:35.906365+00:00",
       "game_datetime": "2025-10-15T01:00:00+00:00",
       "home_team": "Colson Overhead Doors",
       "away_team": "J&K Electric",
@@ -3935,9 +841,9 @@
     },
     {
       "game_id": "3274296",
-      "headline": "Maltby Sports cruises past Ultramar 7-4 sparked by Issac Bridge's hat trick (4G) and 1A, and Ian McCarthy supplying 1G and 3A",
+      "headline": "Maltby Sports cruises past Ultramar 7-4",
       "created_at": "2025-11-04T04:15:33.346582+00:00",
-      "updated_at": "2025-11-04T04:26:34.151891+00:00",
+      "updated_at": "2025-11-21T16:29:35.906365+00:00",
       "game_datetime": "2025-10-14T23:45:00+00:00",
       "home_team": "Maltby Sports",
       "away_team": "Ultramar",
@@ -3948,7 +854,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2025-11-21T12:49:35.285519+00:00",
+    "generated_at": "2025-11-21T16:29:35.908875+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall",
@@ -3960,16 +866,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 1,
-        "goals": 1,
+        "games_played": 0,
+        "goals": 0,
         "assists": 0,
-        "points": 1,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -1,
+        "recent_games": -1
       },
       {
         "player_id": "colson-overhead-doors-burge-tom-12",
@@ -3981,16 +887,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 2,
-        "goals": 1,
-        "assists": 1,
-        "points": 2,
-        "penalty_minutes": 3,
-        "points_per_game": 1.0,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -2,
+        "recent_games": -2
       },
       {
         "player_id": "colson-overhead-doors-davis-dan-13",
@@ -4002,16 +908,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 2,
-        "goals": 1,
+        "games_played": 0,
+        "goals": 0,
         "assists": 0,
-        "points": 1,
-        "penalty_minutes": 9,
-        "points_per_game": 0.5,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -1,
+        "recent_games": -2
       },
       {
         "player_id": "colson-overhead-doors-henshaw-chad-13",
@@ -4023,16 +929,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 1,
+        "games_played": 0,
         "goals": 0,
-        "assists": 1,
-        "points": 1,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -1,
+        "recent_games": -1
       },
       {
         "player_id": "colson-overhead-doors-hebert-denis-19",
@@ -4044,16 +950,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 5,
-        "goals": 3,
-        "assists": 6,
-        "points": 9,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.8,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -9,
+        "recent_games": -5
       },
       {
         "player_id": "colson-overhead-doors-gesner-logan-23",
@@ -4066,16 +972,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 4,
+        "games_played": 0,
         "goals": 0,
-        "assists": 8,
-        "points": 8,
-        "penalty_minutes": 16,
-        "points_per_game": 2.0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -8,
+        "recent_games": -4
       },
       {
         "player_id": "colson-overhead-doors-russel-nick-30",
@@ -4087,7 +993,7 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 1,
+        "games_played": 0,
         "goals": 0,
         "assists": 0,
         "points": 0,
@@ -4096,7 +1002,7 @@
         "team_games_played": 6,
         "games_missed": null,
         "recent_points": 0,
-        "recent_games": 0
+        "recent_games": -1
       },
       {
         "player_id": "colson-overhead-doors-sproul-chris-31",
@@ -4108,16 +1014,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 3,
+        "games_played": 0,
         "goals": 0,
-        "assists": 2,
-        "points": 2,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 0.67,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -2,
+        "recent_games": -3
       },
       {
         "player_id": "colson-overhead-doors-baisley-chris-44",
@@ -4129,16 +1035,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 2,
+        "games_played": 0,
         "goals": 0,
-        "assists": 1,
-        "points": 1,
-        "penalty_minutes": 3,
-        "points_per_game": 0.5,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -1,
+        "recent_games": -2
       },
       {
         "player_id": "colson-overhead-doors-chandler-3rd-charles-7",
@@ -4150,16 +1056,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 3,
-        "goals": 2,
+        "games_played": 0,
+        "goals": 0,
         "assists": 0,
-        "points": 2,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 0.67,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -2,
+        "recent_games": -3
       },
       {
         "player_id": "colson-overhead-doors-faulkner-rory-76",
@@ -4171,16 +1077,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 3,
+        "games_played": 0,
         "goals": 0,
-        "assists": 3,
-        "points": 3,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -3,
+        "recent_games": -3
       },
       {
         "player_id": "colson-overhead-doors-eatmon-chester-8",
@@ -4192,16 +1098,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 3,
-        "goals": 1,
-        "assists": 1,
-        "points": 2,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 0.67,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -2,
+        "recent_games": -3
       },
       {
         "player_id": "colson-overhead-doors-gould-zack-88",
@@ -4213,16 +1119,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 5,
-        "goals": 9,
-        "assists": 3,
-        "points": 12,
-        "penalty_minutes": 3,
-        "points_per_game": 2.4,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -12,
+        "recent_games": -5
       },
       {
         "player_id": "colson-overhead-doors-black-mark-9",
@@ -4278,16 +1184,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 4,
-        "goals": 4,
-        "assists": 5,
-        "points": 9,
-        "penalty_minutes": 6,
-        "points_per_game": 2.25,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 5,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -9,
+        "recent_games": -4
       },
       {
         "player_id": "gr-mitchell-welding-hurley-william-15",
@@ -4299,16 +1205,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 2,
-        "goals": 2,
-        "assists": 2,
-        "points": 4,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 2.0,
+        "points_per_game": 0.0,
         "team_games_played": 5,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -4,
+        "recent_games": -2
       },
       {
         "player_id": "gr-mitchell-welding-macpherson-ryan-21",
@@ -4318,16 +1224,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 2,
-        "goals": 3,
-        "assists": 1,
-        "points": 4,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 2.0,
+        "points_per_game": 0.0,
         "team_games_played": 5,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -4,
+        "recent_games": -2
       },
       {
         "player_id": "gr-mitchell-welding-atkinson-dave-38",
@@ -4339,16 +1245,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 4,
-        "goals": 4,
-        "assists": 6,
-        "points": 10,
-        "penalty_minutes": 3,
-        "points_per_game": 2.5,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 5,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -10,
+        "recent_games": -4
       },
       {
         "player_id": "gr-mitchell-welding-ryan-geoff-55",
@@ -4360,16 +1266,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 4,
-        "goals": 3,
-        "assists": 5,
-        "points": 8,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 2.0,
+        "points_per_game": 0.0,
         "team_games_played": 5,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -8,
+        "recent_games": -4
       },
       {
         "player_id": "gr-mitchell-welding-sutton-cody-61",
@@ -4382,16 +1288,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 3,
-        "goals": 1,
-        "assists": 2,
-        "points": 3,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.0,
+        "points_per_game": 0.0,
         "team_games_played": 5,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -3,
+        "recent_games": -3
       },
       {
         "player_id": "gr-mitchell-welding-mattix-ralph-66",
@@ -4403,16 +1309,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 3,
-        "goals": 1,
-        "assists": 3,
-        "points": 4,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.33,
+        "points_per_game": 0.0,
         "team_games_played": 5,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -4,
+        "recent_games": -3
       },
       {
         "player_id": "gr-mitchell-welding-helm-corey-7",
@@ -4425,16 +1331,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 4,
-        "goals": 2,
-        "assists": 8,
-        "points": 10,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 2.5,
+        "points_per_game": 0.0,
         "team_games_played": 5,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -10,
+        "recent_games": -4
       },
       {
         "player_id": "gr-mitchell-welding-robichaud-corey-88",
@@ -4446,16 +1352,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 3,
-        "goals": 1,
-        "assists": 2,
-        "points": 3,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.0,
+        "points_per_game": 0.0,
         "team_games_played": 5,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -3,
+        "recent_games": -3
       },
       {
         "player_id": "gr-mitchell-welding-bourgeois-julien-9",
@@ -4467,16 +1373,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 4,
-        "goals": 1,
-        "assists": 5,
-        "points": 6,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.5,
+        "points_per_game": 0.0,
         "team_games_played": 5,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -6,
+        "recent_games": -4
       },
       {
         "player_id": "gr-mitchell-welding-fullerton-zack-90",
@@ -4488,16 +1394,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 3,
-        "goals": 2,
-        "assists": 2,
-        "points": 4,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.33,
+        "points_per_game": 0.0,
         "team_games_played": 5,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -4,
+        "recent_games": -3
       },
       {
         "player_id": "gr-mitchell-welding-dobson-nick-pickle-94",
@@ -4509,16 +1415,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 2,
-        "goals": 2,
+        "games_played": 0,
+        "goals": 0,
         "assists": 0,
-        "points": 2,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.0,
+        "points_per_game": 0.0,
         "team_games_played": 5,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -2,
+        "recent_games": -2
       },
       {
         "player_id": "gr-mitchell-welding-macdonald-meathead-97",
@@ -4530,16 +1436,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 4,
-        "goals": 6,
-        "assists": 10,
-        "points": 16,
-        "penalty_minutes": 3,
-        "points_per_game": 4.0,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 5,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -16,
+        "recent_games": -4
       },
       {
         "player_id": "j-and-k-electric-harrison-avery-00",
@@ -4551,16 +1457,16 @@
         "team_id": "TYLERARSENEAU-4",
         "team_name": "J&K Electric",
         "team_slug": "j-and-k-electric",
-        "games_played": 3,
-        "goals": 1,
-        "assists": 4,
-        "points": 5,
-        "penalty_minutes": 3,
-        "points_per_game": 1.67,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 7,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -5,
+        "recent_games": -3
       },
       {
         "player_id": "j-and-k-electric-kinnear-jeremy-17",
@@ -4572,16 +1478,16 @@
         "team_id": "TYLERARSENEAU-4",
         "team_name": "J&K Electric",
         "team_slug": "j-and-k-electric",
-        "games_played": 5,
-        "goals": 5,
-        "assists": 4,
-        "points": 9,
-        "penalty_minutes": 3,
-        "points_per_game": 1.8,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 7,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -9,
+        "recent_games": -5
       },
       {
         "player_id": "j-and-k-electric-budd-ryan-18",
@@ -4593,16 +1499,16 @@
         "team_id": "TYLERARSENEAU-4",
         "team_name": "J&K Electric",
         "team_slug": "j-and-k-electric",
-        "games_played": 2,
-        "goals": 1,
-        "assists": 4,
-        "points": 5,
-        "penalty_minutes": 3,
-        "points_per_game": 2.5,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 7,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -5,
+        "recent_games": -2
       },
       {
         "player_id": "j-and-k-electric-morris-matt-2",
@@ -4636,16 +1542,16 @@
         "team_id": "TYLERARSENEAU-4",
         "team_name": "J&K Electric",
         "team_slug": "j-and-k-electric",
-        "games_played": 6,
-        "goals": 2,
-        "assists": 6,
-        "points": 8,
-        "penalty_minutes": 3,
-        "points_per_game": 1.33,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 7,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -8,
+        "recent_games": -6
       },
       {
         "player_id": "j-and-k-electric-mansour-mikhial-26",
@@ -4658,16 +1564,16 @@
         "team_id": "TYLERARSENEAU-4",
         "team_name": "J&K Electric",
         "team_slug": "j-and-k-electric",
-        "games_played": 3,
-        "goals": 1,
-        "assists": 1,
-        "points": 2,
-        "penalty_minutes": 6,
-        "points_per_game": 0.67,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 7,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -2,
+        "recent_games": -3
       },
       {
         "player_id": "j-and-k-electric-morris-pat-27",
@@ -4680,16 +1586,16 @@
         "team_id": "TYLERARSENEAU-4",
         "team_name": "J&K Electric",
         "team_slug": "j-and-k-electric",
-        "games_played": 2,
-        "goals": 1,
-        "assists": 5,
-        "points": 6,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 3.0,
+        "points_per_game": 0.0,
         "team_games_played": 7,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -6,
+        "recent_games": -2
       },
       {
         "player_id": "j-and-k-electric-stone-brendan-28",
@@ -4701,16 +1607,16 @@
         "team_id": "TYLERARSENEAU-4",
         "team_name": "J&K Electric",
         "team_slug": "j-and-k-electric",
-        "games_played": 5,
-        "goals": 8,
-        "assists": 3,
-        "points": 11,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 2.2,
+        "points_per_game": 0.0,
         "team_games_played": 7,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -11,
+        "recent_games": -5
       },
       {
         "player_id": "j-and-k-electric-drake-scott-30",
@@ -4724,7 +1630,7 @@
         "team_id": "TYLERARSENEAU-4",
         "team_name": "J&K Electric",
         "team_slug": "j-and-k-electric",
-        "games_played": 1,
+        "games_played": 0,
         "goals": 0,
         "assists": 0,
         "points": 0,
@@ -4733,7 +1639,7 @@
         "team_games_played": 7,
         "games_missed": null,
         "recent_points": 0,
-        "recent_games": 0
+        "recent_games": -1
       },
       {
         "player_id": "j-and-k-electric-martin-ryan-36",
@@ -4743,16 +1649,16 @@
         "team_id": "TYLERARSENEAU-4",
         "team_name": "J&K Electric",
         "team_slug": "j-and-k-electric",
-        "games_played": 1,
+        "games_played": 0,
         "goals": 0,
-        "assists": 1,
-        "points": 1,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.0,
+        "points_per_game": 0.0,
         "team_games_played": 7,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -1,
+        "recent_games": -1
       },
       {
         "player_id": "j-and-k-electric-mackenzie-rubein-4",
@@ -4764,16 +1670,16 @@
         "team_id": "TYLERARSENEAU-4",
         "team_name": "J&K Electric",
         "team_slug": "j-and-k-electric",
-        "games_played": 4,
-        "goals": 5,
-        "assists": 6,
-        "points": 11,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 2.75,
+        "points_per_game": 0.0,
         "team_games_played": 7,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -11,
+        "recent_games": -4
       },
       {
         "player_id": "j-and-k-electric-davison-bill-74",
@@ -4786,16 +1692,16 @@
         "team_id": "TYLERARSENEAU-4",
         "team_name": "J&K Electric",
         "team_slug": "j-and-k-electric",
-        "games_played": 4,
+        "games_played": 0,
         "goals": 0,
-        "assists": 4,
-        "points": 4,
-        "penalty_minutes": 3,
-        "points_per_game": 1.0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 7,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -4,
+        "recent_games": -4
       },
       {
         "player_id": "j-and-k-electric-perrin-noah-87",
@@ -4807,16 +1713,16 @@
         "team_id": "TYLERARSENEAU-4",
         "team_name": "J&K Electric",
         "team_slug": "j-and-k-electric",
-        "games_played": 4,
-        "goals": 2,
-        "assists": 4,
-        "points": 6,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.5,
+        "points_per_game": 0.0,
         "team_games_played": 7,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -6,
+        "recent_games": -4
       },
       {
         "player_id": "j-and-k-electric-leopold-nick-9",
@@ -4829,16 +1735,16 @@
         "team_id": "TYLERARSENEAU-4",
         "team_name": "J&K Electric",
         "team_slug": "j-and-k-electric",
-        "games_played": 5,
-        "goals": 3,
-        "assists": 6,
-        "points": 9,
-        "penalty_minutes": 3,
-        "points_per_game": 1.8,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 7,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -9,
+        "recent_games": -5
       },
       {
         "player_id": "maltby-sports-small-danny-biggie-16",
@@ -4851,16 +1757,16 @@
         "team_id": "TYLERARSENEAU-1",
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
-        "games_played": 5,
-        "goals": 5,
-        "assists": 8,
-        "points": 13,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 2.6,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -13,
+        "recent_games": -5
       },
       {
         "player_id": "maltby-sports-maltby-chris-17",
@@ -4873,16 +1779,16 @@
         "team_id": "TYLERARSENEAU-1",
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
-        "games_played": 5,
-        "goals": 1,
-        "assists": 6,
-        "points": 7,
-        "penalty_minutes": 6,
-        "points_per_game": 1.4,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -7,
+        "recent_games": -5
       },
       {
         "player_id": "maltby-sports-johnson-trevor-18",
@@ -4894,16 +1800,16 @@
         "team_id": "TYLERARSENEAU-1",
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
-        "games_played": 5,
-        "goals": 2,
-        "assists": 1,
-        "points": 3,
-        "penalty_minutes": 9,
-        "points_per_game": 0.6,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -3,
+        "recent_games": -5
       },
       {
         "player_id": "maltby-sports-mccrossin-thomas-19",
@@ -4915,16 +1821,16 @@
         "team_id": "TYLERARSENEAU-1",
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
-        "games_played": 6,
-        "goals": 5,
-        "assists": 7,
-        "points": 12,
-        "penalty_minutes": 3,
-        "points_per_game": 2.0,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -12,
+        "recent_games": -6
       },
       {
         "player_id": "maltby-sports-gallant-matt-2",
@@ -4936,16 +1842,16 @@
         "team_id": "TYLERARSENEAU-1",
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
-        "games_played": 5,
-        "goals": 3,
-        "assists": 4,
-        "points": 7,
-        "penalty_minutes": 3,
-        "points_per_game": 1.4,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -7,
+        "recent_games": -5
       },
       {
         "player_id": "maltby-sports-codling-ryder-29",
@@ -4957,16 +1863,16 @@
         "team_id": "TYLERARSENEAU-1",
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
-        "games_played": 2,
-        "goals": 1,
-        "assists": 2,
-        "points": 3,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.5,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -3,
+        "recent_games": -2
       },
       {
         "player_id": "maltby-sports-belliveau-marc-30",
@@ -4978,7 +1884,7 @@
         "team_id": "TYLERARSENEAU-1",
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
-        "games_played": 1,
+        "games_played": 0,
         "goals": 0,
         "assists": 0,
         "points": 0,
@@ -4987,7 +1893,7 @@
         "team_games_played": 6,
         "games_missed": null,
         "recent_points": 0,
-        "recent_games": 0
+        "recent_games": -1
       },
       {
         "player_id": "maltby-sports-crocker-luke-6",
@@ -4999,16 +1905,16 @@
         "team_id": "TYLERARSENEAU-1",
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
-        "games_played": 4,
-        "goals": 2,
-        "assists": 2,
-        "points": 4,
-        "penalty_minutes": 3,
-        "points_per_game": 1.0,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -4,
+        "recent_games": -4
       },
       {
         "player_id": "maltby-sports-leblanc-travis-63",
@@ -5021,16 +1927,16 @@
         "team_id": "TYLERARSENEAU-1",
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
-        "games_played": 5,
-        "goals": 4,
-        "assists": 5,
-        "points": 9,
-        "penalty_minutes": 6,
-        "points_per_game": 1.8,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -9,
+        "recent_games": -5
       },
       {
         "player_id": "maltby-sports-hurley-connor-7",
@@ -5042,16 +1948,16 @@
         "team_id": "TYLERARSENEAU-1",
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
-        "games_played": 4,
+        "games_played": 0,
         "goals": 0,
-        "assists": 2,
-        "points": 2,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 0.5,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -2,
+        "recent_games": -4
       },
       {
         "player_id": "maltby-sports-mackinnon-ted-77",
@@ -5063,16 +1969,16 @@
         "team_id": "TYLERARSENEAU-1",
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
-        "games_played": 3,
-        "goals": 2,
-        "assists": 4,
-        "points": 6,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 2.0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -6,
+        "recent_games": -3
       },
       {
         "player_id": "maltby-sports-mccarthy-ian-9",
@@ -5084,16 +1990,16 @@
         "team_id": "TYLERARSENEAU-1",
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
-        "games_played": 5,
-        "goals": 4,
-        "assists": 8,
-        "points": 12,
-        "penalty_minutes": 3,
-        "points_per_game": 2.4,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -12,
+        "recent_games": -5
       },
       {
         "player_id": "maltby-sports-arbing-ryan-91",
@@ -5106,16 +2012,16 @@
         "team_id": "TYLERARSENEAU-1",
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
-        "games_played": 6,
+        "games_played": 0,
         "goals": 0,
-        "assists": 6,
-        "points": 6,
-        "penalty_minutes": 9,
-        "points_per_game": 1.0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -6,
+        "recent_games": -6
       },
       {
         "player_id": "maltby-sports-bridge-issac-98",
@@ -5127,16 +2033,16 @@
         "team_id": "TYLERARSENEAU-1",
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
-        "games_played": 5,
-        "goals": 9,
-        "assists": 9,
-        "points": 18,
-        "penalty_minutes": 3,
-        "points_per_game": 3.6,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -18,
+        "recent_games": -5
       },
       {
         "player_id": "ultramar-bennett-mark-00",
@@ -5148,16 +2054,16 @@
         "team_id": "TYLERARSENEAU-2",
         "team_name": "Ultramar",
         "team_slug": "ultramar",
-        "games_played": 2,
+        "games_played": 0,
         "goals": 0,
-        "assists": 1,
-        "points": 1,
-        "penalty_minutes": 3,
-        "points_per_game": 0.5,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -1,
+        "recent_games": -2
       },
       {
         "player_id": "ultramar-thomas-remi-1",
@@ -5190,16 +2096,16 @@
         "team_id": "TYLERARSENEAU-2",
         "team_name": "Ultramar",
         "team_slug": "ultramar",
-        "games_played": 4,
+        "games_played": 0,
         "goals": 0,
-        "assists": 3,
-        "points": 3,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 0.75,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -3,
+        "recent_games": -4
       },
       {
         "player_id": "ultramar-allen-tyler-tuffy-11",
@@ -5211,16 +2117,16 @@
         "team_id": "TYLERARSENEAU-2",
         "team_name": "Ultramar",
         "team_slug": "ultramar",
-        "games_played": 5,
-        "goals": 5,
-        "assists": 4,
-        "points": 9,
-        "penalty_minutes": 3,
-        "points_per_game": 1.8,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -9,
+        "recent_games": -5
       },
       {
         "player_id": "ultramar-cove-matt-12",
@@ -5232,16 +2138,16 @@
         "team_id": "TYLERARSENEAU-2",
         "team_name": "Ultramar",
         "team_slug": "ultramar",
-        "games_played": 6,
-        "goals": 3,
-        "assists": 6,
-        "points": 9,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.5,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -9,
+        "recent_games": -6
       },
       {
         "player_id": "ultramar-burke-brody-14",
@@ -5254,16 +2160,16 @@
         "team_id": "TYLERARSENEAU-2",
         "team_name": "Ultramar",
         "team_slug": "ultramar",
-        "games_played": 4,
-        "goals": 2,
-        "assists": 1,
-        "points": 3,
-        "penalty_minutes": 3,
-        "points_per_game": 0.75,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -3,
+        "recent_games": -4
       },
       {
         "player_id": "ultramar-dywer-chris-2",
@@ -5276,16 +2182,16 @@
         "team_id": "TYLERARSENEAU-2",
         "team_name": "Ultramar",
         "team_slug": "ultramar",
-        "games_played": 2,
+        "games_played": 0,
         "goals": 0,
-        "assists": 2,
-        "points": 2,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -2,
+        "recent_games": -2
       },
       {
         "player_id": "ultramar-burke-tim-22",
@@ -5298,16 +2204,16 @@
         "team_id": "TYLERARSENEAU-2",
         "team_name": "Ultramar",
         "team_slug": "ultramar",
-        "games_played": 2,
-        "goals": 2,
-        "assists": 1,
-        "points": 3,
-        "penalty_minutes": 6,
-        "points_per_game": 1.5,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -3,
+        "recent_games": -2
       },
       {
         "player_id": "ultramar-gallant-brett-3",
@@ -5320,16 +2226,16 @@
         "team_id": "TYLERARSENEAU-2",
         "team_name": "Ultramar",
         "team_slug": "ultramar",
-        "games_played": 5,
-        "goals": 1,
-        "assists": 4,
-        "points": 5,
-        "penalty_minutes": 6,
-        "points_per_game": 1.0,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -5,
+        "recent_games": -5
       },
       {
         "player_id": "ultramar-dobson-aaron-4",
@@ -5341,16 +2247,16 @@
         "team_id": "TYLERARSENEAU-2",
         "team_name": "Ultramar",
         "team_slug": "ultramar",
-        "games_played": 3,
+        "games_played": 0,
         "goals": 0,
-        "assists": 5,
-        "points": 5,
-        "penalty_minutes": 6,
-        "points_per_game": 1.67,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -5,
+        "recent_games": -3
       },
       {
         "player_id": "ultramar-bonnell-andy-5",
@@ -5362,16 +2268,16 @@
         "team_id": "TYLERARSENEAU-2",
         "team_name": "Ultramar",
         "team_slug": "ultramar",
-        "games_played": 3,
-        "goals": 1,
-        "assists": 4,
-        "points": 5,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.67,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -5,
+        "recent_games": -3
       },
       {
         "player_id": "ultramar-miller-madden-6",
@@ -5383,16 +2289,16 @@
         "team_id": "TYLERARSENEAU-2",
         "team_name": "Ultramar",
         "team_slug": "ultramar",
-        "games_played": 5,
-        "goals": 2,
-        "assists": 3,
-        "points": 5,
-        "penalty_minutes": 2,
-        "points_per_game": 1.0,
+        "games_played": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -5,
+        "recent_games": -5
       },
       {
         "player_id": "ultramar-linkletter-brad-68",
@@ -5404,16 +2310,16 @@
         "team_id": "TYLERARSENEAU-2",
         "team_name": "Ultramar",
         "team_slug": "ultramar",
-        "games_played": 5,
-        "goals": 7,
+        "games_played": 0,
+        "goals": 0,
         "assists": 0,
-        "points": 7,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.4,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -7,
+        "recent_games": -5
       },
       {
         "player_id": "ultramar-jobes-bill-8",
@@ -5425,16 +2331,16 @@
         "team_id": "TYLERARSENEAU-2",
         "team_name": "Ultramar",
         "team_slug": "ultramar",
-        "games_played": 5,
+        "games_played": 0,
         "goals": 0,
-        "assists": 5,
-        "points": 5,
+        "assists": 0,
+        "points": 0,
         "penalty_minutes": 0,
-        "points_per_game": 1.0,
+        "points_per_game": 0.0,
         "team_games_played": 6,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -5,
+        "recent_games": -5
       }
     ]
   }

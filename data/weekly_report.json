@@ -1,39 +1,8 @@
 {
-  "generated_at": "2025-11-21T12:49:35.282144+00:00",
-  "standings_snapshot": "standings-20251121T124935Z.json",
-  "previous_snapshot": "standings-20251119T125134Z.json",
-  "standings_movements": [
-    {
-      "team": "G.R. Mitchell Welding",
-      "current_points": 8,
-      "previous_points": 6,
-      "points_change": 2
-    },
-    {
-      "team": "Maltby Sports",
-      "current_points": 16,
-      "previous_points": 16,
-      "points_change": 0
-    },
-    {
-      "team": "J&K Electric",
-      "current_points": 14,
-      "previous_points": 14,
-      "points_change": 0
-    },
-    {
-      "team": "Ultramar",
-      "current_points": 2,
-      "previous_points": 2,
-      "points_change": 0
-    },
-    {
-      "team": "Colson Overhead Doors",
-      "current_points": 2,
-      "previous_points": 2,
-      "points_change": 0
-    }
-  ],
+  "generated_at": "2025-11-21T16:29:35.906506+00:00",
+  "standings_snapshot": "standings-20251121T162935Z.json",
+  "previous_snapshot": "standings-20251121T124935Z.json",
+  "standings_movements": [],
   "recent_team_form": [
     {
       "team": "Maltby Sports",
@@ -67,7 +36,7 @@
   "game_headlines": [
     {
       "game_id": "3276518",
-      "headline": "Maltby Sports tops J&K Electric 4-2 driven by Ted Mackinnon's brace (2G), and Ian McCarthy contributing 1G",
+      "headline": "Maltby Sports tops J&K Electric 4-2",
       "game_datetime": "2025-11-19T02:00:00+00:00"
     },
     {
@@ -77,17 +46,17 @@
     },
     {
       "game_id": "3276514",
-      "headline": "J&K Electric crushes Colson Overhead Doors 7-4 powered by Brendan Stone's hat trick (4G), while Jeremy Kinnear supplying 1G and 4A",
+      "headline": "J&K Electric crushes Colson Overhead Doors 7-4",
       "game_datetime": "2025-11-17T01:00:00+00:00"
     },
     {
       "game_id": "3276459",
-      "headline": "J&K Electric squeaks by Ultramar 4-3 lifted by Rubein Mackenzie's 1G and 2A, with Noah Perrin contributing 1G and 1A",
+      "headline": "J&K Electric squeaks by Ultramar 4-3",
       "game_datetime": "2025-11-10T01:00:00+00:00"
     },
     {
       "game_id": "3276455",
-      "headline": "Maltby Sports squeaks by G.R. Mitchell Welding 5-4 powered by Danny \"Biggie\" Small's 1G and 1A, as Matt Gallant supplying 1G and 1A",
+      "headline": "Maltby Sports squeaks by G.R. Mitchell Welding 5-4",
       "game_datetime": "2025-11-05T02:00:00+00:00"
     },
     {
@@ -97,47 +66,47 @@
     },
     {
       "game_id": "3276449",
-      "headline": "J&K Electric crushes Colson Overhead Doors 6-3 powered by Brendan Stone's hat trick, while Jeremy Kinnear supplying brace (2G)",
+      "headline": "J&K Electric crushes Colson Overhead Doors 6-3",
       "game_datetime": "2025-11-03T01:00:00+00:00"
     },
     {
       "game_id": "3276439",
-      "headline": "G.R. Mitchell Welding trounces Ultramar 9-3 sparked by Dave Atkinson's brace (2G) and 1A, while Meathead MacDonald supplying 1G and 3A",
+      "headline": "G.R. Mitchell Welding trounces Ultramar 9-3",
       "game_datetime": "2025-10-29T01:00:00+00:00"
     },
     {
       "game_id": "3276435",
-      "headline": "J&K Electric squeaks by Maltby Sports 4-3 lifted by Rubein Mackenzie's brace (2G), as Avery Harrison chipping in 1G and 1A",
+      "headline": "J&K Electric squeaks by Maltby Sports 4-3",
       "game_datetime": "2025-10-28T23:45:00+00:00"
     },
     {
       "game_id": "3274310",
-      "headline": "G.R. Mitchell Welding routs Colson Overhead Doors 12-3 fueled by Meathead MacDonald's hat trick and 4A, with Ryan Macpherson contributing brace (2G)",
+      "headline": "G.R. Mitchell Welding routs Colson Overhead Doors 12-3",
       "game_datetime": "2025-10-27T00:00:00+00:00"
     },
     {
       "game_id": "3274306",
-      "headline": "Maltby Sports pummels Ultramar 9-5 sparked by Issac Bridge's hat trick and 3A, and Ian McCarthy supplying brace (2G) and 2A",
+      "headline": "Maltby Sports pummels Ultramar 9-5",
       "game_datetime": "2025-10-22T01:00:00+00:00"
     },
     {
       "game_id": "3274304",
-      "headline": "G.R. Mitchell Welding cruises past J&K Electric 5-2 fueled by Meathead MacDonald's 1G and 2A, and Gordon Mitchell supplying 1G and 1A",
+      "headline": "G.R. Mitchell Welding cruises past J&K Electric 5-2",
       "game_datetime": "2025-10-21T23:45:00+00:00"
     },
     {
       "game_id": "3274302",
-      "headline": "Maltby Sports routs G.R. Mitchell Welding 10-2 fueled by Thomas Mccrossin's hat trick and 1A, with Danny \"Biggie\" Small supplying brace (2G) and 3A",
+      "headline": "Maltby Sports routs G.R. Mitchell Welding 10-2",
       "game_datetime": "2025-10-20T00:00:00+00:00"
     },
     {
       "game_id": "3274298",
-      "headline": "J&K Electric pummels Colson Overhead Doors 6-1 lifted by Rubein Mackenzie's brace (2G) and 1A, as Pat Morris chipping in 1G and 3A",
+      "headline": "J&K Electric pummels Colson Overhead Doors 6-1",
       "game_datetime": "2025-10-15T01:00:00+00:00"
     },
     {
       "game_id": "3274296",
-      "headline": "Maltby Sports cruises past Ultramar 7-4 sparked by Issac Bridge's hat trick (4G) and 1A, and Ian McCarthy supplying 1G and 3A",
+      "headline": "Maltby Sports cruises past Ultramar 7-4",
       "game_datetime": "2025-10-14T23:45:00+00:00"
     }
   ]
