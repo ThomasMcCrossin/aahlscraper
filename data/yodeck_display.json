@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-20T20:28:14.291625",
+  "timestamp": "2025-11-21T12:49:35.339742",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -11,16 +11,16 @@
     {
       "team": "J&K Electric",
       "wins": 7,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
       "points": 14
     },
     {
       "team": "G.R. Mitchell Welding",
-      "wins": 3,
+      "wins": 4,
       "losses": 4,
       "ties": 0,
-      "points": 6
+      "points": 8
     },
     {
       "team": "Ultramar",
@@ -65,10 +65,10 @@
       "name": "Marshall MacDonald",
       "team": "G.R. Mitchell Welding",
       "pos": "C",
-      "gp": "6",
-      "g": "7",
-      "a": "11",
-      "pts": "18",
+      "gp": "7",
+      "g": "9",
+      "a": "12",
+      "pts": "21",
       "ppg": "",
       "shg": "",
       "gwg": "",
@@ -79,8 +79,30 @@
       "team_name": "G.R. Mitchell Welding",
       "player_id": "gr-mitchell-welding-macdonald-meathead-97",
       "team_slug": "gr-mitchell-welding",
-      "points": 18,
+      "points": 21,
       "rank": 2
+    },
+    {
+      "no": "28",
+      "name": "Brendan Stone",
+      "team": "J&K Electric",
+      "pos": "F",
+      "gp": "7",
+      "g": "11",
+      "a": "8",
+      "pts": "19",
+      "ppg": "",
+      "shg": "1",
+      "gwg": "1",
+      "gtg": "",
+      "pim": "",
+      "pts_g": "2.71",
+      "team_id": "TYLERARSENEAU-4",
+      "team_name": "J&K Electric",
+      "player_id": "j-and-k-electric-stone-brendan-28",
+      "team_slug": "j-and-k-electric",
+      "points": 19,
+      "rank": 3
     },
     {
       "no": "9",
@@ -102,7 +124,7 @@
       "player_id": "maltby-sports-mccarthy-ian-9",
       "team_slug": "maltby-sports",
       "points": 17,
-      "rank": 3
+      "rank": 4
     },
     {
       "no": "19",
@@ -124,29 +146,29 @@
       "player_id": "maltby-sports-mccrossin-thomas-19",
       "team_slug": "maltby-sports",
       "points": 17,
-      "rank": 4
+      "rank": 5
     },
     {
-      "no": "28",
-      "name": "Brendan Stone",
-      "team": "J&K Electric",
+      "no": "38",
+      "name": "Dave Atkinson",
+      "team": "G.R. Mitchell Welding",
       "pos": "F",
-      "gp": "6",
-      "g": "11",
-      "a": "5",
+      "gp": "7",
+      "g": "6",
+      "a": "10",
       "pts": "16",
       "ppg": "",
-      "shg": "1",
-      "gwg": "1",
-      "gtg": "",
-      "pim": "",
-      "pts_g": "2.67",
-      "team_id": "TYLERARSENEAU-4",
-      "team_name": "J&K Electric",
-      "player_id": "j-and-k-electric-stone-brendan-28",
-      "team_slug": "j-and-k-electric",
+      "shg": "",
+      "gwg": "",
+      "gtg": "1",
+      "pim": "3",
+      "pts_g": "2.29",
+      "team_id": "983723",
+      "team_name": "G.R. Mitchell Welding",
+      "player_id": "gr-mitchell-welding-atkinson-dave-38",
+      "team_slug": "gr-mitchell-welding",
       "points": 16,
-      "rank": 5
+      "rank": 6
     },
     {
       "no": "11",
@@ -168,7 +190,7 @@
       "player_id": "ultramar-allen-tyler-tuffy-11",
       "team_slug": "ultramar",
       "points": 15,
-      "rank": 6
+      "rank": 7
     },
     {
       "no": "16",
@@ -190,28 +212,6 @@
       "player_id": "maltby-sports-small-danny-biggie-16",
       "team_slug": "maltby-sports",
       "points": 15,
-      "rank": 7
-    },
-    {
-      "no": "38",
-      "name": "Dave Atkinson",
-      "team": "G.R. Mitchell Welding",
-      "pos": "F",
-      "gp": "6",
-      "g": "6",
-      "a": "7",
-      "pts": "13",
-      "ppg": "",
-      "shg": "",
-      "gwg": "",
-      "gtg": "1",
-      "pim": "3",
-      "pts_g": "2.17",
-      "team_id": "983723",
-      "team_name": "G.R. Mitchell Welding",
-      "player_id": "gr-mitchell-welding-atkinson-dave-38",
-      "team_slug": "gr-mitchell-welding",
-      "points": 13,
       "rank": 8
     },
     {
@@ -219,21 +219,21 @@
       "name": "Nick Leopold",
       "team": "J&K Electric",
       "pos": "F/D",
-      "gp": "7",
+      "gp": "8",
       "g": "4",
-      "a": "9",
-      "pts": "13",
+      "a": "10",
+      "pts": "14",
       "ppg": "1",
       "shg": "",
       "gwg": "",
       "gtg": "1",
       "pim": "26",
-      "pts_g": "1.86",
+      "pts_g": "1.75",
       "team_id": "TYLERARSENEAU-4",
       "team_name": "J&K Electric",
       "player_id": "j-and-k-electric-leopold-nick-9",
       "team_slug": "j-and-k-electric",
-      "points": 13,
+      "points": 14,
       "rank": 9
     },
     {
@@ -281,6 +281,50 @@
       "rank": 11
     },
     {
+      "no": "13",
+      "name": "Gordon Mitchell",
+      "team": "G.R. Mitchell Welding",
+      "pos": "F/D",
+      "gp": "6",
+      "g": "5",
+      "a": "7",
+      "pts": "12",
+      "ppg": "",
+      "shg": "",
+      "gwg": "",
+      "gtg": "1",
+      "pim": "6",
+      "pts_g": "2.00",
+      "team_id": "983723",
+      "team_name": "G.R. Mitchell Welding",
+      "player_id": "gr-mitchell-welding-mitchell-gordon-13",
+      "team_slug": "gr-mitchell-welding",
+      "points": 12,
+      "rank": 12
+    },
+    {
+      "no": "22",
+      "name": "Gerald Boutiler",
+      "team": "J&K Electric",
+      "pos": "D/F",
+      "gp": "9",
+      "g": "4",
+      "a": "7",
+      "pts": "11",
+      "ppg": "",
+      "shg": "",
+      "gwg": "",
+      "gtg": "3",
+      "pim": "6",
+      "pts_g": "1.22",
+      "team_id": "TYLERARSENEAU-4",
+      "team_name": "J&K Electric",
+      "player_id": "j-and-k-electric-boutiler-gerald-22",
+      "team_slug": "j-and-k-electric",
+      "points": 11,
+      "rank": 13
+    },
+    {
       "no": "12",
       "name": "Matt Cove",
       "team": "Ultramar",
@@ -300,7 +344,7 @@
       "player_id": "ultramar-cove-matt-12",
       "team_slug": "ultramar",
       "points": 11,
-      "rank": 12
+      "rank": 14
     },
     {
       "no": "7",
@@ -322,7 +366,7 @@
       "player_id": "gr-mitchell-welding-helm-corey-7",
       "team_slug": "gr-mitchell-welding",
       "points": 11,
-      "rank": 13
+      "rank": 15
     },
     {
       "no": "17",
@@ -344,29 +388,7 @@
       "player_id": "maltby-sports-maltby-chris-17",
       "team_slug": "maltby-sports",
       "points": 11,
-      "rank": 14
-    },
-    {
-      "no": "22",
-      "name": "Gerald Boutiler",
-      "team": "J&K Electric",
-      "pos": "D/F",
-      "gp": "8",
-      "g": "3",
-      "a": "7",
-      "pts": "10",
-      "ppg": "",
-      "shg": "",
-      "gwg": "",
-      "gtg": "2",
-      "pim": "6",
-      "pts_g": "1.25",
-      "team_id": "TYLERARSENEAU-4",
-      "team_name": "J&K Electric",
-      "player_id": "j-and-k-electric-boutiler-gerald-22",
-      "team_slug": "j-and-k-electric",
-      "points": 10,
-      "rank": 15
+      "rank": 16
     },
     {
       "no": "6",
@@ -388,7 +410,7 @@
       "player_id": "maltby-sports-crocker-luke-6",
       "team_slug": "maltby-sports",
       "points": 10,
-      "rank": 16
+      "rank": 17
     },
     {
       "no": "23",
@@ -410,7 +432,7 @@
       "player_id": "colson-overhead-doors-gesner-logan-23",
       "team_slug": "colson-overhead-doors",
       "points": 10,
-      "rank": 17
+      "rank": 18
     },
     {
       "no": "63",
@@ -432,7 +454,7 @@
       "player_id": "maltby-sports-leblanc-travis-63",
       "team_slug": "maltby-sports",
       "points": 10,
-      "rank": 18
+      "rank": 19
     },
     {
       "no": "4",
@@ -453,28 +475,6 @@
       "team_name": "Ultramar",
       "player_id": "ultramar-dobson-aaron-4",
       "team_slug": "ultramar",
-      "points": 9,
-      "rank": 19
-    },
-    {
-      "no": "19",
-      "name": "Denis Hebert",
-      "team": "Colson Overhead Doors",
-      "pos": "F",
-      "gp": "5",
-      "g": "3",
-      "a": "6",
-      "pts": "9",
-      "ppg": "1",
-      "shg": "",
-      "gwg": "",
-      "gtg": "1",
-      "pim": "",
-      "pts_g": "1.80",
-      "team_id": "TYLERARSENEAU-3",
-      "team_name": "Colson Overhead Doors",
-      "player_id": "colson-overhead-doors-hebert-denis-19",
-      "team_slug": "colson-overhead-doors",
       "points": 9,
       "rank": 20
     }
@@ -3948,7 +3948,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2025-11-20T20:28:14.230775+00:00",
+    "generated_at": "2025-11-21T12:49:35.285519+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall",
