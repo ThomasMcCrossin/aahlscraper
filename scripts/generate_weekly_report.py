@@ -22,6 +22,14 @@ try:
 except ImportError:
     build_player_registry_main = None
 
+try:
+    from openai_headlines import generate_ai_headline, enrich_games_with_ai
+    OPENAI_HEADLINES_AVAILABLE = True
+except ImportError:
+    OPENAI_HEADLINES_AVAILABLE = False
+    generate_ai_headline = None
+    enrich_games_with_ai = None
+
 def _load_json(path: Path) -> Optional[object]:
     if not path.exists():
         return None
@@ -307,7 +315,21 @@ def _ensure_headlines(games: List[Dict[str, object]], existing: Dict[str, Dict[s
             continue
         game_id_str = str(game_id)
 
-        headline = _compose_headline(game)
+        # Try AI headline first, fall back to template
+        headline = None
+        ai_generated = False
+
+        if OPENAI_HEADLINES_AVAILABLE and generate_ai_headline:
+            try:
+                headline = generate_ai_headline(game)
+                if headline:
+                    ai_generated = True
+            except Exception as e:
+                print(f"AI headline generation failed for game {game_id}: {e}")
+
+        if not headline:
+            headline = _compose_headline(game)
+
         if not headline:
             continue
 
@@ -321,12 +343,14 @@ def _ensure_headlines(games: List[Dict[str, object]], existing: Dict[str, Dict[s
             entry = {
                 "game_id": game_id_str,
                 "headline": headline,
+                "ai_generated": ai_generated,
                 "created_at": now_iso,
                 "updated_at": now_iso,
             }
         else:
             if entry.get("headline") != headline:
                 entry["headline"] = headline
+                entry["ai_generated"] = ai_generated
                 entry["updated_at"] = now_iso
 
         entry["game_datetime"] = iso_dt
