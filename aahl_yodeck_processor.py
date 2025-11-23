@@ -439,9 +439,76 @@ class AAHLDataProcessor:
             'upcoming_games': upcoming_sorted,
         }
 
+    def calculate_player_streaks(self, results: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
+        """Calculate goal-scoring streaks for players from recent games."""
+        player_games: Dict[str, List[int]] = {}
+
+        # Sort results by date, most recent first
+        sorted_results = sorted(
+            results,
+            key=lambda g: g.get("datetime") or g.get("start_local") or "",
+            reverse=True
+        )
+
+        # Track last N games for each player
+        for game in sorted_results[:20]:  # Look at last 20 games
+            stats = game.get("player_stats", {})
+            for side in ("home", "away"):
+                players = stats.get(side, [])
+                if not isinstance(players, list):
+                    continue
+                for player in players:
+                    name = self.format_display_name(player.get("name", ""))
+                    if not name:
+                        continue
+                    goals = int(player.get("goals", 0) or 0)
+                    if name not in player_games:
+                        player_games[name] = []
+                    player_games[name].append(goals)
+
+        # Calculate streaks
+        streaks: Dict[str, Dict[str, Any]] = {}
+        for name, games in player_games.items():
+            if len(games) < 2:
+                continue
+
+            # Count consecutive games with goals (hot streak)
+            hot_streak = 0
+            for goals in games:
+                if goals > 0:
+                    hot_streak += 1
+                else:
+                    break
+
+            # Count consecutive games without goals (cold streak)
+            cold_streak = 0
+            for goals in games:
+                if goals == 0:
+                    cold_streak += 1
+                else:
+                    break
+
+            # Calculate recent form (goals in last 3 games)
+            recent_goals = sum(games[:3])
+            games_played = len(games[:3])
+
+            streaks[name] = {
+                "hot_streak": hot_streak if hot_streak >= 2 else 0,
+                "cold_streak": cold_streak if cold_streak >= 3 else 0,
+                "recent_goals": recent_goals,
+                "recent_games": games_played,
+                "ppg": round(recent_goals / games_played, 2) if games_played else 0,
+            }
+
+        return streaks
+
     def get_top_scorers(self, limit: int = 20) -> List[Dict[str, Any]]:
-        """Get top scorers with corrections applied."""
+        """Get top scorers with corrections and streaks applied."""
         stats = self.load_stats()
+        results = self.load_results()
+
+        # Calculate streaks
+        streaks = self.calculate_player_streaks(results)
 
         # Parse points from various field names
         for stat in stats:
@@ -471,6 +538,19 @@ class AAHLDataProcessor:
                 stat_copy['player_name'] = self.format_display_name(stat_copy['player_name'])
             if 'name' in stat_copy:
                 stat_copy['name'] = self.format_display_name(stat_copy['name'])
+
+            # Add streak information
+            player_name = stat_copy.get('name') or stat_copy.get('player_name', '')
+            if player_name in streaks:
+                streak_info = streaks[player_name]
+                stat_copy['hot_streak'] = streak_info['hot_streak']
+                stat_copy['cold_streak'] = streak_info['cold_streak']
+                stat_copy['recent_goals'] = streak_info['recent_goals']
+                stat_copy['ppg'] = streak_info['ppg']
+            else:
+                stat_copy['hot_streak'] = 0
+                stat_copy['cold_streak'] = 0
+
             ranked.append(stat_copy)
 
         return ranked
