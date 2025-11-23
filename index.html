@@ -205,83 +205,100 @@
             font-size: 1.1em;
         }
 
-        /* Scorers List */
-        .scorers-grid {
+        /* Scorers Two-Column Table */
+        .scorers-columns {
             display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            grid-template-rows: repeat(5, minmax(0, 1fr));
-            grid-auto-flow: column;
-            grid-auto-rows: minmax(0, 1fr);
-            gap: 8px;
-            margin-top: 5px;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
             height: 100%;
         }
 
-        .scorer-card {
-            background: rgba(42, 90, 143, 0.3);
-            padding: 6px 10px;
-            border-radius: 6px;
-            border-left: 3px solid #4a9eff;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            height: 100%;
+        .scorers-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
         }
 
-        .scorer-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 2px 10px rgba(74, 158, 255, 0.4);
-        }
-
-        .scorer-rank {
-            font-size: 1em;
-            font-weight: bold;
-            color: #ffca28;
-            min-width: 28px;
-            text-align: center;
-        }
-
-        .scorer-info {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .scorer-name {
-            font-size: 0.8em;
-            font-weight: bold;
-            margin-bottom: 2px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .scorer-team {
-            font-size: 0.65em;
-            color: #a8d0ff;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .scorer-points {
-            font-size: 1.1em;
-            font-weight: bold;
-            color: #4a9eff;
-        }
-
-        .scorer-points .points-label {
-            font-size: 0.5em;
-            margin-left: 3px;
-            color: #a8d0ff;
+        .scorers-table thead {
+            background: #2a5a8f;
+            text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        .scorer-stats {
-            font-size: 0.6em;
+        .scorers-table th {
+            padding: 8px 10px;
+            text-align: left;
+            font-weight: bold;
+            font-size: 0.8em;
+            border-bottom: 2px solid rgba(74, 158, 255, 0.4);
+        }
+
+        .scorers-table th.rank-col { width: 35px; text-align: center; }
+        .scorers-table th.name-col { }
+        .scorers-table th.team-col { }
+        .scorers-table th.g-col { width: 35px; text-align: center; }
+        .scorers-table th.a-col { width: 35px; text-align: center; }
+        .scorers-table th.pts-col { width: 45px; text-align: center; }
+
+        .scorers-table td {
+            padding: 6px 10px;
+            border-bottom: 1px solid rgba(74, 158, 255, 0.2);
+        }
+
+        .scorers-table tbody tr {
+            background: rgba(42, 90, 143, 0.15);
+            transition: background 0.2s;
+        }
+
+        .scorers-table tbody tr:nth-child(even) {
+            background: rgba(42, 90, 143, 0.25);
+        }
+
+        .scorers-table tbody tr:hover {
+            background: rgba(74, 158, 255, 0.2);
+        }
+
+        .scorers-table .rank-cell {
+            font-weight: bold;
+            color: #ffca28;
+            text-align: center;
+        }
+
+        .scorers-table .name-cell {
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 120px;
+        }
+
+        .scorers-table .team-cell {
+            color: #a8d0ff;
+            font-size: 0.85em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100px;
+        }
+
+        .scorers-table .stat-cell {
+            text-align: center;
             color: #d0e6ff;
-            margin-top: 2px;
-            letter-spacing: 0.5px;
+        }
+
+        .scorers-table .pts-cell {
+            text-align: center;
+            font-weight: bold;
+            color: #4a9eff;
+            font-size: 1.1em;
+        }
+
+        .scorers-table .top-3 .rank-cell {
+            color: #ffd700;
+        }
+
+        .scorers-table .top-3 .pts-cell {
+            color: #ffd700;
         }
 
         .streak-indicator {
@@ -706,7 +723,7 @@
             <div class="panel scorers-panel">
                 <div class="panel-title">Top 20 Scorers</div>
                 <div class="panel-body">
-                    <div class="scorers-grid" id="scorersGrid"></div>
+                    <div class="scorers-columns" id="scorersColumns"></div>
                 </div>
             </div>
         </div>
@@ -1203,10 +1220,11 @@
             });
         }
 
-        // Render top scorers
+        // Render top scorers as two-column table
         function renderScorers(scorers) {
-            const grid = document.getElementById('scorersGrid');
-            grid.innerHTML = '';
+            const container = document.getElementById('scorersColumns');
+            container.innerHTML = '';
+
             const sorted = (Array.isArray(scorers) ? [...scorers] : []).sort((a, b) => {
                 const rankA = Number(a?.rank ?? Infinity);
                 const rankB = Number(b?.rank ?? Infinity);
@@ -1214,14 +1232,35 @@
                 const pointsA = Number(a?.points ?? a?.pts ?? a?.Points ?? 0);
                 const pointsB = Number(b?.points ?? b?.pts ?? b?.Points ?? 0);
                 return pointsB - pointsA;
-            });
-            sorted
-                .slice(0, 20)
-                .forEach((scorer, index) => {
-                    const rank = scorer.rank || index + 1;
+            }).slice(0, 20);
+
+            // Split into two columns: 1-10 and 11-20
+            const leftColumn = sorted.slice(0, 10);
+            const rightColumn = sorted.slice(10, 20);
+
+            function createTable(players, startRank) {
+                const table = document.createElement('table');
+                table.className = 'scorers-table';
+                table.innerHTML = `
+                    <thead>
+                        <tr>
+                            <th class="rank-col">#</th>
+                            <th class="name-col">Player</th>
+                            <th class="team-col">Team</th>
+                            <th class="g-col">G</th>
+                            <th class="a-col">A</th>
+                            <th class="pts-col">PTS</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                `;
+
+                const tbody = table.querySelector('tbody');
+
+                players.forEach((scorer, index) => {
+                    const rank = scorer.rank || (startRank + index);
                     const name = correctName(scorer.name || scorer.player_name || `Player ${rank}`);
                     const team = scorer.team_name || scorer.team || '';
-                    const teamInfo = resolveTeamVisual(team, scorer.team_slug || scorer.teamSlug);
                     const goals = Number(scorer.g ?? scorer.goals ?? scorer.Goals ?? 0) || 0;
                     const assists = Number(scorer.a ?? scorer.assists ?? scorer.Assists ?? 0) || 0;
                     const points = Number(scorer.points ?? scorer.pts ?? (goals + assists)) || (goals + assists);
@@ -1231,30 +1270,36 @@
                     const hotStreak = Number(scorer.hot_streak ?? 0);
                     const coldStreak = Number(scorer.cold_streak ?? 0);
                     if (hotStreak >= 3) {
-                        streakHtml = `<span class="streak-indicator streak-hot" title="${hotStreak} game goal streak">🔥${hotStreak}</span>`;
+                        streakHtml = ` <span class="streak-indicator streak-hot">🔥${hotStreak}</span>`;
                     } else if (hotStreak >= 2) {
-                        streakHtml = `<span class="streak-indicator streak-hot" title="${hotStreak} game goal streak">🔥</span>`;
+                        streakHtml = ` <span class="streak-indicator streak-hot">🔥</span>`;
                     } else if (coldStreak >= 3) {
-                        streakHtml = `<span class="streak-indicator streak-cold" title="${coldStreak} games without a goal">❄️</span>`;
+                        streakHtml = ` <span class="streak-indicator streak-cold">❄️</span>`;
                     }
 
-                    // Leader badge for top 3
-                    const leaderBadge = rank <= 3 ? `<span class="leader-badge">${rank === 1 ? '1ST' : rank === 2 ? '2ND' : '3RD'}</span>` : '';
+                    // Abbreviate team name
+                    const teamAbbrev = team.split(' ').map(w => w[0]).join('').slice(0, 3).toUpperCase() || team.slice(0, 3).toUpperCase();
 
-                    const card = document.createElement('div');
-                    card.className = 'scorer-card';
-                    card.innerHTML = `
-                        <div class="scorer-rank">#${rank}</div>
-                        ${teamLogoHtml(teamInfo, 'small')}
-                        <div class="scorer-info">
-                            <div class="scorer-name">${name}${streakHtml}${leaderBadge}</div>
-                            <div class="scorer-team">${teamInfo.name}</div>
-                            <div class="scorer-stats">${goals} G · ${assists} A</div>
-                        </div>
-                        <div class="scorer-points">${points}<span class="points-label">PTS</span></div>
+                    const row = document.createElement('tr');
+                    if (rank <= 3) row.className = 'top-3';
+                    row.innerHTML = `
+                        <td class="rank-cell">${rank}</td>
+                        <td class="name-cell">${name}${streakHtml}</td>
+                        <td class="team-cell" title="${team}">${teamAbbrev}</td>
+                        <td class="stat-cell">${goals}</td>
+                        <td class="stat-cell">${assists}</td>
+                        <td class="pts-cell">${points}</td>
                     `;
-                    grid.appendChild(card);
+                    tbody.appendChild(row);
                 });
+
+                return table;
+            }
+
+            container.appendChild(createTable(leftColumn, 1));
+            if (rightColumn.length > 0) {
+                container.appendChild(createTable(rightColumn, 11));
+            }
         }
 
         // Render recent results
