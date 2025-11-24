@@ -1,6 +1,20 @@
 {
-  "generated_at": "2025-11-23T20:26:24.208507+00:00",
+  "generated_at": "2025-11-24T02:53:48.250933+00:00",
   "headlines": [
+    {
+      "game_id": "3276522",
+      "headline": "G.R. Mitchell Welding crushes Colson Overhead Doors 6-3 sparked by Zack Fullerton's hat trick and 1A, as Geoff Ryan chipping in 1G and 1A",
+      "ai_generated": false,
+      "created_at": "2025-11-24T02:53:48.250529+00:00",
+      "updated_at": "2025-11-24T02:53:48.250529+00:00",
+      "game_datetime": "2025-11-24T01:00:00+00:00",
+      "home_team": "Colson Overhead Doors",
+      "away_team": "G.R. Mitchell Welding",
+      "home_score": 3,
+      "away_score": 6,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276522&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276522&p=boxscore"
+    },
     {
       "game_id": "3276518",
       "headline": "Maltby Sports tops J&K Electric 4-2 driven by Ted Mackinnon's brace (2G), and Ian McCarthy contributing 1G",
@@ -128,8 +142,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 3,
       "away_score": 12,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3274310&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3274310&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274310&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274310&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3274306",

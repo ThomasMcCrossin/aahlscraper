@@ -1,40 +1,47 @@
 {
-  "generated_at": "2025-11-23T20:26:24.208507+00:00",
-  "standings_snapshot": "standings-20251121T202703Z.json",
-  "previous_snapshot": "standings-20251121T162935Z.json",
+  "generated_at": "2025-11-24T02:53:48.250933+00:00",
+  "standings_snapshot": "standings-20251124T025348Z.json",
+  "previous_snapshot": "standings-20251121T202703Z.json",
   "standings_movements": [
+    {
+      "team": "G.R. Mitchell Welding",
+      "current_points": 10,
+      "previous_points": 8,
+      "points_change": 2
+    },
     {
       "team": "Maltby Sports",
       "current_points": 16,
-      "previous_points": 0,
-      "points_change": 16
+      "previous_points": 16,
+      "points_change": 0
     },
     {
       "team": "J&K Electric",
       "current_points": 14,
-      "previous_points": 0,
-      "points_change": 14
-    },
-    {
-      "team": "G.R. Mitchell Welding",
-      "current_points": 8,
-      "previous_points": 0,
-      "points_change": 8
+      "previous_points": 14,
+      "points_change": 0
     },
     {
       "team": "Ultramar",
       "current_points": 2,
-      "previous_points": 0,
-      "points_change": 2
+      "previous_points": 2,
+      "points_change": 0
     },
     {
       "team": "Colson Overhead Doors",
       "current_points": 2,
-      "previous_points": 0,
-      "points_change": 2
+      "previous_points": 2,
+      "points_change": 0
     }
   ],
   "recent_team_form": [
+    {
+      "team": "G.R. Mitchell Welding",
+      "played": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
     {
       "team": "Maltby Sports",
       "played": 1,
@@ -43,13 +50,6 @@
       "ties": 0
     },
     {
-      "team": "J&K Electric",
-      "played": 2,
-      "wins": 1,
-      "losses": 1,
-      "ties": 0
-    },
-    {
       "team": "Ultramar",
       "played": 1,
       "wins": 0,
@@ -62,9 +62,21 @@
       "wins": 0,
       "losses": 1,
       "ties": 1
+    },
+    {
+      "team": "J&K Electric",
+      "played": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
     }
   ],
   "game_headlines": [
+    {
+      "game_id": "3276522",
+      "headline": "G.R. Mitchell Welding crushes Colson Overhead Doors 6-3 sparked by Zack Fullerton's hat trick and 1A, as Geoff Ryan chipping in 1G and 1A",
+      "game_datetime": "2025-11-24T01:00:00+00:00"
+    },
     {
       "game_id": "3276518",
       "headline": "Maltby Sports tops J&K Electric 4-2 driven by Ted Mackinnon's brace (2G), and Ian McCarthy contributing 1G",
