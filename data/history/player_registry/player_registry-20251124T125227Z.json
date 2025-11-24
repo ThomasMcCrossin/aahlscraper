@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-24T12:52:27.904201+00:00",
+  "generated_at": "2025-11-24T03:20:09.124428+00:00",
   "players": [
     {
       "player_id": "colson-overhead-doors-terrio-marshall",
@@ -126,7 +126,7 @@
       "team_games_played": 7,
       "games_missed": null,
       "recent_points": 0,
-      "recent_games": 0
+      "recent_games": 1
     },
     {
       "player_id": "colson-overhead-doors-russel-nick-30",
@@ -167,8 +167,8 @@
       "points_per_game": 0.75,
       "team_games_played": 7,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "colson-overhead-doors-baisley-chris-44",
@@ -188,8 +188,8 @@
       "points_per_game": 0.67,
       "team_games_played": 7,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "colson-overhead-doors-chandler-3rd-charles-7",
@@ -230,8 +230,8 @@
       "points_per_game": 1.25,
       "team_games_played": 7,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 2,
+      "recent_games": 1
     },
     {
       "player_id": "colson-overhead-doors-eatmon-chester-8",
@@ -272,8 +272,8 @@
       "points_per_game": 2.17,
       "team_games_played": 7,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "colson-overhead-doors-black-mark-9",
@@ -337,8 +337,8 @@
       "points_per_game": 2.4,
       "team_games_played": 6,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 3,
+      "recent_games": 1
     },
     {
       "player_id": "gr-mitchell-welding-hurley-william-15",
@@ -358,8 +358,8 @@
       "points_per_game": 1.67,
       "team_games_played": 6,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "gr-mitchell-welding-macpherson-ryan-21",
@@ -377,8 +377,8 @@
       "points_per_game": 2.0,
       "team_games_played": 6,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 2,
+      "recent_games": 1
     },
     {
       "player_id": "gr-mitchell-welding-atkinson-dave-38",
@@ -398,8 +398,8 @@
       "points_per_game": 2.2,
       "team_games_played": 6,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "gr-mitchell-welding-ryan-geoff-55",
@@ -419,8 +419,8 @@
       "points_per_game": 2.0,
       "team_games_played": 6,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 2,
+      "recent_games": 1
     },
     {
       "player_id": "gr-mitchell-welding-sutton-cody-61",
@@ -462,8 +462,8 @@
       "points_per_game": 1.25,
       "team_games_played": 6,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "gr-mitchell-welding-helm-corey-7",
@@ -526,8 +526,8 @@
       "points_per_game": 1.4,
       "team_games_played": 6,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "gr-mitchell-welding-fullerton-zack-90",
@@ -547,8 +547,8 @@
       "points_per_game": 2.0,
       "team_games_played": 6,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 4,
+      "recent_games": 1
     },
     {
       "player_id": "gr-mitchell-welding-dobson-nick-pickle-94",
