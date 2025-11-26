@@ -58,20 +58,6 @@
   },
   {
     "number": "13",
-    "name": "Davis, Dan",
-    "positions": [
-      "F"
-    ],
-    "player_id": "colson-overhead-doors-davis-dan-13",
-    "height": null,
-    "weight": null,
-    "shoots": null,
-    "catches": null,
-    "hometown": "Springhill, NS",
-    "captaincy": null
-  },
-  {
-    "number": "13",
     "name": "Henshaw, Chad",
     "positions": [
       "F"
@@ -82,6 +68,20 @@
     "shoots": null,
     "catches": null,
     "hometown": null,
+    "captaincy": null
+  },
+  {
+    "number": "18",
+    "name": "Davis, Dan",
+    "positions": [
+      "F"
+    ],
+    "player_id": "colson-overhead-doors-davis-dan-18",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Springhill, NS",
     "captaincy": null
   },
   {

@@ -212,20 +212,6 @@
     "team_slug": "ultramar",
     "players": [
       {
-        "number": "00",
-        "name": "Bennett, Mark",
-        "positions": [
-          "D"
-        ],
-        "player_id": "ultramar-bennett-mark-00",
-        "height": "7' 2\"",
-        "weight": "250 lbs",
-        "shoots": "L",
-        "catches": null,
-        "hometown": "Parts Unknown",
-        "captaincy": null
-      },
-      {
         "number": "1",
         "name": "Thomas, Remi",
         "positions": [
@@ -326,6 +312,20 @@
         "captaincy": null
       },
       {
+        "number": "9",
+        "name": "Linkletter, Brad",
+        "positions": [
+          "C"
+        ],
+        "player_id": "ultramar-linkletter-brad-9",
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "River H\u00c3\u00a9bert, NS",
+        "captaincy": "captain"
+      },
+      {
         "number": "10",
         "name": "Malcolm, Robert",
         "positions": [
@@ -399,17 +399,17 @@
       },
       {
         "number": "68",
-        "name": "Linkletter, Brad",
+        "name": "Bennett, Mark",
         "positions": [
-          "C"
+          "D"
         ],
-        "player_id": "ultramar-linkletter-brad-68",
-        "height": null,
-        "weight": null,
-        "shoots": null,
+        "player_id": "ultramar-bennett-mark-68",
+        "height": "7' 2\"",
+        "weight": "250 lbs",
+        "shoots": "L",
         "catches": null,
-        "hometown": "River H\u00c3\u00a9bert, NS",
-        "captaincy": "captain"
+        "hometown": "Parts Unknown",
+        "captaincy": null
       }
     ]
   },
@@ -477,20 +477,6 @@
       },
       {
         "number": "13",
-        "name": "Davis, Dan",
-        "positions": [
-          "F"
-        ],
-        "player_id": "colson-overhead-doors-davis-dan-13",
-        "height": null,
-        "weight": null,
-        "shoots": null,
-        "catches": null,
-        "hometown": "Springhill, NS",
-        "captaincy": null
-      },
-      {
-        "number": "13",
         "name": "Henshaw, Chad",
         "positions": [
           "F"
@@ -501,6 +487,20 @@
         "shoots": null,
         "catches": null,
         "hometown": null,
+        "captaincy": null
+      },
+      {
+        "number": "18",
+        "name": "Davis, Dan",
+        "positions": [
+          "F"
+        ],
+        "player_id": "colson-overhead-doors-davis-dan-18",
+        "height": null,
+        "weight": null,
+        "shoots": null,
+        "catches": null,
+        "hometown": "Springhill, NS",
         "captaincy": null
       },
       {

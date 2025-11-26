@@ -1,24 +1,24 @@
 {
-  "generated_at": "2025-11-25T20:28:21.609971+00:00",
-  "standings_snapshot": "standings-20251124T025348Z.json",
-  "previous_snapshot": "standings-20251121T202703Z.json",
+  "generated_at": "2025-11-26T02:06:11.324552+00:00",
+  "standings_snapshot": "standings-20251126T020611Z.json",
+  "previous_snapshot": "standings-20251124T025348Z.json",
   "standings_movements": [
     {
-      "team": "G.R. Mitchell Welding",
-      "current_points": 10,
-      "previous_points": 8,
-      "points_change": 2
-    },
-    {
       "team": "Maltby Sports",
-      "current_points": 16,
+      "current_points": 17,
       "previous_points": 16,
-      "points_change": 0
+      "points_change": 1
     },
     {
       "team": "J&K Electric",
-      "current_points": 14,
+      "current_points": 15,
       "previous_points": 14,
+      "points_change": 1
+    },
+    {
+      "team": "G.R. Mitchell Welding",
+      "current_points": 10,
+      "previous_points": 10,
       "points_change": 0
     },
     {
@@ -45,12 +45,12 @@
     {
       "team": "Maltby Sports",
       "played": 1,
-      "wins": 1,
+      "wins": 0,
       "losses": 0,
-      "ties": 0
+      "ties": 1
     },
     {
-      "team": "Ultramar",
+      "team": "J&K Electric",
       "played": 1,
       "wins": 0,
       "losses": 0,
@@ -58,13 +58,6 @@
     },
     {
       "team": "Colson Overhead Doors",
-      "played": 2,
-      "wins": 0,
-      "losses": 1,
-      "ties": 1
-    },
-    {
-      "team": "J&K Electric",
       "played": 1,
       "wins": 0,
       "losses": 1,
@@ -72,6 +65,11 @@
     }
   ],
   "game_headlines": [
+    {
+      "game_id": "3276524",
+      "headline": "Maltby Sports finish deadlocked with J&K Electric 4-4",
+      "game_datetime": "2025-11-26T00:45:00+00:00"
+    },
     {
       "game_id": "3276522",
       "headline": "G.R. Mitchell Welding crushes Colson Overhead Doors 6-3 sparked by Zack Fullerton's hat trick and 1A, as Geoff Ryan chipping in 1G and 1A",
