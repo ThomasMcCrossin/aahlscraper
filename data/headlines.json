@@ -1,6 +1,20 @@
 {
-  "generated_at": "2025-11-26T02:43:33.220941+00:00",
+  "generated_at": "2025-11-26T03:40:04.791132+00:00",
   "headlines": [
+    {
+      "game_id": "3276526",
+      "headline": "G.R. Mitchell Welding battle to a draw with Ultramar 2-2",
+      "ai_generated": false,
+      "created_at": "2025-11-26T03:40:04.790708+00:00",
+      "updated_at": "2025-11-26T03:40:04.790708+00:00",
+      "game_datetime": "2025-11-26T02:00:00+00:00",
+      "home_team": "G.R. Mitchell Welding",
+      "away_team": "Ultramar",
+      "home_score": 2,
+      "away_score": 2,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276526&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276526&p=boxscore"
+    },
     {
       "game_id": "3276524",
       "headline": "Maltby Sports finish deadlocked with J&K Electric 4-4",
