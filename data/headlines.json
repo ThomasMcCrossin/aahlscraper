@@ -1,6 +1,34 @@
 {
-  "generated_at": "2025-12-02T20:32:12.595272+00:00",
+  "generated_at": "2025-12-03T02:28:30.362752+00:00",
   "headlines": [
+    {
+      "game_id": "3276695",
+      "headline": "J&K Electric slips past Colson Overhead Doors 2-1 powered by Pat Morris's brace (2G), and Bill Davison adding 1G",
+      "ai_generated": false,
+      "created_at": "2025-12-03T02:28:30.362273+00:00",
+      "updated_at": "2025-12-03T02:28:30.362273+00:00",
+      "game_datetime": "2025-12-03T02:00:00+00:00",
+      "home_team": "Colson Overhead Doors",
+      "away_team": "J&K Electric",
+      "home_score": 1,
+      "away_score": 2,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276695&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276695&p=boxscore"
+    },
+    {
+      "game_id": "3276697",
+      "headline": "G.R. Mitchell Welding thrashes Ultramar 9-1 fueled by Meathead MacDonald's hat trick and 3A, with Ryan Macpherson contributing brace (2G)",
+      "ai_generated": false,
+      "created_at": "2025-12-03T02:28:30.362273+00:00",
+      "updated_at": "2025-12-03T02:28:30.362273+00:00",
+      "game_datetime": "2025-12-03T00:45:00+00:00",
+      "home_team": "G.R. Mitchell Welding",
+      "away_team": "Ultramar",
+      "home_score": 9,
+      "away_score": 1,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276697&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276697&p=boxscore"
+    },
     {
       "game_id": "3276530",
       "headline": "Colson Overhead Doors edges Ultramar 3-2 lifted by Rory Faulkner's 1G and 1A, with Chris Sproul contributing 1G",
@@ -114,16 +142,16 @@
     },
     {
       "game_id": "3276455",
-      "headline": "Maltby Sports squeaks by G.R. Mitchell Welding 5-4 powered by Danny \"Biggie\" Small's 1G and 1A, as Matt Gallant supplying 1G and 1A",
+      "headline": "Maltby Sports squeaks by G.R. Mitchell Welding 5-4",
       "created_at": "2025-11-08T12:24:10.037492+00:00",
-      "updated_at": "2025-12-01T03:46:42.308370+00:00",
+      "updated_at": "2025-12-03T02:28:30.362273+00:00",
       "game_datetime": "2025-11-05T02:00:00+00:00",
       "home_team": "Maltby Sports",
       "away_team": "G.R. Mitchell Welding",
       "home_score": 5,
       "away_score": 4,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276455&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276455&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276455&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276455&u=DSMALL&s=hockey&p=boxscore",
       "ai_generated": false
     },
     {
@@ -136,8 +164,8 @@
       "away_team": "Ultramar",
       "home_score": 5,
       "away_score": 5,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276453&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276453&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276453&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276453&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276449",
@@ -155,9 +183,9 @@
     },
     {
       "game_id": "3276439",
-      "headline": "G.R. Mitchell Welding trounces Ultramar 9-3 sparked by Dave Atkinson's brace (2G) and 1A, while Meathead MacDonald supplying 1G and 3A",
+      "headline": "G.R. Mitchell Welding trounces Ultramar 9-3",
       "created_at": "2025-11-04T03:23:47.622386+00:00",
-      "updated_at": "2025-12-01T03:46:42.308370+00:00",
+      "updated_at": "2025-12-03T02:28:30.362273+00:00",
       "game_datetime": "2025-10-29T01:00:00+00:00",
       "home_team": "G.R. Mitchell Welding",
       "away_team": "Ultramar",
@@ -183,9 +211,9 @@
     },
     {
       "game_id": "3274310",
-      "headline": "G.R. Mitchell Welding routs Colson Overhead Doors 12-3 fueled by Meathead MacDonald's hat trick and 4A, with Ryan Macpherson contributing brace (2G)",
+      "headline": "G.R. Mitchell Welding routs Colson Overhead Doors 12-3",
       "created_at": "2025-11-04T04:15:33.346582+00:00",
-      "updated_at": "2025-12-01T03:46:42.308370+00:00",
+      "updated_at": "2025-12-03T02:28:30.362273+00:00",
       "game_datetime": "2025-10-27T00:00:00+00:00",
       "home_team": "Colson Overhead Doors",
       "away_team": "G.R. Mitchell Welding",
@@ -197,9 +225,9 @@
     },
     {
       "game_id": "3274306",
-      "headline": "Maltby Sports pummels Ultramar 9-5 sparked by Issac Bridge's hat trick and 3A, and Ian McCarthy supplying brace (2G) and 2A",
+      "headline": "Maltby Sports pummels Ultramar 9-5",
       "created_at": "2025-11-18T15:26:18.600835+00:00",
-      "updated_at": "2025-12-01T03:46:42.308370+00:00",
+      "updated_at": "2025-12-03T02:28:30.362273+00:00",
       "game_datetime": "2025-10-22T01:00:00+00:00",
       "home_team": "Maltby Sports",
       "away_team": "Ultramar",
@@ -239,9 +267,9 @@
     },
     {
       "game_id": "3274298",
-      "headline": "J&K Electric pummels Colson Overhead Doors 6-1",
+      "headline": "J&K Electric pummels Colson Overhead Doors 6-1 lifted by Rubein Mackenzie's brace (2G) and 1A, as Pat Morris chipping in 1G and 3A",
       "created_at": "2025-11-04T04:15:33.346582+00:00",
-      "updated_at": "2025-12-02T20:32:12.594775+00:00",
+      "updated_at": "2025-12-03T02:28:30.362273+00:00",
       "game_datetime": "2025-10-15T01:00:00+00:00",
       "home_team": "Colson Overhead Doors",
       "away_team": "J&K Electric",
@@ -253,9 +281,9 @@
     },
     {
       "game_id": "3274296",
-      "headline": "Maltby Sports cruises past Ultramar 7-4",
+      "headline": "Maltby Sports cruises past Ultramar 7-4 sparked by Issac Bridge's hat trick (4G) and 1A, and Ian McCarthy supplying 1G and 3A",
       "created_at": "2025-11-04T04:15:33.346582+00:00",
-      "updated_at": "2025-12-02T20:32:12.594775+00:00",
+      "updated_at": "2025-12-03T02:28:30.362273+00:00",
       "game_datetime": "2025-10-14T23:45:00+00:00",
       "home_team": "Maltby Sports",
       "away_team": "Ultramar",
