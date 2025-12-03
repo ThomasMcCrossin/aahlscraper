@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-03T12:55:37.073812+00:00",
+  "generated_at": "2025-12-03T16:36:23.014738+00:00",
   "headlines": [
     {
       "game_id": "3276695",
@@ -17,10 +17,10 @@
     },
     {
       "game_id": "3276697",
-      "headline": "G.R. Mitchell Welding thrashes Ultramar 9-1 fueled by Meathead MacDonald's hat trick and 3A, with Ryan Macpherson contributing brace (2G)",
+      "headline": "G.R. Mitchell Welding thrashes Ultramar 9-1 fueled by Meathead MacDonald's hat trick and 3A, with Ryan Macpherson contributing hat trick",
       "ai_generated": false,
       "created_at": "2025-12-03T02:28:30.362273+00:00",
-      "updated_at": "2025-12-03T02:28:30.362273+00:00",
+      "updated_at": "2025-12-03T16:36:23.014210+00:00",
       "game_datetime": "2025-12-03T00:45:00+00:00",
       "home_team": "G.R. Mitchell Welding",
       "away_team": "Ultramar",
@@ -183,9 +183,9 @@
     },
     {
       "game_id": "3276439",
-      "headline": "G.R. Mitchell Welding trounces Ultramar 9-3",
+      "headline": "G.R. Mitchell Welding trounces Ultramar 9-3 sparked by Dave Atkinson's brace (2G) and 1A, while Meathead MacDonald supplying 1G and 3A",
       "created_at": "2025-11-04T03:23:47.622386+00:00",
-      "updated_at": "2025-12-03T12:55:37.073314+00:00",
+      "updated_at": "2025-12-03T16:36:23.014210+00:00",
       "game_datetime": "2025-10-29T01:00:00+00:00",
       "home_team": "G.R. Mitchell Welding",
       "away_team": "Ultramar",
@@ -253,9 +253,9 @@
     },
     {
       "game_id": "3274302",
-      "headline": "Maltby Sports routs G.R. Mitchell Welding 10-2 fueled by Thomas Mccrossin's hat trick and 1A, with Danny \"Biggie\" Small supplying brace (2G) and 3A",
+      "headline": "Maltby Sports routs G.R. Mitchell Welding 10-2",
       "created_at": "2025-11-04T04:15:33.346582+00:00",
-      "updated_at": "2025-12-03T12:55:37.073314+00:00",
+      "updated_at": "2025-12-03T16:36:23.014210+00:00",
       "game_datetime": "2025-10-20T00:00:00+00:00",
       "home_team": "Maltby Sports",
       "away_team": "G.R. Mitchell Welding",
