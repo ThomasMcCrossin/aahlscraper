@@ -1,18 +1,18 @@
 {
-  "generated_at": "2025-12-04T16:36:14.767805+00:00",
-  "standings_snapshot": "standings-20251203T034458Z.json",
-  "previous_snapshot": "standings-20251203T022830Z.json",
+  "generated_at": "2025-12-04T20:29:35.282291+00:00",
+  "standings_snapshot": "standings-20251204T202935Z.json",
+  "previous_snapshot": "standings-20251203T034458Z.json",
   "standings_movements": [
-    {
-      "team": "J&K Electric",
-      "current_points": 17,
-      "previous_points": 15,
-      "points_change": 2
-    },
     {
       "team": "Maltby Sports",
       "current_points": 19,
       "previous_points": 19,
+      "points_change": 0
+    },
+    {
+      "team": "J&K Electric",
+      "current_points": 17,
+      "previous_points": 17,
       "points_change": 0
     },
     {
