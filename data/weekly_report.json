@@ -1,39 +1,8 @@
 {
-  "generated_at": "2025-12-04T20:29:35.282291+00:00",
-  "standings_snapshot": "standings-20251204T202935Z.json",
-  "previous_snapshot": "standings-20251203T034458Z.json",
-  "standings_movements": [
-    {
-      "team": "Maltby Sports",
-      "current_points": 19,
-      "previous_points": 19,
-      "points_change": 0
-    },
-    {
-      "team": "J&K Electric",
-      "current_points": 17,
-      "previous_points": 17,
-      "points_change": 0
-    },
-    {
-      "team": "G.R. Mitchell Welding",
-      "current_points": 13,
-      "previous_points": 13,
-      "points_change": 0
-    },
-    {
-      "team": "Colson Overhead Doors",
-      "current_points": 4,
-      "previous_points": 4,
-      "points_change": 0
-    },
-    {
-      "team": "Ultramar",
-      "current_points": 3,
-      "previous_points": 3,
-      "points_change": 0
-    }
-  ],
+  "generated_at": "2025-12-05T12:52:02.445372+00:00",
+  "standings_snapshot": "standings-20251205T125202Z.json",
+  "previous_snapshot": "standings-20251204T202935Z.json",
+  "standings_movements": [],
   "recent_team_form": [
     {
       "team": "J&K Electric",
@@ -67,7 +36,7 @@
   "game_headlines": [
     {
       "game_id": "3276695",
-      "headline": "J&K Electric best Colson Overhead Doors 8-6 powered by Pat Morris's hat trick and 1A, while Nick Leopold chipping in 1G and 4A",
+      "headline": "J&K Electric best Colson Overhead Doors 8-6",
       "game_datetime": "2025-12-03T02:00:00+00:00"
     },
     {
@@ -127,17 +96,17 @@
     },
     {
       "game_id": "3276449",
-      "headline": "J&K Electric crushes Colson Overhead Doors 6-3 powered by Brendan Stone's hat trick, while Jeremy Kinnear supplying brace (2G)",
+      "headline": "J&K Electric crushes Colson Overhead Doors 6-3",
       "game_datetime": "2025-11-03T01:00:00+00:00"
     },
     {
       "game_id": "3276439",
-      "headline": "G.R. Mitchell Welding trounces Ultramar 9-3 sparked by Dave Atkinson's brace (2G) and 1A, while Meathead MacDonald supplying 1G and 3A",
+      "headline": "G.R. Mitchell Welding trounces Ultramar 9-3",
       "game_datetime": "2025-10-29T01:00:00+00:00"
     },
     {
       "game_id": "3276435",
-      "headline": "J&K Electric squeaks by Maltby Sports 4-3 lifted by Rubein Mackenzie's brace (2G), as Avery Harrison chipping in 1G and 1A",
+      "headline": "J&K Electric squeaks by Maltby Sports 4-3",
       "game_datetime": "2025-10-28T23:45:00+00:00"
     },
     {
