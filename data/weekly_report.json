@@ -1,44 +1,44 @@
 {
-  "generated_at": "2025-12-07T20:26:14.106215+00:00",
-  "standings_snapshot": "standings-20251205T163248Z.json",
-  "previous_snapshot": "standings-20251205T125202Z.json",
+  "generated_at": "2025-12-08T02:51:36.472339+00:00",
+  "standings_snapshot": "standings-20251208T025136Z.json",
+  "previous_snapshot": "standings-20251205T163248Z.json",
   "standings_movements": [
+    {
+      "team": "J&K Electric",
+      "current_points": 19,
+      "previous_points": 17,
+      "points_change": 2
+    },
     {
       "team": "Maltby Sports",
       "current_points": 19,
-      "previous_points": 0,
-      "points_change": 19
-    },
-    {
-      "team": "J&K Electric",
-      "current_points": 17,
-      "previous_points": 0,
-      "points_change": 17
+      "previous_points": 19,
+      "points_change": 0
     },
     {
       "team": "G.R. Mitchell Welding",
       "current_points": 13,
-      "previous_points": 0,
-      "points_change": 13
+      "previous_points": 13,
+      "points_change": 0
     },
     {
       "team": "Colson Overhead Doors",
       "current_points": 4,
-      "previous_points": 0,
-      "points_change": 4
+      "previous_points": 4,
+      "points_change": 0
     },
     {
       "team": "Ultramar",
       "current_points": 3,
-      "previous_points": 0,
-      "points_change": 3
+      "previous_points": 3,
+      "points_change": 0
     }
   ],
   "recent_team_form": [
     {
       "team": "J&K Electric",
-      "played": 1,
-      "wins": 1,
+      "played": 2,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     },
@@ -50,14 +50,14 @@
       "ties": 0
     },
     {
-      "team": "Colson Overhead Doors",
-      "played": 2,
-      "wins": 1,
+      "team": "Ultramar",
+      "played": 1,
+      "wins": 0,
       "losses": 1,
       "ties": 0
     },
     {
-      "team": "Ultramar",
+      "team": "Colson Overhead Doors",
       "played": 2,
       "wins": 0,
       "losses": 2,
@@ -65,6 +65,11 @@
     }
   ],
   "game_headlines": [
+    {
+      "game_id": "3276693",
+      "headline": "J&K Electric cruises past Colson Overhead Doors 3-0",
+      "game_datetime": "2025-12-08T01:00:00+00:00"
+    },
     {
       "game_id": "3276695",
       "headline": "J&K Electric best Colson Overhead Doors 8-6 powered by Pat Morris's hat trick and 1A, while Nick Leopold chipping in 1G and 4A",

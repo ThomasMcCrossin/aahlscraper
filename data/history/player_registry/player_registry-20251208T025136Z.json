@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-08T02:51:36.476711+00:00",
+  "generated_at": "2025-12-07T20:26:14.111027+00:00",
   "players": [
     {
       "player_id": "colson-overhead-doors-terrio-marshall",
@@ -17,7 +17,7 @@
       "points": 1,
       "penalty_minutes": 0,
       "points_per_game": 1.0,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -38,7 +38,7 @@
       "points": 2,
       "penalty_minutes": 3,
       "points_per_game": 1.0,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -59,52 +59,10 @@
       "points": 1,
       "penalty_minutes": 0,
       "points_per_game": 1.0,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
-    },
-    {
-      "player_id": "colson-overhead-doors-kinnear-jeremy-17",
-      "name": "Kinnear, Jeremy",
-      "number": "17",
-      "positions": [
-        "F"
-      ],
-      "team_id": "TYLERARSENEAU-3",
-      "team_name": "Colson Overhead Doors",
-      "team_slug": "colson-overhead-doors",
-      "games_played": 1,
-      "goals": 1,
-      "assists": 1,
-      "points": 2,
-      "penalty_minutes": 0,
-      "points_per_game": 2.0,
-      "team_games_played": 10,
-      "games_missed": null,
-      "recent_points": 2,
-      "recent_games": 1
-    },
-    {
-      "player_id": "colson-overhead-doors-budd-ryan-18",
-      "name": "Budd, Ryan",
-      "number": "18",
-      "positions": [
-        "F"
-      ],
-      "team_id": "TYLERARSENEAU-3",
-      "team_name": "Colson Overhead Doors",
-      "team_slug": "colson-overhead-doors",
-      "games_played": 1,
-      "goals": 0,
-      "assists": 0,
-      "points": 0,
-      "penalty_minutes": 3,
-      "points_per_game": 0.0,
-      "team_games_played": 10,
-      "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 1
     },
     {
       "player_id": "colson-overhead-doors-davis-dan-18",
@@ -122,7 +80,7 @@
       "points": 1,
       "penalty_minutes": 12,
       "points_per_game": 0.33,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -143,32 +101,10 @@
       "points": 13,
       "penalty_minutes": 0,
       "points_per_game": 2.17,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
-    },
-    {
-      "player_id": "colson-overhead-doors-boutiler-gerald-22",
-      "name": "Boutiler, Gerald",
-      "number": "22",
-      "positions": [
-        "D",
-        "F"
-      ],
-      "team_id": "TYLERARSENEAU-3",
-      "team_name": "Colson Overhead Doors",
-      "team_slug": "colson-overhead-doors",
-      "games_played": 1,
-      "goals": 0,
-      "assists": 2,
-      "points": 2,
-      "penalty_minutes": 0,
-      "points_per_game": 2.0,
-      "team_games_played": 10,
-      "games_missed": null,
-      "recent_points": 2,
-      "recent_games": 1
     },
     {
       "player_id": "colson-overhead-doors-gesner-logan-23",
@@ -187,53 +123,10 @@
       "points": 13,
       "penalty_minutes": 19,
       "points_per_game": 1.86,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
-    },
-    {
-      "player_id": "colson-overhead-doors-morris-pat-27",
-      "name": "Morris, Pat",
-      "number": "27",
-      "positions": [
-        "F",
-        "D"
-      ],
-      "team_id": "TYLERARSENEAU-3",
-      "team_name": "Colson Overhead Doors",
-      "team_slug": "colson-overhead-doors",
-      "games_played": 1,
-      "goals": 1,
-      "assists": 0,
-      "points": 1,
-      "penalty_minutes": 0,
-      "points_per_game": 1.0,
-      "team_games_played": 10,
-      "games_missed": null,
-      "recent_points": 1,
-      "recent_games": 1
-    },
-    {
-      "player_id": "colson-overhead-doors-stone-brendan-28",
-      "name": "Stone, Brendan",
-      "number": "28",
-      "positions": [
-        "F"
-      ],
-      "team_id": "TYLERARSENEAU-3",
-      "team_name": "Colson Overhead Doors",
-      "team_slug": "colson-overhead-doors",
-      "games_played": 1,
-      "goals": 0,
-      "assists": 3,
-      "points": 3,
-      "penalty_minutes": 0,
-      "points_per_game": 3.0,
-      "team_games_played": 10,
-      "games_missed": null,
-      "recent_points": 3,
-      "recent_games": 1
     },
     {
       "player_id": "colson-overhead-doors-russel-nick-30",
@@ -251,7 +144,7 @@
       "points": 0,
       "penalty_minutes": 0,
       "points_per_game": 0.0,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -272,7 +165,7 @@
       "points": 4,
       "penalty_minutes": 0,
       "points_per_game": 0.8,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -293,7 +186,7 @@
       "points": 2,
       "penalty_minutes": 3,
       "points_per_game": 0.67,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -314,7 +207,7 @@
       "points": 2,
       "penalty_minutes": 0,
       "points_per_game": 0.67,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -335,7 +228,7 @@
       "points": 11,
       "penalty_minutes": 0,
       "points_per_game": 1.83,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -356,31 +249,10 @@
       "points": 4,
       "penalty_minutes": 0,
       "points_per_game": 0.8,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
-    },
-    {
-      "player_id": "colson-overhead-doors-perrin-noah-87",
-      "name": "Perrin, Noah",
-      "number": "87",
-      "positions": [
-        "F"
-      ],
-      "team_id": "TYLERARSENEAU-3",
-      "team_name": "Colson Overhead Doors",
-      "team_slug": "colson-overhead-doors",
-      "games_played": 1,
-      "goals": 1,
-      "assists": 0,
-      "points": 1,
-      "penalty_minutes": 0,
-      "points_per_game": 1.0,
-      "team_games_played": 10,
-      "games_missed": null,
-      "recent_points": 1,
-      "recent_games": 1
     },
     {
       "player_id": "colson-overhead-doors-gould-zack-88",
@@ -398,7 +270,7 @@
       "points": 16,
       "penalty_minutes": 3,
       "points_per_game": 2.0,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -420,7 +292,7 @@
       "points": 0,
       "penalty_minutes": 0,
       "points_per_game": 0.0,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -736,7 +608,7 @@
       "points": 9,
       "penalty_minutes": 6,
       "points_per_game": 1.8,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -757,7 +629,7 @@
       "points": 10,
       "penalty_minutes": 3,
       "points_per_game": 1.67,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -778,7 +650,7 @@
       "points": 5,
       "penalty_minutes": 3,
       "points_per_game": 2.5,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -799,7 +671,7 @@
       "points": 1,
       "penalty_minutes": 0,
       "points_per_game": 1.0,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -821,7 +693,7 @@
       "points": 11,
       "penalty_minutes": 3,
       "points_per_game": 1.38,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -843,7 +715,7 @@
       "points": 2,
       "penalty_minutes": 6,
       "points_per_game": 0.67,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -865,7 +737,7 @@
       "points": 10,
       "penalty_minutes": 0,
       "points_per_game": 3.33,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -886,7 +758,7 @@
       "points": 16,
       "penalty_minutes": 0,
       "points_per_game": 2.29,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -909,7 +781,7 @@
       "points": 1,
       "penalty_minutes": 0,
       "points_per_game": 0.5,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -928,7 +800,7 @@
       "points": 2,
       "penalty_minutes": 0,
       "points_per_game": 1.0,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -949,7 +821,7 @@
       "points": 16,
       "penalty_minutes": 0,
       "points_per_game": 2.67,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -971,7 +843,7 @@
       "points": 5,
       "penalty_minutes": 6,
       "points_per_game": 0.83,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -992,7 +864,7 @@
       "points": 6,
       "penalty_minutes": 0,
       "points_per_game": 1.5,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0
@@ -1014,7 +886,7 @@
       "points": 15,
       "penalty_minutes": 3,
       "points_per_game": 2.14,
-      "team_games_played": 10,
+      "team_games_played": 9,
       "games_missed": null,
       "recent_points": 0,
       "recent_games": 0

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-07T20:26:14.182729",
+  "timestamp": "2025-12-08T02:51:36.539671",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -10,10 +10,10 @@
     },
     {
       "team": "J&K Electric",
-      "wins": 8,
+      "wins": 9,
       "losses": 3,
       "ties": 1,
-      "points": 17
+      "points": 19
     },
     {
       "team": "G.R. Mitchell Welding",
@@ -25,7 +25,7 @@
     {
       "team": "Colson Overhead Doors",
       "wins": 1,
-      "losses": 8,
+      "losses": 9,
       "ties": 2,
       "points": 4
     },
@@ -93,23 +93,23 @@
       "name": "Brendan Stone",
       "team": "J&K Electric",
       "pos": "F",
-      "gp": "9",
+      "gp": "10",
       "g": "13",
-      "a": "11",
-      "pts": "24",
+      "a": "14",
+      "pts": "27",
       "ppg": 0.67,
       "shg": "1",
       "gwg": "1",
       "gtg": "",
       "pim": "",
-      "pts_g": "2.67",
+      "pts_g": "2.70",
       "team_id": "TYLERARSENEAU-4",
       "team_name": "J&K Electric",
       "player_id": "j-and-k-electric-stone-brendan-28",
       "team_slug": "j-and-k-electric",
-      "points": 24,
+      "points": 27,
       "rank": 3,
-      "hot_streak": 2,
+      "hot_streak": 0,
       "cold_streak": 0,
       "recent_goals": 2
     },
@@ -209,7 +209,7 @@
       "team_slug": "colson-overhead-doors",
       "points": 18,
       "rank": 7,
-      "hot_streak": 8,
+      "hot_streak": 7,
       "cold_streak": 0,
       "recent_goals": 3
     },
@@ -285,7 +285,7 @@
       "points": 17,
       "rank": 10,
       "hot_streak": 0,
-      "cold_streak": 7,
+      "cold_streak": 6,
       "recent_goals": 0
     },
     {
@@ -314,6 +314,31 @@
       "recent_goals": 2
     },
     {
+      "no": "22",
+      "name": "Gerald Boutiler",
+      "team": "J&K Electric",
+      "pos": "D/F",
+      "gp": "12",
+      "g": "4",
+      "a": "12",
+      "pts": "16",
+      "ppg": 0.0,
+      "shg": "",
+      "gwg": "",
+      "gtg": "3",
+      "pim": "6",
+      "pts_g": "1.33",
+      "team_id": "TYLERARSENEAU-4",
+      "team_name": "J&K Electric",
+      "player_id": "j-and-k-electric-boutiler-gerald-22",
+      "team_slug": "j-and-k-electric",
+      "points": 16,
+      "rank": 12,
+      "hot_streak": 0,
+      "cold_streak": 6,
+      "recent_goals": 0
+    },
+    {
       "no": "11",
       "name": "Tyler \"Tuffy\" Allen",
       "team": "Ultramar",
@@ -333,7 +358,7 @@
       "player_id": "ultramar-allen-tyler-tuffy-11",
       "team_slug": "ultramar",
       "points": 15,
-      "rank": 12,
+      "rank": 13,
       "hot_streak": 2,
       "cold_streak": 0,
       "recent_goals": 3
@@ -358,42 +383,17 @@
       "player_id": "gr-mitchell-welding-mitchell-gordon-13",
       "team_slug": "gr-mitchell-welding",
       "points": 15,
-      "rank": 13,
+      "rank": 14,
       "hot_streak": 0,
       "cold_streak": 0,
       "recent_goals": 1
-    },
-    {
-      "no": "22",
-      "name": "Gerald Boutiler",
-      "team": "J&K Electric",
-      "pos": "D/F",
-      "gp": "11",
-      "g": "4",
-      "a": "10",
-      "pts": "14",
-      "ppg": 0.0,
-      "shg": "",
-      "gwg": "",
-      "gtg": "3",
-      "pim": "6",
-      "pts_g": "1.27",
-      "team_id": "TYLERARSENEAU-4",
-      "team_name": "J&K Electric",
-      "player_id": "j-and-k-electric-boutiler-gerald-22",
-      "team_slug": "j-and-k-electric",
-      "points": 14,
-      "rank": 14,
-      "hot_streak": 0,
-      "cold_streak": 5,
-      "recent_goals": 0
     },
     {
       "no": "19",
       "name": "Denis Hebert",
       "team": "Colson Overhead Doors",
       "pos": "F",
-      "gp": "7",
+      "gp": "8",
       "g": "5",
       "a": "9",
       "pts": "14",
@@ -401,8 +401,8 @@
       "shg": "",
       "gwg": "",
       "gtg": "2",
-      "pim": "",
-      "pts_g": "2.00",
+      "pim": "3",
+      "pts_g": "1.75",
       "team_id": "TYLERARSENEAU-3",
       "team_name": "Colson Overhead Doors",
       "player_id": "colson-overhead-doors-hebert-denis-19",
@@ -540,6 +540,199 @@
     }
   ],
   "recent_results": [
+    {
+      "game_id": "3276693",
+      "status": "final",
+      "location": "Amherst",
+      "division": "REGULAR SEASON",
+      "start_utc": "2025-12-08T01:00:00+00:00",
+      "start_local": "2025-12-07T21:00:00-04:00",
+      "home": "Colson Overhead Doors",
+      "away": "J&K Electric",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276693&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276693&p=summary",
+      "home_line": {
+        "name": "Colson Overhead Doors",
+        "slug": "colson-overhead-doors",
+        "final": 0,
+        "periods": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "is_winner": false
+      },
+      "away_line": {
+        "name": "J&K Electric",
+        "slug": "j-and-k-electric",
+        "final": 3,
+        "periods": [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "is_winner": true
+      },
+      "home_score": 0,
+      "away_score": 3,
+      "result": "0 - 3",
+      "datetime": "2025-12-07T21:00:00-04:00",
+      "date": "12/07/2025",
+      "time": "9:00 PM",
+      "player_stats": {
+        "home": [
+          {
+            "player_id": "colson-overhead-doors-boutiler-gerald-22",
+            "name": "Gerald Boutiler",
+            "number": "22",
+            "positions": [
+              "D",
+              "F"
+            ],
+            "goals": 0,
+            "assists": 2,
+            "points": 2,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "colson-overhead-doors-budd-ryan-18",
+            "name": "Ryan Budd",
+            "number": "18",
+            "positions": [
+              "F"
+            ],
+            "goals": 0,
+            "assists": 0,
+            "points": 0,
+            "penalty_minutes": 3,
+            "gtg": 0
+          },
+          {
+            "player_id": "colson-overhead-doors-kinnear-jeremy-17",
+            "name": "Jeremy Kinnear",
+            "number": "17",
+            "positions": [
+              "F"
+            ],
+            "goals": 1,
+            "assists": 1,
+            "points": 2,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "colson-overhead-doors-morris-pat-27",
+            "name": "Pat Morris",
+            "number": "27",
+            "positions": [
+              "F",
+              "D"
+            ],
+            "goals": 1,
+            "assists": 0,
+            "points": 1,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "colson-overhead-doors-perrin-noah-87",
+            "name": "Noah Perrin",
+            "number": "87",
+            "positions": [
+              "F"
+            ],
+            "goals": 1,
+            "assists": 0,
+            "points": 1,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "colson-overhead-doors-stone-brendan-28",
+            "name": "Brendan Stone",
+            "number": "28",
+            "positions": [
+              "F"
+            ],
+            "goals": 0,
+            "assists": 3,
+            "points": 3,
+            "penalty_minutes": 0,
+            "gtg": 0
+          }
+        ]
+      },
+      "penalties": [
+        {
+          "per_period": "2",
+          "time": "6:39",
+          "player": "12 Tom Burge / Served by 12 Tom Burge",
+          "team": "Colson Overhead Doors",
+          "infraction": "Cross-Checking (Minor)",
+          "length": "3:00"
+        },
+        {
+          "per_period": "2",
+          "time": "4:41",
+          "player": "19 Denis Hebert / Served by 19 Denis Hebert",
+          "team": "Colson Overhead Doors",
+          "infraction": "Tripping (Minor)",
+          "length": "3:00"
+        },
+        {
+          "per_period": "3",
+          "time": "14:55",
+          "player": "18 Ryan Budd / Served by 18 Ryan Budd",
+          "team": "J&K Electric",
+          "infraction": "Body Contact (Minor)",
+          "length": "3:00"
+        },
+        {
+          "per_period": "3",
+          "time": "2:32",
+          "player": "12 Tom Burge / Served by 12 Tom Burge",
+          "team": "Colson Overhead Doors",
+          "infraction": "Tripping (Minor)",
+          "length": "3:00"
+        }
+      ],
+      "scoreboard": [
+        [
+          "REGULAR SEASON",
+          "1",
+          "2",
+          "3",
+          "OT",
+          "2OT",
+          "F"
+        ],
+        [
+          "Colson Overhead Doors",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "J&K Electric",
+          "1",
+          "1",
+          "1",
+          "0",
+          "0",
+          "3"
+        ]
+      ],
+      "headline": "J&K Electric cruises past Colson Overhead Doors 3-0",
+      "headline_updated_at": "2025-12-08T02:51:36.471889+00:00"
+    },
     {
       "game_id": "3276695",
       "status": "final",
@@ -3171,287 +3364,9 @@
       ],
       "headline": "J&K Electric rolls past Colson Overhead Doors 7-4 powered by Brendan Stone's hat trick (4G), while Jeremy Kinnear adding 1G and 4A",
       "headline_updated_at": "2025-12-03T03:53:07.266016+00:00"
-    },
-    {
-      "game_id": "3276459",
-      "status": "final",
-      "location": "Amherst",
-      "division": "REGULAR SEASON",
-      "start_utc": "2025-11-10T01:00:00+00:00",
-      "start_local": "2025-11-09T21:00:00-04:00",
-      "home": "J&K Electric",
-      "away": "Ultramar",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276459&p=boxscore",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276459&p=summary",
-      "home_line": {
-        "name": "J&K Electric",
-        "slug": "j-and-k-electric",
-        "final": 4,
-        "periods": [
-          2,
-          2,
-          0,
-          0,
-          0
-        ],
-        "is_winner": true
-      },
-      "away_line": {
-        "name": "Ultramar",
-        "slug": "ultramar",
-        "final": 3,
-        "periods": [
-          1,
-          0,
-          2,
-          0,
-          0
-        ],
-        "is_winner": false
-      },
-      "home_score": 4,
-      "away_score": 3,
-      "result": "4 - 3",
-      "datetime": "2025-11-09T21:00:00-04:00",
-      "date": "11/09/2025",
-      "time": "9:00 PM",
-      "player_stats": {
-        "home": [
-          {
-            "player_id": "j-and-k-electric-boutiler-gerald-22",
-            "name": "Gerald Boutiler",
-            "number": "22",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-kinnear-jeremy-17",
-            "name": "Jeremy Kinnear",
-            "number": "17",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-mackenzie-rubein-4",
-            "name": "Reuben Mackenzie",
-            "number": "4",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 2,
-            "points": 3,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-martin-ryan-36",
-            "name": "Ryan Martin",
-            "number": "36",
-            "positions": [],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-perrin-noah-87",
-            "name": "Noah Perrin",
-            "number": "87",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-stone-brendan-28",
-            "name": "Brendan Stone",
-            "number": "28",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ],
-        "away": [
-          {
-            "player_id": "ultramar-allen-tyler-tuffy-11",
-            "name": "Tyler \"Tuffy\" Allen",
-            "number": "11",
-            "positions": [
-              "F"
-            ],
-            "goals": 2,
-            "assists": 1,
-            "points": 3,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-bonnell-andy-5",
-            "name": "Andy Bonnell",
-            "number": "5",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 2,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-cove-matt-12",
-            "name": "Matt Cove",
-            "number": "12",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-gallant-brett-3",
-            "name": "Brett Gallant",
-            "number": "3",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-jobes-bill-8",
-            "name": "Bill Jobes",
-            "number": "8",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "ultramar-linkletter-brad-9",
-            "name": "Brad Linkletter",
-            "number": "9",
-            "positions": [
-              "C"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 1
-          }
-        ]
-      },
-      "penalties": [
-        {
-          "per_period": "2",
-          "time": "6:18",
-          "player": "22 Gerald Boutiler / Served by 22 Gerald Boutiler",
-          "team": "J&K Electric",
-          "infraction": "Holding (Minor)",
-          "length": "3:00"
-        }
-      ],
-      "scoreboard": [
-        [
-          "REGULAR SEASON",
-          "1",
-          "2",
-          "3",
-          "OT",
-          "2OT",
-          "F"
-        ],
-        [
-          "J&K Electric",
-          "2",
-          "2",
-          "0",
-          "0",
-          "0",
-          "4"
-        ],
-        [
-          "Ultramar",
-          "1",
-          "0",
-          "2",
-          "0",
-          "0",
-          "3"
-        ]
-      ],
-      "headline": "J&K Electric squeaks by Ultramar 4-3 lifted by Rubein Mackenzie's 1G and 2A, with Noah Perrin contributing 1G and 1A",
-      "headline_updated_at": "2025-12-03T03:44:58.950830+00:00"
     }
   ],
   "upcoming_games": [
-    {
-      "game_id": "3276693",
-      "status": "scheduled",
-      "location": "Amherst",
-      "division": null,
-      "start_utc": "2025-12-08T01:00:00+00:00",
-      "start_local": "2025-12-07T21:00:00-04:00",
-      "home": "J&K Electric",
-      "away": "Colson Overhead Doors",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276693&u=DSMALL&s=hockey&p=preview",
-      "summary_url": null,
-      "home_line": {
-        "name": "J&K Electric",
-        "slug": "j-and-k-electric",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "away_line": {
-        "name": "Colson Overhead Doors",
-        "slug": "colson-overhead-doors",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "home_score": "",
-      "away_score": "",
-      "datetime": "2025-12-07T21:00:00-04:00",
-      "date": "12/07/2025",
-      "time": "9:00 PM"
-    },
     {
       "game_id": "3276463",
       "status": "scheduled",
@@ -3730,9 +3645,54 @@
       "datetime": "2025-12-28T21:00:00-04:00",
       "date": "12/28/2025",
       "time": "9:00 PM"
+    },
+    {
+      "game_id": "3276566",
+      "status": "scheduled",
+      "location": "Amherst",
+      "division": null,
+      "start_utc": "2025-12-31T00:45:00+00:00",
+      "start_local": "2025-12-30T20:45:00-04:00",
+      "home": "G.R. Mitchell Welding",
+      "away": "J&K Electric",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276566&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
+      "home_line": {
+        "name": "G.R. Mitchell Welding",
+        "slug": "gr-mitchell-welding",
+        "final": null,
+        "periods": [],
+        "is_winner": null
+      },
+      "away_line": {
+        "name": "J&K Electric",
+        "slug": "j-and-k-electric",
+        "final": null,
+        "periods": [],
+        "is_winner": null
+      },
+      "home_score": "",
+      "away_score": "",
+      "datetime": "2025-12-30T20:45:00-04:00",
+      "date": "12/30/2025",
+      "time": "8:45 PM"
     }
   ],
   "headlines": [
+    {
+      "game_id": "3276693",
+      "headline": "J&K Electric cruises past Colson Overhead Doors 3-0",
+      "ai_generated": false,
+      "created_at": "2025-12-08T02:51:36.471889+00:00",
+      "updated_at": "2025-12-08T02:51:36.471889+00:00",
+      "game_datetime": "2025-12-08T01:00:00+00:00",
+      "home_team": "Colson Overhead Doors",
+      "away_team": "J&K Electric",
+      "home_score": 0,
+      "away_score": 3,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276693&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276693&p=boxscore"
+    },
     {
       "game_id": "3276695",
       "headline": "J&K Electric best Colson Overhead Doors 8-6 powered by Pat Morris's hat trick and 1A, while Nick Leopold chipping in 1G and 4A",
@@ -4027,7 +3987,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2025-12-07T20:26:14.111027+00:00",
+    "generated_at": "2025-12-08T02:51:36.476711+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall",
@@ -4045,7 +4005,7 @@
         "points": 1,
         "penalty_minutes": 0,
         "points_per_game": 1.0,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4066,7 +4026,7 @@
         "points": 2,
         "penalty_minutes": 3,
         "points_per_game": 1.0,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4087,10 +4047,52 @@
         "points": 1,
         "penalty_minutes": 0,
         "points_per_game": 1.0,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
+      },
+      {
+        "player_id": "colson-overhead-doors-kinnear-jeremy-17",
+        "name": "Kinnear, Jeremy",
+        "number": "17",
+        "positions": [
+          "F"
+        ],
+        "team_id": "TYLERARSENEAU-3",
+        "team_name": "Colson Overhead Doors",
+        "team_slug": "colson-overhead-doors",
+        "games_played": 1,
+        "goals": 1,
+        "assists": 1,
+        "points": 2,
+        "penalty_minutes": 0,
+        "points_per_game": 2.0,
+        "team_games_played": 10,
+        "games_missed": null,
+        "recent_points": 2,
+        "recent_games": 1
+      },
+      {
+        "player_id": "colson-overhead-doors-budd-ryan-18",
+        "name": "Budd, Ryan",
+        "number": "18",
+        "positions": [
+          "F"
+        ],
+        "team_id": "TYLERARSENEAU-3",
+        "team_name": "Colson Overhead Doors",
+        "team_slug": "colson-overhead-doors",
+        "games_played": 1,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 3,
+        "points_per_game": 0.0,
+        "team_games_played": 10,
+        "games_missed": null,
+        "recent_points": 0,
+        "recent_games": 1
       },
       {
         "player_id": "colson-overhead-doors-davis-dan-18",
@@ -4108,7 +4110,7 @@
         "points": 1,
         "penalty_minutes": 12,
         "points_per_game": 0.33,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4129,10 +4131,32 @@
         "points": 13,
         "penalty_minutes": 0,
         "points_per_game": 2.17,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
+      },
+      {
+        "player_id": "colson-overhead-doors-boutiler-gerald-22",
+        "name": "Boutiler, Gerald",
+        "number": "22",
+        "positions": [
+          "D",
+          "F"
+        ],
+        "team_id": "TYLERARSENEAU-3",
+        "team_name": "Colson Overhead Doors",
+        "team_slug": "colson-overhead-doors",
+        "games_played": 1,
+        "goals": 0,
+        "assists": 2,
+        "points": 2,
+        "penalty_minutes": 0,
+        "points_per_game": 2.0,
+        "team_games_played": 10,
+        "games_missed": null,
+        "recent_points": 2,
+        "recent_games": 1
       },
       {
         "player_id": "colson-overhead-doors-gesner-logan-23",
@@ -4151,10 +4175,53 @@
         "points": 13,
         "penalty_minutes": 19,
         "points_per_game": 1.86,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
+      },
+      {
+        "player_id": "colson-overhead-doors-morris-pat-27",
+        "name": "Morris, Pat",
+        "number": "27",
+        "positions": [
+          "F",
+          "D"
+        ],
+        "team_id": "TYLERARSENEAU-3",
+        "team_name": "Colson Overhead Doors",
+        "team_slug": "colson-overhead-doors",
+        "games_played": 1,
+        "goals": 1,
+        "assists": 0,
+        "points": 1,
+        "penalty_minutes": 0,
+        "points_per_game": 1.0,
+        "team_games_played": 10,
+        "games_missed": null,
+        "recent_points": 1,
+        "recent_games": 1
+      },
+      {
+        "player_id": "colson-overhead-doors-stone-brendan-28",
+        "name": "Stone, Brendan",
+        "number": "28",
+        "positions": [
+          "F"
+        ],
+        "team_id": "TYLERARSENEAU-3",
+        "team_name": "Colson Overhead Doors",
+        "team_slug": "colson-overhead-doors",
+        "games_played": 1,
+        "goals": 0,
+        "assists": 3,
+        "points": 3,
+        "penalty_minutes": 0,
+        "points_per_game": 3.0,
+        "team_games_played": 10,
+        "games_missed": null,
+        "recent_points": 3,
+        "recent_games": 1
       },
       {
         "player_id": "colson-overhead-doors-russel-nick-30",
@@ -4172,7 +4239,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4193,7 +4260,7 @@
         "points": 4,
         "penalty_minutes": 0,
         "points_per_game": 0.8,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4214,7 +4281,7 @@
         "points": 2,
         "penalty_minutes": 3,
         "points_per_game": 0.67,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4235,7 +4302,7 @@
         "points": 2,
         "penalty_minutes": 0,
         "points_per_game": 0.67,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4256,7 +4323,7 @@
         "points": 11,
         "penalty_minutes": 0,
         "points_per_game": 1.83,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4277,10 +4344,31 @@
         "points": 4,
         "penalty_minutes": 0,
         "points_per_game": 0.8,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
+      },
+      {
+        "player_id": "colson-overhead-doors-perrin-noah-87",
+        "name": "Perrin, Noah",
+        "number": "87",
+        "positions": [
+          "F"
+        ],
+        "team_id": "TYLERARSENEAU-3",
+        "team_name": "Colson Overhead Doors",
+        "team_slug": "colson-overhead-doors",
+        "games_played": 1,
+        "goals": 1,
+        "assists": 0,
+        "points": 1,
+        "penalty_minutes": 0,
+        "points_per_game": 1.0,
+        "team_games_played": 10,
+        "games_missed": null,
+        "recent_points": 1,
+        "recent_games": 1
       },
       {
         "player_id": "colson-overhead-doors-gould-zack-88",
@@ -4298,7 +4386,7 @@
         "points": 16,
         "penalty_minutes": 3,
         "points_per_game": 2.0,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4320,7 +4408,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4636,7 +4724,7 @@
         "points": 9,
         "penalty_minutes": 6,
         "points_per_game": 1.8,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4657,7 +4745,7 @@
         "points": 10,
         "penalty_minutes": 3,
         "points_per_game": 1.67,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4678,7 +4766,7 @@
         "points": 5,
         "penalty_minutes": 3,
         "points_per_game": 2.5,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4699,7 +4787,7 @@
         "points": 1,
         "penalty_minutes": 0,
         "points_per_game": 1.0,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4721,7 +4809,7 @@
         "points": 11,
         "penalty_minutes": 3,
         "points_per_game": 1.38,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4743,7 +4831,7 @@
         "points": 2,
         "penalty_minutes": 6,
         "points_per_game": 0.67,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4765,7 +4853,7 @@
         "points": 10,
         "penalty_minutes": 0,
         "points_per_game": 3.33,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4786,7 +4874,7 @@
         "points": 16,
         "penalty_minutes": 0,
         "points_per_game": 2.29,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4809,7 +4897,7 @@
         "points": 1,
         "penalty_minutes": 0,
         "points_per_game": 0.5,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4828,7 +4916,7 @@
         "points": 2,
         "penalty_minutes": 0,
         "points_per_game": 1.0,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4849,7 +4937,7 @@
         "points": 16,
         "penalty_minutes": 0,
         "points_per_game": 2.67,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4871,7 +4959,7 @@
         "points": 5,
         "penalty_minutes": 6,
         "points_per_game": 0.83,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4892,7 +4980,7 @@
         "points": 6,
         "penalty_minutes": 0,
         "points_per_game": 1.5,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4914,7 +5002,7 @@
         "points": 15,
         "penalty_minutes": 3,
         "points_per_game": 2.14,
-        "team_games_played": 9,
+        "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0

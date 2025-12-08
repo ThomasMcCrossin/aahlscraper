@@ -1,6 +1,20 @@
 {
-  "generated_at": "2025-12-07T20:26:14.106215+00:00",
+  "generated_at": "2025-12-08T02:51:36.472339+00:00",
   "headlines": [
+    {
+      "game_id": "3276693",
+      "headline": "J&K Electric cruises past Colson Overhead Doors 3-0",
+      "ai_generated": false,
+      "created_at": "2025-12-08T02:51:36.471889+00:00",
+      "updated_at": "2025-12-08T02:51:36.471889+00:00",
+      "game_datetime": "2025-12-08T01:00:00+00:00",
+      "home_team": "Colson Overhead Doors",
+      "away_team": "J&K Electric",
+      "home_score": 0,
+      "away_score": 3,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276693&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276693&p=boxscore"
+    },
     {
       "game_id": "3276695",
       "headline": "J&K Electric best Colson Overhead Doors 8-6 powered by Pat Morris's hat trick and 1A, while Nick Leopold chipping in 1G and 4A",
