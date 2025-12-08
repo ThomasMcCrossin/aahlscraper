@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-08T03:17:42.000288",
+  "timestamp": "2025-12-08T12:53:01.358284",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -3987,7 +3987,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2025-12-08T03:17:41.932245+00:00",
+    "generated_at": "2025-12-08T12:53:01.290206+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall",
@@ -4070,8 +4070,8 @@
         "points_per_game": 2.0,
         "team_games_played": 10,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-budd-ryan-18",
@@ -4092,7 +4092,7 @@
         "team_games_played": 10,
         "games_missed": null,
         "recent_points": 0,
-        "recent_games": 1
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-davis-dan-18",
@@ -4155,8 +4155,8 @@
         "points_per_game": 2.0,
         "team_games_played": 10,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-gesner-logan-23",
@@ -4199,8 +4199,8 @@
         "points_per_game": 1.0,
         "team_games_played": 10,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-stone-brendan-28",
@@ -4220,8 +4220,8 @@
         "points_per_game": 3.0,
         "team_games_played": 10,
         "games_missed": null,
-        "recent_points": 3,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-russel-nick-30",
@@ -4367,8 +4367,8 @@
         "points_per_game": 1.0,
         "team_games_played": 10,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-gould-zack-88",
