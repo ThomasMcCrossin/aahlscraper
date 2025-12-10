@@ -1,12 +1,12 @@
 {
-  "timestamp": "2025-12-10T02:49:52.203679",
+  "timestamp": "2025-12-10T03:48:26.897652",
   "standings": [
     {
       "team": "Maltby Sports",
-      "wins": 9,
+      "wins": 10,
       "losses": 1,
       "ties": 1,
-      "points": 19
+      "points": 21
     },
     {
       "team": "J&K Electric",
@@ -25,7 +25,7 @@
     {
       "team": "Colson Overhead Doors",
       "wins": 1,
-      "losses": 9,
+      "losses": 10,
       "ties": 2,
       "points": 4
     },
@@ -44,24 +44,24 @@
       "team": "Maltby Sports",
       "pos": "C",
       "gp": "11",
-      "g": "21",
+      "g": "22",
       "a": "15",
-      "pts": "36",
-      "ppg": 2.0,
+      "pts": "37",
+      "ppg": 2.33,
       "shg": "1",
       "gwg": "",
       "gtg": "1",
       "pim": "3",
-      "pts_g": "3.27",
+      "pts_g": "3.36",
       "team_id": "TYLERARSENEAU-1",
       "team_name": "Maltby Sports",
       "player_id": "maltby-sports-bridge-issac-98",
       "team_slug": "maltby-sports",
-      "points": 36,
+      "points": 37,
       "rank": 1,
       "hot_streak": 3,
       "cold_streak": 0,
-      "recent_goals": 6
+      "recent_goals": 7
     },
     {
       "no": "97",
@@ -120,19 +120,19 @@
       "pos": "F",
       "gp": "10",
       "g": "10",
-      "a": "15",
-      "pts": "25",
+      "a": "16",
+      "pts": "26",
       "ppg": 1.0,
       "shg": "1",
       "gwg": "1",
       "gtg": "",
       "pim": "3",
-      "pts_g": "2.50",
+      "pts_g": "2.60",
       "team_id": "TYLERARSENEAU-1",
       "team_name": "Maltby Sports",
       "player_id": "maltby-sports-mccarthy-ian-9",
       "team_slug": "maltby-sports",
-      "points": 25,
+      "points": 26,
       "rank": 4,
       "hot_streak": 2,
       "cold_streak": 0,
@@ -164,6 +164,56 @@
       "recent_goals": 0
     },
     {
+      "no": "19",
+      "name": "Thomas McCrossin",
+      "team": "Maltby Sports",
+      "pos": "F",
+      "gp": "11",
+      "g": "8",
+      "a": "13",
+      "pts": "21",
+      "ppg": 0.67,
+      "shg": "",
+      "gwg": "",
+      "gtg": "",
+      "pim": "6",
+      "pts_g": "1.91",
+      "team_id": "TYLERARSENEAU-1",
+      "team_name": "Maltby Sports",
+      "player_id": "maltby-sports-mccrossin-thomas-19",
+      "team_slug": "maltby-sports",
+      "points": 21,
+      "rank": 6,
+      "hot_streak": 0,
+      "cold_streak": 0,
+      "recent_goals": 2
+    },
+    {
+      "no": "88",
+      "name": "Zack Gould",
+      "team": "Colson Overhead Doors",
+      "pos": "F",
+      "gp": "10",
+      "g": "14",
+      "a": "6",
+      "pts": "20",
+      "ppg": 0.67,
+      "shg": "1",
+      "gwg": "",
+      "gtg": "3",
+      "pim": "3",
+      "pts_g": "2.00",
+      "team_id": "TYLERARSENEAU-3",
+      "team_name": "Colson Overhead Doors",
+      "player_id": "colson-overhead-doors-gould-zack-88",
+      "team_slug": "colson-overhead-doors",
+      "points": 20,
+      "rank": 7,
+      "hot_streak": 0,
+      "cold_streak": 0,
+      "recent_goals": 2
+    },
+    {
       "no": "9",
       "name": "Nick Leopold",
       "team": "J&K Electric",
@@ -183,60 +233,10 @@
       "player_id": "j-and-k-electric-leopold-nick-9",
       "team_slug": "j-and-k-electric",
       "points": 20,
-      "rank": 6,
-      "hot_streak": 0,
-      "cold_streak": 0,
-      "recent_goals": 1
-    },
-    {
-      "no": "19",
-      "name": "Thomas McCrossin",
-      "team": "Maltby Sports",
-      "pos": "F",
-      "gp": "11",
-      "g": "7",
-      "a": "13",
-      "pts": "20",
-      "ppg": 0.33,
-      "shg": "",
-      "gwg": "",
-      "gtg": "",
-      "pim": "6",
-      "pts_g": "1.82",
-      "team_id": "TYLERARSENEAU-1",
-      "team_name": "Maltby Sports",
-      "player_id": "maltby-sports-mccrossin-thomas-19",
-      "team_slug": "maltby-sports",
-      "points": 20,
-      "rank": 7,
-      "hot_streak": 0,
-      "cold_streak": 0,
-      "recent_goals": 1
-    },
-    {
-      "no": "88",
-      "name": "Zack Gould",
-      "team": "Colson Overhead Doors",
-      "pos": "F",
-      "gp": "10",
-      "g": "14",
-      "a": "5",
-      "pts": "19",
-      "ppg": 0.67,
-      "shg": "1",
-      "gwg": "",
-      "gtg": "3",
-      "pim": "3",
-      "pts_g": "1.90",
-      "team_id": "TYLERARSENEAU-3",
-      "team_name": "Colson Overhead Doors",
-      "player_id": "colson-overhead-doors-gould-zack-88",
-      "team_slug": "colson-overhead-doors",
-      "points": 19,
       "rank": 8,
       "hot_streak": 0,
       "cold_streak": 0,
-      "recent_goals": 2
+      "recent_goals": 1
     },
     {
       "no": "16",
@@ -389,6 +389,31 @@
       "recent_goals": 0
     },
     {
+      "no": "63",
+      "name": "Travis Leblanc",
+      "team": "Maltby Sports",
+      "pos": "F/D",
+      "gp": "10",
+      "g": "8",
+      "a": "8",
+      "pts": "16",
+      "ppg": 0.67,
+      "shg": "",
+      "gwg": "",
+      "gtg": "",
+      "pim": "6",
+      "pts_g": "1.60",
+      "team_id": "TYLERARSENEAU-1",
+      "team_name": "Maltby Sports",
+      "player_id": "maltby-sports-leblanc-travis-63",
+      "team_slug": "maltby-sports",
+      "points": 16,
+      "rank": 15,
+      "hot_streak": 2,
+      "cold_streak": 0,
+      "recent_goals": 2
+    },
+    {
       "no": "13",
       "name": "Gordon Mitchell",
       "team": "G.R. Mitchell Welding",
@@ -408,35 +433,10 @@
       "player_id": "gr-mitchell-welding-mitchell-gordon-13",
       "team_slug": "gr-mitchell-welding",
       "points": 16,
-      "rank": 15,
+      "rank": 16,
       "hot_streak": 0,
       "cold_streak": 3,
       "recent_goals": 0
-    },
-    {
-      "no": "63",
-      "name": "Travis Leblanc",
-      "team": "Maltby Sports",
-      "pos": "F/D",
-      "gp": "10",
-      "g": "8",
-      "a": "7",
-      "pts": "15",
-      "ppg": 0.67,
-      "shg": "",
-      "gwg": "",
-      "gtg": "",
-      "pim": "6",
-      "pts_g": "1.50",
-      "team_id": "TYLERARSENEAU-1",
-      "team_name": "Maltby Sports",
-      "player_id": "maltby-sports-leblanc-travis-63",
-      "team_slug": "maltby-sports",
-      "points": 15,
-      "rank": 16,
-      "hot_streak": 2,
-      "cold_streak": 0,
-      "recent_goals": 2
     },
     {
       "no": "12",
@@ -514,29 +514,29 @@
       "recent_goals": 0
     },
     {
-      "no": "4",
-      "name": "Aaron Dobson",
-      "team": "Ultramar",
+      "no": "6",
+      "name": "Luke Crocker",
+      "team": "Maltby Sports",
       "pos": "D",
-      "gp": "7",
-      "g": "2",
-      "a": "11",
+      "gp": "8",
+      "g": "4",
+      "a": "9",
       "pts": "13",
-      "ppg": 0.33,
+      "ppg": 0.67,
       "shg": "",
       "gwg": "",
-      "gtg": "1",
-      "pim": "9",
-      "pts_g": "1.86",
-      "team_id": "TYLERARSENEAU-2",
-      "team_name": "Ultramar",
-      "player_id": "ultramar-dobson-aaron-4",
-      "team_slug": "ultramar",
+      "gtg": "",
+      "pim": "3",
+      "pts_g": "1.62",
+      "team_id": "TYLERARSENEAU-1",
+      "team_name": "Maltby Sports",
+      "player_id": "maltby-sports-crocker-luke-6",
+      "team_slug": "maltby-sports",
       "points": 13,
       "rank": 20,
       "hot_streak": 0,
       "cold_streak": 0,
-      "recent_goals": 1
+      "recent_goals": 2
     }
   ],
   "recent_results": [
@@ -554,20 +554,32 @@
       "home_line": {
         "name": "Maltby Sports",
         "slug": "maltby-sports",
-        "final": 6,
-        "periods": [],
-        "is_winner": null
+        "final": 12,
+        "periods": [
+          4,
+          6,
+          2,
+          0,
+          0
+        ],
+        "is_winner": true
       },
       "away_line": {
         "name": "Colson Overhead Doors",
         "slug": "colson-overhead-doors",
-        "final": 0,
-        "periods": [],
-        "is_winner": null
+        "final": 2,
+        "periods": [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "is_winner": false
       },
-      "home_score": 6,
-      "away_score": 0,
-      "result": "6 - 0",
+      "home_score": 12,
+      "away_score": 2,
+      "result": "12 - 2",
       "datetime": "2025-12-09T22:00:00-04:00",
       "date": "12/09/2025",
       "time": "10:00 PM",
@@ -580,9 +592,9 @@
             "positions": [
               "C"
             ],
-            "goals": 3,
+            "goals": 4,
             "assists": 0,
-            "points": 3,
+            "points": 4,
             "penalty_minutes": 0,
             "gtg": 0
           },
@@ -594,8 +606,8 @@
               "D"
             ],
             "goals": 0,
-            "assists": 1,
-            "points": 1,
+            "assists": 3,
+            "points": 3,
             "penalty_minutes": 0,
             "gtg": 0
           },
@@ -621,8 +633,8 @@
               "D"
             ],
             "goals": 1,
-            "assists": 0,
-            "points": 1,
+            "assists": 1,
+            "points": 2,
             "penalty_minutes": 0,
             "gtg": 0
           },
@@ -661,8 +673,8 @@
               "F"
             ],
             "goals": 2,
-            "assists": 5,
-            "points": 7,
+            "assists": 6,
+            "points": 8,
             "penalty_minutes": 0,
             "gtg": 0
           },
@@ -673,9 +685,9 @@
             "positions": [
               "F"
             ],
-            "goals": 1,
+            "goals": 2,
             "assists": 0,
-            "points": 1,
+            "points": 2,
             "penalty_minutes": 3,
             "gtg": 0
           },
@@ -709,6 +721,19 @@
             "gtg": 0
           },
           {
+            "player_id": "colson-overhead-doors-eatmon-chester-8",
+            "name": "Chester Eatmon",
+            "number": "8",
+            "positions": [
+              "F"
+            ],
+            "goals": 1,
+            "assists": 0,
+            "points": 1,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
             "player_id": "colson-overhead-doors-gesner-logan-23",
             "name": "Logan Gesner",
             "number": "23",
@@ -726,6 +751,19 @@
             "player_id": "colson-overhead-doors-gould-zack-88",
             "name": "Zack Gould",
             "number": "88",
+            "positions": [
+              "F"
+            ],
+            "goals": 0,
+            "assists": 2,
+            "points": 2,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "colson-overhead-doors-sproul-chris-31",
+            "name": "Chris Sproul",
+            "number": "31",
             "positions": [
               "F"
             ],
@@ -753,25 +791,31 @@
           "1",
           "2",
           "3",
-          ""
+          "OT",
+          "2OT",
+          "F"
         ],
         [
-          "Maltby Sports - Forfeit",
+          "Maltby Sports",
           "4",
           "6",
+          "2",
           "0",
-          "10"
+          "0",
+          "12"
         ],
         [
-          "Colson Overhead Doors - Forfeit",
+          "Colson Overhead Doors",
           "0",
           "0",
-          "1",
-          "1"
+          "2",
+          "0",
+          "0",
+          "2"
         ]
       ],
-      "headline": "Maltby Sports obliterates Colson Overhead Doors 6-0 sparked by Issac Bridge's hat trick, and Ian McCarthy adding two goals and 5A",
-      "headline_updated_at": "2025-12-10T02:49:52.128911+00:00"
+      "headline": "Maltby Sports obliterates Colson Overhead Doors 12-2 sparked by Issac Bridge's hat trick (4G), and Ian McCarthy adding two goals and 6A",
+      "headline_updated_at": "2025-12-10T03:48:26.822235+00:00"
     },
     {
       "game_id": "3276463",
@@ -3703,15 +3747,15 @@
   "headlines": [
     {
       "game_id": "3276461",
-      "headline": "Maltby Sports obliterates Colson Overhead Doors 6-0 sparked by Issac Bridge's hat trick, and Ian McCarthy supplying brace (2G) and 5A",
+      "headline": "Maltby Sports obliterates Colson Overhead Doors 12-2 sparked by Issac Bridge's hat trick (4G), and Ian McCarthy supplying brace (2G) and 6A",
       "ai_generated": false,
       "created_at": "2025-12-10T02:30:46.931437+00:00",
-      "updated_at": "2025-12-10T02:49:52.128911+00:00",
+      "updated_at": "2025-12-10T03:48:26.822235+00:00",
       "game_datetime": "2025-12-10T02:00:00+00:00",
       "home_team": "Maltby Sports",
       "away_team": "Colson Overhead Doors",
-      "home_score": 6,
-      "away_score": 0,
+      "home_score": 12,
+      "away_score": 2,
       "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276461&p=summary",
       "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276461&p=boxscore"
     },
@@ -4037,7 +4081,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2025-12-10T02:49:52.134596+00:00",
+    "generated_at": "2025-12-10T03:48:26.827879+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall",
@@ -4304,16 +4348,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 5,
+        "games_played": 6,
         "goals": 1,
-        "assists": 3,
-        "points": 4,
+        "assists": 4,
+        "points": 5,
         "penalty_minutes": 0,
-        "points_per_game": 0.8,
+        "points_per_game": 0.83,
         "team_games_played": 11,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": 1,
+        "recent_games": 1
       },
       {
         "player_id": "colson-overhead-doors-baisley-chris-44",
@@ -4388,16 +4432,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 5,
-        "goals": 1,
+        "games_played": 6,
+        "goals": 2,
         "assists": 3,
-        "points": 4,
+        "points": 5,
         "penalty_minutes": 0,
-        "points_per_game": 0.8,
+        "points_per_game": 0.83,
         "team_games_played": 11,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": 1,
+        "recent_games": 1
       },
       {
         "player_id": "colson-overhead-doors-perrin-noah-87",
@@ -4432,13 +4476,13 @@
         "team_slug": "colson-overhead-doors",
         "games_played": 9,
         "goals": 12,
-        "assists": 5,
-        "points": 17,
+        "assists": 6,
+        "points": 18,
         "penalty_minutes": 3,
-        "points_per_game": 1.89,
+        "points_per_game": 2.0,
         "team_games_played": 11,
         "games_missed": null,
-        "recent_points": 1,
+        "recent_points": 2,
         "recent_games": 1
       },
       {
@@ -4503,8 +4547,8 @@
         "points_per_game": 1.86,
         "team_games_played": 9,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-hurley-william-15",
@@ -4524,8 +4568,8 @@
         "points_per_game": 1.2,
         "team_games_played": 9,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-macpherson-ryan-21",
@@ -4543,8 +4587,8 @@
         "points_per_game": 2.0,
         "team_games_played": 9,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-atkinson-dave-38",
@@ -4564,8 +4608,8 @@
         "points_per_game": 1.88,
         "team_games_played": 9,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-ryan-geoff-55",
@@ -4607,8 +4651,8 @@
         "points_per_game": 2.2,
         "team_games_played": 9,
         "games_missed": null,
-        "recent_points": 4,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-mattix-ralph-66",
@@ -4650,8 +4694,8 @@
         "points_per_game": 1.86,
         "team_games_played": 9,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-robichaud-corey-88",
@@ -4692,8 +4736,8 @@
         "points_per_game": 1.43,
         "team_games_played": 9,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-fullerton-zack-90",
@@ -4713,8 +4757,8 @@
         "points_per_game": 1.83,
         "team_games_played": 9,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-dobson-nick-pickle-94",
@@ -4734,8 +4778,8 @@
         "points_per_game": 1.2,
         "team_games_played": 9,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-macdonald-meathead-97",
@@ -4755,8 +4799,8 @@
         "points_per_game": 4.29,
         "team_games_played": 9,
         "games_missed": null,
-        "recent_points": 6,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "j-and-k-electric-harrison-avery-00",
@@ -5076,8 +5120,8 @@
         "points_per_game": 2.29,
         "team_games_played": 8,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 1,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-maltby-chris-17",
@@ -5098,8 +5142,8 @@
         "points_per_game": 2.0,
         "team_games_played": 8,
         "games_missed": null,
-        "recent_points": 6,
-        "recent_games": 1
+        "recent_points": 3,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-johnson-trevor-18",
@@ -5119,8 +5163,8 @@
         "points_per_game": 0.86,
         "team_games_played": 8,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-mccrossin-thomas-19",
@@ -5133,15 +5177,15 @@
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
         "games_played": 8,
-        "goals": 6,
+        "goals": 7,
         "assists": 9,
-        "points": 15,
+        "points": 16,
         "penalty_minutes": 6,
-        "points_per_game": 1.88,
+        "points_per_game": 2.0,
         "team_games_played": 8,
         "games_missed": null,
         "recent_points": 1,
-        "recent_games": 1
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-gallant-matt-2",
@@ -5218,14 +5262,14 @@
         "team_slug": "maltby-sports",
         "games_played": 5,
         "goals": 2,
-        "assists": 3,
-        "points": 5,
+        "assists": 5,
+        "points": 7,
         "penalty_minutes": 3,
-        "points_per_game": 1.0,
+        "points_per_game": 1.4,
         "team_games_played": 8,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 2,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-leblanc-travis-63",
@@ -5240,13 +5284,13 @@
         "team_slug": "maltby-sports",
         "games_played": 7,
         "goals": 6,
-        "assists": 5,
-        "points": 11,
+        "assists": 6,
+        "points": 12,
         "penalty_minutes": 6,
-        "points_per_game": 1.57,
+        "points_per_game": 1.71,
         "team_games_played": 8,
         "games_missed": null,
-        "recent_points": 1,
+        "recent_points": 2,
         "recent_games": 1
       },
       {
@@ -5288,8 +5332,8 @@
         "points_per_game": 1.6,
         "team_games_played": 8,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-mccarthy-ian-9",
@@ -5303,14 +5347,14 @@
         "team_slug": "maltby-sports",
         "games_played": 6,
         "goals": 6,
-        "assists": 13,
-        "points": 19,
+        "assists": 14,
+        "points": 20,
         "penalty_minutes": 3,
-        "points_per_game": 3.17,
+        "points_per_game": 3.33,
         "team_games_played": 8,
         "games_missed": null,
-        "recent_points": 7,
-        "recent_games": 1
+        "recent_points": 3,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-arbing-ryan-91",
@@ -5345,15 +5389,15 @@
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
         "games_played": 7,
-        "goals": 14,
+        "goals": 15,
         "assists": 10,
-        "points": 24,
+        "points": 25,
         "penalty_minutes": 3,
-        "points_per_game": 3.43,
+        "points_per_game": 3.57,
         "team_games_played": 8,
         "games_missed": null,
-        "recent_points": 3,
-        "recent_games": 1
+        "recent_points": 2,
+        "recent_games": 0
       },
       {
         "player_id": "ultramar-thomas-remi-1",
@@ -5394,8 +5438,8 @@
         "points_per_game": 1.0,
         "team_games_played": 10,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "ultramar-allen-tyler-tuffy-11",
@@ -5415,8 +5459,8 @@
         "points_per_game": 1.83,
         "team_games_played": 10,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "ultramar-cove-matt-12",
@@ -5436,8 +5480,8 @@
         "points_per_game": 1.33,
         "team_games_played": 10,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "ultramar-burke-brody-14",
@@ -5524,8 +5568,8 @@
         "points_per_game": 0.86,
         "team_games_played": 10,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "ultramar-dobson-aaron-4",
@@ -5545,8 +5589,8 @@
         "points_per_game": 1.5,
         "team_games_played": 10,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "ultramar-bonnell-andy-5",
@@ -5566,8 +5610,8 @@
         "points_per_game": 1.33,
         "team_games_played": 10,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "ultramar-miller-madden-6",
@@ -5587,8 +5631,8 @@
         "points_per_game": 1.0,
         "team_games_played": 10,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "ultramar-bennett-mark-68",
@@ -5629,8 +5673,8 @@
         "points_per_game": 1.12,
         "team_games_played": 10,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "ultramar-linkletter-brad-9",
@@ -5650,8 +5694,8 @@
         "points_per_game": 1.5,
         "team_games_played": 10,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       }
     ]
   }
