@@ -50,7 +50,7 @@
     "player_id": "maltby-sports-mccarthy-ian-9",
     "height": null,
     "weight": null,
-    "shoots": null,
+    "shoots": "R",
     "catches": null,
     "hometown": "Amherst, NS",
     "captaincy": null
@@ -180,7 +180,7 @@
     "player_id": "maltby-sports-arbing-ryan-91",
     "height": null,
     "weight": null,
-    "shoots": null,
+    "shoots": "L",
     "catches": null,
     "hometown": "Amherst, NS",
     "captaincy": null
@@ -194,9 +194,9 @@
     "player_id": "maltby-sports-bridge-issac-98",
     "height": null,
     "weight": null,
-    "shoots": null,
+    "shoots": "L",
     "catches": null,
-    "hometown": null,
+    "hometown": "Chester, NS",
     "captaincy": null
   }
 ]
