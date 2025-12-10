@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-10T03:48:26.897652",
+  "timestamp": "2025-12-10T03:55:14.037120",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -4081,7 +4081,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2025-12-10T03:48:26.827879+00:00",
+    "generated_at": "2025-12-10T03:55:13.964312+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall",
@@ -4122,8 +4122,8 @@
         "points_per_game": 1.0,
         "team_games_played": 11,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-henshaw-chad-13",
@@ -4271,8 +4271,8 @@
         "points_per_game": 1.75,
         "team_games_played": 11,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-morris-pat-27",
@@ -4482,8 +4482,8 @@
         "points_per_game": 2.0,
         "team_games_played": 11,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 1,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-black-mark-9",
@@ -5120,7 +5120,7 @@
         "points_per_game": 2.29,
         "team_games_played": 8,
         "games_missed": null,
-        "recent_points": 1,
+        "recent_points": 0,
         "recent_games": 0
       },
       {
@@ -5142,7 +5142,7 @@
         "points_per_game": 2.0,
         "team_games_played": 8,
         "games_missed": null,
-        "recent_points": 3,
+        "recent_points": 0,
         "recent_games": 0
       },
       {
@@ -5290,8 +5290,8 @@
         "points_per_game": 1.71,
         "team_games_played": 8,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 1,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-hurley-connor-7",
@@ -5353,7 +5353,7 @@
         "points_per_game": 3.33,
         "team_games_played": 8,
         "games_missed": null,
-        "recent_points": 3,
+        "recent_points": 1,
         "recent_games": 0
       },
       {
@@ -5396,7 +5396,7 @@
         "points_per_game": 3.57,
         "team_games_played": 8,
         "games_missed": null,
-        "recent_points": 2,
+        "recent_points": 1,
         "recent_games": 0
       },
       {
