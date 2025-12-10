@@ -1,6 +1,34 @@
 {
-  "generated_at": "2025-12-09T20:25:40.988666+00:00",
+  "generated_at": "2025-12-10T02:30:46.932004+00:00",
   "headlines": [
+    {
+      "game_id": "3276461",
+      "headline": "Maltby Sports obliterates Colson Overhead Doors 6-0 sparked by Issac Bridge's brace (2G), and Ian McCarthy supplying 1G and 4A",
+      "ai_generated": false,
+      "created_at": "2025-12-10T02:30:46.931437+00:00",
+      "updated_at": "2025-12-10T02:30:46.931437+00:00",
+      "game_datetime": "2025-12-10T02:00:00+00:00",
+      "home_team": "Maltby Sports",
+      "away_team": "Colson Overhead Doors",
+      "home_score": 6,
+      "away_score": 0,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276461&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276461&p=boxscore"
+    },
+    {
+      "game_id": "3276463",
+      "headline": "G.R. Mitchell Welding overcomes Ultramar 8-6 fueled by Meathead MacDonald's hat trick (4G) and 2A, with Nick \"Pickle\" Dobson contributing brace (2G)",
+      "ai_generated": false,
+      "created_at": "2025-12-10T02:30:46.931437+00:00",
+      "updated_at": "2025-12-10T02:30:46.931437+00:00",
+      "game_datetime": "2025-12-10T00:45:00+00:00",
+      "home_team": "G.R. Mitchell Welding",
+      "away_team": "Ultramar",
+      "home_score": 8,
+      "away_score": 6,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276463&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276463&p=boxscore"
+    },
     {
       "game_id": "3276693",
       "headline": "J&K Electric cruises past Colson Overhead Doors 3-0",
@@ -150,8 +178,8 @@
       "away_team": "Ultramar",
       "home_score": 4,
       "away_score": 3,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276459&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276459&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276459&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276459&u=DSMALL&s=hockey&p=boxscore",
       "ai_generated": false
     },
     {
