@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-13T16:29:39.203247+00:00",
+  "generated_at": "2025-12-13T20:26:43.398272+00:00",
   "headlines": [
     {
       "game_id": "3276461",
@@ -164,8 +164,8 @@
       "away_team": "J&K Electric",
       "home_score": 4,
       "away_score": 7,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276514&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276514&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276514&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276514&u=DSMALL&s=hockey&p=boxscore",
       "ai_generated": false
     },
     {
