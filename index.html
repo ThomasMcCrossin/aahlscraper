@@ -110,7 +110,6 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
             display: flex;
             flex-direction: column;
-            backdrop-filter: blur(12px);
             overflow: hidden;
         }
 
@@ -467,6 +466,8 @@
         .logo-wrapper {
             width: 28px;
             height: 28px;
+            min-width: 28px;
+            min-height: 28px;
             position: relative;
             display: flex;
             align-items: center;
@@ -594,6 +595,7 @@
             white-space: nowrap;
             will-change: transform;
             transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
             animation: none;
             --ticker-shift: 0px;
         }
@@ -912,7 +914,7 @@
         function teamLogoHtml(info, size = 'medium') {
             const sizeClass = size === 'small' || size === 'large' ? size : 'medium';
             const imgHtml = info.logo
-                ? `<img src="${info.logo}" class="team-logo ${sizeClass}" alt="${info.name} logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">`
+                ? `<img src="${info.logo}" class="team-logo ${sizeClass}" alt="${info.name} logo" loading="lazy" onerror="this.remove(); this.nextElementSibling?.style?.display='flex';">`
                 : `<img class="team-logo ${sizeClass}" style="display:none;" alt="">`;
             const placeholderDisplay = info.logo ? 'style="display:none;"' : '';
             return `
