@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-14T20:27:02.309255+00:00",
+  "generated_at": "2025-12-15T02:59:35.034545+00:00",
   "standings_snapshot": "standings-20251213T202643Z.json",
   "previous_snapshot": "standings-20251210T034826Z.json",
   "standings_movements": [
@@ -50,10 +50,10 @@
       "ties": 0
     },
     {
-      "team": "J&K Electric",
+      "team": "Colson Overhead Doors",
       "played": 1,
-      "wins": 1,
-      "losses": 0,
+      "wins": 0,
+      "losses": 1,
       "ties": 0
     },
     {
@@ -61,13 +61,6 @@
       "played": 1,
       "wins": 0,
       "losses": 1,
-      "ties": 0
-    },
-    {
-      "team": "Colson Overhead Doors",
-      "played": 2,
-      "wins": 0,
-      "losses": 2,
       "ties": 0
     }
   ],
