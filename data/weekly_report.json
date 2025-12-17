@@ -1,13 +1,13 @@
 {
-  "generated_at": "2025-12-16T20:30:06.727709+00:00",
-  "standings_snapshot": "standings-20251213T202643Z.json",
-  "previous_snapshot": "standings-20251210T034826Z.json",
+  "generated_at": "2025-12-17T02:28:26.537090+00:00",
+  "standings_snapshot": "standings-20251217T022826Z.json",
+  "previous_snapshot": "standings-20251213T202643Z.json",
   "standings_movements": [
     {
-      "team": "Ultramar",
-      "current_points": 5,
-      "previous_points": 3,
-      "points_change": 2
+      "team": "G.R. Mitchell Welding",
+      "current_points": 19,
+      "previous_points": 15,
+      "points_change": 4
     },
     {
       "team": "Maltby Sports",
@@ -22,9 +22,9 @@
       "points_change": 0
     },
     {
-      "team": "G.R. Mitchell Welding",
-      "current_points": 15,
-      "previous_points": 15,
+      "team": "Ultramar",
+      "current_points": 5,
+      "previous_points": 5,
       "points_change": 0
     },
     {
@@ -36,14 +36,14 @@
   ],
   "recent_team_form": [
     {
-      "team": "Maltby Sports",
-      "played": 1,
-      "wins": 1,
+      "team": "G.R. Mitchell Welding",
+      "played": 2,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     },
     {
-      "team": "G.R. Mitchell Welding",
+      "team": "J&K Electric",
       "played": 1,
       "wins": 1,
       "losses": 0,
@@ -62,9 +62,31 @@
       "wins": 0,
       "losses": 1,
       "ties": 0
+    },
+    {
+      "team": "Maltby Sports",
+      "played": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
     }
   ],
   "game_headlines": [
+    {
+      "game_id": "3276550",
+      "headline": "J&K Electric edges Colson Overhead Doors 1-0",
+      "game_datetime": "2025-12-17T02:00:00+00:00"
+    },
+    {
+      "game_id": "3276552",
+      "headline": "G.R. Mitchell Welding handles Ultramar 6-3 fueled by Meathead MacDonald's hat trick (4G) and 1A, while William Hurley adding 1G",
+      "game_datetime": "2025-12-17T00:45:00+00:00"
+    },
+    {
+      "game_id": "3276548",
+      "headline": "G.R. Mitchell Welding overcomes Maltby Sports 5-3 sparked by Dave Atkinson's 1G and 2A, with Ryan Macpherson chipping in 1G and 1A",
+      "game_datetime": "2025-12-15T01:00:00+00:00"
+    },
     {
       "game_id": "3276461",
       "headline": "Maltby Sports obliterates Colson Overhead Doors 12-2 sparked by Issac Bridge's hat trick (4G), and Ian McCarthy supplying brace (2G) and 6A",
