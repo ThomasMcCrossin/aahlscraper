@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-17T03:46:41.286094",
+  "timestamp": "2025-12-17T03:54:38.167085",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -4068,7 +4068,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2025-12-17T03:46:41.216123+00:00",
+    "generated_at": "2025-12-17T03:54:38.093470+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall",
@@ -4151,8 +4151,8 @@
         "points_per_game": 2.0,
         "team_games_played": 12,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-budd-ryan-18",
@@ -4236,7 +4236,7 @@
         "points_per_game": 2.0,
         "team_games_played": 12,
         "games_missed": null,
-        "recent_points": 1,
+        "recent_points": 0,
         "recent_games": 0
       },
       {
@@ -4280,7 +4280,7 @@
         "points_per_game": 1.5,
         "team_games_played": 12,
         "games_missed": null,
-        "recent_points": 1,
+        "recent_points": 0,
         "recent_games": 0
       },
       {
@@ -4301,8 +4301,8 @@
         "points_per_game": 2.5,
         "team_games_played": 12,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 1,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-russel-nick-30",
@@ -4364,7 +4364,7 @@
         "points_per_game": 2.0,
         "team_games_played": 12,
         "games_missed": null,
-        "recent_points": 1,
+        "recent_points": 0,
         "recent_games": 0
       },
       {
@@ -4428,8 +4428,8 @@
         "points_per_game": 1.0,
         "team_games_played": 12,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-faulkner-rory-76",
