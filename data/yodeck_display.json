@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-17T03:54:38.167085",
+  "timestamp": "2025-12-17T12:55:14.508380",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -4068,7 +4068,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2025-12-17T03:54:38.093470+00:00",
+    "generated_at": "2025-12-17T12:55:14.444216+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall",
@@ -4301,7 +4301,7 @@
         "points_per_game": 2.5,
         "team_games_played": 12,
         "games_missed": null,
-        "recent_points": 1,
+        "recent_points": 0,
         "recent_games": 0
       },
       {
