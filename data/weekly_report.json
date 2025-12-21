@@ -1,10 +1,10 @@
 {
-  "generated_at": "2025-12-20T20:25:36.865149+00:00",
-  "standings_snapshot": "standings-20251217T034641Z.json",
-  "previous_snapshot": "standings-20251217T022826Z.json",
+  "generated_at": "2025-12-21T12:48:38.530155+00:00",
+  "standings_snapshot": "standings-20251221T124838Z.json",
+  "previous_snapshot": "standings-20251217T034641Z.json",
   "standings_movements": [
     {
-      "team": "J&K Electric",
+      "team": "G.R. Mitchell Welding",
       "current_points": 21,
       "previous_points": 19,
       "points_change": 2
@@ -16,9 +16,9 @@
       "points_change": 0
     },
     {
-      "team": "G.R. Mitchell Welding",
-      "current_points": 19,
-      "previous_points": 19,
+      "team": "J&K Electric",
+      "current_points": 21,
+      "previous_points": 21,
       "points_change": 0
     },
     {

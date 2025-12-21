@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-20T20:25:36.865149+00:00",
+  "generated_at": "2025-12-21T12:48:38.530155+00:00",
   "headlines": [
     {
       "game_id": "3276550",
@@ -166,8 +166,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 3,
       "away_score": 6,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276522&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276522&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276522&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276522&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276518",
