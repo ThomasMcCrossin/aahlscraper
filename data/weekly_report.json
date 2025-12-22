@@ -1,16 +1,22 @@
 {
-  "generated_at": "2025-12-21T20:27:15.698600+00:00",
-  "standings_snapshot": "standings-20251221T124838Z.json",
-  "previous_snapshot": "standings-20251217T034641Z.json",
+  "generated_at": "2025-12-22T03:01:46.794751+00:00",
+  "standings_snapshot": "standings-20251222T030146Z.json",
+  "previous_snapshot": "standings-20251221T124838Z.json",
   "standings_movements": [
     {
-      "team": "G.R. Mitchell Welding",
-      "current_points": 21,
-      "previous_points": 19,
+      "team": "Colson Overhead Doors",
+      "current_points": 6,
+      "previous_points": 4,
       "points_change": 2
     },
     {
       "team": "Maltby Sports",
+      "current_points": 21,
+      "previous_points": 21,
+      "points_change": 0
+    },
+    {
+      "team": "G.R. Mitchell Welding",
       "current_points": 21,
       "previous_points": 21,
       "points_change": 0
@@ -26,22 +32,9 @@
       "current_points": 5,
       "previous_points": 5,
       "points_change": 0
-    },
-    {
-      "team": "Colson Overhead Doors",
-      "current_points": 4,
-      "previous_points": 4,
-      "points_change": 0
     }
   ],
   "recent_team_form": [
-    {
-      "team": "G.R. Mitchell Welding",
-      "played": 2,
-      "wins": 2,
-      "losses": 0,
-      "ties": 0
-    },
     {
       "team": "J&K Electric",
       "played": 1,
@@ -51,8 +44,15 @@
     },
     {
       "team": "Colson Overhead Doors",
-      "played": 1,
-      "wins": 0,
+      "played": 2,
+      "wins": 1,
+      "losses": 1,
+      "ties": 0
+    },
+    {
+      "team": "G.R. Mitchell Welding",
+      "played": 2,
+      "wins": 1,
       "losses": 1,
       "ties": 0
     },
@@ -62,16 +62,14 @@
       "wins": 0,
       "losses": 1,
       "ties": 0
-    },
-    {
-      "team": "Maltby Sports",
-      "played": 1,
-      "wins": 0,
-      "losses": 1,
-      "ties": 0
     }
   ],
   "game_headlines": [
+    {
+      "game_id": "3276556",
+      "headline": "Colson Overhead Doors squeaks by G.R. Mitchell Welding 6-5 lifted by Rory Faulkner's brace (2G) and 1A, with Chad Henshaw contributing 1G and 1A",
+      "game_datetime": "2025-12-22T01:00:00+00:00"
+    },
     {
       "game_id": "3276550",
       "headline": "J&K Electric steamrolls Colson Overhead Doors 5-0",
