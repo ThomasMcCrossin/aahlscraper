@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-22T20:28:27.113244",
+  "timestamp": "2025-12-23T12:54:36.541957",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -3326,8 +3326,8 @@
       "status": "scheduled",
       "location": "Amherst",
       "division": null,
-      "start_utc": "2025-12-23T23:00:00+00:00",
-      "start_local": "2025-12-23T19:00:00-04:00",
+      "start_utc": "2025-12-24T00:15:00+00:00",
+      "start_local": "2025-12-23T20:15:00-04:00",
       "home": "Colson Overhead Doors",
       "away": "Maltby Sports",
       "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276560&u=DSMALL&s=hockey&p=preview",
@@ -3348,17 +3348,17 @@
       },
       "home_score": "",
       "away_score": "",
-      "datetime": "2025-12-23T19:00:00-04:00",
+      "datetime": "2025-12-23T20:15:00-04:00",
       "date": "12/23/2025",
-      "time": "7:00 PM"
+      "time": "8:15 PM"
     },
     {
       "game_id": "3276562",
       "status": "scheduled",
       "location": "Amherst",
       "division": null,
-      "start_utc": "2025-12-24T00:15:00+00:00",
-      "start_local": "2025-12-23T20:15:00-04:00",
+      "start_utc": "2025-12-24T01:30:00+00:00",
+      "start_local": "2025-12-23T21:30:00-04:00",
       "home": "Ultramar",
       "away": "J&K Electric",
       "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276562&u=DSMALL&s=hockey&p=preview",
@@ -3379,9 +3379,9 @@
       },
       "home_score": "",
       "away_score": "",
-      "datetime": "2025-12-23T20:15:00-04:00",
+      "datetime": "2025-12-23T21:30:00-04:00",
       "date": "12/23/2025",
-      "time": "8:15 PM"
+      "time": "9:30 PM"
     },
     {
       "game_id": "3276566",
@@ -4025,7 +4025,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2025-12-22T20:28:27.042788+00:00",
+    "generated_at": "2025-12-23T12:54:36.471460+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall",
