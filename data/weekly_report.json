@@ -1,28 +1,22 @@
 {
-  "generated_at": "2025-12-24T02:50:20.142716+00:00",
-  "standings_snapshot": "standings-20251222T030146Z.json",
-  "previous_snapshot": "standings-20251221T124838Z.json",
+  "generated_at": "2025-12-24T03:51:04.752947+00:00",
+  "standings_snapshot": "standings-20251224T035104Z.json",
+  "previous_snapshot": "standings-20251222T030146Z.json",
   "standings_movements": [
     {
-      "team": "Colson Overhead Doors",
-      "current_points": 6,
-      "previous_points": 4,
+      "team": "Maltby Sports",
+      "current_points": 23,
+      "previous_points": 21,
       "points_change": 2
     },
     {
-      "team": "Maltby Sports",
-      "current_points": 21,
+      "team": "J&K Electric",
+      "current_points": 23,
       "previous_points": 21,
-      "points_change": 0
+      "points_change": 2
     },
     {
       "team": "G.R. Mitchell Welding",
-      "current_points": 21,
-      "previous_points": 21,
-      "points_change": 0
-    },
-    {
-      "team": "J&K Electric",
       "current_points": 21,
       "previous_points": 21,
       "points_change": 0
@@ -32,14 +26,41 @@
       "current_points": 5,
       "previous_points": 5,
       "points_change": 0
+    },
+    {
+      "team": "Colson Overhead Doors",
+      "current_points": 4,
+      "previous_points": 6,
+      "points_change": -2
     }
   ],
   "recent_team_form": [
     {
-      "team": "Colson Overhead Doors",
+      "team": "J&K Electric",
       "played": 1,
       "wins": 1,
       "losses": 0,
+      "ties": 0
+    },
+    {
+      "team": "Maltby Sports",
+      "played": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    {
+      "team": "Colson Overhead Doors",
+      "played": 2,
+      "wins": 1,
+      "losses": 1,
+      "ties": 0
+    },
+    {
+      "team": "Ultramar",
+      "played": 1,
+      "wins": 0,
+      "losses": 1,
       "ties": 0
     },
     {
@@ -51,6 +72,16 @@
     }
   ],
   "game_headlines": [
+    {
+      "game_id": "3276562",
+      "headline": "J&K Electric edges Ultramar 8-7 sparked by Nick Leopold's brace (2G) and 1A, and Brendan Stone supplying 1G and 1A",
+      "game_datetime": "2025-12-24T01:30:00+00:00"
+    },
+    {
+      "game_id": "3276560",
+      "headline": "Maltby Sports overcomes Colson Overhead Doors 5-3 sparked by Issac Bridge's hat trick (4G), as Trevor Johnson chipping in 1G and 2A",
+      "game_datetime": "2025-12-24T00:15:00+00:00"
+    },
     {
       "game_id": "3276556",
       "headline": "Colson Overhead Doors squeaks by G.R. Mitchell Welding 6-5 lifted by Rory Faulkner's brace (2G) and 1A, with Chad Henshaw contributing 1G and 1A",
