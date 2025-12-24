@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-24T20:28:01.790306+00:00",
+  "generated_at": "2025-12-24T16:31:35.057223+00:00",
   "players": [
     {
       "player_id": "colson-overhead-doors-terrio-marshall",
@@ -859,14 +859,14 @@
       "team_name": "J&K Electric",
       "team_slug": "j-and-k-electric",
       "games_played": 9,
-      "goals": 3,
+      "goals": 2,
       "assists": 12,
-      "points": 15,
+      "points": 14,
       "penalty_minutes": 3,
-      "points_per_game": 1.67,
+      "points_per_game": 1.56,
       "team_games_played": 12,
       "games_missed": null,
-      "recent_points": 1,
+      "recent_points": 0,
       "recent_games": 0
     },
     {
@@ -1052,14 +1052,14 @@
       "team_name": "J&K Electric",
       "team_slug": "j-and-k-electric",
       "games_played": 8,
-      "goals": 5,
+      "goals": 6,
       "assists": 12,
-      "points": 17,
+      "points": 18,
       "penalty_minutes": 3,
-      "points_per_game": 2.12,
+      "points_per_game": 2.25,
       "team_games_played": 12,
       "games_missed": null,
-      "recent_points": -1,
+      "recent_points": 0,
       "recent_games": 0
     },
     {
