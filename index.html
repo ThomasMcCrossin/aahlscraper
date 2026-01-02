@@ -26,7 +26,7 @@
             padding: 15px 30px;
             text-align: center;
             border-bottom: 3px solid #4a9eff;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
         }
 
         .header h1 {
@@ -52,6 +52,11 @@
             margin-top: 3px;
         }
 
+        .header .last-updated.stale {
+            color: #ffca28;
+            font-weight: 600;
+        }
+
         .slides {
             flex: 1;
             position: relative;
@@ -67,8 +72,7 @@
             flex-direction: column;
             gap: 15px;
             opacity: 0;
-            transform: translateY(35px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            transition: opacity 0.4s ease;
             pointer-events: none;
             min-height: 0;
             padding: 15px 25px 20px;
@@ -76,7 +80,6 @@
 
         .slide.active {
             opacity: 1;
-            transform: translateY(0);
             pointer-events: auto;
         }
 
@@ -107,7 +110,7 @@
             background: rgba(20, 45, 70, 0.6);
             border: 1px solid rgba(74, 158, 255, 0.25);
             border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -339,12 +342,7 @@
             border-radius: 8px;
             margin-bottom: 10px;
             border-left: 4px solid #4a9eff;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .game-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 2px 10px rgba(74, 158, 255, 0.4);
+            transition: box-shadow 0.3s;
         }
 
         .game-date {
@@ -494,11 +492,10 @@
             height: 100%;
             object-fit: contain;
             display: block;
-            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.45));
         }
 
         .logo-wrapper.small .team-logo {
-            filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
+            filter: none;
         }
 
         .logo-placeholder {
@@ -591,13 +588,9 @@
         .ticker-track {
             display: inline-flex;
             align-items: center;
-            gap: 60px;
+            gap: 16px;
             white-space: nowrap;
-            will-change: transform;
-            transform: translate3d(0, 0, 0);
-            backface-visibility: hidden;
-            animation: none;
-            --ticker-shift: 0px;
+            transition: opacity 0.35s ease;
         }
 
         .ticker-segment {
@@ -622,15 +615,6 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
             white-space: nowrap;
-        }
-
-        @keyframes ticker-scroll {
-            0% {
-                transform: translate3d(0, 0, 0);
-            }
-            100% {
-                transform: translate3d(calc(-1 * var(--ticker-shift)), 0, 0);
-            }
         }
 
         .ticker-item.final {
@@ -673,6 +657,16 @@
         .ticker-divider {
             color: rgba(208, 230, 255, 0.4);
             font-weight: 400;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .slide {
+                transition: none;
+            }
+
+            .ticker-track {
+                transition: none;
+            }
         }
 
     </style>
@@ -740,8 +734,8 @@
 
     <script>
         const SLIDE_DURATIONS_MS = [20000, 10000];
-        const TICKER_PIXELS_PER_SECOND = 320;
-        const TICKER_MIN_DURATION = 6;
+        const DATA_REFRESH_MINUTES = 10;
+        const TICKER_ROTATION_MS = 7000;
         const EXTERNAL_SCORES_URL = null;
         const RESULTS_VISIBLE_COUNT = 1;
         const UPCOMING_VISIBLE_COUNT = 1;
@@ -752,6 +746,13 @@
         let currentUpcomingGames = [];
         let resultsIntervalId = null;
         let upcomingIntervalId = null;
+        let slideTimerId = null;
+        let tickerIntervalId = null;
+        let tickerSwapTimerId = null;
+        let dataRefreshTimerId = null;
+        let tickerEntries = [];
+        let tickerIndex = 0;
+        let isActive = true;
         let recentCarouselIndex = 0;
         let upcomingCarouselIndex = 0;
 
@@ -1528,46 +1529,61 @@
                 addExtraEntry(extra.label || extra.source || 'Update', extra.text || extra.summary || '', extra.meta || {});
             });
 
+            tickerEntries = entries;
+            tickerIndex = 0;
+
             if (entries.length === 0) {
-                const placeholder = '<div class="ticker-item">AAHL updates will appear here soon.</div>';
-                track.innerHTML = `<div class="ticker-segment">${placeholder}</div><div class="ticker-segment">${placeholder}</div>`;
-                track.style.animation = 'none';
+                track.innerHTML = '<div class="ticker-item">AAHL updates will appear here soon.</div>';
                 return;
             }
 
-            if (entries.length > 0) {
-                const segmentHtml = entries.join('');
-                track.innerHTML = `
-                    <div class="ticker-segment">${segmentHtml}</div>
-                    <div class="ticker-segment">${segmentHtml}</div>
-                `;
+            startTickerRotation();
+        }
+
+        function swapTickerItem(track, html) {
+            if (!track) return;
+            track.style.opacity = '0';
+            if (tickerSwapTimerId) {
+                clearTimeout(tickerSwapTimerId);
+            }
+            tickerSwapTimerId = setTimeout(() => {
+                track.innerHTML = html;
+                track.style.opacity = '1';
+            }, 160);
+        }
+
+        function startTickerRotation() {
+            const track = document.getElementById('tickerTrack');
+            if (!track) return;
+            if (!isActive) return;
+
+            if (tickerIntervalId) {
+                clearInterval(tickerIntervalId);
+                tickerIntervalId = null;
             }
 
-            const firstSegment = track.querySelector('.ticker-segment');
-            if (!firstSegment) {
-                track.style.animation = 'none';
+            if (!tickerEntries.length) {
+                swapTickerItem(track, '<div class="ticker-item">AAHL updates will appear here soon.</div>');
                 return;
             }
 
-            const segmentWidth = firstSegment.getBoundingClientRect().width;
-            if (!segmentWidth || !Number.isFinite(segmentWidth)) {
-                track.style.animation = 'none';
-                return;
-            }
+            swapTickerItem(track, tickerEntries[tickerIndex % tickerEntries.length]);
 
-            const duration = Math.max(TICKER_MIN_DURATION, segmentWidth / TICKER_PIXELS_PER_SECOND);
-            track.style.setProperty('--ticker-shift', `${segmentWidth}px`);
-            track.style.animationName = 'ticker-scroll';
-            track.style.animationDuration = `${duration}s`;
-            track.style.animationTimingFunction = 'linear';
-            track.style.animationIterationCount = 'infinite';
-            track.style.animationPlayState = 'running';
+            tickerIntervalId = setInterval(() => {
+                if (!isActive) return;
+                tickerIndex = (tickerIndex + 1) % tickerEntries.length;
+                swapTickerItem(track, tickerEntries[tickerIndex]);
+            }, TICKER_ROTATION_MS);
         }
 
         function startResultsCarousel(resetIndex = true) {
             if (resultsIntervalId) {
                 clearInterval(resultsIntervalId);
                 resultsIntervalId = null;
+            }
+
+            if (!isActive) {
+                return;
             }
 
             if (!currentRecentGames.length) {
@@ -1582,6 +1598,7 @@
 
             if (currentRecentGames.length > RESULTS_VISIBLE_COUNT) {
                 resultsIntervalId = setInterval(() => {
+                    if (!isActive) return;
                     recentCarouselIndex = (recentCarouselIndex + RESULTS_VISIBLE_COUNT) % currentRecentGames.length;
                     renderResults(currentRecentGames, recentCarouselIndex);
                 }, RESULTS_ROTATION_MS);
@@ -1592,6 +1609,10 @@
             if (upcomingIntervalId) {
                 clearInterval(upcomingIntervalId);
                 upcomingIntervalId = null;
+            }
+
+            if (!isActive) {
+                return;
             }
 
             if (!currentUpcomingGames.length) {
@@ -1606,6 +1627,7 @@
 
             if (currentUpcomingGames.length > UPCOMING_VISIBLE_COUNT) {
                 upcomingIntervalId = setInterval(() => {
+                    if (!isActive) return;
                     upcomingCarouselIndex = (upcomingCarouselIndex + UPCOMING_VISIBLE_COUNT) % currentUpcomingGames.length;
                     renderUpcoming(currentUpcomingGames, upcomingCarouselIndex);
                 }, UPCOMING_ROTATION_MS);
@@ -1685,6 +1707,67 @@
                 });
         }
 
+        function startDataRefresh() {
+            if (dataRefreshTimerId) {
+                clearInterval(dataRefreshTimerId);
+                dataRefreshTimerId = null;
+            }
+            dataRefreshTimerId = setInterval(() => {
+                if (isActive) loadData();
+            }, DATA_REFRESH_MINUTES * 60 * 1000);
+        }
+
+        function stopDataRefresh() {
+            if (dataRefreshTimerId) {
+                clearInterval(dataRefreshTimerId);
+                dataRefreshTimerId = null;
+            }
+        }
+
+        function stopRotations() {
+            stopSlideShow();
+
+            if (resultsIntervalId) {
+                clearInterval(resultsIntervalId);
+                resultsIntervalId = null;
+            }
+
+            if (upcomingIntervalId) {
+                clearInterval(upcomingIntervalId);
+                upcomingIntervalId = null;
+            }
+
+            if (tickerIntervalId) {
+                clearInterval(tickerIntervalId);
+                tickerIntervalId = null;
+            }
+
+            if (tickerSwapTimerId) {
+                clearTimeout(tickerSwapTimerId);
+                tickerSwapTimerId = null;
+            }
+        }
+
+        function startRotations() {
+            startSlideShow();
+            startResultsCarousel();
+            startUpcomingCarousel();
+            startTickerRotation();
+        }
+
+        function pauseDisplay() {
+            isActive = false;
+            stopRotations();
+            stopDataRefresh();
+        }
+
+        function resumeDisplay() {
+            isActive = true;
+            loadData();
+            startRotations();
+            startDataRefresh();
+        }
+
         function startSlideShow(durations = SLIDE_DURATIONS_MS) {
             const slides = Array.from(document.querySelectorAll('.slide'));
             if (slides.length === 0) {
@@ -1710,7 +1793,11 @@
 
             function scheduleTransition(currentIndex) {
                 const delay = rotationDurations[currentIndex % rotationDurations.length];
-                setTimeout(() => {
+                if (slideTimerId) {
+                    clearTimeout(slideTimerId);
+                }
+                slideTimerId = setTimeout(() => {
+                    if (!isActive) return;
                     const nextIndex = (currentIndex + 1) % slides.length;
                     slides.forEach((slide, idx) => {
                         slide.classList.toggle('active', idx === nextIndex);
@@ -1720,6 +1807,13 @@
             }
 
             scheduleTransition(index);
+        }
+
+        function stopSlideShow() {
+            if (slideTimerId) {
+                clearTimeout(slideTimerId);
+                slideTimerId = null;
+            }
         }
 
         // Initialize with sample data
@@ -1762,6 +1856,13 @@
                         timeAgo = timestamp.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
                     }
                     lastUpdated.textContent = `Updated ${timeAgo}`;
+                    lastUpdated.classList.toggle('stale', diffHours >= 24);
+                }
+            } else {
+                const lastUpdated = document.getElementById('lastUpdated');
+                if (lastUpdated) {
+                    lastUpdated.textContent = 'Updated recently';
+                    lastUpdated.classList.remove('stale');
                 }
             }
         }
@@ -1800,19 +1901,18 @@
                 });
         }
 
-        // Kick off slide rotation and start the application
+        // Kick off the application
         loadTickerExtras();
-        startSlideShow();
-        loadData();
+        resumeDisplay();
 
         // Yodeck lifecycle hooks (optional)
         if (window.parent && window.parent.YodeckAPI) {
             window.parent.YodeckAPI.onShown = function() {
-                console.log('Display shown');
+                resumeDisplay();
             };
             
             window.parent.YodeckAPI.onHidden = function() {
-                console.log('Display hidden');
+                pauseDisplay();
             };
         }
     </script>
