@@ -85,6 +85,20 @@
     "captaincy": null
   },
   {
+    "number": "19",
+    "name": "Reynolds, Jaxon",
+    "positions": [
+      "F"
+    ],
+    "player_id": "j-and-k-electric-reynolds-jaxon-19",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "captaincy": null
+  },
+  {
     "number": "22",
     "name": "Boutiler, Gerald",
     "positions": [
@@ -98,21 +112,6 @@
     "catches": null,
     "hometown": "Parrsboro, NS",
     "captaincy": "captain"
-  },
-  {
-    "number": "26",
-    "name": "Mansour, Mikhial",
-    "positions": [
-      "F",
-      "D"
-    ],
-    "player_id": "j-and-k-electric-mansour-mikhial-26",
-    "height": null,
-    "weight": null,
-    "shoots": "R",
-    "catches": null,
-    "hometown": "Amherst, NS",
-    "captaincy": null
   },
   {
     "number": "27",

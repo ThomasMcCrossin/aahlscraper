@@ -1,5 +1,19 @@
 [
   {
+    "number": "00",
+    "name": "Terrio, Marshall",
+    "positions": [
+      "F"
+    ],
+    "player_id": "colson-overhead-doors-terrio-marshall-00",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "captaincy": null
+  },
+  {
     "number": "7",
     "name": "Chandler 3rd, Charles",
     "positions": [
@@ -179,20 +193,6 @@
     "height": null,
     "weight": null,
     "shoots": "L",
-    "catches": null,
-    "hometown": "Amherst, NS",
-    "captaincy": null
-  },
-  {
-    "number": null,
-    "name": "Terrio, Marshall",
-    "positions": [
-      "F"
-    ],
-    "player_id": "colson-overhead-doors-terrio-marshall",
-    "height": null,
-    "weight": null,
-    "shoots": null,
     "catches": null,
     "hometown": "Amherst, NS",
     "captaincy": null

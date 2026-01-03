@@ -484,6 +484,23 @@
     "team_slug": "ultramar"
   },
   {
+    "number": "00",
+    "name": "Terrio, Marshall",
+    "positions": [
+      "F"
+    ],
+    "player_id": "colson-overhead-doors-terrio-marshall-00",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": "Amherst, NS",
+    "captaincy": null,
+    "team_id": "TYLERARSENEAU-3",
+    "team_name": "Colson Overhead Doors",
+    "team_slug": "colson-overhead-doors"
+  },
+  {
     "number": "7",
     "name": "Chandler 3rd, Charles",
     "positions": [
@@ -707,23 +724,6 @@
     "team_slug": "colson-overhead-doors"
   },
   {
-    "number": null,
-    "name": "Terrio, Marshall",
-    "positions": [
-      "F"
-    ],
-    "player_id": "colson-overhead-doors-terrio-marshall",
-    "height": null,
-    "weight": null,
-    "shoots": null,
-    "catches": null,
-    "hometown": "Amherst, NS",
-    "captaincy": null,
-    "team_id": "TYLERARSENEAU-3",
-    "team_name": "Colson Overhead Doors",
-    "team_slug": "colson-overhead-doors"
-  },
-  {
     "number": "00",
     "name": "Harrison, Avery",
     "positions": [
@@ -827,6 +827,23 @@
     "team_slug": "j-and-k-electric"
   },
   {
+    "number": "19",
+    "name": "Reynolds, Jaxon",
+    "positions": [
+      "F"
+    ],
+    "player_id": "j-and-k-electric-reynolds-jaxon-19",
+    "height": null,
+    "weight": null,
+    "shoots": null,
+    "catches": null,
+    "hometown": null,
+    "captaincy": null,
+    "team_id": "TYLERARSENEAU-4",
+    "team_name": "J&K Electric",
+    "team_slug": "j-and-k-electric"
+  },
+  {
     "number": "22",
     "name": "Boutiler, Gerald",
     "positions": [
@@ -840,24 +857,6 @@
     "catches": null,
     "hometown": "Parrsboro, NS",
     "captaincy": "captain",
-    "team_id": "TYLERARSENEAU-4",
-    "team_name": "J&K Electric",
-    "team_slug": "j-and-k-electric"
-  },
-  {
-    "number": "26",
-    "name": "Mansour, Mikhial",
-    "positions": [
-      "F",
-      "D"
-    ],
-    "player_id": "j-and-k-electric-mansour-mikhial-26",
-    "height": null,
-    "weight": null,
-    "shoots": "R",
-    "catches": null,
-    "hometown": "Amherst, NS",
-    "captaincy": null,
     "team_id": "TYLERARSENEAU-4",
     "team_name": "J&K Electric",
     "team_slug": "j-and-k-electric"
