@@ -1138,7 +1138,7 @@
             return null;
         }
 
-        function filterRecentGames(games, days = 7) {
+        function filterRecentGames(games, days = 14) {
             const now = new Date();
             const cutoff = new Date(now.getTime() - days * DAY_MS);
             return games
@@ -1149,12 +1149,15 @@
                 .map(item => item.game);
         }
 
-        function filterUpcomingGames(games, days = 7) {
+        function filterUpcomingGames(games, days = 14) {
             const now = new Date();
+            // Include games from up to 2 hours ago (games may still be in progress)
+            const gracePeriod = 2 * 60 * 60 * 1000;
+            const effectiveNow = new Date(now.getTime() - gracePeriod);
             const horizon = new Date(now.getTime() + days * DAY_MS);
             return games
                 .map(game => ({ game, date: parseGameDate(game) }))
-                .filter(item => item.date && item.date >= now && item.date <= horizon)
+                .filter(item => item.date && item.date >= effectiveNow && item.date <= horizon)
                 .sort((a, b) => a.date - b.date)
                 .slice(0, 8)
                 .map(item => item.game);
