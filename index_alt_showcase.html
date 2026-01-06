@@ -705,6 +705,8 @@
 
         loadData();
         setInterval(updateClock, 30000);
+        // Refresh data every 10 minutes
+        setInterval(loadData, 10 * 60 * 1000);
     </script>
 </body>
 </html>
