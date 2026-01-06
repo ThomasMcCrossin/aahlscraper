@@ -1546,7 +1546,8 @@
         if(Number.isNaN(savedAt.getTime())) return null;
         if(Date.now() - savedAt.getTime() > CACHE_TTL_MS) return null;
         return parsed.data;
-      }
+      }catch{ return null; }
+    }
 
     // ===== Player spotlight exposure memory (no headshots, but we can rotate names fairly) =====
     const SEEN_PLAYERS_KEY = "aahl_seen_players_v1";
@@ -1775,20 +1776,6 @@
       as.forEach(m => push(m[1]));
 
       return out;
-    });
-      });
-
-      roster.sort((a,b) => {
-        if (b.points !== a.points) return b.points - a.points;
-        if (b.goals !== a.goals) return b.goals - a.goals;
-        if (b.assists !== a.assists) return b.assists - a.assists;
-        return a.name.localeCompare(b.name);
-      });
-
-      return roster.slice(0, limit).map(p => ({
-        ...p,
-        line: `${p.goals ? p.goals + "G" : ""}${p.goals && p.assists ? " " : ""}${p.assists ? p.assists + "A" : ""}${(!p.goals && !p.assists) ? (p.points + "P") : ""}`.trim() || `${p.points}P`
-      }));
     }
 
     function gameNotes(game){
