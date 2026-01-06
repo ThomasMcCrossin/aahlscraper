@@ -174,18 +174,44 @@ def _lookup_previous(previous: Dict[str, Dict[str, object]], team_slug: str, pla
     return previous.get(key)
 
 
+def _build_player_stats_lookup(player_stats: List[Dict[str, object]]) -> Dict[str, Dict[str, object]]:
+    """Build lookup from player_stats.json (authoritative season stats from AAHL website)."""
+    lookup: Dict[str, Dict[str, object]] = {}
+    for stat in player_stats:
+        if not isinstance(stat, dict):
+            continue
+        player_id = stat.get("player_id")
+        if player_id:
+            lookup[str(player_id)] = {
+                "games_played": _to_int(stat.get("gp")),
+                "goals": _to_int(stat.get("g")),
+                "assists": _to_int(stat.get("a")),
+                "points": _to_int(stat.get("pts")),
+                "penalty_minutes": _to_int(stat.get("pim")),
+                "positions": [stat.get("pos")] if stat.get("pos") else [],
+                "number": stat.get("no"),
+            }
+    return lookup
+
+
 def build_registry() -> List[Dict[str, object]]:
     rosters_data = _load_json(DATA_DIR / "rosters.json") or []
     results_data = _load_json(DATA_DIR / "results.json") or []
+    player_stats_data = _load_json(DATA_DIR / "player_stats.json") or []
 
     if not isinstance(rosters_data, list):
         rosters_data = []
     if not isinstance(results_data, list):
         results_data = []
+    if not isinstance(player_stats_data, list):
+        player_stats_data = []
 
     roster_lookup, team_meta = _build_roster_lookup(rosters_data)
     team_games = _team_games_played(results_data)
     previous_registry = _load_previous_registry()
+
+    # Load authoritative season stats from player_stats.json (scraped from AAHL website)
+    player_stats_lookup = _build_player_stats_lookup(player_stats_data)
 
     registry: Dict[str, Dict[str, object]] = {}
 
@@ -293,6 +319,21 @@ def build_registry() -> List[Dict[str, object]]:
         team_slug = entry.get("team_slug") or ""
         team_games_played = team_games.get(team_slug, 0)
         entry["team_games_played"] = team_games_played
+
+        # Use authoritative stats from player_stats.json if available (fresher than game-by-game aggregation)
+        player_id = str(entry.get("player_id", ""))
+        authoritative = player_stats_lookup.get(player_id)
+        if authoritative:
+            entry["games_played"] = authoritative["games_played"]
+            entry["goals"] = authoritative["goals"]
+            entry["assists"] = authoritative["assists"]
+            entry["points"] = authoritative["points"]
+            entry["penalty_minutes"] = authoritative["penalty_minutes"]
+            if authoritative.get("positions") and not entry.get("positions"):
+                entry["positions"] = authoritative["positions"]
+            if authoritative.get("number") and not entry.get("number"):
+                entry["number"] = authoritative["number"]
+
         gp = entry.get("games_played", 0)
         points = entry.get("points", 0)
         entry["points_per_game"] = round(points / gp, 2) if gp else 0.0

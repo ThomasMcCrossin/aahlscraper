@@ -297,6 +297,194 @@ Summary:"""
         return None
 
 
+def generate_rich_narrative(
+    game: Dict[str, Any],
+    standings: Optional[List[Dict[str, Any]]] = None,
+    use_cache: bool = True
+) -> Optional[str]:
+    """
+    Generate a rich, extended narrative for a game result.
+
+    Includes context like team streaks, playoff implications, and detailed
+    game flow narrative suitable for filling display space.
+
+    Args:
+        game: Game data dictionary with scores and player stats
+        standings: Optional standings data for streak/playoff context
+        use_cache: Whether to use cached narratives
+
+    Returns:
+        AI-generated narrative (2-3 paragraphs) or None if generation fails
+    """
+    if not OPENAI_AVAILABLE:
+        return None
+
+    api_key = os.environ.get("OPENAI_API_KEY")
+    if not api_key:
+        return None
+
+    # Check cache with different key for narratives
+    game_key = _game_hash(game) + "_narrative"
+    if use_cache:
+        cache = _load_cache()
+        if game_key in cache:
+            return cache[game_key].get("narrative")
+
+    # Extract game data
+    home = _team_name(game, "home")
+    away = _team_name(game, "away")
+    home_score = _safe_int(game.get("home_score")) or 0
+    away_score = _safe_int(game.get("away_score")) or 0
+
+    # Determine winner
+    if home_score > away_score:
+        winner, loser = home, away
+        winner_score, loser_score = home_score, away_score
+        winner_side, loser_side = "home", "away"
+    elif away_score > home_score:
+        winner, loser = away, home
+        winner_score, loser_score = away_score, home_score
+        winner_side, loser_side = "away", "home"
+    else:
+        winner = loser = None
+        winner_score = loser_score = home_score
+        winner_side = loser_side = None
+
+    # Build standings context
+    standings_context = ""
+    if standings:
+        standings_map = {s.get("team", "").lower(): s for s in standings if isinstance(s, dict)}
+
+        home_standing = standings_map.get(home.lower(), {})
+        away_standing = standings_map.get(away.lower(), {})
+
+        home_streak = home_standing.get("streak", "")
+        away_streak = away_standing.get("streak", "")
+        home_rank = None
+        away_rank = None
+
+        # Find ranks
+        sorted_standings = sorted(standings, key=lambda x: _safe_int(x.get("points")) or 0, reverse=True)
+        for i, team in enumerate(sorted_standings, 1):
+            if team.get("team", "").lower() == home.lower():
+                home_rank = i
+            if team.get("team", "").lower() == away.lower():
+                away_rank = i
+
+        standings_lines = []
+        if home_streak:
+            standings_lines.append(f"- {home} entering game: {home_streak}" + (f", ranked #{home_rank}" if home_rank else ""))
+        if away_streak:
+            standings_lines.append(f"- {away} entering game: {away_streak}" + (f", ranked #{away_rank}" if away_rank else ""))
+
+        # Playoff context (top 4 make playoffs)
+        if home_rank and away_rank:
+            if home_rank <= 4 and away_rank <= 4:
+                standings_lines.append("- Playoff positioning matchup between two playoff teams")
+            elif home_rank == 4 or away_rank == 4 or home_rank == 5 or away_rank == 5:
+                standings_lines.append("- Playoff bubble implications")
+
+        if standings_lines:
+            standings_context = "Team Context:\n" + "\n".join(standings_lines)
+
+    # Period scores if available
+    period_context = ""
+    period_scores = game.get("period_scores", {})
+    if period_scores:
+        lines = []
+        for period, scores in period_scores.items():
+            if isinstance(scores, dict):
+                h = scores.get("home", 0)
+                a = scores.get("away", 0)
+                lines.append(f"  {period}: {away} {a}, {home} {h}")
+        if lines:
+            period_context = "Period Breakdown:\n" + "\n".join(lines)
+
+    # Player stats
+    winner_stats = _format_player_stats(game, winner_side) if winner_side else _format_player_stats(game, "home")
+    loser_stats = _format_player_stats(game, loser_side) if loser_side else _format_player_stats(game, "away")
+
+    # Construct rich prompt - stick to facts we actually have
+    if winner:
+        prompt = f"""Write a game recap for this adult hockey league game. This displays on a TV in the arena.
+
+FINAL: {winner} {winner_score}, {loser} {loser_score}
+
+{standings_context}
+
+{winner} Scoring:
+{winner_stats}
+
+{loser} Scoring:
+{loser_stats}
+
+WRITE A 2-3 SENTENCE RECAP:
+- State the final score and winning team
+- Name the top scorer(s) with their actual stats (e.g., "Isaac Bridge led the way with 4 goals and an assist")
+- If someone scored 3+ goals, call it a hat trick
+- If someone had 4+ points, mention their "X-point night"
+- Optionally mention standings context if provided above
+- Keep it factual - only reference stats shown above
+- Professional but casual tone suitable for a local league
+
+RECAP:"""
+    else:
+        prompt = f"""Write a game recap for this adult hockey league game that ended in a tie. This displays on a TV in the arena.
+
+FINAL: {home} {home_score}, {away} {away_score} (TIE)
+
+{standings_context}
+
+{home} Scoring:
+{_format_player_stats(game, "home")}
+
+{away} Scoring:
+{_format_player_stats(game, "away")}
+
+WRITE A 2-3 SENTENCE RECAP:
+- State the tie score
+- Name top scorers from each team with their actual stats
+- Keep it factual - only reference stats shown above
+- Professional but casual tone suitable for a local league
+
+RECAP:"""
+
+    try:
+        client = OpenAI(api_key=api_key)
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You write factual game recaps for the Amherst Adult Hockey League. Only mention stats explicitly provided - never invent or assume details. Keep recaps to 2-3 sentences."
+                },
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ],
+            max_tokens=150,
+            temperature=0.5
+        )
+
+        narrative = response.choices[0].message.content.strip()
+
+        # Cache the result
+        cache = _load_cache()
+        cache[game_key] = {
+            "narrative": narrative,
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "game_id": game.get("game_id")
+        }
+        _save_cache(cache)
+
+        return narrative
+
+    except Exception as e:
+        print(f"OpenAI API error generating narrative: {e}")
+        return None
+
+
 def enrich_games_with_ai(games: List[Dict[str, Any]], max_games: int = 10) -> List[Dict[str, Any]]:
     """
     Enrich a list of games with AI-generated headlines.

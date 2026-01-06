@@ -23,12 +23,13 @@ except ImportError:
     build_player_registry_main = None
 
 try:
-    from openai_headlines import generate_ai_headline, enrich_games_with_ai
+    from openai_headlines import generate_ai_headline, enrich_games_with_ai, generate_rich_narrative
     OPENAI_HEADLINES_AVAILABLE = True
 except ImportError:
     OPENAI_HEADLINES_AVAILABLE = False
     generate_ai_headline = None
     enrich_games_with_ai = None
+    generate_rich_narrative = None
 
 def _load_json(path: Path) -> Optional[object]:
     if not path.exists():
@@ -305,7 +306,11 @@ def _compose_headline(game: Dict[str, object]) -> Optional[str]:
     return headline
 
 
-def _ensure_headlines(games: List[Dict[str, object]], existing: Dict[str, Dict[str, object]]) -> List[Dict[str, object]]:
+def _ensure_headlines(
+    games: List[Dict[str, object]],
+    existing: Dict[str, Dict[str, object]],
+    standings: Optional[List[Dict[str, object]]] = None
+) -> List[Dict[str, object]]:
     now_iso = datetime.now(timezone.utc).isoformat()
     entries: List[Dict[str, object]] = []
 
@@ -352,6 +357,17 @@ def _ensure_headlines(games: List[Dict[str, object]], existing: Dict[str, Dict[s
                 entry["headline"] = headline
                 entry["ai_generated"] = ai_generated
                 entry["updated_at"] = now_iso
+
+        # Generate rich narrative for recent games (last 5)
+        narrative = entry.get("narrative")
+        if not narrative and OPENAI_HEADLINES_AVAILABLE and generate_rich_narrative:
+            try:
+                narrative = generate_rich_narrative(game, standings=standings)
+                if narrative:
+                    entry["narrative"] = narrative
+                    entry["updated_at"] = now_iso
+            except Exception as e:
+                print(f"Narrative generation failed for game {game_id}: {e}")
 
         entry["game_datetime"] = iso_dt
         entry["home_team"] = _team_name(game, "home")
@@ -560,7 +576,12 @@ def main() -> None:
     all_games = _unique_games(_sorted_games(_load_recent_results(days=None)))
     recent_summary = _summarize_recent_results(recent_games)
     headline_index = _load_headline_index()
-    headline_entries = _ensure_headlines(all_games, headline_index)
+
+    # Load standings for narrative context
+    standings_data = _load_json(DATA_DIR / "standings.json")
+    standings_list = standings_data if isinstance(standings_data, list) else []
+
+    headline_entries = _ensure_headlines(all_games, headline_index, standings=standings_list)
 
     generated_at = datetime.now(timezone.utc).isoformat()
     report = {

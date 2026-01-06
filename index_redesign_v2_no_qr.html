@@ -257,8 +257,8 @@
       box-shadow: inset 0 0 0 1px rgba(0,0,0,.08);
     }
     .logo.small{ width: 34px; height: 34px; border-radius: 12px; }
-    .logo.med{ width: 54px; height: 54px; border-radius: 16px; }
-    .logo.big{ width: 86px; height: 86px; border-radius: 22px; }
+    .logo.med{ width: 50px; height: 50px; border-radius: 14px; }
+    .logo.big{ width: 70px; height: 70px; border-radius: 18px; }
 
     .logo img{ width: 100%; height: 100%; object-fit: contain; display:block; }
     .logo .fallback{
@@ -316,15 +316,15 @@
     .match-center{
       flex:1;
       display:grid;
-      grid-template-columns: 1fr 120px 1fr;
-      gap: 12px;
+      grid-template-columns: 1fr 100px 1fr;
+      gap: 8px;
       align-items:center;
     }
 
     .team-block{
       display:flex;
       align-items:center;
-      gap: 12px;
+      gap: 10px;
       min-width:0;
     }
 
@@ -336,13 +336,12 @@
 
     .team-name{
       font-weight: 900;
-      font-size: 26px;
-      letter-spacing: .6px;
-      line-height: 1.05;
-      white-space: nowrap;
-      overflow:hidden;
-      text-overflow: ellipsis;
-      max-width: 420px;
+      font-size: clamp(16px, 2.2vw, 26px);
+      letter-spacing: .4px;
+      line-height: 1.1;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
 
     .team-record{
@@ -692,6 +691,27 @@
       line-height: 1.25;
       font-weight: 750;
       color: var(--text);
+    }
+
+    .narrative{
+      margin-top: 12px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(124,196,255,.08), rgba(255,255,255,.04));
+      border: 1px solid rgba(124,196,255,.15);
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 500;
+      color: rgba(234,242,255,.9);
+      letter-spacing: .2px;
+    }
+
+    .narrative p{
+      margin: 0 0 10px 0;
+    }
+
+    .narrative p:last-child{
+      margin-bottom: 0;
     }
 
     .stars{
@@ -1080,7 +1100,25 @@
       .slide{ transition:none; }
       .ticker-item{ transition:none; }
     }
-  
+
+    /* Responsive: Compact leaderboard rows at smaller viewports */
+    @media (max-height: 800px) {
+      .leaderboard { gap: 4px; padding: 6px; }
+      .lb-row { padding: 4px 8px; gap: 6px; border-radius: 10px; }
+      .lb-rank { font-size: 13px; }
+      .lb-name .p { font-size: 12px; }
+      .lb-name .t { font-size: 10px; }
+      .lb-name { gap: 6px; }
+      .lb-val { font-size: 14px; }
+      .logo.small { width: 22px; height: 22px; border-radius: 6px; }
+      .mini { padding: 8px; gap: 6px; border-radius: 12px; }
+      .mini .hdr { font-size: 9px; }
+      .mini .val { font-size: 15px; }
+      .mini .nm { font-size: 11px; }
+      .leaders-layout { gap: 10px; }
+      .categories { gap: 6px; padding: 6px; }
+    }
+
     /* Next layout + Tonight's Faces */
     .next-layout{
       flex:1;
@@ -1222,7 +1260,7 @@
       <!-- Slide 1: Tonight / Next -->
       <section class="slide active" id="slideNext">
         <div class="slide-header">
-          <div class="slide-title">Tonight at Amherst</div>
+          <div class="slide-title" id="nextTitle">Tonight at Amherst</div>
           <div class="slide-kicker" id="nextKicker">Next games</div>
         </div>
         <div class="slide-body next-layout">
@@ -1276,7 +1314,7 @@
       <!-- Slide 3: Game spotlight -->
       <section class="slide" id="slideGame">
         <div class="slide-header">
-          <div class="slide-title">Last Night in Amherst</div>
+          <div class="slide-title" id="gameTitle">Last Night in Amherst</div>
           <div class="slide-kicker" id="gameKicker">Latest final</div>
         </div>
         <div class="slide-body game-layout">
@@ -1873,6 +1911,7 @@
     function renderNextGames(data, upcoming, standings){
       const grid = document.getElementById("matchGrid");
       const kicker = document.getElementById("nextKicker");
+      const title = document.getElementById("nextTitle");
       grid.innerHTML = "";
 
       const now = new Date();
@@ -1890,7 +1929,21 @@
 
       const focus = (todays.length >= 2) ? todays.slice(0,2) : byTime.slice(0,2);
 
-      kicker.textContent = todays.length ? "Tonight's slate" : "Next up";
+      // Dynamic title and kicker based on whether games are today
+      if (todays.length) {
+        title.textContent = "Tonight at Amherst";
+        kicker.textContent = "Tonight's slate";
+      } else if (focus.length) {
+        const nextDate = parseGameDate(focus[0]);
+        const tomorrow = new Date(now);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const isTomorrow = nextDate && nextDate.toLocaleDateString("en-CA") === tomorrow.toLocaleDateString("en-CA");
+        title.textContent = isTomorrow ? "Tomorrow at Amherst" : "Next Up at Amherst";
+        kicker.textContent = "Upcoming games";
+      } else {
+        title.textContent = "Amherst Hockey";
+        kicker.textContent = "Schedule";
+      }
 
       if (!focus.length){
         grid.innerHTML = `<div class="panel" style="grid-column: 1 / -1; display:flex; align-items:center; justify-content:center; padding:40px; color: rgba(234,242,255,.75); font-weight:800; letter-spacing:1px;">No upcoming games found.</div>`;
@@ -2092,7 +2145,6 @@
               <div class="face-name">${name}</div>
               <div class="face-sub">
                 <span class="pill">${item.label}</span>
-                <span class="faint">${team?.name || ""}</span>
               </div>
             </div>
           </div>
@@ -2101,7 +2153,6 @@
             <div class="face-stat"><div class="k">PPG</div><div class="v mono">${ppg.toFixed(2)}</div></div>
             <div class="face-team">
               ${logoHtml(team, "small")}
-              <div class="tname">${team?.name || ""}</div>
             </div>
           </div>
         `;
@@ -2244,6 +2295,7 @@
     function renderGameSpotlight(recentResults){
       const card = document.getElementById("gameScorecard");
       const starsList = document.getElementById("starsList");
+      const gameTitle = document.getElementById("gameTitle");
       const gameKicker = document.getElementById("gameKicker");
       const notePill = document.getElementById("gameNotePill");
 
@@ -2258,6 +2310,7 @@
 
       if (!games.length){
         card.innerHTML = `<div style="padding:30px; text-align:center; color: rgba(234,242,255,.75); font-weight:800;">No recent results yet.</div>`;
+        gameTitle.textContent = "Recent Results";
         return;
       }
 
@@ -2268,8 +2321,33 @@
       const a = safeNum(g.away_score);
       const h = safeNum(g.home_score);
 
+      // Dynamic title based on when game was played
+      if (dt) {
+        const now = new Date();
+        const yesterday = new Date(now);
+        yesterday.setDate(yesterday.getDate() - 1);
+        const gameDay = dt.toLocaleDateString("en-CA");
+        const todayKey = now.toLocaleDateString("en-CA");
+        const yesterdayKey = yesterday.toLocaleDateString("en-CA");
+
+        if (gameDay === todayKey) {
+          gameTitle.textContent = "Earlier Today";
+        } else if (gameDay === yesterdayKey) {
+          gameTitle.textContent = "Last Night in Amherst";
+        } else {
+          const daysAgo = Math.floor((now - dt) / (1000 * 60 * 60 * 24));
+          gameTitle.textContent = daysAgo <= 7 ? "Recent Results" : "Past Games";
+        }
+      } else {
+        gameTitle.textContent = "Recent Results";
+      }
+
       gameKicker.textContent = dt ? fmtDateTime(dt) : "Latest final";
       notePill.textContent = gameNotes(g);
+
+      const narrativeHtml = g.narrative
+        ? `<div class="narrative">${g.narrative.replace(/\n\n/g, '</p><p>').replace(/\n/g, ' ')}</div>`
+        : "";
 
       card.innerHTML = `
         <div class="final-row">
@@ -2286,7 +2364,8 @@
             <div class="nm">${home.name}</div>
           </div>
         </div>
-        <div class="headline">${generateHeadline(g)}<div class="faint" style="margin-top:6px; font-size:13px; font-weight:800; letter-spacing:.2px;">${g.headline ? g.headline : ""}</div></div>
+        <div class="headline">${generateHeadline(g)}${g.headline && !g.narrative ? `<div class="faint" style="margin-top:6px; font-size:13px; font-weight:800; letter-spacing:.2px;">${g.headline}</div>` : ""}</div>
+        ${narrativeHtml}
       `;
 
       const stars = extractTopPerformers(g, 3);
@@ -2299,7 +2378,7 @@
           el.innerHTML = `
             <div class="rank">${idx+1}</div>
             <div class="who">${s.name}<span class="team">${s.team || ""}</span></div>
-            <div class="line">${s.line}</div>
+            <div class="line">${s.stat || ""}</div>
           `;
           starsList.appendChild(el);
         });

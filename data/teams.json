@@ -31,6 +31,7 @@
       "slug": "colson-overhead-doors",
       "league": "AAHL",
       "name": "Colson Overhead Doors",
+      "short_name": "Colson",
       "sports_hq": "TYLERARSENEAU-3",
       "aliases": [
         "Colson"
@@ -41,6 +42,7 @@
       "slug": "j-and-k-electric",
       "league": "AAHL",
       "name": "J&K Electric",
+      "short_name": "J&K",
       "sports_hq": "TYLERARSENEAU-4",
       "aliases": [
         "JK Electric",

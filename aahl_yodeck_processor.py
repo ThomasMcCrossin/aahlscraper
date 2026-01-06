@@ -592,6 +592,9 @@ class AAHLDataProcessor:
                 enriched_headline = headline_entry.get("headline")
                 enriched["headline"] = self.refine_headline_text(enriched_headline)
                 enriched["headline_updated_at"] = headline_entry.get("updated_at")
+                # Include rich narrative if available
+                if headline_entry.get("narrative"):
+                    enriched["narrative"] = headline_entry.get("narrative")
             elif enriched.get("headline"):
                 enriched["headline"] = self.refine_headline_text(enriched.get("headline"))
             self._clean_player_stats(enriched)
