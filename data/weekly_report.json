@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-06T22:07:24.982479+00:00",
+  "generated_at": "2026-01-07T02:34:48.169180+00:00",
   "standings_snapshot": "standings-20260103T162419Z.json",
   "previous_snapshot": "standings-20260103T123816Z.json",
   "standings_movements": [
@@ -34,36 +34,7 @@
       "points_change": 6
     }
   ],
-  "recent_team_form": [
-    {
-      "team": "Ultramar",
-      "played": 1,
-      "wins": 1,
-      "losses": 0,
-      "ties": 0
-    },
-    {
-      "team": "J&K Electric",
-      "played": 1,
-      "wins": 1,
-      "losses": 0,
-      "ties": 0
-    },
-    {
-      "team": "Colson Overhead Doors",
-      "played": 1,
-      "wins": 0,
-      "losses": 1,
-      "ties": 0
-    },
-    {
-      "team": "G.R. Mitchell Welding",
-      "played": 1,
-      "wins": 0,
-      "losses": 1,
-      "ties": 0
-    }
-  ],
+  "recent_team_form": [],
   "game_headlines": [
     {
       "game_id": "3276568",
