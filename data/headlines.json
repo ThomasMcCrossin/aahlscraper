@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-01-08T12:43:34.034598+00:00",
+  "generated_at": "2026-01-08T16:29:50.489317+00:00",
   "headlines": [
+    {
+      "game_id": "3276574",
+      "headline": "J&K Electric Powers Past G.R. Mitchell Welding 8-5 with Reynolds and Stone's Multi-Goal Efforts!",
+      "ai_generated": true,
+      "created_at": "2026-01-08T16:29:41.235120+00:00",
+      "updated_at": "2026-01-08T16:29:41.235120+00:00",
+      "narrative": "In a high-scoring battle, J&K Electric secured an 8-5 victory over G.R. Mitchell Welding, solidifying their position at the top of the standings. Nick Leopold led the way with an impressive 1 goal and 4 assists, while Jaxon Reynolds and Brendan Stone each contributed 2 goals and 2 assists. This matchup was crucial for playoff positioning as both teams are vying for strong playoff spots.",
+      "game_datetime": "2026-01-07T02:00:00+00:00",
+      "home_team": "J&K Electric",
+      "away_team": "G.R. Mitchell Welding",
+      "home_score": 8,
+      "away_score": 5,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276574&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276574&p=boxscore"
+    },
+    {
+      "game_id": "3276570",
+      "headline": "Maltby Sports Dominates Ultramar 7-1 with Bridge's Four Goals and Small's Hat Trick",
+      "ai_generated": true,
+      "created_at": "2026-01-08T16:29:41.235120+00:00",
+      "updated_at": "2026-01-08T16:29:41.235120+00:00",
+      "narrative": "Maltby Sports dominated Ultramar with a final score of 7-1, solidifying their position as the #2 ranked team. Isaac Bridge led the way with a hat trick, scoring 4 goals, while Danny \"Biggie\" Small added 3 goals of his own. This matchup was crucial for playoff positioning, with Maltby Sports continuing their strong performance.",
+      "game_datetime": "2026-01-05T01:00:00+00:00",
+      "home_team": "Maltby Sports",
+      "away_team": "Ultramar",
+      "home_score": 7,
+      "away_score": 1,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276570&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276570&p=boxscore"
+    },
     {
       "game_id": "3276568",
       "headline": "Ultramar Powers Past Colson Overhead Doors 7-4, Tim Burke and Brad Linkletter Shine with 2 Goals Each",
@@ -162,8 +192,8 @@
       "away_team": "J&K Electric",
       "home_score": 0,
       "away_score": 3,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276693&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276693&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276693&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276693&u=DSMALL&s=hockey&p=boxscore",
       "narrative": "FINAL: J&K Electric 3, Colson Overhead Doors 0. J&K Electric continues their strong performance with a solid win, maintaining their rank at #1 in the league. Colson's Brendan Stone led his team with 3 assists, but it wasn't enough to break through J&K's defense."
     },
     {
@@ -177,8 +207,8 @@
       "away_team": "J&K Electric",
       "home_score": 6,
       "away_score": 8,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276695&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276695&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276695&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276695&u=DSMALL&s=hockey&p=boxscore",
       "narrative": "J&K Electric secured a thrilling 8-6 victory over Colson Overhead Doors, solidifying their position at the top of the standings. Pat Morris led the charge with a hat trick and an assist, while Nick Leopold had a standout 5-point night with 1 goal and 4 assists. Colson's Rory Faulkner and Denis Hebert both contributed with 2 goals and 2 assists each, but it wasn't enough to overcome the league leaders."
     },
     {

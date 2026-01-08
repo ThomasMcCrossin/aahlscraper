@@ -1,41 +1,80 @@
 {
-  "generated_at": "2026-01-08T12:43:34.034598+00:00",
-  "standings_snapshot": "standings-20260103T162419Z.json",
-  "previous_snapshot": "standings-20260103T123816Z.json",
+  "generated_at": "2026-01-08T16:29:50.489317+00:00",
+  "standings_snapshot": "standings-20260108T162940Z.json",
+  "previous_snapshot": "standings-20260103T162419Z.json",
   "standings_movements": [
     {
       "team": "J&K Electric",
-      "current_points": 25,
-      "previous_points": 0,
-      "points_change": 25
+      "current_points": 27,
+      "previous_points": 25,
+      "points_change": 2
     },
     {
       "team": "Maltby Sports",
-      "current_points": 23,
-      "previous_points": 0,
-      "points_change": 23
+      "current_points": 25,
+      "previous_points": 23,
+      "points_change": 2
     },
     {
       "team": "G.R. Mitchell Welding",
       "current_points": 21,
-      "previous_points": 0,
-      "points_change": 21
+      "previous_points": 21,
+      "points_change": 0
     },
     {
       "team": "Ultramar",
       "current_points": 7,
-      "previous_points": 0,
-      "points_change": 7
+      "previous_points": 7,
+      "points_change": 0
     },
     {
       "team": "Colson Overhead Doors",
       "current_points": 6,
-      "previous_points": 0,
-      "points_change": 6
+      "previous_points": 6,
+      "points_change": 0
     }
   ],
-  "recent_team_form": [],
+  "recent_team_form": [
+    {
+      "team": "J&K Electric",
+      "played": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    {
+      "team": "Maltby Sports",
+      "played": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    {
+      "team": "G.R. Mitchell Welding",
+      "played": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    {
+      "team": "Ultramar",
+      "played": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    }
+  ],
   "game_headlines": [
+    {
+      "game_id": "3276574",
+      "headline": "J&K Electric Powers Past G.R. Mitchell Welding 8-5 with Reynolds and Stone's Multi-Goal Efforts!",
+      "game_datetime": "2026-01-07T02:00:00+00:00"
+    },
+    {
+      "game_id": "3276570",
+      "headline": "Maltby Sports Dominates Ultramar 7-1 with Bridge's Four Goals and Small's Hat Trick",
+      "game_datetime": "2026-01-05T01:00:00+00:00"
+    },
     {
       "game_id": "3276568",
       "headline": "Ultramar Powers Past Colson Overhead Doors 7-4, Tim Burke and Brad Linkletter Shine with 2 Goals Each",
