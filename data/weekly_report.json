@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-01-08T16:29:50.489317+00:00",
-  "standings_snapshot": "standings-20260108T162940Z.json",
-  "previous_snapshot": "standings-20260103T162419Z.json",
+  "generated_at": "2026-01-08T20:24:47.463326+00:00",
+  "standings_snapshot": "standings-20260108T202442Z.json",
+  "previous_snapshot": "standings-20260108T162940Z.json",
   "standings_movements": [
     {
-      "team": "J&K Electric",
+      "team": "Maltby Sports",
       "current_points": 27,
       "previous_points": 25,
       "points_change": 2
     },
     {
-      "team": "Maltby Sports",
-      "current_points": 25,
-      "previous_points": 23,
-      "points_change": 2
+      "team": "J&K Electric",
+      "current_points": 27,
+      "previous_points": 27,
+      "points_change": 0
     },
     {
       "team": "G.R. Mitchell Welding",
@@ -36,6 +36,13 @@
   ],
   "recent_team_form": [
     {
+      "team": "Maltby Sports",
+      "played": 2,
+      "wins": 2,
+      "losses": 0,
+      "ties": 0
+    },
+    {
       "team": "J&K Electric",
       "played": 1,
       "wins": 1,
@@ -43,14 +50,14 @@
       "ties": 0
     },
     {
-      "team": "Maltby Sports",
+      "team": "G.R. Mitchell Welding",
       "played": 1,
-      "wins": 1,
-      "losses": 0,
+      "wins": 0,
+      "losses": 1,
       "ties": 0
     },
     {
-      "team": "G.R. Mitchell Welding",
+      "team": "Colson Overhead Doors",
       "played": 1,
       "wins": 0,
       "losses": 1,
@@ -69,6 +76,11 @@
       "game_id": "3276574",
       "headline": "J&K Electric Powers Past G.R. Mitchell Welding 8-5 with Reynolds and Stone's Multi-Goal Efforts!",
       "game_datetime": "2026-01-07T02:00:00+00:00"
+    },
+    {
+      "game_id": "3276572",
+      "headline": "Maltby Sports Powers Past Colson Overhead Doors 7-2; Johnson and McCarthy Shine with Multi-Point Games",
+      "game_datetime": "2026-01-07T00:45:00+00:00"
     },
     {
       "game_id": "3276570",

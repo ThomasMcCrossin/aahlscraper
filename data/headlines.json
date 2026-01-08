@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-08T16:29:50.489317+00:00",
+  "generated_at": "2026-01-08T20:24:47.463326+00:00",
   "headlines": [
     {
       "game_id": "3276574",
@@ -15,6 +15,21 @@
       "away_score": 5,
       "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276574&p=summary",
       "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276574&p=boxscore"
+    },
+    {
+      "game_id": "3276572",
+      "headline": "Maltby Sports Powers Past Colson Overhead Doors 7-2; Johnson and McCarthy Shine with Multi-Point Games",
+      "ai_generated": true,
+      "created_at": "2026-01-08T20:24:43.141506+00:00",
+      "updated_at": "2026-01-08T20:24:43.141506+00:00",
+      "narrative": "Maltby Sports secured a decisive 7-2 victory over Colson Overhead Doors, solidifying their position at the top of the standings. Trevor Johnson and Thomas Mccrossin each contributed with 2 goals and 1 assist, while Ian McCarthy had a standout 4-point night with 1 goal and 3 assists. The win keeps Maltby Sports on a roll, while Colson's struggles continue as they remain on the playoff bubble.",
+      "game_datetime": "2026-01-07T00:45:00+00:00",
+      "home_team": "Maltby Sports",
+      "away_team": "Colson Overhead Doors",
+      "home_score": 7,
+      "away_score": 2,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276572&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276572&p=boxscore"
     },
     {
       "game_id": "3276570",
@@ -177,8 +192,8 @@
       "away_team": "Ultramar",
       "home_score": 8,
       "away_score": 6,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276463&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276463&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276463&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276463&u=DSMALL&s=hockey&p=boxscore",
       "narrative": "In a thrilling matchup, G.R. Mitchell Welding defeated Ultramar 8-6, securing a vital win as both teams vie for playoff positioning. Meathead MacDonald led the charge with a hat trick, scoring 4 goals and adding 2 assists for a 6-point night, while Cody Sutton contributed 4 assists. This victory helps G.R. Mitchell Welding improve their standing as they aim to bounce back from two previous losses."
     },
     {
