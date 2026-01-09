@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-09T12:43:15.976617",
+  "timestamp": "2026-01-09T16:27:39.663019",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -4308,7 +4308,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2026-01-09T12:43:15.842476+00:00",
+    "generated_at": "2026-01-09T16:27:39.530694+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",
@@ -4433,8 +4433,8 @@
         "points_per_game": 0.67,
         "team_games_played": 16,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-hebert-denis-19",
@@ -4454,8 +4454,8 @@
         "points_per_game": 1.64,
         "team_games_played": 16,
         "games_missed": null,
-        "recent_points": 3,
-        "recent_games": 4
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-boutiler-gerald-22",
@@ -4646,8 +4646,8 @@
         "points_per_game": 1.2,
         "team_games_played": 16,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-davison-bill-74",
@@ -4752,8 +4752,8 @@
         "points_per_game": 1.85,
         "team_games_played": 16,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-black-mark-9",
@@ -5111,8 +5111,8 @@
         "points_per_game": 1.75,
         "team_games_played": 14,
         "games_missed": null,
-        "recent_points": -4,
-        "recent_games": -2
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "j-and-k-electric-budd-ryan-18",
@@ -5433,8 +5433,8 @@
         "points_per_game": 2.0,
         "team_games_played": 12,
         "games_missed": null,
-        "recent_points": -4,
-        "recent_games": -4
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-johnson-trevor-18",
@@ -5454,8 +5454,8 @@
         "points_per_game": 1.29,
         "team_games_played": 12,
         "games_missed": null,
-        "recent_points": 7,
-        "recent_games": 5
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-mccrossin-thomas-19",
@@ -5475,8 +5475,8 @@
         "points_per_game": 1.87,
         "team_games_played": 12,
         "games_missed": null,
-        "recent_points": 3,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-gallant-matt-2",
@@ -5496,8 +5496,8 @@
         "points_per_game": 1.12,
         "team_games_played": 12,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-codling-ryder-29",
@@ -5623,8 +5623,8 @@
         "points_per_game": 1.29,
         "team_games_played": 12,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-mccarthy-ian-9",
@@ -5644,8 +5644,8 @@
         "points_per_game": 2.46,
         "team_games_played": 12,
         "games_missed": null,
-        "recent_points": 4,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-arbing-ryan-91",
@@ -5666,8 +5666,8 @@
         "points_per_game": 1.11,
         "team_games_played": 12,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-bridge-issac-98",
@@ -5687,8 +5687,8 @@
         "points_per_game": 3.13,
         "team_games_played": 12,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "ultramar-thomas-remi-1",
