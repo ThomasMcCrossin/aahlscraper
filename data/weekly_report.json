@@ -1,8 +1,39 @@
 {
-  "generated_at": "2026-01-10T20:21:19.431762+00:00",
-  "standings_snapshot": "standings-20260110T202118Z.json",
-  "previous_snapshot": "standings-20260108T202442Z.json",
-  "standings_movements": [],
+  "generated_at": "2026-01-11T12:39:40.389387+00:00",
+  "standings_snapshot": "standings-20260111T123939Z.json",
+  "previous_snapshot": "standings-20260110T202118Z.json",
+  "standings_movements": [
+    {
+      "team": "Maltby Sports",
+      "current_points": 27,
+      "previous_points": 0,
+      "points_change": 27
+    },
+    {
+      "team": "J&K Electric",
+      "current_points": 27,
+      "previous_points": 0,
+      "points_change": 27
+    },
+    {
+      "team": "G.R. Mitchell Welding",
+      "current_points": 21,
+      "previous_points": 0,
+      "points_change": 21
+    },
+    {
+      "team": "Ultramar",
+      "current_points": 7,
+      "previous_points": 0,
+      "points_change": 7
+    },
+    {
+      "team": "Colson Overhead Doors",
+      "current_points": 6,
+      "previous_points": 0,
+      "points_change": 6
+    }
+  ],
   "recent_team_form": [
     {
       "team": "Maltby Sports",
