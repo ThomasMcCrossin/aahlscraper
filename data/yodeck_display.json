@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-11T20:22:26.224258",
+  "timestamp": "2026-01-12T03:08:23.701292",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -3470,37 +3470,6 @@
   ],
   "upcoming_games": [
     {
-      "game_id": "3276578",
-      "status": "scheduled",
-      "location": "Amherst",
-      "division": null,
-      "start_utc": "2026-01-12T01:00:00+00:00",
-      "start_local": "2026-01-11T21:00:00-04:00",
-      "home": "Ultramar",
-      "away": "J&K Electric",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276578&u=DSMALL&s=hockey&p=preview",
-      "summary_url": null,
-      "home_line": {
-        "name": "Ultramar",
-        "slug": "ultramar",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "away_line": {
-        "name": "J&K Electric",
-        "slug": "j-and-k-electric",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "home_score": "",
-      "away_score": "",
-      "datetime": "2026-01-11T21:00:00-04:00",
-      "date": "01/11/2026",
-      "time": "9:00 PM"
-    },
-    {
       "game_id": "3276639",
       "status": "scheduled",
       "location": "Amherst",
@@ -3778,6 +3747,37 @@
       "datetime": "2026-02-01T21:00:00-04:00",
       "date": "02/01/2026",
       "time": "9:00 PM"
+    },
+    {
+      "game_id": "3276663",
+      "status": "scheduled",
+      "location": "Amherst",
+      "division": null,
+      "start_utc": "2026-02-04T00:45:00+00:00",
+      "start_local": "2026-02-03T20:45:00-04:00",
+      "home": "G.R. Mitchell Welding",
+      "away": "J&K Electric",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276663&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
+      "home_line": {
+        "name": "G.R. Mitchell Welding",
+        "slug": "gr-mitchell-welding",
+        "final": null,
+        "periods": [],
+        "is_winner": null
+      },
+      "away_line": {
+        "name": "J&K Electric",
+        "slug": "j-and-k-electric",
+        "final": null,
+        "periods": [],
+        "is_winner": null
+      },
+      "home_score": "",
+      "away_score": "",
+      "datetime": "2026-02-03T20:45:00-04:00",
+      "date": "02/03/2026",
+      "time": "8:45 PM"
     }
   ],
   "headlines": [
@@ -4308,7 +4308,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2026-01-11T20:22:26.099085+00:00",
+    "generated_at": "2026-01-12T03:08:23.584182+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-11T20:22:26.092070+00:00",
+  "generated_at": "2026-01-12T03:08:23.576092+00:00",
   "standings_snapshot": "standings-20260111T123939Z.json",
   "previous_snapshot": "standings-20260110T202118Z.json",
   "standings_movements": [
@@ -36,14 +36,14 @@
   ],
   "recent_team_form": [
     {
-      "team": "Maltby Sports",
-      "played": 2,
-      "wins": 2,
+      "team": "J&K Electric",
+      "played": 1,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
     {
-      "team": "J&K Electric",
+      "team": "Maltby Sports",
       "played": 1,
       "wins": 1,
       "losses": 0,
@@ -58,13 +58,6 @@
     },
     {
       "team": "Colson Overhead Doors",
-      "played": 1,
-      "wins": 0,
-      "losses": 1,
-      "ties": 0
-    },
-    {
-      "team": "Ultramar",
       "played": 1,
       "wins": 0,
       "losses": 1,
