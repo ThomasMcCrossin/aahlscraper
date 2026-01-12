@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-12T12:45:25.374070+00:00",
+  "generated_at": "2026-01-12T16:26:24.002175+00:00",
   "headlines": [
     {
       "game_id": "3276574",
@@ -13,8 +13,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 8,
       "away_score": 5,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276574&u=DSMALL&s=hockey&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276574&u=DSMALL&s=hockey&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276574&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276574&p=boxscore"
     },
     {
       "game_id": "3276572",
@@ -28,8 +28,8 @@
       "away_team": "Colson Overhead Doors",
       "home_score": 7,
       "away_score": 2,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276572&u=DSMALL&s=hockey&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276572&u=DSMALL&s=hockey&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276572&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276572&p=boxscore"
     },
     {
       "game_id": "3276570",
@@ -43,8 +43,8 @@
       "away_team": "Ultramar",
       "home_score": 7,
       "away_score": 1,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276570&u=DSMALL&s=hockey&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276570&u=DSMALL&s=hockey&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276570&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276570&p=boxscore"
     },
     {
       "game_id": "3276568",
@@ -57,8 +57,8 @@
       "away_team": "Ultramar",
       "home_score": 4,
       "away_score": 7,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276568&u=DSMALL&s=hockey&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276568&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276568&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276568&p=boxscore",
       "narrative": "In a high-stakes matchup, Ultramar triumphed over Colson Overhead Doors with a final score of 7-4. Brad Linkletter led the charge with 2 goals and 1 assist, while Tim Burke also contributed with 2 goals. The win helps Ultramar solidify their position in the playoff race, while Colson's loss marks their third consecutive defeat."
     },
     {
@@ -72,8 +72,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 5,
       "away_score": 2,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276566&u=DSMALL&s=hockey&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276566&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276566&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276566&p=boxscore",
       "narrative": "In a decisive matchup, J&K Electric defeated G.R. Mitchell Welding with a final score of 5-2. Avery Harrison led the charge with 2 goals, while Jaxon Reynolds had a standout 4-point night with 1 goal and 3 assists. This victory solidifies J&K Electric's position at the top of the standings as they continue their strong season."
     },
     {
@@ -87,8 +87,8 @@
       "away_team": "Ultramar",
       "home_score": 8,
       "away_score": 7,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276562&u=DSMALL&s=hockey&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276562&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276562&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276562&p=boxscore",
       "narrative": "In a thrilling matchup, J&K Electric edged out Ultramar with a final score of 8-7. Gerald Boutiler led the way for J&K Electric with 1 goal and 3 assists, while Ultramar's Matt Cove scored 2 goals in a strong effort. This victory helps J&K maintain their position at the top of the standings, further solidifying their playoff hopes."
     },
     {
@@ -102,8 +102,8 @@
       "away_team": "Colson Overhead Doors",
       "home_score": 5,
       "away_score": 3,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276560&u=DSMALL&s=hockey&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276560&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276560&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276560&p=boxscore",
       "narrative": "FINAL: Maltby Sports 5, Colson Overhead Doors 3. Isaac Bridge led the way for Maltby Sports with an impressive 4-goal night, while Trevor Johnson contributed with a goal and two assists. This victory helps Maltby maintain their strong position in the playoff race, improving their record to 2-1."
     },
     {
@@ -117,8 +117,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 6,
       "away_score": 5,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276556&u=DSMALL&s=hockey&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276556&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276556&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276556&p=boxscore",
       "narrative": "Colson Overhead Doors edged out G.R. Mitchell Welding with a final score of 6-5. Rory Faulkner led the way for Colson with 2 goals and 1 assist, while Dave Atkinson contributed for G.R. Mitchell with 1 goal and 2 assists. This win is crucial for Colson as they look to improve their playoff positioning after a tough stretch."
     },
     {
@@ -132,8 +132,8 @@
       "away_team": "J&K Electric",
       "home_score": 0,
       "away_score": 5,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276550&u=DSMALL&s=hockey&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276550&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276550&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276550&p=boxscore",
       "narrative": "J&K Electric secured a decisive 5-0 victory over Colson Overhead Doors, solidifying their position as the top-ranked team in the league. Jeremy Kinnear led the scoring with 2 goals, while Rubein Mackenzie, Pat Morris, and Brendan Stone each contributed with a goal and an assist. This loss leaves Colson Overhead Doors struggling as they enter the playoff bubble."
     },
     {
@@ -147,8 +147,8 @@
       "away_team": "Ultramar",
       "home_score": 6,
       "away_score": 3,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276552&u=DSMALL&s=hockey&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276552&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276552&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276552&p=boxscore",
       "narrative": "G.R. Mitchell Welding secured a 6-3 victory over Ultramar, with Meathead MacDonald leading the charge with an impressive 4 goals and 1 assist for a 5-point night. The win helps G.R. Mitchell Welding solidify their position in the playoff race, improving their ranking as they bounce back from two consecutive losses."
     },
     {
@@ -162,8 +162,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 3,
       "away_score": 5,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276548&u=DSMALL&s=hockey&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276548&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276548&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276548&p=boxscore",
       "narrative": "G.R. Mitchell Welding defeated Maltby Sports 5-3 in a crucial playoff positioning matchup. Dave Atkinson led the way with 1 goal and 2 assists, while Nick \"Pickle\" Dobson and Zack Fullerton each contributed 1 goal and 1 assist. This win helps G.R. Mitchell Welding improve their standing after a tough start, while Maltby Sports looks to rebound after their recent victory."
     },
     {
@@ -177,8 +177,8 @@
       "away_team": "Colson Overhead Doors",
       "home_score": 12,
       "away_score": 2,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276461&u=DSMALL&s=hockey&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276461&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276461&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276461&p=boxscore",
       "narrative": "Maltby Sports dominated Colson Overhead Doors with a final score of 12-2. Isaac Bridge led the way with a hat trick, scoring 4 goals, while Ian McCarthy had an impressive 8-point night with 2 goals and 6 assists. This victory solidifies Maltby Sports' position as they continue their push for the playoffs."
     },
     {
