@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-13T20:24:33.944277+00:00",
+  "generated_at": "2026-01-14T02:55:03.495438+00:00",
   "headlines": [
     {
       "game_id": "3276574",
@@ -177,8 +177,8 @@
       "away_team": "Colson Overhead Doors",
       "home_score": 12,
       "away_score": 2,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276461&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276461&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276461&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276461&u=DSMALL&s=hockey&p=boxscore",
       "narrative": "Maltby Sports dominated Colson Overhead Doors with a final score of 12-2. Isaac Bridge led the way with a hat trick, scoring 4 goals, while Ian McCarthy had an impressive 8-point night with 2 goals and 6 assists. This victory solidifies Maltby Sports' position as they continue their push for the playoffs."
     },
     {
