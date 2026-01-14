@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-14T04:09:54.444284+00:00",
+  "generated_at": "2026-01-14T03:07:07.594969+00:00",
   "players": [
     {
       "player_id": "colson-overhead-doors-terrio-marshall-00",
@@ -145,8 +145,8 @@
       "points_per_game": 2.0,
       "team_games_played": 16,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": -2,
+      "recent_games": -3
     },
     {
       "player_id": "colson-overhead-doors-boutiler-gerald-22",
@@ -888,7 +888,7 @@
       "team_games_played": 14,
       "games_missed": null,
       "recent_points": 0,
-      "recent_games": 0
+      "recent_games": 1
     },
     {
       "player_id": "j-and-k-electric-mansour-mikhial-26",
@@ -1015,8 +1015,8 @@
       "points_per_game": 2.08,
       "team_games_played": 14,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "j-and-k-electric-davison-bill-74",
@@ -1124,8 +1124,8 @@
       "points_per_game": 1.58,
       "team_games_played": 12,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 5,
+      "recent_games": 5
     },
     {
       "player_id": "maltby-sports-johnson-trevor-18",
@@ -1145,8 +1145,8 @@
       "points_per_game": 1.27,
       "team_games_played": 12,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "maltby-sports-mccrossin-thomas-19",
@@ -1272,8 +1272,8 @@
       "points_per_game": 1.54,
       "team_games_played": 12,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "maltby-sports-hurley-connor-7",
@@ -1335,8 +1335,8 @@
       "points_per_game": 2.5,
       "team_games_played": 12,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 3,
+      "recent_games": 1
     },
     {
       "player_id": "maltby-sports-arbing-ryan-91",
@@ -1378,8 +1378,8 @@
       "points_per_game": 3.06,
       "team_games_played": 12,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 2,
+      "recent_games": 1
     },
     {
       "player_id": "ultramar-thomas-remi-1",
