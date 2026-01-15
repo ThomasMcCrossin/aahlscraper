@@ -1,26 +1,26 @@
 no,name,team,pos,gp,g,a,pts,ppg,shg,gwg,gtg,pim,pts_g,team_id,team_name,player_id,team_slug
-98,"Bridge, Issac",Maltby Sports,C,16,32,17,49,1,2,,2,3,3.06,TYLERARSENEAU-1,Maltby Sports,maltby-sports-bridge-issac-98,maltby-sports
-97,"MacDonald, Meathead",G.R. Mitchell Welding,C,13,26,20,46,1,1,,2,31,3.54,983723,G.R. Mitchell Welding,gr-mitchell-welding-macdonald-meathead-97,gr-mitchell-welding
+98,"Bridge, Issac",Maltby Sports,C,17,33,18,51,1,2,,3,3,3.00,TYLERARSENEAU-1,Maltby Sports,maltby-sports-bridge-issac-98,maltby-sports
+97,"MacDonald, Meathead",G.R. Mitchell Welding,C,13,26,20,46,1,1,,2,36,3.54,983723,G.R. Mitchell Welding,gr-mitchell-welding-macdonald-meathead-97,gr-mitchell-welding
+38,"Atkinson, Dave",G.R. Mitchell Welding,F,18,13,25,38,,,,2,3,2.11,983723,G.R. Mitchell Welding,gr-mitchell-welding-atkinson-dave-38,gr-mitchell-welding
 28,"Stone, Brendan",J&K Electric,F,15,19,19,38,1,2,1,,,2.53,TYLERARSENEAU-4,J&K Electric,j-and-k-electric-stone-brendan-28,j-and-k-electric
-38,"Atkinson, Dave",G.R. Mitchell Welding,F,17,12,24,36,,,,2,3,2.12,983723,G.R. Mitchell Welding,gr-mitchell-welding-atkinson-dave-38,gr-mitchell-welding
-9,"McCarthy, Ian",Maltby Sports,F,14,14,21,35,,1,1,,3,2.50,TYLERARSENEAU-1,Maltby Sports,maltby-sports-mccarthy-ian-9,maltby-sports
+9,"McCarthy, Ian",Maltby Sports,F,15,14,22,36,,1,1,,3,2.40,TYLERARSENEAU-1,Maltby Sports,maltby-sports-mccarthy-ian-9,maltby-sports
 9,"Leopold, Nick",J&K Electric,F/D,13,8,20,28,1,,,1,26,2.15,TYLERARSENEAU-4,J&K Electric,j-and-k-electric-leopold-nick-9,j-and-k-electric
 19,"Mccrossin, Thomas",Maltby Sports,F,15,10,18,28,,,,,6,1.87,TYLERARSENEAU-1,Maltby Sports,maltby-sports-mccrossin-thomas-19,maltby-sports
 4,"Mackenzie, Rubein",J&K Electric,F,13,9,18,27,,,1,,3,2.08,TYLERARSENEAU-4,J&K Electric,j-and-k-electric-mackenzie-rubein-4,j-and-k-electric
 22,"Boutiler, Gerald",J&K Electric,D/F,18,6,20,26,,,,3,18,1.44,TYLERARSENEAU-4,J&K Electric,j-and-k-electric-boutiler-gerald-22,j-and-k-electric
+90,"Fullerton, Zack",G.R. Mitchell Welding,F,14,12,12,24,,,,1,3,1.71,983723,G.R. Mitchell Welding,gr-mitchell-welding-fullerton-zack-90,gr-mitchell-welding
 88,"Gould, Zack",Colson Overhead Doors,F,13,14,10,24,,1,,3,9,1.85,TYLERARSENEAU-3,Colson Overhead Doors,colson-overhead-doors-gould-zack-88,colson-overhead-doors
+9,"Linkletter, Brad",Ultramar,C,14,16,8,24,,1,,4,3,1.71,TYLERARSENEAU-2,Ultramar,ultramar-linkletter-brad-9,ultramar
 16,"Small, Danny ""Biggie""",Maltby Sports,F/D,12,12,12,24,,,,1,,2.00,TYLERARSENEAU-1,Maltby Sports,maltby-sports-small-danny-biggie-16,maltby-sports
-90,"Fullerton, Zack",G.R. Mitchell Welding,F,13,12,10,22,,,,1,,1.69,983723,G.R. Mitchell Welding,gr-mitchell-welding-fullerton-zack-90,gr-mitchell-welding
-9,"Linkletter, Brad",Ultramar,C,13,15,7,22,,1,,4,3,1.69,TYLERARSENEAU-2,Ultramar,ultramar-linkletter-brad-9,ultramar
-21,"Macpherson, Ryan",G.R. Mitchell Welding,,11,12,10,22,,,,1,3,2.00,983723,G.R. Mitchell Welding,gr-mitchell-welding-macpherson-ryan-21,gr-mitchell-welding
+21,"Macpherson, Ryan",G.R. Mitchell Welding,,12,13,10,23,,,,2,3,1.92,983723,G.R. Mitchell Welding,gr-mitchell-welding-macpherson-ryan-21,gr-mitchell-welding
 4,"Dobson, Aaron",Ultramar,D,10,5,16,21,1,,,1,12,2.10,TYLERARSENEAU-2,Ultramar,ultramar-dobson-aaron-4,ultramar
+18,"Johnson, Trevor",Maltby Sports,D,16,9,12,21,1,1,,1,21,1.31,TYLERARSENEAU-1,Maltby Sports,maltby-sports-johnson-trevor-18,maltby-sports
+11,"Allen, Tyler ""Tuffy""",Ultramar,F,13,11,9,20,,,,,18,1.54,TYLERARSENEAU-2,Ultramar,ultramar-allen-tyler-tuffy-11,ultramar
+7,"Helm, Corey",G.R. Mitchell Welding,D/F,14,2,18,20,,1,,,6,1.43,983723,G.R. Mitchell Welding,gr-mitchell-welding-helm-corey-7,gr-mitchell-welding
 63,"Leblanc, Travis",Maltby Sports,F/D,13,9,11,20,,,,,15,1.54,TYLERARSENEAU-1,Maltby Sports,maltby-sports-leblanc-travis-63,maltby-sports
-13,"Mitchell, Gordon",G.R. Mitchell Welding,F/D,13,6,14,20,,,,1,18,1.54,983723,G.R. Mitchell Welding,gr-mitchell-welding-mitchell-gordon-13,gr-mitchell-welding
-11,"Allen, Tyler ""Tuffy""",Ultramar,F,12,11,8,19,,,,,18,1.58,TYLERARSENEAU-2,Ultramar,ultramar-allen-tyler-tuffy-11,ultramar
-7,"Helm, Corey",G.R. Mitchell Welding,D/F,13,2,17,19,,1,,,6,1.46,983723,G.R. Mitchell Welding,gr-mitchell-welding-helm-corey-7,gr-mitchell-welding
-18,"Johnson, Trevor",Maltby Sports,D,15,7,12,19,1,,,1,15,1.27,TYLERARSENEAU-1,Maltby Sports,maltby-sports-johnson-trevor-18,maltby-sports
-17,"Maltby, Chris",Maltby Sports,D/F,12,4,15,19,,,,,15,1.58,TYLERARSENEAU-1,Maltby Sports,maltby-sports-maltby-chris-17,maltby-sports
+13,"Mitchell, Gordon",G.R. Mitchell Welding,F/D,14,6,14,20,,,,1,24,1.43,983723,G.R. Mitchell Welding,gr-mitchell-welding-mitchell-gordon-13,gr-mitchell-welding
+17,"Maltby, Chris",Maltby Sports,D/F,13,4,15,19,,,,,21,1.46,TYLERARSENEAU-1,Maltby Sports,maltby-sports-maltby-chris-17,maltby-sports
 61,"Sutton, Cody",G.R. Mitchell Welding,F/D,11,4,15,19,1,,,1,6,1.73,983723,G.R. Mitchell Welding,gr-mitchell-welding-sutton-cody-61,gr-mitchell-welding
+9,"Bourgeois, Julien",G.R. Mitchell Welding,F,13,4,14,18,,,,2,9,1.38,983723,G.R. Mitchell Welding,gr-mitchell-welding-bourgeois-julien-9,gr-mitchell-welding
 76,"Faulkner, Rory",Colson Overhead Doors,F,10,10,8,18,,1,,3,3,1.80,TYLERARSENEAU-3,Colson Overhead Doors,colson-overhead-doors-faulkner-rory-76,colson-overhead-doors
 23,"Gesner, Logan",Colson Overhead Doors,D/F,12,1,17,18,,,,,32,1.50,TYLERARSENEAU-3,Colson Overhead Doors,colson-overhead-doors-gesner-logan-23,colson-overhead-doors
-00,"Harrison, Avery",J&K Electric,D,12,8,10,18,1,,,2,9,1.50,TYLERARSENEAU-4,J&K Electric,j-and-k-electric-harrison-avery-00,j-and-k-electric

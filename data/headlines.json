@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-01-15T16:34:48.340923+00:00",
+  "generated_at": "2026-01-15T20:25:45.011892+00:00",
   "headlines": [
+    {
+      "game_id": "3276641",
+      "headline": "Ultramar Shuts Out Colson Overhead Doors 2-0; Linkletter Sparks Offense with Goal and Assist",
+      "ai_generated": true,
+      "created_at": "2026-01-15T20:25:35.774477+00:00",
+      "updated_at": "2026-01-15T20:25:35.774477+00:00",
+      "narrative": "FINAL: Ultramar 2, Colson Overhead Doors 0. Brad Linkletter led the way for Ultramar with a goal and an assist, while Robert Malcolm added another goal for the win. With this victory, Ultramar strengthens their position in the playoff race, while Colson Overhead Doors continues to struggle, now on a five-game losing streak.",
+      "game_datetime": "2026-01-14T02:00:00+00:00",
+      "home_team": "Colson Overhead Doors",
+      "away_team": "Ultramar",
+      "home_score": 0,
+      "away_score": 2,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276641&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276641&p=boxscore"
+    },
+    {
+      "game_id": "3276639",
+      "headline": "Thrilling Stalemate: Maltby Sports and G.R. Mitchell Welding Battle to 3-3 Tie, Johnson & Atkinson Shine!",
+      "ai_generated": true,
+      "created_at": "2026-01-15T20:25:35.774477+00:00",
+      "updated_at": "2026-01-15T20:25:35.774477+00:00",
+      "narrative": "In a tightly contested matchup, Maltby Sports and G.R. Mitchell Welding ended in a 3-3 tie. Trevor Johnson led Maltby Sports with 2 goals, while Issac Bridge contributed 1 goal and 1 assist. For G.R. Mitchell Welding, Dave Atkinson scored 1 goal and added 1 assist, with Julien Bourgeois also netting a goal.",
+      "game_datetime": "2026-01-14T00:45:00+00:00",
+      "home_team": "Maltby Sports",
+      "away_team": "G.R. Mitchell Welding",
+      "home_score": 3,
+      "away_score": 3,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276639&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276639&p=boxscore"
+    },
     {
       "game_id": "3276574",
       "headline": "J&K Electric Powers Past G.R. Mitchell Welding 8-5 with Reynolds and Stone's Multi-Goal Efforts!",
@@ -162,8 +192,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 3,
       "away_score": 5,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276548&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276548&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276548&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276548&u=DSMALL&s=hockey&p=boxscore",
       "narrative": "G.R. Mitchell Welding defeated Maltby Sports 5-3 in a crucial playoff positioning matchup. Dave Atkinson led the way with 1 goal and 2 assists, while Nick \"Pickle\" Dobson and Zack Fullerton each contributed 1 goal and 1 assist. This win helps G.R. Mitchell Welding improve their standing after a tough start, while Maltby Sports looks to rebound after their recent victory."
     },
     {
