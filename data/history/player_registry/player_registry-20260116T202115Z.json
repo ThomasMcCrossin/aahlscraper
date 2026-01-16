@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-16T20:21:16.272414+00:00",
+  "generated_at": "2026-01-16T16:28:10.790123+00:00",
   "players": [
     {
       "player_id": "colson-overhead-doors-terrio-marshall-00",
@@ -1209,7 +1209,7 @@
       "team_games_played": 13,
       "games_missed": null,
       "recent_points": 0,
-      "recent_games": 0
+      "recent_games": 1
     },
     {
       "player_id": "maltby-sports-maltby-chris-17",
@@ -1230,8 +1230,8 @@
       "points_per_game": 1.43,
       "team_games_played": 13,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "maltby-sports-johnson-trevor-18",
@@ -1251,8 +1251,8 @@
       "points_per_game": 1.41,
       "team_games_played": 13,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 3,
+      "recent_games": 1
     },
     {
       "player_id": "maltby-sports-mccrossin-thomas-19",
@@ -1272,8 +1272,8 @@
       "points_per_game": 1.81,
       "team_games_played": 13,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "maltby-sports-gallant-matt-2",
@@ -1378,8 +1378,8 @@
       "points_per_game": 1.5,
       "team_games_played": 13,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "maltby-sports-hurley-connor-7",
@@ -1441,8 +1441,8 @@
       "points_per_game": 2.38,
       "team_games_played": 13,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 2,
+      "recent_games": 1
     },
     {
       "player_id": "maltby-sports-arbing-ryan-91",
@@ -1485,7 +1485,7 @@
       "team_games_played": 13,
       "games_missed": null,
       "recent_points": 0,
-      "recent_games": 0
+      "recent_games": 1
     },
     {
       "player_id": "ultramar-thomas-remi-1",
@@ -1677,8 +1677,8 @@
       "points_per_game": 2.0,
       "team_games_played": 15,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     {
       "player_id": "ultramar-bonnell-andy-5",
@@ -1782,8 +1782,8 @@
       "points_per_game": 1.67,
       "team_games_played": 15,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     }
   ]
 }
