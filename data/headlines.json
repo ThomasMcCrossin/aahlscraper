@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-15T20:25:45.011892+00:00",
+  "generated_at": "2026-01-16T12:43:28.920703+00:00",
   "headlines": [
     {
       "game_id": "3276641",
@@ -177,8 +177,8 @@
       "away_team": "Ultramar",
       "home_score": 6,
       "away_score": 3,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276552&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276552&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276552&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276552&u=DSMALL&s=hockey&p=boxscore",
       "narrative": "G.R. Mitchell Welding secured a 6-3 victory over Ultramar, with Meathead MacDonald leading the charge with an impressive 4 goals and 1 assist for a 5-point night. The win helps G.R. Mitchell Welding solidify their position in the playoff race, improving their ranking as they bounce back from two consecutive losses."
     },
     {
