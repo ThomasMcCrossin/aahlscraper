@@ -1,6 +1,21 @@
 {
-  "generated_at": "2026-01-19T12:48:51.535496+00:00",
+  "generated_at": "2026-01-19T16:29:14.350730+00:00",
   "headlines": [
+    {
+      "game_id": "3276645",
+      "headline": "Thrilling Standoff: Colson Overhead Doors and G.R. Mitchell Welding Battle to 3-3 Tie, Terrio and Atkinson Shine!",
+      "ai_generated": true,
+      "created_at": "2026-01-19T16:29:08.217048+00:00",
+      "updated_at": "2026-01-19T16:29:08.217048+00:00",
+      "narrative": "The game between Colson Overhead Doors and G.R. Mitchell Welding ended in a 3-3 tie, impacting both teams' playoff hopes. Colson's Marshall Terrio led the scoring with 2 goals, while Zack Gould contributed 1 goal and 1 assist. For G.R. Mitchell, Dave Atkinson netted 2 goals, and Geoff Ryan added 1 goal to the mix.",
+      "game_datetime": "2026-01-19T01:00:00+00:00",
+      "home_team": "Colson Overhead Doors",
+      "away_team": "G.R. Mitchell Welding",
+      "home_score": 3,
+      "away_score": 3,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276645&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276645&p=boxscore"
+    },
     {
       "game_id": "3276641",
       "headline": "Ultramar Shuts Out Colson Overhead Doors 2-0; Linkletter Sparks Offense with Goal and Assist",
@@ -162,8 +177,8 @@
       "away_team": "J&K Electric",
       "home_score": 0,
       "away_score": 5,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276550&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276550&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276550&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276550&u=DSMALL&s=hockey&p=boxscore",
       "narrative": "J&K Electric secured a decisive 5-0 victory over Colson Overhead Doors, solidifying their position as the top-ranked team in the league. Jeremy Kinnear led the scoring with 2 goals, while Rubein Mackenzie, Pat Morris, and Brendan Stone each contributed with a goal and an assist. This loss leaves Colson Overhead Doors struggling as they enter the playoff bubble."
     },
     {

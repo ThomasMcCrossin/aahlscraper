@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-19T12:48:51.682036",
+  "timestamp": "2026-01-19T16:29:14.528758",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -19,8 +19,8 @@
       "team": "G.R. Mitchell Welding",
       "wins": 10,
       "losses": 7,
-      "ties": 2,
-      "points": 22
+      "ties": 3,
+      "points": 23
     },
     {
       "team": "Ultramar",
@@ -33,8 +33,8 @@
       "team": "Colson Overhead Doors",
       "wins": 2,
       "losses": 16,
-      "ties": 2,
-      "points": 6
+      "ties": 3,
+      "points": 7
     }
   ],
   "top_scorers": [
@@ -84,7 +84,7 @@
       "team_slug": "gr-mitchell-welding",
       "points": 46,
       "rank": 2,
-      "hot_streak": 5,
+      "hot_streak": 4,
       "cold_streak": 0,
       "recent_goals": 9
     },
@@ -93,11 +93,11 @@
       "name": "Dave Atkinson",
       "team": "G.R. Mitchell Welding",
       "pos": "F",
-      "gp": "18",
-      "g": "13",
+      "gp": "19",
+      "g": "15",
       "a": "25",
-      "pts": "38",
-      "ppg": 1.0,
+      "pts": "40",
+      "ppg": 1.33,
       "shg": "",
       "gwg": "",
       "gtg": "2",
@@ -107,11 +107,11 @@
       "team_name": "G.R. Mitchell Welding",
       "player_id": "gr-mitchell-welding-atkinson-dave-38",
       "team_slug": "gr-mitchell-welding",
-      "points": 38,
+      "points": 40,
       "rank": 3,
-      "hot_streak": 4,
+      "hot_streak": 5,
       "cold_streak": 0,
-      "recent_goals": 3
+      "recent_goals": 4
     },
     {
       "no": "9",
@@ -264,6 +264,56 @@
       "recent_goals": 1
     },
     {
+      "no": "88",
+      "name": "Zack Gould",
+      "team": "Colson Overhead Doors",
+      "pos": "F",
+      "gp": "14",
+      "g": "15",
+      "a": "11",
+      "pts": "26",
+      "ppg": 0.33,
+      "shg": "1",
+      "gwg": "",
+      "gtg": "3",
+      "pim": "15",
+      "pts_g": "1.86",
+      "team_id": "TYLERARSENEAU-3",
+      "team_name": "Colson Overhead Doors",
+      "player_id": "colson-overhead-doors-gould-zack-88",
+      "team_slug": "colson-overhead-doors",
+      "points": 26,
+      "rank": 10,
+      "hot_streak": 0,
+      "cold_streak": 0,
+      "recent_goals": 1
+    },
+    {
+      "no": "90",
+      "name": "Zack Fullerton",
+      "team": "G.R. Mitchell Welding",
+      "pos": "F",
+      "gp": "15",
+      "g": "12",
+      "a": "13",
+      "pts": "25",
+      "ppg": 0.33,
+      "shg": "",
+      "gwg": "",
+      "gtg": "1",
+      "pim": "3",
+      "pts_g": "1.67",
+      "team_id": "983723",
+      "team_name": "G.R. Mitchell Welding",
+      "player_id": "gr-mitchell-welding-fullerton-zack-90",
+      "team_slug": "gr-mitchell-welding",
+      "points": 25,
+      "rank": 11,
+      "hot_streak": 0,
+      "cold_streak": 0,
+      "recent_goals": 1
+    },
+    {
       "no": "9",
       "name": "Brad Linkletter",
       "team": "Ultramar",
@@ -283,60 +333,10 @@
       "player_id": "ultramar-linkletter-brad-9",
       "team_slug": "ultramar",
       "points": 25,
-      "rank": 10,
+      "rank": 12,
       "hot_streak": 3,
       "cold_streak": 0,
       "recent_goals": 4
-    },
-    {
-      "no": "90",
-      "name": "Zack Fullerton",
-      "team": "G.R. Mitchell Welding",
-      "pos": "F",
-      "gp": "14",
-      "g": "12",
-      "a": "12",
-      "pts": "24",
-      "ppg": 0.67,
-      "shg": "",
-      "gwg": "",
-      "gtg": "1",
-      "pim": "3",
-      "pts_g": "1.71",
-      "team_id": "983723",
-      "team_name": "G.R. Mitchell Welding",
-      "player_id": "gr-mitchell-welding-fullerton-zack-90",
-      "team_slug": "gr-mitchell-welding",
-      "points": 24,
-      "rank": 11,
-      "hot_streak": 0,
-      "cold_streak": 0,
-      "recent_goals": 2
-    },
-    {
-      "no": "88",
-      "name": "Zack Gould",
-      "team": "Colson Overhead Doors",
-      "pos": "F",
-      "gp": "13",
-      "g": "14",
-      "a": "10",
-      "pts": "24",
-      "ppg": 0.33,
-      "shg": "1",
-      "gwg": "",
-      "gtg": "3",
-      "pim": "9",
-      "pts_g": "1.85",
-      "team_id": "TYLERARSENEAU-3",
-      "team_name": "Colson Overhead Doors",
-      "player_id": "colson-overhead-doors-gould-zack-88",
-      "team_slug": "colson-overhead-doors",
-      "points": 24,
-      "rank": 12,
-      "hot_streak": 0,
-      "cold_streak": 0,
-      "recent_goals": 1
     },
     {
       "no": "18",
@@ -393,25 +393,25 @@
       "name": "Ryan Macpherson",
       "team": "G.R. Mitchell Welding",
       "pos": "",
-      "gp": "12",
+      "gp": "13",
       "g": "13",
       "a": "10",
       "pts": "23",
-      "ppg": 1.0,
+      "ppg": 0.67,
       "shg": "",
       "gwg": "",
       "gtg": "2",
-      "pim": "3",
-      "pts_g": "1.92",
+      "pim": "6",
+      "pts_g": "1.77",
       "team_id": "983723",
       "team_name": "G.R. Mitchell Welding",
       "player_id": "gr-mitchell-welding-macpherson-ryan-21",
       "team_slug": "gr-mitchell-welding",
       "points": 23,
       "rank": 15,
-      "hot_streak": 3,
+      "hot_streak": 0,
       "cold_streak": 0,
-      "recent_goals": 3
+      "recent_goals": 2
     },
     {
       "no": "4",
@@ -439,6 +439,31 @@
       "recent_goals": 1
     },
     {
+      "no": "7",
+      "name": "Corey Helm",
+      "team": "G.R. Mitchell Welding",
+      "pos": "D/F",
+      "gp": "15",
+      "g": "2",
+      "a": "19",
+      "pts": "21",
+      "ppg": 0.0,
+      "shg": "1",
+      "gwg": "",
+      "gtg": "",
+      "pim": "6",
+      "pts_g": "1.40",
+      "team_id": "983723",
+      "team_name": "G.R. Mitchell Welding",
+      "player_id": "gr-mitchell-welding-helm-corey-7",
+      "team_slug": "gr-mitchell-welding",
+      "points": 21,
+      "rank": 17,
+      "hot_streak": 0,
+      "cold_streak": 7,
+      "recent_goals": 0
+    },
+    {
       "no": "63",
       "name": "Travis Leblanc",
       "team": "Maltby Sports",
@@ -458,7 +483,7 @@
       "player_id": "maltby-sports-leblanc-travis-63",
       "team_slug": "maltby-sports",
       "points": 21,
-      "rank": 17,
+      "rank": 18,
       "hot_streak": 0,
       "cold_streak": 0,
       "recent_goals": 2
@@ -483,63 +508,326 @@
       "player_id": "ultramar-allen-tyler-tuffy-11",
       "team_slug": "ultramar",
       "points": 20,
-      "rank": 18,
+      "rank": 19,
       "hot_streak": 0,
       "cold_streak": 4,
       "recent_goals": 0
     },
     {
-      "no": "7",
-      "name": "Corey Helm",
-      "team": "G.R. Mitchell Welding",
-      "pos": "D/F",
-      "gp": "14",
-      "g": "2",
-      "a": "18",
+      "no": "19",
+      "name": "Denis Hebert",
+      "team": "Colson Overhead Doors",
+      "pos": "F",
+      "gp": "12",
+      "g": "7",
+      "a": "13",
       "pts": "20",
-      "ppg": 0.0,
-      "shg": "1",
-      "gwg": "",
-      "gtg": "",
-      "pim": "6",
-      "pts_g": "1.43",
-      "team_id": "983723",
-      "team_name": "G.R. Mitchell Welding",
-      "player_id": "gr-mitchell-welding-helm-corey-7",
-      "team_slug": "gr-mitchell-welding",
-      "points": 20,
-      "rank": 19,
-      "hot_streak": 0,
-      "cold_streak": 7,
-      "recent_goals": 0
-    },
-    {
-      "no": "17",
-      "name": "Chris Maltby",
-      "team": "Maltby Sports",
-      "pos": "D/F",
-      "gp": "14",
-      "g": "4",
-      "a": "16",
-      "pts": "20",
-      "ppg": 1.0,
+      "ppg": 0.33,
       "shg": "",
       "gwg": "",
-      "gtg": "",
-      "pim": "21",
-      "pts_g": "1.43",
-      "team_id": "TYLERARSENEAU-1",
-      "team_name": "Maltby Sports",
-      "player_id": "maltby-sports-maltby-chris-17",
-      "team_slug": "maltby-sports",
+      "gtg": "2",
+      "pim": "12",
+      "pts_g": "1.67",
+      "team_id": "TYLERARSENEAU-3",
+      "team_name": "Colson Overhead Doors",
+      "player_id": "colson-overhead-doors-hebert-denis-19",
+      "team_slug": "colson-overhead-doors",
       "points": 20,
       "rank": 20,
       "hot_streak": 0,
       "cold_streak": 0,
-      "recent_goals": 2
+      "recent_goals": 1
     }
   ],
   "recent_results": [
+    {
+      "game_id": "3276645",
+      "status": "final",
+      "location": "Amherst",
+      "division": "REGULAR SEASON",
+      "start_utc": "2026-01-19T01:00:00+00:00",
+      "start_local": "2026-01-18T21:00:00-04:00",
+      "home": "Colson Overhead Doors",
+      "away": "G.R. Mitchell Welding",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276645&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276645&p=summary",
+      "home_line": {
+        "name": "Colson Overhead Doors",
+        "slug": "colson-overhead-doors",
+        "final": 3,
+        "periods": [
+          2,
+          1,
+          0,
+          0,
+          0
+        ],
+        "is_winner": false
+      },
+      "away_line": {
+        "name": "G.R. Mitchell Welding",
+        "slug": "gr-mitchell-welding",
+        "final": 3,
+        "periods": [
+          0,
+          1,
+          2,
+          0,
+          0
+        ],
+        "is_winner": false
+      },
+      "home_score": 3,
+      "away_score": 3,
+      "result": "3 - 3",
+      "datetime": "2026-01-18T21:00:00-04:00",
+      "date": "01/18/2026",
+      "time": "9:00 PM",
+      "player_stats": {
+        "home": [
+          {
+            "player_id": "colson-overhead-doors-eatmon-chester-8",
+            "name": "Chester Eatmon",
+            "number": "8",
+            "positions": [
+              "F"
+            ],
+            "goals": 0,
+            "assists": 1,
+            "points": 1,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "colson-overhead-doors-gould-zack-88",
+            "name": "Zack Gould",
+            "number": "88",
+            "positions": [
+              "F"
+            ],
+            "goals": 1,
+            "assists": 1,
+            "points": 2,
+            "penalty_minutes": 6,
+            "gtg": 0
+          },
+          {
+            "player_id": "colson-overhead-doors-hebert-denis-19",
+            "name": "Denis Hebert",
+            "number": "19",
+            "positions": [
+              "F"
+            ],
+            "goals": 0,
+            "assists": 2,
+            "points": 2,
+            "penalty_minutes": 3,
+            "gtg": 0
+          },
+          {
+            "player_id": "colson-overhead-doors-terrio-marshall-00",
+            "name": "Marshall Terrio",
+            "number": "00",
+            "positions": [
+              "F"
+            ],
+            "goals": 2,
+            "assists": 0,
+            "points": 2,
+            "penalty_minutes": 0,
+            "gtg": 0
+          }
+        ],
+        "away": [
+          {
+            "player_id": "gr-mitchell-welding-atkinson-dave-38",
+            "name": "Dave Atkinson",
+            "number": "38",
+            "positions": [
+              "F"
+            ],
+            "goals": 2,
+            "assists": 0,
+            "points": 2,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "gr-mitchell-welding-dobson-nick-pickle-94",
+            "name": "Nick \"Pickle\" Dobson",
+            "number": "94",
+            "positions": [
+              "F"
+            ],
+            "goals": 0,
+            "assists": 1,
+            "points": 1,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "gr-mitchell-welding-fullerton-zack-90",
+            "name": "Zack Fullerton",
+            "number": "90",
+            "positions": [
+              "F"
+            ],
+            "goals": 0,
+            "assists": 1,
+            "points": 1,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "gr-mitchell-welding-helm-corey-7",
+            "name": "Corey Helm",
+            "number": "7",
+            "positions": [
+              "D",
+              "F"
+            ],
+            "goals": 0,
+            "assists": 1,
+            "points": 1,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "gr-mitchell-welding-macpherson-ryan-21",
+            "name": "Ryan Macpherson",
+            "number": "21",
+            "positions": [],
+            "goals": 0,
+            "assists": 0,
+            "points": 0,
+            "penalty_minutes": 3,
+            "gtg": 0
+          },
+          {
+            "player_id": "gr-mitchell-welding-mattix-ralph-66",
+            "name": "Ralph Mattix",
+            "number": "66",
+            "positions": [
+              "D"
+            ],
+            "goals": 0,
+            "assists": 0,
+            "points": 0,
+            "penalty_minutes": 3,
+            "gtg": 0
+          },
+          {
+            "player_id": "gr-mitchell-welding-mitchell-gordon-13",
+            "name": "Gordon Mitchell",
+            "number": "13",
+            "positions": [
+              "F",
+              "D"
+            ],
+            "goals": 0,
+            "assists": 0,
+            "points": 0,
+            "penalty_minutes": 3,
+            "gtg": 0
+          },
+          {
+            "player_id": "gr-mitchell-welding-ryan-geoff-55",
+            "name": "Geoff Ryan",
+            "number": "55",
+            "positions": [
+              "D"
+            ],
+            "goals": 1,
+            "assists": 0,
+            "points": 1,
+            "penalty_minutes": 0,
+            "gtg": 1
+          }
+        ]
+      },
+      "penalties": [
+        {
+          "per_period": "2",
+          "time": "14:16",
+          "player": "88 Zack Gould / Served by 88 Zack Gould",
+          "team": "Colson Overhead Doors",
+          "infraction": "Roughing (Minor)",
+          "length": "3:00"
+        },
+        {
+          "per_period": "2",
+          "time": "14:16",
+          "player": "88 Zack Gould / Served by 88 Zack Gould",
+          "team": "Colson Overhead Doors",
+          "infraction": "Roughing (Minor)",
+          "length": "3:00"
+        },
+        {
+          "per_period": "2",
+          "time": "14:16",
+          "player": "13 Gordon  Mitchell / Served by 13 Gordon  Mitchell",
+          "team": "G.R. Mitchell Welding",
+          "infraction": "Roughing (Minor)",
+          "length": "3:00"
+        },
+        {
+          "per_period": "2",
+          "time": "2:48",
+          "player": "66 Ralph Mattix / Served by 66 Ralph Mattix",
+          "team": "G.R. Mitchell Welding",
+          "infraction": "Hooking (Minor)",
+          "length": "3:00"
+        },
+        {
+          "per_period": "3",
+          "time": "13:56",
+          "player": "19 Denis Hebert / Served by 19 Denis Hebert",
+          "team": "Colson Overhead Doors",
+          "infraction": "Interference (Minor)",
+          "length": "3:00"
+        },
+        {
+          "per_period": "3",
+          "time": "13:56",
+          "player": "21 Ryan Macpherson / Served by 21 Ryan Macpherson",
+          "team": "G.R. Mitchell Welding",
+          "infraction": "Goaltender Interference (Minor)",
+          "length": "3:00"
+        }
+      ],
+      "scoreboard": [
+        [
+          "REGULAR SEASON",
+          "1",
+          "2",
+          "3",
+          "OT",
+          "2OT",
+          "F"
+        ],
+        [
+          "Colson Overhead Doors",
+          "2",
+          "1",
+          "0",
+          "0",
+          "0",
+          "3"
+        ],
+        [
+          "G.R. Mitchell Welding",
+          "0",
+          "1",
+          "2",
+          "0",
+          "0",
+          "3"
+        ]
+      ],
+      "headline": "Thrilling Standoff: Colson Overhead Doors and G.R. Mitchell Welding Battle to 3-3 Tie, Terrio and Atkinson Shine!",
+      "headline_updated_at": "2026-01-19T16:29:08.217048+00:00",
+      "narrative": "The game between Colson Overhead Doors and G.R. Mitchell Welding ended in a 3-3 tie, impacting both teams' playoff hopes. Colson's Marshall Terrio led the scoring with 2 goals, while Zack Gould contributed 1 goal and 1 assist. For G.R. Mitchell, Dave Atkinson netted 2 goals, and Geoff Ryan added 1 goal to the mix."
+    },
     {
       "game_id": "3276641",
       "status": "final",
@@ -3143,252 +3431,6 @@
       "headline": "Bridge's Four Goals Power Maltby Sports to 5-3 Victory Over Colson Overhead Doors",
       "headline_updated_at": "2026-01-06T22:05:34.757470+00:00",
       "narrative": "FINAL: Maltby Sports 5, Colson Overhead Doors 3. Isaac Bridge led the way for Maltby Sports with an impressive 4-goal night, while Trevor Johnson contributed with a goal and two assists. This victory helps Maltby maintain their strong position in the playoff race, improving their record to 2-1."
-    },
-    {
-      "game_id": "3276556",
-      "status": "final",
-      "location": "Amherst",
-      "division": "REGULAR SEASON",
-      "start_utc": "2025-12-22T01:00:00+00:00",
-      "start_local": "2025-12-21T21:00:00-04:00",
-      "home": "Colson Overhead Doors",
-      "away": "G.R. Mitchell Welding",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276556&p=boxscore",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276556&p=summary",
-      "home_line": {
-        "name": "Colson Overhead Doors",
-        "slug": "colson-overhead-doors",
-        "final": 6,
-        "periods": [
-          2,
-          1,
-          3
-        ],
-        "is_winner": true
-      },
-      "away_line": {
-        "name": "G.R. Mitchell Welding",
-        "slug": "gr-mitchell-welding",
-        "final": 5,
-        "periods": [
-          2,
-          1,
-          2
-        ],
-        "is_winner": false
-      },
-      "home_score": 6,
-      "away_score": 5,
-      "result": "6 - 5",
-      "datetime": "2025-12-21T21:00:00-04:00",
-      "date": "12/21/2025",
-      "time": "9:00 PM",
-      "player_stats": {
-        "home": [
-          {
-            "player_id": "colson-overhead-doors-burge-tom-12",
-            "name": "Tom Burge",
-            "number": "12",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-eatmon-chester-8",
-            "name": "Chester Eatmon",
-            "number": "8",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "colson-overhead-doors-faulkner-rory-76",
-            "name": "Rory Faulkner",
-            "number": "76",
-            "positions": [
-              "F"
-            ],
-            "goals": 2,
-            "assists": 1,
-            "points": 3,
-            "penalty_minutes": 3,
-            "gtg": 1
-          },
-          {
-            "player_id": "colson-overhead-doors-henshaw-chad-13",
-            "name": "Chad Henshaw",
-            "number": "13",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 1
-          }
-        ],
-        "away": [
-          {
-            "player_id": "gr-mitchell-welding-atkinson-dave-38",
-            "name": "Dave Atkinson",
-            "number": "38",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 2,
-            "points": 3,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-bourgeois-julien-9",
-            "name": "Julien Bourgeois",
-            "number": "9",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-fullerton-zack-90",
-            "name": "Zack Fullerton",
-            "number": "90",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-hurley-william-15",
-            "name": "William Hurley",
-            "number": "15",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 3,
-            "gtg": 1
-          },
-          {
-            "player_id": "gr-mitchell-welding-macpherson-ryan-21",
-            "name": "Ryan Macpherson",
-            "number": "21",
-            "positions": [],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-mattix-ralph-66",
-            "name": "Ralph Mattix",
-            "number": "66",
-            "positions": [
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-mitchell-gordon-13",
-            "name": "Gordon Mitchell",
-            "number": "13",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-sutton-cody-61",
-            "name": "Cody Sutton",
-            "number": "61",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 1
-          }
-        ]
-      },
-      "penalties": [
-        {
-          "per_period": "3",
-          "time": "4:29",
-          "player": "15 William  Hurley / Served by 15 William  Hurley",
-          "team": "G.R. Mitchell Welding",
-          "infraction": "Body Contact (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "3",
-          "time": "0:07",
-          "player": "76 Rory Faulkner / Served by 76 Rory Faulkner",
-          "team": "Colson Overhead Doors",
-          "infraction": "Interference (Minor)",
-          "length": "3:00"
-        }
-      ],
-      "scoreboard": [
-        [
-          "REGULAR SEASON",
-          "1",
-          "2",
-          "3",
-          "F"
-        ],
-        [
-          "Colson Overhead Doors",
-          "2",
-          "1",
-          "3",
-          "6"
-        ],
-        [
-          "G.R. Mitchell Welding",
-          "2",
-          "1",
-          "2",
-          "5"
-        ]
-      ],
-      "headline": "Colson Overhead Doors Edges G.R. Mitchell Welding 6-5 Behind Faulkner's Two Goals and One Assist",
-      "headline_updated_at": "2026-01-06T22:05:34.757470+00:00",
-      "narrative": "Colson Overhead Doors edged out G.R. Mitchell Welding with a final score of 6-5. Rory Faulkner led the way for Colson with 2 goals and 1 assist, while Dave Atkinson contributed for G.R. Mitchell with 1 goal and 2 assists. This win is crucial for Colson as they look to improve their playoff positioning after a tough stretch."
     }
   ],
   "upcoming_games": [
@@ -3705,6 +3747,21 @@
   ],
   "headlines": [
     {
+      "game_id": "3276645",
+      "headline": "Thrilling Standoff: Colson Overhead Doors and G.R. Mitchell Welding Battle to 3-3 Tie, Terrio and Atkinson Shine!",
+      "ai_generated": true,
+      "created_at": "2026-01-19T16:29:08.217048+00:00",
+      "updated_at": "2026-01-19T16:29:08.217048+00:00",
+      "narrative": "The game between Colson Overhead Doors and G.R. Mitchell Welding ended in a 3-3 tie, impacting both teams' playoff hopes. Colson's Marshall Terrio led the scoring with 2 goals, while Zack Gould contributed 1 goal and 1 assist. For G.R. Mitchell, Dave Atkinson netted 2 goals, and Geoff Ryan added 1 goal to the mix.",
+      "game_datetime": "2026-01-19T01:00:00+00:00",
+      "home_team": "Colson Overhead Doors",
+      "away_team": "G.R. Mitchell Welding",
+      "home_score": 3,
+      "away_score": 3,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276645&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276645&p=boxscore"
+    },
+    {
       "game_id": "3276641",
       "headline": "Ultramar Shuts Out Colson Overhead Doors 2-0; Linkletter Sparks Offense with Goal and Assist",
       "ai_generated": true,
@@ -3865,8 +3922,8 @@
       "away_team": "J&K Electric",
       "home_score": 0,
       "away_score": 5,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276550&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276550&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276550&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276550&u=DSMALL&s=hockey&p=boxscore",
       "narrative": "J&K Electric secured a decisive 5-0 victory over Colson Overhead Doors, solidifying their position as the top-ranked team in the league. Jeremy Kinnear led the scoring with 2 goals, while Rubein Mackenzie, Pat Morris, and Brendan Stone each contributed with a goal and an assist. This loss leaves Colson Overhead Doors struggling as they enter the playoff bubble."
     },
     {
@@ -4261,7 +4318,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2026-01-19T12:48:51.543585+00:00",
+    "generated_at": "2026-01-19T16:29:14.360969+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",
@@ -4273,16 +4330,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 2,
-        "goals": 2,
+        "games_played": 3,
+        "goals": 4,
         "assists": 1,
-        "points": 3,
+        "points": 5,
         "penalty_minutes": 0,
-        "points_per_game": 1.5,
-        "team_games_played": 17,
+        "points_per_game": 1.67,
+        "team_games_played": 18,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": 2,
+        "recent_games": 1
       },
       {
         "player_id": "colson-overhead-doors-malcolm-robert-10",
@@ -4300,7 +4357,7 @@
         "points": 1,
         "penalty_minutes": 0,
         "points_per_game": 1.0,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4321,7 +4378,7 @@
         "points": 1,
         "penalty_minutes": 0,
         "points_per_game": 1.0,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4342,7 +4399,7 @@
         "points": 4,
         "penalty_minutes": 3,
         "points_per_game": 1.0,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4363,7 +4420,7 @@
         "points": 3,
         "penalty_minutes": 0,
         "points_per_game": 1.5,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4384,7 +4441,7 @@
         "points": 4,
         "penalty_minutes": 0,
         "points_per_game": 2.0,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4405,7 +4462,7 @@
         "points": 0,
         "penalty_minutes": 3,
         "points_per_game": 0.0,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4426,7 +4483,7 @@
         "points": 4,
         "penalty_minutes": 15,
         "points_per_game": 0.67,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4441,16 +4498,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 8,
-        "goals": 6,
-        "assists": 10,
-        "points": 16,
-        "penalty_minutes": 6,
-        "points_per_game": 2.0,
-        "team_games_played": 17,
+        "games_played": 12,
+        "goals": 7,
+        "assists": 13,
+        "points": 20,
+        "penalty_minutes": 12,
+        "points_per_game": 1.67,
+        "team_games_played": 18,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": 4,
+        "recent_games": 4
       },
       {
         "player_id": "colson-overhead-doors-boutiler-gerald-22",
@@ -4469,7 +4526,7 @@
         "points": 4,
         "penalty_minutes": 3,
         "points_per_game": 2.0,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4485,16 +4542,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 12,
+        "games_played": 8,
         "goals": 1,
-        "assists": 17,
-        "points": 18,
-        "penalty_minutes": 32,
-        "points_per_game": 1.5,
-        "team_games_played": 17,
+        "assists": 13,
+        "points": 14,
+        "penalty_minutes": 19,
+        "points_per_game": 1.75,
+        "team_games_played": 18,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": -4,
+        "recent_games": -4
       },
       {
         "player_id": "colson-overhead-doors-morris-pat-27",
@@ -4513,7 +4570,7 @@
         "points": 3,
         "penalty_minutes": 3,
         "points_per_game": 1.5,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4534,7 +4591,7 @@
         "points": 5,
         "penalty_minutes": 0,
         "points_per_game": 2.5,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4556,7 +4613,7 @@
         "points": 1,
         "penalty_minutes": 0,
         "points_per_game": 1.0,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4577,7 +4634,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4598,7 +4655,7 @@
         "points": 7,
         "penalty_minutes": 0,
         "points_per_game": 0.88,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4619,7 +4676,7 @@
         "points": 2,
         "penalty_minutes": 0,
         "points_per_game": 2.0,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4640,7 +4697,7 @@
         "points": 3,
         "penalty_minutes": 3,
         "points_per_game": 0.75,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4661,7 +4718,7 @@
         "points": 0,
         "penalty_minutes": 3,
         "points_per_game": 0.0,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4682,7 +4739,7 @@
         "points": 6,
         "penalty_minutes": 0,
         "points_per_game": 1.2,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4704,7 +4761,7 @@
         "points": 1,
         "penalty_minutes": 0,
         "points_per_game": 1.0,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4725,7 +4782,7 @@
         "points": 18,
         "penalty_minutes": 3,
         "points_per_game": 1.8,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4740,16 +4797,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 8,
+        "games_played": 9,
         "goals": 2,
-        "assists": 5,
-        "points": 7,
+        "assists": 6,
+        "points": 8,
         "penalty_minutes": 0,
-        "points_per_game": 0.88,
-        "team_games_played": 17,
+        "points_per_game": 0.89,
+        "team_games_played": 18,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": 1,
+        "recent_games": 1
       },
       {
         "player_id": "colson-overhead-doors-perrin-noah-87",
@@ -4767,7 +4824,7 @@
         "points": 1,
         "penalty_minutes": 0,
         "points_per_game": 1.0,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4782,16 +4839,16 @@
         "team_id": "TYLERARSENEAU-3",
         "team_name": "Colson Overhead Doors",
         "team_slug": "colson-overhead-doors",
-        "games_played": 13,
-        "goals": 14,
-        "assists": 10,
-        "points": 24,
-        "penalty_minutes": 9,
-        "points_per_game": 1.85,
-        "team_games_played": 17,
+        "games_played": 14,
+        "goals": 15,
+        "assists": 11,
+        "points": 26,
+        "penalty_minutes": 15,
+        "points_per_game": 1.86,
+        "team_games_played": 18,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": 2,
+        "recent_games": 1
       },
       {
         "player_id": "colson-overhead-doors-black-mark-9",
@@ -4810,7 +4867,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4831,7 +4888,7 @@
         "points": 2,
         "penalty_minutes": 0,
         "points_per_game": 2.0,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4852,7 +4909,7 @@
         "points": 1,
         "penalty_minutes": 0,
         "points_per_game": 1.0,
-        "team_games_played": 15,
+        "team_games_played": 16,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4868,16 +4925,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 14,
+        "games_played": 15,
         "goals": 6,
         "assists": 14,
         "points": 20,
-        "penalty_minutes": 24,
-        "points_per_game": 1.43,
-        "team_games_played": 15,
+        "penalty_minutes": 27,
+        "points_per_game": 1.33,
+        "team_games_played": 16,
         "games_missed": null,
         "recent_points": 0,
-        "recent_games": 0
+        "recent_games": 1
       },
       {
         "player_id": "gr-mitchell-welding-hurley-william-15",
@@ -4895,7 +4952,7 @@
         "points": 9,
         "penalty_minutes": 3,
         "points_per_game": 1.29,
-        "team_games_played": 15,
+        "team_games_played": 16,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4908,16 +4965,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 12,
+        "games_played": 13,
         "goals": 13,
         "assists": 10,
         "points": 23,
-        "penalty_minutes": 3,
-        "points_per_game": 1.92,
-        "team_games_played": 15,
+        "penalty_minutes": 6,
+        "points_per_game": 1.77,
+        "team_games_played": 16,
         "games_missed": null,
         "recent_points": 0,
-        "recent_games": 0
+        "recent_games": 1
       },
       {
         "player_id": "gr-mitchell-welding-atkinson-dave-38",
@@ -4929,16 +4986,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 18,
-        "goals": 13,
+        "games_played": 19,
+        "goals": 15,
         "assists": 25,
-        "points": 38,
+        "points": 40,
         "penalty_minutes": 3,
         "points_per_game": 2.11,
-        "team_games_played": 15,
+        "team_games_played": 16,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": 2,
+        "recent_games": 1
       },
       {
         "player_id": "gr-mitchell-welding-ryan-geoff-55",
@@ -4950,16 +5007,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 6,
-        "goals": 5,
+        "games_played": 7,
+        "goals": 6,
         "assists": 6,
-        "points": 11,
+        "points": 12,
         "penalty_minutes": 0,
-        "points_per_game": 1.83,
-        "team_games_played": 15,
+        "points_per_game": 1.71,
+        "team_games_played": 16,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": 1,
+        "recent_games": 1
       },
       {
         "player_id": "gr-mitchell-welding-sutton-cody-61",
@@ -4978,7 +5035,7 @@
         "points": 19,
         "penalty_minutes": 6,
         "points_per_game": 1.73,
-        "team_games_played": 15,
+        "team_games_played": 16,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -4993,16 +5050,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 7,
+        "games_played": 8,
         "goals": 2,
         "assists": 7,
         "points": 9,
-        "penalty_minutes": 3,
-        "points_per_game": 1.29,
-        "team_games_played": 15,
+        "penalty_minutes": 6,
+        "points_per_game": 1.12,
+        "team_games_played": 16,
         "games_missed": null,
         "recent_points": 0,
-        "recent_games": 0
+        "recent_games": 1
       },
       {
         "player_id": "gr-mitchell-welding-helm-corey-7",
@@ -5015,16 +5072,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 14,
+        "games_played": 15,
         "goals": 2,
-        "assists": 18,
-        "points": 20,
+        "assists": 19,
+        "points": 21,
         "penalty_minutes": 6,
-        "points_per_game": 1.43,
-        "team_games_played": 15,
+        "points_per_game": 1.4,
+        "team_games_played": 16,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": 1,
+        "recent_games": 1
       },
       {
         "player_id": "gr-mitchell-welding-robichaud-corey-88",
@@ -5042,7 +5099,7 @@
         "points": 6,
         "penalty_minutes": 10,
         "points_per_game": 1.0,
-        "team_games_played": 15,
+        "team_games_played": 16,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -5063,7 +5120,7 @@
         "points": 18,
         "penalty_minutes": 9,
         "points_per_game": 1.38,
-        "team_games_played": 15,
+        "team_games_played": 16,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -5078,16 +5135,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 14,
+        "games_played": 15,
         "goals": 12,
-        "assists": 12,
-        "points": 24,
+        "assists": 13,
+        "points": 25,
         "penalty_minutes": 3,
-        "points_per_game": 1.71,
-        "team_games_played": 15,
+        "points_per_game": 1.67,
+        "team_games_played": 16,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": 1,
+        "recent_games": 1
       },
       {
         "player_id": "gr-mitchell-welding-dobson-nick-pickle-94",
@@ -5099,16 +5156,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 8,
+        "games_played": 9,
         "goals": 7,
-        "assists": 4,
-        "points": 11,
+        "assists": 5,
+        "points": 12,
         "penalty_minutes": 9,
-        "points_per_game": 1.38,
-        "team_games_played": 15,
+        "points_per_game": 1.33,
+        "team_games_played": 16,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": 1,
+        "recent_games": 1
       },
       {
         "player_id": "gr-mitchell-welding-macdonald-meathead-97",
@@ -5126,7 +5183,7 @@
         "points": 46,
         "penalty_minutes": 36,
         "points_per_game": 3.54,
-        "team_games_played": 15,
+        "team_games_played": 16,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0

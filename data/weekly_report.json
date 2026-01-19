@@ -1,13 +1,25 @@
 {
-  "generated_at": "2026-01-19T12:48:51.535496+00:00",
-  "standings_snapshot": "standings-20260116T124328Z.json",
-  "previous_snapshot": "standings-20260115T202534Z.json",
+  "generated_at": "2026-01-19T16:29:14.350730+00:00",
+  "standings_snapshot": "standings-20260119T162907Z.json",
+  "previous_snapshot": "standings-20260116T124328Z.json",
   "standings_movements": [
+    {
+      "team": "G.R. Mitchell Welding",
+      "current_points": 23,
+      "previous_points": 22,
+      "points_change": 1
+    },
+    {
+      "team": "Colson Overhead Doors",
+      "current_points": 7,
+      "previous_points": 6,
+      "points_change": 1
+    },
     {
       "team": "Maltby Sports",
       "current_points": 32,
-      "previous_points": 30,
-      "points_change": 2
+      "previous_points": 32,
+      "points_change": 0
     },
     {
       "team": "J&K Electric",
@@ -16,21 +28,9 @@
       "points_change": 0
     },
     {
-      "team": "G.R. Mitchell Welding",
-      "current_points": 22,
-      "previous_points": 22,
-      "points_change": 0
-    },
-    {
       "team": "Ultramar",
       "current_points": 9,
       "previous_points": 9,
-      "points_change": 0
-    },
-    {
-      "team": "Colson Overhead Doors",
-      "current_points": 6,
-      "previous_points": 6,
       "points_change": 0
     }
   ],
@@ -43,6 +43,13 @@
       "ties": 0
     },
     {
+      "team": "G.R. Mitchell Welding",
+      "played": 2,
+      "wins": 0,
+      "losses": 0,
+      "ties": 2
+    },
+    {
       "team": "Maltby Sports",
       "played": 1,
       "wins": 0,
@@ -50,21 +57,19 @@
       "ties": 1
     },
     {
-      "team": "G.R. Mitchell Welding",
-      "played": 1,
-      "wins": 0,
-      "losses": 0,
-      "ties": 1
-    },
-    {
       "team": "Colson Overhead Doors",
-      "played": 1,
+      "played": 2,
       "wins": 0,
       "losses": 1,
-      "ties": 0
+      "ties": 1
     }
   ],
   "game_headlines": [
+    {
+      "game_id": "3276645",
+      "headline": "Thrilling Standoff: Colson Overhead Doors and G.R. Mitchell Welding Battle to 3-3 Tie, Terrio and Atkinson Shine!",
+      "game_datetime": "2026-01-19T01:00:00+00:00"
+    },
     {
       "game_id": "3276641",
       "headline": "Ultramar Shuts Out Colson Overhead Doors 2-0; Linkletter Sparks Offense with Goal and Assist",
