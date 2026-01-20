@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-19T20:23:59.455009",
+  "timestamp": "2026-01-20T12:49:21.179361",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -4318,7 +4318,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2026-01-19T20:23:59.341536+00:00",
+    "generated_at": "2026-01-20T12:49:21.028691+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",
@@ -4338,8 +4338,8 @@
         "points_per_game": 1.67,
         "team_games_played": 18,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-malcolm-robert-10",
@@ -4506,8 +4506,8 @@
         "points_per_game": 1.67,
         "team_games_played": 18,
         "games_missed": null,
-        "recent_points": 4,
-        "recent_games": 4
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-boutiler-gerald-22",
@@ -4550,8 +4550,8 @@
         "points_per_game": 1.75,
         "team_games_played": 18,
         "games_missed": null,
-        "recent_points": -4,
-        "recent_games": -4
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-morris-pat-27",
@@ -4805,8 +4805,8 @@
         "points_per_game": 0.89,
         "team_games_played": 18,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-perrin-noah-87",
@@ -4847,8 +4847,8 @@
         "points_per_game": 1.86,
         "team_games_played": 18,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-black-mark-9",
@@ -4934,7 +4934,7 @@
         "team_games_played": 16,
         "games_missed": null,
         "recent_points": 0,
-        "recent_games": 1
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-hurley-william-15",
@@ -4974,7 +4974,7 @@
         "team_games_played": 16,
         "games_missed": null,
         "recent_points": 0,
-        "recent_games": 1
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-atkinson-dave-38",
@@ -4994,8 +4994,8 @@
         "points_per_game": 2.11,
         "team_games_played": 16,
         "games_missed": null,
-        "recent_points": 2,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-ryan-geoff-55",
@@ -5015,8 +5015,8 @@
         "points_per_game": 1.71,
         "team_games_played": 16,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-sutton-cody-61",
@@ -5059,7 +5059,7 @@
         "team_games_played": 16,
         "games_missed": null,
         "recent_points": 0,
-        "recent_games": 1
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-helm-corey-7",
@@ -5080,8 +5080,8 @@
         "points_per_game": 1.4,
         "team_games_played": 16,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-robichaud-corey-88",
@@ -5143,8 +5143,8 @@
         "points_per_game": 1.67,
         "team_games_played": 16,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-dobson-nick-pickle-94",
@@ -5164,8 +5164,8 @@
         "points_per_game": 1.33,
         "team_games_played": 16,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-macdonald-meathead-97",
