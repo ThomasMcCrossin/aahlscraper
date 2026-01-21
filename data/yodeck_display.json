@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-20T20:41:57.950687",
+  "timestamp": "2026-01-21T02:37:25.156263",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -3435,68 +3435,6 @@
   ],
   "upcoming_games": [
     {
-      "game_id": "3276647",
-      "status": "scheduled",
-      "location": "Amherst",
-      "division": null,
-      "start_utc": "2026-01-21T00:45:00+00:00",
-      "start_local": "2026-01-20T20:45:00-04:00",
-      "home": "Ultramar",
-      "away": "Maltby Sports",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276647&u=DSMALL&s=hockey&p=preview",
-      "summary_url": null,
-      "home_line": {
-        "name": "Ultramar",
-        "slug": "ultramar",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "away_line": {
-        "name": "Maltby Sports",
-        "slug": "maltby-sports",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "home_score": "",
-      "away_score": "",
-      "datetime": "2026-01-20T20:45:00-04:00",
-      "date": "01/20/2026",
-      "time": "8:45 PM"
-    },
-    {
-      "game_id": "3276649",
-      "status": "scheduled",
-      "location": "Amherst",
-      "division": null,
-      "start_utc": "2026-01-21T02:00:00+00:00",
-      "start_local": "2026-01-20T22:00:00-04:00",
-      "home": "G.R. Mitchell Welding",
-      "away": "J&K Electric",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276649&u=DSMALL&s=hockey&p=preview",
-      "summary_url": null,
-      "home_line": {
-        "name": "G.R. Mitchell Welding",
-        "slug": "gr-mitchell-welding",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "away_line": {
-        "name": "J&K Electric",
-        "slug": "j-and-k-electric",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "home_score": "",
-      "away_score": "",
-      "datetime": "2026-01-20T22:00:00-04:00",
-      "date": "01/20/2026",
-      "time": "10:00 PM"
-    },
-    {
       "game_id": "3276653",
       "status": "scheduled",
       "location": "Amherst",
@@ -3743,6 +3681,68 @@
       "datetime": "2026-02-10T22:00:00-04:00",
       "date": "02/10/2026",
       "time": "10:00 PM"
+    },
+    {
+      "game_id": "3276677",
+      "status": "scheduled",
+      "location": "Amherst",
+      "division": null,
+      "start_utc": "2026-02-16T01:00:00+00:00",
+      "start_local": "2026-02-15T21:00:00-04:00",
+      "home": "Ultramar",
+      "away": "Colson Overhead Doors",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276677&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
+      "home_line": {
+        "name": "Ultramar",
+        "slug": "ultramar",
+        "final": null,
+        "periods": [],
+        "is_winner": null
+      },
+      "away_line": {
+        "name": "Colson Overhead Doors",
+        "slug": "colson-overhead-doors",
+        "final": null,
+        "periods": [],
+        "is_winner": null
+      },
+      "home_score": "",
+      "away_score": "",
+      "datetime": "2026-02-15T21:00:00-04:00",
+      "date": "02/15/2026",
+      "time": "9:00 PM"
+    },
+    {
+      "game_id": "3276679",
+      "status": "scheduled",
+      "location": "Amherst",
+      "division": null,
+      "start_utc": "2026-02-18T00:45:00+00:00",
+      "start_local": "2026-02-17T20:45:00-04:00",
+      "home": "Maltby Sports",
+      "away": "J&K Electric",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276679&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
+      "home_line": {
+        "name": "Maltby Sports",
+        "slug": "maltby-sports",
+        "final": null,
+        "periods": [],
+        "is_winner": null
+      },
+      "away_line": {
+        "name": "J&K Electric",
+        "slug": "j-and-k-electric",
+        "final": null,
+        "periods": [],
+        "is_winner": null
+      },
+      "home_score": "",
+      "away_score": "",
+      "datetime": "2026-02-17T20:45:00-04:00",
+      "date": "02/17/2026",
+      "time": "8:45 PM"
     }
   ],
   "headlines": [
@@ -4318,7 +4318,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2026-01-20T20:41:57.822108+00:00",
+    "generated_at": "2026-01-21T02:37:25.032626+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",
