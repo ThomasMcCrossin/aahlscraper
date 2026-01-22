@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-01-21T20:29:55.830512+00:00",
+  "generated_at": "2026-01-22T12:48:51.830934+00:00",
   "headlines": [
+    {
+      "game_id": "3276649",
+      "headline": "Mackenzie Shines with 2 Goals as J&K Electric and G.R. Mitchell Welding Battle to Thrilling 4-4 Tie!",
+      "ai_generated": true,
+      "created_at": "2026-01-22T12:48:42.620150+00:00",
+      "updated_at": "2026-01-22T12:48:42.620150+00:00",
+      "narrative": "In an exciting matchup, J&K Electric and G.R. Mitchell Welding battled to a 4-4 tie. J&K's Rubein Mackenzie led the scoring with 2 goals, while Gerald Boutiler and Bill Davison each contributed 1 goal and 1 assist. For G.R. Mitchell, William Hurley and Dave Atkinson each found the net, with Julien Bourgeois and Gordon Mitchell both providing 2 assists.",
+      "game_datetime": "2026-01-21T02:00:00+00:00",
+      "home_team": "J&K Electric",
+      "away_team": "G.R. Mitchell Welding",
+      "home_score": 4,
+      "away_score": 4,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276649&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276649&p=boxscore"
+    },
+    {
+      "game_id": "3276647",
+      "headline": "Maltby Sports Edges Ultramar 5-4 as Bridge and Small Shine with Two Goals Each in Thrilling Showdown",
+      "ai_generated": true,
+      "created_at": "2026-01-22T12:48:42.620150+00:00",
+      "updated_at": "2026-01-22T12:48:42.620150+00:00",
+      "narrative": "Maltby Sports edged out Ultramar with a final score of 5-4, solidifying their position at the top of the standings. Isaac Bridge led the way with 2 goals and an assist, while Danny \"Biggie\" Small also contributed with 2 goals. Despite the loss, Ultramar's Bill Jobes had a strong performance with a goal and 2 assists.",
+      "game_datetime": "2026-01-21T00:45:00+00:00",
+      "home_team": "Maltby Sports",
+      "away_team": "Ultramar",
+      "home_score": 5,
+      "away_score": 4,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276647&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276647&p=boxscore"
+    },
     {
       "game_id": "3276645",
       "headline": "Thrilling Standoff: Colson Overhead Doors and G.R. Mitchell Welding Battle to 3-3 Tie, Terrio and Atkinson Shine!",
@@ -162,8 +192,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 6,
       "away_score": 5,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276556&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276556&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276556&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276556&u=DSMALL&s=hockey&p=boxscore",
       "narrative": "Colson Overhead Doors edged out G.R. Mitchell Welding with a final score of 6-5. Rory Faulkner led the way for Colson with 2 goals and 1 assist, while Dave Atkinson contributed for G.R. Mitchell with 1 goal and 2 assists. This win is crucial for Colson as they look to improve their playoff positioning after a tough stretch."
     },
     {
