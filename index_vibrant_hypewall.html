@@ -1,0 +1,1901 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AAHL Display — Hypewall</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Teko:wght@500;600;700&display=swap");
+
+      :root {
+        color-scheme: dark;
+        --bg0: #070a12;
+        --bg1: #0b1022;
+        --glass: rgba(255, 255, 255, 0.07);
+        --glass2: rgba(255, 255, 255, 0.1);
+        --stroke: rgba(255, 255, 255, 0.14);
+        --stroke2: rgba(255, 255, 255, 0.22);
+        --text: #eaf2ff;
+        --muted: rgba(234, 242, 255, 0.72);
+        --faint: rgba(234, 242, 255, 0.5);
+        --ice: #7cc4ff;
+        --gold: #ffd166;
+        --good: #3ee07b;
+        --bad: #ff5c7c;
+
+        --pad: 22px;
+        --r: 18px;
+        --topbar-h: 92px;
+        --ticker-h: 66px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        font-family: "IBM Plex Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        background:
+          radial-gradient(1200px 700px at 15% 10%, rgba(124, 196, 255, 0.18), transparent 60%),
+          radial-gradient(900px 700px at 85% 18%, rgba(255, 209, 102, 0.14), transparent 60%),
+          radial-gradient(900px 700px at 55% 110%, rgba(255, 92, 124, 0.12), transparent 55%),
+          linear-gradient(180deg, var(--bg1), var(--bg0));
+        color: var(--text);
+        overflow: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='420'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='.28'/></svg>");
+        opacity: 0.15;
+        mix-blend-mode: overlay;
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: -40%;
+        pointer-events: none;
+        background: conic-gradient(
+          from 130deg at 40% 35%,
+          rgba(124, 196, 255, 0.16),
+          rgba(255, 209, 102, 0.12),
+          rgba(255, 92, 124, 0.12),
+          rgba(124, 196, 255, 0.16)
+        );
+        filter: blur(42px);
+        opacity: 0.12;
+        animation: drift 16s ease-in-out infinite;
+      }
+
+      @keyframes drift {
+        0%,
+        100% {
+          transform: translate3d(-2%, -2%, 0) rotate(-2deg);
+        }
+        50% {
+          transform: translate3d(2%, 2%, 0) rotate(2deg);
+        }
+      }
+
+      .app {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* ===== Topbar ===== */
+      .topbar {
+        height: var(--topbar-h);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px var(--pad);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        background: linear-gradient(180deg, rgba(8, 12, 24, 0.92), rgba(8, 12, 24, 0.55));
+        backdrop-filter: blur(10px);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        min-width: 520px;
+      }
+
+      .brand-mark {
+        width: 56px;
+        height: 56px;
+        border-radius: 18px;
+        display: grid;
+        place-items: center;
+        font-family: "Teko", system-ui, sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        letter-spacing: 1.2px;
+        color: #06101f;
+        background: linear-gradient(135deg, rgba(124, 196, 255, 1), rgba(255, 209, 102, 1));
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+        text-transform: uppercase;
+      }
+
+      .brand-title {
+        font-family: "Teko", system-ui, sans-serif;
+        font-size: 34px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        line-height: 1;
+      }
+
+      .brand-sub {
+        margin-top: 2px;
+        font-size: 12px;
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .top-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 6px;
+        text-align: right;
+      }
+
+      .clock {
+        font-family: "Teko", system-ui, sans-serif;
+        font-size: 28px;
+        letter-spacing: 1px;
+        font-variant-numeric: tabular-nums;
+        color: rgba(234, 242, 255, 0.92);
+      }
+
+      .updated {
+        font-size: 12px;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+        color: rgba(234, 242, 255, 0.62);
+      }
+
+      .updated.stale {
+        color: rgba(255, 209, 102, 0.9);
+        font-weight: 700;
+      }
+
+      /* ===== Slides ===== */
+      .slides {
+        position: relative;
+        flex: 1;
+        padding: 16px var(--pad) 14px;
+        min-height: 0;
+      }
+
+      .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 420ms ease;
+        padding: 16px var(--pad) 14px;
+        min-height: 0;
+      }
+
+      .slide.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .wall {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        gap: 16px;
+        height: 100%;
+        min-height: 0;
+      }
+
+      .wall-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 1.15fr 0.9fr;
+        gap: 16px;
+        min-height: 0;
+      }
+
+      .panel {
+        position: relative;
+        border-radius: var(--r);
+        background: rgba(10, 16, 30, 0.65);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(14px);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+      }
+
+      .panel::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(900px 300px at 0% 0%, rgba(124, 196, 255, 0.14), transparent 55%);
+        opacity: 0.85;
+      }
+
+      .panel-head {
+        padding: 16px 18px 10px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .panel-title {
+        font-family: "Teko", system-ui, sans-serif;
+        font-size: 28px;
+        letter-spacing: 2.2px;
+        text-transform: uppercase;
+        line-height: 0.95;
+        color: rgba(234, 242, 255, 0.94);
+      }
+
+      .panel-meta {
+        font-size: 11px;
+        letter-spacing: 2.6px;
+        text-transform: uppercase;
+        color: rgba(234, 242, 255, 0.6);
+        white-space: nowrap;
+      }
+
+      .panel-body {
+        padding: 14px 16px 18px;
+        overflow: hidden;
+        min-height: 0;
+      }
+
+      /* ===== Standings Cards ===== */
+      .standings-strip .panel-body {
+        padding: 0 16px 16px;
+      }
+
+      .standings-cards {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 12px;
+        padding-top: 14px;
+      }
+
+      .team-card {
+        position: relative;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+          radial-gradient(700px 140px at 10% 15%, hsl(var(--accent) / 0.22), transparent 60%);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+        overflow: hidden;
+        padding: 12px 12px 10px;
+        min-height: 94px;
+      }
+
+      .team-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 12%, transparent 25%);
+        transform: translate3d(-35%, 0, 0) rotate(8deg);
+        opacity: 0.7;
+        animation: shine 6s ease-in-out infinite;
+      }
+
+      @keyframes shine {
+        0%,
+        50%,
+        100% {
+          transform: translate3d(-35%, 0, 0) rotate(8deg);
+          opacity: 0.25;
+        }
+        25% {
+          transform: translate3d(85%, 0, 0) rotate(8deg);
+          opacity: 0.55;
+        }
+      }
+
+      .team-card.is-leader {
+        border-color: rgba(255, 209, 102, 0.55);
+        box-shadow: 0 20px 36px rgba(0, 0, 0, 0.42);
+      }
+
+      .team-top {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .team-rank {
+        font-family: "Teko", system-ui, sans-serif;
+        font-size: 22px;
+        letter-spacing: 1px;
+        color: rgba(234, 242, 255, 0.7);
+      }
+
+      .team-name {
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .team-pts {
+        text-align: right;
+        line-height: 1.05;
+      }
+
+      .team-pts .num {
+        font-family: "Teko", system-ui, sans-serif;
+        font-size: 26px;
+        letter-spacing: 1px;
+        color: rgba(255, 209, 102, 0.95);
+      }
+
+      .team-pts .lbl {
+        font-size: 10px;
+        letter-spacing: 2.2px;
+        text-transform: uppercase;
+        color: rgba(234, 242, 255, 0.6);
+      }
+
+      .team-sub {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .record {
+        font-variant-numeric: tabular-nums;
+        font-size: 12px;
+        letter-spacing: 1.1px;
+        color: rgba(234, 242, 255, 0.78);
+      }
+
+      .bar {
+        height: 8px;
+        flex: 1;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .bar > span {
+        display: block;
+        height: 100%;
+        width: var(--pct, 40%);
+        border-radius: 999px;
+        background: linear-gradient(90deg, hsl(var(--accent) / 0.95), hsl(var(--accent) / 0.35));
+      }
+
+      /* ===== Logos ===== */
+      .logo {
+        width: 28px;
+        height: 28px;
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
+      .logo.sm {
+        width: 26px;
+        height: 26px;
+      }
+
+      .logo.lg {
+        width: 36px;
+        height: 36px;
+        border-radius: 12px;
+      }
+
+      .logo-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+
+      .logo-fallback {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+        font-weight: 800;
+        letter-spacing: 1px;
+        font-size: 10px;
+        color: rgba(255, 209, 102, 0.95);
+        background: radial-gradient(circle at 30% 20%, rgba(124, 196, 255, 0.18), rgba(255, 255, 255, 0.06));
+      }
+
+      .logo-fallback.sm {
+        font-size: 9px;
+      }
+
+      /* ===== Game Cards ===== */
+      .cards {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-height: 0;
+      }
+
+      .game-card {
+        position: relative;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+          radial-gradient(700px 140px at 10% 0%, hsl(var(--accent) / 0.22), transparent 60%);
+        padding: 12px 12px 10px;
+        overflow: hidden;
+      }
+
+      .game-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        border-left: 5px solid hsl(var(--accent) / 0.7);
+        opacity: 0.9;
+      }
+
+      .card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .when {
+        font-size: 11px;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+        color: rgba(234, 242, 255, 0.7);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .badge {
+        font-size: 10px;
+        letter-spacing: 2.2px;
+        text-transform: uppercase;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        color: rgba(234, 242, 255, 0.82);
+        white-space: nowrap;
+      }
+
+      .teams {
+        display: grid;
+        gap: 8px;
+      }
+
+      .team-row {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+      }
+
+      .team-row .team-name {
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        min-width: 0;
+      }
+
+      .team-score {
+        font-family: "Teko", system-ui, sans-serif;
+        font-size: 26px;
+        letter-spacing: 1px;
+        color: rgba(234, 242, 255, 0.9);
+        min-width: 22px;
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .team-score.win {
+        color: rgba(255, 209, 102, 0.95);
+        text-shadow: 0 0 16px rgba(255, 209, 102, 0.16);
+      }
+
+      .subline {
+        margin-top: 10px;
+        font-size: 12px;
+        color: rgba(234, 242, 255, 0.74);
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .subline .label {
+        color: rgba(124, 196, 255, 0.95);
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        margin-right: 6px;
+      }
+
+      .matchup {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .matchup .at {
+        font-family: "Teko", system-ui, sans-serif;
+        font-size: 22px;
+        letter-spacing: 1px;
+        color: rgba(234, 242, 255, 0.65);
+      }
+
+      .team-chip {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+      }
+
+      .team-chip.end {
+        justify-content: flex-end;
+        text-align: right;
+      }
+
+      /* ===== Leaders ===== */
+      .leaders-list {
+        height: 100%;
+        display: grid;
+        grid-template-rows: repeat(8, minmax(0, 1fr));
+        gap: 10px;
+        min-height: 0;
+      }
+
+      .leader-row {
+        border-radius: 16px;
+        padding: 10px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+          radial-gradient(600px 120px at 10% 0%, hsl(var(--accent) / 0.18), transparent 60%);
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+        overflow: hidden;
+      }
+
+      .leader-row .rank {
+        font-family: "Teko", system-ui, sans-serif;
+        font-size: 20px;
+        letter-spacing: 1px;
+        color: rgba(234, 242, 255, 0.7);
+        min-width: 40px;
+      }
+
+      .leader-row .who {
+        min-width: 0;
+      }
+
+      .leader-row .name {
+        font-weight: 800;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .leader-row .meta {
+        margin-top: 2px;
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgba(234, 242, 255, 0.55);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .leader-row .pts {
+        font-family: "Teko", system-ui, sans-serif;
+        font-size: 26px;
+        letter-spacing: 1px;
+        color: rgba(255, 209, 102, 0.95);
+        min-width: 28px;
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .streak {
+        margin-left: 6px;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.4px;
+      }
+
+      .streak.hot {
+        color: rgba(255, 92, 124, 0.95);
+      }
+
+      .streak.cold {
+        color: rgba(124, 196, 255, 0.95);
+      }
+
+      /* ===== Scorers Slide ===== */
+      .scorers-wrap {
+        height: 100%;
+        display: flex;
+        min-height: 0;
+      }
+
+      .scorers-wrap .panel {
+        width: 100%;
+      }
+
+      .scorers-grid {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        min-height: 0;
+      }
+
+      .player-card {
+        border-radius: 16px;
+        padding: 12px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+          radial-gradient(700px 140px at 10% 0%, hsl(var(--accent) / 0.18), transparent 60%);
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+        overflow: hidden;
+      }
+
+      .player-card .rank {
+        font-family: "Teko", system-ui, sans-serif;
+        font-size: 22px;
+        letter-spacing: 1px;
+        color: rgba(234, 242, 255, 0.7);
+        min-width: 44px;
+      }
+
+      .player-card .who {
+        min-width: 0;
+      }
+
+      .player-card .name {
+        font-weight: 900;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .player-card .team {
+        margin-top: 4px;
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgba(234, 242, 255, 0.55);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .player-card .stats {
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .player-card .stats .pts {
+        font-family: "Teko", system-ui, sans-serif;
+        font-size: 26px;
+        letter-spacing: 1px;
+        color: rgba(255, 209, 102, 0.95);
+        line-height: 1;
+      }
+
+      .player-card .stats .line {
+        margin-top: 4px;
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgba(234, 242, 255, 0.58);
+      }
+
+      /* ===== Ticker ===== */
+      .ticker {
+        height: var(--ticker-h);
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 10px var(--pad);
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        background: linear-gradient(180deg, rgba(8, 12, 24, 0.4), rgba(8, 12, 24, 0.86));
+        backdrop-filter: blur(10px);
+      }
+
+      .ticker-label {
+        font-family: "Teko", system-ui, sans-serif;
+        font-size: 22px;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        color: rgba(255, 209, 102, 0.95);
+        white-space: nowrap;
+      }
+
+      .ticker-marquee {
+        position: relative;
+        flex: 1;
+        overflow: hidden;
+        min-width: 0;
+      }
+
+      .ticker-track {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        white-space: nowrap;
+        will-change: opacity;
+        transition: opacity 260ms ease;
+      }
+
+      .ticker-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+      }
+
+      .tag {
+        font-size: 10px;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.08);
+        color: rgba(234, 242, 255, 0.75);
+        flex: 0 0 auto;
+      }
+
+      .ticker-text {
+        font-size: 14px;
+        font-weight: 600;
+        color: rgba(234, 242, 255, 0.9);
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        body::after {
+          animation: none;
+        }
+        .slide {
+          transition: none;
+        }
+        .ticker-track {
+          transition: none;
+        }
+        .team-card::after {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">AAHL</div>
+          <div>
+            <div class="brand-title">Amherst Adult Hockey League</div>
+            <div class="brand-sub">Live league snapshot</div>
+          </div>
+        </div>
+        <div class="top-right">
+          <div class="clock" id="clock"></div>
+          <div class="updated" id="lastUpdated"></div>
+        </div>
+      </header>
+
+      <div class="slides">
+        <section class="slide active">
+          <div class="wall">
+            <div class="panel standings-strip">
+              <div class="panel-head">
+                <div class="panel-title">Standings</div>
+                <div class="panel-meta" id="standingsMeta">Top 4 make playoffs</div>
+              </div>
+              <div class="panel-body">
+                <div class="standings-cards" id="standingsCards"></div>
+              </div>
+            </div>
+
+            <div class="wall-grid">
+              <div class="panel">
+                <div class="panel-head">
+                  <div class="panel-title">Recent Results</div>
+                  <div class="panel-meta">Last 14 days</div>
+                </div>
+                <div class="panel-body">
+                  <div class="cards" id="resultsList"></div>
+                </div>
+              </div>
+
+              <div class="panel">
+                <div class="panel-head">
+                  <div class="panel-title">Upcoming</div>
+                  <div class="panel-meta">Next 14 days</div>
+                </div>
+                <div class="panel-body">
+                  <div class="cards" id="upcomingList"></div>
+                </div>
+              </div>
+
+              <div class="panel">
+                <div class="panel-head">
+                  <div class="panel-title">Leaders</div>
+                  <div class="panel-meta" id="leadersMeta">Top scorers</div>
+                </div>
+                <div class="panel-body">
+                  <div class="leaders-list" id="leadersList"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide">
+          <div class="scorers-wrap">
+            <div class="panel">
+              <div class="panel-head">
+                <div class="panel-title">Top 20 Scorers</div>
+                <div class="panel-meta">PTS • G • A • P/GP</div>
+              </div>
+              <div class="panel-body">
+                <div class="scorers-grid" id="scorersGrid"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="ticker">
+        <div class="ticker-label">AAHL</div>
+        <div class="ticker-marquee">
+          <div class="ticker-track" id="tickerTrack"></div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const DATA_URL = "https://raw.githubusercontent.com/ThomasMcCrossin/aahlscraper/main/data/yodeck_display.json";
+      const LOGO_BASE_URL = "https://raw.githubusercontent.com/ThomasMcCrossin/aahlscraper/main/assets/logos/aahl";
+
+      const SLIDE_DURATIONS_MS = [24000, 14000];
+      const DATA_REFRESH_MINUTES = 10;
+      const TICKER_ROTATION_MS = 6000;
+
+      const RESULTS_VISIBLE_COUNT = 4;
+      const UPCOMING_VISIBLE_COUNT = 4;
+      const RESULTS_ROTATION_MS = 7000;
+      const UPCOMING_ROTATION_MS = 7000;
+
+      const CACHE_KEY = "aahl_display_cache_hypewall_v1";
+      const DAY_MS = 24 * 60 * 60 * 1000;
+      const CACHE_TTL_MS = 24 * DAY_MS;
+
+      const TEAM_LOGOS = {
+        "maltby-sports": `${LOGO_BASE_URL}/maltby-sports.png`,
+        "j-and-k-electric": `${LOGO_BASE_URL}/j-and-k-electric.png`,
+        "gr-mitchell-welding": `${LOGO_BASE_URL}/gr-mitchell-welding.png`,
+        "colson-overhead-doors": `${LOGO_BASE_URL}/colson-overhead-doors.png`,
+        ultramar: `${LOGO_BASE_URL}/ultramar.svg`,
+      };
+
+      const TEAM_SLUG_OVERRIDES = {
+        "amherst hawks": "maltby-sports",
+        "downtown small": "j-and-k-electric",
+        "frontier city": "gr-mitchell-welding",
+        "maple grove": "ultramar",
+        "ice storm": "colson-overhead-doors",
+        "thunder bay": "ultramar",
+        "valley vipers": "colson-overhead-doors",
+        "g.r. mitchell welding": "gr-mitchell-welding",
+        "gr mitchell welding": "gr-mitchell-welding",
+        "j&k electric": "j-and-k-electric",
+        "j and k electric": "j-and-k-electric",
+      };
+
+      const TEAM_ACCENTS = [
+        "203 100% 65%", // ice blue
+        "42 100% 60%", // gold
+        "343 96% 63%", // red/pink
+        "159 92% 55%", // mint
+        "262 95% 70%", // violet
+        "12 96% 62%", // orange
+      ];
+
+      let isActive = true;
+      let slideTimerId = null;
+      let resultsIntervalId = null;
+      let upcomingIntervalId = null;
+      let tickerIntervalId = null;
+      let dataRefreshTimerId = null;
+      let clockTimerId = null;
+
+      let currentRecentGames = [];
+      let currentUpcomingGames = [];
+      let recentCarouselIndex = 0;
+      let upcomingCarouselIndex = 0;
+
+      let tickerItems = [];
+      let tickerIndex = 0;
+
+      const sampleData = {
+        timestamp: new Date().toISOString(),
+        standings: [
+          { team: "Maltby Sports", team_slug: "maltby-sports", wins: 8, losses: 2, ties: 1, points: 17 },
+          { team: "J&K Electric", team_slug: "j-and-k-electric", wins: 7, losses: 3, ties: 0, points: 14 },
+          { team: "G.R. Mitchell Welding", team_slug: "gr-mitchell-welding", wins: 6, losses: 4, ties: 0, points: 12 },
+          { team: "Ultramar", team_slug: "ultramar", wins: 5, losses: 5, ties: 0, points: 10 },
+          { team: "Colson Overhead Doors", team_slug: "colson-overhead-doors", wins: 4, losses: 6, ties: 0, points: 8 },
+        ],
+        top_scorers: [
+          { rank: 1, name: "Issac Bridge", team: "Maltby Sports", team_slug: "maltby-sports", g: 12, a: 10, points: 22, gp: 8 },
+          { rank: 2, name: "Marshall MacDonald", team: "G.R. Mitchell Welding", team_slug: "gr-mitchell-welding", g: 11, a: 9, points: 20, gp: 8 },
+          { rank: 3, name: "Dave Atkinson", team: "G.R. Mitchell Welding", team_slug: "gr-mitchell-welding", g: 10, a: 8, points: 18, gp: 8 },
+          { rank: 4, name: "Reuben Mackenzie", team: "J&K Electric", team_slug: "j-and-k-electric", g: 9, a: 9, points: 18, gp: 8 },
+          { rank: 5, name: "Brendan Stone", team: "J&K Electric", team_slug: "j-and-k-electric", g: 9, a: 8, points: 17, gp: 8 },
+          { rank: 6, name: "Thomas McCrossin", team: "G.R. Mitchell Welding", team_slug: "gr-mitchell-welding", g: 8, a: 8, points: 16, gp: 8 },
+          { rank: 7, name: "Noah Perrin", team: "J&K Electric", team_slug: "j-and-k-electric", g: 7, a: 8, points: 15, gp: 8 },
+          { rank: 8, name: "Ryan Budd", team: "J&K Electric", team_slug: "j-and-k-electric", g: 7, a: 7, points: 14, gp: 8 },
+          { rank: 9, name: "Zack Gould", team: "Colson Overhead Doors", team_slug: "colson-overhead-doors", g: 7, a: 6, points: 13, gp: 8 },
+          { rank: 10, name: "Logan Gesner", team: "Colson Overhead Doors", team_slug: "colson-overhead-doors", g: 6, a: 6, points: 12, gp: 8 },
+        ],
+        recent_results: [
+          {
+            datetime: new Date(Date.now() - 2 * DAY_MS).toISOString(),
+            home: "Colson Overhead Doors",
+            away: "J&K Electric",
+            home_score: 3,
+            away_score: 6,
+            location: "Amherst",
+            home_line: { name: "Colson Overhead Doors", slug: "colson-overhead-doors", final: 3 },
+            away_line: { name: "J&K Electric", slug: "j-and-k-electric", final: 6 },
+            headline: "J&K Electric takes it 6–3.",
+          },
+          {
+            datetime: new Date(Date.now() - 5 * DAY_MS).toISOString(),
+            home: "Maltby Sports",
+            away: "G.R. Mitchell Welding",
+            home_score: 10,
+            away_score: 2,
+            location: "Amherst",
+            home_line: { name: "Maltby Sports", slug: "maltby-sports", final: 10 },
+            away_line: { name: "G.R. Mitchell Welding", slug: "gr-mitchell-welding", final: 2 },
+            headline: "Maltby Sports rolls 10–2.",
+          },
+        ],
+        upcoming_games: [
+          {
+            datetime: new Date(Date.now() + 2 * DAY_MS).toISOString(),
+            time: "8:00 PM",
+            home: "G.R. Mitchell Welding",
+            away: "Maltby Sports",
+            location: "Amherst",
+            home_line: { name: "G.R. Mitchell Welding", slug: "gr-mitchell-welding" },
+            away_line: { name: "Maltby Sports", slug: "maltby-sports" },
+          },
+          {
+            datetime: new Date(Date.now() + 4 * DAY_MS).toISOString(),
+            time: "9:00 PM",
+            home: "Ultramar",
+            away: "J&K Electric",
+            location: "Amherst",
+            home_line: { name: "Ultramar", slug: "ultramar" },
+            away_line: { name: "J&K Electric", slug: "j-and-k-electric" },
+          },
+        ],
+      };
+
+      function hashString(value) {
+        let hash = 0;
+        const input = String(value || "");
+        for (let i = 0; i < input.length; i++) {
+          hash = (hash << 5) - hash + input.charCodeAt(i);
+          hash |= 0;
+        }
+        return hash;
+      }
+
+      function accentForSlug(slug) {
+        const index = Math.abs(hashString(slug || "")) % TEAM_ACCENTS.length;
+        return TEAM_ACCENTS[index];
+      }
+
+      function slugifyTeamName(name) {
+        return (name || "")
+          .toLowerCase()
+          .replace(/&/g, " and ")
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-+|-+$/g, "");
+      }
+
+      function deriveInitials(name) {
+        const words = (name || "")
+          .split(/\s+/)
+          .filter(Boolean)
+          .map((word) => word[0]);
+        const initials = words.join("").slice(0, 3).toUpperCase();
+        return initials || (name || "AAHL").slice(0, 2).toUpperCase();
+      }
+
+      function correctName(name) {
+        if (!name) return name;
+        let transformed = String(name);
+        transformed = transformed.replace(/Meathead/gi, "Marshall");
+        transformed = transformed.replace(/Mccrossin/gi, "McCrossin");
+        transformed = transformed.replace(/Danny\\s*\"?Biggie\"?\\s*Small/gi, "Biggie Small");
+        transformed = transformed.replace(/Biggie\\s+\"?Small\"?/gi, "Biggie Small");
+        transformed = transformed.replace(/Rubein/gi, "Reuben");
+        return transformed;
+      }
+
+      function formatPlayerDisplayName(rawName) {
+        let clean = correctName(rawName || "").trim();
+        if (clean.includes(",")) {
+          const [last, first] = clean
+            .split(",")
+            .map((part) => part.trim())
+            .filter(Boolean);
+          clean = `${first || ""} ${last || ""}`.trim();
+        }
+        clean = correctName(clean);
+        return clean.replace(/\\s+/g, " ");
+      }
+
+      function resolveTeamVisual(name, slug) {
+        const cleanName = correctName(name || "Team");
+        const baseSlug = (slug || "").toLowerCase() || slugifyTeamName(cleanName);
+        const overrideSlug = TEAM_SLUG_OVERRIDES[cleanName.toLowerCase()] || TEAM_SLUG_OVERRIDES[baseSlug] || baseSlug;
+        return {
+          name: cleanName,
+          slug: overrideSlug,
+          logo: TEAM_LOGOS[overrideSlug] || null,
+          initials: deriveInitials(cleanName),
+        };
+      }
+
+      function teamLogoHtml(info, size = "md") {
+        const sizeClass = size === "sm" || size === "lg" ? size : "md";
+        const imgHtml = info.logo
+          ? `<img src="${info.logo}" class="logo-img" alt="${info.name} logo" loading="lazy" onerror="this.remove(); this.nextElementSibling?.style?.display='grid';">`
+          : `<img class="logo-img" style="display:none;" alt="">`;
+        const placeholderDisplay = info.logo ? 'style="display:none;"' : "";
+        return `
+          <div class="logo ${sizeClass}">
+            ${imgHtml}
+            <div class="logo-fallback ${sizeClass}" ${placeholderDisplay}>${info.initials}</div>
+          </div>
+        `;
+      }
+
+      function parseIsoTimestamp(value) {
+        if (!value) return null;
+        const raw = String(value).trim();
+        const normalized = raw.replace(/(\\.\\d{3})\\d+/, "$1");
+        const parsed = new Date(normalized);
+        if (!Number.isNaN(parsed.getTime())) return parsed;
+        const fallback = new Date(raw);
+        return Number.isNaN(fallback.getTime()) ? null : fallback;
+      }
+
+      function parseGameDate(game) {
+        if (!game) return null;
+        const candidates = [game.datetime, game.start_local, game.start_utc, game.date];
+        for (const candidate of candidates) {
+          if (!candidate) continue;
+          const parsed = new Date(candidate);
+          if (!Number.isNaN(parsed.getTime())) return parsed;
+        }
+        return null;
+      }
+
+      function formatDateShort(value) {
+        const date = value instanceof Date ? value : new Date(value);
+        if (Number.isNaN(date.getTime())) return "";
+        return date.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+      }
+
+      function formatTimeDisplay(game) {
+        if (game?.time) return game.time;
+        const date = parseGameDate(game);
+        if (!date) return "TBD";
+        return date.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
+      }
+
+      function formatRelative(date) {
+        if (!(date instanceof Date) || Number.isNaN(date.getTime())) return "";
+        const now = new Date();
+        const diffDays = Math.round((date - now) / DAY_MS);
+        if (diffDays === 0) return "Today";
+        if (diffDays === 1) return "Tomorrow";
+        if (diffDays === -1) return "Yesterday";
+        if (diffDays > 1) return `In ${diffDays} days`;
+        return `${Math.abs(diffDays)} days ago`;
+      }
+
+      function gameIdentifier(game) {
+        if (!game) return "";
+        if (game.game_id) return `id:${game.game_id}`;
+        const home = (game.home || game.home_team || "").toLowerCase();
+        const away = (game.away || game.away_team || "").toLowerCase();
+        const date = game.datetime || game.start_local || game.start_utc || game.date || "";
+        return `${home}|${away}|${date}`;
+      }
+
+      function uniqueByGameId(games) {
+        const seen = new Set();
+        return (Array.isArray(games) ? games : []).filter((game) => {
+          const key = gameIdentifier(game);
+          if (!key) return true;
+          if (seen.has(key)) return false;
+          seen.add(key);
+          return true;
+        });
+      }
+
+      function filterRecentGames(games, days = 14) {
+        const now = new Date();
+        const cutoff = new Date(now.getTime() - days * DAY_MS);
+        return (Array.isArray(games) ? games : [])
+          .map((game) => ({ game, date: parseGameDate(game) }))
+          .filter((item) => item.date && item.date <= now && item.date >= cutoff)
+          .sort((a, b) => b.date - a.date)
+          .slice(0, 12)
+          .map((item) => item.game);
+      }
+
+      function filterUpcomingGames(games, days = 14) {
+        const now = new Date();
+        const gracePeriod = 2 * 60 * 60 * 1000;
+        const effectiveNow = new Date(now.getTime() - gracePeriod);
+        const horizon = new Date(now.getTime() + days * DAY_MS);
+        return (Array.isArray(games) ? games : [])
+          .map((game) => ({ game, date: parseGameDate(game) }))
+          .filter((item) => item.date && item.date >= effectiveNow && item.date <= horizon)
+          .sort((a, b) => a.date - b.date)
+          .slice(0, 12)
+          .map((item) => item.game);
+      }
+
+      function getCycledSlice(items, start, count) {
+        if (!Array.isArray(items) || items.length === 0) return [];
+        const normalizedStart = ((start % items.length) + items.length) % items.length;
+        const result = [];
+        const limit = Math.min(count, items.length);
+        for (let i = 0; i < limit; i++) {
+          result.push(items[(normalizedStart + i) % items.length]);
+        }
+        return result;
+      }
+
+      function formatStatLine(stat) {
+        if (!stat) return "";
+        const goals = Number(stat.goals ?? stat.g ?? 0) || 0;
+        const assists = Number(stat.assists ?? stat.a ?? 0) || 0;
+        const points = Number(stat.points ?? stat.pts ?? goals + assists) || goals + assists;
+        if (!goals && !assists && !points) return "";
+        const parts = [];
+        if (goals) parts.push(`${goals}G`);
+        if (assists) parts.push(`${assists}A`);
+        if (!parts.length) parts.push(`${points}P`);
+        return parts.join(" ");
+      }
+
+      function extractGamePerformers(game, limit = 2) {
+        if (!game?.player_stats) return [];
+        const collected = [];
+        ["home", "away"].forEach((side) => {
+          const roster = game.player_stats?.[side];
+          if (!Array.isArray(roster)) return;
+          roster.forEach((entry) => {
+            if (!entry) return;
+            const name = formatPlayerDisplayName(entry.name || entry.player_name);
+            if (!name) return;
+            const goals = Number(entry.goals ?? entry.g ?? 0) || 0;
+            const assists = Number(entry.assists ?? entry.a ?? 0) || 0;
+            const points = Number(entry.points ?? entry.pts ?? goals + assists) || goals + assists;
+            const statLine = formatStatLine({ goals, assists, points });
+            if (!statLine) return;
+            collected.push({ name, statLine, points, goals, assists });
+          });
+        });
+
+        collected.sort((a, b) => {
+          if (b.points !== a.points) return b.points - a.points;
+          if (b.goals !== a.goals) return b.goals - a.goals;
+          if (b.assists !== a.assists) return b.assists - a.assists;
+          return a.name.localeCompare(b.name);
+        });
+
+        return collected.slice(0, limit).map((item) => ({ name: item.name, statLine: item.statLine }));
+      }
+
+      function saveCache(data) {
+        try {
+          const payload = { saved_at: new Date().toISOString(), data };
+          localStorage.setItem(CACHE_KEY, JSON.stringify(payload));
+        } catch (err) {
+          console.warn("Unable to save cache", err);
+        }
+      }
+
+      function loadCache() {
+        try {
+          const raw = localStorage.getItem(CACHE_KEY);
+          if (!raw) return null;
+          const parsed = JSON.parse(raw);
+          if (!parsed?.data) return null;
+          const savedAt = parseIsoTimestamp(parsed.saved_at);
+          if (!savedAt) return null;
+          const age = Date.now() - savedAt.getTime();
+          if (age > CACHE_TTL_MS) return null;
+          return parsed.data;
+        } catch (err) {
+          console.warn("Unable to read cache", err);
+          return null;
+        }
+      }
+
+      function renderClock() {
+        const el = document.getElementById("clock");
+        if (!el) return;
+        const now = new Date();
+        const day = now.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+        const time = now.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
+        el.textContent = `${day} · ${time}`;
+      }
+
+      function renderLastUpdated(timestampValue) {
+        const el = document.getElementById("lastUpdated");
+        if (!el) return;
+        const ts = parseIsoTimestamp(timestampValue);
+        if (!ts) {
+          el.textContent = "Updated recently";
+          el.classList.remove("stale");
+          return;
+        }
+
+        const now = new Date();
+        const diffMs = now - ts;
+        const diffMins = Math.floor(diffMs / 60000);
+        const diffHours = Math.floor(diffMins / 60);
+
+        let timeAgo;
+        if (diffMins < 1) timeAgo = "just now";
+        else if (diffMins < 60) timeAgo = `${diffMins} min ago`;
+        else if (diffHours < 24) timeAgo = `${diffHours} hr ago`;
+        else timeAgo = ts.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+
+        el.textContent = `Updated ${timeAgo}`;
+        el.classList.toggle("stale", diffHours >= 24);
+      }
+
+      function renderStandings(standings) {
+        const container = document.getElementById("standingsCards");
+        if (!container) return;
+        container.innerHTML = "";
+
+        const clean = (Array.isArray(standings) ? standings : []).slice();
+        const pointsLeader = Math.max(1, ...clean.map((team) => Number(team?.points ?? team?.pts ?? 0) || 0));
+
+        clean.forEach((team, index) => {
+          const info = resolveTeamVisual(team.team || team.team_name || "", team.team_slug || team.teamSlug);
+          const wins = Number(team.wins ?? team.Wins ?? 0) || 0;
+          const losses = Number(team.losses ?? team.Losses ?? 0) || 0;
+          const ties = Number(team.ties ?? team.Ties ?? 0) || 0;
+          const points = Number(team.points ?? team.Points ?? team.pts ?? 0) || 0;
+          const gp = wins + losses + ties;
+          const pct = `${Math.round((points / pointsLeader) * 100)}%`;
+
+          const card = document.createElement("div");
+          card.className = `team-card${index === 0 ? " is-leader" : ""}`;
+          card.style.setProperty("--accent", accentForSlug(info.slug));
+          card.style.setProperty("--pct", pct);
+
+          card.innerHTML = `
+            <div class="team-top">
+              <div class="team-rank">#${index + 1}</div>
+              <div style="display:flex;align-items:center;gap:10px;min-width:0;">
+                ${teamLogoHtml(info, "sm")}
+                <div class="team-name" title="${info.name}">${info.name}</div>
+              </div>
+              <div class="team-pts">
+                <div class="num">${points}</div>
+                <div class="lbl">PTS</div>
+              </div>
+            </div>
+            <div class="team-sub">
+              <div class="record">${wins}-${losses}${ties ? `-${ties}` : ""} · GP ${gp}</div>
+              <div class="bar" aria-hidden="true"><span></span></div>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+
+        const meta = document.getElementById("standingsMeta");
+        if (meta) meta.textContent = "Top 4 make playoffs";
+      }
+
+      function parseScore(value) {
+        const num = Number(value);
+        return Number.isFinite(num) ? num : null;
+      }
+
+      function scoreFromResult(game, index) {
+        if (!game?.result) return null;
+        const parts = String(game.result).split("-").map((part) => part.trim());
+        const raw = parts[index];
+        return raw ? parseScore(raw) : null;
+      }
+
+      function renderResults(results, startIndex = 0) {
+        const list = document.getElementById("resultsList");
+        if (!list) return;
+        list.innerHTML = "";
+
+        if (!Array.isArray(results) || results.length === 0) {
+          list.innerHTML = '<div class="game-card" style="--accent: 203 100% 65%;"><div class="when">No recent games</div><div class="subline"><span class="label">Tip:</span> New results will appear after game night.</div></div>';
+          return;
+        }
+
+        const subset = getCycledSlice(results, startIndex, RESULTS_VISIBLE_COUNT);
+        subset.forEach((game) => {
+          const dateObj = parseGameDate(game);
+          const when = dateObj ? `${formatDateShort(dateObj)} · ${formatRelative(dateObj)}` : (game.date || "Final");
+
+          const awayTeam = correctName(game.away || game.away_team || "Away");
+          const homeTeam = correctName(game.home || game.home_team || "Home");
+          const awayInfo = resolveTeamVisual(awayTeam, game.away_line?.slug || game.away_team_slug || game.away_team_slug);
+          const homeInfo = resolveTeamVisual(homeTeam, game.home_line?.slug || game.home_team_slug || game.home_team_slug);
+
+          const awayScore =
+            parseScore(game.away_score ?? game.away_line?.final ?? game.away_final) ??
+            scoreFromResult(game, 0);
+          const homeScore =
+            parseScore(game.home_score ?? game.home_line?.final ?? game.home_final) ??
+            scoreFromResult(game, 1);
+
+          let outcome = "unknown";
+          if (awayScore !== null && homeScore !== null) {
+            if (awayScore === homeScore) outcome = "tie";
+            else outcome = awayScore > homeScore ? "away" : "home";
+          }
+
+          const performers = extractGamePerformers(game, 2);
+          const performerLine = performers.length
+            ? performers.map((entry) => `${entry.name} ${entry.statLine}`).join(" • ")
+            : "";
+
+          const accentSlug = outcome === "home" ? homeInfo.slug : awayInfo.slug;
+          const card = document.createElement("div");
+          card.className = "game-card";
+          card.style.setProperty("--accent", accentForSlug(accentSlug));
+          card.innerHTML = `
+            <div class="card-top">
+              <div class="when" title="${when}">${when}</div>
+              <div class="badge">${outcome === "tie" ? "Final (T)" : "Final"}</div>
+            </div>
+            <div class="teams">
+              <div class="team-row">
+                ${teamLogoHtml(awayInfo, "sm")}
+                <div class="team-name" title="${awayInfo.name}">${awayInfo.name}</div>
+                <div class="team-score ${outcome === "away" ? "win" : ""}">${awayScore ?? ""}</div>
+              </div>
+              <div class="team-row">
+                ${teamLogoHtml(homeInfo, "sm")}
+                <div class="team-name" title="${homeInfo.name}">${homeInfo.name}</div>
+                <div class="team-score ${outcome === "home" ? "win" : ""}">${homeScore ?? ""}</div>
+              </div>
+            </div>
+            ${performerLine ? `<div class="subline"><span class="label">Top:</span>${performerLine}</div>` : ""}
+          `;
+          list.appendChild(card);
+        });
+      }
+
+      function renderUpcoming(games, startIndex = 0) {
+        const list = document.getElementById("upcomingList");
+        if (!list) return;
+        list.innerHTML = "";
+
+        if (!Array.isArray(games) || games.length === 0) {
+          list.innerHTML = '<div class="game-card" style="--accent: 42 100% 60%;"><div class="when">No upcoming games</div><div class="subline"><span class="label">Check back:</span> Schedule updates automatically.</div></div>';
+          return;
+        }
+
+        const subset = getCycledSlice(games, startIndex, UPCOMING_VISIBLE_COUNT);
+        subset.forEach((game) => {
+          const dateObj = parseGameDate(game);
+          const when = dateObj ? `${formatDateShort(dateObj)} · ${formatRelative(dateObj)}` : (game.date || "Upcoming");
+          const timeText = formatTimeDisplay(game);
+          const location = game.location || "Amherst";
+
+          const awayTeam = correctName(game.away || game.away_team || "Away");
+          const homeTeam = correctName(game.home || game.home_team || "Home");
+          const awayInfo = resolveTeamVisual(awayTeam, game.away_line?.slug || game.away_team_slug || game.away_team_slug);
+          const homeInfo = resolveTeamVisual(homeTeam, game.home_line?.slug || game.home_team_slug || game.home_team_slug);
+
+          const card = document.createElement("div");
+          card.className = "game-card";
+          card.style.setProperty("--accent", accentForSlug(homeInfo.slug));
+          card.innerHTML = `
+            <div class="card-top">
+              <div class="when" title="${when}">${when}</div>
+              <div class="badge">Next</div>
+            </div>
+            <div class="matchup">
+              <div class="team-chip">
+                ${teamLogoHtml(awayInfo, "sm")}
+                <div class="team-name" title="${awayInfo.name}">${awayInfo.name}</div>
+              </div>
+              <div class="at">@</div>
+              <div class="team-chip end">
+                <div class="team-name" title="${homeInfo.name}">${homeInfo.name}</div>
+                ${teamLogoHtml(homeInfo, "sm")}
+              </div>
+            </div>
+            <div class="subline"><span class="label">${timeText}</span>${location ? `· ${location}` : ""}</div>
+          `;
+          list.appendChild(card);
+        });
+      }
+
+      function parsePpg(scorer) {
+        const direct = Number(scorer?.pts_g ?? scorer?.ptsPerGame ?? scorer?.ppg ?? 0);
+        if (Number.isFinite(direct) && direct > 0) return direct;
+        const gp = Number(scorer?.gp ?? scorer?.games_played ?? 0);
+        const pts = Number(scorer?.points ?? scorer?.pts ?? 0);
+        if (Number.isFinite(gp) && gp > 0 && Number.isFinite(pts)) return pts / gp;
+        return 0;
+      }
+
+      function renderLeaders(scorers) {
+        const list = document.getElementById("leadersList");
+        if (!list) return;
+        list.innerHTML = "";
+
+        const sorted = (Array.isArray(scorers) ? [...scorers] : [])
+          .sort((a, b) => Number(b?.points ?? b?.pts ?? 0) - Number(a?.points ?? a?.pts ?? 0))
+          .slice(0, 8);
+
+        if (sorted.length === 0) {
+          list.innerHTML = '<div class="leader-row" style="--accent: 203 100% 65%;"><div class="rank">—</div><div class="who"><div class="name">No player stats yet</div><div class="meta">Waiting for game night</div></div><div class="pts">0</div></div>';
+          return;
+        }
+
+        const meta = document.getElementById("leadersMeta");
+        if (meta) meta.textContent = `${formatPlayerDisplayName(sorted[0]?.name || sorted[0]?.player_name || "Leader")} leads`;
+
+        sorted.forEach((scorer, index) => {
+          const name = formatPlayerDisplayName(scorer.name || scorer.player_name || `Player ${index + 1}`);
+          const team = correctName(scorer.team_name || scorer.team || "");
+          const info = resolveTeamVisual(team, scorer.team_slug || scorer.teamSlug);
+          const teamAbbrev =
+            (team || "")
+              .split(" ")
+              .map((w) => w[0])
+              .join("")
+              .slice(0, 3)
+              .toUpperCase() || "AAH";
+
+          const pts = Number(scorer.points ?? scorer.pts ?? 0) || 0;
+          const goals = Number(scorer.g ?? scorer.goals ?? 0) || 0;
+          const assists = Number(scorer.a ?? scorer.assists ?? 0) || 0;
+
+          const hotStreak = Number(scorer.hot_streak ?? 0) || 0;
+          const coldStreak = Number(scorer.cold_streak ?? 0) || 0;
+          const streak =
+            hotStreak >= 3
+              ? `<span class="streak hot">🔥${hotStreak}</span>`
+              : coldStreak >= 3
+                ? `<span class="streak cold">❄️${coldStreak}</span>`
+                : "";
+
+          const row = document.createElement("div");
+          row.className = "leader-row";
+          row.style.setProperty("--accent", accentForSlug(info.slug));
+          row.innerHTML = `
+            <div class="rank">#${scorer.rank || index + 1}</div>
+            <div class="who">
+              <div class="name" title="${name}">${name}${streak}</div>
+              <div class="meta" title="${team}">${teamAbbrev} · ${goals}G ${assists}A</div>
+            </div>
+            <div class="pts">${pts}</div>
+          `;
+          list.appendChild(row);
+        });
+      }
+
+      function renderScorersGrid(scorers) {
+        const container = document.getElementById("scorersGrid");
+        if (!container) return;
+        container.innerHTML = "";
+
+        const sorted = (Array.isArray(scorers) ? [...scorers] : [])
+          .sort((a, b) => Number(a?.rank ?? 9999) - Number(b?.rank ?? 9999))
+          .slice(0, 20);
+
+        if (sorted.length === 0) {
+          container.innerHTML =
+            '<div class="player-card" style="--accent: 203 100% 65%; grid-column: 1 / -1;"><div class="rank">—</div><div class="who"><div class="name">No player stats yet</div><div class="team">Waiting for game night</div></div><div class="stats"><div class="pts">0</div><div class="line">PTS</div></div></div>';
+          return;
+        }
+
+        sorted.forEach((scorer, index) => {
+          const name = formatPlayerDisplayName(scorer.name || scorer.player_name || `Player ${index + 1}`);
+          const team = correctName(scorer.team_name || scorer.team || "");
+          const info = resolveTeamVisual(team, scorer.team_slug || scorer.teamSlug);
+          const pts = Number(scorer.points ?? scorer.pts ?? 0) || 0;
+          const goals = Number(scorer.g ?? scorer.goals ?? 0) || 0;
+          const assists = Number(scorer.a ?? scorer.assists ?? 0) || 0;
+          const ppg = parsePpg(scorer);
+
+          const card = document.createElement("div");
+          card.className = "player-card";
+          card.style.setProperty("--accent", accentForSlug(info.slug));
+          card.innerHTML = `
+            <div class="rank">#${scorer.rank || index + 1}</div>
+            <div class="who">
+              <div class="name" title="${name}">${name}</div>
+              <div class="team" title="${info.name}">${info.name}</div>
+            </div>
+            <div class="stats">
+              <div class="pts">${pts}</div>
+              <div class="line">${goals}G · ${assists}A · ${ppg ? ppg.toFixed(2) : "0.00"} P/GP</div>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+      }
+
+      function buildTickerItems(recentGames, upcomingGames, scorers, standings) {
+        const items = [];
+
+        const topScorer = Array.isArray(scorers) ? scorers[0] : null;
+        if (topScorer) {
+          const name = formatPlayerDisplayName(topScorer.name || topScorer.player_name || "Leader");
+          const pts = Number(topScorer.points ?? topScorer.pts ?? 0) || 0;
+          items.push({ tag: "Points", text: `${name} leads with ${pts} points` });
+        }
+
+        const leaderTeam = Array.isArray(standings) ? standings[0] : null;
+        if (leaderTeam) {
+          const teamName = correctName(leaderTeam.team || leaderTeam.team_name || "1st Place");
+          const wins = Number(leaderTeam.wins ?? 0) || 0;
+          const losses = Number(leaderTeam.losses ?? 0) || 0;
+          const ties = Number(leaderTeam.ties ?? 0) || 0;
+          const pts = Number(leaderTeam.points ?? leaderTeam.pts ?? 0) || 0;
+          items.push({ tag: "1st", text: `${teamName} (${wins}-${losses}${ties ? `-${ties}` : ""}, ${pts} pts)` });
+        }
+
+        (Array.isArray(recentGames) ? recentGames : []).slice(0, 10).forEach((game) => {
+          const away = correctName(game.away || game.away_team || "Away");
+          const home = correctName(game.home || game.home_team || "Home");
+          const awayScore = parseScore(game.away_score ?? game.away_line?.final) ?? scoreFromResult(game, 0);
+          const homeScore = parseScore(game.home_score ?? game.home_line?.final) ?? scoreFromResult(game, 1);
+          if (awayScore === null || homeScore === null) return;
+          items.push({ tag: "Final", text: `${away} ${awayScore} – ${homeScore} ${home}` });
+        });
+
+        (Array.isArray(upcomingGames) ? upcomingGames : []).slice(0, 10).forEach((game) => {
+          const away = correctName(game.away || game.away_team || "Away");
+          const home = correctName(game.home || game.home_team || "Home");
+          const dateObj = parseGameDate(game);
+          const day = dateObj
+            ? dateObj.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })
+            : (game.date || "");
+          const timeText = formatTimeDisplay(game);
+          items.push({ tag: "Next", text: `${day} ${timeText} · ${away} @ ${home}` });
+        });
+
+        if (items.length === 0) {
+          items.push({ tag: "AAHL", text: "Fetching league updates…" });
+        }
+
+        return items;
+      }
+
+      function renderTicker(items) {
+        tickerItems = Array.isArray(items) ? items : [];
+        tickerIndex = 0;
+        tickTicker(true);
+        startTickerRotation();
+      }
+
+      function tickTicker(immediate = false) {
+        const track = document.getElementById("tickerTrack");
+        if (!track) return;
+        if (tickerItems.length === 0) return;
+
+        const item = tickerItems[tickerIndex % tickerItems.length];
+        tickerIndex = (tickerIndex + 1) % tickerItems.length;
+
+        if (!immediate) track.style.opacity = "0";
+
+        setTimeout(
+          () => {
+            track.innerHTML = `
+              <div class="ticker-item">
+                <span class="tag">${item.tag}</span>
+                <span class="ticker-text" title="${item.text}">${item.text}</span>
+              </div>
+            `;
+            track.style.opacity = "1";
+          },
+          immediate ? 0 : 190,
+        );
+      }
+
+      function startTickerRotation() {
+        if (tickerIntervalId) clearInterval(tickerIntervalId);
+        tickerIntervalId = setInterval(() => {
+          if (!isActive) return;
+          tickTicker(false);
+        }, TICKER_ROTATION_MS);
+      }
+
+      function stopTickerRotation() {
+        if (tickerIntervalId) {
+          clearInterval(tickerIntervalId);
+          tickerIntervalId = null;
+        }
+      }
+
+      function startSlideShow(durations = SLIDE_DURATIONS_MS) {
+        const slides = Array.from(document.querySelectorAll(".slide"));
+        if (slides.length <= 1) return;
+
+        let index = slides.findIndex((slide) => slide.classList.contains("active"));
+        if (index === -1) index = 0;
+
+        const rotationDurations = Array.isArray(durations) && durations.length
+          ? durations.map((value) => {
+              const numeric = Number(value);
+              return Number.isFinite(numeric) && numeric > 0 ? numeric : 15000;
+            })
+          : [15000];
+
+        function scheduleTransition(currentIndex) {
+          const delay = rotationDurations[currentIndex % rotationDurations.length];
+          if (slideTimerId) clearTimeout(slideTimerId);
+
+          slideTimerId = setTimeout(() => {
+            if (!isActive) return;
+            const nextIndex = (currentIndex + 1) % slides.length;
+            slides.forEach((slide, idx) => slide.classList.toggle("active", idx === nextIndex));
+            scheduleTransition(nextIndex);
+          }, delay);
+        }
+
+        scheduleTransition(index);
+      }
+
+      function stopSlideShow() {
+        if (slideTimerId) {
+          clearTimeout(slideTimerId);
+          slideTimerId = null;
+        }
+      }
+
+      function startResultsCarousel() {
+        if (resultsIntervalId) clearInterval(resultsIntervalId);
+        recentCarouselIndex = 0;
+        renderResults(currentRecentGames, recentCarouselIndex);
+        if (currentRecentGames.length <= RESULTS_VISIBLE_COUNT) return;
+        resultsIntervalId = setInterval(() => {
+          if (!isActive) return;
+          recentCarouselIndex = (recentCarouselIndex + RESULTS_VISIBLE_COUNT) % currentRecentGames.length;
+          renderResults(currentRecentGames, recentCarouselIndex);
+        }, RESULTS_ROTATION_MS);
+      }
+
+      function startUpcomingCarousel() {
+        if (upcomingIntervalId) clearInterval(upcomingIntervalId);
+        upcomingCarouselIndex = 0;
+        renderUpcoming(currentUpcomingGames, upcomingCarouselIndex);
+        if (currentUpcomingGames.length <= UPCOMING_VISIBLE_COUNT) return;
+        upcomingIntervalId = setInterval(() => {
+          if (!isActive) return;
+          upcomingCarouselIndex = (upcomingCarouselIndex + UPCOMING_VISIBLE_COUNT) % currentUpcomingGames.length;
+          renderUpcoming(currentUpcomingGames, upcomingCarouselIndex);
+        }, UPCOMING_ROTATION_MS);
+      }
+
+      function stopCarousels() {
+        if (resultsIntervalId) {
+          clearInterval(resultsIntervalId);
+          resultsIntervalId = null;
+        }
+        if (upcomingIntervalId) {
+          clearInterval(upcomingIntervalId);
+          upcomingIntervalId = null;
+        }
+      }
+
+      function correctDataNames(data) {
+        const clone = { ...(data || {}) };
+
+        if (Array.isArray(data?.top_scorers)) {
+          clone.top_scorers = data.top_scorers.map((scorer, index) => {
+            const rawName = scorer.name || scorer.player_name || "";
+            const name = formatPlayerDisplayName(correctName(rawName));
+            const team = scorer.team_name || scorer.team || "";
+            const goals = Number(scorer.g ?? scorer.goals ?? scorer.Goals ?? 0) || 0;
+            const assists = Number(scorer.a ?? scorer.assists ?? scorer.Assists ?? 0) || 0;
+            const points = Number(scorer.points ?? scorer.pts ?? goals + assists) || goals + assists;
+            return {
+              ...scorer,
+              name,
+              player_name: name,
+              team,
+              team_name: team,
+              team_slug: scorer.team_slug || scorer.teamSlug || TEAM_SLUG_OVERRIDES[String(team).toLowerCase()] || slugifyTeamName(team),
+              rank: scorer.rank || index + 1,
+              g: goals,
+              a: assists,
+              points,
+            };
+          });
+        }
+
+        if (Array.isArray(data?.recent_results)) {
+          clone.recent_results = data.recent_results.map((game) => ({
+            ...game,
+            home: formatPlayerDisplayName(correctName(game.home || game.home_team || "")),
+            away: formatPlayerDisplayName(correctName(game.away || game.away_team || "")),
+            headline: game.headline ? correctName(game.headline) : game.headline,
+          }));
+        }
+
+        if (Array.isArray(data?.upcoming_games)) {
+          clone.upcoming_games = data.upcoming_games.map((game) => ({
+            ...game,
+            home: formatPlayerDisplayName(correctName(game.home || game.home_team || "")),
+            away: formatPlayerDisplayName(correctName(game.away || game.away_team || "")),
+          }));
+        }
+
+        return clone;
+      }
+
+      function initializeDisplay(data) {
+        const correctedData = correctDataNames(data || {});
+
+        const standings = Array.isArray(correctedData.standings) ? correctedData.standings : [];
+        const scorers = Array.isArray(correctedData.top_scorers) ? correctedData.top_scorers : [];
+
+        const recentSource = uniqueByGameId(Array.isArray(correctedData.recent_results) ? correctedData.recent_results : []);
+        const upcomingSource = uniqueByGameId(Array.isArray(correctedData.upcoming_games) ? correctedData.upcoming_games : []);
+        const recentGames = filterRecentGames(recentSource);
+        const upcomingGames = filterUpcomingGames(upcomingSource);
+
+        currentRecentGames = recentGames;
+        currentUpcomingGames = upcomingGames;
+
+        renderStandings(standings);
+        renderLeaders(scorers);
+        renderScorersGrid(scorers);
+
+        startResultsCarousel();
+        startUpcomingCarousel();
+
+        renderTicker(buildTickerItems(recentGames, upcomingGames, scorers, standings));
+        renderLastUpdated(data?.timestamp);
+      }
+
+      function loadData() {
+        const cached = loadCache();
+        if (cached) initializeDisplay(cached);
+
+        return fetch(DATA_URL, { cache: "no-store" })
+          .then((response) => {
+            if (!response.ok) throw new Error("Failed to fetch data from GitHub");
+            return response.json();
+          })
+          .then((data) => {
+            saveCache(data);
+            initializeDisplay(data);
+          })
+          .catch((error) => {
+            console.warn("Could not load data from GitHub:", error);
+            if (cached) return;
+            initializeDisplay(sampleData);
+          });
+      }
+
+      function startDataRefresh() {
+        if (dataRefreshTimerId) clearInterval(dataRefreshTimerId);
+        dataRefreshTimerId = setInterval(() => {
+          if (isActive) loadData();
+        }, DATA_REFRESH_MINUTES * 60 * 1000);
+      }
+
+      function stopDataRefresh() {
+        if (dataRefreshTimerId) {
+          clearInterval(dataRefreshTimerId);
+          dataRefreshTimerId = null;
+        }
+      }
+
+      function pauseDisplay() {
+        isActive = false;
+        stopSlideShow();
+        stopCarousels();
+        stopTickerRotation();
+        stopDataRefresh();
+      }
+
+      function resumeDisplay() {
+        isActive = true;
+        loadData();
+        startSlideShow();
+        startDataRefresh();
+      }
+
+      renderClock();
+      clockTimerId = setInterval(renderClock, 1000);
+      resumeDisplay();
+
+      if (window.parent && window.parent.YodeckAPI) {
+        window.parent.YodeckAPI.onShown = function () {
+          resumeDisplay();
+        };
+        window.parent.YodeckAPI.onHidden = function () {
+          pauseDisplay();
+        };
+      }
+    </script>
+  </body>
+</html>
