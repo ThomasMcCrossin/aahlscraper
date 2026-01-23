@@ -56,3 +56,6 @@ Thumbs.db
 # MCP configuration (may contain sensitive data)
 .mcp.json
 FilesToProcess/
+
+# Local photo references / screenshots
+Aahldisplay/
