@@ -1,6 +1,21 @@
 {
-  "generated_at": "2026-01-26T16:34:23.700780+00:00",
+  "generated_at": "2026-01-26T20:27:33.937098+00:00",
   "headlines": [
+    {
+      "game_id": "3276653",
+      "headline": "Bourgeois' Hat Trick Fuels G.R. Mitchell Welding's Thrilling 8-7 Victory Over Maltby Sports",
+      "ai_generated": true,
+      "created_at": "2026-01-26T20:27:30.056110+00:00",
+      "updated_at": "2026-01-26T20:27:30.056110+00:00",
+      "narrative": "In a thrilling matchup, G.R. Mitchell Welding edged out Maltby Sports with a final score of 8-7. Julien Bourgeois led the way with a hat trick, while Dave Atkinson contributed a 5-point night with 2 goals and 3 assists. This victory shifts the playoff positioning as G.R. Mitchell Welding improves their standing against the previously top-ranked Maltby Sports.",
+      "game_datetime": "2026-01-26T01:00:00+00:00",
+      "home_team": "Maltby Sports",
+      "away_team": "G.R. Mitchell Welding",
+      "home_score": 7,
+      "away_score": 8,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276653&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276653&p=boxscore"
+    },
     {
       "game_id": "3276649",
       "headline": "Mackenzie Shines with 2 Goals as J&K Electric and G.R. Mitchell Welding Battle to Thrilling 4-4 Tie!",

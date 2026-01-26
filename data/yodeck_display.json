@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-26T16:34:23.834203",
+  "timestamp": "2026-01-26T20:27:34.106659",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -47,7 +47,7 @@
       "g": "38",
       "a": "20",
       "pts": "58",
-      "ppg": 1.33,
+      "ppg": 2.0,
       "shg": "3",
       "gwg": "3",
       "gtg": "4",
@@ -59,9 +59,9 @@
       "team_slug": "maltby-sports",
       "points": 58,
       "rank": 1,
-      "hot_streak": 7,
+      "hot_streak": 8,
       "cold_streak": 0,
-      "recent_goals": 4
+      "recent_goals": 6
     },
     {
       "no": "97",
@@ -72,11 +72,11 @@
       "g": "27",
       "a": "22",
       "pts": "49",
-      "ppg": 3.0,
+      "ppg": 2.0,
       "shg": "1",
       "gwg": "4",
       "gtg": "2",
-      "pim": "42",
+      "pim": "45",
       "pts_g": "3.50",
       "team_id": "983723",
       "team_name": "G.R. Mitchell Welding",
@@ -84,9 +84,9 @@
       "team_slug": "gr-mitchell-welding",
       "points": 49,
       "rank": 2,
-      "hot_streak": 3,
+      "hot_streak": 4,
       "cold_streak": 0,
-      "recent_goals": 9
+      "recent_goals": 6
     },
     {
       "no": "38",
@@ -97,7 +97,7 @@
       "g": "18",
       "a": "28",
       "pts": "46",
-      "ppg": 1.33,
+      "ppg": 1.67,
       "shg": "",
       "gwg": "",
       "gtg": "4",
@@ -109,9 +109,9 @@
       "team_slug": "gr-mitchell-welding",
       "points": 46,
       "rank": 3,
-      "hot_streak": 6,
+      "hot_streak": 7,
       "cold_streak": 0,
-      "recent_goals": 4
+      "recent_goals": 5
     },
     {
       "no": "9",
@@ -122,7 +122,7 @@
       "g": "15",
       "a": "27",
       "pts": "42",
-      "ppg": 0.33,
+      "ppg": 0.0,
       "shg": "1",
       "gwg": "2",
       "gtg": "",
@@ -135,8 +135,8 @@
       "points": 42,
       "rank": 4,
       "hot_streak": 0,
-      "cold_streak": 0,
-      "recent_goals": 1
+      "cold_streak": 3,
+      "recent_goals": 0
     },
     {
       "no": "28",
@@ -297,7 +297,7 @@
       "g": "14",
       "a": "13",
       "pts": "27",
-      "ppg": 2.0,
+      "ppg": 1.67,
       "shg": "",
       "gwg": "2",
       "gtg": "2",
@@ -309,9 +309,9 @@
       "team_slug": "maltby-sports",
       "points": 27,
       "rank": 11,
-      "hot_streak": 3,
+      "hot_streak": 0,
       "cold_streak": 0,
-      "recent_goals": 6
+      "recent_goals": 5
     },
     {
       "no": "90",
@@ -397,7 +397,7 @@
       "g": "14",
       "a": "11",
       "pts": "25",
-      "ppg": 0.67,
+      "ppg": 0.33,
       "shg": "",
       "gwg": "",
       "gtg": "2",
@@ -411,7 +411,7 @@
       "rank": 15,
       "hot_streak": 0,
       "cold_streak": 0,
-      "recent_goals": 2
+      "recent_goals": 1
     },
     {
       "no": "13",
@@ -422,7 +422,7 @@
       "g": "7",
       "a": "18",
       "pts": "25",
-      "ppg": 0.0,
+      "ppg": 0.33,
       "shg": "",
       "gwg": "",
       "gtg": "1",
@@ -435,8 +435,8 @@
       "points": 25,
       "rank": 16,
       "hot_streak": 0,
-      "cold_streak": 7,
-      "recent_goals": 0
+      "cold_streak": 0,
+      "recent_goals": 1
     },
     {
       "no": "4",
@@ -497,7 +497,7 @@
       "g": "7",
       "a": "16",
       "pts": "23",
-      "ppg": 0.67,
+      "ppg": 1.33,
       "shg": "1",
       "gwg": "",
       "gtg": "2",
@@ -511,7 +511,7 @@
       "rank": 19,
       "hot_streak": 0,
       "cold_streak": 0,
-      "recent_goals": 2
+      "recent_goals": 4
     },
     {
       "no": "17",
@@ -522,7 +522,7 @@
       "g": "4",
       "a": "19",
       "pts": "23",
-      "ppg": 0.67,
+      "ppg": 0.0,
       "shg": "",
       "gwg": "",
       "gtg": "",
@@ -535,11 +535,403 @@
       "points": 23,
       "rank": 20,
       "hot_streak": 0,
-      "cold_streak": 0,
-      "recent_goals": 2
+      "cold_streak": 3,
+      "recent_goals": 0
     }
   ],
   "recent_results": [
+    {
+      "game_id": "3276653",
+      "status": "final",
+      "location": "Amherst",
+      "division": "REGULAR SEASON",
+      "start_utc": "2026-01-26T01:00:00+00:00",
+      "start_local": "2026-01-25T21:00:00-04:00",
+      "home": "Maltby Sports",
+      "away": "G.R. Mitchell Welding",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276653&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276653&p=summary",
+      "home_line": {
+        "name": "Maltby Sports",
+        "slug": "maltby-sports",
+        "final": 7,
+        "periods": [
+          1,
+          4,
+          2,
+          0,
+          0
+        ],
+        "is_winner": false
+      },
+      "away_line": {
+        "name": "G.R. Mitchell Welding",
+        "slug": "gr-mitchell-welding",
+        "final": 8,
+        "periods": [
+          3,
+          2,
+          3,
+          0,
+          0
+        ],
+        "is_winner": true
+      },
+      "home_score": 7,
+      "away_score": 8,
+      "result": "7 - 8",
+      "datetime": "2026-01-25T21:00:00-04:00",
+      "date": "01/25/2026",
+      "time": "9:00 PM",
+      "player_stats": {
+        "home": [
+          {
+            "player_id": "maltby-sports-bridge-issac-98",
+            "name": "Issac Bridge",
+            "number": "98",
+            "positions": [
+              "C"
+            ],
+            "goals": 3,
+            "assists": 1,
+            "points": 4,
+            "penalty_minutes": 3,
+            "gtg": 0
+          },
+          {
+            "player_id": "maltby-sports-crocker-luke-6",
+            "name": "Luke Crocker",
+            "number": "6",
+            "positions": [
+              "D"
+            ],
+            "goals": 1,
+            "assists": 0,
+            "points": 1,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "maltby-sports-hurley-connor-7",
+            "name": "Connor Hurley",
+            "number": "7",
+            "positions": [
+              "F"
+            ],
+            "goals": 0,
+            "assists": 0,
+            "points": 0,
+            "penalty_minutes": 3,
+            "gtg": 0
+          },
+          {
+            "player_id": "maltby-sports-johnson-trevor-18",
+            "name": "Trevor Johnson",
+            "number": "18",
+            "positions": [
+              "D"
+            ],
+            "goals": 2,
+            "assists": 0,
+            "points": 2,
+            "penalty_minutes": 3,
+            "gtg": 0
+          },
+          {
+            "player_id": "maltby-sports-leblanc-travis-63",
+            "name": "Travis Leblanc",
+            "number": "63",
+            "positions": [
+              "F",
+              "D"
+            ],
+            "goals": 1,
+            "assists": 2,
+            "points": 3,
+            "penalty_minutes": 0,
+            "gtg": 1
+          },
+          {
+            "player_id": "maltby-sports-maltby-chris-17",
+            "name": "Chris Maltby",
+            "number": "17",
+            "positions": [
+              "D",
+              "F"
+            ],
+            "goals": 0,
+            "assists": 1,
+            "points": 1,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "maltby-sports-mccarthy-ian-9",
+            "name": "Ian McCarthy",
+            "number": "9",
+            "positions": [
+              "F"
+            ],
+            "goals": 0,
+            "assists": 3,
+            "points": 3,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "maltby-sports-small-danny-biggie-16",
+            "name": "Biggie Small",
+            "number": "16",
+            "positions": [
+              "F",
+              "D"
+            ],
+            "goals": 0,
+            "assists": 1,
+            "points": 1,
+            "penalty_minutes": 0,
+            "gtg": 0
+          }
+        ],
+        "away": [
+          {
+            "player_id": "gr-mitchell-welding-atkinson-dave-38",
+            "name": "Dave Atkinson",
+            "number": "38",
+            "positions": [
+              "F"
+            ],
+            "goals": 2,
+            "assists": 3,
+            "points": 5,
+            "penalty_minutes": 0,
+            "gtg": 1
+          },
+          {
+            "player_id": "gr-mitchell-welding-bourgeois-julien-9",
+            "name": "Julien Bourgeois",
+            "number": "9",
+            "positions": [
+              "F"
+            ],
+            "goals": 3,
+            "assists": 0,
+            "points": 3,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "gr-mitchell-welding-fullerton-zack-90",
+            "name": "Zack Fullerton",
+            "number": "90",
+            "positions": [
+              "F"
+            ],
+            "goals": 1,
+            "assists": 0,
+            "points": 1,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "gr-mitchell-welding-hurley-william-15",
+            "name": "William Hurley",
+            "number": "15",
+            "positions": [
+              "F"
+            ],
+            "goals": 0,
+            "assists": 0,
+            "points": 0,
+            "penalty_minutes": 6,
+            "gtg": 0
+          },
+          {
+            "player_id": "gr-mitchell-welding-macdonald-meathead-97",
+            "name": "Marshall MacDonald",
+            "number": "97",
+            "positions": [
+              "C"
+            ],
+            "goals": 1,
+            "assists": 2,
+            "points": 3,
+            "penalty_minutes": 9,
+            "gtg": 0
+          },
+          {
+            "player_id": "gr-mitchell-welding-macpherson-ryan-21",
+            "name": "Ryan Macpherson",
+            "number": "21",
+            "positions": [],
+            "goals": 0,
+            "assists": 1,
+            "points": 1,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "gr-mitchell-welding-mattix-ralph-66",
+            "name": "Ralph Mattix",
+            "number": "66",
+            "positions": [
+              "D"
+            ],
+            "goals": 0,
+            "assists": 1,
+            "points": 1,
+            "penalty_minutes": 3,
+            "gtg": 0
+          },
+          {
+            "player_id": "gr-mitchell-welding-mitchell-gordon-13",
+            "name": "Gordon Mitchell",
+            "number": "13",
+            "positions": [
+              "F",
+              "D"
+            ],
+            "goals": 1,
+            "assists": 2,
+            "points": 3,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "gr-mitchell-welding-robichaud-corey-88",
+            "name": "Corey Robichaud",
+            "number": "88",
+            "positions": [
+              "F"
+            ],
+            "goals": 0,
+            "assists": 1,
+            "points": 1,
+            "penalty_minutes": 0,
+            "gtg": 0
+          },
+          {
+            "player_id": "gr-mitchell-welding-ryan-geoff-55",
+            "name": "Geoff Ryan",
+            "number": "55",
+            "positions": [
+              "D"
+            ],
+            "goals": 0,
+            "assists": 1,
+            "points": 1,
+            "penalty_minutes": 0,
+            "gtg": 0
+          }
+        ]
+      },
+      "penalties": [
+        {
+          "per_period": "1",
+          "time": "9:42",
+          "player": "7 Connor Hurley",
+          "team": "Maltby Sports",
+          "infraction": "Interference (Minor)",
+          "length": "3:00"
+        },
+        {
+          "per_period": "2",
+          "time": "8:10",
+          "player": "97 Meathead MacDonald",
+          "team": "G.R. Mitchell Welding",
+          "infraction": "Roughing (Minor)",
+          "length": "3:00"
+        },
+        {
+          "per_period": "2",
+          "time": "8:10",
+          "player": "97 Meathead MacDonald",
+          "team": "G.R. Mitchell Welding",
+          "infraction": "Roughing (Minor)",
+          "length": "3:00"
+        },
+        {
+          "per_period": "2",
+          "time": "8:10",
+          "player": "18 Trevor Johnson",
+          "team": "Maltby Sports",
+          "infraction": "Roughing (Minor)",
+          "length": "3:00"
+        },
+        {
+          "per_period": "3",
+          "time": "12:52",
+          "player": "15 William  Hurley",
+          "team": "G.R. Mitchell Welding",
+          "infraction": "Body Contact (Minor)",
+          "length": "3:00"
+        },
+        {
+          "per_period": "3",
+          "time": "12:52",
+          "player": "15 William  Hurley",
+          "team": "G.R. Mitchell Welding",
+          "infraction": "Unsportsmanlike Conduct (Minor)",
+          "length": "3:00"
+        },
+        {
+          "per_period": "3",
+          "time": "6:42",
+          "player": "98 Issac Bridge",
+          "team": "Maltby Sports",
+          "infraction": "Boarding (Minor)",
+          "length": "3:00"
+        },
+        {
+          "per_period": "3",
+          "time": "0:58",
+          "player": "97 Meathead MacDonald",
+          "team": "G.R. Mitchell Welding",
+          "infraction": "Roughing (Minor)",
+          "length": "3:00"
+        },
+        {
+          "per_period": "3",
+          "time": "0:48",
+          "player": "66 Ralph Mattix",
+          "team": "G.R. Mitchell Welding",
+          "infraction": "Interference (Minor)",
+          "length": "3:00"
+        }
+      ],
+      "scoreboard": [
+        [
+          "REGULAR SEASON",
+          "1",
+          "2",
+          "3",
+          "OT",
+          "2OT",
+          "F"
+        ],
+        [
+          "Maltby Sports",
+          "1",
+          "4",
+          "2",
+          "0",
+          "0",
+          "7"
+        ],
+        [
+          "G.R. Mitchell Welding",
+          "3",
+          "2",
+          "3",
+          "0",
+          "0",
+          "8"
+        ]
+      ],
+      "headline": "Bourgeois' Hat Trick Fuels G.R. Mitchell Welding's Thrilling 8-7 Victory Over Maltby Sports",
+      "headline_updated_at": "2026-01-26T20:27:30.056110+00:00",
+      "narrative": "In a thrilling matchup, G.R. Mitchell Welding edged out Maltby Sports with a final score of 8-7. Julien Bourgeois led the way with a hat trick, while Dave Atkinson contributed a 5-point night with 2 goals and 3 assists. This victory shifts the playoff positioning as G.R. Mitchell Welding improves their standing against the previously top-ranked Maltby Sports."
+    },
     {
       "game_id": "3276649",
       "status": "final",
@@ -3178,365 +3570,6 @@
       "headline": "Ultramar Powers Past Colson Overhead Doors 7-4, Tim Burke and Brad Linkletter Shine with 2 Goals Each",
       "headline_updated_at": "2026-01-06T22:05:34.757470+00:00",
       "narrative": "In a high-stakes matchup, Ultramar triumphed over Colson Overhead Doors with a final score of 7-4. Brad Linkletter led the charge with 2 goals and 1 assist, while Tim Burke also contributed with 2 goals. The win helps Ultramar solidify their position in the playoff race, while Colson's loss marks their third consecutive defeat."
-    },
-    {
-      "game_id": "3276566",
-      "status": "final",
-      "location": "Amherst",
-      "division": "REGULAR SEASON",
-      "start_utc": "2025-12-30T23:30:00+00:00",
-      "start_local": "2025-12-30T19:30:00-04:00",
-      "home": "J&K Electric",
-      "away": "G.R. Mitchell Welding",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276566&p=boxscore",
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276566&p=summary",
-      "home_line": {
-        "name": "J&K Electric",
-        "slug": "j-and-k-electric",
-        "final": 5,
-        "periods": [
-          1,
-          3,
-          1,
-          0,
-          0
-        ],
-        "is_winner": true
-      },
-      "away_line": {
-        "name": "G.R. Mitchell Welding",
-        "slug": "gr-mitchell-welding",
-        "final": 2,
-        "periods": [
-          0,
-          2,
-          0,
-          0,
-          0
-        ],
-        "is_winner": false
-      },
-      "home_score": 5,
-      "away_score": 2,
-      "result": "5 - 2",
-      "datetime": "2025-12-30T19:30:00-04:00",
-      "date": "12/30/2025",
-      "time": "7:30 PM",
-      "player_stats": {
-        "home": [
-          {
-            "player_id": "j-and-k-electric-boutiler-gerald-22",
-            "name": "Gerald Boutiler",
-            "number": "22",
-            "positions": [
-              "D",
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-budd-ryan-18",
-            "name": "Ryan Budd",
-            "number": "18",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-davison-bill-74",
-            "name": "Bill Davison",
-            "number": "74",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 0,
-            "points": 0,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-harrison-avery-00",
-            "name": "Avery Harrison",
-            "number": "00",
-            "positions": [
-              "D"
-            ],
-            "goals": 2,
-            "assists": 0,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-leopold-nick-9",
-            "name": "Nick Leopold",
-            "number": "9",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-morris-matt-2",
-            "name": "Matt Morris",
-            "number": "2",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-reynolds-jaxon-19",
-            "name": "Jaxon Reynolds",
-            "number": "19",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 3,
-            "points": 4,
-            "penalty_minutes": 3,
-            "gtg": 0
-          },
-          {
-            "player_id": "j-and-k-electric-stone-brendan-28",
-            "name": "Brendan Stone",
-            "number": "28",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ],
-        "away": [
-          {
-            "player_id": "gr-mitchell-welding-atkinson-dave-38",
-            "name": "Dave Atkinson",
-            "number": "38",
-            "positions": [
-              "F"
-            ],
-            "goals": 1,
-            "assists": 1,
-            "points": 2,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-clark-scott-1",
-            "name": "Scott Clark",
-            "number": "1",
-            "positions": [
-              "G"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-macdonald-meathead-97",
-            "name": "Marshall MacDonald",
-            "number": "97",
-            "positions": [
-              "C"
-            ],
-            "goals": 1,
-            "assists": 0,
-            "points": 1,
-            "penalty_minutes": 18,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-mitchell-gordon-13",
-            "name": "Gordon Mitchell",
-            "number": "13",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 0,
-            "points": 0,
-            "penalty_minutes": 9,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-robichaud-corey-88",
-            "name": "Corey Robichaud",
-            "number": "88",
-            "positions": [
-              "F"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 10,
-            "gtg": 0
-          },
-          {
-            "player_id": "gr-mitchell-welding-sutton-cody-61",
-            "name": "Cody Sutton",
-            "number": "61",
-            "positions": [
-              "F",
-              "D"
-            ],
-            "goals": 0,
-            "assists": 1,
-            "points": 1,
-            "penalty_minutes": 0,
-            "gtg": 0
-          }
-        ]
-      },
-      "penalties": [
-        {
-          "per_period": "1",
-          "time": "0:52",
-          "player": "22 Gerald Boutiler / Served by 22 Gerald Boutiler",
-          "team": "J&K Electric",
-          "infraction": "Unsportsmanlike Conduct (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "1",
-          "time": "0:52",
-          "player": "97 Meathead MacDonald / Served by 97 Meathead MacDonald",
-          "team": "G.R. Mitchell Welding",
-          "infraction": "Slashing (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "2",
-          "time": "12:44",
-          "player": "13 Gordon  Mitchell / Served by 13 Gordon  Mitchell",
-          "team": "G.R. Mitchell Welding",
-          "infraction": "Roughing (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "2",
-          "time": "4:56",
-          "player": "13 Gordon  Mitchell / Served by 13 Gordon  Mitchell",
-          "team": "G.R. Mitchell Welding",
-          "infraction": "Roughing (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "2",
-          "time": "3:50",
-          "player": "18 Ryan Budd / Served by 18 Ryan Budd",
-          "team": "J&K Electric",
-          "infraction": "Roughing (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "3",
-          "time": "15:06",
-          "player": "19 Jaxon Reynolds / Served by 19 Jaxon Reynolds",
-          "team": "J&K Electric",
-          "infraction": "Holding (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "3",
-          "time": "13:17",
-          "player": "13 Gordon  Mitchell / Served by 13 Gordon  Mitchell",
-          "team": "G.R. Mitchell Welding",
-          "infraction": "Cross-Checking (Minor)",
-          "length": "3:00"
-        },
-        {
-          "per_period": "3",
-          "time": "11:50",
-          "player": "97 Meathead MacDonald / Served by 97 Meathead MacDonald",
-          "team": "G.R. Mitchell Welding",
-          "infraction": "Game Misconduct (Major)",
-          "length": "10:00"
-        },
-        {
-          "per_period": "3",
-          "time": "11:50",
-          "player": "97 Meathead MacDonald / Served by 94 Nick \"Pickle\" Dobson",
-          "team": "G.R. Mitchell Welding",
-          "infraction": "Slashing (Major)",
-          "length": "5:00"
-        },
-        {
-          "per_period": "3",
-          "time": "10:34",
-          "player": "88 Corey Robichaud / Served by 88 Corey Robichaud",
-          "team": "G.R. Mitchell Welding",
-          "infraction": "Game Misconduct (Major)",
-          "length": "10:00"
-        },
-        {
-          "per_period": "3",
-          "time": "8:32",
-          "player": "74 Bill Davison / Served by 74 Bill Davison",
-          "team": "J&K Electric",
-          "infraction": "Holding (Minor)",
-          "length": "3:00"
-        }
-      ],
-      "scoreboard": [
-        [
-          "REGULAR SEASON",
-          "1",
-          "2",
-          "3",
-          "OT",
-          "2OT",
-          "F"
-        ],
-        [
-          "J&K Electric",
-          "1",
-          "3",
-          "1",
-          "0",
-          "0",
-          "5"
-        ],
-        [
-          "G.R. Mitchell Welding",
-          "0",
-          "2",
-          "0",
-          "0",
-          "0",
-          "2"
-        ]
-      ],
-      "headline": "J&K Electric Powers Past G.R. Mitchell Welding 5-2, Avery Harrison Shines with Two Goals and Jaxon Reynolds Tallies Four Points",
-      "headline_updated_at": "2026-01-06T22:05:34.757470+00:00",
-      "narrative": "In a decisive matchup, J&K Electric defeated G.R. Mitchell Welding with a final score of 5-2. Avery Harrison led the charge with 2 goals, while Jaxon Reynolds had a standout 4-point night with 1 goal and 3 assists. This victory solidifies J&K Electric's position at the top of the standings as they continue their strong season."
     }
   ],
   "upcoming_games": [
@@ -3852,6 +3885,21 @@
     }
   ],
   "headlines": [
+    {
+      "game_id": "3276653",
+      "headline": "Bourgeois' Hat Trick Fuels G.R. Mitchell Welding's Thrilling 8-7 Victory Over Maltby Sports",
+      "ai_generated": true,
+      "created_at": "2026-01-26T20:27:30.056110+00:00",
+      "updated_at": "2026-01-26T20:27:30.056110+00:00",
+      "narrative": "In a thrilling matchup, G.R. Mitchell Welding edged out Maltby Sports with a final score of 8-7. Julien Bourgeois led the way with a hat trick, while Dave Atkinson contributed a 5-point night with 2 goals and 3 assists. This victory shifts the playoff positioning as G.R. Mitchell Welding improves their standing against the previously top-ranked Maltby Sports.",
+      "game_datetime": "2026-01-26T01:00:00+00:00",
+      "home_team": "Maltby Sports",
+      "away_team": "G.R. Mitchell Welding",
+      "home_score": 7,
+      "away_score": 8,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276653&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276653&p=boxscore"
+    },
     {
       "game_id": "3276649",
       "headline": "Mackenzie Shines with 2 Goals as J&K Electric and G.R. Mitchell Welding Battle to Thrilling 4-4 Tie!",
@@ -4454,7 +4502,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2026-01-26T16:34:23.709361+00:00",
+    "generated_at": "2026-01-26T20:27:33.947867+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",
@@ -5045,7 +5093,7 @@
         "points": 1,
         "penalty_minutes": 0,
         "points_per_game": 1.0,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -5067,7 +5115,7 @@
         "points": 25,
         "penalty_minutes": 30,
         "points_per_game": 1.47,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 3,
         "recent_games": 1
@@ -5082,16 +5130,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 8,
+        "games_played": 9,
         "goals": 5,
         "assists": 5,
         "points": 10,
-        "penalty_minutes": 3,
-        "points_per_game": 1.25,
-        "team_games_played": 17,
+        "penalty_minutes": 9,
+        "points_per_game": 1.11,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
-        "recent_games": 0
+        "recent_games": 1
       },
       {
         "player_id": "gr-mitchell-welding-macpherson-ryan-21",
@@ -5107,7 +5155,7 @@
         "points": 25,
         "penalty_minutes": 6,
         "points_per_game": 1.67,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 1,
         "recent_games": 1
@@ -5128,7 +5176,7 @@
         "points": 46,
         "penalty_minutes": 6,
         "points_per_game": 2.19,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 5,
         "recent_games": 1
@@ -5143,16 +5191,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 8,
+        "games_played": 9,
         "goals": 7,
-        "assists": 6,
-        "points": 13,
+        "assists": 7,
+        "points": 14,
         "penalty_minutes": 0,
-        "points_per_game": 1.62,
-        "team_games_played": 17,
+        "points_per_game": 1.56,
+        "team_games_played": 18,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": 1,
+        "recent_games": 1
       },
       {
         "player_id": "gr-mitchell-welding-sutton-cody-61",
@@ -5171,7 +5219,7 @@
         "points": 19,
         "penalty_minutes": 6,
         "points_per_game": 1.73,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -5186,16 +5234,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 8,
+        "games_played": 9,
         "goals": 2,
-        "assists": 7,
-        "points": 9,
-        "penalty_minutes": 6,
-        "points_per_game": 1.12,
-        "team_games_played": 17,
+        "assists": 8,
+        "points": 10,
+        "penalty_minutes": 9,
+        "points_per_game": 1.11,
+        "team_games_played": 18,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": 1,
+        "recent_games": 1
       },
       {
         "player_id": "gr-mitchell-welding-helm-corey-7",
@@ -5214,7 +5262,7 @@
         "points": 21,
         "penalty_minutes": 6,
         "points_per_game": 1.4,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -5229,16 +5277,16 @@
         "team_id": "983723",
         "team_name": "G.R. Mitchell Welding",
         "team_slug": "gr-mitchell-welding",
-        "games_played": 6,
+        "games_played": 7,
         "goals": 2,
-        "assists": 4,
-        "points": 6,
+        "assists": 5,
+        "points": 7,
         "penalty_minutes": 10,
         "points_per_game": 1.0,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
-        "recent_points": 0,
-        "recent_games": 0
+        "recent_points": 1,
+        "recent_games": 1
       },
       {
         "player_id": "gr-mitchell-welding-bourgeois-julien-9",
@@ -5256,7 +5304,7 @@
         "points": 23,
         "penalty_minutes": 9,
         "points_per_game": 1.53,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 3,
         "recent_games": 1
@@ -5277,7 +5325,7 @@
         "points": 26,
         "penalty_minutes": 3,
         "points_per_game": 1.62,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 1,
         "recent_games": 1
@@ -5298,7 +5346,7 @@
         "points": 13,
         "penalty_minutes": 9,
         "points_per_game": 1.3,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": -5,
         "recent_games": -3
@@ -5317,9 +5365,9 @@
         "goals": 27,
         "assists": 22,
         "points": 49,
-        "penalty_minutes": 42,
+        "penalty_minutes": 45,
         "points_per_game": 3.5,
-        "team_games_played": 17,
+        "team_games_played": 18,
         "games_missed": null,
         "recent_points": 3,
         "recent_games": 1
@@ -5661,7 +5709,7 @@
         "points": 27,
         "penalty_minutes": 0,
         "points_per_game": 1.8,
-        "team_games_played": 14,
+        "team_games_played": 15,
         "games_missed": null,
         "recent_points": 1,
         "recent_games": 1
@@ -5683,7 +5731,7 @@
         "points": 23,
         "penalty_minutes": 21,
         "points_per_game": 1.44,
-        "team_games_played": 14,
+        "team_games_played": 15,
         "games_missed": null,
         "recent_points": 1,
         "recent_games": 1
@@ -5704,7 +5752,7 @@
         "points": 27,
         "penalty_minutes": 24,
         "points_per_game": 1.42,
-        "team_games_played": 14,
+        "team_games_played": 15,
         "games_missed": null,
         "recent_points": 2,
         "recent_games": 1
@@ -5725,7 +5773,7 @@
         "points": 30,
         "penalty_minutes": 6,
         "points_per_game": 1.76,
-        "team_games_played": 14,
+        "team_games_played": 15,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -5746,7 +5794,7 @@
         "points": 10,
         "penalty_minutes": 6,
         "points_per_game": 1.11,
-        "team_games_played": 14,
+        "team_games_played": 15,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -5767,7 +5815,7 @@
         "points": 3,
         "penalty_minutes": 0,
         "points_per_game": 1.5,
-        "team_games_played": 14,
+        "team_games_played": 15,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -5788,7 +5836,7 @@
         "points": 1,
         "penalty_minutes": 0,
         "points_per_game": 0.5,
-        "team_games_played": 14,
+        "team_games_played": 15,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -5809,7 +5857,7 @@
         "points": 18,
         "penalty_minutes": 9,
         "points_per_game": 1.29,
-        "team_games_played": 14,
+        "team_games_played": 15,
         "games_missed": null,
         "recent_points": 8,
         "recent_games": 6
@@ -5831,7 +5879,7 @@
         "points": 24,
         "penalty_minutes": 18,
         "points_per_game": 1.5,
-        "team_games_played": 14,
+        "team_games_played": 15,
         "games_missed": null,
         "recent_points": 3,
         "recent_games": 1
@@ -5846,16 +5894,16 @@
         "team_id": "TYLERARSENEAU-1",
         "team_name": "Maltby Sports",
         "team_slug": "maltby-sports",
-        "games_played": 7,
+        "games_played": 8,
         "goals": 0,
         "assists": 4,
         "points": 4,
-        "penalty_minutes": 6,
-        "points_per_game": 0.57,
-        "team_games_played": 14,
+        "penalty_minutes": 9,
+        "points_per_game": 0.5,
+        "team_games_played": 15,
         "games_missed": null,
         "recent_points": 0,
-        "recent_games": 0
+        "recent_games": 1
       },
       {
         "player_id": "maltby-sports-mackinnon-ted-77",
@@ -5873,7 +5921,7 @@
         "points": 10,
         "penalty_minutes": 3,
         "points_per_game": 1.25,
-        "team_games_played": 14,
+        "team_games_played": 15,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -5894,7 +5942,7 @@
         "points": 42,
         "penalty_minutes": 3,
         "points_per_game": 2.33,
-        "team_games_played": 14,
+        "team_games_played": 15,
         "games_missed": null,
         "recent_points": 3,
         "recent_games": 1
@@ -5916,7 +5964,7 @@
         "points": 11,
         "penalty_minutes": 18,
         "points_per_game": 1.0,
-        "team_games_played": 14,
+        "team_games_played": 15,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -5937,7 +5985,7 @@
         "points": 58,
         "penalty_minutes": 6,
         "points_per_game": 2.9,
-        "team_games_played": 14,
+        "team_games_played": 15,
         "games_missed": null,
         "recent_points": 4,
         "recent_games": 1

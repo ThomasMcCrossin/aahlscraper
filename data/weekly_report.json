@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-26T16:34:23.700780+00:00",
+  "generated_at": "2026-01-26T20:27:33.937098+00:00",
   "standings_snapshot": "standings-20260126T163423Z.json",
   "previous_snapshot": "standings-20260122T124841Z.json",
   "standings_movements": [
@@ -36,21 +36,21 @@
   ],
   "recent_team_form": [
     {
-      "team": "Maltby Sports",
-      "played": 1,
+      "team": "G.R. Mitchell Welding",
+      "played": 2,
       "wins": 1,
-      "losses": 0,
-      "ties": 0
-    },
-    {
-      "team": "J&K Electric",
-      "played": 1,
-      "wins": 0,
       "losses": 0,
       "ties": 1
     },
     {
-      "team": "G.R. Mitchell Welding",
+      "team": "Maltby Sports",
+      "played": 2,
+      "wins": 1,
+      "losses": 1,
+      "ties": 0
+    },
+    {
+      "team": "J&K Electric",
       "played": 1,
       "wins": 0,
       "losses": 0,
@@ -65,6 +65,11 @@
     }
   ],
   "game_headlines": [
+    {
+      "game_id": "3276653",
+      "headline": "Bourgeois' Hat Trick Fuels G.R. Mitchell Welding's Thrilling 8-7 Victory Over Maltby Sports",
+      "game_datetime": "2026-01-26T01:00:00+00:00"
+    },
     {
       "game_id": "3276649",
       "headline": "Mackenzie Shines with 2 Goals as J&K Electric and G.R. Mitchell Welding Battle to Thrilling 4-4 Tie!",
