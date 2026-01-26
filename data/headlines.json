@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-26T12:47:06.973188+00:00",
+  "generated_at": "2026-01-26T16:34:23.700780+00:00",
   "headlines": [
     {
       "game_id": "3276649",
@@ -177,8 +177,8 @@
       "away_team": "Colson Overhead Doors",
       "home_score": 5,
       "away_score": 3,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276560&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276560&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276560&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276560&u=DSMALL&s=hockey&p=boxscore",
       "narrative": "FINAL: Maltby Sports 5, Colson Overhead Doors 3. Isaac Bridge led the way for Maltby Sports with an impressive 4-goal night, while Trevor Johnson contributed with a goal and two assists. This victory helps Maltby maintain their strong position in the playoff race, improving their record to 2-1."
     },
     {
