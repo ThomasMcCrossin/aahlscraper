@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-27T12:49:24.023692",
+  "timestamp": "2026-01-27T16:29:34.191098",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -4502,7 +4502,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2026-01-27T12:49:23.903236+00:00",
+    "generated_at": "2026-01-27T16:29:34.068222+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",
@@ -5139,7 +5139,7 @@
         "team_games_played": 18,
         "games_missed": null,
         "recent_points": 0,
-        "recent_games": 1
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-macpherson-ryan-21",
@@ -5199,8 +5199,8 @@
         "points_per_game": 1.56,
         "team_games_played": 18,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-sutton-cody-61",
@@ -5242,8 +5242,8 @@
         "points_per_game": 1.11,
         "team_games_played": 18,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-helm-corey-7",
@@ -5285,8 +5285,8 @@
         "points_per_game": 1.0,
         "team_games_played": 18,
         "games_missed": null,
-        "recent_points": 1,
-        "recent_games": 1
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-bourgeois-julien-9",
@@ -5903,7 +5903,7 @@
         "team_games_played": 15,
         "games_missed": null,
         "recent_points": 0,
-        "recent_games": 1
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-mackinnon-ted-77",
