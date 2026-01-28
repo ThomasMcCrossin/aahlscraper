@@ -1,63 +1,18 @@
 {
-  "generated_at": "2026-01-27T20:22:44.780111+00:00",
-  "standings_snapshot": "standings-20260126T163423Z.json",
-  "previous_snapshot": "standings-20260122T124841Z.json",
-  "standings_movements": [
-    {
-      "team": "G.R. Mitchell Welding",
-      "current_points": 26,
-      "previous_points": 24,
-      "points_change": 2
-    },
-    {
-      "team": "Maltby Sports",
-      "current_points": 34,
-      "previous_points": 34,
-      "points_change": 0
-    },
-    {
-      "team": "J&K Electric",
-      "current_points": 28,
-      "previous_points": 28,
-      "points_change": 0
-    },
-    {
-      "team": "Ultramar",
-      "current_points": 9,
-      "previous_points": 9,
-      "points_change": 0
-    },
-    {
-      "team": "Colson Overhead Doors",
-      "current_points": 7,
-      "previous_points": 7,
-      "points_change": 0
-    }
-  ],
+  "generated_at": "2026-01-28T02:52:37.583685+00:00",
+  "standings_snapshot": "standings-20260128T025236Z.json",
+  "previous_snapshot": "standings-20260126T163423Z.json",
+  "standings_movements": [],
   "recent_team_form": [
     {
       "team": "G.R. Mitchell Welding",
-      "played": 2,
+      "played": 1,
       "wins": 1,
       "losses": 0,
-      "ties": 1
-    },
-    {
-      "team": "Maltby Sports",
-      "played": 2,
-      "wins": 1,
-      "losses": 1,
       "ties": 0
     },
     {
-      "team": "J&K Electric",
-      "played": 1,
-      "wins": 0,
-      "losses": 0,
-      "ties": 1
-    },
-    {
-      "team": "Ultramar",
+      "team": "Maltby Sports",
       "played": 1,
       "wins": 0,
       "losses": 1,
