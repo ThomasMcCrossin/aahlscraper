@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-29T16:42:51.582164+00:00",
+  "generated_at": "2026-01-29T20:29:01.215384+00:00",
   "headlines": [
     {
       "game_id": "3276653",
@@ -13,8 +13,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 7,
       "away_score": 8,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276653&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276653&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276653&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276653&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276649",
@@ -28,8 +28,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 4,
       "away_score": 4,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276649&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276649&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276649&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276649&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276647",
@@ -43,8 +43,8 @@
       "away_team": "Ultramar",
       "home_score": 5,
       "away_score": 4,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276647&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276647&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276647&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276647&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276645",
@@ -58,8 +58,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 3,
       "away_score": 3,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276645&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276645&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276645&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276645&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276641",
@@ -73,8 +73,8 @@
       "away_team": "Ultramar",
       "home_score": 0,
       "away_score": 2,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276641&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276641&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276641&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276641&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276639",
@@ -88,8 +88,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 3,
       "away_score": 3,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276639&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276639&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276639&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276639&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276574",
@@ -103,8 +103,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 8,
       "away_score": 5,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276574&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276574&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276574&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276574&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276572",
@@ -118,8 +118,8 @@
       "away_team": "Colson Overhead Doors",
       "home_score": 7,
       "away_score": 2,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276572&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276572&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276572&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276572&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276570",
@@ -133,8 +133,8 @@
       "away_team": "Ultramar",
       "home_score": 7,
       "away_score": 1,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276570&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276570&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276570&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276570&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276568",
@@ -147,8 +147,8 @@
       "away_team": "Ultramar",
       "home_score": 4,
       "away_score": 7,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276568&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276568&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276568&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276568&u=DSMALL&s=hockey&p=boxscore",
       "narrative": "In a high-stakes matchup, Ultramar triumphed over Colson Overhead Doors with a final score of 7-4. Brad Linkletter led the charge with 2 goals and 1 assist, while Tim Burke also contributed with 2 goals. The win helps Ultramar solidify their position in the playoff race, while Colson's loss marks their third consecutive defeat."
     },
     {
@@ -162,8 +162,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 5,
       "away_score": 2,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276566&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276566&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276566&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276566&u=DSMALL&s=hockey&p=boxscore",
       "narrative": "In a decisive matchup, J&K Electric defeated G.R. Mitchell Welding with a final score of 5-2. Avery Harrison led the charge with 2 goals, while Jaxon Reynolds had a standout 4-point night with 1 goal and 3 assists. This victory solidifies J&K Electric's position at the top of the standings as they continue their strong season."
     },
     {
@@ -177,8 +177,8 @@
       "away_team": "Ultramar",
       "home_score": 8,
       "away_score": 7,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276562&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276562&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276562&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276562&u=DSMALL&s=hockey&p=boxscore",
       "narrative": "In a thrilling matchup, J&K Electric edged out Ultramar with a final score of 8-7. Gerald Boutiler led the way for J&K Electric with 1 goal and 3 assists, while Ultramar's Matt Cove scored 2 goals in a strong effort. This victory helps J&K maintain their position at the top of the standings, further solidifying their playoff hopes."
     },
     {
