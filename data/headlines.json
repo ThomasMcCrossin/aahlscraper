@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-01-30T12:54:13.043493+00:00",
+  "generated_at": "2026-01-30T16:39:28.425996+00:00",
   "headlines": [
+    {
+      "game_id": "3276655",
+      "headline": "Colson Overhead Doors Edges J&K Electric 7-6, Powered by Gould\u2019s 3 Points and Mackenzie\u2019s 4 Goals in Thrilling Clash",
+      "ai_generated": true,
+      "created_at": "2026-01-30T16:39:17.516358+00:00",
+      "updated_at": "2026-01-30T16:39:17.516358+00:00",
+      "narrative": "In a thrilling matchup, Colson Overhead Doors edged out J&K Electric with a final score of 7-6. Zack Gould led the way for Colson with 1 goal and 2 assists, while Rubein Mackenzie had a standout performance for J&K, scoring 4 goals and adding 1 assist for a hat trick. This victory has significant playoff implications as both teams were vying for position in the standings.",
+      "game_datetime": "2026-01-28T02:00:00+00:00",
+      "home_team": "Colson Overhead Doors",
+      "away_team": "J&K Electric",
+      "home_score": 7,
+      "away_score": 6,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276655&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276655&p=boxscore"
+    },
+    {
+      "game_id": "3276657",
+      "headline": "G.R. Mitchell Welding Dominates Ultramar 10-3; Dobson and Fullerton Shine with Two Goals Each!",
+      "ai_generated": true,
+      "created_at": "2026-01-30T16:39:17.516358+00:00",
+      "updated_at": "2026-01-30T16:39:17.516358+00:00",
+      "narrative": "In a decisive matchup, G.R. Mitchell Welding triumphed over Ultramar with a final score of 10-3. Nick \"Pickle\" Dobson and Zack Fullerton each scored 2 goals and added 1 assist, while Meathead MacDonald had a standout 4-point night with 1 goal and 3 assists. This victory solidifies G.R. Mitchell Welding's position as they continue their playoff push, improving their record to 3 wins.",
+      "game_datetime": "2026-01-28T00:45:00+00:00",
+      "home_team": "G.R. Mitchell Welding",
+      "away_team": "Ultramar",
+      "home_score": 10,
+      "away_score": 3,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276657&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276657&p=boxscore"
+    },
     {
       "game_id": "3276653",
       "headline": "Bourgeois' Hat Trick Fuels G.R. Mitchell Welding's Thrilling 8-7 Victory Over Maltby Sports",
@@ -162,8 +192,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 5,
       "away_score": 2,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276566&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276566&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276566&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276566&u=DSMALL&s=hockey&p=boxscore",
       "narrative": "In a decisive matchup, J&K Electric defeated G.R. Mitchell Welding with a final score of 5-2. Avery Harrison led the charge with 2 goals, while Jaxon Reynolds had a standout 4-point night with 1 goal and 3 assists. This victory solidifies J&K Electric's position at the top of the standings as they continue their strong season."
     },
     {
@@ -177,8 +207,8 @@
       "away_team": "Ultramar",
       "home_score": 8,
       "away_score": 7,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276562&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276562&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276562&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276562&u=DSMALL&s=hockey&p=boxscore",
       "narrative": "In a thrilling matchup, J&K Electric edged out Ultramar with a final score of 8-7. Gerald Boutiler led the way for J&K Electric with 1 goal and 3 assists, while Ultramar's Matt Cove scored 2 goals in a strong effort. This victory helps J&K maintain their position at the top of the standings, further solidifying their playoff hopes."
     },
     {
