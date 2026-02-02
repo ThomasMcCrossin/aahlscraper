@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-02T16:39:39.333790+00:00",
+  "generated_at": "2026-02-02T12:58:28.002213+00:00",
   "players": [
     {
       "player_id": "colson-overhead-doors-terrio-marshall-00",
@@ -1222,16 +1222,16 @@
       "team_id": "TYLERARSENEAU-1",
       "team_name": "Maltby Sports",
       "team_slug": "maltby-sports",
-      "games_played": 17,
+      "games_played": 16,
       "goals": 4,
       "assists": 19,
       "points": 23,
       "penalty_minutes": 21,
-      "points_per_game": 1.35,
+      "points_per_game": 1.44,
       "team_games_played": 15,
       "games_missed": null,
       "recent_points": 0,
-      "recent_games": 1
+      "recent_games": 0
     },
     {
       "player_id": "maltby-sports-johnson-trevor-18",
@@ -1243,16 +1243,16 @@
       "team_id": "TYLERARSENEAU-1",
       "team_name": "Maltby Sports",
       "team_slug": "maltby-sports",
-      "games_played": 20,
+      "games_played": 19,
       "goals": 12,
       "assists": 15,
       "points": 27,
       "penalty_minutes": 24,
-      "points_per_game": 1.35,
+      "points_per_game": 1.42,
       "team_games_played": 15,
       "games_missed": null,
       "recent_points": 0,
-      "recent_games": 1
+      "recent_games": 0
     },
     {
       "player_id": "maltby-sports-mccrossin-thomas-19",
@@ -1264,16 +1264,16 @@
       "team_id": "TYLERARSENEAU-1",
       "team_name": "Maltby Sports",
       "team_slug": "maltby-sports",
-      "games_played": 18,
+      "games_played": 17,
       "goals": 12,
-      "assists": 19,
-      "points": 31,
+      "assists": 18,
+      "points": 30,
       "penalty_minutes": 6,
-      "points_per_game": 1.72,
+      "points_per_game": 1.76,
       "team_games_played": 15,
       "games_missed": null,
-      "recent_points": 1,
-      "recent_games": 1
+      "recent_points": 0,
+      "recent_games": 0
     },
     {
       "player_id": "maltby-sports-gallant-matt-2",
@@ -1370,16 +1370,16 @@
       "team_id": "TYLERARSENEAU-1",
       "team_name": "Maltby Sports",
       "team_slug": "maltby-sports",
-      "games_played": 17,
-      "goals": 11,
+      "games_played": 16,
+      "goals": 10,
       "assists": 14,
-      "points": 25,
+      "points": 24,
       "penalty_minutes": 18,
-      "points_per_game": 1.47,
+      "points_per_game": 1.5,
       "team_games_played": 15,
       "games_missed": null,
-      "recent_points": 1,
-      "recent_games": 1
+      "recent_points": 0,
+      "recent_games": 0
     },
     {
       "player_id": "maltby-sports-hurley-connor-7",
@@ -1433,16 +1433,16 @@
       "team_id": "TYLERARSENEAU-1",
       "team_name": "Maltby Sports",
       "team_slug": "maltby-sports",
-      "games_played": 19,
-      "goals": 16,
-      "assists": 28,
-      "points": 44,
+      "games_played": 18,
+      "goals": 15,
+      "assists": 27,
+      "points": 42,
       "penalty_minutes": 3,
-      "points_per_game": 2.32,
+      "points_per_game": 2.33,
       "team_games_played": 15,
       "games_missed": null,
-      "recent_points": 2,
-      "recent_games": 1
+      "recent_points": 0,
+      "recent_games": 0
     },
     {
       "player_id": "maltby-sports-arbing-ryan-91",
@@ -1476,16 +1476,16 @@
       "team_id": "TYLERARSENEAU-1",
       "team_name": "Maltby Sports",
       "team_slug": "maltby-sports",
-      "games_played": 21,
-      "goals": 42,
-      "assists": 21,
-      "points": 63,
+      "games_played": 20,
+      "goals": 38,
+      "assists": 20,
+      "points": 58,
       "penalty_minutes": 6,
-      "points_per_game": 3.0,
+      "points_per_game": 2.9,
       "team_games_played": 15,
       "games_missed": null,
-      "recent_points": 5,
-      "recent_games": 1
+      "recent_points": 0,
+      "recent_games": 0
     },
     {
       "player_id": "ultramar-thomas-remi-1",
@@ -1669,16 +1669,16 @@
       "team_id": "TYLERARSENEAU-2",
       "team_name": "Ultramar",
       "team_slug": "ultramar",
-      "games_played": 14,
+      "games_played": 13,
       "goals": 7,
-      "assists": 19,
-      "points": 26,
+      "assists": 18,
+      "points": 25,
       "penalty_minutes": 12,
-      "points_per_game": 1.86,
+      "points_per_game": 1.92,
       "team_games_played": 17,
       "games_missed": null,
-      "recent_points": 1,
-      "recent_games": 1
+      "recent_points": 0,
+      "recent_games": 0
     },
     {
       "player_id": "ultramar-bonnell-andy-5",
@@ -1774,16 +1774,16 @@
       "team_id": "TYLERARSENEAU-2",
       "team_name": "Ultramar",
       "team_slug": "ultramar",
-      "games_played": 17,
-      "goals": 19,
-      "assists": 10,
-      "points": 29,
+      "games_played": 16,
+      "goals": 18,
+      "assists": 8,
+      "points": 26,
       "penalty_minutes": 3,
-      "points_per_game": 1.71,
+      "points_per_game": 1.62,
       "team_games_played": 17,
       "games_missed": null,
-      "recent_points": 3,
-      "recent_games": 1
+      "recent_points": 0,
+      "recent_games": 0
     }
   ]
 }

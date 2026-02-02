@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-02T12:58:27.993245+00:00",
+  "generated_at": "2026-02-02T16:39:39.325010+00:00",
   "headlines": [
     {
       "game_id": "3276655",
@@ -177,8 +177,8 @@
       "away_team": "Ultramar",
       "home_score": 4,
       "away_score": 7,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276568&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276568&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276568&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276568&u=DSMALL&s=hockey&p=boxscore",
       "narrative": "In a high-stakes matchup, Ultramar triumphed over Colson Overhead Doors with a final score of 7-4. Brad Linkletter led the charge with 2 goals and 1 assist, while Tim Burke also contributed with 2 goals. The win helps Ultramar solidify their position in the playoff race, while Colson's loss marks their third consecutive defeat."
     },
     {
