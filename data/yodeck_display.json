@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-01T20:26:28.706755",
+  "timestamp": "2026-02-02T03:43:25.191749",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -3442,37 +3442,6 @@
   ],
   "upcoming_games": [
     {
-      "game_id": "3276661",
-      "status": "scheduled",
-      "location": "Amherst",
-      "division": null,
-      "start_utc": "2026-02-02T01:00:00+00:00",
-      "start_local": "2026-02-01T21:00:00-04:00",
-      "home": "J&K Electric",
-      "away": "Maltby Sports",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276661&u=DSMALL&s=hockey&p=preview",
-      "summary_url": null,
-      "home_line": {
-        "name": "J&K Electric",
-        "slug": "j-and-k-electric",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "away_line": {
-        "name": "Maltby Sports",
-        "slug": "maltby-sports",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "home_score": "",
-      "away_score": "",
-      "datetime": "2026-02-01T21:00:00-04:00",
-      "date": "02/01/2026",
-      "time": "9:00 PM"
-    },
-    {
       "game_id": "3276663",
       "status": "scheduled",
       "location": "Amherst",
@@ -3750,6 +3719,37 @@
       "datetime": "2026-02-24T20:45:00-04:00",
       "date": "02/24/2026",
       "time": "8:45 PM"
+    },
+    {
+      "game_id": "3276689",
+      "status": "scheduled",
+      "location": "Amherst",
+      "division": null,
+      "start_utc": "2026-02-25T02:00:00+00:00",
+      "start_local": "2026-02-24T22:00:00-04:00",
+      "home": "Ultramar",
+      "away": "G.R. Mitchell Welding",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276689&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
+      "home_line": {
+        "name": "Ultramar",
+        "slug": "ultramar",
+        "final": null,
+        "periods": [],
+        "is_winner": null
+      },
+      "away_line": {
+        "name": "G.R. Mitchell Welding",
+        "slug": "gr-mitchell-welding",
+        "final": null,
+        "periods": [],
+        "is_winner": null
+      },
+      "home_score": "",
+      "away_score": "",
+      "datetime": "2026-02-24T22:00:00-04:00",
+      "date": "02/24/2026",
+      "time": "10:00 PM"
     }
   ],
   "headlines": [
@@ -4400,7 +4400,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2026-02-01T20:26:28.589601+00:00",
+    "generated_at": "2026-02-02T03:43:25.071079+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-01T20:26:28.581066+00:00",
+  "generated_at": "2026-02-02T03:43:25.062834+00:00",
   "standings_snapshot": "standings-20260130T163916Z.json",
   "previous_snapshot": "standings-20260130T125412Z.json",
   "standings_movements": [
@@ -36,14 +36,14 @@
   ],
   "recent_team_form": [
     {
-      "team": "G.R. Mitchell Welding",
-      "played": 2,
-      "wins": 2,
+      "team": "Colson Overhead Doors",
+      "played": 1,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
     {
-      "team": "Colson Overhead Doors",
+      "team": "G.R. Mitchell Welding",
       "played": 1,
       "wins": 1,
       "losses": 0,
@@ -58,13 +58,6 @@
     },
     {
       "team": "Ultramar",
-      "played": 1,
-      "wins": 0,
-      "losses": 1,
-      "ties": 0
-    },
-    {
-      "team": "Maltby Sports",
       "played": 1,
       "wins": 0,
       "losses": 1,
