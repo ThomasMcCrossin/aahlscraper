@@ -1,6 +1,21 @@
 {
-  "generated_at": "2026-02-03T12:58:29.015158+00:00",
+  "generated_at": "2026-02-03T16:53:18.706336+00:00",
   "headlines": [
+    {
+      "game_id": "3276661",
+      "headline": "Maltby Sports Powers Past J&K Electric 6-4 with Johnson and Small's Hat Tricks!",
+      "ai_generated": true,
+      "created_at": "2026-02-03T16:53:13.596082+00:00",
+      "updated_at": "2026-02-03T16:53:13.596082+00:00",
+      "narrative": "Maltby Sports secured a 6-4 victory over J&K Electric, maintaining their position at the top of the standings. Trevor Johnson and Danny \"Biggie\" Small each recorded hat tricks with 3 goals apiece, while Chris Maltby contributed 2 assists. This matchup was crucial for playoff positioning, featuring two top-ranked teams.",
+      "game_datetime": "2026-02-02T01:00:00+00:00",
+      "home_team": "Maltby Sports",
+      "away_team": "J&K Electric",
+      "home_score": 6,
+      "away_score": 4,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276661&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276661&p=boxscore"
+    },
     {
       "game_id": "3276655",
       "headline": "Colson Overhead Doors Edges J&K Electric 7-6, Powered by Gould\u2019s 3 Points and Mackenzie\u2019s 4 Goals in Thrilling Clash",
@@ -148,8 +163,8 @@
       "away_team": "Colson Overhead Doors",
       "home_score": 7,
       "away_score": 2,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276572&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276572&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276572&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276572&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276570",
@@ -163,8 +178,8 @@
       "away_team": "Ultramar",
       "home_score": 7,
       "away_score": 1,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276570&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276570&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276570&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276570&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276568",

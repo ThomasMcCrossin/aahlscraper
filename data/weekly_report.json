@@ -1,41 +1,48 @@
 {
-  "generated_at": "2026-02-03T12:58:29.015158+00:00",
-  "standings_snapshot": "standings-20260202T163938Z.json",
-  "previous_snapshot": "standings-20260130T163916Z.json",
+  "generated_at": "2026-02-03T16:53:18.706336+00:00",
+  "standings_snapshot": "standings-20260203T165312Z.json",
+  "previous_snapshot": "standings-20260202T163938Z.json",
   "standings_movements": [
     {
-      "team": "Ultramar",
-      "current_points": 11,
-      "previous_points": 9,
-      "points_change": 2
-    },
-    {
-      "team": "Colson Overhead Doors",
-      "current_points": 9,
-      "previous_points": 7,
-      "points_change": 2
-    },
-    {
       "team": "Maltby Sports",
-      "current_points": 34,
+      "current_points": 36,
       "previous_points": 34,
-      "points_change": 0
+      "points_change": 2
     },
     {
       "team": "J&K Electric",
-      "current_points": 28,
+      "current_points": 30,
       "previous_points": 28,
-      "points_change": 0
+      "points_change": 2
     },
     {
       "team": "G.R. Mitchell Welding",
       "current_points": 28,
       "previous_points": 28,
+      "points_change": 0
+    },
+    {
+      "team": "Ultramar",
+      "current_points": 11,
+      "previous_points": 11,
+      "points_change": 0
+    },
+    {
+      "team": "Colson Overhead Doors",
+      "current_points": 9,
+      "previous_points": 9,
       "points_change": 0
     }
   ],
   "recent_team_form": [
     {
+      "team": "Maltby Sports",
+      "played": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    {
       "team": "Colson Overhead Doors",
       "played": 1,
       "wins": 1,
@@ -50,21 +57,26 @@
       "ties": 0
     },
     {
-      "team": "J&K Electric",
+      "team": "Ultramar",
       "played": 1,
       "wins": 0,
       "losses": 1,
       "ties": 0
     },
     {
-      "team": "Ultramar",
-      "played": 1,
+      "team": "J&K Electric",
+      "played": 2,
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     }
   ],
   "game_headlines": [
+    {
+      "game_id": "3276661",
+      "headline": "Maltby Sports Powers Past J&K Electric 6-4 with Johnson and Small's Hat Tricks!",
+      "game_datetime": "2026-02-02T01:00:00+00:00"
+    },
     {
       "game_id": "3276655",
       "headline": "Colson Overhead Doors Edges J&K Electric 7-6, Powered by Gould\u2019s 3 Points and Mackenzie\u2019s 4 Goals in Thrilling Clash",
