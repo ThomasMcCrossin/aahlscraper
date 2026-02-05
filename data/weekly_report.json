@@ -1,49 +1,63 @@
 {
-  "generated_at": "2026-02-05T16:46:57.614621+00:00",
-  "standings_snapshot": "standings-20260204T125752Z.json",
-  "previous_snapshot": "standings-20260204T044232Z.json",
+  "generated_at": "2026-02-05T20:33:34.522856+00:00",
+  "standings_snapshot": "standings-20260205T203324Z.json",
+  "previous_snapshot": "standings-20260204T125752Z.json",
   "standings_movements": [
     {
       "team": "Maltby Sports",
-      "current_points": 36,
-      "previous_points": 0,
-      "points_change": 36
+      "current_points": 38,
+      "previous_points": 36,
+      "points_change": 2
     },
     {
       "team": "J&K Electric",
-      "current_points": 30,
-      "previous_points": 0,
-      "points_change": 30
+      "current_points": 32,
+      "previous_points": 30,
+      "points_change": 2
     },
     {
       "team": "G.R. Mitchell Welding",
       "current_points": 28,
-      "previous_points": 0,
-      "points_change": 28
+      "previous_points": 28,
+      "points_change": 0
     },
     {
       "team": "Ultramar",
       "current_points": 11,
-      "previous_points": 0,
-      "points_change": 11
+      "previous_points": 11,
+      "points_change": 0
     },
     {
       "team": "Colson Overhead Doors",
       "current_points": 9,
-      "previous_points": 0,
-      "points_change": 9
+      "previous_points": 9,
+      "points_change": 0
     }
   ],
   "recent_team_form": [
     {
       "team": "Maltby Sports",
-      "played": 1,
-      "wins": 1,
+      "played": 2,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     },
     {
       "team": "J&K Electric",
+      "played": 2,
+      "wins": 1,
+      "losses": 1,
+      "ties": 0
+    },
+    {
+      "team": "Colson Overhead Doors",
+      "played": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    {
+      "team": "G.R. Mitchell Welding",
       "played": 1,
       "wins": 0,
       "losses": 1,
@@ -51,6 +65,16 @@
     }
   ],
   "game_headlines": [
+    {
+      "game_id": "3276665",
+      "headline": "Maltby Sports Powers Past Colson Overhead Doors 7-2 with Gallant's Four Goals Leading the Charge!",
+      "game_datetime": "2026-02-04T02:00:00+00:00"
+    },
+    {
+      "game_id": "3276663",
+      "headline": "J&K Electric Edges G.R. Mitchell Welding 3-2 with Mackenzie and Rubein\u2019s Two Goals Leading the Charge!",
+      "game_datetime": "2026-02-04T00:45:00+00:00"
+    },
     {
       "game_id": "3276661",
       "headline": "Maltby Sports Powers Past J&K Electric 6-4 with Johnson and Small's Hat Tricks!",

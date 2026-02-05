@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-02-05T16:46:57.614621+00:00",
+  "generated_at": "2026-02-05T20:33:34.522856+00:00",
   "headlines": [
+    {
+      "game_id": "3276665",
+      "headline": "Maltby Sports Powers Past Colson Overhead Doors 7-2 with Gallant's Four Goals Leading the Charge!",
+      "ai_generated": true,
+      "created_at": "2026-02-05T20:33:25.737171+00:00",
+      "updated_at": "2026-02-05T20:33:25.737171+00:00",
+      "narrative": "Maltby Sports secured a decisive 7-2 victory over Colson Overhead Doors, maintaining their position at the top of the standings. Matt Gallant led the charge with an impressive 4-goal performance, while Thomas McCrossin contributed 3 assists for a 3-point night. This win further solidifies Maltby Sports' playoff positioning, leaving Colson Overhead Doors to regroup after their second loss.",
+      "game_datetime": "2026-02-04T02:00:00+00:00",
+      "home_team": "Maltby Sports",
+      "away_team": "Colson Overhead Doors",
+      "home_score": 7,
+      "away_score": 2,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276665&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276665&p=boxscore"
+    },
+    {
+      "game_id": "3276663",
+      "headline": "J&K Electric Edges G.R. Mitchell Welding 3-2 with Mackenzie and Rubein\u2019s Two Goals Leading the Charge!",
+      "ai_generated": true,
+      "created_at": "2026-02-05T20:33:25.737171+00:00",
+      "updated_at": "2026-02-05T20:33:25.737171+00:00",
+      "narrative": "In a closely contested matchup, J&K Electric edged out G.R. Mitchell Welding with a final score of 3-2. Mackenzie Rubein led the way for J&K Electric with 2 goals, while Jeremy Kinnear added another. This victory solidifies J&K Electric's position as they maintain their rank at #2 in the league standings.",
+      "game_datetime": "2026-02-04T00:45:00+00:00",
+      "home_team": "J&K Electric",
+      "away_team": "G.R. Mitchell Welding",
+      "home_score": 3,
+      "away_score": 2,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276663&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276663&p=boxscore"
+    },
     {
       "game_id": "3276661",
       "headline": "Maltby Sports Powers Past J&K Electric 6-4 with Johnson and Small's Hat Tricks!",
@@ -148,8 +178,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 8,
       "away_score": 5,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276574&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276574&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276574&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276574&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276572",
