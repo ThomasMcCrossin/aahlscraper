@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-10T20:43:43.439332+00:00",
+  "generated_at": "2026-02-11T03:39:37.353524+00:00",
   "standings_snapshot": "standings-20260207T124715Z.json",
   "previous_snapshot": "standings-20260206T203320Z.json",
   "standings_movements": [
@@ -34,36 +34,7 @@
       "points_change": 9
     }
   ],
-  "recent_team_form": [
-    {
-      "team": "Maltby Sports",
-      "played": 1,
-      "wins": 1,
-      "losses": 0,
-      "ties": 0
-    },
-    {
-      "team": "J&K Electric",
-      "played": 1,
-      "wins": 1,
-      "losses": 0,
-      "ties": 0
-    },
-    {
-      "team": "Colson Overhead Doors",
-      "played": 1,
-      "wins": 0,
-      "losses": 1,
-      "ties": 0
-    },
-    {
-      "team": "G.R. Mitchell Welding",
-      "played": 1,
-      "wins": 0,
-      "losses": 1,
-      "ties": 0
-    }
-  ],
+  "recent_team_form": [],
   "game_headlines": [
     {
       "game_id": "3276665",
