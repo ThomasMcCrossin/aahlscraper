@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-14T20:25:49.223833+00:00",
+  "generated_at": "2026-02-15T12:50:14.195300+00:00",
   "headlines": [
     {
       "game_id": "3276665",
@@ -73,8 +73,8 @@
       "away_team": "Ultramar",
       "home_score": 10,
       "away_score": 3,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276657&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276657&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276657&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276657&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276653",
@@ -88,8 +88,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 7,
       "away_score": 8,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276653&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276653&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276653&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276653&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276649",
