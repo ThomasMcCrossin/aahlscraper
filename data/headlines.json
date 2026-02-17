@@ -1,6 +1,21 @@
 {
-  "generated_at": "2026-02-16T20:29:36.780182+00:00",
+  "generated_at": "2026-02-17T13:02:55.083757+00:00",
   "headlines": [
+    {
+      "game_id": "3276677",
+      "headline": "Ultramar Powers Past Colson Overhead Doors 9-4; Linkletter Nets Hat Trick, Miller and Madden Shine with 5 Points Each",
+      "ai_generated": true,
+      "created_at": "2026-02-17T13:02:50.725280+00:00",
+      "updated_at": "2026-02-17T13:02:50.725280+00:00",
+      "narrative": "In a decisive matchup, Ultramar defeated Colson Overhead Doors 9-4, solidifying their playoff position. Brad Linkletter led the charge with a hat trick and an assist, while Miller Madden contributed 2 goals and 3 assists for a 5-point night. The loss keeps Colson Overhead Doors in a tough spot, having now lost their last three games.",
+      "game_datetime": "2026-02-16T01:00:00+00:00",
+      "home_team": "Colson Overhead Doors",
+      "away_team": "Ultramar",
+      "home_score": 4,
+      "away_score": 9,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276677&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276677&u=DSMALL&s=hockey&p=boxscore"
+    },
     {
       "game_id": "3276665",
       "headline": "Maltby Sports Powers Past Colson Overhead Doors 7-2 with Gallant's Four Goals Leading the Charge!",
@@ -13,8 +28,8 @@
       "away_team": "Colson Overhead Doors",
       "home_score": 7,
       "away_score": 2,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276665&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276665&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276665&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276665&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276663",
@@ -28,8 +43,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 3,
       "away_score": 2,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276663&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276663&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276663&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276663&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276661",
@@ -43,8 +58,8 @@
       "away_team": "J&K Electric",
       "home_score": 6,
       "away_score": 4,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276661&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276661&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276661&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276661&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276655",
@@ -163,8 +178,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 3,
       "away_score": 3,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276639&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276639&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276639&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276639&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276574",

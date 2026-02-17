@@ -1,41 +1,61 @@
 {
-  "generated_at": "2026-02-16T20:29:36.780182+00:00",
-  "standings_snapshot": "standings-20260207T124715Z.json",
-  "previous_snapshot": "standings-20260206T203320Z.json",
+  "generated_at": "2026-02-17T13:02:55.083757+00:00",
+  "standings_snapshot": "standings-20260217T130249Z.json",
+  "previous_snapshot": "standings-20260207T124715Z.json",
   "standings_movements": [
+    {
+      "team": "Ultramar",
+      "current_points": 13,
+      "previous_points": 11,
+      "points_change": 2
+    },
     {
       "team": "Maltby Sports",
       "current_points": 38,
-      "previous_points": 0,
-      "points_change": 38
+      "previous_points": 38,
+      "points_change": 0
     },
     {
       "team": "J&K Electric",
       "current_points": 32,
-      "previous_points": 0,
-      "points_change": 32
+      "previous_points": 32,
+      "points_change": 0
     },
     {
       "team": "G.R. Mitchell Welding",
       "current_points": 28,
-      "previous_points": 0,
-      "points_change": 28
-    },
-    {
-      "team": "Ultramar",
-      "current_points": 11,
-      "previous_points": 0,
-      "points_change": 11
+      "previous_points": 28,
+      "points_change": 0
     },
     {
       "team": "Colson Overhead Doors",
       "current_points": 9,
-      "previous_points": 0,
-      "points_change": 9
+      "previous_points": 9,
+      "points_change": 0
     }
   ],
-  "recent_team_form": [],
+  "recent_team_form": [
+    {
+      "team": "Ultramar",
+      "played": 2,
+      "wins": 2,
+      "losses": 0,
+      "ties": 0
+    },
+    {
+      "team": "Colson Overhead Doors",
+      "played": 2,
+      "wins": 0,
+      "losses": 2,
+      "ties": 0
+    }
+  ],
   "game_headlines": [
+    {
+      "game_id": "3276677",
+      "headline": "Ultramar Powers Past Colson Overhead Doors 9-4; Linkletter Nets Hat Trick, Miller and Madden Shine with 5 Points Each",
+      "game_datetime": "2026-02-16T01:00:00+00:00"
+    },
     {
       "game_id": "3276665",
       "headline": "Maltby Sports Powers Past Colson Overhead Doors 7-2 with Gallant's Four Goals Leading the Charge!",
