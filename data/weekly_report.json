@@ -1,21 +1,52 @@
 {
-  "generated_at": "2026-02-18T17:02:25.993256+00:00",
-  "standings_snapshot": "standings-20260218T170225Z.json",
-  "previous_snapshot": "standings-20260218T033103Z.json",
-  "standings_movements": [],
+  "generated_at": "2026-02-18T20:38:25.682309+00:00",
+  "standings_snapshot": "standings-20260218T203824Z.json",
+  "previous_snapshot": "standings-20260218T170225Z.json",
+  "standings_movements": [
+    {
+      "team": "Maltby Sports",
+      "current_points": 40,
+      "previous_points": 0,
+      "points_change": 40
+    },
+    {
+      "team": "J&K Electric",
+      "current_points": 33,
+      "previous_points": 0,
+      "points_change": 33
+    },
+    {
+      "team": "G.R. Mitchell Welding",
+      "current_points": 29,
+      "previous_points": 0,
+      "points_change": 29
+    },
+    {
+      "team": "Ultramar",
+      "current_points": 13,
+      "previous_points": 0,
+      "points_change": 13
+    },
+    {
+      "team": "Colson Overhead Doors",
+      "current_points": 9,
+      "previous_points": 0,
+      "points_change": 9
+    }
+  ],
   "recent_team_form": [
     {
       "team": "Ultramar",
-      "played": 1,
-      "wins": 1,
+      "played": 2,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     },
     {
       "team": "Colson Overhead Doors",
-      "played": 1,
+      "played": 2,
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     }
   ],
@@ -51,8 +82,8 @@
       "game_datetime": "2026-02-02T01:00:00+00:00"
     },
     {
-      "game_id": "3276655",
-      "headline": "Colson Overhead Doors Edges J&K Electric 7-6, Powered by Gould\u2019s 3 Points and Mackenzie\u2019s 4 Goals in Thrilling Clash",
+      "game_id": "3276656",
+      "headline": "Mackenzie\u2019s Four Goals Power Colson Overhead Doors Past J&K Electric, 7-6 in Thrilling Matchup",
       "game_datetime": "2026-01-28T02:00:00+00:00"
     },
     {
