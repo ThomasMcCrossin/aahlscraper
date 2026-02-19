@@ -1,6 +1,21 @@
 {
-  "generated_at": "2026-02-18T20:38:25.682309+00:00",
+  "generated_at": "2026-02-19T13:04:47.286963+00:00",
   "headlines": [
+    {
+      "game_id": "3276679",
+      "headline": "Maltby Sports Powers Past J&K Electric 7-4, Bridge Shines with Hat Trick in Defeat",
+      "ai_generated": true,
+      "created_at": "2026-02-19T13:04:43.088220+00:00",
+      "updated_at": "2026-02-19T13:04:43.088220+00:00",
+      "narrative": "Maltby Sports secured a 7-4 victory over J&K Electric, solidifying their position at the top of the standings. Isaac Bridge led J&K with a hat trick and an assist, while Luke Crocker contributed with a goal and two assists. This matchup was crucial for playoff positioning between two top-ranked teams.",
+      "game_datetime": "2026-02-18T00:45:00+00:00",
+      "home_team": "J&K Electric",
+      "away_team": "Maltby Sports",
+      "home_score": 4,
+      "away_score": 7,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276679&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276679&p=boxscore"
+    },
     {
       "game_id": "3276677",
       "headline": "Ultramar Powers Past Colson Overhead Doors 9-4; Linkletter Nets Hat Trick, Miller and Madden Shine with 5 Points Each",
@@ -178,8 +193,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 3,
       "away_score": 3,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276645&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276645&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276645&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276645&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276641",

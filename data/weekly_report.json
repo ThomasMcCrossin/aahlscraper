@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-18T20:38:25.682309+00:00",
+  "generated_at": "2026-02-19T13:04:47.286963+00:00",
   "standings_snapshot": "standings-20260218T203824Z.json",
   "previous_snapshot": "standings-20260218T170225Z.json",
   "standings_movements": [
@@ -43,6 +43,20 @@
       "ties": 0
     },
     {
+      "team": "Maltby Sports",
+      "played": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    {
+      "team": "J&K Electric",
+      "played": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    {
       "team": "Colson Overhead Doors",
       "played": 2,
       "wins": 0,
@@ -51,6 +65,11 @@
     }
   ],
   "game_headlines": [
+    {
+      "game_id": "3276679",
+      "headline": "Maltby Sports Powers Past J&K Electric 7-4, Bridge Shines with Hat Trick in Defeat",
+      "game_datetime": "2026-02-18T00:45:00+00:00"
+    },
     {
       "game_id": "3276677",
       "headline": "Ultramar Powers Past Colson Overhead Doors 9-4; Linkletter Nets Hat Trick, Miller and Madden Shine with 5 Points Each",
