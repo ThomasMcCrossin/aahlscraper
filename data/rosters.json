@@ -905,11 +905,13 @@
       {
         "number": "21",
         "name": "Macpherson, Ryan",
-        "positions": [],
+        "positions": [
+          "F"
+        ],
         "player_id": "gr-mitchell-welding-macpherson-ryan-21",
         "height": null,
         "weight": null,
-        "shoots": null,
+        "shoots": "R",
         "catches": null,
         "hometown": null,
         "captaincy": null
