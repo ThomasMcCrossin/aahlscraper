@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-22T20:26:32.126684+00:00",
+  "generated_at": "2026-02-23T03:43:21.622990+00:00",
   "standings_snapshot": "standings-20260219T165253Z.json",
   "previous_snapshot": "standings-20260218T203824Z.json",
   "standings_movements": [
@@ -51,13 +51,6 @@
     },
     {
       "team": "Ultramar",
-      "played": 2,
-      "wins": 1,
-      "losses": 1,
-      "ties": 0
-    },
-    {
-      "team": "Colson Overhead Doors",
       "played": 1,
       "wins": 0,
       "losses": 1,
