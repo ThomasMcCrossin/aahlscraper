@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-24T20:34:49.453716",
+  "timestamp": "2026-02-25T03:27:16.027970",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -3289,68 +3289,6 @@
   ],
   "upcoming_games": [
     {
-      "game_id": "3276687",
-      "status": "scheduled",
-      "location": "Amherst",
-      "division": null,
-      "start_utc": "2026-02-25T00:45:00+00:00",
-      "start_local": "2026-02-24T20:45:00-04:00",
-      "home": "J&K Electric",
-      "away": "Maltby Sports",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276687&u=DSMALL&s=hockey&p=preview",
-      "summary_url": null,
-      "home_line": {
-        "name": "J&K Electric",
-        "slug": "j-and-k-electric",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "away_line": {
-        "name": "Maltby Sports",
-        "slug": "maltby-sports",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "home_score": "",
-      "away_score": "",
-      "datetime": "2026-02-24T20:45:00-04:00",
-      "date": "02/24/2026",
-      "time": "8:45 PM"
-    },
-    {
-      "game_id": "3276689",
-      "status": "scheduled",
-      "location": "Amherst",
-      "division": null,
-      "start_utc": "2026-02-25T02:00:00+00:00",
-      "start_local": "2026-02-24T22:00:00-04:00",
-      "home": "Ultramar",
-      "away": "G.R. Mitchell Welding",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276689&u=DSMALL&s=hockey&p=preview",
-      "summary_url": null,
-      "home_line": {
-        "name": "Ultramar",
-        "slug": "ultramar",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "away_line": {
-        "name": "G.R. Mitchell Welding",
-        "slug": "gr-mitchell-welding",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "home_score": "",
-      "away_score": "",
-      "datetime": "2026-02-24T22:00:00-04:00",
-      "date": "02/24/2026",
-      "time": "10:00 PM"
-    },
-    {
       "game_id": "3276564",
       "status": "scheduled",
       "location": "Amherst",
@@ -4181,7 +4119,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2026-02-24T20:34:49.329774+00:00",
+    "generated_at": "2026-02-25T03:27:15.888477+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",

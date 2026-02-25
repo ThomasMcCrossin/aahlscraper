@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-24T20:34:49.317916+00:00",
+  "generated_at": "2026-02-25T03:27:15.875817+00:00",
   "standings_snapshot": "standings-20260219T165253Z.json",
   "previous_snapshot": "standings-20260218T203824Z.json",
   "standings_movements": [
@@ -34,36 +34,7 @@
       "points_change": 0
     }
   ],
-  "recent_team_form": [
-    {
-      "team": "Maltby Sports",
-      "played": 2,
-      "wins": 2,
-      "losses": 0,
-      "ties": 0
-    },
-    {
-      "team": "G.R. Mitchell Welding",
-      "played": 1,
-      "wins": 1,
-      "losses": 0,
-      "ties": 0
-    },
-    {
-      "team": "Ultramar",
-      "played": 1,
-      "wins": 0,
-      "losses": 1,
-      "ties": 0
-    },
-    {
-      "team": "J&K Electric",
-      "played": 2,
-      "wins": 0,
-      "losses": 2,
-      "ties": 0
-    }
-  ],
+  "recent_team_form": [],
   "game_headlines": [
     {
       "game_id": "3276681",
