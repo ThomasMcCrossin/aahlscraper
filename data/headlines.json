@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-25T04:55:03.388376+00:00",
+  "generated_at": "2026-02-25T13:02:59.514364+00:00",
   "headlines": [
     {
       "game_id": "3276681",
@@ -13,23 +13,23 @@
       "away_team": "Ultramar",
       "home_score": 7,
       "away_score": 4,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276681&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276681&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276681&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276681&u=DSMALL&s=hockey&p=boxscore"
     },
     {
-      "game_id": "3276680",
-      "headline": "Maltby Sports Powers Past J&K Electric 7-5, Bridge Shines with Hat Trick and 4 Points!",
+      "game_id": "3276679",
+      "headline": "Maltby Sports Powers Past J&K Electric in Thrilling 7-5 Showdown!",
       "ai_generated": true,
-      "created_at": "2026-02-19T16:52:54.525767+00:00",
-      "updated_at": "2026-02-19T16:52:54.525767+00:00",
-      "narrative": "In a high-scoring matchup, Maltby Sports defeated J&K Electric 7-5, solidifying their position as the top team in the league. Isaac Bridge led the way with a hat trick and an assist, while Luke Crocker contributed a goal and two assists. This win comes as Maltby Sports continues their strong performance, now on a five-game winning streak.",
+      "created_at": "2026-02-25T13:02:55.194111+00:00",
+      "updated_at": "2026-02-25T13:02:55.194111+00:00",
+      "narrative": "In a high-scoring matchup, Maltby Sports emerged victorious over J&K Electric with a final score of 7-5. No individual player stats were available to highlight top performances. Both teams put on an exciting display, but Maltby Sports secured the win in this competitive game.",
       "game_datetime": "2026-02-18T00:45:00+00:00",
       "home_team": "J&K Electric",
       "away_team": "Maltby Sports",
       "home_score": 5,
       "away_score": 7,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276680&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276680&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276679&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276679&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276677",
@@ -43,23 +43,23 @@
       "away_team": "Ultramar",
       "home_score": 4,
       "away_score": 9,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276677&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276677&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276677&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276677&u=DSMALL&s=hockey&p=boxscore"
     },
     {
-      "game_id": "3276674",
-      "headline": "Thrilling Standoff: J&K Electric and G.R. Mitchell Welding Battle to 6-6 Draw as Mackenzie, Fullerton Shine",
+      "game_id": "3276673",
+      "headline": "Thrilling Stalemate: J&K Electric and G.R. Mitchell Welding Battle to 6-6 Tie, Mackenzie and Fullerton Shine!",
       "ai_generated": true,
-      "created_at": "2026-02-19T16:52:54.525767+00:00",
-      "updated_at": "2026-02-19T16:52:54.525767+00:00",
-      "narrative": "In an exciting matchup that ended in a 6-6 tie, J&K Electric's Zack Fullerton led the charge with 2 goals and 2 assists, while Cody Sutton contributed 3 assists. For G.R. Mitchell Welding, Rubein Mackenzie scored 2 goals, and Jaxon Reynolds added 1 goal and 2 assists, showcasing strong offensive efforts from both teams in this crucial playoff positioning game.",
+      "created_at": "2026-02-25T13:02:55.194111+00:00",
+      "updated_at": "2026-02-25T13:02:55.194111+00:00",
+      "narrative": "The game between J&K Electric and G.R. Mitchell Welding ended in a thrilling 6-6 tie. J&K Electric's Rubein Mackenzie led the way with 2 goals, while Gerald Boutiler contributed 3 assists. For G.R. Mitchell Welding, Zack Fullerton was the standout with 2 goals and 2 assists, keeping both teams in strong playoff contention.",
       "game_datetime": "2026-02-11T02:00:00+00:00",
       "home_team": "J&K Electric",
       "away_team": "G.R. Mitchell Welding",
       "home_score": 6,
       "away_score": 6,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276674&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276674&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276673&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276673&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276671",
@@ -73,8 +73,8 @@
       "away_team": "Maltby Sports",
       "home_score": 1,
       "away_score": 4,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276671&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276671&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276671&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276671&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276665",
@@ -88,8 +88,8 @@
       "away_team": "Colson Overhead Doors",
       "home_score": 7,
       "away_score": 2,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276665&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276665&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276665&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276665&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276663",
@@ -103,8 +103,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 3,
       "away_score": 2,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276663&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276663&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276663&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276663&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276661",
@@ -118,23 +118,23 @@
       "away_team": "J&K Electric",
       "home_score": 6,
       "away_score": 4,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276661&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276661&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276661&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276661&u=DSMALL&s=hockey&p=boxscore"
     },
     {
-      "game_id": "3276656",
-      "headline": "Mackenzie\u2019s Four Goals Power Colson Overhead Doors Past J&K Electric, 7-6 in Thrilling Matchup",
+      "game_id": "3276655",
+      "headline": "Colson Overhead Doors Edges J&K Electric 7-6, Powered by Gould\u2019s 3 Points and Mackenzie\u2019s 4 Goals in Thrilling Clash",
       "ai_generated": true,
-      "created_at": "2026-02-18T20:38:25.673630+00:00",
-      "updated_at": "2026-02-18T20:38:25.673630+00:00",
-      "narrative": "In a thrilling matchup, Colson Overhead Doors edged out J&K Electric with a final score of 7-6. Mackenzie Rubein led the charge with an impressive 4 goals and 1 assist, marking a standout 5-point night. This victory is crucial for Colson as they look to improve their playoff positioning after previously losing two games.",
+      "created_at": "2026-02-25T13:02:55.194111+00:00",
+      "updated_at": "2026-02-25T13:02:55.194111+00:00",
+      "narrative": "In a thrilling matchup, Colson Overhead Doors edged out J&K Electric with a final score of 7-6. Zack Gould led the way for Colson with 1 goal and 2 assists, while Rubein Mackenzie had a standout performance for J&K, scoring 4 goals and adding 1 assist for a hat trick. This victory has significant playoff implications as both teams were vying for position in the standings.",
       "game_datetime": "2026-01-28T02:00:00+00:00",
       "home_team": "Colson Overhead Doors",
       "away_team": "J&K Electric",
       "home_score": 7,
       "away_score": 6,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276656&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276656&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276655&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276655&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276657",
