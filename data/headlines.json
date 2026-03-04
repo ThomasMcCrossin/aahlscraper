@@ -1,35 +1,80 @@
 {
-  "generated_at": "2026-03-03T19:41:50.327669+00:00",
+  "generated_at": "2026-03-04T00:00:36.842914+00:00",
   "headlines": [
     {
-      "game_id": "3276681",
-      "headline": "G.R. Mitchell Welding Powers Past Ultramar 7-4 with Hurley's Two Goals and Fullerton's Three-Point Night!",
+      "game_id": "3276689",
+      "headline": "G.R. Mitchell Welding Powers Past Ultramar 5-3 with Strong Efforts from Dobson, Macpherson, and Mattix",
       "ai_generated": true,
-      "created_at": "2026-02-19T16:52:54.525767+00:00",
-      "updated_at": "2026-02-19T16:52:54.525767+00:00",
-      "narrative": "In a strong showing, G.R. Mitchell Welding defeated Ultramar 7-4, solidifying their position as the #2 ranked team. William Hurley led the charge with 2 goals, while Zack Fullerton contributed 1 goal and 2 assists for a 3-point night. The victory is crucial for playoff positioning as both teams vie for a strong finish in the league.",
+      "created_at": "2026-03-04T00:00:20.845835+00:00",
+      "updated_at": "2026-03-04T00:00:20.845835+00:00",
+      "narrative": "G.R. Mitchell Welding secured a 5-3 victory over Ultramar, solidifying their position as the #2 ranked team. Nick \"Pickle\" Dobson, Ryan Macpherson, and Ralph Mattix each contributed with a goal and an assist, while Ultramar's Matt Cove and Brett Gallant found the net for their team. This matchup was crucial for playoff positioning, with both teams vying for a strong finish.",
+      "game_datetime": "2026-02-25T02:00:00+00:00",
+      "home_team": "G.R. Mitchell Welding",
+      "away_team": "Ultramar",
+      "home_score": 5,
+      "away_score": 3,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276689&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276689&p=boxscore"
+    },
+    {
+      "game_id": "3276687",
+      "headline": "Thrilling Stalemate: Maltby Sports and J&K Electric Battle to 8-8 Tie, McCarthy Shines with 5 Goals!",
+      "ai_generated": true,
+      "created_at": "2026-03-04T00:00:20.845835+00:00",
+      "updated_at": "2026-03-04T00:00:20.845835+00:00",
+      "narrative": "In a thrilling matchup, Maltby Sports and J&K Electric battled to an 8-8 tie. Ian McCarthy led Maltby Sports with 5 goals and 1 assist, while Noah Perrin shone for J&K Electric with 3 goals and 1 assist. Both teams showcased their offensive prowess, making for an exciting game that impacts playoff positioning.",
+      "game_datetime": "2026-02-25T00:45:00+00:00",
+      "home_team": "Maltby Sports",
+      "away_team": "J&K Electric",
+      "home_score": 8,
+      "away_score": 8,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276687&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276687&p=boxscore"
+    },
+    {
+      "game_id": "3276685",
+      "headline": "Maltby Sports Powers Past Colson Overhead Doors 6-2 with Johnson and Bridge Leading the Charge!",
+      "ai_generated": true,
+      "created_at": "2026-03-04T00:00:20.845835+00:00",
+      "updated_at": "2026-03-04T00:00:20.845835+00:00",
+      "narrative": "FINAL: Maltby Sports 6, Colson Overhead Doors 2. Trevor Johnson led the way for Maltby Sports with 2 goals and 1 assist, while Isaac Bridge also contributed with 2 goals. This victory keeps Maltby Sports firmly in the playoff picture as they maintain their position at the top of the standings.",
+      "game_datetime": "2026-02-23T01:00:00+00:00",
+      "home_team": "Maltby Sports",
+      "away_team": "Colson Overhead Doors",
+      "home_score": 6,
+      "away_score": 2,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276685&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276685&p=boxscore"
+    },
+    {
+      "game_id": "3276682",
+      "headline": "G.R. Mitchell Welding Powers Past Ultramar 7-4 with Linkletter's Two Goals and Strong Team Effort",
+      "ai_generated": true,
+      "created_at": "2026-03-04T00:00:20.845835+00:00",
+      "updated_at": "2026-03-04T00:00:20.845835+00:00",
+      "narrative": "In a playoff positioning matchup, G.R. Mitchell Welding defeated Ultramar 7-4. Brad Linkletter led the way with 2 goals, while Ultramar's William Hurley scored twice. With this win, G.R. Mitchell Welding solidifies their position at #2 in the standings.",
       "game_datetime": "2026-02-18T02:00:00+00:00",
       "home_team": "G.R. Mitchell Welding",
       "away_team": "Ultramar",
       "home_score": 7,
       "away_score": 4,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276681&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276681&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-2&gameID=3276682&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-2&gameID=3276682&p=boxscore"
     },
     {
-      "game_id": "3276680",
-      "headline": "Maltby Sports Powers Past J&K Electric 7-5, Bridge Shines with Hat Trick and 4 Points!",
+      "game_id": "3276679",
+      "headline": "Maltby Sports Powers Past J&K Electric in Thrilling 7-5 Showdown!",
       "ai_generated": true,
-      "created_at": "2026-02-25T17:07:48.397696+00:00",
-      "updated_at": "2026-02-25T17:07:48.397696+00:00",
-      "narrative": "In a high-scoring matchup, Maltby Sports defeated J&K Electric 7-5, solidifying their position as the top team in the league. Isaac Bridge led the way with a hat trick and an assist, while Luke Crocker contributed a goal and two assists. This win comes as Maltby Sports continues their strong performance, now on a five-game winning streak.",
+      "created_at": "2026-03-04T00:00:20.845835+00:00",
+      "updated_at": "2026-03-04T00:00:20.845835+00:00",
+      "narrative": "In a high-scoring matchup, Maltby Sports emerged victorious over J&K Electric with a final score of 7-5. No individual player stats were available to highlight top performances. Both teams put on an exciting display, but Maltby Sports secured the win in this competitive game.",
       "game_datetime": "2026-02-18T00:45:00+00:00",
       "home_team": "J&K Electric",
       "away_team": "Maltby Sports",
       "home_score": 5,
       "away_score": 7,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276680&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276680&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276679&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276679&p=boxscore"
     },
     {
       "game_id": "3276677",
@@ -43,8 +88,8 @@
       "away_team": "Ultramar",
       "home_score": 4,
       "away_score": 9,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276677&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-3&gameID=3276677&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276677&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276677&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276674",
@@ -103,8 +148,8 @@
       "away_team": "G.R. Mitchell Welding",
       "home_score": 3,
       "away_score": 2,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276663&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276663&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276663&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276663&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276661",
@@ -118,23 +163,23 @@
       "away_team": "J&K Electric",
       "home_score": 6,
       "away_score": 4,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276661&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276661&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276661&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276661&u=DSMALL&s=hockey&p=boxscore"
     },
     {
-      "game_id": "3276656",
-      "headline": "Mackenzie\u2019s Four Goals Power Colson Overhead Doors Past J&K Electric, 7-6 in Thrilling Matchup",
+      "game_id": "3276655",
+      "headline": "Colson Overhead Doors Edges J&K Electric 7-6, Powered by Gould\u2019s 3 Points and Mackenzie\u2019s 4 Goals in Thrilling Clash",
       "ai_generated": true,
-      "created_at": "2026-02-25T17:07:48.397696+00:00",
-      "updated_at": "2026-02-25T17:07:48.397696+00:00",
-      "narrative": "In a thrilling matchup, Colson Overhead Doors edged out J&K Electric with a final score of 7-6. Mackenzie Rubein led the charge with an impressive 4 goals and 1 assist, marking a standout 5-point night. This victory is crucial for Colson as they look to improve their playoff positioning after previously losing two games.",
+      "created_at": "2026-03-04T00:00:20.845835+00:00",
+      "updated_at": "2026-03-04T00:00:20.845835+00:00",
+      "narrative": "In a thrilling matchup, Colson Overhead Doors edged out J&K Electric with a final score of 7-6. Zack Gould led the way for Colson with 1 goal and 2 assists, while Rubein Mackenzie had a standout performance for J&K, scoring 4 goals and adding 1 assist for a hat trick. This victory has significant playoff implications as both teams were vying for position in the standings.",
       "game_datetime": "2026-01-28T02:00:00+00:00",
       "home_team": "Colson Overhead Doors",
       "away_team": "J&K Electric",
       "home_score": 7,
       "away_score": 6,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276656&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-4&gameID=3276656&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276655&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276655&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276657",
