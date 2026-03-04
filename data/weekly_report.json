@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-04T01:42:40.362978+00:00",
+  "generated_at": "2026-03-04T03:54:27.476010+00:00",
   "standings_snapshot": "standings-20260304T014239Z.json",
   "previous_snapshot": "standings-20260304T000019Z.json",
   "standings_movements": [
@@ -34,22 +34,7 @@
       "points_change": 0
     }
   ],
-  "recent_team_form": [
-    {
-      "team": "G.R. Mitchell Welding",
-      "played": 2,
-      "wins": 2,
-      "losses": 0,
-      "ties": 0
-    },
-    {
-      "team": "Ultramar",
-      "played": 2,
-      "wins": 0,
-      "losses": 2,
-      "ties": 0
-    }
-  ],
+  "recent_team_form": [],
   "game_headlines": [
     {
       "game_id": "3276689",
