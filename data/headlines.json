@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-04T00:00:36.842914+00:00",
+  "generated_at": "2026-03-04T01:42:40.362978+00:00",
   "headlines": [
     {
       "game_id": "3276689",
@@ -13,8 +13,8 @@
       "away_team": "Ultramar",
       "home_score": 5,
       "away_score": 3,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276689&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276689&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276689&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276689&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276687",
