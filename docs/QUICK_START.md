@@ -38,9 +38,18 @@ Key options:
 ## 4. Outputs
 All generated files are stored in the `data/` directory by default:
 - `schedule.json` / `schedule.csv`
+- `results.json`
 - `player_stats.json` / `player_stats.csv`
 - `standings.json` / `standings.csv`
 - Optional `recent_games.json`, `current_week_games.json`
+
+Optional manual playoff analysis:
+```bash
+python3 scripts/build_player_registry.py
+python3 scripts/generate_season_analysis.py
+```
+
+This creates compact season and playoff briefing files under `data/v2/`.
 
 ## 5. Use the Python API
 ```python

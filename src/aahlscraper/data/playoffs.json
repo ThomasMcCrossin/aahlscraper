@@ -1,0 +1,43 @@
+{
+  "season_id": "2025-2026",
+  "timezone": "America/Halifax",
+  "rounds": [
+    {
+      "round_id": "2026-semifinals",
+      "label": "Semifinals",
+      "best_of": 3,
+      "start_date": "2026-03-10",
+      "series": [
+        {
+          "series_id": "2026-semifinal-maltby-vs-ultramar",
+          "higher_seed": 1,
+          "higher_seed_slug": "maltby-sports",
+          "higher_seed_name": "Maltby Sports",
+          "lower_seed": 4,
+          "lower_seed_slug": "ultramar",
+          "lower_seed_name": "Ultramar",
+          "known_game_dates": [
+            "2026-03-10",
+            "2026-03-24"
+          ],
+          "notes": "AAHL playoff games continue to appear in the standard schedule feed. Only currently posted local dates are listed here."
+        },
+        {
+          "series_id": "2026-semifinal-gr-mitchell-vs-jk",
+          "higher_seed": 2,
+          "higher_seed_slug": "gr-mitchell-welding",
+          "higher_seed_name": "G.R. Mitchell Welding",
+          "lower_seed": 3,
+          "lower_seed_slug": "j-and-k-electric",
+          "lower_seed_name": "J&K Electric",
+          "known_game_dates": [
+            "2026-03-10",
+            "2026-03-22",
+            "2026-03-24"
+          ],
+          "notes": "AAHL playoff games continue to appear in the standard schedule feed. All three local dates are currently posted."
+        }
+      ]
+    }
+  ]
+}
