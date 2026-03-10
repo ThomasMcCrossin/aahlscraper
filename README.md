@@ -1,6 +1,7 @@
 # AAHL Scraper
 
 A web scraper for the Amherst Adult Hockey League website that extracts schedules, player statistics, and team standings.
+The canonical production deliverable is the Yodeck app in `index.html`; the scraper and automation exist to keep that display fed with fresh league data.
 
 ## Features
 
@@ -161,6 +162,12 @@ python aahl_yodeck_setup.py full
 
 That's it! The display automatically shows the latest data collected three times per day (8 AM, 12 PM, 4 PM Atlantic) plus live five-minute refreshes during Tuesday and Sunday night games.
 
+### Production Source Of Truth
+
+- `index.html` is the canonical production Yodeck app and the only HTML file that should be packaged for upload.
+- `python aahl_yodeck_setup.py zip` creates `aahl_display.zip`, packaging that production `index.html` at the ZIP root.
+- Archived legacy Yodeck variants live in `archive/yodeck/` and should not be uploaded to Yodeck.
+
 ### Features
 
 ✅ **Smart Name Corrections** - Automatically fixes player names
@@ -190,9 +197,10 @@ See the `yodeck-docs/` folder for complete documentation:
 
 ### Files
 
-- `index.html` - Yodeck display application (upload to Yodeck)
+- `index.html` - Canonical production Yodeck display application
 - `aahl_yodeck_processor.py` - Data processor with name corrections
 - `aahl_yodeck_setup.py` - Automated deployment helper
+- `archive/yodeck/` - Legacy display variants and retired upload artifacts retained for reference only
 
 ## License
 

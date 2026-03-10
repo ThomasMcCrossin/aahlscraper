@@ -12,6 +12,16 @@ import zipfile
 from pathlib import Path
 from datetime import datetime
 
+PRODUCTION_HTML = "index.html"
+LEGACY_YODECK_ARCHIVE = Path("archive") / "yodeck"
+LEGACY_HTML_VARIANTS = (
+    LEGACY_YODECK_ARCHIVE / "index_redesign_v2_no_qr.html",
+    LEGACY_YODECK_ARCHIVE / "index_alt_showcase.html",
+    LEGACY_YODECK_ARCHIVE / "index_vibrant_centerice.html",
+    LEGACY_YODECK_ARCHIVE / "index_vibrant_hypewall.html",
+    LEGACY_YODECK_ARCHIVE / "index_vibrant_retroboard.html",
+)
+
 class AAHLYodeckSetup:
     """Helper for setting up AAHL display on Yodeck."""
 
@@ -24,7 +34,7 @@ class AAHLYodeckSetup:
         print("\n📋 Checking requirements...")
 
         required_files = {
-            'index.html': 'Yodeck display app',
+            PRODUCTION_HTML: 'canonical production Yodeck display app',
             'aahl_yodeck_processor.py': 'Data processor',
         }
 
@@ -40,6 +50,13 @@ class AAHLYodeckSetup:
             for m in missing:
                 print(m)
             return False
+
+        legacy_present = [path for path in LEGACY_HTML_VARIANTS if (self.base_dir / path).exists()]
+        if legacy_present:
+            print("\nℹ️  Archived legacy HTML variants present for reference only:")
+            for path in legacy_present:
+                print(f"  - {path.as_posix()}")
+            print(f"  Use {PRODUCTION_HTML} as the production Yodeck source of truth.")
 
         return True
 
@@ -99,14 +116,16 @@ class AAHLYodeckSetup:
         print("\n📦 Creating ZIP file...")
 
         zip_path = self.base_dir / "aahl_display.zip"
+        source_html = self.base_dir / PRODUCTION_HTML
 
         try:
             with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zf:
                 # Add index.html to root of ZIP
-                zf.write(self.base_dir / 'index.html', arcname='index.html')
+                zf.write(source_html, arcname='index.html')
 
             print(f"  ✓ Created: {zip_path}")
             print(f"  ✓ Size: {zip_path.stat().st_size / 1024:.1f} KB")
+            print(f"  ✓ Source HTML: {source_html.name}")
             print(f"\n  Upload this ZIP to Yodeck:")
             print(f"    1. Go to Custom Apps in Yodeck portal")
             print(f"    2. Click 'Add New HTML App'")

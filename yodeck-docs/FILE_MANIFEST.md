@@ -12,11 +12,13 @@ A complete, production-ready solution to display AAHL hockey statistics on your 
 
 #### 1. **index.html** (Main Yodeck App)
 - **Type:** HTML5 Display Application
-- **Size:** ~15 KB
+- **Status:** Canonical production app
 - **Purpose:** The actual app that displays on your Yodeck player
 - **What to do with it:** Upload to Yodeck as an HTML custom app
 - **Format:** Single self-contained file with embedded CSS and JavaScript
 - **Browser:** Works on any modern browser, optimized for Yodeck players
+
+Archived legacy Yodeck variants and retired upload artifacts live in `archive/yodeck/`.
 
 **Key features:**
 - 4-section rotating display (standings, scorers, results, upcoming)

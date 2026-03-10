@@ -12,9 +12,11 @@ You have a **professional hockey stats display** ready for your canteen screen.
 
 ### The Files You Need
 
-1. **index.html** - Drop this into Yodeck as an HTML App
+1. **index.html** - Canonical production Yodeck app source
 2. **aahl_yodeck_processor.py** - Run this to update the data
 3. **yodeck-integration-guide.md** - Full setup documentation
+
+Archived legacy variants and retired upload artifacts live in `archive/yodeck/` and should not be used for production uploads.
 
 ## Two-Minute Setup
 
@@ -29,7 +31,8 @@ python /path/to/aahl_yodeck_processor.py
 - Log into Yodeck portal
 - **Custom Apps** → **Add New HTML App**
 - Name: "AAHL Hockey Display"
-- ZIP file: `index.html` (just the file, not a folder)
+- Run: `python aahl_yodeck_setup.py zip`
+- Upload ZIP: `aahl_display.zip`
 - Click Save
 - Click Push Changes
 

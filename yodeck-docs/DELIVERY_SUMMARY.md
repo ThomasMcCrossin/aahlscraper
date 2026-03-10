@@ -14,10 +14,13 @@
 ### 1. Production-Ready Yodeck App
 - **File:** `index.html`
 - **Type:** HTML5 custom app
-- **Size:** ~15 KB self-contained
+- **Status:** Canonical production Yodeck app
 - **Display:** 4-section rotating hockey display
 - **Compatibility:** All modern browsers, optimized for Yodeck players
 - **Optimization:** Enhanced for 42" 1080p display with large fonts
+
+Production note: repo-root `index.html` is the source of truth for uploads.
+Archived legacy Yodeck variants and retired upload artifacts live in `archive/yodeck/`.
 
 ### 2. Data Processing Pipeline
 - **File:** `aahl_yodeck_processor.py`

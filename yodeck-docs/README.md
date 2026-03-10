@@ -1,6 +1,7 @@
 # AAHL Hockey Display for Yodeck 🏒
 
 A professional, auto-rotating hockey statistics display system for your canteen digital signage powered by Yodeck and your AAHL scraper.
+The production source of truth is the repo-root `index.html`; the scraper pipeline exists to keep that app current.
 
 ## 📺 What You Get
 
@@ -64,11 +65,17 @@ python aahl_yodeck_setup.py full
 
 **Done!** Your canteen display will show live hockey stats 🎉
 
+## Production Baseline
+
+- `index.html` is the canonical production HTML used for Yodeck uploads.
+- `python aahl_yodeck_setup.py zip` packages that file as `aahl_display.zip`.
+- Archived legacy variants and retired upload artifacts live in `archive/yodeck/` and should not be treated as the live app.
+
 ## 📂 Files Included
 
 | File | Purpose |
 |------|---------|
-| `index.html` | 🎯 Main Yodeck display app (upload this) |
+| `index.html` | 🎯 Canonical production Yodeck display app |
 | `aahl_yodeck_processor.py` | ⚙️ Data processor (run after scraper) |
 | `aahl_yodeck_setup.py` | 🔧 Deployment helper (automation) |
 | `quick-start.md` | 📖 2-minute setup guide |

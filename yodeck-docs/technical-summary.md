@@ -8,7 +8,7 @@ Transform your AAHL scraper data into a professional, auto-rotating hockey stati
 
 ### 1. **index.html** (Yodeck Display App)
 **Type:** Single-file HTML5 application  
-**Size:** ~15 KB (fully self-contained)  
+**Status:** Canonical production Yodeck app  
 **Platform:** Yodeck Players (Raspberry Pi 3/4)
 
 **Features:**
@@ -28,6 +28,8 @@ Transform your AAHL scraper data into a professional, auto-rotating hockey stati
 - Local data rendering (fast, reliable)
 - Touch-friendly interface (optional)
 - Print-friendly layout
+
+Archived legacy Yodeck variants and retired upload artifacts live in `archive/yodeck/` and are not the production upload target.
 
 ### 2. **aahl_yodeck_processor.py** (Data Processor)
 **Type:** Python 3 utility  
@@ -216,7 +218,7 @@ NAME_CORRECTIONS = {
 | App Load Time | <1 second |
 | Data Processing | <2 seconds |
 | Data Update Frequency | Every 30 min - 2 hours |
-| Storage (App) | ~15 KB |
+| Storage (App) | ~90 KB |
 | Storage (Data) | ~50-100 KB |
 | Network Requirements | HTTP only |
 | Display Resolution | 1080p - 4K |
