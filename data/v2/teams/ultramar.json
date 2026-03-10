@@ -1,0 +1,343 @@
+{
+  "team_slug": "ultramar",
+  "team_name": "Ultramar",
+  "logo_path": "assets/logos/aahl/ultramar.svg",
+  "standing": {
+    "rank": 4,
+    "team_name": "Ultramar",
+    "team_slug": "ultramar",
+    "points": 14,
+    "wins": 5,
+    "losses": 19,
+    "ties": 4,
+    "goals_for": 108,
+    "goals_against": 155,
+    "last_10": "2-7-1",
+    "streak": "Lost 1",
+    "record": "5-19-4"
+  },
+  "leaders": {
+    "points": [
+      {
+        "player_id": "ultramar-linkletter-brad-9",
+        "name": "Linkletter, Brad",
+        "display_name": "Brad Linkletter",
+        "games_played": 21,
+        "goals": 25,
+        "assists": 12,
+        "points": 37
+      },
+      {
+        "player_id": "ultramar-dobson-aaron-4",
+        "name": "Dobson, Aaron",
+        "display_name": "Aaron Dobson",
+        "games_played": 16,
+        "goals": 8,
+        "assists": 20,
+        "points": 28
+      },
+      {
+        "player_id": "ultramar-allen-tyler-tuffy-11",
+        "name": "Allen, Tyler \"Tuffy\"",
+        "display_name": "Tyler \"Tuffy\" Allen",
+        "games_played": 15,
+        "goals": 13,
+        "assists": 13,
+        "points": 26
+      },
+      {
+        "player_id": "ultramar-miller-madden-6",
+        "name": "Miller, Madden",
+        "display_name": "Madden Miller",
+        "games_played": 14,
+        "goals": 13,
+        "assists": 9,
+        "points": 22
+      },
+      {
+        "player_id": "ultramar-jobes-bill-8",
+        "name": "Jobes, Bill",
+        "display_name": "Bill Jobes",
+        "games_played": 15,
+        "goals": 2,
+        "assists": 19,
+        "points": 21
+      }
+    ],
+    "goals": [
+      {
+        "player_id": "ultramar-linkletter-brad-9",
+        "name": "Linkletter, Brad",
+        "display_name": "Brad Linkletter",
+        "games_played": 21,
+        "goals": 25,
+        "assists": 12,
+        "points": 37
+      },
+      {
+        "player_id": "ultramar-allen-tyler-tuffy-11",
+        "name": "Allen, Tyler \"Tuffy\"",
+        "display_name": "Tyler \"Tuffy\" Allen",
+        "games_played": 15,
+        "goals": 13,
+        "assists": 13,
+        "points": 26
+      },
+      {
+        "player_id": "ultramar-miller-madden-6",
+        "name": "Miller, Madden",
+        "display_name": "Madden Miller",
+        "games_played": 14,
+        "goals": 13,
+        "assists": 9,
+        "points": 22
+      },
+      {
+        "player_id": "ultramar-dobson-aaron-4",
+        "name": "Dobson, Aaron",
+        "display_name": "Aaron Dobson",
+        "games_played": 16,
+        "goals": 8,
+        "assists": 20,
+        "points": 28
+      },
+      {
+        "player_id": "ultramar-cove-matt-12",
+        "name": "Cove, Matt",
+        "display_name": "Matt Cove",
+        "games_played": 14,
+        "goals": 7,
+        "assists": 11,
+        "points": 18
+      }
+    ],
+    "assists": [
+      {
+        "player_id": "ultramar-dobson-aaron-4",
+        "name": "Dobson, Aaron",
+        "display_name": "Aaron Dobson",
+        "games_played": 16,
+        "goals": 8,
+        "assists": 20,
+        "points": 28
+      },
+      {
+        "player_id": "ultramar-jobes-bill-8",
+        "name": "Jobes, Bill",
+        "display_name": "Bill Jobes",
+        "games_played": 15,
+        "goals": 2,
+        "assists": 19,
+        "points": 21
+      },
+      {
+        "player_id": "ultramar-allen-tyler-tuffy-11",
+        "name": "Allen, Tyler \"Tuffy\"",
+        "display_name": "Tyler \"Tuffy\" Allen",
+        "games_played": 15,
+        "goals": 13,
+        "assists": 13,
+        "points": 26
+      },
+      {
+        "player_id": "ultramar-linkletter-brad-9",
+        "name": "Linkletter, Brad",
+        "display_name": "Brad Linkletter",
+        "games_played": 21,
+        "goals": 25,
+        "assists": 12,
+        "points": 37
+      },
+      {
+        "player_id": "ultramar-cove-matt-12",
+        "name": "Cove, Matt",
+        "display_name": "Matt Cove",
+        "games_played": 14,
+        "goals": 7,
+        "assists": 11,
+        "points": 18
+      }
+    ]
+  },
+  "recent_results": [
+    {
+      "canonical_game_id": "3276689",
+      "local_date": "2026-02-24",
+      "local_time": "10:00 PM",
+      "opponent_slug": "gr-mitchell-welding",
+      "opponent_name": "G.R. Mitchell Welding",
+      "team_score": 3,
+      "opponent_score": 5,
+      "outcome": "loss",
+      "season_phase": "regular_season",
+      "playoff_series_id": null
+    },
+    {
+      "canonical_game_id": "3276681",
+      "local_date": "2026-02-17",
+      "local_time": "10:00 PM",
+      "opponent_slug": "gr-mitchell-welding",
+      "opponent_name": "G.R. Mitchell Welding",
+      "team_score": 4,
+      "opponent_score": 7,
+      "outcome": "loss",
+      "season_phase": "regular_season",
+      "playoff_series_id": null
+    },
+    {
+      "canonical_game_id": "3276677",
+      "local_date": "2026-02-15",
+      "local_time": "9:00 PM",
+      "opponent_slug": "colson-overhead-doors",
+      "opponent_name": "Colson Overhead Doors",
+      "team_score": 9,
+      "opponent_score": 4,
+      "outcome": "win",
+      "season_phase": "regular_season",
+      "playoff_series_id": null
+    },
+    {
+      "canonical_game_id": "3276671",
+      "local_date": "2026-02-10",
+      "local_time": "8:45 PM",
+      "opponent_slug": "maltby-sports",
+      "opponent_name": "Maltby Sports",
+      "team_score": 1,
+      "opponent_score": 4,
+      "outcome": "loss",
+      "season_phase": "regular_season",
+      "playoff_series_id": null
+    },
+    {
+      "canonical_game_id": "3276657",
+      "local_date": "2026-01-27",
+      "local_time": "8:45 PM",
+      "opponent_slug": "gr-mitchell-welding",
+      "opponent_name": "G.R. Mitchell Welding",
+      "team_score": 3,
+      "opponent_score": 10,
+      "outcome": "loss",
+      "season_phase": "regular_season",
+      "playoff_series_id": null
+    }
+  ],
+  "upcoming_games": [
+    {
+      "canonical_game_id": "3306127",
+      "local_date": "2026-03-10",
+      "local_time": "10:00 PM",
+      "opponent_slug": "maltby-sports",
+      "opponent_name": "Maltby Sports",
+      "team_score": null,
+      "opponent_score": null,
+      "outcome": "scheduled",
+      "season_phase": "playoffs",
+      "playoff_series_id": "2026-semifinal-maltby-vs-ultramar"
+    },
+    {
+      "canonical_game_id": "3306133",
+      "local_date": "2026-03-24",
+      "local_time": "8:45 PM",
+      "opponent_slug": "maltby-sports",
+      "opponent_name": "Maltby Sports",
+      "team_score": null,
+      "opponent_score": null,
+      "outcome": "scheduled",
+      "season_phase": "playoffs",
+      "playoff_series_id": "2026-semifinal-maltby-vs-ultramar"
+    }
+  ],
+  "head_to_head": [
+    {
+      "opponent_slug": "colson-overhead-doors",
+      "opponent_name": "Colson Overhead Doors",
+      "games_played": 6,
+      "record": {
+        "wins": 3,
+        "losses": 1,
+        "ties": 2,
+        "goals_for": 29,
+        "goals_against": 20
+      }
+    },
+    {
+      "opponent_slug": "gr-mitchell-welding",
+      "opponent_name": "G.R. Mitchell Welding",
+      "games_played": 8,
+      "record": {
+        "wins": 0,
+        "losses": 7,
+        "ties": 1,
+        "goals_for": 25,
+        "goals_against": 56
+      }
+    },
+    {
+      "opponent_slug": "j-and-k-electric",
+      "opponent_name": "J&K Electric",
+      "games_played": 2,
+      "record": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "goals_for": 10,
+        "goals_against": 12
+      }
+    },
+    {
+      "opponent_slug": "maltby-sports",
+      "opponent_name": "Maltby Sports",
+      "games_played": 5,
+      "record": {
+        "wins": 0,
+        "losses": 5,
+        "ties": 0,
+        "goals_for": 15,
+        "goals_against": 32
+      }
+    }
+  ],
+  "playoff_context": {
+    "series_id": "2026-semifinal-maltby-vs-ultramar",
+    "label": "Maltby Sports vs Ultramar",
+    "state_label": "Series tied 0-0",
+    "best_of": 3,
+    "wins": {
+      "maltby-sports": 0,
+      "ultramar": 0
+    },
+    "next_game": {
+      "canonical_game_id": "3306127",
+      "source_game_ids": [
+        "3306127"
+      ],
+      "source_game_count": 1,
+      "status": "scheduled",
+      "season_phase": "playoffs",
+      "playoff_round_id": "2026-semifinals",
+      "playoff_series_id": "2026-semifinal-maltby-vs-ultramar",
+      "location": "Amherst",
+      "division": null,
+      "start_local": "2026-03-10T22:00:00-03:00",
+      "start_utc": "2026-03-11T01:00:00+00:00",
+      "local_date": "2026-03-10",
+      "local_time": "10:00 PM",
+      "home_team": "Maltby Sports",
+      "home_slug": "maltby-sports",
+      "away_team": "Ultramar",
+      "away_slug": "ultramar",
+      "home_score": null,
+      "away_score": null,
+      "result": null,
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306127&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
+      "scoring_event_count": 0,
+      "penalty_count": 0,
+      "notable_performers": []
+    },
+    "known_game_dates": [
+      "2026-03-10",
+      "2026-03-24"
+    ]
+  }
+}

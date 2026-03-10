@@ -1,0 +1,276 @@
+{
+  "team_slug": "colson-overhead-doors",
+  "team_name": "Colson Overhead Doors",
+  "logo_path": "assets/logos/aahl/colson-overhead-doors.png",
+  "standing": {
+    "rank": 5,
+    "team_name": "Colson Overhead Doors",
+    "team_slug": "colson-overhead-doors",
+    "points": 9,
+    "wins": 3,
+    "losses": 22,
+    "ties": 3,
+    "goals_for": 91,
+    "goals_against": 182,
+    "last_10": "1-8-1",
+    "streak": "Lost 6",
+    "record": "3-22-3"
+  },
+  "leaders": {
+    "points": [
+      {
+        "player_id": "colson-overhead-doors-gould-zack-88",
+        "name": "Gould, Zack",
+        "display_name": "Zack Gould",
+        "games_played": 19,
+        "goals": 20,
+        "assists": 14,
+        "points": 34
+      },
+      {
+        "player_id": "colson-overhead-doors-gesner-logan-23",
+        "name": "Gesner, Logan",
+        "display_name": "Logan Gesner",
+        "games_played": 18,
+        "goals": 4,
+        "assists": 22,
+        "points": 26
+      },
+      {
+        "player_id": "colson-overhead-doors-faulkner-rory-76",
+        "name": "Faulkner, Rory",
+        "display_name": "Rory Faulkner",
+        "games_played": 10,
+        "goals": 10,
+        "assists": 8,
+        "points": 18
+      },
+      {
+        "player_id": "colson-overhead-doors-hebert-denis-19",
+        "name": "Hebert, Denis",
+        "display_name": "Denis Hebert",
+        "games_played": 9,
+        "goals": 6,
+        "assists": 12,
+        "points": 18
+      },
+      {
+        "player_id": "colson-overhead-doors-chandler-3rd-charles-7",
+        "name": "Chandler 3rd, Charles",
+        "display_name": "Charles Chandler 3rd",
+        "games_played": 6,
+        "goals": 6,
+        "assists": 2,
+        "points": 8
+      }
+    ],
+    "goals": [
+      {
+        "player_id": "colson-overhead-doors-gould-zack-88",
+        "name": "Gould, Zack",
+        "display_name": "Zack Gould",
+        "games_played": 19,
+        "goals": 20,
+        "assists": 14,
+        "points": 34
+      },
+      {
+        "player_id": "colson-overhead-doors-faulkner-rory-76",
+        "name": "Faulkner, Rory",
+        "display_name": "Rory Faulkner",
+        "games_played": 10,
+        "goals": 10,
+        "assists": 8,
+        "points": 18
+      },
+      {
+        "player_id": "colson-overhead-doors-hebert-denis-19",
+        "name": "Hebert, Denis",
+        "display_name": "Denis Hebert",
+        "games_played": 9,
+        "goals": 6,
+        "assists": 12,
+        "points": 18
+      },
+      {
+        "player_id": "colson-overhead-doors-chandler-3rd-charles-7",
+        "name": "Chandler 3rd, Charles",
+        "display_name": "Charles Chandler 3rd",
+        "games_played": 6,
+        "goals": 6,
+        "assists": 2,
+        "points": 8
+      },
+      {
+        "player_id": "colson-overhead-doors-gesner-logan-23",
+        "name": "Gesner, Logan",
+        "display_name": "Logan Gesner",
+        "games_played": 18,
+        "goals": 4,
+        "assists": 22,
+        "points": 26
+      }
+    ],
+    "assists": [
+      {
+        "player_id": "colson-overhead-doors-gesner-logan-23",
+        "name": "Gesner, Logan",
+        "display_name": "Logan Gesner",
+        "games_played": 18,
+        "goals": 4,
+        "assists": 22,
+        "points": 26
+      },
+      {
+        "player_id": "colson-overhead-doors-gould-zack-88",
+        "name": "Gould, Zack",
+        "display_name": "Zack Gould",
+        "games_played": 19,
+        "goals": 20,
+        "assists": 14,
+        "points": 34
+      },
+      {
+        "player_id": "colson-overhead-doors-hebert-denis-19",
+        "name": "Hebert, Denis",
+        "display_name": "Denis Hebert",
+        "games_played": 9,
+        "goals": 6,
+        "assists": 12,
+        "points": 18
+      },
+      {
+        "player_id": "colson-overhead-doors-faulkner-rory-76",
+        "name": "Faulkner, Rory",
+        "display_name": "Rory Faulkner",
+        "games_played": 10,
+        "goals": 10,
+        "assists": 8,
+        "points": 18
+      },
+      {
+        "player_id": "colson-overhead-doors-eatmon-chester-8",
+        "name": "Eatmon, Chester",
+        "display_name": "Chester Eatmon",
+        "games_played": 10,
+        "goals": 2,
+        "assists": 6,
+        "points": 8
+      }
+    ]
+  },
+  "recent_results": [
+    {
+      "canonical_game_id": "3276685",
+      "local_date": "2026-02-22",
+      "local_time": "9:00 PM",
+      "opponent_slug": "maltby-sports",
+      "opponent_name": "Maltby Sports",
+      "team_score": 2,
+      "opponent_score": 6,
+      "outcome": "loss",
+      "season_phase": "regular_season",
+      "playoff_series_id": null
+    },
+    {
+      "canonical_game_id": "3276677",
+      "local_date": "2026-02-15",
+      "local_time": "9:00 PM",
+      "opponent_slug": "ultramar",
+      "opponent_name": "Ultramar",
+      "team_score": 4,
+      "opponent_score": 9,
+      "outcome": "loss",
+      "season_phase": "regular_season",
+      "playoff_series_id": null
+    },
+    {
+      "canonical_game_id": "3276665",
+      "local_date": "2026-02-03",
+      "local_time": "10:00 PM",
+      "opponent_slug": "maltby-sports",
+      "opponent_name": "Maltby Sports",
+      "team_score": 2,
+      "opponent_score": 7,
+      "outcome": "loss",
+      "season_phase": "regular_season",
+      "playoff_series_id": null
+    },
+    {
+      "canonical_game_id": "3276655",
+      "local_date": "2026-01-27",
+      "local_time": "10:00 PM",
+      "opponent_slug": "j-and-k-electric",
+      "opponent_name": "J&K Electric",
+      "team_score": 7,
+      "opponent_score": 6,
+      "outcome": "win",
+      "season_phase": "regular_season",
+      "playoff_series_id": null
+    },
+    {
+      "canonical_game_id": "3276645",
+      "local_date": "2026-01-18",
+      "local_time": "9:00 PM",
+      "opponent_slug": "gr-mitchell-welding",
+      "opponent_name": "G.R. Mitchell Welding",
+      "team_score": 3,
+      "opponent_score": 3,
+      "outcome": "tie",
+      "season_phase": "regular_season",
+      "playoff_series_id": null
+    }
+  ],
+  "upcoming_games": [],
+  "head_to_head": [
+    {
+      "opponent_slug": "gr-mitchell-welding",
+      "opponent_name": "G.R. Mitchell Welding",
+      "games_played": 4,
+      "record": {
+        "wins": 1,
+        "losses": 2,
+        "ties": 1,
+        "goals_for": 15,
+        "goals_against": 26
+      }
+    },
+    {
+      "opponent_slug": "j-and-k-electric",
+      "opponent_name": "J&K Electric",
+      "games_played": 7,
+      "record": {
+        "wins": 1,
+        "losses": 6,
+        "ties": 0,
+        "goals_for": 21,
+        "goals_against": 41
+      }
+    },
+    {
+      "opponent_slug": "maltby-sports",
+      "opponent_name": "Maltby Sports",
+      "games_played": 5,
+      "record": {
+        "wins": 0,
+        "losses": 5,
+        "ties": 0,
+        "goals_for": 11,
+        "goals_against": 37
+      }
+    },
+    {
+      "opponent_slug": "ultramar",
+      "opponent_name": "Ultramar",
+      "games_played": 6,
+      "record": {
+        "wins": 1,
+        "losses": 3,
+        "ties": 2,
+        "goals_for": 20,
+        "goals_against": 29
+      }
+    }
+  ],
+  "playoff_context": null
+}

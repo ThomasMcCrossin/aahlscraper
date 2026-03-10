@@ -381,7 +381,95 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "4:40",
+        "str_strength": "PP",
+        "team": "Ultramar",
+        "scorer_assisted_by": "14 Brody Burke ( 12 Matt Cove )",
+        "total": "0-1 Ultramar"
+      },
+      {
+        "per_period": "1",
+        "time": "0:32",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 9 Ian McCarthy , 19 Thomas  Mccrossin )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "17:10",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 9 Ian McCarthy , 19 Thomas  Mccrossin )",
+        "total": "2-1 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "13:43",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "9 Brad Linkletter ( 2 Chris Dywer )",
+        "total": "2-2 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "6:21",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 9 Ian McCarthy , 19 Thomas  Mccrossin )",
+        "total": "3-2 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "4:11",
+        "str_strength": "SH",
+        "team": "Ultramar",
+        "scorer_assisted_by": "9 Brad Linkletter ( 3 Brett Gallant )",
+        "total": "3-3 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "3:27",
+        "str_strength": "PP",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "2 Matt  Gallant ( 17 Chris Maltby )",
+        "total": "4-3 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "9:51",
+        "str_strength": "SH",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "9 Ian McCarthy ( 98 Issac Bridge )",
+        "total": "5-3 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "4:18",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 77 Ted Mackinnon , 17 Chris Maltby )",
+        "total": "6-3 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "3:07",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "12 Matt Cove ( 4 Aaron Dobson , 5 Andy Bonnell )",
+        "total": "6-4 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "0:04",
+        "str_strength": "EN",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "16 Danny \"Biggie\" Small ( 2 Matt  Gallant )",
+        "total": "7-4 Maltby Sports"
+      },
       {
         "per_period": "1",
         "time": "5:17",
@@ -724,7 +812,63 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "3:02",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "9 Nick Leopold",
+        "total": "0-1 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "13:45",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 27 Pat Morris , 9 Nick Leopold )",
+        "total": "0-2 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "9:21",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 27 Pat Morris , 9 Nick Leopold )",
+        "total": "0-3 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "8:33",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "18 Ryan Budd ( 27 Pat Morris , 74 Bill Davison )",
+        "total": "0-4 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "5:18",
+        "str_strength": "SH",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone",
+        "total": "0-5 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "15:11",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "27 Pat Morris ( 18 Ryan Budd , 4 Rubein Mackenzie )",
+        "total": "0-6 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "1:49",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "88 Zack Gould ( 23 Logan Gesner )",
+        "total": "1-6 J&K Electric"
+      },
       {
         "per_period": "1",
         "time": "0:45",
@@ -1014,7 +1158,103 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "14:51",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "16 Danny \"Biggie\" Small ( 63 Travis  Leblanc , 29 Ryder Codling )",
+        "total": "1-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "7:02",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "38 Dave Atkinson ( 97 Meathead MacDonald )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "5:25",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "63 Travis  Leblanc ( 17 Chris Maltby , 16 Danny \"Biggie\" Small )",
+        "total": "2-1 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "3:14",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 29 Ryder Codling , 91 Ryan Arbing )",
+        "total": "3-1 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "16:45",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "16 Danny \"Biggie\" Small",
+        "total": "4-1 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "11:12",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson ( 98 Issac Bridge )",
+        "total": "5-1 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "8:06",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "19 Thomas  Mccrossin ( 16 Danny \"Biggie\" Small , 9 Ian McCarthy )",
+        "total": "6-1 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "16:02",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 88 Corey Robichaud , 61 Cody Sutton )",
+        "total": "6-2 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "15:01",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "29 Ryder Codling ( 98 Issac Bridge , 19 Thomas  Mccrossin )",
+        "total": "7-2 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "10:36",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "63 Travis  Leblanc ( 2 Matt  Gallant , 16 Danny \"Biggie\" Small )",
+        "total": "8-2 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "1:57",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "19 Thomas  Mccrossin ( 9 Ian McCarthy , 98 Issac Bridge )",
+        "total": "9-2 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "0:51",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "19 Thomas  Mccrossin ( 98 Issac Bridge , 17 Chris Maltby )",
+        "total": "10-2 Maltby Sports"
+      },
       {
         "per_period": "2",
         "time": "2:01",
@@ -1252,7 +1492,63 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "7:32",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "26 Mikhial Mansour ( -20 Avery Harrison , 22 Gerald Boutiler )",
+        "total": "1-0 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "17:24",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "9 Julien Bourgeois ( 97 Meathead MacDonald , 55 Geoff  Ryan )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "15:08",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "94 Nick \"Pickle\" Dobson ( 7 Corey Helm , 38 Dave Atkinson )",
+        "total": "1-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "10:53",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "22 Gerald Boutiler ( 87 Noah Perrin )",
+        "total": "2-2 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "9:08",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "61 Cody Sutton ( 97 Meathead MacDonald , 55 Geoff  Ryan )",
+        "total": "2-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "5:59",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "13 Gordon  Mitchell",
+        "total": "2-4 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "11:37",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 7 Corey Helm , 13 Gordon  Mitchell )",
+        "total": "2-5 G.R. Mitchell Welding"
+      },
       {
         "per_period": "3",
         "time": "5:39",
@@ -1604,7 +1900,119 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "15:56",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "63 Travis  Leblanc ( 7 Connor Hurley , 91 Ryan Arbing )",
+        "total": "1-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "13:24",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 6 Luke Crocker , 9 Ian McCarthy )",
+        "total": "2-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "8:48",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "9 Ian McCarthy ( 98 Issac Bridge )",
+        "total": "3-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "7:45",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 77 Ted Mackinnon , 6 Luke Crocker )",
+        "total": "4-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "15:21",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "11 Tyler \"Tuffy\" Allen ( 8 Bill Jobes , 3 Brett Gallant )",
+        "total": "4-1 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "14:25",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "16 Danny \"Biggie\" Small ( 63 Travis  Leblanc )",
+        "total": "5-1 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "13:31",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "6 Madden Miller ( 4 Aaron Dobson , 12 Matt Cove )",
+        "total": "5-2 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "12:06",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "9 Brad Linkletter ( 4 Aaron Dobson , 14 Brody Burke )",
+        "total": "5-3 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "5:42",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "63 Travis  Leblanc ( 9 Ian McCarthy , 16 Danny \"Biggie\" Small )",
+        "total": "6-3 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "2:26",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "11 Tyler \"Tuffy\" Allen ( 8 Bill Jobes )",
+        "total": "6-4 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "14:03",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "19 Thomas  Mccrossin ( 63 Travis  Leblanc , 98 Issac Bridge )",
+        "total": "7-4 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "13:20",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 77 Ted Mackinnon , 17 Chris Maltby )",
+        "total": "8-4 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "7:58",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "9 Ian McCarthy ( 98 Issac Bridge , 77 Ted Mackinnon )",
+        "total": "9-4 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "6:55",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "6 Madden Miller ( 10 Robert Malcolm , 12 Matt Cove )",
+        "total": "9-5 Maltby Sports"
+      },
       {
         "per_period": "2",
         "time": "9:12",
@@ -1957,6 +2365,128 @@
         }
       ]
     },
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "15:42",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "7 Charles Chandler 3rd ( 13 Chad Henshaw , 31 Chris Sproul )",
+        "total": "1-0 Colson Overhead Doors"
+      },
+      {
+        "per_period": "1",
+        "time": "7:14",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 38 Dave Atkinson )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "6:22",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 38 Dave Atkinson , 88 Corey Robichaud )",
+        "total": "1-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "3:14",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "88 Zack Gould ( 12 Tom Burge )",
+        "total": "2-2 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "17:36",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "13 Gordon  Mitchell",
+        "total": "2-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "16:53",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 55 Geoff  Ryan )",
+        "total": "2-4 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "12:41",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "38 Dave Atkinson ( 9 Julien Bourgeois )",
+        "total": "2-5 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "9:51",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "15 William  Hurley ( 13 Gordon  Mitchell , 9 Julien Bourgeois )",
+        "total": "2-6 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "6:50",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "90 Zack Fullerton ( 97 Meathead MacDonald , 66 Ralph Mattix )",
+        "total": "2-7 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "1:14",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "90 Zack Fullerton ( 7 Corey Helm , 38 Dave Atkinson )",
+        "total": "2-8 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "13:44",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "88 Zack Gould ( 19 Denis Hebert , 8 Chester Eatmon )",
+        "total": "3-8 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "12:53",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "21 Ryan Macpherson ( 7 Corey Helm , 97 Meathead MacDonald )",
+        "total": "3-9 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "11:48",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "21 Ryan Macpherson ( 97 Meathead MacDonald )",
+        "total": "3-10 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "5:11",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "55 Geoff  Ryan ( 38 Dave Atkinson )",
+        "total": "3-11 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "1:09",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "15 William  Hurley ( 7 Corey Helm , 97 Meathead MacDonald )",
+        "total": "3-12 G.R. Mitchell Welding"
+      }
+    ],
     "scoreboard": [
       [
         "REGULAR SEASON",
@@ -2214,7 +2744,63 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "17:04",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "17 Chris Maltby ( 16 Danny \"Biggie\" Small , 63 Travis  Leblanc )",
+        "total": "1-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "1:54",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "22 Gerald Boutiler ( 9 Nick Leopold )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "3:36",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 22 Gerald Boutiler )",
+        "total": "1-2 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "16:02",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "-20 Avery Harrison ( 74 Bill Davison )",
+        "total": "1-3 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "8:51",
+        "str_strength": "PP",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "2 Matt  Gallant ( 91 Ryan Arbing , 16 Danny \"Biggie\" Small )",
+        "total": "2-3 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "5:35",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 26 Mikhial Mansour , -20 Avery Harrison )",
+        "total": "2-4 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "2:53",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "6 Luke Crocker ( 16 Danny \"Biggie\" Small )",
+        "total": "3-4 J&K Electric"
+      },
       {
         "per_period": "1",
         "time": "10:43",
@@ -2567,7 +3153,103 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "17:36",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "38 Dave Atkinson ( 7 Corey Helm , 97 Meathead MacDonald )",
+        "total": "1-0 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "16:04",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "88 Corey Robichaud ( 90 Zack Fullerton , 21 Ryan Macpherson )",
+        "total": "2-0 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "12:41",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "13 Gordon  Mitchell ( 15 William  Hurley , 7 Corey Helm )",
+        "total": "3-0 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "11:16",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "94 Nick \"Pickle\" Dobson ( 61 Cody Sutton , 97 Meathead MacDonald )",
+        "total": "4-0 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "8:22",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "9 Brad Linkletter ( 3 Brett Gallant )",
+        "total": "4-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "5:00",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "- ( 11 Tyler \"Tuffy\" Allen )",
+        "total": "4-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "2:07",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "12 Matt Cove ( 11 Tyler \"Tuffy\" Allen , 6 Madden Miller )",
+        "total": "4-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "11:37",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 38 Dave Atkinson )",
+        "total": "5-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "1:19",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "55 Geoff  Ryan ( 13 Gordon  Mitchell , 9 Julien Bourgeois )",
+        "total": "6-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "12:40",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "66 Ralph Mattix ( 15 William  Hurley , 13 Gordon  Mitchell )",
+        "total": "7-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "4:45",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "38 Dave Atkinson ( 55 Geoff  Ryan , 97 Meathead MacDonald )",
+        "total": "8-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "0:31",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "21 Ryan Macpherson ( 9 Julien Bourgeois , 55 Geoff  Ryan )",
+        "total": "9-3 G.R. Mitchell Welding"
+      },
       {
         "per_period": "2",
         "time": "7:26",
@@ -2799,7 +3481,79 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "7:51",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "88 Zack Gould ( 23 Logan Gesner )",
+        "total": "1-0 Colson Overhead Doors"
+      },
+      {
+        "per_period": "1",
+        "time": "4:38",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "17 Jeremy Kinnear ( 4 Rubein Mackenzie , 18 Ryan Budd )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "5:32",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "9 Nick Leopold ( 27 Pat Morris , 4 Rubein Mackenzie )",
+        "total": "1-2 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "3:08",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone ( 27 Pat Morris , 87 Noah Perrin )",
+        "total": "1-3 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "10:51",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone ( 18 Ryan Budd )",
+        "total": "1-4 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "9:51",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "17 Jeremy Kinnear ( 18 Ryan Budd , 4 Rubein Mackenzie )",
+        "total": "1-5 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "8:49",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "- ( 88 Zack Gould , 19 Denis Hebert )",
+        "total": "2-5 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "6:58",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone ( 87 Noah Perrin , 22 Gerald Boutiler )",
+        "total": "2-6 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "3:22",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "88 Zack Gould ( 19 Denis Hebert )",
+        "total": "3-6 J&K Electric"
+      },
       {
         "per_period": "3",
         "time": "2:10",
@@ -3068,7 +3822,87 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "16:06",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "11 Tyler \"Tuffy\" Allen",
+        "total": "0-1 Ultramar"
+      },
+      {
+        "per_period": "1",
+        "time": "15:01",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "9 Brad Linkletter ( 11 Tyler \"Tuffy\" Allen )",
+        "total": "0-2 Ultramar"
+      },
+      {
+        "per_period": "1",
+        "time": "11:08",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "88 Zack Gould",
+        "total": "1-2 Ultramar"
+      },
+      {
+        "per_period": "1",
+        "time": "0:37",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "9 Brad Linkletter ( 12 Matt Cove , 2 Chris Dywer )",
+        "total": "1-3 Ultramar"
+      },
+      {
+        "per_period": "2",
+        "time": "14:59",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "14 Brody Burke ( 8 Bill Jobes , 5 Andy Bonnell )",
+        "total": "1-4 Ultramar"
+      },
+      {
+        "per_period": "2",
+        "time": "9:27",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "- ( 76 Rory Faulkner )",
+        "total": "2-4 Ultramar"
+      },
+      {
+        "per_period": "2",
+        "time": "8:25",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "8 Chester Eatmon ( 88 Zack Gould )",
+        "total": "3-4 Ultramar"
+      },
+      {
+        "per_period": "2",
+        "time": "5:32",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "19 Denis Hebert ( 44 Chris Baisley )",
+        "total": "4-4 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "3:59",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "5 Andy Bonnell ( 10 Robert Malcolm , 6 Madden Miller )",
+        "total": "4-5 Ultramar"
+      },
+      {
+        "per_period": "2",
+        "time": "3:19",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "88 Zack Gould",
+        "total": "5-5 Tie"
+      },
       {
         "per_period": "2",
         "time": "14:18",
@@ -3374,7 +4208,79 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "9:42",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "6 Luke Crocker ( 63 Travis  Leblanc , 9 Ian McCarthy )",
+        "total": "1-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "7:41",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "2 Matt  Gallant ( 16 Danny \"Biggie\" Small )",
+        "total": "2-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "4:46",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "7 Corey Helm ( 13 Gordon  Mitchell , 66 Ralph Mattix )",
+        "total": "2-1 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "0:01",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "13 Gordon  Mitchell ( 7 Corey Helm , 66 Ralph Mattix )",
+        "total": "2-2 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "14:05",
+        "str_strength": "SH",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "7 Corey Helm",
+        "total": "2-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "12:38",
+        "str_strength": "PP",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson ( 98 Issac Bridge , 7 Connor Hurley )",
+        "total": "3-3 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "16:31",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "16 Danny \"Biggie\" Small ( 2 Matt  Gallant , 91 Ryan Arbing )",
+        "total": "4-3 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "15:15",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "19 Thomas  Mccrossin ( 91 Ryan Arbing )",
+        "total": "5-3 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "14:35",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "55 Geoff  Ryan ( 9 Julien Bourgeois , 90 Zack Fullerton )",
+        "total": "5-4 Maltby Sports"
+      },
       {
         "per_period": "1",
         "time": "3:18",
@@ -3636,7 +4542,63 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "17:36",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "87 Noah Perrin ( 4 Rubein Mackenzie , 22 Gerald Boutiler )",
+        "total": "1-0 J&K Electric"
+      },
+      {
+        "per_period": "1",
+        "time": "8:57",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "9 Brad Linkletter ( 11 Tyler \"Tuffy\" Allen , 3 Brett Gallant )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "1:20",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "17 Jeremy Kinnear ( 87 Noah Perrin , 28 Brendan Stone )",
+        "total": "2-1 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "17:09",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie",
+        "total": "3-1 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "13:15",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "19 Jaxon Reynolds ( 36 Ryan Martin , 4 Rubein Mackenzie )",
+        "total": "4-1 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "12:00",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "11 Tyler \"Tuffy\" Allen ( 5 Andy Bonnell , 8 Bill Jobes )",
+        "total": "4-2 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "1:10",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "11 Tyler \"Tuffy\" Allen ( 5 Andy Bonnell , 12 Matt Cove )",
+        "total": "4-3 J&K Electric"
+      },
       {
         "per_period": "2",
         "time": "6:18",
@@ -3867,7 +4829,95 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "12:22",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone ( 9 Nick Leopold )",
+        "total": "0-1 J&K Electric"
+      },
+      {
+        "per_period": "1",
+        "time": "6:59",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone ( 17 Jeremy Kinnear , 74 Bill Davison )",
+        "total": "0-2 J&K Electric"
+      },
+      {
+        "per_period": "1",
+        "time": "1:45",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone ( 17 Jeremy Kinnear , 22 Gerald Boutiler )",
+        "total": "0-3 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "17:33",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "- ( -20 Avery Harrison )",
+        "total": "0-4 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "10:29",
+        "str_strength": "SH",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "88 Zack Gould ( 23 Logan Gesner )",
+        "total": "1-4 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "9:47",
+        "str_strength": "PP",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "9 Nick Leopold ( 17 Jeremy Kinnear )",
+        "total": "1-5 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "0:21",
+        "str_strength": "PP",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "12 Tom Burge ( 31 Chris Sproul , 23 Logan Gesner )",
+        "total": "2-5 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "13:03",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "88 Zack Gould ( 23 Logan Gesner )",
+        "total": "3-5 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "10:20",
+        "str_strength": "PP",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "19 Denis Hebert ( 23 Logan Gesner , 88 Zack Gould )",
+        "total": "4-5 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "9:25",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone ( 17 Jeremy Kinnear , -20 Avery Harrison )",
+        "total": "4-6 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "0:55",
+        "str_strength": "EN",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "17 Jeremy Kinnear ( 9 Nick Leopold , 22 Gerald Boutiler )",
+        "total": "4-7 J&K Electric"
+      },
       {
         "per_period": "2",
         "time": "16:11",
@@ -4145,7 +5195,71 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "14:48",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "12 Matt Cove ( 6 Madden Miller , 22 Tim Burke )",
+        "total": "1-0 Ultramar"
+      },
+      {
+        "per_period": "1",
+        "time": "10:27",
+        "str_strength": "PP",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "7 Charles Chandler 3rd ( 19 Denis Hebert )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "9:12",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "3 Brett Gallant ( 10 Robert Malcolm , 4 Aaron Dobson )",
+        "total": "2-1 Ultramar"
+      },
+      {
+        "per_period": "1",
+        "time": "5:03",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "-20 Marshall Terrio ( 76 Rory Faulkner , 19 Denis Hebert )",
+        "total": "2-2 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "10:34",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "19 Denis Hebert ( 23 Logan Gesner , 76 Rory Faulkner )",
+        "total": "2-3 Colson Overhead Doors"
+      },
+      {
+        "per_period": "2",
+        "time": "0:38",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "22 Tim Burke ( 68 Mark Bennett , 8 Bill Jobes )",
+        "total": "3-3 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "17:54",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "18 Dan Davis ( 19 Denis Hebert , 23 Logan Gesner )",
+        "total": "3-4 Colson Overhead Doors"
+      },
+      {
+        "per_period": "3",
+        "time": "12:50",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "22 Tim Burke ( 12 Matt Cove , 4 Aaron Dobson )",
+        "total": "4-4 Tie"
+      },
       {
         "per_period": "1",
         "time": "12:10",
@@ -4448,7 +5562,55 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "13:46",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "9 Ian McCarthy ( 18 Trevor Johnson , 19 Thomas  Mccrossin )",
+        "total": "1-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "8:41",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "17 Jeremy Kinnear ( 28 Brendan Stone , 74 Bill Davison )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "8:42",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "77 Ted Mackinnon ( 2 Matt  Gallant , 17 Chris Maltby )",
+        "total": "2-1 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "3:31",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "77 Ted Mackinnon ( 19 Thomas  Mccrossin , 91 Ryan Arbing )",
+        "total": "3-1 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "0:32",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "87 Noah Perrin ( 9 Nick Leopold , 28 Brendan Stone )",
+        "total": "3-2 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "2:51",
+        "str_strength": "SH",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 19 Thomas  Mccrossin )",
+        "total": "4-2 Maltby Sports"
+      },
       {
         "per_period": "1",
         "time": "4:48",
@@ -4720,7 +5882,79 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "17:52",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "38 Dave Atkinson ( 9 Julien Bourgeois )",
+        "total": "0-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "15:52",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "21 Ryan Macpherson ( 90 Zack Fullerton , 13 Gordon  Mitchell )",
+        "total": "0-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "4:59",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "76 Rory Faulkner ( 44 Chris Baisley , 31 Chris Sproul )",
+        "total": "1-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "0:41",
+        "str_strength": "PS",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "88 Zack Gould",
+        "total": "2-2 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "0:10",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "90 Zack Fullerton ( 55 Geoff  Ryan )",
+        "total": "2-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "10:23",
+        "str_strength": "SH",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "76 Rory Faulkner",
+        "total": "3-3 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "3:13",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "90 Zack Fullerton ( 66 Ralph Mattix , 13 Gordon  Mitchell )",
+        "total": "3-4 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "0:34",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "90 Zack Fullerton ( 13 Gordon  Mitchell , 21 Ryan Macpherson )",
+        "total": "3-5 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "1:54",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "55 Geoff  Ryan ( 15 William  Hurley )",
+        "total": "3-6 G.R. Mitchell Welding"
+      },
       {
         "per_period": "1",
         "time": "13:11",
@@ -5053,7 +6287,71 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "17:00",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "63 Travis  Leblanc ( 98 Issac Bridge , 19 Thomas  Mccrossin )",
+        "total": "1-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "7:14",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 77 Ted Mackinnon , 17 Chris Maltby )",
+        "total": "2-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "5:59",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone ( 36 Ryan Martin )",
+        "total": "2-1 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "4:38",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "17 Jeremy Kinnear ( 28 Brendan Stone , 22 Gerald Boutiler )",
+        "total": "2-2 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "3:26",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 19 Thomas  Mccrossin , 7 Connor Hurley )",
+        "total": "3-2 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "16:11",
+        "str_strength": "PP",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "-20 Avery Harrison ( 9 Nick Leopold , 4 Rubein Mackenzie )",
+        "total": "3-3 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "4:03",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "2 Matt Morris ( 22 Gerald Boutiler , 30 Scott Drake )",
+        "total": "3-4 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "0:05",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "16 Danny \"Biggie\" Small ( 18 Trevor Johnson )",
+        "total": "4-4 Tie"
+      },
       {
         "per_period": "1",
         "time": "0:34",
@@ -5311,7 +6609,39 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "7:28",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 38 Dave Atkinson )",
+        "total": "1-0 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "4:02",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "4 Aaron Dobson ( 5 Andy Bonnell , 9 Brad Linkletter )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "2:38",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "8 Bill Jobes ( 12 Matt Cove , 6 Madden Miller )",
+        "total": "1-2 Ultramar"
+      },
+      {
+        "per_period": "1",
+        "time": "0:13",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "88 Corey Robichaud ( 97 Meathead MacDonald , 7 Corey Helm )",
+        "total": "2-2 Tie"
+      },
       {
         "per_period": "2",
         "time": "14:06",
@@ -5598,7 +6928,47 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "13:36",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "76 Rory Faulkner",
+        "total": "1-0 Colson Overhead Doors"
+      },
+      {
+        "per_period": "2",
+        "time": "16:19",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "88 Zack Gould ( 76 Rory Faulkner , 23 Logan Gesner )",
+        "total": "2-0 Colson Overhead Doors"
+      },
+      {
+        "per_period": "2",
+        "time": "4:19",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "31 Chris Sproul ( 8 Chester Eatmon , 23 Logan Gesner )",
+        "total": "3-0 Colson Overhead Doors"
+      },
+      {
+        "per_period": "3",
+        "time": "16:02",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "9 Brad Linkletter ( 4 Aaron Dobson )",
+        "total": "3-1 Colson Overhead Doors"
+      },
+      {
+        "per_period": "3",
+        "time": "15:14",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "22 Tim Burke ( 9 Brad Linkletter , 12 Matt Cove )",
+        "total": "3-2 Colson Overhead Doors"
+      },
       {
         "per_period": "3",
         "time": "2:54",
@@ -5888,7 +7258,87 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "2",
+        "time": "9:45",
+        "str_strength": "SH",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 66 Ralph Mattix )",
+        "total": "1-0 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "7:45",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "- ( 9 Julien Bourgeois , 90 Zack Fullerton )",
+        "total": "2-0 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "1:45",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "6 Madden Miller ( 5 Andy Bonnell , 8 Bill Jobes )",
+        "total": "2-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "1:10",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "21 Ryan Macpherson ( 97 Meathead MacDonald )",
+        "total": "3-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "13:32",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "66 Ralph Mattix ( 9 Julien Bourgeois , 38 Dave Atkinson )",
+        "total": "4-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "11:59",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 61 Cody Sutton )",
+        "total": "5-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "9:32",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "21 Ryan Macpherson",
+        "total": "6-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "6:39",
+        "str_strength": "PP",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "94 Nick \"Pickle\" Dobson ( 97 Meathead MacDonald , 61 Cody Sutton )",
+        "total": "7-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "5:39",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "94 Nick \"Pickle\" Dobson ( 97 Meathead MacDonald , 61 Cody Sutton )",
+        "total": "8-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "0:56",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 90 Zack Fullerton , 61 Cody Sutton )",
+        "total": "9-1 G.R. Mitchell Welding"
+      },
       {
         "per_period": "2",
         "time": "11:18",
@@ -6150,6 +7600,120 @@
         }
       ]
     },
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "12:52",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "19 Denis Hebert ( 23 Logan Gesner )",
+        "total": "1-0 Colson Overhead Doors"
+      },
+      {
+        "per_period": "1",
+        "time": "9:09",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "74 Bill Davison ( 28 Brendan Stone )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "7:09",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "27 Pat Morris ( 9 Nick Leopold , -20 Avery Harrison )",
+        "total": "1-2 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "14:14",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "27 Pat Morris ( 4 Rubein Mackenzie )",
+        "total": "1-3 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "8:01",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "88 Zack Gould ( 19 Denis Hebert )",
+        "total": "2-3 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "7:09",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "9 Nick Leopold ( 4 Rubein Mackenzie , 27 Pat Morris )",
+        "total": "2-4 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "2:12",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "76 Rory Faulkner ( 19 Denis Hebert )",
+        "total": "3-4 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "16:27",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "76 Rory Faulkner ( 23 Logan Gesner , 88 Zack Gould )",
+        "total": "4-4 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "15:50",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "- ( 4 Rubein Mackenzie , 22 Gerald Boutiler )",
+        "total": "4-5 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "12:44",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "19 Denis Hebert ( 23 Logan Gesner , 76 Rory Faulkner )",
+        "total": "5-5 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "10:16",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "27 Pat Morris ( 4 Rubein Mackenzie , 9 Nick Leopold )",
+        "total": "5-6 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "6:40",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone ( 9 Nick Leopold , -20 Avery Harrison )",
+        "total": "5-7 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "5:01",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "- ( 76 Rory Faulkner , 8 Chester Eatmon )",
+        "total": "6-7 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "0:14",
+        "str_strength": "EN",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "-20 Avery Harrison ( 9 Nick Leopold , 28 Brendan Stone )",
+        "total": "6-8 J&K Electric"
+      }
+    ],
     "scoreboard": [
       [
         "REGULAR SEASON",
@@ -6295,7 +7859,31 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "11:29",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "17 Jeremy Kinnear ( 28 Brendan Stone , 22 Gerald Boutiler )",
+        "total": "0-1 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "15:10",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "27 Pat Morris ( 28 Brendan Stone , 17 Jeremy Kinnear )",
+        "total": "0-2 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "4:51",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "87 Noah Perrin ( 28 Brendan Stone , 22 Gerald Boutiler )",
+        "total": "0-3 J&K Electric"
+      },
       {
         "per_period": "2",
         "time": "6:39",
@@ -6647,7 +8235,119 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "14:33",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "11 Tyler \"Tuffy\" Allen ( 8 Bill Jobes )",
+        "total": "0-1 Ultramar"
+      },
+      {
+        "per_period": "1",
+        "time": "8:51",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 13 Gordon  Mitchell , 61 Cody Sutton )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "7:06",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "6 Madden Miller ( 8 Bill Jobes , 11 Tyler \"Tuffy\" Allen )",
+        "total": "1-2 Ultramar"
+      },
+      {
+        "per_period": "1",
+        "time": "5:36",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "21 Ryan Macpherson ( 90 Zack Fullerton )",
+        "total": "2-2 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "4:37",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "12 Matt Cove ( 9 Brad Linkletter , 10 Robert Malcolm )",
+        "total": "2-3 Ultramar"
+      },
+      {
+        "per_period": "1",
+        "time": "3:40",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "94 Nick \"Pickle\" Dobson ( 97 Meathead MacDonald , 7 Corey Helm )",
+        "total": "3-3 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "0:17",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 61 Cody Sutton )",
+        "total": "4-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "13:16",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "9 Julien Bourgeois ( 97 Meathead MacDonald , 15 William  Hurley )",
+        "total": "5-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "8:06",
+        "str_strength": "PP",
+        "team": "Ultramar",
+        "scorer_assisted_by": "5 Andy Bonnell ( 9 Brad Linkletter , 4 Aaron Dobson )",
+        "total": "5-4 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "4:03",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "- ( 4 Aaron Dobson , 10 Robert Malcolm )",
+        "total": "5-5 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "2:41",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 38 Dave Atkinson , 61 Cody Sutton )",
+        "total": "6-5 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "1:38",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 38 Dave Atkinson , 61 Cody Sutton )",
+        "total": "7-5 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "3:32",
+        "str_strength": "SH",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "94 Nick \"Pickle\" Dobson",
+        "total": "8-5 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "2:48",
+        "str_strength": "PP",
+        "team": "Ultramar",
+        "scorer_assisted_by": "3 Brett Gallant",
+        "total": "8-6 G.R. Mitchell Welding"
+      },
       {
         "per_period": "2",
         "time": "16:50",
@@ -6942,7 +8642,119 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "17:39",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "19 Thomas  Mccrossin ( 9 Ian McCarthy , 6 Luke Crocker )",
+        "total": "1-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "8:44",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "9 Ian McCarthy ( 18 Trevor Johnson )",
+        "total": "2-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "4:29",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 9 Ian McCarthy , 18 Trevor Johnson )",
+        "total": "3-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "1:35",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "17 Chris Maltby ( 9 Ian McCarthy )",
+        "total": "4-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "16:22",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "77 Ted Mackinnon ( 16 Danny \"Biggie\" Small , 17 Chris Maltby )",
+        "total": "5-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "13:56",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 9 Ian McCarthy , 17 Chris Maltby )",
+        "total": "6-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "10:22",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "63 Travis  Leblanc ( 16 Danny \"Biggie\" Small )",
+        "total": "7-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "9:35",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "9 Ian McCarthy ( 17 Chris Maltby )",
+        "total": "8-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "5:14",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "17 Chris Maltby",
+        "total": "9-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "3:45",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 9 Ian McCarthy , 17 Chris Maltby )",
+        "total": "10-0 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "15:54",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "23 Logan Gesner ( 88 Zack Gould , 12 Tom Burge )",
+        "total": "10-1 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "9:24",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 6 Luke Crocker , 63 Travis  Leblanc )",
+        "total": "11-1 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "7:40",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "8 Chester Eatmon ( 31 Chris Sproul , 88 Zack Gould )",
+        "total": "11-2 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "1:14",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "19 Thomas  Mccrossin ( 9 Ian McCarthy , 6 Luke Crocker )",
+        "total": "12-2 Maltby Sports"
+      },
       {
         "per_period": "3",
         "time": "18:00",
@@ -7217,7 +9029,71 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "8:40",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "16 Danny \"Biggie\" Small ( 9 Ian McCarthy , 19 Thomas  Mccrossin )",
+        "total": "1-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "9:24",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "90 Zack Fullerton ( 38 Dave Atkinson , 9 Julien Bourgeois )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "8:48",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "38 Dave Atkinson ( 94 Nick \"Pickle\" Dobson , 66 Ralph Mattix )",
+        "total": "1-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "0:21",
+        "str_strength": "SH",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 6 Luke Crocker )",
+        "total": "2-2 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "13:03",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "21 Ryan Macpherson ( 7 Corey Helm , 90 Zack Fullerton )",
+        "total": "2-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "9:56",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "94 Nick \"Pickle\" Dobson ( 38 Dave Atkinson )",
+        "total": "2-4 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "8:44",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "63 Travis  Leblanc ( 16 Danny \"Biggie\" Small , 7 Connor Hurley )",
+        "total": "3-4 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "2:10",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "55 Geoff  Ryan ( 21 Ryan Macpherson , 9 Julien Bourgeois )",
+        "total": "3-5 G.R. Mitchell Welding"
+      },
       {
         "per_period": "2",
         "time": "13:22",
@@ -7569,7 +9445,79 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "4:18",
+        "str_strength": "PP",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 7 Corey Helm , 13 Gordon  Mitchell )",
+        "total": "1-0 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "3:01",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 38 Dave Atkinson , 88 Corey Robichaud )",
+        "total": "2-0 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "17:24",
+        "str_strength": "PP",
+        "team": "Ultramar",
+        "scorer_assisted_by": "6 Madden Miller ( 22 Tim Burke , 8 Bill Jobes )",
+        "total": "2-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "10:54",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "15 William  Hurley ( 97 Meathead MacDonald , 61 Cody Sutton )",
+        "total": "3-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "9:33",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "6 Madden Miller ( 2 Chris Dywer , 11 Tyler \"Tuffy\" Allen )",
+        "total": "3-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "6:04",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 21 Ryan Macpherson , 94 Nick \"Pickle\" Dobson )",
+        "total": "4-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "15:46",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald",
+        "total": "5-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "10:31",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "90 Zack Fullerton ( 13 Gordon  Mitchell , 21 Ryan Macpherson )",
+        "total": "6-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "0:04",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "5 Andy Bonnell ( 9 Brad Linkletter , 10 Robert Malcolm )",
+        "total": "6-3 G.R. Mitchell Welding"
+      },
       {
         "per_period": "1",
         "time": "15:50",
@@ -7757,7 +9705,47 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "5:07",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "27 Pat Morris ( 4 Rubein Mackenzie , 22 Gerald Boutiler )",
+        "total": "0-1 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "8:54",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 22 Gerald Boutiler )",
+        "total": "0-2 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "5:03",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "17 Jeremy Kinnear ( 27 Pat Morris )",
+        "total": "0-3 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "3:01",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "17 Jeremy Kinnear ( 74 Bill Davison , 28 Brendan Stone )",
+        "total": "0-4 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "3:44",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone",
+        "total": "0-5 J&K Electric"
+      },
       {
         "per_period": "1",
         "time": "11:18",
@@ -8016,7 +10004,95 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "16:08",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "21 Ryan Macpherson ( 90 Zack Fullerton , 38 Dave Atkinson )",
+        "total": "0-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "13:36",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "76 Rory Faulkner ( 8 Chester Eatmon , 12 Tom Burge )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "6:42",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "-",
+        "total": "2-1 Colson Overhead Doors"
+      },
+      {
+        "per_period": "1",
+        "time": "1:28",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "15 William  Hurley ( 9 Julien Bourgeois , 66 Ralph Mattix )",
+        "total": "2-2 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "4:12",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "90 Zack Fullerton ( 13 Gordon  Mitchell , 21 Ryan Macpherson )",
+        "total": "2-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "2:10",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "-",
+        "total": "3-3 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "16:27",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "76 Rory Faulkner",
+        "total": "4-3 Colson Overhead Doors"
+      },
+      {
+        "per_period": "3",
+        "time": "13:35",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "61 Cody Sutton ( 38 Dave Atkinson )",
+        "total": "4-4 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "10:08",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "38 Dave Atkinson ( 15 William  Hurley )",
+        "total": "4-5 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "9:10",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "13 Chad Henshaw",
+        "total": "5-5 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "2:44",
+        "str_strength": "PP",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "- ( 13 Chad Henshaw , 76 Rory Faulkner )",
+        "total": "6-5 Colson Overhead Doors"
+      },
       {
         "per_period": "3",
         "time": "4:29",
@@ -8239,7 +10315,71 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "17:10",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 19 Thomas  Mccrossin )",
+        "total": "1-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "15:15",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 91 Ryan Arbing )",
+        "total": "2-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "10:47",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "76 Rory Faulkner ( 31 Chris Sproul , 8 Chester Eatmon )",
+        "total": "2-1 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "9:22",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "- ( 19 Denis Hebert , 18 Dan Davis )",
+        "total": "2-2 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "1:25",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 91 Ryan Arbing , 18 Trevor Johnson )",
+        "total": "3-2 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "13:50",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson",
+        "total": "4-2 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "6:24",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 18 Trevor Johnson )",
+        "total": "5-2 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "3:25",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "19 Denis Hebert",
+        "total": "5-3 Maltby Sports"
+      },
       {
         "per_period": "1",
         "time": "2:26",
@@ -8561,7 +10701,127 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "13:40",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "-",
+        "total": "0-1 Ultramar"
+      },
+      {
+        "per_period": "1",
+        "time": "12:55",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "17 Jeremy Kinnear ( 22 Gerald Boutiler , 28 Brendan Stone )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "3:55",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "19 Jaxon Reynolds ( 4 Rubein Mackenzie , 9 Nick Leopold )",
+        "total": "2-1 J&K Electric"
+      },
+      {
+        "per_period": "1",
+        "time": "0:03",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "22 Gerald Boutiler ( 4 Rubein Mackenzie )",
+        "total": "3-1 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "16:21",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "19 Jaxon Reynolds ( 4 Rubein Mackenzie , -20 Avery Harrison )",
+        "total": "4-1 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "13:23",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "9 Nick Leopold ( 2 Matt Morris )",
+        "total": "5-1 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "7:44",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "12 Matt Cove ( 22 Tim Burke , 4 Aaron Dobson )",
+        "total": "5-2 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "2:58",
+        "str_strength": "PP",
+        "team": "Ultramar",
+        "scorer_assisted_by": "4 Aaron Dobson ( 9 Brad Linkletter )",
+        "total": "5-3 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "10:40",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "19 Jaxon Reynolds",
+        "total": "6-3 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "9:13",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "19 Jaxon Reynolds ( 22 Gerald Boutiler , 2 Matt Morris )",
+        "total": "7-3 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "7:46",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "- ( 10 Robert Malcolm , 14 Brody Burke )",
+        "total": "7-4 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "6:55",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "9 Brad Linkletter ( 4 Aaron Dobson )",
+        "total": "7-5 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "5:29",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "12 Matt Cove ( 5 Andy Bonnell )",
+        "total": "7-6 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "4:38",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "- ( 4 Aaron Dobson )",
+        "total": "7-7 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "0:06",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone ( 22 Gerald Boutiler , 19 Jaxon Reynolds )",
+        "total": "8-7 J&K Electric"
+      },
       {
         "per_period": "2",
         "time": "3:21",
@@ -8827,7 +11087,63 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "3:21",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "19 Jaxon Reynolds",
+        "total": "1-0 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "14:56",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "-20 Avery Harrison ( 19 Jaxon Reynolds , 2 Matt Morris )",
+        "total": "2-0 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "12:08",
+        "str_strength": "PP",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone ( 22 Gerald Boutiler , 19 Jaxon Reynolds )",
+        "total": "3-0 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "9:58",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 38 Dave Atkinson , 1 Scott Clark )",
+        "total": "3-1 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "6:18",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "-20 Avery Harrison ( 19 Jaxon Reynolds )",
+        "total": "4-1 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "2:28",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "38 Dave Atkinson ( 61 Cody Sutton , 88 Corey Robichaud )",
+        "total": "4-2 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "16:30",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "9 Nick Leopold ( 18 Ryan Budd , 28 Brendan Stone )",
+        "total": "5-2 J&K Electric"
+      },
       {
         "per_period": "1",
         "time": "0:52",
@@ -9222,7 +11538,95 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "16:00",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "-20 Marshall Terrio",
+        "total": "1-0 Colson Overhead Doors"
+      },
+      {
+        "per_period": "1",
+        "time": "13:46",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "9 Brad Linkletter ( 4 Aaron Dobson , 1 Remi Thomas )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "6:40",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "9 Brad Linkletter ( 3 Brett Gallant , 8 Bill Jobes )",
+        "total": "1-2 Ultramar"
+      },
+      {
+        "per_period": "1",
+        "time": "3:48",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "22 Tim Burke ( 4 Aaron Dobson )",
+        "total": "1-3 Ultramar"
+      },
+      {
+        "per_period": "2",
+        "time": "16:45",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "6 Madden Miller ( 14 Brody Burke , 12 Matt Cove )",
+        "total": "1-4 Ultramar"
+      },
+      {
+        "per_period": "2",
+        "time": "10:10",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "7 Charles Chandler 3rd ( 44 Chris Baisley , -20 Marshall Terrio )",
+        "total": "2-4 Ultramar"
+      },
+      {
+        "per_period": "2",
+        "time": "5:41",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "6 Madden Miller ( 2 Chris Dywer , 14 Brody Burke )",
+        "total": "2-5 Ultramar"
+      },
+      {
+        "per_period": "2",
+        "time": "4:51",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "7 Charles Chandler 3rd ( 18 Dan Davis , 76 Rory Faulkner )",
+        "total": "3-5 Ultramar"
+      },
+      {
+        "per_period": "3",
+        "time": "10:07",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "76 Rory Faulkner ( 31 Chris Sproul )",
+        "total": "4-5 Ultramar"
+      },
+      {
+        "per_period": "3",
+        "time": "1:59",
+        "str_strength": "EN",
+        "team": "Ultramar",
+        "scorer_assisted_by": "22 Tim Burke ( 5 Andy Bonnell , 9 Brad Linkletter )",
+        "total": "4-6 Ultramar"
+      },
+      {
+        "per_period": "3",
+        "time": "0:17",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "3 Brett Gallant",
+        "total": "4-7 Ultramar"
+      },
       {
         "per_period": "1",
         "time": "10:07",
@@ -9496,7 +11900,71 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "11:07",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "16 Danny \"Biggie\" Small ( 18 Trevor Johnson )",
+        "total": "1-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "17:42",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 63 Travis  Leblanc , 2 Matt  Gallant )",
+        "total": "2-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "14:43",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "16 Danny \"Biggie\" Small ( 9 Ian McCarthy , 19 Thomas  Mccrossin )",
+        "total": "3-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "14:08",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "6 Madden Miller ( 11 Tyler \"Tuffy\" Allen )",
+        "total": "3-1 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "7:14",
+        "str_strength": "PP",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 18 Trevor Johnson )",
+        "total": "4-1 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "1:53",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "16 Danny \"Biggie\" Small",
+        "total": "5-1 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "16:04",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 19 Thomas  Mccrossin , 6 Luke Crocker )",
+        "total": "6-1 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "5:48",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 63 Travis  Leblanc )",
+        "total": "7-1 Maltby Sports"
+      },
       {
         "per_period": "2",
         "time": "12:28",
@@ -9757,6 +12225,80 @@
         }
       ]
     },
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "14:57",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson ( 77 Ted Mackinnon , 2 Matt  Gallant )",
+        "total": "1-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "12:58",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 9 Ian McCarthy )",
+        "total": "2-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "15:03",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "91 Ryan Arbing",
+        "total": "3-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "14:10",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson ( 9 Ian McCarthy , 91 Ryan Arbing )",
+        "total": "4-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "12:09",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "18 Dan Davis ( 7 Charles Chandler 3rd )",
+        "total": "4-1 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "8:10",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "19 Thomas  Mccrossin",
+        "total": "5-1 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "6:48",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "9 Ian McCarthy ( 19 Thomas  Mccrossin , 18 Trevor Johnson )",
+        "total": "6-1 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "6:24",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "19 Thomas  Mccrossin ( 9 Ian McCarthy )",
+        "total": "7-1 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "1:38",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "7 Charles Chandler 3rd ( 19 Denis Hebert , 88 Zack Gould )",
+        "total": "7-2 Maltby Sports"
+      }
+    ],
     "scoreboard": [
       [
         "REGULAR SEASON",
@@ -10021,7 +12563,111 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "16:15",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "21 Ryan Macpherson",
+        "total": "0-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "15:09",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "-20 Avery Harrison ( 28 Brendan Stone , 9 Nick Leopold )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "12:43",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "19 Jaxon Reynolds ( 22 Gerald Boutiler , 4 Rubein Mackenzie )",
+        "total": "2-1 J&K Electric"
+      },
+      {
+        "per_period": "1",
+        "time": "11:28",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "38 Dave Atkinson ( 61 Cody Sutton , 7 Corey Helm )",
+        "total": "2-2 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "12:03",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone ( 17 Jeremy Kinnear , 9 Nick Leopold )",
+        "total": "3-2 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "11:06",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 19 Jaxon Reynolds , 87 Noah Perrin )",
+        "total": "4-2 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "7:32",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "9 Nick Leopold ( 28 Brendan Stone , 17 Jeremy Kinnear )",
+        "total": "5-2 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "5:50",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 19 Jaxon Reynolds , 9 Nick Leopold )",
+        "total": "6-2 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "0:11",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "9 Julien Bourgeois ( 38 Dave Atkinson , 61 Cody Sutton )",
+        "total": "6-3 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "17:50",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "90 Zack Fullerton ( 38 Dave Atkinson )",
+        "total": "6-4 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "10:34",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "19 Jaxon Reynolds ( 22 Gerald Boutiler , 36 Ryan Martin )",
+        "total": "7-4 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "7:01",
+        "str_strength": "SH",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone ( 17 Jeremy Kinnear , 9 Nick Leopold )",
+        "total": "8-4 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "6:21",
+        "str_strength": "PP",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "61 Cody Sutton ( 38 Dave Atkinson , 9 Julien Bourgeois )",
+        "total": "8-5 J&K Electric"
+      },
       {
         "per_period": "1",
         "time": "0:54",
@@ -10279,7 +12925,55 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "11:59",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "38 Dave Atkinson ( 90 Zack Fullerton , 94 Nick \"Pickle\" Dobson )",
+        "total": "0-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "1:22",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 9 Ian McCarthy , 91 Ryan Arbing )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "10:06",
+        "str_strength": "SH",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson",
+        "total": "2-1 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "8:49",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "21 Ryan Macpherson ( 7 Corey Helm , 90 Zack Fullerton )",
+        "total": "2-2 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "1:29",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson ( 2 Matt  Gallant , 98 Issac Bridge )",
+        "total": "3-2 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "0:34",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "9 Julien Bourgeois ( 94 Nick \"Pickle\" Dobson , 38 Dave Atkinson )",
+        "total": "3-3 Tie"
+      },
       {
         "per_period": "1",
         "time": "16:03",
@@ -10484,7 +13178,23 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "4:01",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "10 Robert Malcolm ( 9 Brad Linkletter , 11 Tyler \"Tuffy\" Allen )",
+        "total": "0-1 Ultramar"
+      },
+      {
+        "per_period": "3",
+        "time": "0:23",
+        "str_strength": "EN",
+        "team": "Ultramar",
+        "scorer_assisted_by": "9 Brad Linkletter ( 3 Brett Gallant )",
+        "total": "0-2 Ultramar"
+      },
       {
         "per_period": "1",
         "time": "8:43",
@@ -10743,7 +13453,55 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "4:54",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "-20 Marshall Terrio ( 88 Zack Gould , 19 Denis Hebert )",
+        "total": "1-0 Colson Overhead Doors"
+      },
+      {
+        "per_period": "1",
+        "time": "2:21",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "-20 Marshall Terrio ( 19 Denis Hebert )",
+        "total": "2-0 Colson Overhead Doors"
+      },
+      {
+        "per_period": "2",
+        "time": "15:01",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "88 Zack Gould ( 8 Chester Eatmon )",
+        "total": "3-0 Colson Overhead Doors"
+      },
+      {
+        "per_period": "2",
+        "time": "11:10",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "38 Dave Atkinson ( 90 Zack Fullerton )",
+        "total": "3-1 Colson Overhead Doors"
+      },
+      {
+        "per_period": "3",
+        "time": "14:52",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "38 Dave Atkinson ( 7 Corey Helm )",
+        "total": "3-2 Colson Overhead Doors"
+      },
+      {
+        "per_period": "3",
+        "time": "2:33",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "55 Geoff  Ryan ( 94 Nick \"Pickle\" Dobson )",
+        "total": "3-3 Tie"
+      },
       {
         "per_period": "2",
         "time": "14:16",
@@ -11087,7 +13845,79 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "14:33",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "8 Bill Jobes ( 3 Brett Gallant )",
+        "total": "0-1 Ultramar"
+      },
+      {
+        "per_period": "1",
+        "time": "2:03",
+        "str_strength": "SH",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 6 Luke Crocker , 30 Marc Belliveau )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "17:30",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "19 Thomas  Mccrossin ( 18 Trevor Johnson , 17 Chris Maltby )",
+        "total": "2-1 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "14:45",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 77 Ted Mackinnon , 9 Ian McCarthy )",
+        "total": "3-1 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "0:35",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "9 Brad Linkletter ( 14 Brody Burke )",
+        "total": "3-2 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "16:57",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "4 Aaron Dobson ( 68 Mark Bennett , 8 Bill Jobes )",
+        "total": "3-3 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "13:34",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "3 Brett Gallant ( 4 Aaron Dobson , 8 Bill Jobes )",
+        "total": "3-4 Ultramar"
+      },
+      {
+        "per_period": "3",
+        "time": "8:32",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "16 Danny \"Biggie\" Small ( 17 Chris Maltby )",
+        "total": "4-4 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "0:01",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "16 Danny \"Biggie\" Small ( 98 Issac Bridge )",
+        "total": "5-4 Maltby Sports"
+      },
       {
         "per_period": "1",
         "time": "3:28",
@@ -11387,7 +14217,71 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "9:33",
+        "str_strength": "PP",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "55 Geoff  Ryan ( 9 Julien Bourgeois )",
+        "total": "0-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "14:19",
+        "str_strength": "PP",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "15 William  Hurley",
+        "total": "0-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "8:02",
+        "str_strength": "PP",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 87 Noah Perrin , 22 Gerald Boutiler )",
+        "total": "1-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "13:08",
+        "str_strength": "PP",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "74 Bill Davison ( 9 Nick Leopold , 28 Brendan Stone )",
+        "total": "2-2 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "9:03",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "21 Ryan Macpherson ( 9 Julien Bourgeois , 13 Gordon  Mitchell )",
+        "total": "2-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "7:06",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "22 Gerald Boutiler ( 28 Brendan Stone , 74 Bill Davison )",
+        "total": "3-3 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "6:05",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 87 Noah Perrin , 19 Jaxon Reynolds )",
+        "total": "4-3 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "4:01",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "38 Dave Atkinson ( 94 Nick \"Pickle\" Dobson , 13 Gordon  Mitchell )",
+        "total": "4-4 Tie"
+      },
       {
         "per_period": "1",
         "time": "12:31",
@@ -11734,7 +14628,127 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "16:51",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 9 Ian McCarthy , 63 Travis  Leblanc )",
+        "total": "1-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "10:53",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "38 Dave Atkinson ( 55 Geoff  Ryan )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "10:51",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 38 Dave Atkinson , 21 Ryan Macpherson )",
+        "total": "1-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "1:40",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "9 Julien Bourgeois ( 38 Dave Atkinson , 13 Gordon  Mitchell )",
+        "total": "1-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "15:28",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 63 Travis  Leblanc )",
+        "total": "2-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "14:01",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "38 Dave Atkinson ( 66 Ralph Mattix )",
+        "total": "2-4 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "10:59",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "13 Gordon  Mitchell ( 88 Corey Robichaud )",
+        "total": "2-5 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "9:55",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson ( 98 Issac Bridge )",
+        "total": "3-5 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "4:13",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 17 Chris Maltby )",
+        "total": "4-5 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "0:01",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "63 Travis  Leblanc ( 9 Ian McCarthy )",
+        "total": "5-5 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "16:50",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "90 Zack Fullerton ( 13 Gordon  Mitchell )",
+        "total": "5-6 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "7:38",
+        "str_strength": "SH",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "9 Julien Bourgeois ( 97 Meathead MacDonald )",
+        "total": "5-7 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "5:51",
+        "str_strength": "PP",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "9 Julien Bourgeois ( 38 Dave Atkinson , 97 Meathead MacDonald )",
+        "total": "5-8 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "4:25",
+        "str_strength": "PP",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "6 Luke Crocker ( 9 Ian McCarthy )",
+        "total": "6-8 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "2:03",
+        "str_strength": "EA",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson ( 16 Danny \"Biggie\" Small )",
+        "total": "7-8 G.R. Mitchell Welding"
+      },
       {
         "per_period": "1",
         "time": "9:42",
@@ -12086,6 +15100,112 @@
         }
       ]
     },
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "17:35",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "4 Aaron Dobson ( 6 Madden Miller )",
+        "total": "0-1 Ultramar"
+      },
+      {
+        "per_period": "1",
+        "time": "13:58",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "55 Geoff  Ryan",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "8:38",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "9 Julien Bourgeois ( 15 William  Hurley )",
+        "total": "2-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "3:11",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "94 Nick \"Pickle\" Dobson ( 97 Meathead MacDonald , 38 Dave Atkinson )",
+        "total": "3-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "1:57",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 94 Nick \"Pickle\" Dobson , 7 Corey Helm )",
+        "total": "4-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "0:05",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "90 Zack Fullerton ( 66 Ralph Mattix )",
+        "total": "5-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "16:39",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "94 Nick \"Pickle\" Dobson ( 97 Meathead MacDonald , 38 Dave Atkinson )",
+        "total": "6-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "14:34",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "90 Zack Fullerton ( 9 Julien Bourgeois )",
+        "total": "7-1 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "12:28",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "6 Madden Miller ( 14 Brody Burke , 5 Andy Bonnell )",
+        "total": "7-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "8:17",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "38 Dave Atkinson ( 97 Meathead MacDonald )",
+        "total": "8-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "3:52",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "10 Robert Malcolm ( 6 Madden Miller , 8 Bill Jobes )",
+        "total": "8-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "3:05",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "55 Geoff  Ryan ( 13 Gordon  Mitchell )",
+        "total": "9-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "1:48",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "15 William  Hurley ( 90 Zack Fullerton , 66 Ralph Mattix )",
+        "total": "10-3 G.R. Mitchell Welding"
+      }
+    ],
     "scoreboard": [
       [
         "REGULAR SEASON",
@@ -12313,7 +15433,111 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "17:35",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "76 Rory Faulkner ( 88 Zack Gould )",
+        "total": "1-0 Colson Overhead Doors"
+      },
+      {
+        "per_period": "1",
+        "time": "6:19",
+        "str_strength": "PP",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "- ( 44 Chris Baisley )",
+        "total": "2-0 Colson Overhead Doors"
+      },
+      {
+        "per_period": "1",
+        "time": "4:07",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 2 Matt Morris , 22 Gerald Boutiler )",
+        "total": "2-1 Colson Overhead Doors"
+      },
+      {
+        "per_period": "1",
+        "time": "1:24",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "-",
+        "total": "3-1 Colson Overhead Doors"
+      },
+      {
+        "per_period": "1",
+        "time": "0:03",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "88 Zack Gould ( 23 Logan Gesner )",
+        "total": "4-1 Colson Overhead Doors"
+      },
+      {
+        "per_period": "2",
+        "time": "16:05",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 19 Jaxon Reynolds )",
+        "total": "4-2 Colson Overhead Doors"
+      },
+      {
+        "per_period": "2",
+        "time": "10:41",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "- ( 88 Zack Gould )",
+        "total": "5-2 Colson Overhead Doors"
+      },
+      {
+        "per_period": "2",
+        "time": "6:33",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "-",
+        "total": "6-2 Colson Overhead Doors"
+      },
+      {
+        "per_period": "2",
+        "time": "2:09",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 74 Bill Davison )",
+        "total": "6-3 Colson Overhead Doors"
+      },
+      {
+        "per_period": "3",
+        "time": "11:14",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone ( 74 Bill Davison )",
+        "total": "6-4 Colson Overhead Doors"
+      },
+      {
+        "per_period": "3",
+        "time": "9:24",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "23 Logan Gesner",
+        "total": "7-4 Colson Overhead Doors"
+      },
+      {
+        "per_period": "3",
+        "time": "8:14",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 2 Matt Morris , 22 Gerald Boutiler )",
+        "total": "7-5 Colson Overhead Doors"
+      },
+      {
+        "per_period": "3",
+        "time": "3:41",
+        "str_strength": "PP",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "17 Jeremy Kinnear ( 4 Rubein Mackenzie , 28 Brendan Stone )",
+        "total": "7-6 Colson Overhead Doors"
+      },
       {
         "per_period": "1",
         "time": "8:51",
@@ -12530,7 +15754,87 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "14:32",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson ( 17 Chris Maltby )",
+        "total": "1-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "10:59",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "16 Danny \"Biggie\" Small ( 6 Luke Crocker )",
+        "total": "2-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "5:53",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "16 Danny \"Biggie\" Small",
+        "total": "3-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "2:41",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "- ( 19 Jaxon Reynolds , 4 Rubein Mackenzie )",
+        "total": "3-1 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "0:55",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson ( 98 Issac Bridge )",
+        "total": "4-1 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "1:24",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 27 Pat Morris , 19 Jaxon Reynolds )",
+        "total": "4-2 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "15:58",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson ( 7 Connor Hurley )",
+        "total": "5-2 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "14:54",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone",
+        "total": "5-3 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "7:11",
+        "str_strength": "SH",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 19 Jaxon Reynolds , 27 Pat Morris )",
+        "total": "5-4 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "4:22",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "16 Danny \"Biggie\" Small ( 17 Chris Maltby )",
+        "total": "6-4 Maltby Sports"
+      },
       {
         "per_period": "3",
         "time": "7:58",
@@ -12574,7 +15878,7 @@
     "game_id": "3276663",
     "status": "final",
     "location": "Amherst",
-    "division": null,
+    "division": "REGULAR SEASON",
     "start_utc": "2026-02-04T00:45:00+00:00",
     "start_local": "2026-02-03T20:45:00-04:00",
     "home": "J&K Electric",
@@ -12585,15 +15889,27 @@
       "name": "J&K Electric",
       "slug": "j-and-k-electric",
       "final": 3,
-      "periods": [],
-      "is_winner": null
+      "periods": [
+        0,
+        2,
+        1,
+        0,
+        0
+      ],
+      "is_winner": true
     },
     "away_line": {
       "name": "G.R. Mitchell Welding",
       "slug": "gr-mitchell-welding",
       "final": 2,
-      "periods": [],
-      "is_winner": null
+      "periods": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "is_winner": false
     },
     "home_score": 3,
     "away_score": 2,
@@ -12738,227 +16054,47 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "2:10",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 66 Ralph Mattix )",
+        "total": "0-1 G.R. Mitchell Welding"
+      },
       {
         "per_period": "2",
-        "time": "2:22",
-        "player": "-20 Avery Harrison",
+        "time": "15:53",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "94 Nick \"Pickle\" Dobson ( 38 Dave Atkinson )",
+        "total": "0-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "14:51",
+        "str_strength": "ES",
         "team": "J&K Electric",
-        "infraction": "Hooking (Minor)",
-        "length": "3:00"
-      }
-    ],
-    "scoreboard": [
-      [
-        "REGULAR SEASON",
-        "1",
-        "2",
-        "3",
-        "OT",
-        "2OT",
-        "F"
-      ],
-      [
-        "J&K Electric",
-        "0",
-        "2",
-        "1",
-        "0",
-        "0",
-        "3"
-      ],
-      [
-        "G.R. Mitchell Welding",
-        "1",
-        "1",
-        "0",
-        "0",
-        "0",
-        "2"
-      ]
-    ]
-  },
-  {
-    "game_id": "3276664",
-    "status": "final",
-    "location": "Amherst",
-    "division": "REGULAR SEASON",
-    "start_utc": null,
-    "start_local": "2026-02-03T20:45:00-04:00",
-    "home": "J&K Electric",
-    "away": "G.R. Mitchell Welding",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276664&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276664&p=summary",
-    "home_line": {
-      "name": "J&K Electric",
-      "slug": "j-and-k-electric",
-      "final": 3,
-      "periods": [
-        0,
-        2,
-        1,
-        0,
-        0
-      ],
-      "is_winner": true
-    },
-    "away_line": {
-      "name": "G.R. Mitchell Welding",
-      "slug": "gr-mitchell-welding",
-      "final": 2,
-      "periods": [
-        1,
-        1,
-        0,
-        0,
-        0
-      ],
-      "is_winner": false
-    },
-    "home_score": 3,
-    "away_score": 2,
-    "result": "3 - 2",
-    "datetime": "2026-02-03T20:45:00-04:00",
-    "date": "02/03/2026",
-    "time": "8:45 PM",
-    "player_stats": {
-      "home": [
-        {
-          "player_id": "j-and-k-electric-atkinson-dave-38",
-          "name": "Atkinson, Dave",
-          "number": "38",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "j-and-k-electric-dobson-nick-pickle-94",
-          "name": "Dobson, Nick \"Pickle\"",
-          "number": "94",
-          "positions": [
-            "F"
-          ],
-          "goals": 1,
-          "assists": 0,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "j-and-k-electric-macdonald-meathead-97",
-          "name": "MacDonald, Meathead",
-          "number": "97",
-          "positions": [
-            "C"
-          ],
-          "goals": 1,
-          "assists": 0,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "j-and-k-electric-mattix-ralph-66",
-          "name": "Mattix, Ralph",
-          "number": "66",
-          "positions": [
-            "D"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        }
-      ],
-      "away": [
-        {
-          "player_id": "gr-mitchell-welding-davison-bill-74",
-          "name": "Davison, Bill",
-          "number": "74",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-harrison-avery-00",
-          "name": "Harrison, Avery",
-          "number": "00",
-          "positions": [
-            "D"
-          ],
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "penalty_minutes": 3,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-kinnear-jeremy-17",
-          "name": "Kinnear, Jeremy",
-          "number": "17",
-          "positions": [
-            "F"
-          ],
-          "goals": 1,
-          "assists": 0,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-mackenzie-rubein-4",
-          "name": "Mackenzie, Rubein",
-          "number": "4",
-          "positions": [
-            "F"
-          ],
-          "goals": 2,
-          "assists": 0,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 1
-        },
-        {
-          "player_id": "gr-mitchell-welding-reynolds-jaxon-19",
-          "name": "Reynolds, Jaxon",
-          "number": "19",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 2,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-stone-brendan-28",
-          "name": "Stone, Brendan",
-          "number": "28",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        }
-      ]
-    },
-    "penalties": [
+        "scorer_assisted_by": "17 Jeremy Kinnear ( 28 Brendan Stone )",
+        "total": "1-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "7:07",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 19 Jaxon Reynolds )",
+        "total": "2-2 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "8:41",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 19 Jaxon Reynolds , 74 Bill Davison )",
+        "total": "3-2 J&K Electric"
+      },
       {
         "per_period": "2",
         "time": "2:22",
@@ -13007,8 +16143,8 @@
     "start_local": "2026-02-03T22:00:00-04:00",
     "home": "Maltby Sports",
     "away": "Colson Overhead Doors",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276665&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276665&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276665&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276665&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "Maltby Sports",
       "slug": "maltby-sports",
@@ -13179,6 +16315,80 @@
         }
       ]
     },
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "13:44",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson ( 16 Danny \"Biggie\" Small , 19 Thomas  Mccrossin )",
+        "total": "1-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "12:15",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "16 Danny \"Biggie\" Small",
+        "total": "2-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "1:03",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "2 Matt  Gallant",
+        "total": "3-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "17:20",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "2 Matt  Gallant ( 19 Thomas  Mccrossin )",
+        "total": "4-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "8:14",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "77 Ted Mackinnon ( 7 Connor Hurley )",
+        "total": "5-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "1:26",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "2 Matt  Gallant ( 19 Thomas  Mccrossin )",
+        "total": "6-0 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "16:56",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "2 Matt  Gallant",
+        "total": "7-0 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "9:30",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "88 Zack Gould ( 23 Logan Gesner , -20 Marshall Terrio )",
+        "total": "7-1 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "1:08",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "88 Zack Gould ( 13 Chad Henshaw , 23 Logan Gesner )",
+        "total": "7-2 Maltby Sports"
+      }
+    ],
     "scoreboard": [
       [
         "REGULAR SEASON",
@@ -13218,8 +16428,8 @@
     "start_local": "2026-02-10T20:45:00-04:00",
     "home": "Ultramar",
     "away": "Maltby Sports",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276671&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276671&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276671&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276671&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "Ultramar",
       "slug": "ultramar",
@@ -13405,7 +16615,47 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "1:49",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "2 Chris Dywer ( 9 Brad Linkletter )",
+        "total": "1-0 Ultramar"
+      },
+      {
+        "per_period": "2",
+        "time": "16:18",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "19 Thomas  Mccrossin ( 98 Issac Bridge , 6 Luke Crocker )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "6:23",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson ( 98 Issac Bridge , 91 Ryan Arbing )",
+        "total": "1-2 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "6:45",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge",
+        "total": "1-3 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "0:44",
+        "str_strength": "EN",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson ( 98 Issac Bridge , 9 Ian McCarthy )",
+        "total": "1-4 Maltby Sports"
+      },
       {
         "per_period": "1",
         "time": "10:08",
@@ -13473,7 +16723,7 @@
     "game_id": "3276673",
     "status": "final",
     "location": "Amherst",
-    "division": null,
+    "division": "REGULAR SEASON",
     "start_utc": "2026-02-11T02:00:00+00:00",
     "start_local": "2026-02-10T22:00:00-04:00",
     "home": "J&K Electric",
@@ -13484,15 +16734,27 @@
       "name": "J&K Electric",
       "slug": "j-and-k-electric",
       "final": 6,
-      "periods": [],
-      "is_winner": null
+      "periods": [
+        2,
+        2,
+        2,
+        0,
+        0
+      ],
+      "is_winner": false
     },
     "away_line": {
       "name": "G.R. Mitchell Welding",
       "slug": "gr-mitchell-welding",
       "final": 6,
-      "periods": [],
-      "is_winner": null
+      "periods": [
+        3,
+        2,
+        1,
+        0,
+        0
+      ],
+      "is_winner": false
     },
     "home_score": 6,
     "away_score": 6,
@@ -13732,322 +16994,103 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "16:33",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone ( 17 Jeremy Kinnear , 22 Gerald Boutiler )",
+        "total": "1-0 J&K Electric"
+      },
+      {
+        "per_period": "1",
+        "time": "12:24",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "17 Jeremy Kinnear ( 9 Nick Leopold )",
+        "total": "2-0 J&K Electric"
+      },
+      {
+        "per_period": "1",
+        "time": "4:33",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "94 Nick \"Pickle\" Dobson ( 38 Dave Atkinson , 55 Geoff  Ryan )",
+        "total": "2-1 J&K Electric"
+      },
+      {
+        "per_period": "1",
+        "time": "2:27",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "66 Ralph Mattix ( 90 Zack Fullerton , 61 Cody Sutton )",
+        "total": "2-2 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "1:05",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "90 Zack Fullerton ( 13 Gordon  Mitchell , 61 Cody Sutton )",
+        "total": "2-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "17:40",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "19 Jaxon Reynolds ( 74 Bill Davison )",
+        "total": "3-3 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "9:17",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "97 Meathead MacDonald ( 38 Dave Atkinson )",
+        "total": "3-4 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "5:35",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 2 Matt Morris , 22 Gerald Boutiler )",
+        "total": "4-4 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "4:54",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "90 Zack Fullerton ( 21 Ryan Macpherson , 66 Ralph Mattix )",
+        "total": "4-5 G.R. Mitchell Welding"
+      },
       {
         "per_period": "3",
-        "time": "0:10",
-        "player": "21 Ryan Macpherson / Served by 21 Ryan Macpherson",
+        "time": "17:30",
+        "str_strength": "ES",
         "team": "G.R. Mitchell Welding",
-        "infraction": "Slashing (Minor)",
-        "length": "3:00"
-      }
-    ],
-    "scoreboard": [
-      [
-        "REGULAR SEASON",
-        "1",
-        "2",
-        "3",
-        "OT",
-        "2OT",
-        "F"
-      ],
-      [
-        "J&K Electric",
-        "2",
-        "2",
-        "2",
-        "0",
-        "0",
-        "6"
-      ],
-      [
-        "G.R. Mitchell Welding",
-        "3",
-        "2",
-        "1",
-        "0",
-        "0",
-        "6"
-      ]
-    ]
-  },
-  {
-    "game_id": "3276674",
-    "status": "final",
-    "location": "Amherst",
-    "division": "REGULAR SEASON",
-    "start_utc": null,
-    "start_local": "2026-02-10T22:00:00-04:00",
-    "home": "J&K Electric",
-    "away": "G.R. Mitchell Welding",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276674&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3276674&p=summary",
-    "home_line": {
-      "name": "J&K Electric",
-      "slug": "j-and-k-electric",
-      "final": 6,
-      "periods": [
-        2,
-        2,
-        2,
-        0,
-        0
-      ],
-      "is_winner": false
-    },
-    "away_line": {
-      "name": "G.R. Mitchell Welding",
-      "slug": "gr-mitchell-welding",
-      "final": 6,
-      "periods": [
-        3,
-        2,
-        1,
-        0,
-        0
-      ],
-      "is_winner": false
-    },
-    "home_score": 6,
-    "away_score": 6,
-    "result": "6 - 6",
-    "datetime": "2026-02-10T22:00:00-04:00",
-    "date": "02/10/2026",
-    "time": "10:00 PM",
-    "player_stats": {
-      "home": [
-        {
-          "player_id": "j-and-k-electric-atkinson-dave-38",
-          "name": "Atkinson, Dave",
-          "number": "38",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 2,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "j-and-k-electric-dobson-nick-pickle-94",
-          "name": "Dobson, Nick \"Pickle\"",
-          "number": "94",
-          "positions": [
-            "F"
-          ],
-          "goals": 1,
-          "assists": 0,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "j-and-k-electric-fullerton-zack-90",
-          "name": "Fullerton, Zack",
-          "number": "90",
-          "positions": [
-            "F"
-          ],
-          "goals": 2,
-          "assists": 2,
-          "points": 4,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "j-and-k-electric-macdonald-meathead-97",
-          "name": "MacDonald, Meathead",
-          "number": "97",
-          "positions": [
-            "C"
-          ],
-          "goals": 1,
-          "assists": 0,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "j-and-k-electric-macpherson-ryan-21",
-          "name": "Macpherson, Ryan",
-          "number": "21",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 3,
-          "gtg": 0
-        },
-        {
-          "player_id": "j-and-k-electric-mattix-ralph-66",
-          "name": "Mattix, Ralph",
-          "number": "66",
-          "positions": [
-            "D"
-          ],
-          "goals": 1,
-          "assists": 1,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 1
-        },
-        {
-          "player_id": "j-and-k-electric-mitchell-gordon-13",
-          "name": "Mitchell, Gordon",
-          "number": "13",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "goals": 1,
-          "assists": 1,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "j-and-k-electric-ryan-geoff-55",
-          "name": "Ryan, Geoff",
-          "number": "55",
-          "positions": [
-            "D"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "j-and-k-electric-sutton-cody-61",
-          "name": "Sutton, Cody",
-          "number": "61",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "goals": 0,
-          "assists": 3,
-          "points": 3,
-          "penalty_minutes": 0,
-          "gtg": 0
-        }
-      ],
-      "away": [
-        {
-          "player_id": "gr-mitchell-welding-boutiler-gerald-22",
-          "name": "Boutiler, Gerald",
-          "number": "22",
-          "positions": [
-            "D",
-            "F"
-          ],
-          "goals": 0,
-          "assists": 3,
-          "points": 3,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-davison-bill-74",
-          "name": "Davison, Bill",
-          "number": "74",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-kinnear-jeremy-17",
-          "name": "Kinnear, Jeremy",
-          "number": "17",
-          "positions": [
-            "F"
-          ],
-          "goals": 1,
-          "assists": 1,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-leopold-nick-9",
-          "name": "Leopold, Nick",
-          "number": "9",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-mackenzie-rubein-4",
-          "name": "Mackenzie, Rubein",
-          "number": "4",
-          "positions": [
-            "F"
-          ],
-          "goals": 2,
-          "assists": 0,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 1
-        },
-        {
-          "player_id": "gr-mitchell-welding-morris-matt-2",
-          "name": "Morris, Matt",
-          "number": "2",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-reynolds-jaxon-19",
-          "name": "Reynolds, Jaxon",
-          "number": "19",
-          "positions": [
-            "F"
-          ],
-          "goals": 1,
-          "assists": 2,
-          "points": 3,
-          "penalty_minutes": 0,
-          "gtg": 1
-        },
-        {
-          "player_id": "gr-mitchell-welding-stone-brendan-28",
-          "name": "Stone, Brendan",
-          "number": "28",
-          "positions": [
-            "F"
-          ],
-          "goals": 1,
-          "assists": 0,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        }
-      ]
-    },
-    "penalties": [
+        "scorer_assisted_by": "13 Gordon  Mitchell ( 90 Zack Fullerton , 61 Cody Sutton )",
+        "total": "4-6 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "12:29",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 19 Jaxon Reynolds )",
+        "total": "5-6 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "6:49",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "- ( 19 Jaxon Reynolds , 22 Gerald Boutiler )",
+        "total": "6-6 Tie"
+      },
       {
         "per_period": "3",
         "time": "0:10",
@@ -14091,7 +17134,7 @@
     "game_id": "3276677",
     "status": "final",
     "location": "Amherst",
-    "division": null,
+    "division": "REGULAR SEASON",
     "start_utc": "2026-02-16T01:00:00+00:00",
     "start_local": "2026-02-15T21:00:00-04:00",
     "home": "Colson Overhead Doors",
@@ -14102,15 +17145,23 @@
       "name": "Colson Overhead Doors",
       "slug": "colson-overhead-doors",
       "final": 4,
-      "periods": [],
-      "is_winner": null
+      "periods": [
+        0,
+        0,
+        4
+      ],
+      "is_winner": false
     },
     "away_line": {
       "name": "Ultramar",
       "slug": "ultramar",
       "final": 9,
-      "periods": [],
-      "is_winner": null
+      "periods": [
+        0,
+        0,
+        9
+      ],
+      "is_winner": true
     },
     "home_score": 4,
     "away_score": 9,
@@ -14362,356 +17413,7 @@
         }
       ]
     },
-    "penalties": [
-      {
-        "per_period": "3",
-        "time": "17:35",
-        "player": "88 Zack Gould / Served by 88 Zack Gould",
-        "team": "Colson Overhead Doors",
-        "infraction": "Aggressor (Minor)",
-        "length": "3:00"
-      },
-      {
-        "per_period": "3",
-        "time": "17:35",
-        "player": "88 Zack Gould / Served by 88 Zack Gould",
-        "team": "Colson Overhead Doors",
-        "infraction": "Fighting (Major)",
-        "length": "5:00"
-      },
-      {
-        "per_period": "3",
-        "time": "17:35",
-        "player": "88 Zack Gould / Served by 88 Zack Gould",
-        "team": "Colson Overhead Doors",
-        "infraction": "Cross-Checking (Minor)",
-        "length": "3:00"
-      },
-      {
-        "per_period": "3",
-        "time": "17:35",
-        "player": "11 Tyler \"Tuffy\" Allen / Served by 11 Tyler \"Tuffy\" Allen",
-        "team": "Ultramar",
-        "infraction": "Slashing (Minor)",
-        "length": "3:00"
-      },
-      {
-        "per_period": "3",
-        "time": "17:35",
-        "player": "11 Tyler \"Tuffy\" Allen / Served by 11 Tyler \"Tuffy\" Allen",
-        "team": "Ultramar",
-        "infraction": "Fighting (Major)",
-        "length": "5:00"
-      }
-    ],
-    "scoreboard": [
-      [
-        "REGULAR SEASON",
-        "1",
-        "2",
-        "3",
-        "F"
-      ],
-      [
-        "Colson Overhead Doors",
-        "0",
-        "0",
-        "4",
-        "4"
-      ],
-      [
-        "Ultramar",
-        "0",
-        "0",
-        "9",
-        "9"
-      ]
-    ]
-  },
-  {
-    "game_id": "3276678",
-    "status": "final",
-    "location": "Amherst",
-    "division": "REGULAR SEASON",
-    "start_utc": null,
-    "start_local": "2026-02-15T21:00:00-04:00",
-    "home": "Colson Overhead Doors",
-    "away": "Ultramar",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-2&gameID=3276678&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-2&gameID=3276678&p=summary",
-    "home_line": {
-      "name": "Colson Overhead Doors",
-      "slug": "colson-overhead-doors",
-      "final": 4,
-      "periods": [
-        0,
-        0,
-        4
-      ],
-      "is_winner": false
-    },
-    "away_line": {
-      "name": "Ultramar",
-      "slug": "ultramar",
-      "final": 9,
-      "periods": [
-        0,
-        0,
-        9
-      ],
-      "is_winner": true
-    },
-    "home_score": 4,
-    "away_score": 9,
-    "result": "4 - 9",
-    "datetime": "2026-02-15T21:00:00-04:00",
-    "date": "02/15/2026",
-    "time": "9:00 PM",
-    "player_stats": {
-      "home": [
-        {
-          "player_id": "colson-overhead-doors-allen-tyler-tuffy-11",
-          "name": "Allen, Tyler \"Tuffy\"",
-          "number": "11",
-          "positions": [
-            "F"
-          ],
-          "goals": 2,
-          "assists": 2,
-          "points": 4,
-          "penalty_minutes": 8,
-          "gtg": 0
-        },
-        {
-          "player_id": "colson-overhead-doors-burke-tim-22",
-          "name": "Burke, Tim",
-          "number": "22",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "colson-overhead-doors-cove-matt-12",
-          "name": "Cove, Matt",
-          "number": "12",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "colson-overhead-doors-dobson-aaron-4",
-          "name": "Dobson, Aaron",
-          "number": "4",
-          "positions": [
-            "D"
-          ],
-          "goals": 1,
-          "assists": 0,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "colson-overhead-doors-dywer-chris-2",
-          "name": "Dywer, Chris",
-          "number": "2",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "goals": 1,
-          "assists": 1,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "colson-overhead-doors-jobes-bill-8",
-          "name": "Jobes, Bill",
-          "number": "8",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 4,
-          "points": 4,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "colson-overhead-doors-linkletter-brad-9",
-          "name": "Linkletter, Brad",
-          "number": "9",
-          "positions": [
-            "C"
-          ],
-          "goals": 3,
-          "assists": 1,
-          "points": 4,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "colson-overhead-doors-malcolm-robert-10",
-          "name": "Malcolm, Robert",
-          "number": "10",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "colson-overhead-doors-miller-madden-6",
-          "name": "Miller, Madden",
-          "number": "6",
-          "positions": [
-            "F"
-          ],
-          "goals": 2,
-          "assists": 3,
-          "points": 5,
-          "penalty_minutes": 0,
-          "gtg": 0
-        }
-      ],
-      "away": [
-        {
-          "player_id": "ultramar-baisley-chris-44",
-          "name": "Baisley, Chris",
-          "number": "44",
-          "positions": [
-            "D"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-black-mark-9",
-          "name": "Black, Mark",
-          "number": "9",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-burge-tom-12",
-          "name": "Burge, Tom",
-          "number": "12",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-chandler-3rd-charles-7",
-          "name": "Chandler 3rd, Charles",
-          "number": "7",
-          "positions": [
-            "F"
-          ],
-          "goals": 1,
-          "assists": 1,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-davis-dan-18",
-          "name": "Davis, Dan",
-          "number": "18",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-eatmon-chester-8",
-          "name": "Eatmon, Chester",
-          "number": "8",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-gesner-logan-23",
-          "name": "Gesner, Logan",
-          "number": "23",
-          "positions": [
-            "D",
-            "F"
-          ],
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-gould-zack-88",
-          "name": "Gould, Zack",
-          "number": "88",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "penalty_minutes": 11,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-sproul-chris-31",
-          "name": "Sproul, Chris",
-          "number": "31",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "penalty_minutes": 0,
-          "gtg": 0
-        }
-      ]
-    },
-    "penalties": [
+    "scoring_summary": [
       {
         "per_period": "3",
         "time": "17:35",
@@ -14786,8 +17488,8 @@
     "start_local": "2026-02-17T20:45:00-04:00",
     "home": "J&K Electric",
     "away": "Maltby Sports",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276679&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276679&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276679&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276679&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "J&K Electric",
       "slug": "j-and-k-electric",
@@ -15053,7 +17755,103 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "17:00",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "- ( 19 Jaxon Reynolds )",
+        "total": "1-0 J&K Electric"
+      },
+      {
+        "per_period": "1",
+        "time": "7:04",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 77 Ted Mackinnon , 6 Luke Crocker )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "4:40",
+        "str_strength": "SH",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "-",
+        "total": "1-2 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "2:40",
+        "str_strength": "SH",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "6 Luke Crocker ( 18 Trevor Johnson , 63 Travis  Leblanc )",
+        "total": "1-3 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "10:31",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "17 Chris Maltby ( 9 Ian McCarthy , 16 Danny \"Biggie\" Small )",
+        "total": "1-4 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "9:00",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 19 Thomas  Mccrossin , 63 Travis  Leblanc )",
+        "total": "1-5 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "8:09",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "87 Noah Perrin ( 22 Gerald Boutiler )",
+        "total": "2-5 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "17:49",
+        "str_strength": "PP",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "4 Rubein Mackenzie ( 28 Brendan Stone )",
+        "total": "3-5 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "16:14",
+        "str_strength": "PP",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "28 Brendan Stone ( 4 Rubein Mackenzie )",
+        "total": "4-5 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "10:17",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 7 Connor Hurley )",
+        "total": "4-6 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "9:01",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "- ( 22 Gerald Boutiler , 9 Nick Leopold )",
+        "total": "5-6 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "0:41",
+        "str_strength": "EN",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "9 Ian McCarthy ( 98 Issac Bridge , 6 Luke Crocker )",
+        "total": "5-7 Maltby Sports"
+      },
       {
         "per_period": "1",
         "time": "5:44",
@@ -15129,7 +17927,7 @@
     "game_id": "3276681",
     "status": "final",
     "location": "Amherst",
-    "division": null,
+    "division": "REGULAR SEASON",
     "start_utc": "2026-02-18T02:00:00+00:00",
     "start_local": "2026-02-17T22:00:00-04:00",
     "home": "G.R. Mitchell Welding",
@@ -15140,15 +17938,27 @@
       "name": "G.R. Mitchell Welding",
       "slug": "gr-mitchell-welding",
       "final": 7,
-      "periods": [],
-      "is_winner": null
+      "periods": [
+        1,
+        2,
+        4,
+        0,
+        0
+      ],
+      "is_winner": true
     },
     "away_line": {
       "name": "Ultramar",
       "slug": "ultramar",
       "final": 4,
-      "periods": [],
-      "is_winner": null
+      "periods": [
+        2,
+        1,
+        1,
+        0,
+        0
+      ],
+      "is_winner": false
     },
     "home_score": 7,
     "away_score": 4,
@@ -15375,309 +18185,95 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "7:30",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "15 William  Hurley ( 61 Cody Sutton )",
+        "total": "1-0 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "6:25",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "9 Brad Linkletter ( 5 Andy Bonnell , 68 Mark Bennett )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "3:41",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "3 Brett Gallant",
+        "total": "1-2 Ultramar"
+      },
+      {
+        "per_period": "2",
+        "time": "15:14",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "6 Madden Miller ( 12 Matt Cove , 14 Brody Burke )",
+        "total": "1-3 Ultramar"
+      },
+      {
+        "per_period": "2",
+        "time": "6:59",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "90 Zack Fullerton ( 21 Ryan Macpherson )",
+        "total": "2-3 Ultramar"
+      },
+      {
+        "per_period": "2",
+        "time": "4:57",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "88 Corey Robichaud ( 90 Zack Fullerton , 21 Ryan Macpherson )",
+        "total": "3-3 Tie"
+      },
       {
         "per_period": "3",
-        "time": "3:11",
-        "player": "68 Mark Bennett / Served by 68 Mark Bennett",
+        "time": "11:42",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "88 Corey Robichaud ( 90 Zack Fullerton )",
+        "total": "4-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "8:01",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "- ( 61 Cody Sutton )",
+        "total": "5-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "4:52",
+        "str_strength": "ES",
         "team": "Ultramar",
-        "infraction": "Interference (Minor)",
-        "length": "3:00"
-      }
-    ],
-    "scoreboard": [
-      [
-        "REGULAR SEASON",
-        "1",
-        "2",
-        "3",
-        "OT",
-        "2OT",
-        "F"
-      ],
-      [
-        "G.R. Mitchell Welding",
-        "1",
-        "2",
-        "4",
-        "0",
-        "0",
-        "7"
-      ],
-      [
-        "Ultramar",
-        "2",
-        "1",
-        "1",
-        "0",
-        "0",
-        "4"
-      ]
-    ]
-  },
-  {
-    "game_id": "3276682",
-    "status": "final",
-    "location": "Amherst",
-    "division": "REGULAR SEASON",
-    "start_utc": null,
-    "start_local": "2026-02-17T22:00:00-04:00",
-    "home": "G.R. Mitchell Welding",
-    "away": "Ultramar",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-2&gameID=3276682&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-2&gameID=3276682&p=summary",
-    "home_line": {
-      "name": "G.R. Mitchell Welding",
-      "slug": "gr-mitchell-welding",
-      "final": 7,
-      "periods": [
-        1,
-        2,
-        4,
-        0,
-        0
-      ],
-      "is_winner": true
-    },
-    "away_line": {
-      "name": "Ultramar",
-      "slug": "ultramar",
-      "final": 4,
-      "periods": [
-        2,
-        1,
-        1,
-        0,
-        0
-      ],
-      "is_winner": false
-    },
-    "home_score": 7,
-    "away_score": 4,
-    "result": "7 - 4",
-    "datetime": "2026-02-17T22:00:00-04:00",
-    "date": "02/17/2026",
-    "time": "10:00 PM",
-    "player_stats": {
-      "home": [
-        {
-          "player_id": "gr-mitchell-welding-bennett-mark-68",
-          "name": "Bennett, Mark",
-          "number": "68",
-          "positions": [
-            "D"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 3,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-bonnell-andy-5",
-          "name": "Bonnell, Andy",
-          "number": "5",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-burke-brody-14",
-          "name": "Burke, Brody",
-          "number": "14",
-          "positions": [
-            "D",
-            "F"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-burke-tim-22",
-          "name": "Burke, Tim",
-          "number": "22",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-cove-matt-12",
-          "name": "Cove, Matt",
-          "number": "12",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-gallant-brett-3",
-          "name": "Gallant, Brett",
-          "number": "3",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "goals": 1,
-          "assists": 0,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-jobes-bill-8",
-          "name": "Jobes, Bill",
-          "number": "8",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-linkletter-brad-9",
-          "name": "Linkletter, Brad",
-          "number": "9",
-          "positions": [
-            "C"
-          ],
-          "goals": 2,
-          "assists": 0,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 1
-        },
-        {
-          "player_id": "gr-mitchell-welding-miller-madden-6",
-          "name": "Miller, Madden",
-          "number": "6",
-          "positions": [
-            "F"
-          ],
-          "goals": 1,
-          "assists": 0,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        }
-      ],
-      "away": [
-        {
-          "player_id": "ultramar-fullerton-zack-90",
-          "name": "Fullerton, Zack",
-          "number": "90",
-          "positions": [
-            "F"
-          ],
-          "goals": 1,
-          "assists": 2,
-          "points": 3,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-hurley-william-15",
-          "name": "Hurley, William",
-          "number": "15",
-          "positions": [
-            "F"
-          ],
-          "goals": 2,
-          "assists": 0,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-macpherson-ryan-21",
-          "name": "Macpherson, Ryan",
-          "number": "21",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 2,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-mattix-ralph-66",
-          "name": "Mattix, Ralph",
-          "number": "66",
-          "positions": [
-            "D"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-mitchell-gordon-13",
-          "name": "Mitchell, Gordon",
-          "number": "13",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "goals": 1,
-          "assists": 1,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-robichaud-corey-88",
-          "name": "Robichaud, Corey",
-          "number": "88",
-          "positions": [
-            "F"
-          ],
-          "goals": 2,
-          "assists": 0,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 1
-        },
-        {
-          "player_id": "ultramar-sutton-cody-61",
-          "name": "Sutton, Cody",
-          "number": "61",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "goals": 0,
-          "assists": 2,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 0
-        }
-      ]
-    },
-    "penalties": [
+        "scorer_assisted_by": "9 Brad Linkletter ( 8 Bill Jobes , 22 Tim Burke )",
+        "total": "5-4 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "1:44",
+        "str_strength": "PP",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "13 Gordon  Mitchell",
+        "total": "6-4 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "0:11",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "15 William  Hurley ( 13 Gordon  Mitchell , 66 Ralph Mattix )",
+        "total": "7-4 G.R. Mitchell Welding"
+      },
       {
         "per_period": "3",
         "time": "3:11",
@@ -15726,8 +18322,8 @@
     "start_local": "2026-02-22T21:00:00-04:00",
     "home": "Maltby Sports",
     "away": "Colson Overhead Doors",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276685&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276685&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276685&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276685&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "Maltby Sports",
       "slug": "maltby-sports",
@@ -15856,7 +18452,71 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "16:17",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "2 Matt  Gallant ( 19 Thomas  Mccrossin , 18 Trevor Johnson )",
+        "total": "1-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "10:32",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson",
+        "total": "2-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "6:26",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 7 Connor Hurley , 17 Chris Maltby )",
+        "total": "3-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "17:10",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge",
+        "total": "4-0 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "2:42",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "-",
+        "total": "4-1 Maltby Sports"
+      },
+      {
+        "per_period": "2",
+        "time": "1:38",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson",
+        "total": "5-1 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "15:51",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "9 Ian McCarthy",
+        "total": "6-1 Maltby Sports"
+      },
+      {
+        "per_period": "3",
+        "time": "3:54",
+        "str_strength": "ES",
+        "team": "Colson Overhead Doors",
+        "scorer_assisted_by": "-",
+        "total": "6-2 Maltby Sports"
+      },
       {
         "per_period": "1",
         "time": "0:21",
@@ -15905,8 +18565,8 @@
     "start_local": "2026-02-24T20:45:00-04:00",
     "home": "Maltby Sports",
     "away": "J&K Electric",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276687&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276687&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276687&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276687&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "Maltby Sports",
       "slug": "maltby-sports",
@@ -16118,7 +18778,135 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "17:01",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "9 Ian McCarthy ( 77 Ted Mackinnon , 98 Issac Bridge )",
+        "total": "1-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "15:46",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "9 Ian McCarthy ( 98 Issac Bridge , 63 Travis  Leblanc )",
+        "total": "2-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "11:22",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "9 Ian McCarthy ( 63 Travis  Leblanc )",
+        "total": "3-0 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "7:38",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "- ( 9 Nick Leopold , 87 Noah Perrin )",
+        "total": "3-1 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "7:03",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "- ( 9 Nick Leopold )",
+        "total": "3-2 Maltby Sports"
+      },
+      {
+        "per_period": "1",
+        "time": "5:21",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "19 Jaxon Reynolds ( 17 Jeremy Kinnear , 28 Brendan Stone )",
+        "total": "3-3 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "1:10",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "9 Nick Leopold ( 17 Jeremy Kinnear , 28 Brendan Stone )",
+        "total": "3-4 J&K Electric"
+      },
+      {
+        "per_period": "1",
+        "time": "0:02",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "22 Gerald Boutiler",
+        "total": "3-5 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "15:49",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "87 Noah Perrin ( 9 Nick Leopold )",
+        "total": "3-6 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "13:08",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "87 Noah Perrin ( 9 Nick Leopold )",
+        "total": "3-7 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "11:34",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "98 Issac Bridge ( 9 Ian McCarthy , 77 Ted Mackinnon )",
+        "total": "4-7 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "5:16",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "63 Travis  Leblanc ( 98 Issac Bridge , 2 Matt  Gallant )",
+        "total": "5-7 J&K Electric"
+      },
+      {
+        "per_period": "2",
+        "time": "2:28",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "9 Ian McCarthy ( 77 Ted Mackinnon , 17 Chris Maltby )",
+        "total": "6-7 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "7:16",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "18 Trevor Johnson ( 98 Issac Bridge , 77 Ted Mackinnon )",
+        "total": "7-7 Tie"
+      },
+      {
+        "per_period": "3",
+        "time": "1:06",
+        "str_strength": "ES",
+        "team": "J&K Electric",
+        "scorer_assisted_by": "87 Noah Perrin",
+        "total": "7-8 J&K Electric"
+      },
+      {
+        "per_period": "3",
+        "time": "0:18",
+        "str_strength": "ES",
+        "team": "Maltby Sports",
+        "scorer_assisted_by": "9 Ian McCarthy ( 98 Issac Bridge )",
+        "total": "8-8 Tie"
+      },
       {
         "per_period": "2",
         "time": "8:52",
@@ -16186,7 +18974,7 @@
     "game_id": "3276689",
     "status": "final",
     "location": "Amherst",
-    "division": null,
+    "division": "REGULAR SEASON",
     "start_utc": "2026-02-25T02:00:00+00:00",
     "start_local": "2026-02-24T22:00:00-04:00",
     "home": "G.R. Mitchell Welding",
@@ -16197,15 +18985,27 @@
       "name": "G.R. Mitchell Welding",
       "slug": "gr-mitchell-welding",
       "final": 5,
-      "periods": [],
-      "is_winner": null
+      "periods": [
+        1,
+        2,
+        2,
+        0,
+        0
+      ],
+      "is_winner": true
     },
     "away_line": {
       "name": "Ultramar",
       "slug": "ultramar",
       "final": 3,
-      "periods": [],
-      "is_winner": null
+      "periods": [
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "is_winner": false
     },
     "home_score": 5,
     "away_score": 3,
@@ -16431,324 +19231,71 @@
         }
       ]
     },
-    "penalties": [
+    "scoring_summary": [
+      {
+        "per_period": "1",
+        "time": "4:20",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "94 Nick \"Pickle\" Dobson ( 13 Gordon  Mitchell , 55 Geoff  Ryan )",
+        "total": "1-0 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "1",
+        "time": "2:52",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "3 Brett Gallant ( 2 Chris Dywer , 11 Tyler \"Tuffy\" Allen )",
+        "total": "1-1 Tie"
+      },
+      {
+        "per_period": "1",
+        "time": "0:17",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "9 Brad Linkletter ( 8 Bill Jobes )",
+        "total": "1-2 Ultramar"
+      },
       {
         "per_period": "2",
-        "time": "12:54",
-        "player": "4 Aaron Dobson / Served by 4 Aaron Dobson",
-        "team": "Ultramar",
-        "infraction": "Hooking (Minor)",
-        "length": "3:00"
-      },
-      {
-        "per_period": "3",
-        "time": "15:04",
-        "player": "94 Nick \"Pickle\" Dobson / Served by 94 Nick \"Pickle\" Dobson",
+        "time": "6:27",
+        "str_strength": "ES",
         "team": "G.R. Mitchell Welding",
-        "infraction": "Roughing (Minor)",
-        "length": "3:00"
+        "scorer_assisted_by": "66 Ralph Mattix ( 94 Nick \"Pickle\" Dobson , 13 Gordon  Mitchell )",
+        "total": "2-2 Tie"
+      },
+      {
+        "per_period": "2",
+        "time": "1:33",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "21 Ryan Macpherson ( 15 William  Hurley , 66 Ralph Mattix )",
+        "total": "3-2 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "2",
+        "time": "0:52",
+        "str_strength": "ES",
+        "team": "Ultramar",
+        "scorer_assisted_by": "12 Matt Cove ( 11 Tyler \"Tuffy\" Allen , 4 Aaron Dobson )",
+        "total": "3-3 Tie"
       },
       {
         "per_period": "3",
-        "time": "9:54",
-        "player": "2 Chris Dywer / Served by 2 Chris Dywer",
-        "team": "Ultramar",
-        "infraction": "Slashing (Minor)",
-        "length": "3:00"
-      }
-    ],
-    "scoreboard": [
-      [
-        "REGULAR SEASON",
-        "1",
-        "2",
-        "3",
-        "OT",
-        "2OT",
-        "F"
-      ],
-      [
-        "G.R. Mitchell Welding",
-        "1",
-        "2",
-        "2",
-        "0",
-        "0",
-        "5"
-      ],
-      [
-        "Ultramar",
-        "2",
-        "1",
-        "0",
-        "0",
-        "0",
-        "3"
-      ]
-    ]
-  },
-  {
-    "game_id": "3276690",
-    "status": "final",
-    "location": "Amherst",
-    "division": "REGULAR SEASON",
-    "start_utc": null,
-    "start_local": "2026-02-24T22:00:00-04:00",
-    "home": "G.R. Mitchell Welding",
-    "away": "Ultramar",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-2&gameID=3276690&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-2&gameID=3276690&p=summary",
-    "home_line": {
-      "name": "G.R. Mitchell Welding",
-      "slug": "gr-mitchell-welding",
-      "final": 5,
-      "periods": [
-        1,
-        2,
-        2,
-        0,
-        0
-      ],
-      "is_winner": true
-    },
-    "away_line": {
-      "name": "Ultramar",
-      "slug": "ultramar",
-      "final": 3,
-      "periods": [
-        2,
-        1,
-        0,
-        0,
-        0
-      ],
-      "is_winner": false
-    },
-    "home_score": 5,
-    "away_score": 3,
-    "result": "5 - 3",
-    "datetime": "2026-02-24T22:00:00-04:00",
-    "date": "02/24/2026",
-    "time": "10:00 PM",
-    "player_stats": {
-      "home": [
-        {
-          "player_id": "gr-mitchell-welding-allen-tyler-tuffy-11",
-          "name": "Allen, Tyler \"Tuffy\"",
-          "number": "11",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 2,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-cove-matt-12",
-          "name": "Cove, Matt",
-          "number": "12",
-          "positions": [
-            "F"
-          ],
-          "goals": 1,
-          "assists": 0,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 1
-        },
-        {
-          "player_id": "gr-mitchell-welding-dobson-aaron-4",
-          "name": "Dobson, Aaron",
-          "number": "4",
-          "positions": [
-            "D"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 3,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-dywer-chris-2",
-          "name": "Dywer, Chris",
-          "number": "2",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 3,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-gallant-brett-3",
-          "name": "Gallant, Brett",
-          "number": "3",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "goals": 1,
-          "assists": 0,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 1
-        },
-        {
-          "player_id": "gr-mitchell-welding-jobes-bill-8",
-          "name": "Jobes, Bill",
-          "number": "8",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "gr-mitchell-welding-linkletter-brad-9",
-          "name": "Linkletter, Brad",
-          "number": "9",
-          "positions": [
-            "C"
-          ],
-          "goals": 1,
-          "assists": 0,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        }
-      ],
-      "away": [
-        {
-          "player_id": "ultramar-bourgeois-julien-9",
-          "name": "Bourgeois, Julien",
-          "number": "9",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-dobson-nick-pickle-94",
-          "name": "Dobson, Nick \"Pickle\"",
-          "number": "94",
-          "positions": [
-            "F"
-          ],
-          "goals": 1,
-          "assists": 1,
-          "points": 2,
-          "penalty_minutes": 3,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-fullerton-zack-90",
-          "name": "Fullerton, Zack",
-          "number": "90",
-          "positions": [
-            "F"
-          ],
-          "goals": 1,
-          "assists": 0,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-helm-corey-7",
-          "name": "Helm, Corey",
-          "number": "7",
-          "positions": [
-            "D",
-            "F"
-          ],
-          "goals": 1,
-          "assists": 0,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-hurley-william-15",
-          "name": "Hurley, William",
-          "number": "15",
-          "positions": [
-            "F"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-macpherson-ryan-21",
-          "name": "Macpherson, Ryan",
-          "number": "21",
-          "positions": [
-            "F"
-          ],
-          "goals": 1,
-          "assists": 1,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-mattix-ralph-66",
-          "name": "Mattix, Ralph",
-          "number": "66",
-          "positions": [
-            "D"
-          ],
-          "goals": 1,
-          "assists": 1,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 1
-        },
-        {
-          "player_id": "ultramar-mitchell-gordon-13",
-          "name": "Mitchell, Gordon",
-          "number": "13",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "goals": 0,
-          "assists": 2,
-          "points": 2,
-          "penalty_minutes": 0,
-          "gtg": 0
-        },
-        {
-          "player_id": "ultramar-ryan-geoff-55",
-          "name": "Ryan, Geoff",
-          "number": "55",
-          "positions": [
-            "D"
-          ],
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "gtg": 0
-        }
-      ]
-    },
-    "penalties": [
+        "time": "8:05",
+        "str_strength": "PP",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "7 Corey Helm ( 21 Ryan Macpherson , 9 Julien Bourgeois )",
+        "total": "4-3 G.R. Mitchell Welding"
+      },
+      {
+        "per_period": "3",
+        "time": "5:38",
+        "str_strength": "ES",
+        "team": "G.R. Mitchell Welding",
+        "scorer_assisted_by": "90 Zack Fullerton",
+        "total": "5-3 G.R. Mitchell Welding"
+      },
       {
         "per_period": "2",
         "time": "12:54",
