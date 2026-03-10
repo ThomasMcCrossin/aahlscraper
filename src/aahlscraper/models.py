@@ -53,8 +53,22 @@ class GameRecord:
     division: Optional[str] = None
     box_score_url: Optional[str] = None
     summary_url: Optional[str] = None
+    source_game_ids: List[str] = field(default_factory=list)
 
-    def to_dict(self) -> Dict[str, object]:
+    def __post_init__(self) -> None:
+        if not self.source_game_ids and self.game_id:
+            self.source_game_ids = [self.game_id]
+        else:
+            cleaned: List[str] = []
+            for value in self.source_game_ids:
+                text = str(value or "").strip()
+                if text and text not in cleaned:
+                    cleaned.append(text)
+            if self.game_id and self.game_id not in cleaned:
+                cleaned.insert(0, self.game_id)
+            self.source_game_ids = cleaned
+
+    def to_dict(self, *, include_source_metadata: bool = False) -> Dict[str, object]:
         record: Dict[str, object] = {
             "game_id": self.game_id,
             "status": self.status,
@@ -86,6 +100,10 @@ class GameRecord:
             record["time"] = local.strftime("%I:%M %p").lstrip("0")
         else:
             record["datetime"] = None
+
+        if include_source_metadata:
+            record["source_game_ids"] = list(self.source_game_ids)
+            record["source_game_count"] = len(self.source_game_ids)
 
         return record
 

@@ -29,6 +29,8 @@ if spec is None or spec.loader is None:
 _utils = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(_utils)
 
+from aahlscraper.game_normalization import dedupe_game_mappings
+
 derive_player_id = getattr(_utils, "derive_player_id")
 normalize_player_key = getattr(_utils, "normalize_player_key")
 player_name_variants = getattr(_utils, "player_name_variants")
@@ -206,6 +208,7 @@ def build_registry() -> List[Dict[str, object]]:
     if not isinstance(player_stats_data, list):
         player_stats_data = []
 
+    results_data = dedupe_game_mappings(results_data)
     roster_lookup, team_meta = _build_roster_lookup(rosters_data)
     team_games = _team_games_played(results_data)
     previous_registry = _load_previous_registry()

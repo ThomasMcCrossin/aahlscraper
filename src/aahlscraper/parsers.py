@@ -15,6 +15,8 @@ from bs4 import BeautifulSoup
 from bs4.element import Tag
 
 from .common import normalize_header
+from .game_normalization import canonical_game_key_for_record, dedupe_game_records
+from .game_time import HALIFAX_TZ
 from .models import GameRecord, GameTeamLine, RosterPlayer, ScoreBoardEntry, TeamRoster
 from .utils import derive_player_id, normalize_roster_name, slugify
 
@@ -161,7 +163,7 @@ def parse_ics_games(
     Parse the AAHL ICS calendar into game records.
     """
 
-    local_tz = ZoneInfo(tz_name)
+    local_tz = HALIFAX_TZ if tz_name == "America/Halifax" else ZoneInfo(tz_name)
     games: List[GameRecord] = []
 
     for event in _iter_ics_events(text):
@@ -247,7 +249,7 @@ def parse_scoreboard(html: str, *, tz_name: str = "America/Halifax") -> List[Sco
     """
 
     soup = BeautifulSoup(html, "html.parser")
-    local_tz = ZoneInfo(tz_name)
+    local_tz = HALIFAX_TZ if tz_name == "America/Halifax" else ZoneInfo(tz_name)
     entries: List[ScoreBoardEntry] = []
 
     for board_wrapper in soup.select("div.scoreBoard.periodScore"):
@@ -344,14 +346,31 @@ def merge_games_with_scores(games: List[GameRecord], scores: List[ScoreBoardEntr
     """
 
     games_by_id = {game.game_id: game for game in games}
+    games_by_key = {canonical_game_key_for_record(game): game for game in games}
 
     for score in scores:
         game = games_by_id.get(score.game_id)
+        if not game and len(score.teams) == 2:
+            score_key = canonical_game_key_for_record(
+                GameRecord(
+                    game_id=score.game_id,
+                    start_utc=score.start_local.astimezone(timezone.utc) if score.start_local else None,
+                    start_local=score.start_local,
+                    location=score.location,
+                    status="final" if all(team.final is not None for team in score.teams) else "unknown",
+                    home=score.teams[0],
+                    away=score.teams[1],
+                    division=score.division,
+                    box_score_url=score.box_score_url,
+                    summary_url=score.summary_url,
+                )
+            )
+            game = games_by_key.get(score_key)
         if not game:
             # If the scoreboard has an entry not present in ICS, create a new stub.
             if len(score.teams) == 2:
                 home, away = score.teams
-                games_by_id[score.game_id] = GameRecord(
+                stub = GameRecord(
                     game_id=score.game_id,
                     start_utc=None,
                     start_local=score.start_local,
@@ -363,16 +382,22 @@ def merge_games_with_scores(games: List[GameRecord], scores: List[ScoreBoardEntr
                     box_score_url=score.box_score_url,
                     summary_url=score.summary_url,
                 )
+                games_by_id[score.game_id] = stub
+                games_by_key[canonical_game_key_for_record(stub)] = stub
             continue
 
         game.division = game.division or score.division
-        game.box_score_url = score.box_score_url or game.box_score_url
-        game.summary_url = score.summary_url or game.summary_url
+        if not game.box_score_url:
+            game.box_score_url = score.box_score_url or game.box_score_url
+        if not game.summary_url:
+            game.summary_url = score.summary_url or game.summary_url
         if score.start_local and not game.start_local:
             game.start_local = score.start_local
             game.start_utc = score.start_local.astimezone(timezone.utc)
         if score.location:
             game.location = score.location
+        if score.game_id and score.game_id not in game.source_game_ids:
+            game.source_game_ids.append(score.game_id)
 
         # Align teams by slug to avoid ordering issues
         score_teams = {team.slug: team for team in score.teams}
@@ -387,7 +412,7 @@ def merge_games_with_scores(games: List[GameRecord], scores: List[ScoreBoardEntr
         if game.home.final is not None and game.away.final is not None:
             game.status = "final"
 
-    return list(games_by_id.values())
+    return dedupe_game_records(list(games_by_id.values()))
 
 
 def _extract_text(td: Optional[Tag]) -> Optional[str]:
@@ -534,7 +559,8 @@ def parse_box_score(html: str) -> Dict[str, object]:
         headers = [normalize_header(cell) for cell in raw_rows[0]]
         rows = raw_rows[1:]
 
-        if {"perperiod", "time", "team"}.issubset(headers):
+        has_period_column = any(header in headers for header in ("perperiod", "per_period", "period"))
+        if has_period_column and {"time", "team"}.issubset(headers):
             for row in rows:
                 record = {}
                 for idx, header in enumerate(headers):

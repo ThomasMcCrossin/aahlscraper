@@ -13,6 +13,7 @@ from bs4 import BeautifulSoup
 from bs4.element import Tag
 
 from .common import build_url, find_best_table, normalize_header
+from .game_normalization import dedupe_game_records
 from .models import GameRecord, TeamRoster
 from .parsers import (
     CALENDAR_URL,
@@ -168,6 +169,8 @@ class AmherstHockeyScraper:
                 entry for entry in parse_scoreboard(scores_html) if "amherst" in (entry.location or "").lower()
             ]
             games = merge_games_with_scores(games, scoreboard_entries)
+        else:
+            games = dedupe_game_records(games)
 
         games.sort(
             key=lambda g: (

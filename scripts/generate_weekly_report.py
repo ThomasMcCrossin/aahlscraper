@@ -10,12 +10,19 @@ from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
+import sys
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = PROJECT_ROOT / "data"
 HISTORY_DIR = DATA_DIR / "history"
 REPORT_PATH = DATA_DIR / "weekly_report.json"
 HEADLINES_PATH = DATA_DIR / "headlines.json"
+SRC_DIR = PROJECT_ROOT / "src"
+if str(SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(SRC_DIR))
+
+from aahlscraper.game_normalization import dedupe_game_mappings
+from aahlscraper.game_time import halifax_now, mapping_game_local_start, to_utc
 
 try:
     from build_player_registry import main as build_player_registry_main
@@ -51,15 +58,7 @@ def _latest_history(folder: Path) -> Tuple[Optional[Path], Optional[Path]]:
 
 
 def _parse_game_datetime(value: object) -> Optional[datetime]:
-    if not value:
-        return None
-    try:
-        dt = datetime.fromisoformat(str(value))
-    except ValueError:
-        return None
-    if dt.tzinfo is None:
-        return dt.replace(tzinfo=timezone.utc)
-    return dt.astimezone(timezone.utc)
+    return to_utc(value)
 
 
 def _safe_int(value: object) -> Optional[int]:
@@ -434,100 +433,36 @@ def _load_recent_results(days: Optional[int] = 7) -> List[Dict[str, object]]:
     if not isinstance(results, list):
         return []
 
+    deduped_results = dedupe_game_mappings(results)
     cutoff = None
     if days is not None:
-        cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+        cutoff = halifax_now() - timedelta(days=days)
     recent: List[Dict[str, object]] = []
-    for game in results:
+    for game in deduped_results:
         if str(game.get("status", "")).lower() != "final":
             continue
-        dt = _parse_game_datetime(game.get("datetime"))
-        if cutoff is not None and (not dt or dt < cutoff):
+        local_dt = mapping_game_local_start(game)
+        dt = _parse_game_datetime(game.get("datetime") or game.get("start_local") or game.get("start_utc"))
+        if cutoff is not None and (not local_dt or local_dt < cutoff):
             continue
         game_copy = dict(game)
-        if dt:
-            game_copy["_dt"] = dt
+        if local_dt:
+            game_copy["_dt"] = local_dt
         recent.append(game_copy)
 
     recent.sort(
-        key=lambda item: item.get("_dt") or datetime.min.replace(tzinfo=timezone.utc),
+        key=lambda item: item.get("_dt") or datetime.min.replace(tzinfo=cutoff.tzinfo if cutoff else timezone.utc),
         reverse=True,
     )
     for game in recent:
         game.pop("_dt", None)
     return recent
-
-
-def _game_key(game: Dict[str, object]) -> tuple[str, str, str]:
-    home_line = game.get("home_line") or {}
-    away_line = game.get("away_line") or {}
-    home_slug = str(home_line.get("slug") or game.get("home", "")).strip().lower()
-    away_slug = str(away_line.get("slug") or game.get("away", "")).strip().lower()
-    dt = str(
-        game.get("datetime")
-        or game.get("start_local")
-        or game.get("start_utc")
-        or game.get("game_id")
-    )
-    return (home_slug, away_slug, dt)
-
-
-def _total_player_stats(game: Dict[str, object]) -> int:
-    stats = game.get("player_stats")
-    if not isinstance(stats, dict):
-        return 0
-    total = 0
-    for roster in stats.values():
-        if isinstance(roster, list):
-            total += len(roster)
-    return total
-
-
-def _unique_games(games: List[Dict[str, object]]) -> List[Dict[str, object]]:
-    best_by_key: Dict[tuple[str, str, str], Dict[str, object]] = {}
-    winner_counts: Dict[tuple[str, str, str], int] = {}
-    for game in games:
-        key = _game_key(game)
-        total_stats = _total_player_stats(game)
-        scoreboard_len = len(game.get("scoreboard") or [])
-        winner_side = "home" if (_safe_int(game.get("home_score")) or 0) >= (_safe_int(game.get("away_score")) or 0) else "away"
-        stats = game.get("player_stats") or {}
-        winner_stat_count = len(stats.get(winner_side, [])) if isinstance(stats.get(winner_side), list) else 0
-        existing = best_by_key.get(key)
-        if existing is None:
-            best_by_key[key] = game
-            winner_counts[key] = winner_stat_count
-            continue
-
-        existing_stats = _total_player_stats(existing)
-        existing_scoreboard = len(existing.get("scoreboard") or [])
-        existing_winner_stat = winner_counts.get(key, 0)
-
-        if total_stats > existing_stats:
-            best_by_key[key] = game
-            winner_counts[key] = winner_stat_count
-        elif total_stats == existing_stats and scoreboard_len > existing_scoreboard:
-            best_by_key[key] = game
-            winner_counts[key] = winner_stat_count
-        elif total_stats == existing_stats and scoreboard_len == existing_scoreboard and winner_stat_count > existing_winner_stat:
-            best_by_key[key] = game
-            winner_counts[key] = winner_stat_count
-
-    unique_games = list(best_by_key.values())
-    unique_games.sort(
-        key=lambda item: _parse_game_datetime(item.get("datetime"))
-        or datetime.min.replace(tzinfo=timezone.utc),
-        reverse=True,
-    )
-    return unique_games
-
-
 def _sorted_games(games: List[Dict[str, object]]) -> List[Dict[str, object]]:
     enriched: List[tuple[datetime, Dict[str, object]]] = []
     for game in games:
-        dt = _parse_game_datetime(game.get("datetime"))
+        dt = mapping_game_local_start(game)
         if dt is None:
-            dt = datetime.min.replace(tzinfo=timezone.utc)
+            dt = datetime.min.replace(tzinfo=halifax_now().tzinfo)
         enriched.append((dt, game))
     enriched.sort(key=lambda item: item[0], reverse=True)
     return [item[1] for item in enriched]
@@ -573,7 +508,7 @@ def main() -> None:
 
     movements = _compute_movements(current_snapshot, previous_snapshot)
     recent_games = _load_recent_results(days=7)
-    all_games = _unique_games(_sorted_games(_load_recent_results(days=None)))
+    all_games = _sorted_games(_load_recent_results(days=None))
     recent_summary = _summarize_recent_results(recent_games)
     headline_index = _load_headline_index()
 
