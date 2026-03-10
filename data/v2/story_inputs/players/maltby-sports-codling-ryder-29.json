@@ -1,0 +1,314 @@
+{
+  "entity_type": "player",
+  "entity_id": "maltby-sports-codling-ryder-29",
+  "title": "Ryder Codling season story pack",
+  "generated_at": "2026-03-10T20:36:07.740455+00:00",
+  "verified_facts": {
+    "player": {
+      "player_id": "maltby-sports-codling-ryder-29",
+      "name": "Codling, Ryder",
+      "number": "29",
+      "positions": [
+        "F"
+      ],
+      "team_id": "TYLERARSENEAU-1",
+      "team_name": "Maltby Sports",
+      "team_slug": "maltby-sports",
+      "games_played": 2,
+      "goals": 1,
+      "assists": 2,
+      "points": 3,
+      "penalty_minutes": 0,
+      "points_per_game": 1.5,
+      "team_games_played": 21,
+      "games_missed": null,
+      "recent_points": 0,
+      "recent_games": 0
+    },
+    "season_profile": {
+      "gp": 2,
+      "goals": 1,
+      "assists": 2,
+      "points": 3,
+      "penalty_minutes": 0,
+      "points_per_game": "1.50"
+    },
+    "month_end_checkpoints": [
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "games_played": 2,
+        "goals": 1,
+        "assists": 2,
+        "points": 3
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "games_played": 2,
+        "goals": 1,
+        "assists": 2,
+        "points": 3
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "games_played": 2,
+        "goals": 1,
+        "assists": 2,
+        "points": 3
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "games_played": 2,
+        "goals": 1,
+        "assists": 2,
+        "points": 3
+      },
+      {
+        "month": "2026-03",
+        "month_label": "March 2026",
+        "games_played": 2,
+        "goals": 1,
+        "assists": 2,
+        "points": 3
+      }
+    ],
+    "monthly_game_splits": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "gp": 2,
+        "goals": 1,
+        "assists": 2,
+        "points": 3,
+        "pim": 0,
+        "multi_point_games": 1
+      }
+    ],
+    "monthly_timeline": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "gp": 2,
+        "goals": 1,
+        "assists": 2,
+        "points": 3,
+        "penalty_minutes": 0,
+        "points_per_game": "1.50",
+        "top_game": "2025-10-19 vs G.R. Mitchell Welding (1-2-3)"
+      }
+    ],
+    "key_games": [
+      {
+        "local_date": "2025-10-19",
+        "opponent_name": "G.R. Mitchell Welding",
+        "score": "10-2",
+        "result": "W",
+        "goals": 1,
+        "assists": 2,
+        "points": 3,
+        "game_id": "3274302"
+      },
+      {
+        "local_date": "2025-10-14",
+        "opponent_name": "Ultramar",
+        "score": "7-4",
+        "result": "W",
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "game_id": "3274296"
+      }
+    ],
+    "vs_playoff_teams": {
+      "gp": 2,
+      "goals": 1,
+      "assists": 2,
+      "points": 3
+    },
+    "result_splits": [
+      {
+        "result": "W",
+        "gp": 2,
+        "goals": 1,
+        "assists": 2,
+        "points": 3,
+        "penalty_minutes": 0,
+        "points_per_game": "1.50"
+      },
+      {
+        "result": "L",
+        "gp": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": "0.00"
+      },
+      {
+        "result": "T",
+        "gp": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": "0.00"
+      }
+    ],
+    "opponent_splits": [
+      {
+        "opponent_slug": "gr-mitchell-welding",
+        "opponent_name": "G.R. Mitchell Welding",
+        "gp": 1,
+        "goals": 1,
+        "assists": 2,
+        "points": 3,
+        "penalty_minutes": 0,
+        "points_per_game": "3.00"
+      },
+      {
+        "opponent_slug": "ultramar",
+        "opponent_name": "Ultramar",
+        "gp": 1,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": "0.00"
+      }
+    ],
+    "five_game_windows": {
+      "best": {
+        "start_date": "2025-10-14",
+        "end_date": "2025-10-19",
+        "window": 2,
+        "gp": 2,
+        "goals": 1,
+        "assists": 2,
+        "points": 3,
+        "penalty_minutes": 0,
+        "points_per_game": "1.50"
+      },
+      "worst": {
+        "start_date": "2025-10-14",
+        "end_date": "2025-10-19",
+        "window": 2,
+        "gp": 2,
+        "goals": 1,
+        "assists": 2,
+        "points": 3,
+        "penalty_minutes": 0,
+        "points_per_game": "1.50"
+      }
+    },
+    "half_splits": {
+      "first_half": {
+        "gp": 1,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": "0.00"
+      },
+      "second_half": {
+        "gp": 1,
+        "goals": 1,
+        "assists": 2,
+        "points": 3,
+        "penalty_minutes": 0,
+        "points_per_game": "3.00"
+      }
+    },
+    "streaks": {
+      "longest_point_streak": 1,
+      "longest_goal_streak": 1,
+      "multi_point_games": 1,
+      "hat_tricks": 0
+    },
+    "box_score_log_coverage": {
+      "logged_gp": 2,
+      "season_gp": 2,
+      "game_coverage_pct": "1.000",
+      "logged_goals": 1,
+      "season_goals": 1,
+      "goal_coverage_pct": "1.000",
+      "logged_assists": 2,
+      "season_assists": 2,
+      "assist_coverage_pct": "1.000",
+      "logged_points": 3,
+      "season_points": 3,
+      "point_coverage_pct": "1.000",
+      "is_complete": true
+    },
+    "team_role_profile": {
+      "team_rank": 1,
+      "team_record": "21-4-3",
+      "team_points_rank": 13,
+      "team_points_leader": "Issac Bridge",
+      "gap_to_team_leader": 77,
+      "lead_over_next_teammate": 1,
+      "goal_share_pct": "0.6%"
+    },
+    "team_context_crossovers": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "notes": [
+          "Maltby Sports went 3-1-0 and scored 29 while allowing 15.",
+          "Player logged-sample line that month: 2 GP, 1 G, 2 A, 3 PTS.",
+          "Played to a 3-1-0 month and outscored opponents 29-15.",
+          "Scored well above its season pace, which makes this month an offensive spike."
+        ]
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "notes": [
+          "Maltby Sports went 2-0-1 and scored 13 while allowing 10.",
+          "Month-end standing snapshot: No. 1 with 17 points.",
+          "Went unbeaten at 2-0-1 with a +3 goal differential.",
+          "Scored below its usual rate, which helps explain any stall or fade in the standings."
+        ]
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "notes": [
+          "Maltby Sports went 2-1-0 and scored 20 while allowing 10.",
+          "Played to a 2-1-0 month and outscored opponents 20-10.",
+          "Main opponents that month: Colson Overhead Doors, G.R. Mitchell Welding."
+        ]
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "notes": [
+          "Maltby Sports went 3-1-1 and scored 29 while allowing 18.",
+          "Month-end standing snapshot: No. 1 with 34 points.",
+          "Played to a 3-1-1 month and outscored opponents 29-18.",
+          "The schedule was playoff-heavy, with 4 of 5 games against the postseason field."
+        ]
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "notes": [
+          "Maltby Sports went 5-0-1 and scored 38 while allowing 22.",
+          "Month-end standing snapshot: No. 1 with 42 points.",
+          "Went unbeaten at 5-0-1 with a +16 goal differential.",
+          "This was a clear improvement from the previous month."
+        ]
+      }
+    ]
+  },
+  "angles": [
+    "Played a limited share of the team schedule, which makes availability and sample size part of the profile."
+  ],
+  "suggested_prompts": [
+    "Write a newspaper-style player profile on Ryder Codling and how his season developed month by month.",
+    "Write a playoff program feature on Ryder Codling that explains his role for Maltby Sports.",
+    "Write a local-sports column on what defined Ryder Codling's 2025-2026 season."
+  ]
+}

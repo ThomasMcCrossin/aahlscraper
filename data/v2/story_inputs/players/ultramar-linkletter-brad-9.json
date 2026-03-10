@@ -1,0 +1,458 @@
+{
+  "entity_type": "player",
+  "entity_id": "ultramar-linkletter-brad-9",
+  "title": "Brad Linkletter season story pack",
+  "generated_at": "2026-03-10T20:36:07.767538+00:00",
+  "verified_facts": {
+    "player": {
+      "player_id": "ultramar-linkletter-brad-9",
+      "name": "Linkletter, Brad",
+      "number": "9",
+      "positions": [
+        "C"
+      ],
+      "team_id": "TYLERARSENEAU-2",
+      "team_name": "Ultramar",
+      "team_slug": "ultramar",
+      "games_played": 21,
+      "goals": 25,
+      "assists": 12,
+      "points": 37,
+      "penalty_minutes": 3,
+      "points_per_game": 1.76,
+      "team_games_played": 21,
+      "games_missed": null,
+      "recent_points": 0,
+      "recent_games": 0
+    },
+    "season_profile": {
+      "gp": 15,
+      "goals": 18,
+      "assists": 8,
+      "points": 26,
+      "penalty_minutes": 3,
+      "points_per_game": "1.73"
+    },
+    "month_end_checkpoints": [
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "games_played": 6,
+        "goals": 7,
+        "assists": 1,
+        "points": 8
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "games_played": 10,
+        "goals": 9,
+        "assists": 6,
+        "points": 15
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "games_played": 16,
+        "goals": 18,
+        "assists": 8,
+        "points": 26
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "games_played": 20,
+        "goals": 24,
+        "assists": 12,
+        "points": 36
+      },
+      {
+        "month": "2026-03",
+        "month_label": "March 2026",
+        "games_played": 21,
+        "goals": 25,
+        "assists": 12,
+        "points": 37
+      }
+    ],
+    "monthly_game_splits": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "gp": 3,
+        "goals": 4,
+        "assists": 0,
+        "points": 4,
+        "pim": 0,
+        "multi_point_games": 1
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "gp": 4,
+        "goals": 4,
+        "assists": 2,
+        "points": 6,
+        "pim": 3,
+        "multi_point_games": 2
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "gp": 4,
+        "goals": 3,
+        "assists": 5,
+        "points": 8,
+        "pim": 0,
+        "multi_point_games": 3
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "gp": 1,
+        "goals": 1,
+        "assists": 0,
+        "points": 1,
+        "pim": 0,
+        "multi_point_games": 0
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "gp": 3,
+        "goals": 6,
+        "assists": 1,
+        "points": 7,
+        "pim": 0,
+        "multi_point_games": 2
+      }
+    ],
+    "monthly_timeline": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "gp": 3,
+        "goals": 4,
+        "assists": 0,
+        "points": 4,
+        "penalty_minutes": 0,
+        "points_per_game": "1.33",
+        "top_game": "2025-10-14 vs Maltby Sports (2-0-2)"
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "gp": 4,
+        "goals": 4,
+        "assists": 2,
+        "points": 6,
+        "penalty_minutes": 3,
+        "points_per_game": "1.50",
+        "top_game": "2025-11-04 vs Colson Overhead Doors (2-0-2)"
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "gp": 4,
+        "goals": 3,
+        "assists": 5,
+        "points": 8,
+        "penalty_minutes": 0,
+        "points_per_game": "2.00",
+        "top_game": "2025-12-30 vs Colson Overhead Doors (2-1-3)"
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "gp": 1,
+        "goals": 1,
+        "assists": 0,
+        "points": 1,
+        "penalty_minutes": 0,
+        "points_per_game": "1.00",
+        "top_game": "2026-01-20 vs Maltby Sports (1-0-1)"
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "gp": 3,
+        "goals": 6,
+        "assists": 1,
+        "points": 7,
+        "penalty_minutes": 0,
+        "points_per_game": "2.33",
+        "top_game": "2026-02-15 vs Colson Overhead Doors (3-1-4)"
+      }
+    ],
+    "key_games": [
+      {
+        "local_date": "2026-02-15",
+        "opponent_name": "Colson Overhead Doors",
+        "score": "9-4",
+        "result": "W",
+        "goals": 3,
+        "assists": 1,
+        "points": 4,
+        "game_id": "3276677"
+      },
+      {
+        "local_date": "2025-12-30",
+        "opponent_name": "Colson Overhead Doors",
+        "score": "7-4",
+        "result": "W",
+        "goals": 2,
+        "assists": 1,
+        "points": 3,
+        "game_id": "3276568"
+      },
+      {
+        "local_date": "2025-10-14",
+        "opponent_name": "Maltby Sports",
+        "score": "4-7",
+        "result": "L",
+        "goals": 2,
+        "assists": 0,
+        "points": 2,
+        "game_id": "3274296"
+      },
+      {
+        "local_date": "2025-11-04",
+        "opponent_name": "Colson Overhead Doors",
+        "score": "5-5",
+        "result": "T",
+        "goals": 2,
+        "assists": 0,
+        "points": 2,
+        "game_id": "3276453"
+      },
+      {
+        "local_date": "2026-02-17",
+        "opponent_name": "G.R. Mitchell Welding",
+        "score": "4-7",
+        "result": "L",
+        "goals": 2,
+        "assists": 0,
+        "points": 2,
+        "game_id": "3276681"
+      }
+    ],
+    "vs_playoff_teams": {
+      "gp": 11,
+      "goals": 10,
+      "assists": 5,
+      "points": 15
+    },
+    "result_splits": [
+      {
+        "result": "W",
+        "gp": 2,
+        "goals": 5,
+        "assists": 2,
+        "points": 7,
+        "penalty_minutes": 0,
+        "points_per_game": "3.50"
+      },
+      {
+        "result": "L",
+        "gp": 11,
+        "goals": 11,
+        "assists": 5,
+        "points": 16,
+        "penalty_minutes": 0,
+        "points_per_game": "1.45"
+      },
+      {
+        "result": "T",
+        "gp": 2,
+        "goals": 2,
+        "assists": 1,
+        "points": 3,
+        "penalty_minutes": 3,
+        "points_per_game": "1.50"
+      }
+    ],
+    "opponent_splits": [
+      {
+        "opponent_slug": "colson-overhead-doors",
+        "opponent_name": "Colson Overhead Doors",
+        "gp": 4,
+        "goals": 8,
+        "assists": 3,
+        "points": 11,
+        "penalty_minutes": 0,
+        "points_per_game": "2.75"
+      },
+      {
+        "opponent_slug": "gr-mitchell-welding",
+        "opponent_name": "G.R. Mitchell Welding",
+        "gp": 6,
+        "goals": 4,
+        "assists": 4,
+        "points": 8,
+        "penalty_minutes": 3,
+        "points_per_game": "1.33"
+      },
+      {
+        "opponent_slug": "maltby-sports",
+        "opponent_name": "Maltby Sports",
+        "gp": 3,
+        "goals": 4,
+        "assists": 0,
+        "points": 4,
+        "penalty_minutes": 0,
+        "points_per_game": "1.33"
+      },
+      {
+        "opponent_slug": "j-and-k-electric",
+        "opponent_name": "J&K Electric",
+        "gp": 2,
+        "goals": 2,
+        "assists": 1,
+        "points": 3,
+        "penalty_minutes": 0,
+        "points_per_game": "1.50"
+      }
+    ],
+    "five_game_windows": {
+      "best": {
+        "start_date": "2025-12-23",
+        "end_date": "2026-02-17",
+        "window": 5,
+        "gp": 5,
+        "goals": 9,
+        "assists": 3,
+        "points": 12,
+        "penalty_minutes": 0,
+        "points_per_game": "2.40"
+      },
+      "worst": {
+        "start_date": "2025-10-21",
+        "end_date": "2025-11-25",
+        "window": 5,
+        "gp": 5,
+        "goals": 5,
+        "assists": 1,
+        "points": 6,
+        "penalty_minutes": 3,
+        "points_per_game": "1.20"
+      }
+    },
+    "half_splits": {
+      "first_half": {
+        "gp": 7,
+        "goals": 8,
+        "assists": 2,
+        "points": 10,
+        "penalty_minutes": 3,
+        "points_per_game": "1.43"
+      },
+      "second_half": {
+        "gp": 8,
+        "goals": 10,
+        "assists": 6,
+        "points": 16,
+        "penalty_minutes": 0,
+        "points_per_game": "2.00"
+      }
+    },
+    "streaks": {
+      "longest_point_streak": 15,
+      "longest_goal_streak": 6,
+      "multi_point_games": 8,
+      "hat_tricks": 1
+    },
+    "box_score_log_coverage": {
+      "logged_gp": 15,
+      "season_gp": 21,
+      "game_coverage_pct": "0.714",
+      "logged_goals": 18,
+      "season_goals": 25,
+      "goal_coverage_pct": "0.720",
+      "logged_assists": 8,
+      "season_assists": 12,
+      "assist_coverage_pct": "0.667",
+      "logged_points": 26,
+      "season_points": 37,
+      "point_coverage_pct": "0.703",
+      "is_complete": false
+    },
+    "team_role_profile": {
+      "team_rank": 4,
+      "team_record": "5-19-4",
+      "team_points_rank": 1,
+      "team_points_leader": "Brad Linkletter",
+      "gap_to_team_leader": 0,
+      "lead_over_next_teammate": 9,
+      "goal_share_pct": "23.1%"
+    },
+    "team_context_crossovers": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "notes": [
+          "Ultramar went 0-3-0 and scored 12 while allowing 25.",
+          "Player logged-sample line that month: 3 GP, 4 G, 0 A, 4 PTS.",
+          "Played to a 0-3-0 month and outscored opponents 12-25.",
+          "Allowed goals at a higher rate than normal, which put strain on the month."
+        ]
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "notes": [
+          "Ultramar went 0-2-3 and scored 16 while allowing 18.",
+          "Month-end standing snapshot: No. 4 with 3 points.",
+          "Player logged-sample line that month: 4 GP, 4 G, 2 A, 6 PTS.",
+          "Played to a 0-2-3 month and outscored opponents 16-18.",
+          "Defended better than its season norm, which gave the month a steadier feel."
+        ]
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "notes": [
+          "Ultramar went 1-4-0 and scored 24 while allowing 35.",
+          "Player logged-sample line that month: 4 GP, 3 G, 5 A, 8 PTS.",
+          "Played to a 1-4-0 month and outscored opponents 24-35.",
+          "Scored well above its season pace, which makes this month an offensive spike."
+        ]
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "notes": [
+          "Ultramar went 1-3-0 and scored 10 while allowing 22.",
+          "Month-end standing snapshot: No. 4 with 9 points.",
+          "Player logged-sample line that month: 1 GP, 1 G, 0 A, 1 PTS.",
+          "Played to a 1-3-0 month and outscored opponents 10-22.",
+          "Scored below its usual rate, which helps explain any stall or fade in the standings."
+        ]
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "notes": [
+          "Ultramar went 1-3-0 and scored 17 while allowing 20.",
+          "Month-end standing snapshot: No. 4 with 13 points.",
+          "Player logged-sample line that month: 3 GP, 6 G, 1 A, 7 PTS.",
+          "Played to a 1-3-0 month and outscored opponents 17-20.",
+          "The schedule was playoff-heavy, with 3 of 4 games against the postseason field."
+        ]
+      }
+    ]
+  },
+  "angles": [
+    "Was available for almost the full season, which supports an ironman or lineup fixture angle.",
+    "Finished as his team\u2019s points leader, which makes him a natural centerpiece for any team-season story.",
+    "Finished inside the league top 10 in points at No. 10.",
+    "Profiles more like a finisher than a pure setup player; the goal totals drive the story.",
+    "Logged 8 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.",
+    "Recorded 1 hat trick, which is a ready-made local-paper hook.",
+    "Peak month was December 2025 (8 points), which helps structure the season arc."
+  ],
+  "suggested_prompts": [
+    "Write a newspaper-style player profile on Brad Linkletter and how his season developed month by month.",
+    "Write a playoff program feature on Brad Linkletter that explains his role for Ultramar.",
+    "Write a local-sports column on what defined Brad Linkletter's 2025-2026 season."
+  ]
+}

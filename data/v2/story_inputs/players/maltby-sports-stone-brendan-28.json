@@ -1,0 +1,270 @@
+{
+  "entity_type": "player",
+  "entity_id": "maltby-sports-stone-brendan-28",
+  "title": "Brendan Stone season story pack",
+  "generated_at": "2026-03-10T20:36:07.739879+00:00",
+  "verified_facts": {
+    "player": {
+      "player_id": "maltby-sports-stone-brendan-28",
+      "name": "Stone, Brendan",
+      "number": "28",
+      "positions": [
+        "F"
+      ],
+      "team_id": "TYLERARSENEAU-1",
+      "team_name": "Maltby Sports",
+      "team_slug": "maltby-sports",
+      "games_played": 1,
+      "goals": 1,
+      "assists": 1,
+      "points": 2,
+      "penalty_minutes": 0,
+      "points_per_game": 2.0,
+      "team_games_played": 21,
+      "games_missed": null,
+      "recent_points": 0,
+      "recent_games": 0
+    },
+    "season_profile": {
+      "gp": 1,
+      "goals": 1,
+      "assists": 1,
+      "points": 2,
+      "penalty_minutes": 0,
+      "points_per_game": "2.00"
+    },
+    "month_end_checkpoints": [
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "games_played": 1,
+        "goals": 1,
+        "assists": 1,
+        "points": 2
+      },
+      {
+        "month": "2026-03",
+        "month_label": "March 2026",
+        "games_played": 1,
+        "goals": 1,
+        "assists": 1,
+        "points": 2
+      }
+    ],
+    "monthly_game_splits": [
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "gp": 1,
+        "goals": 1,
+        "assists": 1,
+        "points": 2,
+        "pim": 0,
+        "multi_point_games": 1
+      }
+    ],
+    "monthly_timeline": [
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "gp": 1,
+        "goals": 1,
+        "assists": 1,
+        "points": 2,
+        "penalty_minutes": 0,
+        "points_per_game": "2.00",
+        "top_game": "2026-02-17 vs J&K Electric (1-1-2)"
+      }
+    ],
+    "key_games": [
+      {
+        "local_date": "2026-02-17",
+        "opponent_name": "J&K Electric",
+        "score": "7-5",
+        "result": "W",
+        "goals": 1,
+        "assists": 1,
+        "points": 2,
+        "game_id": "3276679"
+      }
+    ],
+    "vs_playoff_teams": {
+      "gp": 1,
+      "goals": 1,
+      "assists": 1,
+      "points": 2
+    },
+    "result_splits": [
+      {
+        "result": "W",
+        "gp": 1,
+        "goals": 1,
+        "assists": 1,
+        "points": 2,
+        "penalty_minutes": 0,
+        "points_per_game": "2.00"
+      },
+      {
+        "result": "L",
+        "gp": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": "0.00"
+      },
+      {
+        "result": "T",
+        "gp": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": "0.00"
+      }
+    ],
+    "opponent_splits": [
+      {
+        "opponent_slug": "j-and-k-electric",
+        "opponent_name": "J&K Electric",
+        "gp": 1,
+        "goals": 1,
+        "assists": 1,
+        "points": 2,
+        "penalty_minutes": 0,
+        "points_per_game": "2.00"
+      }
+    ],
+    "five_game_windows": {
+      "best": {
+        "start_date": "2026-02-17",
+        "end_date": "2026-02-17",
+        "window": 1,
+        "gp": 1,
+        "goals": 1,
+        "assists": 1,
+        "points": 2,
+        "penalty_minutes": 0,
+        "points_per_game": "2.00"
+      },
+      "worst": {
+        "start_date": "2026-02-17",
+        "end_date": "2026-02-17",
+        "window": 1,
+        "gp": 1,
+        "goals": 1,
+        "assists": 1,
+        "points": 2,
+        "penalty_minutes": 0,
+        "points_per_game": "2.00"
+      }
+    },
+    "half_splits": {
+      "first_half": {
+        "gp": 1,
+        "goals": 1,
+        "assists": 1,
+        "points": 2,
+        "penalty_minutes": 0,
+        "points_per_game": "2.00"
+      },
+      "second_half": {
+        "gp": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": "0.00"
+      }
+    },
+    "streaks": {
+      "longest_point_streak": 1,
+      "longest_goal_streak": 1,
+      "multi_point_games": 1,
+      "hat_tricks": 0
+    },
+    "box_score_log_coverage": {
+      "logged_gp": 1,
+      "season_gp": 1,
+      "game_coverage_pct": "1.000",
+      "logged_goals": 1,
+      "season_goals": 1,
+      "goal_coverage_pct": "1.000",
+      "logged_assists": 1,
+      "season_assists": 1,
+      "assist_coverage_pct": "1.000",
+      "logged_points": 2,
+      "season_points": 2,
+      "point_coverage_pct": "1.000",
+      "is_complete": true
+    },
+    "team_role_profile": {
+      "team_rank": 1,
+      "team_record": "21-4-3",
+      "team_points_rank": 14,
+      "team_points_leader": "Issac Bridge",
+      "gap_to_team_leader": 78,
+      "lead_over_next_teammate": 0,
+      "goal_share_pct": "0.6%"
+    },
+    "team_context_crossovers": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "notes": [
+          "Maltby Sports went 3-1-0 and scored 29 while allowing 15.",
+          "Played to a 3-1-0 month and outscored opponents 29-15.",
+          "Scored well above its season pace, which makes this month an offensive spike."
+        ]
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "notes": [
+          "Maltby Sports went 2-0-1 and scored 13 while allowing 10.",
+          "Month-end standing snapshot: No. 1 with 17 points.",
+          "Went unbeaten at 2-0-1 with a +3 goal differential.",
+          "Scored below its usual rate, which helps explain any stall or fade in the standings."
+        ]
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "notes": [
+          "Maltby Sports went 2-1-0 and scored 20 while allowing 10.",
+          "Played to a 2-1-0 month and outscored opponents 20-10.",
+          "Main opponents that month: Colson Overhead Doors, G.R. Mitchell Welding."
+        ]
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "notes": [
+          "Maltby Sports went 3-1-1 and scored 29 while allowing 18.",
+          "Month-end standing snapshot: No. 1 with 34 points.",
+          "Played to a 3-1-1 month and outscored opponents 29-18.",
+          "The schedule was playoff-heavy, with 4 of 5 games against the postseason field."
+        ]
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "notes": [
+          "Maltby Sports went 5-0-1 and scored 38 while allowing 22.",
+          "Month-end standing snapshot: No. 1 with 42 points.",
+          "Player logged-sample line that month: 1 GP, 1 G, 1 A, 2 PTS.",
+          "Went unbeaten at 5-0-1 with a +16 goal differential.",
+          "This was a clear improvement from the previous month."
+        ]
+      }
+    ]
+  },
+  "angles": [
+    "Played a limited share of the team schedule, which makes availability and sample size part of the profile."
+  ],
+  "suggested_prompts": [
+    "Write a newspaper-style player profile on Brendan Stone and how his season developed month by month.",
+    "Write a playoff program feature on Brendan Stone that explains his role for Maltby Sports.",
+    "Write a local-sports column on what defined Brendan Stone's 2025-2026 season."
+  ]
+}

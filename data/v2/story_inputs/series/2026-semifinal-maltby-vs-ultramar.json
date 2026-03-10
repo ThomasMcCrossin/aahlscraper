@@ -1,0 +1,666 @@
+{
+  "entity_type": "series",
+  "entity_id": "2026-semifinal-maltby-vs-ultramar",
+  "title": "Maltby Sports vs Ultramar",
+  "generated_at": "2026-03-10T20:36:07.663796+00:00",
+  "verified_facts": {
+    "series": {
+      "series_id": "2026-semifinal-maltby-vs-ultramar",
+      "round_id": "2026-semifinals",
+      "round_label": "Semifinals",
+      "label": "Maltby Sports vs Ultramar",
+      "best_of": 3,
+      "wins_needed": 2,
+      "higher_seed": {
+        "seed": 1,
+        "team_slug": "maltby-sports",
+        "team_name": "Maltby Sports",
+        "standing": {
+          "rank": 1,
+          "team_name": "Maltby Sports",
+          "team_slug": "maltby-sports",
+          "points": 45,
+          "wins": 21,
+          "losses": 4,
+          "ties": 3,
+          "goals_for": 170,
+          "goals_against": 97,
+          "last_10": "7-2-1",
+          "streak": "Tied 1",
+          "record": "21-4-3"
+        }
+      },
+      "lower_seed": {
+        "seed": 4,
+        "team_slug": "ultramar",
+        "team_name": "Ultramar",
+        "standing": {
+          "rank": 4,
+          "team_name": "Ultramar",
+          "team_slug": "ultramar",
+          "points": 14,
+          "wins": 5,
+          "losses": 19,
+          "ties": 4,
+          "goals_for": 108,
+          "goals_against": 155,
+          "last_10": "2-7-1",
+          "streak": "Lost 1",
+          "record": "5-19-4"
+        }
+      },
+      "wins": {
+        "maltby-sports": 0,
+        "ultramar": 0
+      },
+      "status": "upcoming",
+      "state_label": "Series tied 0-0",
+      "completed_games": [],
+      "upcoming_games": [
+        {
+          "canonical_game_id": "3306127",
+          "source_game_ids": [
+            "3306127"
+          ],
+          "source_game_count": 1,
+          "status": "scheduled",
+          "season_phase": "playoffs",
+          "playoff_round_id": "2026-semifinals",
+          "playoff_series_id": "2026-semifinal-maltby-vs-ultramar",
+          "location": "Amherst",
+          "division": null,
+          "start_local": "2026-03-10T22:00:00-03:00",
+          "start_utc": "2026-03-11T01:00:00+00:00",
+          "local_date": "2026-03-10",
+          "local_time": "10:00 PM",
+          "home_team": "Maltby Sports",
+          "home_slug": "maltby-sports",
+          "away_team": "Ultramar",
+          "away_slug": "ultramar",
+          "home_score": null,
+          "away_score": null,
+          "result": null,
+          "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306127&u=DSMALL&s=hockey&p=preview",
+          "summary_url": null,
+          "scoring_event_count": 0,
+          "penalty_count": 0,
+          "notable_performers": []
+        },
+        {
+          "canonical_game_id": "3306133",
+          "source_game_ids": [
+            "3306133"
+          ],
+          "source_game_count": 1,
+          "status": "scheduled",
+          "season_phase": "playoffs",
+          "playoff_round_id": "2026-semifinals",
+          "playoff_series_id": "2026-semifinal-maltby-vs-ultramar",
+          "location": "Amherst",
+          "division": null,
+          "start_local": "2026-03-24T20:45:00-03:00",
+          "start_utc": "2026-03-24T23:45:00+00:00",
+          "local_date": "2026-03-24",
+          "local_time": "8:45 PM",
+          "home_team": "Maltby Sports",
+          "home_slug": "maltby-sports",
+          "away_team": "Ultramar",
+          "away_slug": "ultramar",
+          "home_score": null,
+          "away_score": null,
+          "result": null,
+          "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306133&u=DSMALL&s=hockey&p=preview",
+          "summary_url": null,
+          "scoring_event_count": 0,
+          "penalty_count": 0,
+          "notable_performers": []
+        }
+      ],
+      "next_game": {
+        "canonical_game_id": "3306127",
+        "source_game_ids": [
+          "3306127"
+        ],
+        "source_game_count": 1,
+        "status": "scheduled",
+        "season_phase": "playoffs",
+        "playoff_round_id": "2026-semifinals",
+        "playoff_series_id": "2026-semifinal-maltby-vs-ultramar",
+        "location": "Amherst",
+        "division": null,
+        "start_local": "2026-03-10T22:00:00-03:00",
+        "start_utc": "2026-03-11T01:00:00+00:00",
+        "local_date": "2026-03-10",
+        "local_time": "10:00 PM",
+        "home_team": "Maltby Sports",
+        "home_slug": "maltby-sports",
+        "away_team": "Ultramar",
+        "away_slug": "ultramar",
+        "home_score": null,
+        "away_score": null,
+        "result": null,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306127&u=DSMALL&s=hockey&p=preview",
+        "summary_url": null,
+        "scoring_event_count": 0,
+        "penalty_count": 0,
+        "notable_performers": []
+      },
+      "known_game_dates": [
+        "2026-03-10",
+        "2026-03-24"
+      ],
+      "notes": "AAHL playoff games continue to appear in the standard schedule feed. Only currently posted local dates are listed here.",
+      "elimination_pressure": [
+        {
+          "team_slug": "maltby-sports",
+          "team_name": "Maltby Sports",
+          "wins": 0,
+          "losses": 0,
+          "wins_needed": 2,
+          "facing_elimination": false
+        },
+        {
+          "team_slug": "ultramar",
+          "team_name": "Ultramar",
+          "wins": 0,
+          "losses": 0,
+          "wins_needed": 2,
+          "facing_elimination": false
+        }
+      ],
+      "regular_season_head_to_head": {
+        "matchup": [
+          "maltby-sports",
+          "ultramar"
+        ],
+        "games_played": 5,
+        "teams": {
+          "maltby-sports": {
+            "wins": 5,
+            "losses": 0,
+            "ties": 0,
+            "goals_for": 32,
+            "goals_against": 15
+          },
+          "ultramar": {
+            "wins": 0,
+            "losses": 5,
+            "ties": 0,
+            "goals_for": 15,
+            "goals_against": 32
+          }
+        }
+      }
+    },
+    "regular_season_meetings": [
+      {
+        "canonical_game_id": "3274296",
+        "local_date": "2025-10-14",
+        "local_time": "8:45 PM",
+        "month": "2025-10",
+        "season_phase": "regular_season",
+        "team_name": "Maltby Sports",
+        "team_slug": "maltby-sports",
+        "opponent_name": "Ultramar",
+        "opponent_slug": "ultramar",
+        "team_score": 7,
+        "opponent_score": 4,
+        "result": "W",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274296&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3274306",
+        "local_date": "2025-10-21",
+        "local_time": "10:00 PM",
+        "month": "2025-10",
+        "season_phase": "regular_season",
+        "team_name": "Maltby Sports",
+        "team_slug": "maltby-sports",
+        "opponent_name": "Ultramar",
+        "opponent_slug": "ultramar",
+        "team_score": 9,
+        "opponent_score": 5,
+        "result": "W",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274306&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276570",
+        "local_date": "2026-01-04",
+        "local_time": "9:00 PM",
+        "month": "2026-01",
+        "season_phase": "regular_season",
+        "team_name": "Maltby Sports",
+        "team_slug": "maltby-sports",
+        "opponent_name": "Ultramar",
+        "opponent_slug": "ultramar",
+        "team_score": 7,
+        "opponent_score": 1,
+        "result": "W",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276570&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276647",
+        "local_date": "2026-01-20",
+        "local_time": "8:45 PM",
+        "month": "2026-01",
+        "season_phase": "regular_season",
+        "team_name": "Maltby Sports",
+        "team_slug": "maltby-sports",
+        "opponent_name": "Ultramar",
+        "opponent_slug": "ultramar",
+        "team_score": 5,
+        "opponent_score": 4,
+        "result": "W",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276647&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276671",
+        "local_date": "2026-02-10",
+        "local_time": "8:45 PM",
+        "month": "2026-02",
+        "season_phase": "regular_season",
+        "team_name": "Maltby Sports",
+        "team_slug": "maltby-sports",
+        "opponent_name": "Ultramar",
+        "opponent_slug": "ultramar",
+        "team_score": 4,
+        "opponent_score": 1,
+        "result": "W",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276671&u=DSMALL&s=hockey&p=boxscore"
+      }
+    ],
+    "higher_seed_recent_results": [
+      {
+        "canonical_game_id": "3276665",
+        "local_date": "2026-02-03",
+        "local_time": "10:00 PM",
+        "month": "2026-02",
+        "season_phase": "regular_season",
+        "team_name": "Maltby Sports",
+        "team_slug": "maltby-sports",
+        "opponent_name": "Colson Overhead Doors",
+        "opponent_slug": "colson-overhead-doors",
+        "team_score": 7,
+        "opponent_score": 2,
+        "result": "W",
+        "is_playoff_opponent": false,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276665&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276671",
+        "local_date": "2026-02-10",
+        "local_time": "8:45 PM",
+        "month": "2026-02",
+        "season_phase": "regular_season",
+        "team_name": "Maltby Sports",
+        "team_slug": "maltby-sports",
+        "opponent_name": "Ultramar",
+        "opponent_slug": "ultramar",
+        "team_score": 4,
+        "opponent_score": 1,
+        "result": "W",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276671&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276679",
+        "local_date": "2026-02-17",
+        "local_time": "8:45 PM",
+        "month": "2026-02",
+        "season_phase": "regular_season",
+        "team_name": "Maltby Sports",
+        "team_slug": "maltby-sports",
+        "opponent_name": "J&K Electric",
+        "opponent_slug": "j-and-k-electric",
+        "team_score": 7,
+        "opponent_score": 5,
+        "result": "W",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276679&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276685",
+        "local_date": "2026-02-22",
+        "local_time": "9:00 PM",
+        "month": "2026-02",
+        "season_phase": "regular_season",
+        "team_name": "Maltby Sports",
+        "team_slug": "maltby-sports",
+        "opponent_name": "Colson Overhead Doors",
+        "opponent_slug": "colson-overhead-doors",
+        "team_score": 6,
+        "opponent_score": 2,
+        "result": "W",
+        "is_playoff_opponent": false,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276685&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276687",
+        "local_date": "2026-02-24",
+        "local_time": "8:45 PM",
+        "month": "2026-02",
+        "season_phase": "regular_season",
+        "team_name": "Maltby Sports",
+        "team_slug": "maltby-sports",
+        "opponent_name": "J&K Electric",
+        "opponent_slug": "j-and-k-electric",
+        "team_score": 8,
+        "opponent_score": 8,
+        "result": "T",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276687&u=DSMALL&s=hockey&p=boxscore"
+      }
+    ],
+    "lower_seed_recent_results": [
+      {
+        "canonical_game_id": "3276657",
+        "local_date": "2026-01-27",
+        "local_time": "8:45 PM",
+        "month": "2026-01",
+        "season_phase": "regular_season",
+        "team_name": "Ultramar",
+        "team_slug": "ultramar",
+        "opponent_name": "G.R. Mitchell Welding",
+        "opponent_slug": "gr-mitchell-welding",
+        "team_score": 3,
+        "opponent_score": 10,
+        "result": "L",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276657&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276671",
+        "local_date": "2026-02-10",
+        "local_time": "8:45 PM",
+        "month": "2026-02",
+        "season_phase": "regular_season",
+        "team_name": "Ultramar",
+        "team_slug": "ultramar",
+        "opponent_name": "Maltby Sports",
+        "opponent_slug": "maltby-sports",
+        "team_score": 1,
+        "opponent_score": 4,
+        "result": "L",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276671&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276677",
+        "local_date": "2026-02-15",
+        "local_time": "9:00 PM",
+        "month": "2026-02",
+        "season_phase": "regular_season",
+        "team_name": "Ultramar",
+        "team_slug": "ultramar",
+        "opponent_name": "Colson Overhead Doors",
+        "opponent_slug": "colson-overhead-doors",
+        "team_score": 9,
+        "opponent_score": 4,
+        "result": "W",
+        "is_playoff_opponent": false,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276677&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276681",
+        "local_date": "2026-02-17",
+        "local_time": "10:00 PM",
+        "month": "2026-02",
+        "season_phase": "regular_season",
+        "team_name": "Ultramar",
+        "team_slug": "ultramar",
+        "opponent_name": "G.R. Mitchell Welding",
+        "opponent_slug": "gr-mitchell-welding",
+        "team_score": 4,
+        "opponent_score": 7,
+        "result": "L",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276681&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276689",
+        "local_date": "2026-02-24",
+        "local_time": "10:00 PM",
+        "month": "2026-02",
+        "season_phase": "regular_season",
+        "team_name": "Ultramar",
+        "team_slug": "ultramar",
+        "opponent_name": "G.R. Mitchell Welding",
+        "opponent_slug": "gr-mitchell-welding",
+        "team_score": 3,
+        "opponent_score": 5,
+        "result": "L",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276689&u=DSMALL&s=hockey&p=boxscore"
+      }
+    ],
+    "higher_seed_leaders": [
+      {
+        "player_id": "maltby-sports-bridge-issac-98",
+        "name": "Bridge, Issac",
+        "number": "98",
+        "positions": [
+          "C"
+        ],
+        "team_id": "TYLERARSENEAU-1",
+        "team_name": "Maltby Sports",
+        "team_slug": "maltby-sports",
+        "games_played": 26,
+        "goals": 49,
+        "assists": 31,
+        "points": 80,
+        "penalty_minutes": 6,
+        "points_per_game": 3.08,
+        "team_games_played": 21,
+        "games_missed": null,
+        "recent_points": 0,
+        "recent_games": 0
+      },
+      {
+        "player_id": "maltby-sports-mccarthy-ian-9",
+        "name": "McCarthy, Ian",
+        "number": "9",
+        "positions": [
+          "F"
+        ],
+        "team_id": "TYLERARSENEAU-1",
+        "team_name": "Maltby Sports",
+        "team_slug": "maltby-sports",
+        "games_played": 23,
+        "goals": 23,
+        "assists": 31,
+        "points": 54,
+        "penalty_minutes": 6,
+        "points_per_game": 2.35,
+        "team_games_played": 21,
+        "games_missed": null,
+        "recent_points": 0,
+        "recent_games": 0
+      },
+      {
+        "player_id": "maltby-sports-johnson-trevor-18",
+        "name": "Johnson, Trevor",
+        "number": "18",
+        "positions": [
+          "D"
+        ],
+        "team_id": "TYLERARSENEAU-1",
+        "team_name": "Maltby Sports",
+        "team_slug": "maltby-sports",
+        "games_played": 26,
+        "goals": 21,
+        "assists": 17,
+        "points": 38,
+        "penalty_minutes": 33,
+        "points_per_game": 1.46,
+        "team_games_played": 21,
+        "games_missed": null,
+        "recent_points": 0,
+        "recent_games": 0
+      },
+      {
+        "player_id": "maltby-sports-mccrossin-thomas-19",
+        "name": "Mccrossin, Thomas",
+        "number": "19",
+        "positions": [
+          "F"
+        ],
+        "team_id": "TYLERARSENEAU-1",
+        "team_name": "Maltby Sports",
+        "team_slug": "maltby-sports",
+        "games_played": 22,
+        "goals": 13,
+        "assists": 24,
+        "points": 37,
+        "penalty_minutes": 6,
+        "points_per_game": 1.68,
+        "team_games_played": 21,
+        "games_missed": null,
+        "recent_points": 0,
+        "recent_games": 0
+      },
+      {
+        "player_id": "maltby-sports-small-danny-biggie-16",
+        "name": "Small, Danny \"Biggie\"",
+        "number": "16",
+        "positions": [
+          "F",
+          "D"
+        ],
+        "team_id": "TYLERARSENEAU-1",
+        "team_name": "Maltby Sports",
+        "team_slug": "maltby-sports",
+        "games_played": 19,
+        "goals": 18,
+        "assists": 15,
+        "points": 33,
+        "penalty_minutes": 3,
+        "points_per_game": 1.74,
+        "team_games_played": 21,
+        "games_missed": null,
+        "recent_points": 0,
+        "recent_games": 0
+      }
+    ],
+    "lower_seed_leaders": [
+      {
+        "player_id": "ultramar-linkletter-brad-9",
+        "name": "Linkletter, Brad",
+        "number": "9",
+        "positions": [
+          "C"
+        ],
+        "team_id": "TYLERARSENEAU-2",
+        "team_name": "Ultramar",
+        "team_slug": "ultramar",
+        "games_played": 21,
+        "goals": 25,
+        "assists": 12,
+        "points": 37,
+        "penalty_minutes": 3,
+        "points_per_game": 1.76,
+        "team_games_played": 21,
+        "games_missed": null,
+        "recent_points": 0,
+        "recent_games": 0
+      },
+      {
+        "player_id": "ultramar-dobson-aaron-4",
+        "name": "Dobson, Aaron",
+        "number": "4",
+        "positions": [
+          "D"
+        ],
+        "team_id": "TYLERARSENEAU-2",
+        "team_name": "Ultramar",
+        "team_slug": "ultramar",
+        "games_played": 16,
+        "goals": 8,
+        "assists": 20,
+        "points": 28,
+        "penalty_minutes": 15,
+        "points_per_game": 1.75,
+        "team_games_played": 21,
+        "games_missed": null,
+        "recent_points": 0,
+        "recent_games": 0
+      },
+      {
+        "player_id": "ultramar-allen-tyler-tuffy-11",
+        "name": "Allen, Tyler \"Tuffy\"",
+        "number": "11",
+        "positions": [
+          "F"
+        ],
+        "team_id": "TYLERARSENEAU-2",
+        "team_name": "Ultramar",
+        "team_slug": "ultramar",
+        "games_played": 15,
+        "goals": 13,
+        "assists": 13,
+        "points": 26,
+        "penalty_minutes": 26,
+        "points_per_game": 1.73,
+        "team_games_played": 21,
+        "games_missed": null,
+        "recent_points": 0,
+        "recent_games": 0
+      },
+      {
+        "player_id": "ultramar-miller-madden-6",
+        "name": "Miller, Madden",
+        "number": "6",
+        "positions": [
+          "F"
+        ],
+        "team_id": "TYLERARSENEAU-2",
+        "team_name": "Ultramar",
+        "team_slug": "ultramar",
+        "games_played": 14,
+        "goals": 13,
+        "assists": 9,
+        "points": 22,
+        "penalty_minutes": 8,
+        "points_per_game": 1.57,
+        "team_games_played": 21,
+        "games_missed": null,
+        "recent_points": 0,
+        "recent_games": 0
+      },
+      {
+        "player_id": "ultramar-jobes-bill-8",
+        "name": "Jobes, Bill",
+        "number": "8",
+        "positions": [
+          "F"
+        ],
+        "team_id": "TYLERARSENEAU-2",
+        "team_name": "Ultramar",
+        "team_slug": "ultramar",
+        "games_played": 15,
+        "goals": 2,
+        "assists": 19,
+        "points": 21,
+        "penalty_minutes": 0,
+        "points_per_game": 1.4,
+        "team_games_played": 21,
+        "games_missed": null,
+        "recent_points": 0,
+        "recent_games": 0
+      }
+    ]
+  },
+  "angles": [
+    "On standings points alone, Maltby Sports enters as the clear favorite over Ultramar.",
+    "The regular-season head-to-head was not random noise; one side owned the matchup enough to matter in the preview.",
+    "The first posted playoff date is 2026-03-10, so the preview can be written as an opening-night setup rather than a reactive recap."
+  ],
+  "suggested_prompts": [
+    "Write a newspaper playoff preview for Maltby Sports vs Ultramar that explains why the matchup should be watched closely.",
+    "Write a feature on the stars and pressure points in the Maltby Sports vs Ultramar semifinal."
+  ]
+}

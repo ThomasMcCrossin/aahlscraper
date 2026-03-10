@@ -1,0 +1,2232 @@
+{
+  "entity_type": "team",
+  "entity_id": "colson-overhead-doors",
+  "title": "Colson Overhead Doors season story pack",
+  "generated_at": "2026-03-10T20:36:07.666054+00:00",
+  "verified_facts": {
+    "standing": {
+      "rank": 5,
+      "team_name": "Colson Overhead Doors",
+      "team_slug": "colson-overhead-doors",
+      "points": 9,
+      "wins": 3,
+      "losses": 22,
+      "ties": 3,
+      "goals_for": 91,
+      "goals_against": 182,
+      "last_10": "1-8-1",
+      "streak": "Lost 6",
+      "record": "3-22-3"
+    },
+    "month_end_checkpoints": [
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "rank": 5,
+        "points": 2,
+        "record": "0-6-2",
+        "streak": "Lost 1"
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "rank": 5,
+        "points": 7,
+        "record": "2-16-3",
+        "streak": "Tied 1"
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "rank": 5,
+        "points": 9,
+        "record": "3-20-3",
+        "streak": "Lost 4"
+      },
+      {
+        "month": "2026-03",
+        "month_label": "March 2026",
+        "rank": 5,
+        "points": 9,
+        "record": "3-22-3",
+        "streak": "Lost 6"
+      }
+    ],
+    "monthly_game_splits": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "gp": 2,
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "gf": 4,
+        "ga": 18
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "gp": 6,
+        "wins": 1,
+        "losses": 3,
+        "ties": 2,
+        "gf": 22,
+        "ga": 30
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "gp": 7,
+        "wins": 1,
+        "losses": 6,
+        "ties": 0,
+        "gf": 21,
+        "ga": 45
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "gp": 4,
+        "wins": 1,
+        "losses": 2,
+        "ties": 1,
+        "gf": 12,
+        "ga": 18
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "gp": 3,
+        "wins": 0,
+        "losses": 3,
+        "ties": 0,
+        "gf": 8,
+        "ga": 22
+      }
+    ],
+    "monthly_timeline": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "record": "0-2-0",
+        "gf": 4,
+        "ga": 18,
+        "notable_game": "2025-10-26 vs G.R. Mitchell Welding (3-12, L)"
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "record": "1-3-2",
+        "gf": 22,
+        "ga": 30,
+        "notable_game": "2025-11-16 vs J&K Electric (4-7, L)"
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "record": "1-6-0",
+        "gf": 21,
+        "ga": 45,
+        "notable_game": "2025-12-09 vs Maltby Sports (2-12, L)"
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "record": "1-2-1",
+        "gf": 12,
+        "ga": 18,
+        "notable_game": "2026-01-06 vs Maltby Sports (2-7, L)"
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "record": "0-3-0",
+        "gf": 8,
+        "ga": 22,
+        "notable_game": "2026-02-15 vs Ultramar (4-9, L)"
+      }
+    ],
+    "monthly_context_notes": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "notes": [
+          "Played to a 0-2-0 month and outscored opponents 4-18.",
+          "Scored below its usual rate, which helps explain any stall or fade in the standings.",
+          "Allowed goals at a higher rate than normal, which put strain on the month.",
+          "The schedule was playoff-heavy, with 2 of 2 games against the postseason field.",
+          "Main opponents that month: G.R. Mitchell Welding, J&K Electric."
+        ]
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "notes": [
+          "Played to a 1-3-2 month and outscored opponents 22-30.",
+          "Defended better than its season norm, which gave the month a steadier feel.",
+          "This was a clear improvement from the previous month.",
+          "The schedule was playoff-heavy, with 6 of 6 games against the postseason field.",
+          "Closed the month at No. 5 with 2 points."
+        ]
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "notes": [
+          "Played to a 1-6-0 month and outscored opponents 21-45.",
+          "The schedule was playoff-heavy, with 7 of 7 games against the postseason field.",
+          "Main opponents that month: G.R. Mitchell Welding, J&K Electric, Maltby Sports, Ultramar."
+        ]
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "notes": [
+          "Played to a 1-2-1 month and outscored opponents 12-18.",
+          "Defended better than its season norm, which gave the month a steadier feel.",
+          "This was a clear improvement from the previous month.",
+          "The schedule was playoff-heavy, with 4 of 4 games against the postseason field.",
+          "Closed the month at No. 5 with 7 points. That held the same place in the table."
+        ]
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "notes": [
+          "Played to a 0-3-0 month and outscored opponents 8-22.",
+          "Allowed goals at a higher rate than normal, which put strain on the month.",
+          "This was a clear drop from the previous month.",
+          "The schedule was playoff-heavy, with 3 of 3 games against the postseason field.",
+          "Closed the month at No. 5 with 9 points. That held the same place in the table."
+        ]
+      }
+    ],
+    "results_profile": {
+      "gp": 22,
+      "wins": 3,
+      "losses": 16,
+      "ties": 3,
+      "gf": 67,
+      "ga": 133,
+      "record": "3-16-3",
+      "points_pct": "0.205",
+      "goal_diff": -66
+    },
+    "leaders": {
+      "points": [
+        {
+          "player_id": "colson-overhead-doors-gould-zack-88",
+          "name": "Gould, Zack",
+          "number": "88",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 19,
+          "goals": 20,
+          "assists": 14,
+          "points": 34,
+          "penalty_minutes": 26,
+          "points_per_game": 1.79,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-gesner-logan-23",
+          "name": "Gesner, Logan",
+          "number": "23",
+          "positions": [
+            "D",
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 18,
+          "goals": 4,
+          "assists": 22,
+          "points": 26,
+          "penalty_minutes": 32,
+          "points_per_game": 1.44,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-hebert-denis-19",
+          "name": "Hebert, Denis",
+          "number": "19",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 9,
+          "goals": 6,
+          "assists": 12,
+          "points": 18,
+          "penalty_minutes": 9,
+          "points_per_game": 2.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-faulkner-rory-76",
+          "name": "Faulkner, Rory",
+          "number": "76",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 10,
+          "goals": 10,
+          "assists": 8,
+          "points": 18,
+          "penalty_minutes": 3,
+          "points_per_game": 1.8,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-chandler-3rd-charles-7",
+          "name": "Chandler 3rd, Charles",
+          "number": "7",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 6,
+          "goals": 6,
+          "assists": 2,
+          "points": 8,
+          "penalty_minutes": 0,
+          "points_per_game": 1.33,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-eatmon-chester-8",
+          "name": "Eatmon, Chester",
+          "number": "8",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 10,
+          "goals": 2,
+          "assists": 6,
+          "points": 8,
+          "penalty_minutes": 0,
+          "points_per_game": 0.8,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-sproul-chris-31",
+          "name": "Sproul, Chris",
+          "number": "31",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 9,
+          "goals": 1,
+          "assists": 6,
+          "points": 7,
+          "penalty_minutes": 0,
+          "points_per_game": 0.78,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-terrio-marshall-00",
+          "name": "Terrio, Marshall",
+          "number": "00",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 4,
+          "goals": 4,
+          "assists": 2,
+          "points": 6,
+          "penalty_minutes": 0,
+          "points_per_game": 1.5,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-davis-dan-18",
+          "name": "Davis, Dan",
+          "number": "18",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 7,
+          "goals": 2,
+          "assists": 3,
+          "points": 5,
+          "penalty_minutes": 15,
+          "points_per_game": 0.71,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-stone-brendan-28",
+          "name": "Stone, Brendan",
+          "number": "28",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 2,
+          "goals": 1,
+          "assists": 4,
+          "points": 5,
+          "penalty_minutes": 0,
+          "points_per_game": 2.5,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-baisley-chris-44",
+          "name": "Baisley, Chris",
+          "number": "44",
+          "positions": [
+            "D"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 6,
+          "goals": 0,
+          "assists": 5,
+          "points": 5,
+          "penalty_minutes": 3,
+          "points_per_game": 0.83,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-burge-tom-12",
+          "name": "Burge, Tom",
+          "number": "12",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 5,
+          "goals": 1,
+          "assists": 3,
+          "points": 4,
+          "penalty_minutes": 3,
+          "points_per_game": 0.8,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-henshaw-chad-13",
+          "name": "Henshaw, Chad",
+          "number": "13",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 3,
+          "goals": 1,
+          "assists": 3,
+          "points": 4,
+          "penalty_minutes": 0,
+          "points_per_game": 1.33,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-kinnear-jeremy-17",
+          "name": "Kinnear, Jeremy",
+          "number": "17",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 2,
+          "goals": 3,
+          "assists": 1,
+          "points": 4,
+          "penalty_minutes": 0,
+          "points_per_game": 2.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-boutiler-gerald-22",
+          "name": "Boutiler, Gerald",
+          "number": "22",
+          "positions": [
+            "D",
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 2,
+          "goals": 0,
+          "assists": 4,
+          "points": 4,
+          "penalty_minutes": 3,
+          "points_per_game": 2.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-morris-pat-27",
+          "name": "Morris, Pat",
+          "number": "27",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 2,
+          "goals": 2,
+          "assists": 1,
+          "points": 3,
+          "penalty_minutes": 3,
+          "points_per_game": 1.5,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-mackenzie-rubein-4",
+          "name": "Mackenzie, Rubein",
+          "number": "4",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 1,
+          "assists": 1,
+          "points": 2,
+          "penalty_minutes": 0,
+          "points_per_game": 2.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-linkletter-brad-9",
+          "name": "Linkletter, Brad",
+          "number": "9",
+          "positions": [
+            "C"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 1,
+          "assists": 1,
+          "points": 2,
+          "penalty_minutes": 0,
+          "points_per_game": 2.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": -4,
+          "recent_games": -1
+        },
+        {
+          "player_id": "colson-overhead-doors-malcolm-robert-10",
+          "name": "Malcolm, Robert",
+          "number": "10",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": -1,
+          "recent_games": -1
+        },
+        {
+          "player_id": "colson-overhead-doors-allen-tyler-tuffy-11",
+          "name": "Allen, Tyler \"Tuffy\"",
+          "number": "11",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": -4,
+          "recent_games": -1
+        },
+        {
+          "player_id": "colson-overhead-doors-gallant-brett-3",
+          "name": "Gallant, Brett",
+          "number": "3",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-davison-bill-74",
+          "name": "Davison, Bill",
+          "number": "74",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-perrin-noah-87",
+          "name": "Perrin, Noah",
+          "number": "87",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-budd-ryan-18",
+          "name": "Budd, Ryan",
+          "number": "18",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "penalty_minutes": 3,
+          "points_per_game": 0.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-russel-nick-30",
+          "name": "Russel, Nick",
+          "number": "30",
+          "positions": [
+            "G"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "penalty_minutes": 0,
+          "points_per_game": 0.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-bonnell-andy-5",
+          "name": "Bonnell, Andy",
+          "number": "5",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "penalty_minutes": 3,
+          "points_per_game": 0.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-black-mark-9",
+          "name": "Black, Mark",
+          "number": "9",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 2,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "penalty_minutes": 0,
+          "points_per_game": 0.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        }
+      ],
+      "goals": [
+        {
+          "player_id": "colson-overhead-doors-gould-zack-88",
+          "name": "Gould, Zack",
+          "number": "88",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 19,
+          "goals": 20,
+          "assists": 14,
+          "points": 34,
+          "penalty_minutes": 26,
+          "points_per_game": 1.79,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-faulkner-rory-76",
+          "name": "Faulkner, Rory",
+          "number": "76",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 10,
+          "goals": 10,
+          "assists": 8,
+          "points": 18,
+          "penalty_minutes": 3,
+          "points_per_game": 1.8,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-hebert-denis-19",
+          "name": "Hebert, Denis",
+          "number": "19",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 9,
+          "goals": 6,
+          "assists": 12,
+          "points": 18,
+          "penalty_minutes": 9,
+          "points_per_game": 2.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-chandler-3rd-charles-7",
+          "name": "Chandler 3rd, Charles",
+          "number": "7",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 6,
+          "goals": 6,
+          "assists": 2,
+          "points": 8,
+          "penalty_minutes": 0,
+          "points_per_game": 1.33,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-terrio-marshall-00",
+          "name": "Terrio, Marshall",
+          "number": "00",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 4,
+          "goals": 4,
+          "assists": 2,
+          "points": 6,
+          "penalty_minutes": 0,
+          "points_per_game": 1.5,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-gesner-logan-23",
+          "name": "Gesner, Logan",
+          "number": "23",
+          "positions": [
+            "D",
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 18,
+          "goals": 4,
+          "assists": 22,
+          "points": 26,
+          "penalty_minutes": 32,
+          "points_per_game": 1.44,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-kinnear-jeremy-17",
+          "name": "Kinnear, Jeremy",
+          "number": "17",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 2,
+          "goals": 3,
+          "assists": 1,
+          "points": 4,
+          "penalty_minutes": 0,
+          "points_per_game": 2.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-davis-dan-18",
+          "name": "Davis, Dan",
+          "number": "18",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 7,
+          "goals": 2,
+          "assists": 3,
+          "points": 5,
+          "penalty_minutes": 15,
+          "points_per_game": 0.71,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-morris-pat-27",
+          "name": "Morris, Pat",
+          "number": "27",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 2,
+          "goals": 2,
+          "assists": 1,
+          "points": 3,
+          "penalty_minutes": 3,
+          "points_per_game": 1.5,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-eatmon-chester-8",
+          "name": "Eatmon, Chester",
+          "number": "8",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 10,
+          "goals": 2,
+          "assists": 6,
+          "points": 8,
+          "penalty_minutes": 0,
+          "points_per_game": 0.8,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-malcolm-robert-10",
+          "name": "Malcolm, Robert",
+          "number": "10",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": -1,
+          "recent_games": -1
+        },
+        {
+          "player_id": "colson-overhead-doors-burge-tom-12",
+          "name": "Burge, Tom",
+          "number": "12",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 5,
+          "goals": 1,
+          "assists": 3,
+          "points": 4,
+          "penalty_minutes": 3,
+          "points_per_game": 0.8,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-henshaw-chad-13",
+          "name": "Henshaw, Chad",
+          "number": "13",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 3,
+          "goals": 1,
+          "assists": 3,
+          "points": 4,
+          "penalty_minutes": 0,
+          "points_per_game": 1.33,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-stone-brendan-28",
+          "name": "Stone, Brendan",
+          "number": "28",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 2,
+          "goals": 1,
+          "assists": 4,
+          "points": 5,
+          "penalty_minutes": 0,
+          "points_per_game": 2.5,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-sproul-chris-31",
+          "name": "Sproul, Chris",
+          "number": "31",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 9,
+          "goals": 1,
+          "assists": 6,
+          "points": 7,
+          "penalty_minutes": 0,
+          "points_per_game": 0.78,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-mackenzie-rubein-4",
+          "name": "Mackenzie, Rubein",
+          "number": "4",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 1,
+          "assists": 1,
+          "points": 2,
+          "penalty_minutes": 0,
+          "points_per_game": 2.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-perrin-noah-87",
+          "name": "Perrin, Noah",
+          "number": "87",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-linkletter-brad-9",
+          "name": "Linkletter, Brad",
+          "number": "9",
+          "positions": [
+            "C"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 1,
+          "assists": 1,
+          "points": 2,
+          "penalty_minutes": 0,
+          "points_per_game": 2.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": -4,
+          "recent_games": -1
+        },
+        {
+          "player_id": "colson-overhead-doors-allen-tyler-tuffy-11",
+          "name": "Allen, Tyler \"Tuffy\"",
+          "number": "11",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": -4,
+          "recent_games": -1
+        },
+        {
+          "player_id": "colson-overhead-doors-budd-ryan-18",
+          "name": "Budd, Ryan",
+          "number": "18",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "penalty_minutes": 3,
+          "points_per_game": 0.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-boutiler-gerald-22",
+          "name": "Boutiler, Gerald",
+          "number": "22",
+          "positions": [
+            "D",
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 2,
+          "goals": 0,
+          "assists": 4,
+          "points": 4,
+          "penalty_minutes": 3,
+          "points_per_game": 2.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-gallant-brett-3",
+          "name": "Gallant, Brett",
+          "number": "3",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-russel-nick-30",
+          "name": "Russel, Nick",
+          "number": "30",
+          "positions": [
+            "G"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "penalty_minutes": 0,
+          "points_per_game": 0.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-baisley-chris-44",
+          "name": "Baisley, Chris",
+          "number": "44",
+          "positions": [
+            "D"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 6,
+          "goals": 0,
+          "assists": 5,
+          "points": 5,
+          "penalty_minutes": 3,
+          "points_per_game": 0.83,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-bonnell-andy-5",
+          "name": "Bonnell, Andy",
+          "number": "5",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "penalty_minutes": 3,
+          "points_per_game": 0.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-davison-bill-74",
+          "name": "Davison, Bill",
+          "number": "74",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-black-mark-9",
+          "name": "Black, Mark",
+          "number": "9",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 2,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "penalty_minutes": 0,
+          "points_per_game": 0.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        }
+      ],
+      "assists": [
+        {
+          "player_id": "colson-overhead-doors-gesner-logan-23",
+          "name": "Gesner, Logan",
+          "number": "23",
+          "positions": [
+            "D",
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 18,
+          "goals": 4,
+          "assists": 22,
+          "points": 26,
+          "penalty_minutes": 32,
+          "points_per_game": 1.44,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-gould-zack-88",
+          "name": "Gould, Zack",
+          "number": "88",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 19,
+          "goals": 20,
+          "assists": 14,
+          "points": 34,
+          "penalty_minutes": 26,
+          "points_per_game": 1.79,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-hebert-denis-19",
+          "name": "Hebert, Denis",
+          "number": "19",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 9,
+          "goals": 6,
+          "assists": 12,
+          "points": 18,
+          "penalty_minutes": 9,
+          "points_per_game": 2.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-faulkner-rory-76",
+          "name": "Faulkner, Rory",
+          "number": "76",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 10,
+          "goals": 10,
+          "assists": 8,
+          "points": 18,
+          "penalty_minutes": 3,
+          "points_per_game": 1.8,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-sproul-chris-31",
+          "name": "Sproul, Chris",
+          "number": "31",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 9,
+          "goals": 1,
+          "assists": 6,
+          "points": 7,
+          "penalty_minutes": 0,
+          "points_per_game": 0.78,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-eatmon-chester-8",
+          "name": "Eatmon, Chester",
+          "number": "8",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 10,
+          "goals": 2,
+          "assists": 6,
+          "points": 8,
+          "penalty_minutes": 0,
+          "points_per_game": 0.8,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-baisley-chris-44",
+          "name": "Baisley, Chris",
+          "number": "44",
+          "positions": [
+            "D"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 6,
+          "goals": 0,
+          "assists": 5,
+          "points": 5,
+          "penalty_minutes": 3,
+          "points_per_game": 0.83,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-boutiler-gerald-22",
+          "name": "Boutiler, Gerald",
+          "number": "22",
+          "positions": [
+            "D",
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 2,
+          "goals": 0,
+          "assists": 4,
+          "points": 4,
+          "penalty_minutes": 3,
+          "points_per_game": 2.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-stone-brendan-28",
+          "name": "Stone, Brendan",
+          "number": "28",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 2,
+          "goals": 1,
+          "assists": 4,
+          "points": 5,
+          "penalty_minutes": 0,
+          "points_per_game": 2.5,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-burge-tom-12",
+          "name": "Burge, Tom",
+          "number": "12",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 5,
+          "goals": 1,
+          "assists": 3,
+          "points": 4,
+          "penalty_minutes": 3,
+          "points_per_game": 0.8,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-henshaw-chad-13",
+          "name": "Henshaw, Chad",
+          "number": "13",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 3,
+          "goals": 1,
+          "assists": 3,
+          "points": 4,
+          "penalty_minutes": 0,
+          "points_per_game": 1.33,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-davis-dan-18",
+          "name": "Davis, Dan",
+          "number": "18",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 7,
+          "goals": 2,
+          "assists": 3,
+          "points": 5,
+          "penalty_minutes": 15,
+          "points_per_game": 0.71,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-terrio-marshall-00",
+          "name": "Terrio, Marshall",
+          "number": "00",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 4,
+          "goals": 4,
+          "assists": 2,
+          "points": 6,
+          "penalty_minutes": 0,
+          "points_per_game": 1.5,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-chandler-3rd-charles-7",
+          "name": "Chandler 3rd, Charles",
+          "number": "7",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 6,
+          "goals": 6,
+          "assists": 2,
+          "points": 8,
+          "penalty_minutes": 0,
+          "points_per_game": 1.33,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-allen-tyler-tuffy-11",
+          "name": "Allen, Tyler \"Tuffy\"",
+          "number": "11",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": -4,
+          "recent_games": -1
+        },
+        {
+          "player_id": "colson-overhead-doors-kinnear-jeremy-17",
+          "name": "Kinnear, Jeremy",
+          "number": "17",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 2,
+          "goals": 3,
+          "assists": 1,
+          "points": 4,
+          "penalty_minutes": 0,
+          "points_per_game": 2.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-morris-pat-27",
+          "name": "Morris, Pat",
+          "number": "27",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 2,
+          "goals": 2,
+          "assists": 1,
+          "points": 3,
+          "penalty_minutes": 3,
+          "points_per_game": 1.5,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-gallant-brett-3",
+          "name": "Gallant, Brett",
+          "number": "3",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-mackenzie-rubein-4",
+          "name": "Mackenzie, Rubein",
+          "number": "4",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 1,
+          "assists": 1,
+          "points": 2,
+          "penalty_minutes": 0,
+          "points_per_game": 2.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-davison-bill-74",
+          "name": "Davison, Bill",
+          "number": "74",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-linkletter-brad-9",
+          "name": "Linkletter, Brad",
+          "number": "9",
+          "positions": [
+            "C"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 1,
+          "assists": 1,
+          "points": 2,
+          "penalty_minutes": 0,
+          "points_per_game": 2.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": -4,
+          "recent_games": -1
+        },
+        {
+          "player_id": "colson-overhead-doors-malcolm-robert-10",
+          "name": "Malcolm, Robert",
+          "number": "10",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": -1,
+          "recent_games": -1
+        },
+        {
+          "player_id": "colson-overhead-doors-budd-ryan-18",
+          "name": "Budd, Ryan",
+          "number": "18",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "penalty_minutes": 3,
+          "points_per_game": 0.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-russel-nick-30",
+          "name": "Russel, Nick",
+          "number": "30",
+          "positions": [
+            "G"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "penalty_minutes": 0,
+          "points_per_game": 0.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-bonnell-andy-5",
+          "name": "Bonnell, Andy",
+          "number": "5",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "penalty_minutes": 3,
+          "points_per_game": 0.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-perrin-noah-87",
+          "name": "Perrin, Noah",
+          "number": "87",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "colson-overhead-doors-black-mark-9",
+          "name": "Black, Mark",
+          "number": "9",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "TYLERARSENEAU-3",
+          "team_name": "Colson Overhead Doors",
+          "team_slug": "colson-overhead-doors",
+          "games_played": 2,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "penalty_minutes": 0,
+          "points_per_game": 0.0,
+          "team_games_played": 22,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        }
+      ]
+    },
+    "key_games": [
+      {
+        "label": "Biggest win",
+        "local_date": "2026-01-27",
+        "opponent_name": "J&K Electric",
+        "score": "7-6",
+        "result": "W",
+        "canonical_game_id": "3276655"
+      },
+      {
+        "label": "Toughest loss",
+        "local_date": "2025-12-09",
+        "opponent_name": "Maltby Sports",
+        "score": "2-12",
+        "result": "L",
+        "canonical_game_id": "3276461"
+      },
+      {
+        "label": "Highest-event game",
+        "local_date": "2025-10-26",
+        "opponent_name": "G.R. Mitchell Welding",
+        "score": "3-12",
+        "result": "L",
+        "canonical_game_id": "3274310"
+      },
+      {
+        "label": "Latest vs playoff team",
+        "local_date": "2026-02-22",
+        "opponent_name": "Maltby Sports",
+        "score": "2-6",
+        "result": "L",
+        "canonical_game_id": "3276685"
+      }
+    ],
+    "head_to_head": [
+      {
+        "opponent_slug": "gr-mitchell-welding",
+        "opponent_name": "G.R. Mitchell Welding",
+        "wins": 1,
+        "losses": 2,
+        "ties": 1,
+        "gf": 15,
+        "ga": 26
+      },
+      {
+        "opponent_slug": "j-and-k-electric",
+        "opponent_name": "J&K Electric",
+        "wins": 1,
+        "losses": 6,
+        "ties": 0,
+        "gf": 21,
+        "ga": 41
+      },
+      {
+        "opponent_slug": "maltby-sports",
+        "opponent_name": "Maltby Sports",
+        "wins": 0,
+        "losses": 5,
+        "ties": 0,
+        "gf": 11,
+        "ga": 37
+      },
+      {
+        "opponent_slug": "ultramar",
+        "opponent_name": "Ultramar",
+        "wins": 1,
+        "losses": 3,
+        "ties": 2,
+        "gf": 20,
+        "ga": 29
+      }
+    ],
+    "opponent_splits": [
+      {
+        "opponent_slug": "ultramar",
+        "opponent_name": "Ultramar",
+        "gp": 6,
+        "wins": 1,
+        "losses": 3,
+        "ties": 2,
+        "gf": 20,
+        "ga": 29,
+        "record": "1-3-2",
+        "points_pct": "0.333",
+        "goal_diff": -9
+      },
+      {
+        "opponent_slug": "gr-mitchell-welding",
+        "opponent_name": "G.R. Mitchell Welding",
+        "gp": 4,
+        "wins": 1,
+        "losses": 2,
+        "ties": 1,
+        "gf": 15,
+        "ga": 26,
+        "record": "1-2-1",
+        "points_pct": "0.375",
+        "goal_diff": -11
+      },
+      {
+        "opponent_slug": "j-and-k-electric",
+        "opponent_name": "J&K Electric",
+        "gp": 7,
+        "wins": 1,
+        "losses": 6,
+        "ties": 0,
+        "gf": 21,
+        "ga": 41,
+        "record": "1-6-0",
+        "points_pct": "0.143",
+        "goal_diff": -20
+      },
+      {
+        "opponent_slug": "maltby-sports",
+        "opponent_name": "Maltby Sports",
+        "gp": 5,
+        "wins": 0,
+        "losses": 5,
+        "ties": 0,
+        "gf": 11,
+        "ga": 37,
+        "record": "0-5-0",
+        "points_pct": "0.000",
+        "goal_diff": -26
+      }
+    ],
+    "vs_playoff_field": {
+      "gp": 22,
+      "wins": 3,
+      "losses": 16,
+      "ties": 3,
+      "gf": 67,
+      "ga": 133,
+      "record": "3-16-3",
+      "points_pct": "0.205",
+      "goal_diff": -66
+    },
+    "five_game_windows": {
+      "best": {
+        "start_date": "2025-11-04",
+        "end_date": "2025-11-30",
+        "window": 5,
+        "gp": 5,
+        "wins": 1,
+        "losses": 2,
+        "ties": 2,
+        "gf": 19,
+        "ga": 24,
+        "record": "1-2-2",
+        "points_pct": "0.400",
+        "goal_diff": -5
+      },
+      "worst": {
+        "start_date": "2025-10-14",
+        "end_date": "2025-11-16",
+        "window": 5,
+        "gp": 5,
+        "wins": 0,
+        "losses": 4,
+        "ties": 1,
+        "gf": 16,
+        "ga": 36,
+        "record": "0-4-1",
+        "points_pct": "0.100",
+        "goal_diff": -20
+      }
+    },
+    "half_splits": {
+      "first_half": {
+        "gp": 11,
+        "wins": 1,
+        "losses": 8,
+        "ties": 2,
+        "gf": 34,
+        "ga": 71,
+        "record": "1-8-2",
+        "points_pct": "0.182",
+        "goal_diff": -37
+      },
+      "second_half": {
+        "gp": 11,
+        "wins": 2,
+        "losses": 8,
+        "ties": 1,
+        "gf": 33,
+        "ga": 62,
+        "record": "2-8-1",
+        "points_pct": "0.227",
+        "goal_diff": -29
+      }
+    },
+    "streaks": {
+      "longest_win_streak": 1,
+      "longest_winless_streak": 7
+    },
+    "recent_results": [
+      {
+        "canonical_game_id": "3276645",
+        "local_date": "2026-01-18",
+        "local_time": "9:00 PM",
+        "month": "2026-01",
+        "season_phase": "regular_season",
+        "team_name": "Colson Overhead Doors",
+        "team_slug": "colson-overhead-doors",
+        "opponent_name": "G.R. Mitchell Welding",
+        "opponent_slug": "gr-mitchell-welding",
+        "team_score": 3,
+        "opponent_score": 3,
+        "result": "T",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276645&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276655",
+        "local_date": "2026-01-27",
+        "local_time": "10:00 PM",
+        "month": "2026-01",
+        "season_phase": "regular_season",
+        "team_name": "Colson Overhead Doors",
+        "team_slug": "colson-overhead-doors",
+        "opponent_name": "J&K Electric",
+        "opponent_slug": "j-and-k-electric",
+        "team_score": 7,
+        "opponent_score": 6,
+        "result": "W",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276655&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276665",
+        "local_date": "2026-02-03",
+        "local_time": "10:00 PM",
+        "month": "2026-02",
+        "season_phase": "regular_season",
+        "team_name": "Colson Overhead Doors",
+        "team_slug": "colson-overhead-doors",
+        "opponent_name": "Maltby Sports",
+        "opponent_slug": "maltby-sports",
+        "team_score": 2,
+        "opponent_score": 7,
+        "result": "L",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276665&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276677",
+        "local_date": "2026-02-15",
+        "local_time": "9:00 PM",
+        "month": "2026-02",
+        "season_phase": "regular_season",
+        "team_name": "Colson Overhead Doors",
+        "team_slug": "colson-overhead-doors",
+        "opponent_name": "Ultramar",
+        "opponent_slug": "ultramar",
+        "team_score": 4,
+        "opponent_score": 9,
+        "result": "L",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276677&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276685",
+        "local_date": "2026-02-22",
+        "local_time": "9:00 PM",
+        "month": "2026-02",
+        "season_phase": "regular_season",
+        "team_name": "Colson Overhead Doors",
+        "team_slug": "colson-overhead-doors",
+        "opponent_name": "Maltby Sports",
+        "opponent_slug": "maltby-sports",
+        "team_score": 2,
+        "opponent_score": 6,
+        "result": "L",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276685&u=DSMALL&s=hockey&p=boxscore"
+      }
+    ],
+    "upcoming_games": [],
+    "playoff_context": null
+  },
+  "angles": [
+    "Finished outside the playoff field at No. 5, which frames the season as a miss rather than a chase that got over the line.",
+    "Carried a deep negative goal differential, which points toward structural defensive problems or thin depth.",
+    "Best month was January 2026 (1-2-1), while December 2025 was the low point."
+  ],
+  "suggested_prompts": [
+    "Write a newspaper season recap for Colson Overhead Doors that explains how its season evolved month by month.",
+    "Write a playoff preview for Colson Overhead Doors that ties regular-season trends to the upcoming semifinal.",
+    "Write a long-form feature on the identity of Colson Overhead Doors based on its record, leaders, and turning points."
+  ]
+}

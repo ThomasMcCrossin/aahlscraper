@@ -1,0 +1,435 @@
+{
+  "entity_type": "player",
+  "entity_id": "j-and-k-electric-morris-pat-27",
+  "title": "Pat Morris season story pack",
+  "generated_at": "2026-03-10T20:36:07.719861+00:00",
+  "verified_facts": {
+    "player": {
+      "player_id": "j-and-k-electric-morris-pat-27",
+      "name": "Morris, Pat",
+      "number": "27",
+      "positions": [
+        "F",
+        "D"
+      ],
+      "team_id": "TYLERARSENEAU-4",
+      "team_name": "J&K Electric",
+      "team_slug": "j-and-k-electric",
+      "games_played": 5,
+      "goals": 4,
+      "assists": 9,
+      "points": 13,
+      "penalty_minutes": 0,
+      "points_per_game": 2.6,
+      "team_games_played": 21,
+      "games_missed": null,
+      "recent_points": 0,
+      "recent_games": 0
+    },
+    "season_profile": {
+      "gp": 5,
+      "goals": 4,
+      "assists": 9,
+      "points": 13,
+      "penalty_minutes": 0,
+      "points_per_game": "2.60"
+    },
+    "month_end_checkpoints": [
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "games_played": 2,
+        "goals": 1,
+        "assists": 5,
+        "points": 6
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "games_played": 3,
+        "goals": 4,
+        "assists": 6,
+        "points": 10
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "games_played": 4,
+        "goals": 4,
+        "assists": 7,
+        "points": 11
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "games_played": 5,
+        "goals": 4,
+        "assists": 9,
+        "points": 13
+      },
+      {
+        "month": "2026-03",
+        "month_label": "March 2026",
+        "games_played": 5,
+        "goals": 4,
+        "assists": 9,
+        "points": 13
+      }
+    ],
+    "monthly_game_splits": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "gp": 1,
+        "goals": 1,
+        "assists": 3,
+        "points": 4,
+        "pim": 0,
+        "multi_point_games": 1
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "gp": 1,
+        "goals": 0,
+        "assists": 2,
+        "points": 2,
+        "pim": 0,
+        "multi_point_games": 1
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "gp": 1,
+        "goals": 3,
+        "assists": 1,
+        "points": 4,
+        "pim": 0,
+        "multi_point_games": 1
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "gp": 1,
+        "goals": 0,
+        "assists": 1,
+        "points": 1,
+        "pim": 0,
+        "multi_point_games": 0
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "gp": 1,
+        "goals": 0,
+        "assists": 2,
+        "points": 2,
+        "pim": 0,
+        "multi_point_games": 1
+      }
+    ],
+    "monthly_timeline": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "gp": 1,
+        "goals": 1,
+        "assists": 3,
+        "points": 4,
+        "penalty_minutes": 0,
+        "points_per_game": "4.00",
+        "top_game": "2025-10-14 vs Colson Overhead Doors (1-3-4)"
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "gp": 1,
+        "goals": 0,
+        "assists": 2,
+        "points": 2,
+        "penalty_minutes": 0,
+        "points_per_game": "2.00",
+        "top_game": "2025-11-02 vs Colson Overhead Doors (0-2-2)"
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "gp": 1,
+        "goals": 3,
+        "assists": 1,
+        "points": 4,
+        "penalty_minutes": 0,
+        "points_per_game": "4.00",
+        "top_game": "2025-12-02 vs Colson Overhead Doors (3-1-4)"
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "gp": 1,
+        "goals": 0,
+        "assists": 1,
+        "points": 1,
+        "penalty_minutes": 0,
+        "points_per_game": "1.00",
+        "top_game": "2026-01-27 vs Colson Overhead Doors (0-1-1)"
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "gp": 1,
+        "goals": 0,
+        "assists": 2,
+        "points": 2,
+        "penalty_minutes": 0,
+        "points_per_game": "2.00",
+        "top_game": "2026-02-01 vs Maltby Sports (0-2-2)"
+      }
+    ],
+    "key_games": [
+      {
+        "local_date": "2025-12-02",
+        "opponent_name": "Colson Overhead Doors",
+        "score": "8-6",
+        "result": "W",
+        "goals": 3,
+        "assists": 1,
+        "points": 4,
+        "game_id": "3276695"
+      },
+      {
+        "local_date": "2025-10-14",
+        "opponent_name": "Colson Overhead Doors",
+        "score": "6-1",
+        "result": "W",
+        "goals": 1,
+        "assists": 3,
+        "points": 4,
+        "game_id": "3274298"
+      },
+      {
+        "local_date": "2025-11-02",
+        "opponent_name": "Colson Overhead Doors",
+        "score": "6-3",
+        "result": "W",
+        "goals": 0,
+        "assists": 2,
+        "points": 2,
+        "game_id": "3276449"
+      },
+      {
+        "local_date": "2026-02-01",
+        "opponent_name": "Maltby Sports",
+        "score": "4-6",
+        "result": "L",
+        "goals": 0,
+        "assists": 2,
+        "points": 2,
+        "game_id": "3276661"
+      },
+      {
+        "local_date": "2026-01-27",
+        "opponent_name": "Colson Overhead Doors",
+        "score": "6-7",
+        "result": "L",
+        "goals": 0,
+        "assists": 1,
+        "points": 1,
+        "game_id": "3276655"
+      }
+    ],
+    "vs_playoff_teams": {
+      "gp": 1,
+      "goals": 0,
+      "assists": 2,
+      "points": 2
+    },
+    "result_splits": [
+      {
+        "result": "W",
+        "gp": 3,
+        "goals": 4,
+        "assists": 6,
+        "points": 10,
+        "penalty_minutes": 0,
+        "points_per_game": "3.33"
+      },
+      {
+        "result": "L",
+        "gp": 2,
+        "goals": 0,
+        "assists": 3,
+        "points": 3,
+        "penalty_minutes": 0,
+        "points_per_game": "1.50"
+      },
+      {
+        "result": "T",
+        "gp": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": "0.00"
+      }
+    ],
+    "opponent_splits": [
+      {
+        "opponent_slug": "colson-overhead-doors",
+        "opponent_name": "Colson Overhead Doors",
+        "gp": 4,
+        "goals": 4,
+        "assists": 7,
+        "points": 11,
+        "penalty_minutes": 0,
+        "points_per_game": "2.75"
+      },
+      {
+        "opponent_slug": "maltby-sports",
+        "opponent_name": "Maltby Sports",
+        "gp": 1,
+        "goals": 0,
+        "assists": 2,
+        "points": 2,
+        "penalty_minutes": 0,
+        "points_per_game": "2.00"
+      }
+    ],
+    "five_game_windows": {
+      "best": {
+        "start_date": "2025-10-14",
+        "end_date": "2026-02-01",
+        "window": 5,
+        "gp": 5,
+        "goals": 4,
+        "assists": 9,
+        "points": 13,
+        "penalty_minutes": 0,
+        "points_per_game": "2.60"
+      },
+      "worst": {
+        "start_date": "2025-10-14",
+        "end_date": "2026-02-01",
+        "window": 5,
+        "gp": 5,
+        "goals": 4,
+        "assists": 9,
+        "points": 13,
+        "penalty_minutes": 0,
+        "points_per_game": "2.60"
+      }
+    },
+    "half_splits": {
+      "first_half": {
+        "gp": 2,
+        "goals": 1,
+        "assists": 5,
+        "points": 6,
+        "penalty_minutes": 0,
+        "points_per_game": "3.00"
+      },
+      "second_half": {
+        "gp": 3,
+        "goals": 3,
+        "assists": 4,
+        "points": 7,
+        "penalty_minutes": 0,
+        "points_per_game": "2.33"
+      }
+    },
+    "streaks": {
+      "longest_point_streak": 5,
+      "longest_goal_streak": 1,
+      "multi_point_games": 4,
+      "hat_tricks": 1
+    },
+    "box_score_log_coverage": {
+      "logged_gp": 5,
+      "season_gp": 5,
+      "game_coverage_pct": "1.000",
+      "logged_goals": 4,
+      "season_goals": 4,
+      "goal_coverage_pct": "1.000",
+      "logged_assists": 9,
+      "season_assists": 9,
+      "assist_coverage_pct": "1.000",
+      "logged_points": 13,
+      "season_points": 13,
+      "point_coverage_pct": "1.000",
+      "is_complete": true
+    },
+    "team_role_profile": {
+      "team_rank": 2,
+      "team_record": "16-8-5",
+      "team_points_rank": 9,
+      "team_points_leader": "Brendan Stone",
+      "gap_to_team_leader": 36,
+      "lead_over_next_teammate": 2,
+      "goal_share_pct": "2.8%"
+    },
+    "team_context_crossovers": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "notes": [
+          "J&K Electric went 2-1-0 and scored 12 while allowing 9.",
+          "Player logged-sample line that month: 1 GP, 1 G, 3 A, 4 PTS.",
+          "Played to a 2-1-0 month and outscored opponents 12-9.",
+          "Scored below its usual rate, which helps explain any stall or fade in the standings."
+        ]
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "notes": [
+          "J&K Electric went 3-1-1 and scored 23 while allowing 18.",
+          "Month-end standing snapshot: No. 2 with 15 points.",
+          "Player logged-sample line that month: 1 GP, 0 G, 2 A, 2 PTS.",
+          "Played to a 3-1-1 month and outscored opponents 23-18.",
+          "Closed the month at No. 2 with 15 points."
+        ]
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "notes": [
+          "J&K Electric went 5-0-0 and scored 29 while allowing 15.",
+          "Player logged-sample line that month: 1 GP, 3 G, 1 A, 4 PTS.",
+          "Went unbeaten and perfect at 5-0-0 with a +14 goal differential.",
+          "Defended better than its season norm, which gave the month a steadier feel."
+        ]
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "notes": [
+          "J&K Electric went 1-1-1 and scored 18 while allowing 16.",
+          "Month-end standing snapshot: No. 2 with 28 points.",
+          "Player logged-sample line that month: 1 GP, 0 G, 1 A, 1 PTS.",
+          "Played to a 1-1-1 month and outscored opponents 18-16.",
+          "Scored well above its season pace, which makes this month an offensive spike."
+        ]
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "notes": [
+          "J&K Electric went 1-2-2 and scored 26 while allowing 29.",
+          "Month-end standing snapshot: No. 3 with 33 points.",
+          "Player logged-sample line that month: 1 GP, 0 G, 2 A, 2 PTS.",
+          "Played to a 1-2-2 month and outscored opponents 26-29.",
+          "Allowed goals at a higher rate than normal, which put strain on the month."
+        ]
+      }
+    ]
+  },
+  "angles": [
+    "Played a limited share of the team schedule, which makes availability and sample size part of the profile.",
+    "Recorded 1 hat trick, which is a ready-made local-paper hook.",
+    "Peak month was December 2025 (4 points), which helps structure the season arc."
+  ],
+  "suggested_prompts": [
+    "Write a newspaper-style player profile on Pat Morris and how his season developed month by month.",
+    "Write a playoff program feature on Pat Morris that explains his role for J&K Electric.",
+    "Write a local-sports column on what defined Pat Morris's 2025-2026 season."
+  ]
+}

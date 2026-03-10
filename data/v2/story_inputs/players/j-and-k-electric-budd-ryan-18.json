@@ -1,0 +1,369 @@
+{
+  "entity_type": "player",
+  "entity_id": "j-and-k-electric-budd-ryan-18",
+  "title": "Ryan Budd season story pack",
+  "generated_at": "2026-03-10T20:36:07.714686+00:00",
+  "verified_facts": {
+    "player": {
+      "player_id": "j-and-k-electric-budd-ryan-18",
+      "name": "Budd, Ryan",
+      "number": "18",
+      "positions": [
+        "F"
+      ],
+      "team_id": "TYLERARSENEAU-4",
+      "team_name": "J&K Electric",
+      "team_slug": "j-and-k-electric",
+      "games_played": 3,
+      "goals": 1,
+      "assists": 5,
+      "points": 6,
+      "penalty_minutes": 6,
+      "points_per_game": 2.0,
+      "team_games_played": 21,
+      "games_missed": null,
+      "recent_points": 0,
+      "recent_games": 0
+    },
+    "season_profile": {
+      "gp": 3,
+      "goals": 1,
+      "assists": 5,
+      "points": 6,
+      "penalty_minutes": 6,
+      "points_per_game": "2.00"
+    },
+    "month_end_checkpoints": [
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "games_played": 2,
+        "goals": 1,
+        "assists": 4,
+        "points": 5
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "games_played": 2,
+        "goals": 1,
+        "assists": 4,
+        "points": 5
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "games_played": 3,
+        "goals": 1,
+        "assists": 5,
+        "points": 6
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "games_played": 3,
+        "goals": 1,
+        "assists": 5,
+        "points": 6
+      },
+      {
+        "month": "2026-03",
+        "month_label": "March 2026",
+        "games_played": 3,
+        "goals": 1,
+        "assists": 5,
+        "points": 6
+      }
+    ],
+    "monthly_game_splits": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "gp": 1,
+        "goals": 1,
+        "assists": 1,
+        "points": 2,
+        "pim": 3,
+        "multi_point_games": 1
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "gp": 1,
+        "goals": 0,
+        "assists": 3,
+        "points": 3,
+        "pim": 0,
+        "multi_point_games": 1
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "gp": 1,
+        "goals": 0,
+        "assists": 1,
+        "points": 1,
+        "pim": 3,
+        "multi_point_games": 0
+      }
+    ],
+    "monthly_timeline": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "gp": 1,
+        "goals": 1,
+        "assists": 1,
+        "points": 2,
+        "penalty_minutes": 3,
+        "points_per_game": "2.00",
+        "top_game": "2025-10-14 vs Colson Overhead Doors (1-1-2)"
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "gp": 1,
+        "goals": 0,
+        "assists": 3,
+        "points": 3,
+        "penalty_minutes": 0,
+        "points_per_game": "3.00",
+        "top_game": "2025-11-02 vs Colson Overhead Doors (0-3-3)"
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "gp": 1,
+        "goals": 0,
+        "assists": 1,
+        "points": 1,
+        "penalty_minutes": 3,
+        "points_per_game": "1.00",
+        "top_game": "2025-12-30 vs G.R. Mitchell Welding (0-1-1)"
+      }
+    ],
+    "key_games": [
+      {
+        "local_date": "2025-11-02",
+        "opponent_name": "Colson Overhead Doors",
+        "score": "6-3",
+        "result": "W",
+        "goals": 0,
+        "assists": 3,
+        "points": 3,
+        "game_id": "3276449"
+      },
+      {
+        "local_date": "2025-10-14",
+        "opponent_name": "Colson Overhead Doors",
+        "score": "6-1",
+        "result": "W",
+        "goals": 1,
+        "assists": 1,
+        "points": 2,
+        "game_id": "3274298"
+      },
+      {
+        "local_date": "2025-12-30",
+        "opponent_name": "G.R. Mitchell Welding",
+        "score": "5-2",
+        "result": "W",
+        "goals": 0,
+        "assists": 1,
+        "points": 1,
+        "game_id": "3276566"
+      }
+    ],
+    "vs_playoff_teams": {
+      "gp": 1,
+      "goals": 0,
+      "assists": 1,
+      "points": 1
+    },
+    "result_splits": [
+      {
+        "result": "W",
+        "gp": 3,
+        "goals": 1,
+        "assists": 5,
+        "points": 6,
+        "penalty_minutes": 6,
+        "points_per_game": "2.00"
+      },
+      {
+        "result": "L",
+        "gp": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": "0.00"
+      },
+      {
+        "result": "T",
+        "gp": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "penalty_minutes": 0,
+        "points_per_game": "0.00"
+      }
+    ],
+    "opponent_splits": [
+      {
+        "opponent_slug": "colson-overhead-doors",
+        "opponent_name": "Colson Overhead Doors",
+        "gp": 2,
+        "goals": 1,
+        "assists": 4,
+        "points": 5,
+        "penalty_minutes": 3,
+        "points_per_game": "2.50"
+      },
+      {
+        "opponent_slug": "gr-mitchell-welding",
+        "opponent_name": "G.R. Mitchell Welding",
+        "gp": 1,
+        "goals": 0,
+        "assists": 1,
+        "points": 1,
+        "penalty_minutes": 3,
+        "points_per_game": "1.00"
+      }
+    ],
+    "five_game_windows": {
+      "best": {
+        "start_date": "2025-10-14",
+        "end_date": "2025-12-30",
+        "window": 3,
+        "gp": 3,
+        "goals": 1,
+        "assists": 5,
+        "points": 6,
+        "penalty_minutes": 6,
+        "points_per_game": "2.00"
+      },
+      "worst": {
+        "start_date": "2025-10-14",
+        "end_date": "2025-12-30",
+        "window": 3,
+        "gp": 3,
+        "goals": 1,
+        "assists": 5,
+        "points": 6,
+        "penalty_minutes": 6,
+        "points_per_game": "2.00"
+      }
+    },
+    "half_splits": {
+      "first_half": {
+        "gp": 1,
+        "goals": 1,
+        "assists": 1,
+        "points": 2,
+        "penalty_minutes": 3,
+        "points_per_game": "2.00"
+      },
+      "second_half": {
+        "gp": 2,
+        "goals": 0,
+        "assists": 4,
+        "points": 4,
+        "penalty_minutes": 3,
+        "points_per_game": "2.00"
+      }
+    },
+    "streaks": {
+      "longest_point_streak": 3,
+      "longest_goal_streak": 1,
+      "multi_point_games": 2,
+      "hat_tricks": 0
+    },
+    "box_score_log_coverage": {
+      "logged_gp": 3,
+      "season_gp": 3,
+      "game_coverage_pct": "1.000",
+      "logged_goals": 1,
+      "season_goals": 1,
+      "goal_coverage_pct": "1.000",
+      "logged_assists": 5,
+      "season_assists": 5,
+      "assist_coverage_pct": "1.000",
+      "logged_points": 6,
+      "season_points": 6,
+      "point_coverage_pct": "1.000",
+      "is_complete": true
+    },
+    "team_role_profile": {
+      "team_rank": 2,
+      "team_record": "16-8-5",
+      "team_points_rank": 12,
+      "team_points_leader": "Brendan Stone",
+      "gap_to_team_leader": 43,
+      "lead_over_next_teammate": 2,
+      "goal_share_pct": "0.7%"
+    },
+    "team_context_crossovers": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "notes": [
+          "J&K Electric went 2-1-0 and scored 12 while allowing 9.",
+          "Player logged-sample line that month: 1 GP, 1 G, 1 A, 2 PTS.",
+          "Played to a 2-1-0 month and outscored opponents 12-9.",
+          "Scored below its usual rate, which helps explain any stall or fade in the standings."
+        ]
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "notes": [
+          "J&K Electric went 3-1-1 and scored 23 while allowing 18.",
+          "Month-end standing snapshot: No. 2 with 15 points.",
+          "Player logged-sample line that month: 1 GP, 0 G, 3 A, 3 PTS.",
+          "Played to a 3-1-1 month and outscored opponents 23-18.",
+          "Closed the month at No. 2 with 15 points."
+        ]
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "notes": [
+          "J&K Electric went 5-0-0 and scored 29 while allowing 15.",
+          "Player logged-sample line that month: 1 GP, 0 G, 1 A, 1 PTS.",
+          "Went unbeaten and perfect at 5-0-0 with a +14 goal differential.",
+          "Defended better than its season norm, which gave the month a steadier feel."
+        ]
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "notes": [
+          "J&K Electric went 1-1-1 and scored 18 while allowing 16.",
+          "Month-end standing snapshot: No. 2 with 28 points.",
+          "Played to a 1-1-1 month and outscored opponents 18-16.",
+          "Scored well above its season pace, which makes this month an offensive spike."
+        ]
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "notes": [
+          "J&K Electric went 1-2-2 and scored 26 while allowing 29.",
+          "Month-end standing snapshot: No. 3 with 33 points.",
+          "Played to a 1-2-2 month and outscored opponents 26-29.",
+          "Allowed goals at a higher rate than normal, which put strain on the month."
+        ]
+      }
+    ]
+  },
+  "angles": [
+    "Played a limited share of the team schedule, which makes availability and sample size part of the profile.",
+    "Peak month was November 2025 (3 points), which helps structure the season arc."
+  ],
+  "suggested_prompts": [
+    "Write a newspaper-style player profile on Ryan Budd and how his season developed month by month.",
+    "Write a playoff program feature on Ryan Budd that explains his role for J&K Electric.",
+    "Write a local-sports column on what defined Ryan Budd's 2025-2026 season."
+  ]
+}

@@ -1,0 +1,1660 @@
+{
+  "entity_type": "team",
+  "entity_id": "gr-mitchell-welding",
+  "title": "G.R. Mitchell Welding season story pack",
+  "generated_at": "2026-03-10T20:36:07.668409+00:00",
+  "verified_facts": {
+    "standing": {
+      "rank": 3,
+      "team_name": "G.R. Mitchell Welding",
+      "team_slug": "gr-mitchell-welding",
+      "points": 37,
+      "wins": 16,
+      "losses": 8,
+      "ties": 5,
+      "goals_for": 166,
+      "goals_against": 119,
+      "last_10": "6-1-3",
+      "streak": "Won 3",
+      "record": "16-8-5"
+    },
+    "month_end_checkpoints": [
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "rank": 3,
+        "points": 11,
+        "record": "5-4-1",
+        "streak": "Tied 1"
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "rank": 3,
+        "points": 28,
+        "record": "12-7-4",
+        "streak": "Won 2"
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "rank": 2,
+        "points": 35,
+        "record": "15-8-5",
+        "streak": "Won 2"
+      },
+      {
+        "month": "2026-03",
+        "month_label": "March 2026",
+        "rank": 3,
+        "points": 37,
+        "record": "16-8-5",
+        "streak": "Won 3"
+      }
+    ],
+    "monthly_game_splits": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "gp": 4,
+        "wins": 3,
+        "losses": 1,
+        "ties": 0,
+        "gf": 28,
+        "ga": 18
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "gp": 3,
+        "wins": 1,
+        "losses": 1,
+        "ties": 1,
+        "gf": 12,
+        "ga": 10
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "gp": 6,
+        "wins": 4,
+        "losses": 2,
+        "ties": 0,
+        "gf": 35,
+        "ga": 24
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "gp": 6,
+        "wins": 2,
+        "losses": 1,
+        "ties": 3,
+        "gf": 33,
+        "ga": 28
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "gp": 4,
+        "wins": 2,
+        "losses": 1,
+        "ties": 1,
+        "gf": 20,
+        "ga": 16
+      }
+    ],
+    "monthly_timeline": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "record": "3-1-0",
+        "gf": 28,
+        "ga": 18,
+        "notable_game": "2025-10-26 vs Colson Overhead Doors (12-3, W)"
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "record": "1-1-1",
+        "gf": 12,
+        "ga": 10,
+        "notable_game": "2025-11-23 vs Colson Overhead Doors (6-3, W)"
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "record": "4-2-0",
+        "gf": 35,
+        "ga": 24,
+        "notable_game": "2025-12-02 vs Ultramar (9-1, W)"
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "record": "2-1-3",
+        "gf": 33,
+        "ga": 28,
+        "notable_game": "2026-01-27 vs Ultramar (10-3, W)"
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "record": "2-1-1",
+        "gf": 20,
+        "ga": 16,
+        "notable_game": "2026-02-17 vs Ultramar (7-4, W)"
+      }
+    ],
+    "monthly_context_notes": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "notes": [
+          "Played to a 3-1-0 month and outscored opponents 28-18.",
+          "Scored well above its season pace, which makes this month an offensive spike.",
+          "The schedule was playoff-heavy, with 3 of 4 games against the postseason field.",
+          "Main opponents that month: Colson Overhead Doors, J&K Electric, Maltby Sports, Ultramar."
+        ]
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "notes": [
+          "Played to a 1-1-1 month and outscored opponents 12-10.",
+          "Scored below its usual rate, which helps explain any stall or fade in the standings.",
+          "Defended better than its season norm, which gave the month a steadier feel.",
+          "This was a clear drop from the previous month.",
+          "The schedule was playoff-heavy, with 2 of 3 games against the postseason field."
+        ]
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "notes": [
+          "Played to a 4-2-0 month and outscored opponents 35-24.",
+          "The schedule was playoff-heavy, with 5 of 6 games against the postseason field.",
+          "Main opponents that month: Colson Overhead Doors, J&K Electric, Maltby Sports, Ultramar."
+        ]
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "notes": [
+          "Played to a 2-1-3 month and outscored opponents 33-28.",
+          "The schedule was playoff-heavy, with 5 of 6 games against the postseason field.",
+          "Closed the month at No. 3 with 28 points. That held the same place in the table.",
+          "Main opponents that month: Colson Overhead Doors, J&K Electric, Maltby Sports, Ultramar."
+        ]
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "notes": [
+          "Played to a 2-1-1 month and outscored opponents 20-16.",
+          "The schedule was playoff-heavy, with 4 of 4 games against the postseason field.",
+          "Closed the month at No. 2 with 35 points. That was an upward move in the table.",
+          "Main opponents that month: J&K Electric, Ultramar."
+        ]
+      }
+    ],
+    "results_profile": {
+      "gp": 23,
+      "wins": 12,
+      "losses": 6,
+      "ties": 5,
+      "gf": 128,
+      "ga": 96,
+      "record": "12-6-5",
+      "points_pct": "0.630",
+      "goal_diff": 32
+    },
+    "leaders": {
+      "points": [
+        {
+          "player_id": "gr-mitchell-welding-macdonald-meathead-97",
+          "name": "MacDonald, Meathead",
+          "number": "97",
+          "positions": [
+            "C"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 18,
+          "goals": 31,
+          "assists": 26,
+          "points": 57,
+          "penalty_minutes": 45,
+          "points_per_game": 3.17,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-atkinson-dave-38",
+          "name": "Atkinson, Dave",
+          "number": "38",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 25,
+          "goals": 21,
+          "assists": 33,
+          "points": 54,
+          "penalty_minutes": 6,
+          "points_per_game": 2.16,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-fullerton-zack-90",
+          "name": "Fullerton, Zack",
+          "number": "90",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 22,
+          "goals": 19,
+          "assists": 22,
+          "points": 41,
+          "penalty_minutes": 3,
+          "points_per_game": 1.86,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-mitchell-gordon-13",
+          "name": "Mitchell, Gordon",
+          "number": "13",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 23,
+          "goals": 11,
+          "assists": 24,
+          "points": 35,
+          "penalty_minutes": 33,
+          "points_per_game": 1.52,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-macpherson-ryan-21",
+          "name": "Macpherson, Ryan",
+          "number": "21",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 19,
+          "goals": 18,
+          "assists": 16,
+          "points": 34,
+          "penalty_minutes": 9,
+          "points_per_game": 1.79,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-bourgeois-julien-9",
+          "name": "Bourgeois, Julien",
+          "number": "9",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 18,
+          "goals": 9,
+          "assists": 21,
+          "points": 30,
+          "penalty_minutes": 9,
+          "points_per_game": 1.67,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-dobson-nick-pickle-94",
+          "name": "Dobson, Nick \"Pickle\"",
+          "number": "94",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 18,
+          "goals": 16,
+          "assists": 12,
+          "points": 28,
+          "penalty_minutes": 15,
+          "points_per_game": 1.56,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-helm-corey-7",
+          "name": "Helm, Corey",
+          "number": "7",
+          "positions": [
+            "D",
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 19,
+          "goals": 5,
+          "assists": 22,
+          "points": 27,
+          "penalty_minutes": 9,
+          "points_per_game": 1.42,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-sutton-cody-61",
+          "name": "Sutton, Cody",
+          "number": "61",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 11,
+          "goals": 3,
+          "assists": 19,
+          "points": 22,
+          "penalty_minutes": 6,
+          "points_per_game": 2.0,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-ryan-geoff-55",
+          "name": "Ryan, Geoff",
+          "number": "55",
+          "positions": [
+            "D"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 12,
+          "goals": 9,
+          "assists": 9,
+          "points": 18,
+          "penalty_minutes": 0,
+          "points_per_game": 1.5,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-mattix-ralph-66",
+          "name": "Mattix, Ralph",
+          "number": "66",
+          "positions": [
+            "D"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 14,
+          "goals": 4,
+          "assists": 14,
+          "points": 18,
+          "penalty_minutes": 9,
+          "points_per_game": 1.29,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-hurley-william-15",
+          "name": "Hurley, William",
+          "number": "15",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 12,
+          "goals": 8,
+          "assists": 7,
+          "points": 15,
+          "penalty_minutes": 9,
+          "points_per_game": 1.25,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-robichaud-corey-88",
+          "name": "Robichaud, Corey",
+          "number": "88",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 8,
+          "goals": 4,
+          "assists": 5,
+          "points": 9,
+          "penalty_minutes": 10,
+          "points_per_game": 1.12,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-clark-scott-1",
+          "name": "Clark, Scott",
+          "number": "1",
+          "positions": [
+            "G"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        }
+      ],
+      "goals": [
+        {
+          "player_id": "gr-mitchell-welding-macdonald-meathead-97",
+          "name": "MacDonald, Meathead",
+          "number": "97",
+          "positions": [
+            "C"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 18,
+          "goals": 31,
+          "assists": 26,
+          "points": 57,
+          "penalty_minutes": 45,
+          "points_per_game": 3.17,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-atkinson-dave-38",
+          "name": "Atkinson, Dave",
+          "number": "38",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 25,
+          "goals": 21,
+          "assists": 33,
+          "points": 54,
+          "penalty_minutes": 6,
+          "points_per_game": 2.16,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-fullerton-zack-90",
+          "name": "Fullerton, Zack",
+          "number": "90",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 22,
+          "goals": 19,
+          "assists": 22,
+          "points": 41,
+          "penalty_minutes": 3,
+          "points_per_game": 1.86,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-macpherson-ryan-21",
+          "name": "Macpherson, Ryan",
+          "number": "21",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 19,
+          "goals": 18,
+          "assists": 16,
+          "points": 34,
+          "penalty_minutes": 9,
+          "points_per_game": 1.79,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-dobson-nick-pickle-94",
+          "name": "Dobson, Nick \"Pickle\"",
+          "number": "94",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 18,
+          "goals": 16,
+          "assists": 12,
+          "points": 28,
+          "penalty_minutes": 15,
+          "points_per_game": 1.56,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-mitchell-gordon-13",
+          "name": "Mitchell, Gordon",
+          "number": "13",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 23,
+          "goals": 11,
+          "assists": 24,
+          "points": 35,
+          "penalty_minutes": 33,
+          "points_per_game": 1.52,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-ryan-geoff-55",
+          "name": "Ryan, Geoff",
+          "number": "55",
+          "positions": [
+            "D"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 12,
+          "goals": 9,
+          "assists": 9,
+          "points": 18,
+          "penalty_minutes": 0,
+          "points_per_game": 1.5,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-bourgeois-julien-9",
+          "name": "Bourgeois, Julien",
+          "number": "9",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 18,
+          "goals": 9,
+          "assists": 21,
+          "points": 30,
+          "penalty_minutes": 9,
+          "points_per_game": 1.67,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-hurley-william-15",
+          "name": "Hurley, William",
+          "number": "15",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 12,
+          "goals": 8,
+          "assists": 7,
+          "points": 15,
+          "penalty_minutes": 9,
+          "points_per_game": 1.25,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-helm-corey-7",
+          "name": "Helm, Corey",
+          "number": "7",
+          "positions": [
+            "D",
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 19,
+          "goals": 5,
+          "assists": 22,
+          "points": 27,
+          "penalty_minutes": 9,
+          "points_per_game": 1.42,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-mattix-ralph-66",
+          "name": "Mattix, Ralph",
+          "number": "66",
+          "positions": [
+            "D"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 14,
+          "goals": 4,
+          "assists": 14,
+          "points": 18,
+          "penalty_minutes": 9,
+          "points_per_game": 1.29,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-robichaud-corey-88",
+          "name": "Robichaud, Corey",
+          "number": "88",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 8,
+          "goals": 4,
+          "assists": 5,
+          "points": 9,
+          "penalty_minutes": 10,
+          "points_per_game": 1.12,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-sutton-cody-61",
+          "name": "Sutton, Cody",
+          "number": "61",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 11,
+          "goals": 3,
+          "assists": 19,
+          "points": 22,
+          "penalty_minutes": 6,
+          "points_per_game": 2.0,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-clark-scott-1",
+          "name": "Clark, Scott",
+          "number": "1",
+          "positions": [
+            "G"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        }
+      ],
+      "assists": [
+        {
+          "player_id": "gr-mitchell-welding-atkinson-dave-38",
+          "name": "Atkinson, Dave",
+          "number": "38",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 25,
+          "goals": 21,
+          "assists": 33,
+          "points": 54,
+          "penalty_minutes": 6,
+          "points_per_game": 2.16,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-macdonald-meathead-97",
+          "name": "MacDonald, Meathead",
+          "number": "97",
+          "positions": [
+            "C"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 18,
+          "goals": 31,
+          "assists": 26,
+          "points": 57,
+          "penalty_minutes": 45,
+          "points_per_game": 3.17,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-mitchell-gordon-13",
+          "name": "Mitchell, Gordon",
+          "number": "13",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 23,
+          "goals": 11,
+          "assists": 24,
+          "points": 35,
+          "penalty_minutes": 33,
+          "points_per_game": 1.52,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-helm-corey-7",
+          "name": "Helm, Corey",
+          "number": "7",
+          "positions": [
+            "D",
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 19,
+          "goals": 5,
+          "assists": 22,
+          "points": 27,
+          "penalty_minutes": 9,
+          "points_per_game": 1.42,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-fullerton-zack-90",
+          "name": "Fullerton, Zack",
+          "number": "90",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 22,
+          "goals": 19,
+          "assists": 22,
+          "points": 41,
+          "penalty_minutes": 3,
+          "points_per_game": 1.86,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-bourgeois-julien-9",
+          "name": "Bourgeois, Julien",
+          "number": "9",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 18,
+          "goals": 9,
+          "assists": 21,
+          "points": 30,
+          "penalty_minutes": 9,
+          "points_per_game": 1.67,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-sutton-cody-61",
+          "name": "Sutton, Cody",
+          "number": "61",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 11,
+          "goals": 3,
+          "assists": 19,
+          "points": 22,
+          "penalty_minutes": 6,
+          "points_per_game": 2.0,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-macpherson-ryan-21",
+          "name": "Macpherson, Ryan",
+          "number": "21",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 19,
+          "goals": 18,
+          "assists": 16,
+          "points": 34,
+          "penalty_minutes": 9,
+          "points_per_game": 1.79,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-mattix-ralph-66",
+          "name": "Mattix, Ralph",
+          "number": "66",
+          "positions": [
+            "D"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 14,
+          "goals": 4,
+          "assists": 14,
+          "points": 18,
+          "penalty_minutes": 9,
+          "points_per_game": 1.29,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-dobson-nick-pickle-94",
+          "name": "Dobson, Nick \"Pickle\"",
+          "number": "94",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 18,
+          "goals": 16,
+          "assists": 12,
+          "points": 28,
+          "penalty_minutes": 15,
+          "points_per_game": 1.56,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-ryan-geoff-55",
+          "name": "Ryan, Geoff",
+          "number": "55",
+          "positions": [
+            "D"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 12,
+          "goals": 9,
+          "assists": 9,
+          "points": 18,
+          "penalty_minutes": 0,
+          "points_per_game": 1.5,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-hurley-william-15",
+          "name": "Hurley, William",
+          "number": "15",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 12,
+          "goals": 8,
+          "assists": 7,
+          "points": 15,
+          "penalty_minutes": 9,
+          "points_per_game": 1.25,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-robichaud-corey-88",
+          "name": "Robichaud, Corey",
+          "number": "88",
+          "positions": [
+            "F"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 8,
+          "goals": 4,
+          "assists": 5,
+          "points": 9,
+          "penalty_minutes": 10,
+          "points_per_game": 1.12,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        },
+        {
+          "player_id": "gr-mitchell-welding-clark-scott-1",
+          "name": "Clark, Scott",
+          "number": "1",
+          "positions": [
+            "G"
+          ],
+          "team_id": "983723",
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "games_played": 1,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 23,
+          "games_missed": null,
+          "recent_points": 0,
+          "recent_games": 0
+        }
+      ]
+    },
+    "key_games": [
+      {
+        "label": "Biggest win",
+        "local_date": "2025-10-26",
+        "opponent_name": "Colson Overhead Doors",
+        "score": "12-3",
+        "result": "W",
+        "canonical_game_id": "3274310"
+      },
+      {
+        "label": "Toughest loss",
+        "local_date": "2025-10-19",
+        "opponent_name": "Maltby Sports",
+        "score": "2-10",
+        "result": "L",
+        "canonical_game_id": "3274302"
+      },
+      {
+        "label": "Latest vs playoff team",
+        "local_date": "2026-02-24",
+        "opponent_name": "Ultramar",
+        "score": "5-3",
+        "result": "W",
+        "canonical_game_id": "3276689"
+      }
+    ],
+    "head_to_head": [
+      {
+        "opponent_slug": "colson-overhead-doors",
+        "opponent_name": "Colson Overhead Doors",
+        "wins": 2,
+        "losses": 1,
+        "ties": 1,
+        "gf": 26,
+        "ga": 15
+      },
+      {
+        "opponent_slug": "j-and-k-electric",
+        "opponent_name": "J&K Electric",
+        "wins": 1,
+        "losses": 3,
+        "ties": 2,
+        "gf": 24,
+        "ga": 28
+      },
+      {
+        "opponent_slug": "maltby-sports",
+        "opponent_name": "Maltby Sports",
+        "wins": 2,
+        "losses": 2,
+        "ties": 1,
+        "gf": 22,
+        "ga": 28
+      },
+      {
+        "opponent_slug": "ultramar",
+        "opponent_name": "Ultramar",
+        "wins": 7,
+        "losses": 0,
+        "ties": 1,
+        "gf": 56,
+        "ga": 25
+      }
+    ],
+    "opponent_splits": [
+      {
+        "opponent_slug": "ultramar",
+        "opponent_name": "Ultramar",
+        "gp": 8,
+        "wins": 7,
+        "losses": 0,
+        "ties": 1,
+        "gf": 56,
+        "ga": 25,
+        "record": "7-0-1",
+        "points_pct": "0.938",
+        "goal_diff": 31
+      },
+      {
+        "opponent_slug": "colson-overhead-doors",
+        "opponent_name": "Colson Overhead Doors",
+        "gp": 4,
+        "wins": 2,
+        "losses": 1,
+        "ties": 1,
+        "gf": 26,
+        "ga": 15,
+        "record": "2-1-1",
+        "points_pct": "0.625",
+        "goal_diff": 11
+      },
+      {
+        "opponent_slug": "maltby-sports",
+        "opponent_name": "Maltby Sports",
+        "gp": 5,
+        "wins": 2,
+        "losses": 2,
+        "ties": 1,
+        "gf": 22,
+        "ga": 28,
+        "record": "2-2-1",
+        "points_pct": "0.500",
+        "goal_diff": -6
+      },
+      {
+        "opponent_slug": "j-and-k-electric",
+        "opponent_name": "J&K Electric",
+        "gp": 6,
+        "wins": 1,
+        "losses": 3,
+        "ties": 2,
+        "gf": 24,
+        "ga": 28,
+        "record": "1-3-2",
+        "points_pct": "0.333",
+        "goal_diff": -4
+      }
+    ],
+    "vs_playoff_field": {
+      "gp": 19,
+      "wins": 10,
+      "losses": 5,
+      "ties": 4,
+      "gf": 102,
+      "ga": 81,
+      "record": "10-5-4",
+      "points_pct": "0.632",
+      "goal_diff": 21
+    },
+    "five_game_windows": {
+      "best": {
+        "start_date": "2025-11-23",
+        "end_date": "2025-12-14",
+        "window": 5,
+        "gp": 5,
+        "wins": 4,
+        "losses": 0,
+        "ties": 1,
+        "gf": 30,
+        "ga": 15,
+        "record": "4-0-1",
+        "points_pct": "0.900",
+        "goal_diff": 15
+      },
+      "worst": {
+        "start_date": "2025-12-21",
+        "end_date": "2026-01-18",
+        "window": 5,
+        "gp": 5,
+        "wins": 0,
+        "losses": 3,
+        "ties": 2,
+        "gf": 18,
+        "ga": 25,
+        "record": "0-3-2",
+        "points_pct": "0.200",
+        "goal_diff": -7
+      }
+    },
+    "half_splits": {
+      "first_half": {
+        "gp": 11,
+        "wins": 8,
+        "losses": 2,
+        "ties": 1,
+        "gf": 68,
+        "ga": 41,
+        "record": "8-2-1",
+        "points_pct": "0.773",
+        "goal_diff": 27
+      },
+      "second_half": {
+        "gp": 12,
+        "wins": 4,
+        "losses": 4,
+        "ties": 4,
+        "gf": 60,
+        "ga": 55,
+        "record": "4-4-4",
+        "points_pct": "0.500",
+        "goal_diff": 5
+      }
+    },
+    "streaks": {
+      "longest_win_streak": 4,
+      "longest_winless_streak": 6
+    },
+    "recent_results": [
+      {
+        "canonical_game_id": "3276657",
+        "local_date": "2026-01-27",
+        "local_time": "8:45 PM",
+        "month": "2026-01",
+        "season_phase": "regular_season",
+        "team_name": "G.R. Mitchell Welding",
+        "team_slug": "gr-mitchell-welding",
+        "opponent_name": "Ultramar",
+        "opponent_slug": "ultramar",
+        "team_score": 10,
+        "opponent_score": 3,
+        "result": "W",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276657&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276663",
+        "local_date": "2026-02-03",
+        "local_time": "8:45 PM",
+        "month": "2026-02",
+        "season_phase": "regular_season",
+        "team_name": "G.R. Mitchell Welding",
+        "team_slug": "gr-mitchell-welding",
+        "opponent_name": "J&K Electric",
+        "opponent_slug": "j-and-k-electric",
+        "team_score": 2,
+        "opponent_score": 3,
+        "result": "L",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276663&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276673",
+        "local_date": "2026-02-10",
+        "local_time": "10:00 PM",
+        "month": "2026-02",
+        "season_phase": "regular_season",
+        "team_name": "G.R. Mitchell Welding",
+        "team_slug": "gr-mitchell-welding",
+        "opponent_name": "J&K Electric",
+        "opponent_slug": "j-and-k-electric",
+        "team_score": 6,
+        "opponent_score": 6,
+        "result": "T",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276673&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276681",
+        "local_date": "2026-02-17",
+        "local_time": "10:00 PM",
+        "month": "2026-02",
+        "season_phase": "regular_season",
+        "team_name": "G.R. Mitchell Welding",
+        "team_slug": "gr-mitchell-welding",
+        "opponent_name": "Ultramar",
+        "opponent_slug": "ultramar",
+        "team_score": 7,
+        "opponent_score": 4,
+        "result": "W",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276681&u=DSMALL&s=hockey&p=boxscore"
+      },
+      {
+        "canonical_game_id": "3276689",
+        "local_date": "2026-02-24",
+        "local_time": "10:00 PM",
+        "month": "2026-02",
+        "season_phase": "regular_season",
+        "team_name": "G.R. Mitchell Welding",
+        "team_slug": "gr-mitchell-welding",
+        "opponent_name": "Ultramar",
+        "opponent_slug": "ultramar",
+        "team_score": 5,
+        "opponent_score": 3,
+        "result": "W",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276689&u=DSMALL&s=hockey&p=boxscore"
+      }
+    ],
+    "upcoming_games": [
+      {
+        "canonical_game_id": "3306125",
+        "local_date": "2026-03-10",
+        "local_time": "8:45 PM",
+        "month": "2026-03",
+        "season_phase": "playoffs",
+        "team_name": "G.R. Mitchell Welding",
+        "team_slug": "gr-mitchell-welding",
+        "opponent_name": "J&K Electric",
+        "opponent_slug": "j-and-k-electric",
+        "team_score": null,
+        "opponent_score": null,
+        "result": "-",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306125&u=DSMALL&s=hockey&p=preview"
+      },
+      {
+        "canonical_game_id": "3306131",
+        "local_date": "2026-03-22",
+        "local_time": "9:00 PM",
+        "month": "2026-03",
+        "season_phase": "playoffs",
+        "team_name": "G.R. Mitchell Welding",
+        "team_slug": "gr-mitchell-welding",
+        "opponent_name": "J&K Electric",
+        "opponent_slug": "j-and-k-electric",
+        "team_score": null,
+        "opponent_score": null,
+        "result": "-",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306131&u=DSMALL&s=hockey&p=preview"
+      },
+      {
+        "canonical_game_id": "3306123",
+        "local_date": "2026-03-24",
+        "local_time": "10:00 PM",
+        "month": "2026-03",
+        "season_phase": "playoffs",
+        "team_name": "G.R. Mitchell Welding",
+        "team_slug": "gr-mitchell-welding",
+        "opponent_name": "J&K Electric",
+        "opponent_slug": "j-and-k-electric",
+        "team_score": null,
+        "opponent_score": null,
+        "result": "-",
+        "is_playoff_opponent": true,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306123&u=DSMALL&s=hockey&p=preview"
+      }
+    ],
+    "playoff_context": {
+      "series_id": "2026-semifinal-gr-mitchell-vs-jk",
+      "round_id": "2026-semifinals",
+      "round_label": "Semifinals",
+      "label": "G.R. Mitchell Welding vs J&K Electric",
+      "best_of": 3,
+      "wins_needed": 2,
+      "higher_seed": {
+        "seed": 2,
+        "team_slug": "gr-mitchell-welding",
+        "team_name": "G.R. Mitchell Welding",
+        "standing": {
+          "rank": 3,
+          "team_name": "G.R. Mitchell Welding",
+          "team_slug": "gr-mitchell-welding",
+          "points": 37,
+          "wins": 16,
+          "losses": 8,
+          "ties": 5,
+          "goals_for": 166,
+          "goals_against": 119,
+          "last_10": "6-1-3",
+          "streak": "Won 3",
+          "record": "16-8-5"
+        }
+      },
+      "lower_seed": {
+        "seed": 3,
+        "team_slug": "j-and-k-electric",
+        "team_name": "J&K Electric",
+        "standing": {
+          "rank": 2,
+          "team_name": "J&K Electric",
+          "team_slug": "j-and-k-electric",
+          "points": 37,
+          "wins": 16,
+          "losses": 8,
+          "ties": 5,
+          "goals_for": 145,
+          "goals_against": 127,
+          "last_10": "3-3-4",
+          "streak": "Won 1",
+          "record": "16-8-5"
+        }
+      },
+      "wins": {
+        "gr-mitchell-welding": 0,
+        "j-and-k-electric": 0
+      },
+      "status": "upcoming",
+      "state_label": "Series tied 0-0",
+      "completed_games": [],
+      "upcoming_games": [
+        {
+          "canonical_game_id": "3306125",
+          "source_game_ids": [
+            "3306125"
+          ],
+          "source_game_count": 1,
+          "status": "scheduled",
+          "season_phase": "playoffs",
+          "playoff_round_id": "2026-semifinals",
+          "playoff_series_id": "2026-semifinal-gr-mitchell-vs-jk",
+          "location": "Amherst",
+          "division": null,
+          "start_local": "2026-03-10T20:45:00-03:00",
+          "start_utc": "2026-03-10T23:45:00+00:00",
+          "local_date": "2026-03-10",
+          "local_time": "8:45 PM",
+          "home_team": "J&K Electric",
+          "home_slug": "j-and-k-electric",
+          "away_team": "G.R. Mitchell Welding",
+          "away_slug": "gr-mitchell-welding",
+          "home_score": null,
+          "away_score": null,
+          "result": null,
+          "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306125&u=DSMALL&s=hockey&p=preview",
+          "summary_url": null,
+          "scoring_event_count": 0,
+          "penalty_count": 0,
+          "notable_performers": []
+        },
+        {
+          "canonical_game_id": "3306131",
+          "source_game_ids": [
+            "3306131"
+          ],
+          "source_game_count": 1,
+          "status": "scheduled",
+          "season_phase": "playoffs",
+          "playoff_round_id": "2026-semifinals",
+          "playoff_series_id": "2026-semifinal-gr-mitchell-vs-jk",
+          "location": "Amherst",
+          "division": null,
+          "start_local": "2026-03-22T21:00:00-03:00",
+          "start_utc": "2026-03-23T00:00:00+00:00",
+          "local_date": "2026-03-22",
+          "local_time": "9:00 PM",
+          "home_team": "G.R. Mitchell Welding",
+          "home_slug": "gr-mitchell-welding",
+          "away_team": "J&K Electric",
+          "away_slug": "j-and-k-electric",
+          "home_score": null,
+          "away_score": null,
+          "result": null,
+          "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306131&u=DSMALL&s=hockey&p=preview",
+          "summary_url": null,
+          "scoring_event_count": 0,
+          "penalty_count": 0,
+          "notable_performers": []
+        },
+        {
+          "canonical_game_id": "3306123",
+          "source_game_ids": [
+            "3306123"
+          ],
+          "source_game_count": 1,
+          "status": "scheduled",
+          "season_phase": "playoffs",
+          "playoff_round_id": "2026-semifinals",
+          "playoff_series_id": "2026-semifinal-gr-mitchell-vs-jk",
+          "location": "Amherst",
+          "division": null,
+          "start_local": "2026-03-24T22:00:00-03:00",
+          "start_utc": "2026-03-25T01:00:00+00:00",
+          "local_date": "2026-03-24",
+          "local_time": "10:00 PM",
+          "home_team": "G.R. Mitchell Welding",
+          "home_slug": "gr-mitchell-welding",
+          "away_team": "J&K Electric",
+          "away_slug": "j-and-k-electric",
+          "home_score": null,
+          "away_score": null,
+          "result": null,
+          "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306123&u=DSMALL&s=hockey&p=preview",
+          "summary_url": null,
+          "scoring_event_count": 0,
+          "penalty_count": 0,
+          "notable_performers": []
+        }
+      ],
+      "next_game": {
+        "canonical_game_id": "3306125",
+        "source_game_ids": [
+          "3306125"
+        ],
+        "source_game_count": 1,
+        "status": "scheduled",
+        "season_phase": "playoffs",
+        "playoff_round_id": "2026-semifinals",
+        "playoff_series_id": "2026-semifinal-gr-mitchell-vs-jk",
+        "location": "Amherst",
+        "division": null,
+        "start_local": "2026-03-10T20:45:00-03:00",
+        "start_utc": "2026-03-10T23:45:00+00:00",
+        "local_date": "2026-03-10",
+        "local_time": "8:45 PM",
+        "home_team": "J&K Electric",
+        "home_slug": "j-and-k-electric",
+        "away_team": "G.R. Mitchell Welding",
+        "away_slug": "gr-mitchell-welding",
+        "home_score": null,
+        "away_score": null,
+        "result": null,
+        "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306125&u=DSMALL&s=hockey&p=preview",
+        "summary_url": null,
+        "scoring_event_count": 0,
+        "penalty_count": 0,
+        "notable_performers": []
+      },
+      "known_game_dates": [
+        "2026-03-10",
+        "2026-03-22",
+        "2026-03-24"
+      ],
+      "notes": "AAHL playoff games continue to appear in the standard schedule feed. All three local dates are currently posted.",
+      "elimination_pressure": [
+        {
+          "team_slug": "gr-mitchell-welding",
+          "team_name": "G.R. Mitchell Welding",
+          "wins": 0,
+          "losses": 0,
+          "wins_needed": 2,
+          "facing_elimination": false
+        },
+        {
+          "team_slug": "j-and-k-electric",
+          "team_name": "J&K Electric",
+          "wins": 0,
+          "losses": 0,
+          "wins_needed": 2,
+          "facing_elimination": false
+        }
+      ],
+      "regular_season_head_to_head": {
+        "matchup": [
+          "gr-mitchell-welding",
+          "j-and-k-electric"
+        ],
+        "games_played": 6,
+        "teams": {
+          "gr-mitchell-welding": {
+            "wins": 1,
+            "losses": 3,
+            "ties": 2,
+            "goals_for": 24,
+            "goals_against": 28
+          },
+          "j-and-k-electric": {
+            "wins": 3,
+            "losses": 1,
+            "ties": 2,
+            "goals_for": 28,
+            "goals_against": 24
+          }
+        }
+      }
+    }
+  },
+  "angles": [
+    "Finished the regular season in a playoff position at No. 3.",
+    "Owned a strong positive goal differential, which supports a control-the-game narrative rather than a lucky record narrative.",
+    "Best month was December 2025 (4-2-0), while November 2025 was the low point.",
+    "The immediate playoff frame is Series tied 0-0, so the season recap can pivot directly into a semifinal preview."
+  ],
+  "suggested_prompts": [
+    "Write a newspaper season recap for G.R. Mitchell Welding that explains how its season evolved month by month.",
+    "Write a playoff preview for G.R. Mitchell Welding that ties regular-season trends to the upcoming semifinal.",
+    "Write a long-form feature on the identity of G.R. Mitchell Welding based on its record, leaders, and turning points."
+  ]
+}

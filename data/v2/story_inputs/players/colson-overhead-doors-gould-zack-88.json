@@ -1,0 +1,457 @@
+{
+  "entity_type": "player",
+  "entity_id": "colson-overhead-doors-gould-zack-88",
+  "title": "Zack Gould season story pack",
+  "generated_at": "2026-03-10T20:36:07.696364+00:00",
+  "verified_facts": {
+    "player": {
+      "player_id": "colson-overhead-doors-gould-zack-88",
+      "name": "Gould, Zack",
+      "number": "88",
+      "positions": [
+        "F"
+      ],
+      "team_id": "TYLERARSENEAU-3",
+      "team_name": "Colson Overhead Doors",
+      "team_slug": "colson-overhead-doors",
+      "games_played": 19,
+      "goals": 20,
+      "assists": 14,
+      "points": 34,
+      "penalty_minutes": 26,
+      "points_per_game": 1.79,
+      "team_games_played": 22,
+      "games_missed": null,
+      "recent_points": 0,
+      "recent_games": 0
+    },
+    "season_profile": {
+      "gp": 14,
+      "goals": 16,
+      "assists": 10,
+      "points": 26,
+      "penalty_minutes": 20,
+      "points_per_game": "1.86"
+    },
+    "month_end_checkpoints": [
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "games_played": 6,
+        "goals": 10,
+        "assists": 3,
+        "points": 13
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "games_played": 9,
+        "goals": 12,
+        "assists": 6,
+        "points": 18
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "games_played": 15,
+        "goals": 16,
+        "assists": 13,
+        "points": 29
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "games_played": 19,
+        "goals": 20,
+        "assists": 14,
+        "points": 34
+      },
+      {
+        "month": "2026-03",
+        "month_label": "March 2026",
+        "games_played": 19,
+        "goals": 20,
+        "assists": 14,
+        "points": 34
+      }
+    ],
+    "monthly_game_splits": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "gp": 2,
+        "goals": 3,
+        "assists": 0,
+        "points": 3,
+        "pim": 0,
+        "multi_point_games": 1
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "gp": 5,
+        "goals": 8,
+        "assists": 3,
+        "points": 11,
+        "pim": 3,
+        "multi_point_games": 3
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "gp": 2,
+        "goals": 1,
+        "assists": 3,
+        "points": 4,
+        "pim": 0,
+        "multi_point_games": 2
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "gp": 3,
+        "goals": 2,
+        "assists": 4,
+        "points": 6,
+        "pim": 6,
+        "multi_point_games": 2
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "gp": 2,
+        "goals": 2,
+        "assists": 0,
+        "points": 2,
+        "pim": 11,
+        "multi_point_games": 1
+      }
+    ],
+    "monthly_timeline": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "gp": 2,
+        "goals": 3,
+        "assists": 0,
+        "points": 3,
+        "penalty_minutes": 0,
+        "points_per_game": "1.50",
+        "top_game": "2025-10-26 vs G.R. Mitchell Welding (2-0-2)"
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "gp": 5,
+        "goals": 8,
+        "assists": 3,
+        "points": 11,
+        "penalty_minutes": 3,
+        "points_per_game": "2.20",
+        "top_game": "2025-11-02 vs J&K Electric (2-1-3)"
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "gp": 2,
+        "goals": 1,
+        "assists": 3,
+        "points": 4,
+        "penalty_minutes": 0,
+        "points_per_game": "2.00",
+        "top_game": "2025-12-02 vs J&K Electric (1-1-2)"
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "gp": 3,
+        "goals": 2,
+        "assists": 4,
+        "points": 6,
+        "penalty_minutes": 6,
+        "points_per_game": "2.00",
+        "top_game": "2026-01-27 vs J&K Electric (1-2-3)"
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "gp": 2,
+        "goals": 2,
+        "assists": 0,
+        "points": 2,
+        "penalty_minutes": 11,
+        "points_per_game": "1.00",
+        "top_game": "2026-02-03 vs Maltby Sports (2-0-2)"
+      }
+    ],
+    "key_games": [
+      {
+        "local_date": "2025-11-02",
+        "opponent_name": "J&K Electric",
+        "score": "3-6",
+        "result": "L",
+        "goals": 2,
+        "assists": 1,
+        "points": 3,
+        "game_id": "3276449"
+      },
+      {
+        "local_date": "2025-11-04",
+        "opponent_name": "Ultramar",
+        "score": "5-5",
+        "result": "T",
+        "goals": 2,
+        "assists": 1,
+        "points": 3,
+        "game_id": "3276453"
+      },
+      {
+        "local_date": "2025-11-16",
+        "opponent_name": "J&K Electric",
+        "score": "4-7",
+        "result": "L",
+        "goals": 2,
+        "assists": 1,
+        "points": 3,
+        "game_id": "3276514"
+      },
+      {
+        "local_date": "2026-01-27",
+        "opponent_name": "J&K Electric",
+        "score": "7-6",
+        "result": "W",
+        "goals": 1,
+        "assists": 2,
+        "points": 3,
+        "game_id": "3276655"
+      },
+      {
+        "local_date": "2025-10-26",
+        "opponent_name": "G.R. Mitchell Welding",
+        "score": "3-12",
+        "result": "L",
+        "goals": 2,
+        "assists": 0,
+        "points": 2,
+        "game_id": "3274310"
+      }
+    ],
+    "vs_playoff_teams": {
+      "gp": 14,
+      "goals": 16,
+      "assists": 10,
+      "points": 26
+    },
+    "result_splits": [
+      {
+        "result": "W",
+        "gp": 2,
+        "goals": 2,
+        "assists": 2,
+        "points": 4,
+        "penalty_minutes": 0,
+        "points_per_game": "2.00"
+      },
+      {
+        "result": "L",
+        "gp": 10,
+        "goals": 11,
+        "assists": 6,
+        "points": 17,
+        "penalty_minutes": 11,
+        "points_per_game": "1.70"
+      },
+      {
+        "result": "T",
+        "gp": 2,
+        "goals": 3,
+        "assists": 2,
+        "points": 5,
+        "penalty_minutes": 9,
+        "points_per_game": "2.50"
+      }
+    ],
+    "opponent_splits": [
+      {
+        "opponent_slug": "j-and-k-electric",
+        "opponent_name": "J&K Electric",
+        "gp": 5,
+        "goals": 7,
+        "assists": 5,
+        "points": 12,
+        "penalty_minutes": 0,
+        "points_per_game": "2.40"
+      },
+      {
+        "opponent_slug": "gr-mitchell-welding",
+        "opponent_name": "G.R. Mitchell Welding",
+        "gp": 3,
+        "goals": 4,
+        "assists": 1,
+        "points": 5,
+        "penalty_minutes": 6,
+        "points_per_game": "1.67"
+      },
+      {
+        "opponent_slug": "maltby-sports",
+        "opponent_name": "Maltby Sports",
+        "gp": 3,
+        "goals": 2,
+        "assists": 3,
+        "points": 5,
+        "penalty_minutes": 0,
+        "points_per_game": "1.67"
+      },
+      {
+        "opponent_slug": "ultramar",
+        "opponent_name": "Ultramar",
+        "gp": 3,
+        "goals": 3,
+        "assists": 1,
+        "points": 4,
+        "penalty_minutes": 14,
+        "points_per_game": "1.33"
+      }
+    ],
+    "five_game_windows": {
+      "best": {
+        "start_date": "2025-10-14",
+        "end_date": "2025-11-16",
+        "window": 5,
+        "gp": 5,
+        "goals": 9,
+        "assists": 3,
+        "points": 12,
+        "penalty_minutes": 3,
+        "points_per_game": "2.40"
+      },
+      "worst": {
+        "start_date": "2025-11-23",
+        "end_date": "2026-01-06",
+        "window": 5,
+        "gp": 5,
+        "goals": 3,
+        "assists": 4,
+        "points": 7,
+        "penalty_minutes": 0,
+        "points_per_game": "1.40"
+      }
+    },
+    "half_splits": {
+      "first_half": {
+        "gp": 7,
+        "goals": 11,
+        "assists": 3,
+        "points": 14,
+        "penalty_minutes": 3,
+        "points_per_game": "2.00"
+      },
+      "second_half": {
+        "gp": 7,
+        "goals": 5,
+        "assists": 7,
+        "points": 12,
+        "penalty_minutes": 17,
+        "points_per_game": "1.71"
+      }
+    },
+    "streaks": {
+      "longest_point_streak": 13,
+      "longest_goal_streak": 8,
+      "multi_point_games": 9,
+      "hat_tricks": 0
+    },
+    "box_score_log_coverage": {
+      "logged_gp": 14,
+      "season_gp": 19,
+      "game_coverage_pct": "0.737",
+      "logged_goals": 16,
+      "season_goals": 20,
+      "goal_coverage_pct": "0.800",
+      "logged_assists": 10,
+      "season_assists": 14,
+      "assist_coverage_pct": "0.714",
+      "logged_points": 26,
+      "season_points": 34,
+      "point_coverage_pct": "0.765",
+      "is_complete": false
+    },
+    "team_role_profile": {
+      "team_rank": 5,
+      "team_record": "3-22-3",
+      "team_points_rank": 1,
+      "team_points_leader": "Zack Gould",
+      "gap_to_team_leader": 0,
+      "lead_over_next_teammate": 8,
+      "goal_share_pct": "22.0%"
+    },
+    "team_context_crossovers": [
+      {
+        "month": "2025-10",
+        "month_label": "October 2025",
+        "notes": [
+          "Colson Overhead Doors went 0-2-0 and scored 4 while allowing 18.",
+          "Player logged-sample line that month: 2 GP, 3 G, 0 A, 3 PTS.",
+          "Played to a 0-2-0 month and outscored opponents 4-18.",
+          "Scored below its usual rate, which helps explain any stall or fade in the standings."
+        ]
+      },
+      {
+        "month": "2025-11",
+        "month_label": "November 2025",
+        "notes": [
+          "Colson Overhead Doors went 1-3-2 and scored 22 while allowing 30.",
+          "Month-end standing snapshot: No. 5 with 2 points.",
+          "Player logged-sample line that month: 5 GP, 8 G, 3 A, 11 PTS.",
+          "Played to a 1-3-2 month and outscored opponents 22-30.",
+          "Defended better than its season norm, which gave the month a steadier feel."
+        ]
+      },
+      {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "notes": [
+          "Colson Overhead Doors went 1-6-0 and scored 21 while allowing 45.",
+          "Player logged-sample line that month: 2 GP, 1 G, 3 A, 4 PTS.",
+          "Played to a 1-6-0 month and outscored opponents 21-45.",
+          "The schedule was playoff-heavy, with 7 of 7 games against the postseason field."
+        ]
+      },
+      {
+        "month": "2026-01",
+        "month_label": "January 2026",
+        "notes": [
+          "Colson Overhead Doors went 1-2-1 and scored 12 while allowing 18.",
+          "Month-end standing snapshot: No. 5 with 7 points.",
+          "Player logged-sample line that month: 3 GP, 2 G, 4 A, 6 PTS.",
+          "Played to a 1-2-1 month and outscored opponents 12-18.",
+          "Defended better than its season norm, which gave the month a steadier feel."
+        ]
+      },
+      {
+        "month": "2026-02",
+        "month_label": "February 2026",
+        "notes": [
+          "Colson Overhead Doors went 0-3-0 and scored 8 while allowing 22.",
+          "Month-end standing snapshot: No. 5 with 9 points.",
+          "Player logged-sample line that month: 2 GP, 2 G, 0 A, 2 PTS.",
+          "Played to a 0-3-0 month and outscored opponents 8-22.",
+          "Allowed goals at a higher rate than normal, which put strain on the month."
+        ]
+      }
+    ]
+  },
+  "angles": [
+    "Was available for almost the full season, which supports an ironman or lineup fixture angle.",
+    "Finished as his team\u2019s points leader, which makes him a natural centerpiece for any team-season story.",
+    "Has a balanced scoring line rather than an extreme scorer/playmaker split.",
+    "Logged 9 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.",
+    "Peak month was November 2025 (11 points), which helps structure the season arc.",
+    "The month-end checkpoints show a steady accumulation profile rather than one single explosive stretch."
+  ],
+  "suggested_prompts": [
+    "Write a newspaper-style player profile on Zack Gould and how his season developed month by month.",
+    "Write a playoff program feature on Zack Gould that explains his role for Colson Overhead Doors.",
+    "Write a local-sports column on what defined Zack Gould's 2025-2026 season."
+  ]
+}
