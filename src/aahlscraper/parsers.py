@@ -347,6 +347,25 @@ def merge_games_with_scores(games: List[GameRecord], scores: List[ScoreBoardEntr
 
     games_by_id = {game.game_id: game for game in games}
     games_by_key = {canonical_game_key_for_record(game): game for game in games}
+    games_by_fuzzy: Dict[Tuple[str, str, str], List[GameRecord]] = {}
+
+    def _local_date_key(dt: Optional[datetime]) -> Optional[str]:
+        if dt is None:
+            return None
+        return dt.astimezone(HALIFAX_TZ).strftime("%Y-%m-%d")
+
+    def _fuzzy_key(home_slug: str, away_slug: str, start_local: Optional[datetime]) -> Optional[Tuple[str, str, str]]:
+        date_key = _local_date_key(start_local)
+        if not date_key:
+            return None
+        team_a, team_b = sorted((slugify(home_slug), slugify(away_slug)))
+        return (team_a, team_b, date_key)
+
+    for game in games:
+        key = _fuzzy_key(game.home.slug, game.away.slug, game.start_local or game.start_utc)
+        if key is None:
+            continue
+        games_by_fuzzy.setdefault(key, []).append(game)
 
     for score in scores:
         game = games_by_id.get(score.game_id)
@@ -366,13 +385,30 @@ def merge_games_with_scores(games: List[GameRecord], scores: List[ScoreBoardEntr
                 )
             )
             game = games_by_key.get(score_key)
+        if not game and len(score.teams) == 2 and score.start_local:
+            fuzzy = _fuzzy_key(score.teams[0].slug, score.teams[1].slug, score.start_local)
+            if fuzzy:
+                candidates = games_by_fuzzy.get(fuzzy) or []
+                if len(candidates) == 1:
+                    game = candidates[0]
+                elif len(candidates) > 1:
+                    # If we have multiple games between the same teams on the same date,
+                    # prefer the one closest in start time (or highest-quality fallback).
+                    target = score.start_local
+                    def _distance(candidate: GameRecord) -> Tuple[int, Tuple[int, int, int, int, int]]:
+                        start = candidate.start_local or candidate.start_utc
+                        if start is None:
+                            return (10**9, (0, 0, 0, 0, 0))
+                        seconds = abs(int((start - target).total_seconds()))
+                        return (seconds, (1 if candidate.start_utc else 0, 1 if candidate.box_score_url else 0, 1 if candidate.summary_url else 0, 1 if candidate.division else 0, 0))
+                    game = min(candidates, key=_distance)
         if not game:
             # If the scoreboard has an entry not present in ICS, create a new stub.
             if len(score.teams) == 2:
                 home, away = score.teams
                 stub = GameRecord(
                     game_id=score.game_id,
-                    start_utc=None,
+                    start_utc=score.start_local.astimezone(timezone.utc) if score.start_local else None,
                     start_local=score.start_local,
                     location=score.location,
                     status="final" if home.final is not None and away.final is not None else "unknown",
@@ -532,6 +568,40 @@ def _parse_table_rows(table: Tag) -> List[List[str]]:
     return rows
 
 
+def _team_name_from_player_stats_heading(table: Tag) -> Optional[str]:
+    """
+    AAHL boxscores usually include a heading like:
+      <div class="modGroupHeading">Maltby Sports Player Stats</div>
+    immediately before the relevant player stats table.
+
+    The site sometimes renders player stats tables in an order that does not match the
+    scoreboard order, and sometimes only includes one team's table. We therefore
+    prefer the explicit heading over positional/index-based mapping.
+    """
+
+    heading = table.find_previous(
+        lambda tag: isinstance(tag, Tag)
+        and tag.name in ("div", "h2", "h3", "h4")
+        and "modGroupHeading" in (tag.get("class") or [])
+    )
+    if not heading:
+        return None
+
+    text = heading.get_text(" ", strip=True)
+    if not text:
+        return None
+
+    lowered = text.lower()
+    if "player stats" not in lowered:
+        return None
+
+    # Strip trailing "Player Stats" (and common separators).
+    cleaned = re.sub(r"\bplayer\s+stats\b", "", text, flags=re.IGNORECASE).strip()
+    cleaned = cleaned.strip("-: \t")
+    cleaned = WHITESPACE_PATTERN.sub(" ", cleaned).strip()
+    return cleaned or None
+
+
 def parse_box_score(html: str) -> Dict[str, object]:
     """
     Parse an AAHL box score page extracting scoreboard, scoring summary, penalties, and player stats.
@@ -619,12 +689,13 @@ def parse_box_score(html: str) -> Dict[str, object]:
                     }
                 )
 
-            player_tables.append({"headers": headers, "players": players})
+            team_name = _team_name_from_player_stats_heading(table)
+            player_tables.append({"team_name": team_name, "headers": headers, "players": players})
 
     teams: List[Dict[str, object]] = []
     for idx, table in enumerate(player_tables):
-        team_name = team_order[idx] if idx < len(team_order) else None
-        teams.append({"team_name": team_name, "players": table["players"]})
+        team_name = table.get("team_name") or (team_order[idx] if idx < len(team_order) else None)
+        teams.append({"team_name": team_name, "players": table.get("players") or []})
 
     return {
         "scoreboard": scoreboard_rows,

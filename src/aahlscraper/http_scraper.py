@@ -359,31 +359,39 @@ class AmherstHockeyScraper:
     ) -> Dict[str, List[Dict[str, object]]]:
         stats: Dict[str, List[Dict[str, object]]] = {}
         teams = box_score.get("teams") or []
-        slug_map = {
-            "home": game.home.slug,
-            "away": game.away.slug,
-        }
+        slug_map = {"home": game.home.slug, "away": game.away.slug}
+        name_map = {"home": game.home.name, "away": game.away.name}
         used_sides: set[str] = set()
+
+        def _norm_team(value: str) -> str:
+            return re.sub(r"[^a-z0-9]+", "", value.lower())
+
+        def _match_side(team_name: str) -> Optional[str]:
+            cleaned = re.sub(r"\((home|away)\)", "", team_name, flags=re.IGNORECASE).strip()
+            candidate_slug = slugify(cleaned) if cleaned else ""
+            for side in ("home", "away"):
+                if side in used_sides:
+                    continue
+                if candidate_slug and candidate_slug == slug_map[side]:
+                    return side
+            # Fallback to normalized display name compare (handles punctuation differences).
+            norm = _norm_team(cleaned)
+            for side in ("home", "away"):
+                if side in used_sides:
+                    continue
+                if norm and norm == _norm_team(name_map[side]):
+                    return side
+            return None
 
         for team_entry in teams:
             team_name = (team_entry.get("team_name") or "").strip()
-            candidate_slug = slugify(team_name) if team_name else None
-            side: Optional[str] = None
+            if not team_name:
+                # If the boxscore did not label the team for this stats table,
+                # do not guess; index-order guessing is exactly how swapped stats
+                # end up polluting the registry.
+                continue
 
-            for key, slug in slug_map.items():
-                if key in used_sides:
-                    continue
-                if candidate_slug and candidate_slug == slug:
-                    side = key
-                    break
-
-            if side is None:
-                for key in ("home", "away"):
-                    if key not in used_sides:
-                        side = key
-                        candidate_slug = slug_map[key]
-                        break
-
+            side = _match_side(team_name)
             if side is None:
                 continue
 
