@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-10T23:58:32.403879",
+  "timestamp": "2026-03-11T01:28:44.259557",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -3298,37 +3298,6 @@
   ],
   "upcoming_games": [
     {
-      "game_id": "3306127",
-      "status": "scheduled",
-      "location": "Amherst",
-      "division": null,
-      "start_utc": "2026-03-11T01:00:00+00:00",
-      "start_local": "2026-03-10T22:00:00-03:00",
-      "home": "Maltby Sports",
-      "away": "Ultramar",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306127&u=DSMALL&s=hockey&p=preview",
-      "summary_url": null,
-      "home_line": {
-        "name": "Maltby Sports",
-        "slug": "maltby-sports",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "away_line": {
-        "name": "Ultramar",
-        "slug": "ultramar",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "home_score": "",
-      "away_score": "",
-      "datetime": "2026-03-10T22:00:00-03:00",
-      "date": "03/10/2026",
-      "time": "10:00 PM"
-    },
-    {
       "game_id": "3306131",
       "status": "scheduled",
       "location": "Amherst",
@@ -4235,7 +4204,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2026-03-10T23:58:32.272460+00:00",
+    "generated_at": "2026-03-11T01:28:44.113095+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",
