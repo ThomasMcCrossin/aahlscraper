@@ -1,36 +1,5 @@
 [
   {
-    "game_id": "3306125",
-    "status": "scheduled",
-    "location": "Amherst",
-    "division": null,
-    "start_utc": "2026-03-10T23:45:00+00:00",
-    "start_local": "2026-03-10T20:45:00-03:00",
-    "home": "J&K Electric",
-    "away": "G.R. Mitchell Welding",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306125&u=DSMALL&s=hockey&p=preview",
-    "summary_url": null,
-    "home_line": {
-      "name": "J&K Electric",
-      "slug": "j-and-k-electric",
-      "final": null,
-      "periods": [],
-      "is_winner": null
-    },
-    "away_line": {
-      "name": "G.R. Mitchell Welding",
-      "slug": "gr-mitchell-welding",
-      "final": null,
-      "periods": [],
-      "is_winner": null
-    },
-    "home_score": "",
-    "away_score": "",
-    "datetime": "2026-03-10T20:45:00-03:00",
-    "date": "03/10/2026",
-    "time": "8:45 PM"
-  },
-  {
     "game_id": "3306127",
     "status": "scheduled",
     "location": "Amherst",

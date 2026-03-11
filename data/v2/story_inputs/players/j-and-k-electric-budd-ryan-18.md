@@ -13,16 +13,16 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Team: J&K Electric
 - Number: 18
 - Positions: F
-- Season totals: 3 GP, 1 G, 5 A, 6 PTS, 6 PIM
+- Season totals: 4 GP, 1 G, 5 A, 6 PTS, 9 PIM
 - Team games played: 21
 - Team scoring rank: 12
 - League scoring rank: 57
-- Points per game: 2.0
-- Logged-sample longest point streak: 3
+- Points per game: 1.5
+- Logged-sample longest point streak: 2
 - Logged-sample longest goal streak: 1
 
 ## Per-Game Log Coverage
-- Logged box-score appearances: 3 of 3 (1.000)
+- Logged box-score appearances: 4 of 4 (1.000)
 - Logged goals / assists / points: 1 / 5 / 6
 - Season goals / assists / points: 1 / 5 / 6
 
@@ -40,14 +40,14 @@ Use this as source material for a player profile, season recap, or playoff featu
 | --- | --- | --- | --- | --- | --- |
 | October 2025 | 1 | 1 | 1 | 2 | 1 |
 | November 2025 | 1 | 0 | 3 | 3 | 1 |
-| December 2025 | 1 | 0 | 1 | 1 | 0 |
+| December 2025 | 2 | 0 | 1 | 1 | 0 |
 
 ## Month-by-Month Narrative Timeline
 | Month | GP | G | A | PTS | Top Game |
 | --- | --- | --- | --- | --- | --- |
 | October 2025 | 1 | 1 | 1 | 2 | 2025-10-14 vs Colson Overhead Doors (1-1-2) |
 | November 2025 | 1 | 0 | 3 | 3 | 2025-11-02 vs Colson Overhead Doors (0-3-3) |
-| December 2025 | 1 | 0 | 1 | 1 | 2025-12-30 vs G.R. Mitchell Welding (0-1-1) |
+| December 2025 | 2 | 0 | 1 | 1 | 2025-12-30 vs G.R. Mitchell Welding (0-1-1) |
 
 ## Best Games
 | Date | Opponent | Result | Score | G | A | PTS |
@@ -55,11 +55,13 @@ Use this as source material for a player profile, season recap, or playoff featu
 | 2025-11-02 | Colson Overhead Doors | W | 6-3 | 0 | 3 | 3 |
 | 2025-10-14 | Colson Overhead Doors | W | 6-1 | 1 | 1 | 2 |
 | 2025-12-30 | G.R. Mitchell Welding | W | 5-2 | 0 | 1 | 1 |
+| 2025-12-07 | Colson Overhead Doors | W | 3-0 | 0 | 0 | 0 |
 
 ## Recent Games
 | Date | Opponent | Result | G | A | PTS |
 | --- | --- | --- | --- | --- | --- |
 | 2025-12-30 | G.R. Mitchell Welding | W | 0 | 1 | 1 |
+| 2025-12-07 | Colson Overhead Doors | W | 0 | 0 | 0 |
 | 2025-11-02 | Colson Overhead Doors | W | 0 | 3 | 3 |
 | 2025-10-14 | Colson Overhead Doors | W | 1 | 1 | 2 |
 
@@ -72,14 +74,14 @@ Use this as source material for a player profile, season recap, or playoff featu
 ## Results Splits
 | Result | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| W | 3 | 1 | 5 | 6 | 2.00 |
+| W | 4 | 1 | 5 | 6 | 1.50 |
 | L | 0 | 0 | 0 | 0 | 0.00 |
 | T | 0 | 0 | 0 | 0 | 0.00 |
 
 ## Opponent Splits
 | Opponent | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| Colson Overhead Doors | 2 | 1 | 4 | 5 | 2.50 |
+| Colson Overhead Doors | 3 | 1 | 4 | 5 | 1.67 |
 | G.R. Mitchell Welding | 1 | 0 | 1 | 1 | 1.00 |
 
 ## Team Context Crossovers
@@ -103,7 +105,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 
 ### December 2025
 - J&K Electric went 5-0-0 and scored 29 while allowing 15.
-- Player logged-sample line that month: 1 GP, 0 G, 1 A, 1 PTS.
+- Player logged-sample line that month: 2 GP, 0 G, 1 A, 1 PTS.
 - Went unbeaten and perfect at 5-0-0 with a +14 goal differential.
 - Defended better than its season norm, which gave the month a steadier feel.
 
@@ -122,8 +124,8 @@ Use this as source material for a player profile, season recap, or playoff featu
 ## First Half Vs Second Half
 | Split | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| First half | 1 | 1 | 1 | 2 | 2.00 |
-| Second half | 2 | 0 | 4 | 4 | 2.00 |
+| First half | 2 | 1 | 4 | 5 | 2.50 |
+| Second half | 2 | 0 | 1 | 1 | 0.50 |
 
 ## Best And Worst 5-Game Stretches
 - Best 5-game run: 6 points (1-5) from 2025-10-14 to 2025-12-30.

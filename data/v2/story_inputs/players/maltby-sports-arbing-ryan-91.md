@@ -13,18 +13,18 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Team: Maltby Sports
 - Number: 91
 - Positions: D, F
-- Season totals: 11 GP, 1 G, 10 A, 11 PTS, 18 PIM
+- Season totals: 13 GP, 1 G, 11 A, 12 PTS, 21 PIM
 - Team games played: 21
 - Team scoring rank: 11
 - League scoring rank: 45
-- Points per game: 1.0
+- Points per game: 0.92
 - Logged-sample longest point streak: 6
 - Logged-sample longest goal streak: 1
 
 ## Per-Game Log Coverage
-- Logged box-score appearances: 11 of 11 (1.000)
-- Logged goals / assists / points: 1 / 10 / 11
-- Season goals / assists / points: 1 / 10 / 11
+- Logged box-score appearances: 13 of 13 (1.000)
+- Logged goals / assists / points: 1 / 11 / 12
+- Season goals / assists / points: 1 / 11 / 12
 
 ## Month-End Progression
 | Month | GP | G | A | PTS |
@@ -42,6 +42,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | November 2025 | 2 | 0 | 3 | 3 | 1 |
 | December 2025 | 1 | 0 | 2 | 2 | 1 |
 | January 2026 | 4 | 1 | 2 | 3 | 1 |
+| February 2026 | 2 | 0 | 1 | 1 | 0 |
 
 ## Month-by-Month Narrative Timeline
 | Month | GP | G | A | PTS | Top Game |
@@ -50,6 +51,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | November 2025 | 2 | 0 | 3 | 3 | 2025-11-04 vs G.R. Mitchell Welding (0-2-2) |
 | December 2025 | 1 | 0 | 2 | 2 | 2025-12-23 vs Colson Overhead Doors (0-2-2) |
 | January 2026 | 4 | 1 | 2 | 3 | 2026-01-06 vs Colson Overhead Doors (1-1-2) |
+| February 2026 | 2 | 0 | 1 | 1 | 2026-02-10 vs Ultramar (0-1-1) |
 
 ## Best Games
 | Date | Opponent | Result | Score | G | A | PTS |
@@ -63,22 +65,22 @@ Use this as source material for a player profile, season recap, or playoff featu
 ## Recent Games
 | Date | Opponent | Result | G | A | PTS |
 | --- | --- | --- | --- | --- | --- |
+| 2026-02-17 | J&K Electric | W | 0 | 0 | 0 |
+| 2026-02-10 | Ultramar | W | 0 | 1 | 1 |
 | 2026-01-20 | Ultramar | W | 0 | 0 | 0 |
 | 2026-01-13 | G.R. Mitchell Welding | T | 0 | 1 | 1 |
 | 2026-01-06 | Colson Overhead Doors | W | 1 | 1 | 2 |
-| 2026-01-04 | Ultramar | W | 0 | 0 | 0 |
-| 2025-12-23 | Colson Overhead Doors | W | 0 | 2 | 2 |
 
 ## Versus Playoff Teams
-- GP: 9
+- GP: 11
 - G: 0
-- A: 7
-- PTS: 7
+- A: 8
+- PTS: 8
 
 ## Results Splits
 | Result | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| W | 9 | 1 | 8 | 9 | 1.00 |
+| W | 11 | 1 | 9 | 10 | 0.91 |
 | L | 1 | 0 | 1 | 1 | 1.00 |
 | T | 1 | 0 | 1 | 1 | 1.00 |
 
@@ -87,14 +89,14 @@ Use this as source material for a player profile, season recap, or playoff featu
 | --- | --- | --- | --- | --- | --- |
 | Colson Overhead Doors | 2 | 1 | 3 | 4 | 2.00 |
 | G.R. Mitchell Welding | 3 | 0 | 4 | 4 | 1.33 |
-| J&K Electric | 2 | 0 | 2 | 2 | 1.00 |
-| Ultramar | 4 | 0 | 1 | 1 | 0.25 |
+| Ultramar | 5 | 0 | 2 | 2 | 0.40 |
+| J&K Electric | 3 | 0 | 2 | 2 | 0.67 |
 
 ## Team Context Crossovers
 - Team finish: No. 1 at 21-4-3
 - Team scoring rank: 11
 - Share of team goals: 0.6%
-- Gap to team points leader Issac Bridge: 69 points
+- Gap to team points leader Issac Bridge: 68 points
 
 ### October 2025
 - Maltby Sports went 3-1-0 and scored 29 while allowing 15.
@@ -125,18 +127,19 @@ Use this as source material for a player profile, season recap, or playoff featu
 ### February 2026
 - Maltby Sports went 5-0-1 and scored 38 while allowing 22.
 - Month-end standing snapshot: No. 1 with 42 points.
+- Player logged-sample line that month: 2 GP, 0 G, 1 A, 1 PTS.
 - Went unbeaten at 5-0-1 with a +16 goal differential.
 - This was a clear improvement from the previous month.
 
 ## First Half Vs Second Half
 | Split | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| First half | 5 | 0 | 5 | 5 | 1.00 |
-| Second half | 6 | 1 | 5 | 6 | 1.00 |
+| First half | 6 | 0 | 6 | 6 | 1.00 |
+| Second half | 7 | 1 | 5 | 6 | 0.86 |
 
 ## Best And Worst 5-Game Stretches
 - Best 5-game run: 7 points (1-6) from 2025-11-04 to 2026-01-06.
-- Quietest 5-game run: 5 points (0-5) from 2025-10-14 to 2025-11-04.
+- Quietest 5-game run: 4 points (1-3) from 2026-01-04 to 2026-02-10.
 
 ## Derived Angles
 - Profiles as a playmaker; the assist totals tell more of the story than the goal count.

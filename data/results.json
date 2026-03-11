@@ -7776,9 +7776,9 @@
     "date": "12/07/2025",
     "time": "9:00 PM",
     "player_stats": {
-      "home": [
+      "away": [
         {
-          "player_id": "colson-overhead-doors-boutiler-gerald-22",
+          "player_id": "j-and-k-electric-boutiler-gerald-22",
           "name": "Boutiler, Gerald",
           "number": "22",
           "positions": [
@@ -7792,7 +7792,7 @@
           "gtg": 0
         },
         {
-          "player_id": "colson-overhead-doors-budd-ryan-18",
+          "player_id": "j-and-k-electric-budd-ryan-18",
           "name": "Budd, Ryan",
           "number": "18",
           "positions": [
@@ -7805,7 +7805,7 @@
           "gtg": 0
         },
         {
-          "player_id": "colson-overhead-doors-kinnear-jeremy-17",
+          "player_id": "j-and-k-electric-kinnear-jeremy-17",
           "name": "Kinnear, Jeremy",
           "number": "17",
           "positions": [
@@ -7818,7 +7818,7 @@
           "gtg": 0
         },
         {
-          "player_id": "colson-overhead-doors-morris-pat-27",
+          "player_id": "j-and-k-electric-morris-pat-27",
           "name": "Morris, Pat",
           "number": "27",
           "positions": [
@@ -7832,7 +7832,7 @@
           "gtg": 0
         },
         {
-          "player_id": "colson-overhead-doors-perrin-noah-87",
+          "player_id": "j-and-k-electric-perrin-noah-87",
           "name": "Perrin, Noah",
           "number": "87",
           "positions": [
@@ -7845,7 +7845,7 @@
           "gtg": 0
         },
         {
-          "player_id": "colson-overhead-doors-stone-brendan-28",
+          "player_id": "j-and-k-electric-stone-brendan-28",
           "name": "Stone, Brendan",
           "number": "28",
           "positions": [
@@ -9621,9 +9621,9 @@
     "date": "12/16/2025",
     "time": "10:00 PM",
     "player_stats": {
-      "home": [
+      "away": [
         {
-          "player_id": "colson-overhead-doors-boutiler-gerald-22",
+          "player_id": "j-and-k-electric-boutiler-gerald-22",
           "name": "Boutiler, Gerald",
           "number": "22",
           "positions": [
@@ -9637,7 +9637,7 @@
           "gtg": 0
         },
         {
-          "player_id": "colson-overhead-doors-davison-bill-74",
+          "player_id": "j-and-k-electric-davison-bill-74",
           "name": "Davison, Bill",
           "number": "74",
           "positions": [
@@ -9651,7 +9651,7 @@
           "gtg": 0
         },
         {
-          "player_id": "colson-overhead-doors-kinnear-jeremy-17",
+          "player_id": "j-and-k-electric-kinnear-jeremy-17",
           "name": "Kinnear, Jeremy",
           "number": "17",
           "positions": [
@@ -9664,7 +9664,7 @@
           "gtg": 0
         },
         {
-          "player_id": "colson-overhead-doors-mackenzie-rubein-4",
+          "player_id": "j-and-k-electric-mackenzie-rubein-4",
           "name": "Mackenzie, Rubein",
           "number": "4",
           "positions": [
@@ -9677,7 +9677,7 @@
           "gtg": 0
         },
         {
-          "player_id": "colson-overhead-doors-morris-pat-27",
+          "player_id": "j-and-k-electric-morris-pat-27",
           "name": "Morris, Pat",
           "number": "27",
           "positions": [
@@ -9691,7 +9691,7 @@
           "gtg": 0
         },
         {
-          "player_id": "colson-overhead-doors-stone-brendan-28",
+          "player_id": "j-and-k-electric-stone-brendan-28",
           "name": "Stone, Brendan",
           "number": "28",
           "positions": [
@@ -13109,9 +13109,9 @@
     "date": "01/13/2026",
     "time": "10:00 PM",
     "player_stats": {
-      "home": [
+      "away": [
         {
-          "player_id": "colson-overhead-doors-allen-tyler-tuffy-11",
+          "player_id": "ultramar-allen-tyler-tuffy-11",
           "name": "Allen, Tyler \"Tuffy\"",
           "number": "11",
           "positions": [
@@ -13124,7 +13124,7 @@
           "gtg": 0
         },
         {
-          "player_id": "colson-overhead-doors-bonnell-andy-5",
+          "player_id": "ultramar-bonnell-andy-5",
           "name": "Bonnell, Andy",
           "number": "5",
           "positions": [
@@ -13137,7 +13137,7 @@
           "gtg": 0
         },
         {
-          "player_id": "colson-overhead-doors-gallant-brett-3",
+          "player_id": "ultramar-gallant-brett-3",
           "name": "Gallant, Brett",
           "number": "3",
           "positions": [
@@ -13151,7 +13151,7 @@
           "gtg": 0
         },
         {
-          "player_id": "colson-overhead-doors-linkletter-brad-9",
+          "player_id": "ultramar-linkletter-brad-9",
           "name": "Linkletter, Brad",
           "number": "9",
           "positions": [
@@ -13164,7 +13164,7 @@
           "gtg": 0
         },
         {
-          "player_id": "colson-overhead-doors-malcolm-robert-10",
+          "player_id": "ultramar-malcolm-robert-10",
           "name": "Malcolm, Robert",
           "number": "10",
           "positions": [
@@ -16463,9 +16463,9 @@
     "date": "02/10/2026",
     "time": "8:45 PM",
     "player_stats": {
-      "home": [
+      "away": [
         {
-          "player_id": "ultramar-arbing-ryan-91",
+          "player_id": "maltby-sports-arbing-ryan-91",
           "name": "Arbing, Ryan",
           "number": "91",
           "positions": [
@@ -16479,7 +16479,7 @@
           "gtg": 0
         },
         {
-          "player_id": "ultramar-bridge-issac-98",
+          "player_id": "maltby-sports-bridge-issac-98",
           "name": "Bridge, Issac",
           "number": "98",
           "positions": [
@@ -16492,7 +16492,7 @@
           "gtg": 0
         },
         {
-          "player_id": "ultramar-crocker-luke-6",
+          "player_id": "maltby-sports-crocker-luke-6",
           "name": "Crocker, Luke",
           "number": "6",
           "positions": [
@@ -16505,7 +16505,7 @@
           "gtg": 0
         },
         {
-          "player_id": "ultramar-johnson-trevor-18",
+          "player_id": "maltby-sports-johnson-trevor-18",
           "name": "Johnson, Trevor",
           "number": "18",
           "positions": [
@@ -16518,7 +16518,7 @@
           "gtg": 0
         },
         {
-          "player_id": "ultramar-mccarthy-ian-9",
+          "player_id": "maltby-sports-mccarthy-ian-9",
           "name": "McCarthy, Ian",
           "number": "9",
           "positions": [
@@ -16531,7 +16531,7 @@
           "gtg": 0
         },
         {
-          "player_id": "ultramar-mccrossin-thomas-19",
+          "player_id": "maltby-sports-mccrossin-thomas-19",
           "name": "Mccrossin, Thomas",
           "number": "19",
           "positions": [
@@ -16544,7 +16544,7 @@
           "gtg": 1
         },
         {
-          "player_id": "ultramar-small-danny-biggie-16",
+          "player_id": "maltby-sports-small-danny-biggie-16",
           "name": "Small, Danny \"Biggie\"",
           "number": "16",
           "positions": [
@@ -16558,9 +16558,9 @@
           "gtg": 0
         }
       ],
-      "away": [
+      "home": [
         {
-          "player_id": "maltby-sports-bonnell-andy-5",
+          "player_id": "ultramar-bonnell-andy-5",
           "name": "Bonnell, Andy",
           "number": "5",
           "positions": [
@@ -16573,7 +16573,7 @@
           "gtg": 0
         },
         {
-          "player_id": "maltby-sports-burke-tim-22",
+          "player_id": "ultramar-burke-tim-22",
           "name": "Burke, Tim",
           "number": "22",
           "positions": [
@@ -16587,7 +16587,7 @@
           "gtg": 0
         },
         {
-          "player_id": "maltby-sports-dywer-chris-2",
+          "player_id": "ultramar-dywer-chris-2",
           "name": "Dywer, Chris",
           "number": "2",
           "positions": [
@@ -16601,7 +16601,7 @@
           "gtg": 0
         },
         {
-          "player_id": "maltby-sports-linkletter-brad-9",
+          "player_id": "ultramar-linkletter-brad-9",
           "name": "Linkletter, Brad",
           "number": "9",
           "positions": [
@@ -17523,9 +17523,9 @@
     "date": "02/17/2026",
     "time": "8:45 PM",
     "player_stats": {
-      "home": [
+      "away": [
         {
-          "player_id": "j-and-k-electric-arbing-ryan-91",
+          "player_id": "maltby-sports-arbing-ryan-91",
           "name": "Arbing, Ryan",
           "number": "91",
           "positions": [
@@ -17539,7 +17539,7 @@
           "gtg": 0
         },
         {
-          "player_id": "j-and-k-electric-bridge-issac-98",
+          "player_id": "maltby-sports-bridge-issac-98",
           "name": "Bridge, Issac",
           "number": "98",
           "positions": [
@@ -17552,7 +17552,7 @@
           "gtg": 1
         },
         {
-          "player_id": "j-and-k-electric-crocker-luke-6",
+          "player_id": "maltby-sports-crocker-luke-6",
           "name": "Crocker, Luke",
           "number": "6",
           "positions": [
@@ -17565,7 +17565,7 @@
           "gtg": 0
         },
         {
-          "player_id": "j-and-k-electric-hurley-connor-7",
+          "player_id": "maltby-sports-hurley-connor-7",
           "name": "Hurley, Connor",
           "number": "7",
           "positions": [
@@ -17578,7 +17578,7 @@
           "gtg": 0
         },
         {
-          "player_id": "j-and-k-electric-johnson-trevor-18",
+          "player_id": "maltby-sports-johnson-trevor-18",
           "name": "Johnson, Trevor",
           "number": "18",
           "positions": [
@@ -17591,7 +17591,7 @@
           "gtg": 0
         },
         {
-          "player_id": "j-and-k-electric-leblanc-travis-63",
+          "player_id": "maltby-sports-leblanc-travis-63",
           "name": "Leblanc, Travis",
           "number": "63",
           "positions": [
@@ -17605,7 +17605,7 @@
           "gtg": 0
         },
         {
-          "player_id": "j-and-k-electric-mackinnon-ted-77",
+          "player_id": "maltby-sports-mackinnon-ted-77",
           "name": "Mackinnon, Ted",
           "number": "77",
           "positions": [
@@ -17618,7 +17618,7 @@
           "gtg": 0
         },
         {
-          "player_id": "j-and-k-electric-maltby-chris-17",
+          "player_id": "maltby-sports-maltby-chris-17",
           "name": "Maltby, Chris",
           "number": "17",
           "positions": [
@@ -17632,7 +17632,7 @@
           "gtg": 0
         },
         {
-          "player_id": "j-and-k-electric-mccarthy-ian-9",
+          "player_id": "maltby-sports-mccarthy-ian-9",
           "name": "McCarthy, Ian",
           "number": "9",
           "positions": [
@@ -17645,7 +17645,7 @@
           "gtg": 0
         },
         {
-          "player_id": "j-and-k-electric-mccrossin-thomas-19",
+          "player_id": "maltby-sports-mccrossin-thomas-19",
           "name": "Mccrossin, Thomas",
           "number": "19",
           "positions": [
@@ -17658,7 +17658,7 @@
           "gtg": 0
         },
         {
-          "player_id": "j-and-k-electric-small-danny-biggie-16",
+          "player_id": "maltby-sports-small-danny-biggie-16",
           "name": "Small, Danny \"Biggie\"",
           "number": "16",
           "positions": [
@@ -17672,9 +17672,9 @@
           "gtg": 0
         }
       ],
-      "away": [
+      "home": [
         {
-          "player_id": "maltby-sports-boutiler-gerald-22",
+          "player_id": "j-and-k-electric-boutiler-gerald-22",
           "name": "Boutiler, Gerald",
           "number": "22",
           "positions": [
@@ -17688,7 +17688,7 @@
           "gtg": 0
         },
         {
-          "player_id": "maltby-sports-leopold-nick-9",
+          "player_id": "j-and-k-electric-leopold-nick-9",
           "name": "Leopold, Nick",
           "number": "9",
           "positions": [
@@ -17702,7 +17702,7 @@
           "gtg": 0
         },
         {
-          "player_id": "maltby-sports-mackenzie-rubein-4",
+          "player_id": "j-and-k-electric-mackenzie-rubein-4",
           "name": "Mackenzie, Rubein",
           "number": "4",
           "positions": [
@@ -17715,7 +17715,7 @@
           "gtg": 0
         },
         {
-          "player_id": "maltby-sports-perrin-noah-87",
+          "player_id": "j-and-k-electric-perrin-noah-87",
           "name": "Perrin, Noah",
           "number": "87",
           "positions": [
@@ -17728,7 +17728,7 @@
           "gtg": 0
         },
         {
-          "player_id": "maltby-sports-reynolds-jaxon-19",
+          "player_id": "j-and-k-electric-reynolds-jaxon-19",
           "name": "Reynolds, Jaxon",
           "number": "19",
           "positions": [
@@ -17741,7 +17741,7 @@
           "gtg": 0
         },
         {
-          "player_id": "maltby-sports-stone-brendan-28",
+          "player_id": "j-and-k-electric-stone-brendan-28",
           "name": "Stone, Brendan",
           "number": "28",
           "positions": [

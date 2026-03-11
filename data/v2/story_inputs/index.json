@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-10T20:36:07.663755+00:00",
+  "generated_at": "2026-03-11T00:28:39.113790+00:00",
   "league": {
     "json": "league/season.json",
     "markdown": "league/season.md"
@@ -59,20 +59,6 @@
       "markdown": "players/colson-overhead-doors-terrio-marshall-00.md"
     },
     {
-      "player_id": "colson-overhead-doors-malcolm-robert-10",
-      "team_slug": "colson-overhead-doors",
-      "name": "Malcolm, Robert",
-      "json": "players/colson-overhead-doors-malcolm-robert-10.json",
-      "markdown": "players/colson-overhead-doors-malcolm-robert-10.md"
-    },
-    {
-      "player_id": "colson-overhead-doors-allen-tyler-tuffy-11",
-      "team_slug": "colson-overhead-doors",
-      "name": "Allen, Tyler \"Tuffy\"",
-      "json": "players/colson-overhead-doors-allen-tyler-tuffy-11.json",
-      "markdown": "players/colson-overhead-doors-allen-tyler-tuffy-11.md"
-    },
-    {
       "player_id": "colson-overhead-doors-burge-tom-12",
       "team_slug": "colson-overhead-doors",
       "name": "Burge, Tom",
@@ -85,20 +71,6 @@
       "name": "Henshaw, Chad",
       "json": "players/colson-overhead-doors-henshaw-chad-13.json",
       "markdown": "players/colson-overhead-doors-henshaw-chad-13.md"
-    },
-    {
-      "player_id": "colson-overhead-doors-kinnear-jeremy-17",
-      "team_slug": "colson-overhead-doors",
-      "name": "Kinnear, Jeremy",
-      "json": "players/colson-overhead-doors-kinnear-jeremy-17.json",
-      "markdown": "players/colson-overhead-doors-kinnear-jeremy-17.md"
-    },
-    {
-      "player_id": "colson-overhead-doors-budd-ryan-18",
-      "team_slug": "colson-overhead-doors",
-      "name": "Budd, Ryan",
-      "json": "players/colson-overhead-doors-budd-ryan-18.json",
-      "markdown": "players/colson-overhead-doors-budd-ryan-18.md"
     },
     {
       "player_id": "colson-overhead-doors-davis-dan-18",
@@ -115,39 +87,11 @@
       "markdown": "players/colson-overhead-doors-hebert-denis-19.md"
     },
     {
-      "player_id": "colson-overhead-doors-boutiler-gerald-22",
-      "team_slug": "colson-overhead-doors",
-      "name": "Boutiler, Gerald",
-      "json": "players/colson-overhead-doors-boutiler-gerald-22.json",
-      "markdown": "players/colson-overhead-doors-boutiler-gerald-22.md"
-    },
-    {
       "player_id": "colson-overhead-doors-gesner-logan-23",
       "team_slug": "colson-overhead-doors",
       "name": "Gesner, Logan",
       "json": "players/colson-overhead-doors-gesner-logan-23.json",
       "markdown": "players/colson-overhead-doors-gesner-logan-23.md"
-    },
-    {
-      "player_id": "colson-overhead-doors-morris-pat-27",
-      "team_slug": "colson-overhead-doors",
-      "name": "Morris, Pat",
-      "json": "players/colson-overhead-doors-morris-pat-27.json",
-      "markdown": "players/colson-overhead-doors-morris-pat-27.md"
-    },
-    {
-      "player_id": "colson-overhead-doors-stone-brendan-28",
-      "team_slug": "colson-overhead-doors",
-      "name": "Stone, Brendan",
-      "json": "players/colson-overhead-doors-stone-brendan-28.json",
-      "markdown": "players/colson-overhead-doors-stone-brendan-28.md"
-    },
-    {
-      "player_id": "colson-overhead-doors-gallant-brett-3",
-      "team_slug": "colson-overhead-doors",
-      "name": "Gallant, Brett",
-      "json": "players/colson-overhead-doors-gallant-brett-3.json",
-      "markdown": "players/colson-overhead-doors-gallant-brett-3.md"
     },
     {
       "player_id": "colson-overhead-doors-russel-nick-30",
@@ -164,13 +108,6 @@
       "markdown": "players/colson-overhead-doors-sproul-chris-31.md"
     },
     {
-      "player_id": "colson-overhead-doors-mackenzie-rubein-4",
-      "team_slug": "colson-overhead-doors",
-      "name": "Mackenzie, Rubein",
-      "json": "players/colson-overhead-doors-mackenzie-rubein-4.json",
-      "markdown": "players/colson-overhead-doors-mackenzie-rubein-4.md"
-    },
-    {
       "player_id": "colson-overhead-doors-baisley-chris-44",
       "team_slug": "colson-overhead-doors",
       "name": "Baisley, Chris",
@@ -178,25 +115,11 @@
       "markdown": "players/colson-overhead-doors-baisley-chris-44.md"
     },
     {
-      "player_id": "colson-overhead-doors-bonnell-andy-5",
-      "team_slug": "colson-overhead-doors",
-      "name": "Bonnell, Andy",
-      "json": "players/colson-overhead-doors-bonnell-andy-5.json",
-      "markdown": "players/colson-overhead-doors-bonnell-andy-5.md"
-    },
-    {
       "player_id": "colson-overhead-doors-chandler-3rd-charles-7",
       "team_slug": "colson-overhead-doors",
       "name": "Chandler 3rd, Charles",
       "json": "players/colson-overhead-doors-chandler-3rd-charles-7.json",
       "markdown": "players/colson-overhead-doors-chandler-3rd-charles-7.md"
-    },
-    {
-      "player_id": "colson-overhead-doors-davison-bill-74",
-      "team_slug": "colson-overhead-doors",
-      "name": "Davison, Bill",
-      "json": "players/colson-overhead-doors-davison-bill-74.json",
-      "markdown": "players/colson-overhead-doors-davison-bill-74.md"
     },
     {
       "player_id": "colson-overhead-doors-faulkner-rory-76",
@@ -213,13 +136,6 @@
       "markdown": "players/colson-overhead-doors-eatmon-chester-8.md"
     },
     {
-      "player_id": "colson-overhead-doors-perrin-noah-87",
-      "team_slug": "colson-overhead-doors",
-      "name": "Perrin, Noah",
-      "json": "players/colson-overhead-doors-perrin-noah-87.json",
-      "markdown": "players/colson-overhead-doors-perrin-noah-87.md"
-    },
-    {
       "player_id": "colson-overhead-doors-gould-zack-88",
       "team_slug": "colson-overhead-doors",
       "name": "Gould, Zack",
@@ -232,13 +148,6 @@
       "name": "Black, Mark",
       "json": "players/colson-overhead-doors-black-mark-9.json",
       "markdown": "players/colson-overhead-doors-black-mark-9.md"
-    },
-    {
-      "player_id": "colson-overhead-doors-linkletter-brad-9",
-      "team_slug": "colson-overhead-doors",
-      "name": "Linkletter, Brad",
-      "json": "players/colson-overhead-doors-linkletter-brad-9.json",
-      "markdown": "players/colson-overhead-doors-linkletter-brad-9.md"
     },
     {
       "player_id": "gr-mitchell-welding-clark-scott-1",
@@ -346,13 +255,6 @@
       "markdown": "players/j-and-k-electric-harrison-avery-00.md"
     },
     {
-      "player_id": "j-and-k-electric-small-danny-biggie-16",
-      "team_slug": "j-and-k-electric",
-      "name": "Small, Danny \"Biggie\"",
-      "json": "players/j-and-k-electric-small-danny-biggie-16.json",
-      "markdown": "players/j-and-k-electric-small-danny-biggie-16.md"
-    },
-    {
       "player_id": "j-and-k-electric-kinnear-jeremy-17",
       "team_slug": "j-and-k-electric",
       "name": "Kinnear, Jeremy",
@@ -360,32 +262,11 @@
       "markdown": "players/j-and-k-electric-kinnear-jeremy-17.md"
     },
     {
-      "player_id": "j-and-k-electric-maltby-chris-17",
-      "team_slug": "j-and-k-electric",
-      "name": "Maltby, Chris",
-      "json": "players/j-and-k-electric-maltby-chris-17.json",
-      "markdown": "players/j-and-k-electric-maltby-chris-17.md"
-    },
-    {
       "player_id": "j-and-k-electric-budd-ryan-18",
       "team_slug": "j-and-k-electric",
       "name": "Budd, Ryan",
       "json": "players/j-and-k-electric-budd-ryan-18.json",
       "markdown": "players/j-and-k-electric-budd-ryan-18.md"
-    },
-    {
-      "player_id": "j-and-k-electric-johnson-trevor-18",
-      "team_slug": "j-and-k-electric",
-      "name": "Johnson, Trevor",
-      "json": "players/j-and-k-electric-johnson-trevor-18.json",
-      "markdown": "players/j-and-k-electric-johnson-trevor-18.md"
-    },
-    {
-      "player_id": "j-and-k-electric-mccrossin-thomas-19",
-      "team_slug": "j-and-k-electric",
-      "name": "Mccrossin, Thomas",
-      "json": "players/j-and-k-electric-mccrossin-thomas-19.json",
-      "markdown": "players/j-and-k-electric-mccrossin-thomas-19.md"
     },
     {
       "player_id": "j-and-k-electric-reynolds-jaxon-19",
@@ -451,39 +332,11 @@
       "markdown": "players/j-and-k-electric-mackenzie-rubein-4.md"
     },
     {
-      "player_id": "j-and-k-electric-crocker-luke-6",
-      "team_slug": "j-and-k-electric",
-      "name": "Crocker, Luke",
-      "json": "players/j-and-k-electric-crocker-luke-6.json",
-      "markdown": "players/j-and-k-electric-crocker-luke-6.md"
-    },
-    {
-      "player_id": "j-and-k-electric-leblanc-travis-63",
-      "team_slug": "j-and-k-electric",
-      "name": "Leblanc, Travis",
-      "json": "players/j-and-k-electric-leblanc-travis-63.json",
-      "markdown": "players/j-and-k-electric-leblanc-travis-63.md"
-    },
-    {
-      "player_id": "j-and-k-electric-hurley-connor-7",
-      "team_slug": "j-and-k-electric",
-      "name": "Hurley, Connor",
-      "json": "players/j-and-k-electric-hurley-connor-7.json",
-      "markdown": "players/j-and-k-electric-hurley-connor-7.md"
-    },
-    {
       "player_id": "j-and-k-electric-davison-bill-74",
       "team_slug": "j-and-k-electric",
       "name": "Davison, Bill",
       "json": "players/j-and-k-electric-davison-bill-74.json",
       "markdown": "players/j-and-k-electric-davison-bill-74.md"
-    },
-    {
-      "player_id": "j-and-k-electric-mackinnon-ted-77",
-      "team_slug": "j-and-k-electric",
-      "name": "Mackinnon, Ted",
-      "json": "players/j-and-k-electric-mackinnon-ted-77.json",
-      "markdown": "players/j-and-k-electric-mackinnon-ted-77.md"
     },
     {
       "player_id": "j-and-k-electric-perrin-noah-87",
@@ -498,27 +351,6 @@
       "name": "Leopold, Nick",
       "json": "players/j-and-k-electric-leopold-nick-9.json",
       "markdown": "players/j-and-k-electric-leopold-nick-9.md"
-    },
-    {
-      "player_id": "j-and-k-electric-mccarthy-ian-9",
-      "team_slug": "j-and-k-electric",
-      "name": "McCarthy, Ian",
-      "json": "players/j-and-k-electric-mccarthy-ian-9.json",
-      "markdown": "players/j-and-k-electric-mccarthy-ian-9.md"
-    },
-    {
-      "player_id": "j-and-k-electric-arbing-ryan-91",
-      "team_slug": "j-and-k-electric",
-      "name": "Arbing, Ryan",
-      "json": "players/j-and-k-electric-arbing-ryan-91.json",
-      "markdown": "players/j-and-k-electric-arbing-ryan-91.md"
-    },
-    {
-      "player_id": "j-and-k-electric-bridge-issac-98",
-      "team_slug": "j-and-k-electric",
-      "name": "Bridge, Issac",
-      "json": "players/j-and-k-electric-bridge-issac-98.json",
-      "markdown": "players/j-and-k-electric-bridge-issac-98.md"
     },
     {
       "player_id": "maltby-sports-small-danny-biggie-16",
@@ -549,46 +381,11 @@
       "markdown": "players/maltby-sports-mccrossin-thomas-19.md"
     },
     {
-      "player_id": "maltby-sports-reynolds-jaxon-19",
-      "team_slug": "maltby-sports",
-      "name": "Reynolds, Jaxon",
-      "json": "players/maltby-sports-reynolds-jaxon-19.json",
-      "markdown": "players/maltby-sports-reynolds-jaxon-19.md"
-    },
-    {
-      "player_id": "maltby-sports-dywer-chris-2",
-      "team_slug": "maltby-sports",
-      "name": "Dywer, Chris",
-      "json": "players/maltby-sports-dywer-chris-2.json",
-      "markdown": "players/maltby-sports-dywer-chris-2.md"
-    },
-    {
       "player_id": "maltby-sports-gallant-matt-2",
       "team_slug": "maltby-sports",
       "name": "Gallant, Matt",
       "json": "players/maltby-sports-gallant-matt-2.json",
       "markdown": "players/maltby-sports-gallant-matt-2.md"
-    },
-    {
-      "player_id": "maltby-sports-boutiler-gerald-22",
-      "team_slug": "maltby-sports",
-      "name": "Boutiler, Gerald",
-      "json": "players/maltby-sports-boutiler-gerald-22.json",
-      "markdown": "players/maltby-sports-boutiler-gerald-22.md"
-    },
-    {
-      "player_id": "maltby-sports-burke-tim-22",
-      "team_slug": "maltby-sports",
-      "name": "Burke, Tim",
-      "json": "players/maltby-sports-burke-tim-22.json",
-      "markdown": "players/maltby-sports-burke-tim-22.md"
-    },
-    {
-      "player_id": "maltby-sports-stone-brendan-28",
-      "team_slug": "maltby-sports",
-      "name": "Stone, Brendan",
-      "json": "players/maltby-sports-stone-brendan-28.json",
-      "markdown": "players/maltby-sports-stone-brendan-28.md"
     },
     {
       "player_id": "maltby-sports-codling-ryder-29",
@@ -603,20 +400,6 @@
       "name": "Belliveau, Marc",
       "json": "players/maltby-sports-belliveau-marc-30.json",
       "markdown": "players/maltby-sports-belliveau-marc-30.md"
-    },
-    {
-      "player_id": "maltby-sports-mackenzie-rubein-4",
-      "team_slug": "maltby-sports",
-      "name": "Mackenzie, Rubein",
-      "json": "players/maltby-sports-mackenzie-rubein-4.json",
-      "markdown": "players/maltby-sports-mackenzie-rubein-4.md"
-    },
-    {
-      "player_id": "maltby-sports-bonnell-andy-5",
-      "team_slug": "maltby-sports",
-      "name": "Bonnell, Andy",
-      "json": "players/maltby-sports-bonnell-andy-5.json",
-      "markdown": "players/maltby-sports-bonnell-andy-5.md"
     },
     {
       "player_id": "maltby-sports-crocker-luke-6",
@@ -645,27 +428,6 @@
       "name": "Mackinnon, Ted",
       "json": "players/maltby-sports-mackinnon-ted-77.json",
       "markdown": "players/maltby-sports-mackinnon-ted-77.md"
-    },
-    {
-      "player_id": "maltby-sports-perrin-noah-87",
-      "team_slug": "maltby-sports",
-      "name": "Perrin, Noah",
-      "json": "players/maltby-sports-perrin-noah-87.json",
-      "markdown": "players/maltby-sports-perrin-noah-87.md"
-    },
-    {
-      "player_id": "maltby-sports-leopold-nick-9",
-      "team_slug": "maltby-sports",
-      "name": "Leopold, Nick",
-      "json": "players/maltby-sports-leopold-nick-9.json",
-      "markdown": "players/maltby-sports-leopold-nick-9.md"
-    },
-    {
-      "player_id": "maltby-sports-linkletter-brad-9",
-      "team_slug": "maltby-sports",
-      "name": "Linkletter, Brad",
-      "json": "players/maltby-sports-linkletter-brad-9.json",
-      "markdown": "players/maltby-sports-linkletter-brad-9.md"
     },
     {
       "player_id": "maltby-sports-mccarthy-ian-9",
@@ -724,27 +486,6 @@
       "markdown": "players/ultramar-burke-brody-14.md"
     },
     {
-      "player_id": "ultramar-small-danny-biggie-16",
-      "team_slug": "ultramar",
-      "name": "Small, Danny \"Biggie\"",
-      "json": "players/ultramar-small-danny-biggie-16.json",
-      "markdown": "players/ultramar-small-danny-biggie-16.md"
-    },
-    {
-      "player_id": "ultramar-johnson-trevor-18",
-      "team_slug": "ultramar",
-      "name": "Johnson, Trevor",
-      "json": "players/ultramar-johnson-trevor-18.json",
-      "markdown": "players/ultramar-johnson-trevor-18.md"
-    },
-    {
-      "player_id": "ultramar-mccrossin-thomas-19",
-      "team_slug": "ultramar",
-      "name": "Mccrossin, Thomas",
-      "json": "players/ultramar-mccrossin-thomas-19.json",
-      "markdown": "players/ultramar-mccrossin-thomas-19.md"
-    },
-    {
       "player_id": "ultramar-dywer-chris-2",
       "team_slug": "ultramar",
       "name": "Dywer, Chris",
@@ -780,13 +521,6 @@
       "markdown": "players/ultramar-bonnell-andy-5.md"
     },
     {
-      "player_id": "ultramar-crocker-luke-6",
-      "team_slug": "ultramar",
-      "name": "Crocker, Luke",
-      "json": "players/ultramar-crocker-luke-6.json",
-      "markdown": "players/ultramar-crocker-luke-6.md"
-    },
-    {
       "player_id": "ultramar-miller-madden-6",
       "team_slug": "ultramar",
       "name": "Miller, Madden",
@@ -813,27 +547,6 @@
       "name": "Linkletter, Brad",
       "json": "players/ultramar-linkletter-brad-9.json",
       "markdown": "players/ultramar-linkletter-brad-9.md"
-    },
-    {
-      "player_id": "ultramar-mccarthy-ian-9",
-      "team_slug": "ultramar",
-      "name": "McCarthy, Ian",
-      "json": "players/ultramar-mccarthy-ian-9.json",
-      "markdown": "players/ultramar-mccarthy-ian-9.md"
-    },
-    {
-      "player_id": "ultramar-arbing-ryan-91",
-      "team_slug": "ultramar",
-      "name": "Arbing, Ryan",
-      "json": "players/ultramar-arbing-ryan-91.json",
-      "markdown": "players/ultramar-arbing-ryan-91.md"
-    },
-    {
-      "player_id": "ultramar-bridge-issac-98",
-      "team_slug": "ultramar",
-      "name": "Bridge, Issac",
-      "json": "players/ultramar-bridge-issac-98.json",
-      "markdown": "players/ultramar-bridge-issac-98.md"
     }
   ],
   "templates": [

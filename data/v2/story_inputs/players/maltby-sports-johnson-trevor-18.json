@@ -2,7 +2,7 @@
   "entity_type": "player",
   "entity_id": "maltby-sports-johnson-trevor-18",
   "title": "Trevor Johnson season story pack",
-  "generated_at": "2026-03-10T20:36:07.734869+00:00",
+  "generated_at": "2026-03-11T00:28:39.162015+00:00",
   "verified_facts": {
     "player": {
       "player_id": "maltby-sports-johnson-trevor-18",
@@ -26,12 +26,12 @@
       "recent_games": 0
     },
     "season_profile": {
-      "gp": 17,
-      "goals": 16,
-      "assists": 11,
-      "points": 27,
-      "penalty_minutes": 24,
-      "points_per_game": "1.59"
+      "gp": 19,
+      "goals": 18,
+      "assists": 12,
+      "points": 30,
+      "penalty_minutes": 30,
+      "points_per_game": "1.58"
     },
     "month_end_checkpoints": [
       {
@@ -119,12 +119,12 @@
       {
         "month": "2026-02",
         "month_label": "February 2026",
-        "gp": 4,
-        "goals": 7,
-        "assists": 1,
-        "points": 8,
-        "pim": 3,
-        "multi_point_games": 2
+        "gp": 6,
+        "goals": 9,
+        "assists": 2,
+        "points": 11,
+        "pim": 9,
+        "multi_point_games": 3
       }
     ],
     "monthly_timeline": [
@@ -175,12 +175,12 @@
       {
         "month": "2026-02",
         "month_label": "February 2026",
-        "gp": 4,
-        "goals": 7,
-        "assists": 1,
-        "points": 8,
-        "penalty_minutes": 3,
-        "points_per_game": "2.00",
+        "gp": 6,
+        "goals": 9,
+        "assists": 2,
+        "points": 11,
+        "penalty_minutes": 9,
+        "points_per_game": "1.83",
         "top_game": "2026-02-01 vs J&K Electric (3-0-3)"
       }
     ],
@@ -237,20 +237,20 @@
       }
     ],
     "vs_playoff_teams": {
-      "gp": 12,
-      "goals": 10,
-      "assists": 5,
-      "points": 15
+      "gp": 14,
+      "goals": 12,
+      "assists": 6,
+      "points": 18
     },
     "result_splits": [
       {
         "result": "W",
-        "gp": 12,
-        "goals": 11,
-        "assists": 10,
-        "points": 21,
-        "penalty_minutes": 12,
-        "points_per_game": "1.75"
+        "gp": 14,
+        "goals": 13,
+        "assists": 11,
+        "points": 24,
+        "penalty_minutes": 18,
+        "points_per_game": "1.71"
       },
       {
         "result": "L",
@@ -283,6 +283,16 @@
         "points_per_game": "2.40"
       },
       {
+        "opponent_slug": "j-and-k-electric",
+        "opponent_name": "J&K Electric",
+        "gp": 6,
+        "goals": 4,
+        "assists": 3,
+        "points": 7,
+        "penalty_minutes": 9,
+        "points_per_game": "1.17"
+      },
+      {
         "opponent_slug": "gr-mitchell-welding",
         "opponent_name": "G.R. Mitchell Welding",
         "gp": 4,
@@ -293,24 +303,14 @@
         "points_per_game": "1.50"
       },
       {
-        "opponent_slug": "j-and-k-electric",
-        "opponent_name": "J&K Electric",
-        "gp": 5,
-        "goals": 4,
-        "assists": 2,
-        "points": 6,
-        "penalty_minutes": 6,
-        "points_per_game": "1.20"
-      },
-      {
         "opponent_slug": "ultramar",
         "opponent_name": "Ultramar",
-        "gp": 3,
-        "goals": 0,
+        "gp": 4,
+        "goals": 2,
         "assists": 3,
-        "points": 3,
-        "penalty_minutes": 3,
-        "points_per_game": "1.00"
+        "points": 5,
+        "penalty_minutes": 6,
+        "points_per_game": "1.25"
       }
     ],
     "five_game_windows": {
@@ -339,41 +339,41 @@
     },
     "half_splits": {
       "first_half": {
-        "gp": 8,
+        "gp": 9,
         "goals": 3,
-        "assists": 6,
-        "points": 9,
+        "assists": 8,
+        "points": 11,
         "penalty_minutes": 12,
-        "points_per_game": "1.12"
+        "points_per_game": "1.22"
       },
       "second_half": {
-        "gp": 9,
-        "goals": 13,
-        "assists": 5,
-        "points": 18,
-        "penalty_minutes": 12,
-        "points_per_game": "2.00"
+        "gp": 10,
+        "goals": 15,
+        "assists": 4,
+        "points": 19,
+        "penalty_minutes": 18,
+        "points_per_game": "1.90"
       }
     },
     "streaks": {
-      "longest_point_streak": 14,
-      "longest_goal_streak": 5,
-      "multi_point_games": 8,
+      "longest_point_streak": 16,
+      "longest_goal_streak": 4,
+      "multi_point_games": 9,
       "hat_tricks": 1
     },
     "box_score_log_coverage": {
-      "logged_gp": 17,
+      "logged_gp": 19,
       "season_gp": 26,
-      "game_coverage_pct": "0.654",
-      "logged_goals": 16,
+      "game_coverage_pct": "0.731",
+      "logged_goals": 18,
       "season_goals": 21,
-      "goal_coverage_pct": "0.762",
-      "logged_assists": 11,
+      "goal_coverage_pct": "0.857",
+      "logged_assists": 12,
       "season_assists": 17,
-      "assist_coverage_pct": "0.647",
-      "logged_points": 27,
+      "assist_coverage_pct": "0.706",
+      "logged_points": 30,
       "season_points": 38,
-      "point_coverage_pct": "0.711",
+      "point_coverage_pct": "0.789",
       "is_complete": false
     },
     "team_role_profile": {
@@ -434,7 +434,7 @@
         "notes": [
           "Maltby Sports went 5-0-1 and scored 38 while allowing 22.",
           "Month-end standing snapshot: No. 1 with 42 points.",
-          "Player logged-sample line that month: 4 GP, 7 G, 1 A, 8 PTS.",
+          "Player logged-sample line that month: 6 GP, 9 G, 2 A, 11 PTS.",
           "Went unbeaten at 5-0-1 with a +16 goal differential.",
           "This was a clear improvement from the previous month."
         ]
@@ -445,9 +445,9 @@
     "Was available for almost the full season, which supports an ironman or lineup fixture angle.",
     "Finished inside the league top 10 in points at No. 8.",
     "Has a balanced scoring line rather than an extreme scorer/playmaker split.",
-    "Logged 8 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.",
+    "Logged 9 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.",
     "Recorded 1 hat trick, which is a ready-made local-paper hook.",
-    "Peak month was January 2026 (10 points), which helps structure the season arc.",
+    "Peak month was February 2026 (11 points), which helps structure the season arc.",
     "Production rose late in the season, which supports a late-heater or playoff-form angle."
   ],
   "suggested_prompts": [

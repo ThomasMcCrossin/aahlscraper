@@ -15,8 +15,8 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Positions: G
 - Season totals: 2 GP, 0 G, 1 A, 1 PTS, 0 PIM
 - Team games played: 21
-- Team scoring rank: 22
-- League scoring rank: 102
+- Team scoring rank: 14
+- League scoring rank: 69
 - Points per game: 0.5
 - Logged-sample longest point streak: 1
 - Logged-sample longest goal streak: 0
@@ -79,7 +79,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 
 ## Team Context Crossovers
 - Team finish: No. 1 at 21-4-3
-- Team scoring rank: 20
+- Team scoring rank: 14
 - Share of team goals: 0.0%
 - Gap to team points leader Issac Bridge: 79 points
 

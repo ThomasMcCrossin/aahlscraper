@@ -22,8 +22,8 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Logged-sample longest goal streak: 3
 
 ## Per-Game Log Coverage
-- Logged box-score appearances: 11 of 15 (0.733)
-- Logged goals / assists / points: 8 / 11 / 19
+- Logged box-score appearances: 12 of 15 (0.800)
+- Logged goals / assists / points: 8 / 12 / 20
 - Season goals / assists / points: 13 / 13 / 26
 - Note: the game-by-game sections below use only the logged box-score sample, not the full season totals.
 
@@ -42,7 +42,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | October 2025 | 3 | 2 | 2 | 4 | 2 |
 | November 2025 | 2 | 3 | 2 | 5 | 2 |
 | December 2025 | 3 | 1 | 2 | 3 | 1 |
-| January 2026 | 1 | 0 | 1 | 1 | 0 |
+| January 2026 | 2 | 0 | 2 | 2 | 0 |
 | February 2026 | 2 | 2 | 4 | 6 | 2 |
 
 ## Month-by-Month Narrative Timeline
@@ -51,7 +51,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | October 2025 | 3 | 2 | 2 | 4 | 2025-10-21 vs Maltby Sports (2-0-2) |
 | November 2025 | 2 | 3 | 2 | 5 | 2025-11-09 vs J&K Electric (2-1-3) |
 | December 2025 | 3 | 1 | 2 | 3 | 2025-12-09 vs G.R. Mitchell Welding (1-1-2) |
-| January 2026 | 1 | 0 | 1 | 1 | 2026-01-04 vs Maltby Sports (0-1-1) |
+| January 2026 | 2 | 0 | 2 | 2 | 2026-01-04 vs Maltby Sports (0-1-1) |
 | February 2026 | 2 | 2 | 4 | 6 | 2026-02-15 vs Colson Overhead Doors (2-2-4) |
 
 ## Best Games
@@ -68,9 +68,9 @@ Use this as source material for a player profile, season recap, or playoff featu
 | --- | --- | --- | --- | --- | --- |
 | 2026-02-24 | G.R. Mitchell Welding | L | 0 | 2 | 2 |
 | 2026-02-15 | Colson Overhead Doors | W | 2 | 2 | 4 |
+| 2026-01-13 | Colson Overhead Doors | W | 0 | 1 | 1 |
 | 2026-01-04 | Maltby Sports | L | 0 | 1 | 1 |
 | 2025-12-30 | Colson Overhead Doors | W | 0 | 0 | 0 |
-| 2025-12-16 | G.R. Mitchell Welding | L | 0 | 1 | 1 |
 
 ## Versus Playoff Teams
 - GP: 8
@@ -81,15 +81,15 @@ Use this as source material for a player profile, season recap, or playoff featu
 ## Results Splits
 | Result | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| W | 2 | 2 | 2 | 4 | 2.00 |
+| W | 3 | 2 | 3 | 5 | 1.67 |
 | L | 8 | 5 | 8 | 13 | 1.62 |
 | T | 1 | 1 | 1 | 2 | 2.00 |
 
 ## Opponent Splits
 | Opponent | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
+| Colson Overhead Doors | 4 | 3 | 4 | 7 | 1.75 |
 | G.R. Mitchell Welding | 4 | 1 | 6 | 7 | 1.75 |
-| Colson Overhead Doors | 3 | 3 | 3 | 6 | 2.00 |
 | Maltby Sports | 3 | 2 | 1 | 3 | 1.00 |
 | J&K Electric | 1 | 2 | 1 | 3 | 3.00 |
 
@@ -121,7 +121,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 ### January 2026
 - Ultramar went 1-3-0 and scored 10 while allowing 22.
 - Month-end standing snapshot: No. 4 with 9 points.
-- Player logged-sample line that month: 1 GP, 0 G, 1 A, 1 PTS.
+- Player logged-sample line that month: 2 GP, 0 G, 2 A, 2 PTS.
 - Played to a 1-3-0 month and outscored opponents 10-22.
 - Scored below its usual rate, which helps explain any stall or fade in the standings.
 
@@ -135,12 +135,12 @@ Use this as source material for a player profile, season recap, or playoff featu
 ## First Half Vs Second Half
 | Split | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| First half | 5 | 5 | 4 | 9 | 1.80 |
-| Second half | 6 | 3 | 7 | 10 | 1.67 |
+| First half | 6 | 6 | 5 | 11 | 1.83 |
+| Second half | 6 | 2 | 7 | 9 | 1.50 |
 
 ## Best And Worst 5-Game Stretches
 - Best 5-game run: 11 points (6-5) from 2025-10-21 to 2025-12-09.
-- Quietest 5-game run: 7 points (3-4) from 2025-11-09 to 2026-01-04.
+- Quietest 5-game run: 5 points (1-4) from 2025-12-09 to 2026-01-13.
 
 ## Derived Angles
 - Coverage note: angles that depend on game-by-game logs are based on the logged box-score sample.

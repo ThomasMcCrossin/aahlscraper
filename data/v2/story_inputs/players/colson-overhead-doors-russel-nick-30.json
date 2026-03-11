@@ -2,7 +2,7 @@
   "entity_type": "player",
   "entity_id": "colson-overhead-doors-russel-nick-30",
   "title": "Nick Russel season story pack",
-  "generated_at": "2026-03-10T20:36:07.688584+00:00",
+  "generated_at": "2026-03-11T00:28:39.128698+00:00",
   "verified_facts": {
     "player": {
       "player_id": "colson-overhead-doors-russel-nick-30",
@@ -225,7 +225,7 @@
     "team_role_profile": {
       "team_rank": 5,
       "team_record": "3-22-3",
-      "team_points_rank": 25,
+      "team_points_rank": 13,
       "team_points_leader": "Zack Gould",
       "gap_to_team_leader": 34,
       "lead_over_next_teammate": 0,

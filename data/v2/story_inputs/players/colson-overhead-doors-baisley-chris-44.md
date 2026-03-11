@@ -15,8 +15,8 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Positions: D
 - Season totals: 6 GP, 0 G, 5 A, 5 PTS, 3 PIM
 - Team games played: 22
-- Team scoring rank: 11
-- League scoring rank: 60
+- Team scoring rank: 10
+- League scoring rank: 59
 - Points per game: 0.83
 - Logged-sample longest point streak: 5
 - Logged-sample longest goal streak: 0
@@ -93,7 +93,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 
 ## Team Context Crossovers
 - Team finish: No. 5 at 3-22-3
-- Team scoring rank: 11
+- Team scoring rank: 10
 - Share of team goals: 0.0%
 - Gap to team points leader Zack Gould: 29 points
 

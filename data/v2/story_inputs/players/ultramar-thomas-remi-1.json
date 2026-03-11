@@ -2,7 +2,7 @@
   "entity_type": "player",
   "entity_id": "ultramar-thomas-remi-1",
   "title": "Remi Thomas season story pack",
-  "generated_at": "2026-03-10T20:36:07.751132+00:00",
+  "generated_at": "2026-03-11T00:28:39.172084+00:00",
   "verified_facts": {
     "player": {
       "player_id": "ultramar-thomas-remi-1",
@@ -225,7 +225,7 @@
     "team_role_profile": {
       "team_rank": 4,
       "team_record": "5-19-4",
-      "team_points_rank": 17,
+      "team_points_rank": 14,
       "team_points_leader": "Brad Linkletter",
       "gap_to_team_leader": 36,
       "lead_over_next_teammate": 0,

@@ -18,12 +18,12 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Team scoring rank: 1
 - League scoring rank: 1
 - Points per game: 3.08
-- Logged-sample longest point streak: 17
+- Logged-sample longest point streak: 19
 - Logged-sample longest goal streak: 10
 
 ## Per-Game Log Coverage
-- Logged box-score appearances: 17 of 26 (0.654)
-- Logged goals / assists / points: 34 / 19 / 53
+- Logged box-score appearances: 19 of 26 (0.731)
+- Logged goals / assists / points: 38 / 23 / 61
 - Season goals / assists / points: 49 / 31 / 80
 - Note: the game-by-game sections below use only the logged box-score sample, not the full season totals.
 
@@ -43,7 +43,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | November 2025 | 3 | 3 | 2 | 5 | 1 |
 | December 2025 | 3 | 9 | 0 | 9 | 2 |
 | January 2026 | 5 | 11 | 3 | 14 | 4 |
-| February 2026 | 3 | 3 | 6 | 9 | 2 |
+| February 2026 | 5 | 7 | 10 | 17 | 4 |
 
 ## Month-by-Month Narrative Timeline
 | Month | GP | G | A | PTS | Top Game |
@@ -52,7 +52,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | November 2025 | 3 | 3 | 2 | 5 | 2025-11-25 vs J&K Electric (2-1-3) |
 | December 2025 | 3 | 9 | 0 | 9 | 2025-12-09 vs Colson Overhead Doors (4-0-4) |
 | January 2026 | 5 | 11 | 3 | 14 | 2026-01-04 vs Ultramar (4-0-4) |
-| February 2026 | 3 | 3 | 6 | 9 | 2026-02-24 vs J&K Electric (1-5-6) |
+| February 2026 | 5 | 7 | 10 | 17 | 2026-02-24 vs J&K Electric (1-5-6) |
 
 ## Best Games
 | Date | Opponent | Result | Score | G | A | PTS |
@@ -68,30 +68,30 @@ Use this as source material for a player profile, season recap, or playoff featu
 | --- | --- | --- | --- | --- | --- |
 | 2026-02-24 | J&K Electric | T | 1 | 5 | 6 |
 | 2026-02-22 | Colson Overhead Doors | W | 2 | 0 | 2 |
+| 2026-02-17 | J&K Electric | W | 3 | 1 | 4 |
+| 2026-02-10 | Ultramar | W | 1 | 3 | 4 |
 | 2026-02-01 | J&K Electric | W | 0 | 1 | 1 |
-| 2026-01-25 | G.R. Mitchell Welding | L | 3 | 1 | 4 |
-| 2026-01-20 | Ultramar | W | 2 | 1 | 3 |
 
 ## Versus Playoff Teams
-- GP: 13
-- G: 23
-- A: 19
-- PTS: 42
+- GP: 15
+- G: 27
+- A: 23
+- PTS: 50
 
 ## Results Splits
 | Result | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| W | 12 | 26 | 11 | 37 | 3.08 |
+| W | 14 | 30 | 15 | 45 | 3.21 |
 | L | 2 | 4 | 1 | 5 | 2.50 |
 | T | 3 | 4 | 7 | 11 | 3.67 |
 
 ## Opponent Splits
 | Opponent | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| Ultramar | 4 | 13 | 5 | 18 | 4.50 |
+| Ultramar | 5 | 14 | 8 | 22 | 4.40 |
+| J&K Electric | 5 | 7 | 8 | 15 | 3.00 |
 | G.R. Mitchell Welding | 5 | 6 | 7 | 13 | 2.60 |
 | Colson Overhead Doors | 4 | 11 | 0 | 11 | 2.75 |
-| J&K Electric | 4 | 4 | 7 | 11 | 2.75 |
 
 ## Team Context Crossovers
 - Team finish: No. 1 at 21-4-3
@@ -128,15 +128,15 @@ Use this as source material for a player profile, season recap, or playoff featu
 ### February 2026
 - Maltby Sports went 5-0-1 and scored 38 while allowing 22.
 - Month-end standing snapshot: No. 1 with 42 points.
-- Player logged-sample line that month: 3 GP, 3 G, 6 A, 9 PTS.
+- Player logged-sample line that month: 5 GP, 7 G, 10 A, 17 PTS.
 - Went unbeaten at 5-0-1 with a +16 goal differential.
 - This was a clear improvement from the previous month.
 
 ## First Half Vs Second Half
 | Split | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| First half | 8 | 16 | 10 | 26 | 3.25 |
-| Second half | 9 | 18 | 9 | 27 | 3.00 |
+| First half | 9 | 20 | 10 | 30 | 3.33 |
+| Second half | 10 | 18 | 13 | 31 | 3.10 |
 
 ## Best And Worst 5-Game Stretches
 - Best 5-game run: 18 points (9-9) from 2025-10-14 to 2025-11-18.
@@ -148,9 +148,9 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Finished as his team’s points leader, which makes him a natural centerpiece for any team-season story.
 - Finished inside the league top 10 in points at No. 1.
 - Profiles more like a finisher than a pure setup player; the goal totals drive the story.
-- Logged 12 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.
-- Recorded 6 hat tricks, which is a ready-made local-paper hook.
-- Peak month was October 2025 (16 points), which helps structure the season arc.
+- Logged 14 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.
+- Recorded 7 hat tricks, which is a ready-made local-paper hook.
+- Peak month was February 2026 (17 points), which helps structure the season arc.
 
 ## Suggested Prompts
 - Write a newspaper-style player profile on Issac Bridge and how his season developed month by month.

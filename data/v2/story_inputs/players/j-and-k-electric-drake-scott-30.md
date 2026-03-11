@@ -15,8 +15,8 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Positions: G, D, F
 - Season totals: 2 GP, 0 G, 1 A, 1 PTS, 0 PIM
 - Team games played: 21
-- Team scoring rank: 25
-- League scoring rank: 98
+- Team scoring rank: 15
+- League scoring rank: 67
 - Points per game: 0.5
 - Logged-sample longest point streak: 1
 - Logged-sample longest goal streak: 0
@@ -80,7 +80,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 
 ## Team Context Crossovers
 - Team finish: No. 2 at 16-8-5
-- Team scoring rank: 23
+- Team scoring rank: 15
 - Share of team goals: 0.0%
 - Gap to team points leader Brendan Stone: 48 points
 

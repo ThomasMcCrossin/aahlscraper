@@ -2,7 +2,7 @@
   "entity_type": "player",
   "entity_id": "j-and-k-electric-morris-pat-27",
   "title": "Pat Morris season story pack",
-  "generated_at": "2026-03-10T20:36:07.719861+00:00",
+  "generated_at": "2026-03-11T00:28:39.153309+00:00",
   "verified_facts": {
     "player": {
       "player_id": "j-and-k-electric-morris-pat-27",
@@ -15,24 +15,24 @@
       "team_id": "TYLERARSENEAU-4",
       "team_name": "J&K Electric",
       "team_slug": "j-and-k-electric",
-      "games_played": 5,
-      "goals": 4,
-      "assists": 9,
-      "points": 13,
-      "penalty_minutes": 0,
-      "points_per_game": 2.6,
+      "games_played": 7,
+      "goals": 6,
+      "assists": 10,
+      "points": 16,
+      "penalty_minutes": 3,
+      "points_per_game": 2.29,
       "team_games_played": 21,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 3,
+      "recent_games": 2
     },
     "season_profile": {
-      "gp": 5,
-      "goals": 4,
-      "assists": 9,
-      "points": 13,
-      "penalty_minutes": 0,
-      "points_per_game": "2.60"
+      "gp": 7,
+      "goals": 6,
+      "assists": 10,
+      "points": 16,
+      "penalty_minutes": 3,
+      "points_per_game": "2.29"
     },
     "month_end_checkpoints": [
       {
@@ -100,12 +100,12 @@
       {
         "month": "2025-12",
         "month_label": "December 2025",
-        "gp": 1,
-        "goals": 3,
-        "assists": 1,
-        "points": 4,
-        "pim": 0,
-        "multi_point_games": 1
+        "gp": 3,
+        "goals": 5,
+        "assists": 2,
+        "points": 7,
+        "pim": 3,
+        "multi_point_games": 2
       },
       {
         "month": "2026-01",
@@ -154,12 +154,12 @@
       {
         "month": "2025-12",
         "month_label": "December 2025",
-        "gp": 1,
-        "goals": 3,
-        "assists": 1,
-        "points": 4,
-        "penalty_minutes": 0,
-        "points_per_game": "4.00",
+        "gp": 3,
+        "goals": 5,
+        "assists": 2,
+        "points": 7,
+        "penalty_minutes": 3,
+        "points_per_game": "2.33",
         "top_game": "2025-12-02 vs Colson Overhead Doors (3-1-4)"
       },
       {
@@ -207,6 +207,16 @@
         "game_id": "3274298"
       },
       {
+        "local_date": "2025-12-16",
+        "opponent_name": "Colson Overhead Doors",
+        "score": "5-0",
+        "result": "W",
+        "goals": 1,
+        "assists": 1,
+        "points": 2,
+        "game_id": "3276550"
+      },
+      {
         "local_date": "2025-11-02",
         "opponent_name": "Colson Overhead Doors",
         "score": "6-3",
@@ -225,16 +235,6 @@
         "assists": 2,
         "points": 2,
         "game_id": "3276661"
-      },
-      {
-        "local_date": "2026-01-27",
-        "opponent_name": "Colson Overhead Doors",
-        "score": "6-7",
-        "result": "L",
-        "goals": 0,
-        "assists": 1,
-        "points": 1,
-        "game_id": "3276655"
       }
     ],
     "vs_playoff_teams": {
@@ -246,12 +246,12 @@
     "result_splits": [
       {
         "result": "W",
-        "gp": 3,
-        "goals": 4,
-        "assists": 6,
-        "points": 10,
-        "penalty_minutes": 0,
-        "points_per_game": "3.33"
+        "gp": 5,
+        "goals": 6,
+        "assists": 7,
+        "points": 13,
+        "penalty_minutes": 3,
+        "points_per_game": "2.60"
       },
       {
         "result": "L",
@@ -276,12 +276,12 @@
       {
         "opponent_slug": "colson-overhead-doors",
         "opponent_name": "Colson Overhead Doors",
-        "gp": 4,
-        "goals": 4,
-        "assists": 7,
-        "points": 11,
-        "penalty_minutes": 0,
-        "points_per_game": "2.75"
+        "gp": 6,
+        "goals": 6,
+        "assists": 8,
+        "points": 14,
+        "penalty_minutes": 3,
+        "points_per_game": "2.33"
       },
       {
         "opponent_slug": "maltby-sports",
@@ -297,74 +297,74 @@
     "five_game_windows": {
       "best": {
         "start_date": "2025-10-14",
-        "end_date": "2026-02-01",
+        "end_date": "2025-12-16",
         "window": 5,
         "gp": 5,
-        "goals": 4,
-        "assists": 9,
+        "goals": 6,
+        "assists": 7,
         "points": 13,
-        "penalty_minutes": 0,
+        "penalty_minutes": 3,
         "points_per_game": "2.60"
       },
       "worst": {
-        "start_date": "2025-10-14",
-        "end_date": "2026-02-01",
+        "start_date": "2025-11-02",
+        "end_date": "2026-01-27",
         "window": 5,
         "gp": 5,
-        "goals": 4,
-        "assists": 9,
-        "points": 13,
-        "penalty_minutes": 0,
-        "points_per_game": "2.60"
+        "goals": 5,
+        "assists": 5,
+        "points": 10,
+        "penalty_minutes": 3,
+        "points_per_game": "2.00"
       }
     },
     "half_splits": {
       "first_half": {
-        "gp": 2,
-        "goals": 1,
-        "assists": 5,
-        "points": 6,
+        "gp": 3,
+        "goals": 4,
+        "assists": 6,
+        "points": 10,
         "penalty_minutes": 0,
-        "points_per_game": "3.00"
+        "points_per_game": "3.33"
       },
       "second_half": {
-        "gp": 3,
-        "goals": 3,
+        "gp": 4,
+        "goals": 2,
         "assists": 4,
-        "points": 7,
-        "penalty_minutes": 0,
-        "points_per_game": "2.33"
+        "points": 6,
+        "penalty_minutes": 3,
+        "points_per_game": "1.50"
       }
     },
     "streaks": {
-      "longest_point_streak": 5,
-      "longest_goal_streak": 1,
-      "multi_point_games": 4,
+      "longest_point_streak": 7,
+      "longest_goal_streak": 3,
+      "multi_point_games": 5,
       "hat_tricks": 1
     },
     "box_score_log_coverage": {
-      "logged_gp": 5,
-      "season_gp": 5,
+      "logged_gp": 7,
+      "season_gp": 7,
       "game_coverage_pct": "1.000",
-      "logged_goals": 4,
-      "season_goals": 4,
+      "logged_goals": 6,
+      "season_goals": 6,
       "goal_coverage_pct": "1.000",
-      "logged_assists": 9,
-      "season_assists": 9,
+      "logged_assists": 10,
+      "season_assists": 10,
       "assist_coverage_pct": "1.000",
-      "logged_points": 13,
-      "season_points": 13,
+      "logged_points": 16,
+      "season_points": 16,
       "point_coverage_pct": "1.000",
       "is_complete": true
     },
     "team_role_profile": {
       "team_rank": 2,
       "team_record": "16-8-5",
-      "team_points_rank": 9,
+      "team_points_rank": 8,
       "team_points_leader": "Brendan Stone",
-      "gap_to_team_leader": 36,
-      "lead_over_next_teammate": 2,
-      "goal_share_pct": "2.8%"
+      "gap_to_team_leader": 33,
+      "lead_over_next_teammate": 1,
+      "goal_share_pct": "4.1%"
     },
     "team_context_crossovers": [
       {
@@ -393,7 +393,7 @@
         "month_label": "December 2025",
         "notes": [
           "J&K Electric went 5-0-0 and scored 29 while allowing 15.",
-          "Player logged-sample line that month: 1 GP, 3 G, 1 A, 4 PTS.",
+          "Player logged-sample line that month: 3 GP, 5 G, 2 A, 7 PTS.",
           "Went unbeaten and perfect at 5-0-0 with a +14 goal differential.",
           "Defended better than its season norm, which gave the month a steadier feel."
         ]
@@ -424,8 +424,11 @@
   },
   "angles": [
     "Played a limited share of the team schedule, which makes availability and sample size part of the profile.",
+    "Profiles as a playmaker; the assist totals tell more of the story than the goal count.",
+    "Logged 5 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.",
     "Recorded 1 hat trick, which is a ready-made local-paper hook.",
-    "Peak month was December 2025 (4 points), which helps structure the season arc."
+    "Peak month was December 2025 (7 points), which helps structure the season arc.",
+    "Produces enough offense from the blue line to justify a puck-moving defenseman frame."
   ],
   "suggested_prompts": [
     "Write a newspaper-style player profile on Pat Morris and how his season developed month by month.",

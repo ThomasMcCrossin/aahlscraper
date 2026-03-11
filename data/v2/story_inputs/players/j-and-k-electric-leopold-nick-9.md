@@ -18,12 +18,12 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Team scoring rank: 4
 - League scoring rank: 12
 - Points per game: 2.06
-- Logged-sample longest point streak: 13
+- Logged-sample longest point streak: 14
 - Logged-sample longest goal streak: 4
 
 ## Per-Game Log Coverage
-- Logged box-score appearances: 13 of 18 (0.722)
-- Logged goals / assists / points: 8 / 22 / 30
+- Logged box-score appearances: 14 of 18 (0.778)
+- Logged goals / assists / points: 8 / 23 / 31
 - Season goals / assists / points: 10 / 27 / 37
 - Note: the game-by-game sections below use only the logged box-score sample, not the full season totals.
 
@@ -43,7 +43,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | November 2025 | 4 | 2 | 4 | 6 | 1 |
 | December 2025 | 3 | 3 | 5 | 8 | 2 |
 | January 2026 | 2 | 1 | 5 | 6 | 1 |
-| February 2026 | 2 | 1 | 5 | 6 | 1 |
+| February 2026 | 3 | 1 | 6 | 7 | 1 |
 
 ## Month-by-Month Narrative Timeline
 | Month | GP | G | A | PTS | Top Game |
@@ -52,7 +52,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | November 2025 | 4 | 2 | 4 | 6 | 2025-11-16 vs Colson Overhead Doors (1-2-3) |
 | December 2025 | 3 | 3 | 5 | 8 | 2025-12-02 vs Colson Overhead Doors (1-4-5) |
 | January 2026 | 2 | 1 | 5 | 6 | 2026-01-06 vs G.R. Mitchell Welding (1-4-5) |
-| February 2026 | 2 | 1 | 5 | 6 | 2026-02-24 vs Maltby Sports (1-4-5) |
+| February 2026 | 3 | 1 | 6 | 7 | 2026-02-24 vs Maltby Sports (1-4-5) |
 
 ## Best Games
 | Date | Opponent | Result | Score | G | A | PTS |
@@ -67,30 +67,30 @@ Use this as source material for a player profile, season recap, or playoff featu
 | Date | Opponent | Result | G | A | PTS |
 | --- | --- | --- | --- | --- | --- |
 | 2026-02-24 | Maltby Sports | T | 1 | 4 | 5 |
+| 2026-02-17 | Maltby Sports | L | 0 | 1 | 1 |
 | 2026-02-10 | G.R. Mitchell Welding | T | 0 | 1 | 1 |
 | 2026-01-20 | G.R. Mitchell Welding | T | 0 | 1 | 1 |
 | 2026-01-06 | G.R. Mitchell Welding | W | 1 | 4 | 5 |
-| 2025-12-30 | G.R. Mitchell Welding | W | 1 | 0 | 1 |
 
 ## Versus Playoff Teams
-- GP: 9
+- GP: 10
 - G: 4
-- A: 14
-- PTS: 18
+- A: 15
+- PTS: 19
 
 ## Results Splits
 | Result | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
 | W | 8 | 7 | 14 | 21 | 2.62 |
-| L | 1 | 0 | 1 | 1 | 1.00 |
+| L | 2 | 0 | 2 | 2 | 1.00 |
 | T | 4 | 1 | 7 | 8 | 2.00 |
 
 ## Opponent Splits
 | Opponent | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
 | Colson Overhead Doors | 4 | 4 | 8 | 12 | 3.00 |
+| Maltby Sports | 5 | 1 | 8 | 9 | 1.80 |
 | G.R. Mitchell Welding | 4 | 2 | 6 | 8 | 2.00 |
-| Maltby Sports | 4 | 1 | 7 | 8 | 2.00 |
 | Ultramar | 1 | 1 | 1 | 2 | 2.00 |
 
 ## Team Context Crossovers
@@ -128,15 +128,15 @@ Use this as source material for a player profile, season recap, or playoff featu
 ### February 2026
 - J&K Electric went 1-2-2 and scored 26 while allowing 29.
 - Month-end standing snapshot: No. 3 with 33 points.
-- Player logged-sample line that month: 2 GP, 1 G, 5 A, 6 PTS.
+- Player logged-sample line that month: 3 GP, 1 G, 6 A, 7 PTS.
 - Played to a 1-2-2 month and outscored opponents 26-29.
 - Allowed goals at a higher rate than normal, which put strain on the month.
 
 ## First Half Vs Second Half
 | Split | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| First half | 6 | 3 | 7 | 10 | 1.67 |
-| Second half | 7 | 5 | 15 | 20 | 2.86 |
+| First half | 7 | 4 | 11 | 15 | 2.14 |
+| Second half | 7 | 4 | 12 | 16 | 2.29 |
 
 ## Best And Worst 5-Game Stretches
 - Best 5-game run: 14 points (4-10) from 2025-11-25 to 2026-01-06.

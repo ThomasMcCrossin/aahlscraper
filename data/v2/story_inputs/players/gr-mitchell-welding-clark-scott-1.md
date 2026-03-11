@@ -16,7 +16,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Season totals: 1 GP, 0 G, 1 A, 1 PTS, 0 PIM
 - Team games played: 23
 - Team scoring rank: 14
-- League scoring rank: 101
+- League scoring rank: 68
 - Points per game: 1.0
 - Logged-sample longest point streak: 1
 - Logged-sample longest goal streak: 0

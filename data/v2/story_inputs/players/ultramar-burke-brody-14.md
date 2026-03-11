@@ -15,8 +15,8 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Positions: D, F
 - Season totals: 11 GP, 2 G, 7 A, 9 PTS, 15 PIM
 - Team games played: 21
-- Team scoring rank: 10
-- League scoring rank: 48
+- Team scoring rank: 11
+- League scoring rank: 49
 - Points per game: 0.82
 - Logged-sample longest point streak: 3
 - Logged-sample longest goal streak: 1
@@ -94,7 +94,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 
 ## Team Context Crossovers
 - Team finish: No. 4 at 5-19-4
-- Team scoring rank: 10
+- Team scoring rank: 11
 - Share of team goals: 1.9%
 - Gap to team points leader Brad Linkletter: 28 points
 

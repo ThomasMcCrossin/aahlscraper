@@ -13,16 +13,16 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Team: Ultramar
 - Number: 22
 - Positions: F, D
-- Season totals: 8 GP, 5 G, 5 A, 10 PTS, 6 PIM
+- Season totals: 9 GP, 5 G, 5 A, 10 PTS, 9 PIM
 - Team games played: 21
 - Team scoring rank: 9
 - League scoring rank: 46
-- Points per game: 1.25
-- Logged-sample longest point streak: 7
+- Points per game: 1.11
+- Logged-sample longest point streak: 5
 - Logged-sample longest goal streak: 2
 
 ## Per-Game Log Coverage
-- Logged box-score appearances: 8 of 8 (1.000)
+- Logged box-score appearances: 9 of 9 (1.000)
 - Logged goals / assists / points: 5 / 5 / 10
 - Season goals / assists / points: 5 / 5 / 10
 
@@ -41,7 +41,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | October 2025 | 1 | 0 | 0 | 0 | 0 |
 | November 2025 | 2 | 3 | 1 | 4 | 1 |
 | December 2025 | 3 | 2 | 2 | 4 | 1 |
-| February 2026 | 2 | 0 | 2 | 2 | 0 |
+| February 2026 | 3 | 0 | 2 | 2 | 0 |
 
 ## Month-by-Month Narrative Timeline
 | Month | GP | G | A | PTS | Top Game |
@@ -49,7 +49,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | October 2025 | 1 | 0 | 0 | 0 | 2025-10-21 vs Maltby Sports (0-0-0) |
 | November 2025 | 2 | 3 | 1 | 4 | 2025-11-18 vs Colson Overhead Doors (2-1-3) |
 | December 2025 | 3 | 2 | 2 | 4 | 2025-12-30 vs Colson Overhead Doors (2-0-2) |
-| February 2026 | 2 | 0 | 2 | 2 | 2026-02-15 vs Colson Overhead Doors (0-1-1) |
+| February 2026 | 3 | 0 | 2 | 2 | 2026-02-15 vs Colson Overhead Doors (0-1-1) |
 
 ## Best Games
 | Date | Opponent | Result | Score | G | A | PTS |
@@ -65,12 +65,12 @@ Use this as source material for a player profile, season recap, or playoff featu
 | --- | --- | --- | --- | --- | --- |
 | 2026-02-17 | G.R. Mitchell Welding | L | 0 | 1 | 1 |
 | 2026-02-15 | Colson Overhead Doors | W | 0 | 1 | 1 |
+| 2026-02-10 | Maltby Sports | L | 0 | 0 | 0 |
 | 2025-12-30 | Colson Overhead Doors | W | 2 | 0 | 2 |
 | 2025-12-23 | J&K Electric | L | 0 | 1 | 1 |
-| 2025-12-16 | G.R. Mitchell Welding | L | 0 | 1 | 1 |
 
 ## Versus Playoff Teams
-- GP: 4
+- GP: 5
 - G: 0
 - A: 3
 - PTS: 3
@@ -79,7 +79,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | Result | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
 | W | 2 | 2 | 1 | 3 | 1.50 |
-| L | 5 | 1 | 3 | 4 | 0.80 |
+| L | 6 | 1 | 3 | 4 | 0.67 |
 | T | 1 | 2 | 1 | 3 | 3.00 |
 
 ## Opponent Splits
@@ -88,7 +88,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | Colson Overhead Doors | 4 | 5 | 2 | 7 | 1.75 |
 | G.R. Mitchell Welding | 2 | 0 | 2 | 2 | 1.00 |
 | J&K Electric | 1 | 0 | 1 | 1 | 1.00 |
-| Maltby Sports | 1 | 0 | 0 | 0 | 0.00 |
+| Maltby Sports | 2 | 0 | 0 | 0 | 0.00 |
 
 ## Team Context Crossovers
 - Team finish: No. 4 at 5-19-4
@@ -124,7 +124,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 ### February 2026
 - Ultramar went 1-3-0 and scored 17 while allowing 20.
 - Month-end standing snapshot: No. 4 with 13 points.
-- Player logged-sample line that month: 2 GP, 0 G, 2 A, 2 PTS.
+- Player logged-sample line that month: 3 GP, 0 G, 2 A, 2 PTS.
 - Played to a 1-3-0 month and outscored opponents 17-20.
 - The schedule was playoff-heavy, with 3 of 4 games against the postseason field.
 
@@ -132,11 +132,11 @@ Use this as source material for a player profile, season recap, or playoff featu
 | Split | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
 | First half | 4 | 3 | 2 | 5 | 1.25 |
-| Second half | 4 | 2 | 3 | 5 | 1.25 |
+| Second half | 5 | 2 | 3 | 5 | 1.00 |
 
 ## Best And Worst 5-Game Stretches
 - Best 5-game run: 8 points (5-3) from 2025-11-18 to 2025-12-30.
-- Quietest 5-game run: 6 points (2-4) from 2025-12-16 to 2026-02-17.
+- Quietest 5-game run: 5 points (2-3) from 2025-12-16 to 2026-02-15.
 
 ## Derived Angles
 - Played a limited share of the team schedule, which makes availability and sample size part of the profile.

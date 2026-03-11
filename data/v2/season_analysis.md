@@ -1,12 +1,12 @@
 # AAHL 2025-2026 Season Analysis
 
-Generated: 2026-03-10T19:38:47.750487+00:00
+Generated: 2026-03-11T00:28:30.052324+00:00
 Local date context: 2026-03-10 (Halifax)
 
 ## League Snapshot
 - Completed regular-season games: 54
 - Completed playoff games: 0
-- Scheduled playoff games: 5
+- Scheduled playoff games: 4
 - Teams: 5
 
 ## Standings
@@ -27,7 +27,7 @@ Local date context: 2026-03-10 (Halifax)
 ### G.R. Mitchell Welding vs J&K Electric
 - State: Series tied 0-0
 - Best of: 3
-- Next game: 2026-03-10 8:45 PM | G.R. Mitchell Welding at J&K Electric
+- Next game: 2026-03-22 9:00 PM | J&K Electric at G.R. Mitchell Welding
 - Known local dates: 2026-03-10, 2026-03-22, 2026-03-24
 - Regular season head-to-head: G.R. Mitchell Welding 1-3-2 vs J&K Electric
 
@@ -42,14 +42,14 @@ Local date context: 2026-03-10 (Halifax)
 - Points leader: Meathead MacDonald (57 pts in 18 GP)
 - Playoff context: Series tied 0-0
 - Most recent result: 2026-02-24 vs Ultramar (win)
-- Next scheduled: 2026-03-10 8:45 PM vs J&K Electric
+- Next scheduled: 2026-03-22 9:00 PM vs J&K Electric
 
 ### J&K Electric
 - Standing: 2 | 16-8-5 | 37 pts | last 10 3-3-4 | Won 1
 - Points leader: Brendan Stone (49 pts in 22 GP)
 - Playoff context: Series tied 0-0
 - Most recent result: 2026-02-24 vs Maltby Sports (tie)
-- Next scheduled: 2026-03-10 8:45 PM vs G.R. Mitchell Welding
+- Next scheduled: 2026-03-22 9:00 PM vs G.R. Mitchell Welding
 
 ### Maltby Sports
 - Standing: 1 | 21-4-3 | 45 pts | last 10 7-2-1 | Tied 1

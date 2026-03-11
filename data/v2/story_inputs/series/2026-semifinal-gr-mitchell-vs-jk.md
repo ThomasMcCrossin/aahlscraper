@@ -12,7 +12,7 @@ Use this as source material for a playoff preview, game program writeup, or riva
 - Best-of format: 3
 - Current state: Series tied 0-0
 - Known dates: 2026-03-10, 2026-03-22, 2026-03-24
-- Next game: 2026-03-10 8:45 PM | G.R. Mitchell Welding at J&K Electric
+- Next game: 2026-03-22 9:00 PM | J&K Electric at G.R. Mitchell Welding
 - Regular-season head-to-head: G.R. Mitchell Welding 1-3-2 vs J&K Electric 3-1-2
 
 ## Regular-Season Meetings
@@ -64,7 +64,7 @@ Use this as source material for a playoff preview, game program writeup, or riva
 ## Derived Angles
 - The seeding gap is narrow enough that this can be framed as a near coin-flip semifinal rather than a classic favorite-versus-underdog series.
 - The regular-season head-to-head was not random noise; one side owned the matchup enough to matter in the preview.
-- The first posted playoff date is 2026-03-10, so the preview can be written as an opening-night setup rather than a reactive recap.
+- The first posted playoff date is 2026-03-22, so the preview can be written as an opening-night setup rather than a reactive recap.
 
 ## Suggested Prompts
 - Write a newspaper playoff preview for G.R. Mitchell Welding vs J&K Electric that explains why the matchup should be watched closely.

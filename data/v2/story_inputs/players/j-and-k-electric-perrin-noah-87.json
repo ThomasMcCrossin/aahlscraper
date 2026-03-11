@@ -2,7 +2,7 @@
   "entity_type": "player",
   "entity_id": "j-and-k-electric-perrin-noah-87",
   "title": "Noah Perrin season story pack",
-  "generated_at": "2026-03-10T20:36:07.729081+00:00",
+  "generated_at": "2026-03-11T00:28:39.158316+00:00",
   "verified_facts": {
     "player": {
       "player_id": "j-and-k-electric-perrin-noah-87",
@@ -14,24 +14,24 @@
       "team_id": "TYLERARSENEAU-4",
       "team_name": "J&K Electric",
       "team_slug": "j-and-k-electric",
-      "games_played": 7,
-      "goals": 5,
+      "games_played": 9,
+      "goals": 7,
       "assists": 8,
-      "points": 13,
+      "points": 15,
       "penalty_minutes": 0,
-      "points_per_game": 1.86,
+      "points_per_game": 1.67,
       "team_games_played": 21,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 2,
+      "recent_games": 2
     },
     "season_profile": {
-      "gp": 7,
-      "goals": 5,
+      "gp": 9,
+      "goals": 7,
       "assists": 8,
-      "points": 13,
+      "points": 15,
       "penalty_minutes": 0,
-      "points_per_game": "1.86"
+      "points_per_game": "1.67"
     },
     "month_end_checkpoints": [
       {
@@ -97,6 +97,16 @@
         "multi_point_games": 2
       },
       {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "gp": 1,
+        "goals": 1,
+        "assists": 0,
+        "points": 1,
+        "pim": 0,
+        "multi_point_games": 0
+      },
+      {
         "month": "2026-01",
         "month_label": "January 2026",
         "gp": 2,
@@ -109,10 +119,10 @@
       {
         "month": "2026-02",
         "month_label": "February 2026",
-        "gp": 1,
-        "goals": 3,
+        "gp": 2,
+        "goals": 4,
         "assists": 1,
-        "points": 4,
+        "points": 5,
         "pim": 0,
         "multi_point_games": 1
       }
@@ -141,6 +151,17 @@
         "top_game": "2025-11-09 vs Ultramar (1-1-2)"
       },
       {
+        "month": "2025-12",
+        "month_label": "December 2025",
+        "gp": 1,
+        "goals": 1,
+        "assists": 0,
+        "points": 1,
+        "penalty_minutes": 0,
+        "points_per_game": "1.00",
+        "top_game": "2025-12-07 vs Colson Overhead Doors (1-0-1)"
+      },
+      {
         "month": "2026-01",
         "month_label": "January 2026",
         "gp": 2,
@@ -154,12 +175,12 @@
       {
         "month": "2026-02",
         "month_label": "February 2026",
-        "gp": 1,
-        "goals": 3,
+        "gp": 2,
+        "goals": 4,
         "assists": 1,
-        "points": 4,
+        "points": 5,
         "penalty_minutes": 0,
-        "points_per_game": "4.00",
+        "points_per_game": "2.50",
         "top_game": "2026-02-24 vs Maltby Sports (3-1-4)"
       }
     ],
@@ -216,27 +237,27 @@
       }
     ],
     "vs_playoff_teams": {
-      "gp": 6,
-      "goals": 5,
+      "gp": 7,
+      "goals": 6,
       "assists": 6,
-      "points": 11
+      "points": 12
     },
     "result_splits": [
       {
         "result": "W",
-        "gp": 3,
-        "goals": 1,
+        "gp": 4,
+        "goals": 2,
         "assists": 4,
-        "points": 5,
+        "points": 6,
         "penalty_minutes": 0,
-        "points_per_game": "1.67"
+        "points_per_game": "1.50"
       },
       {
         "result": "L",
-        "gp": 2,
-        "goals": 1,
+        "gp": 3,
+        "goals": 2,
         "assists": 1,
-        "points": 2,
+        "points": 3,
         "penalty_minutes": 0,
         "points_per_game": "1.00"
       },
@@ -254,12 +275,12 @@
       {
         "opponent_slug": "maltby-sports",
         "opponent_name": "Maltby Sports",
-        "gp": 2,
-        "goals": 4,
+        "gp": 3,
+        "goals": 5,
         "assists": 1,
-        "points": 5,
+        "points": 6,
         "penalty_minutes": 0,
-        "points_per_game": "2.50"
+        "points_per_game": "2.00"
       },
       {
         "opponent_slug": "gr-mitchell-welding",
@@ -272,6 +293,16 @@
         "points_per_game": "1.33"
       },
       {
+        "opponent_slug": "colson-overhead-doors",
+        "opponent_name": "Colson Overhead Doors",
+        "gp": 2,
+        "goals": 1,
+        "assists": 2,
+        "points": 3,
+        "penalty_minutes": 0,
+        "points_per_game": "1.50"
+      },
+      {
         "opponent_slug": "ultramar",
         "opponent_name": "Ultramar",
         "gp": 1,
@@ -280,89 +311,79 @@
         "points": 2,
         "penalty_minutes": 0,
         "points_per_game": "2.00"
-      },
-      {
-        "opponent_slug": "colson-overhead-doors",
-        "opponent_name": "Colson Overhead Doors",
-        "gp": 1,
-        "goals": 0,
-        "assists": 2,
-        "points": 2,
-        "penalty_minutes": 0,
-        "points_per_game": "2.00"
       }
     ],
     "five_game_windows": {
       "best": {
-        "start_date": "2025-11-09",
+        "start_date": "2025-12-07",
         "end_date": "2026-02-24",
         "window": 5,
         "gp": 5,
         "goals": 5,
-        "assists": 5,
-        "points": 10,
+        "assists": 4,
+        "points": 9,
         "penalty_minutes": 0,
-        "points_per_game": "2.00"
+        "points_per_game": "1.80"
       },
       "worst": {
-        "start_date": "2025-10-21",
-        "end_date": "2026-01-06",
+        "start_date": "2025-11-18",
+        "end_date": "2026-02-17",
         "window": 5,
         "gp": 5,
-        "goals": 2,
-        "assists": 5,
-        "points": 7,
+        "goals": 3,
+        "assists": 3,
+        "points": 6,
         "penalty_minutes": 0,
-        "points_per_game": "1.40"
+        "points_per_game": "1.20"
       }
     },
     "half_splits": {
       "first_half": {
-        "gp": 3,
-        "goals": 1,
+        "gp": 4,
+        "goals": 2,
         "assists": 4,
-        "points": 5,
+        "points": 6,
         "penalty_minutes": 0,
-        "points_per_game": "1.67"
+        "points_per_game": "1.50"
       },
       "second_half": {
-        "gp": 4,
-        "goals": 4,
+        "gp": 5,
+        "goals": 5,
         "assists": 4,
-        "points": 8,
+        "points": 9,
         "penalty_minutes": 0,
-        "points_per_game": "2.00"
+        "points_per_game": "1.80"
       }
     },
     "streaks": {
-      "longest_point_streak": 7,
-      "longest_goal_streak": 2,
+      "longest_point_streak": 9,
+      "longest_goal_streak": 3,
       "multi_point_games": 4,
       "hat_tricks": 1
     },
     "box_score_log_coverage": {
-      "logged_gp": 7,
-      "season_gp": 7,
+      "logged_gp": 9,
+      "season_gp": 9,
       "game_coverage_pct": "1.000",
-      "logged_goals": 5,
-      "season_goals": 5,
+      "logged_goals": 7,
+      "season_goals": 7,
       "goal_coverage_pct": "1.000",
       "logged_assists": 8,
       "season_assists": 8,
       "assist_coverage_pct": "1.000",
-      "logged_points": 13,
-      "season_points": 13,
+      "logged_points": 15,
+      "season_points": 15,
       "point_coverage_pct": "1.000",
       "is_complete": true
     },
     "team_role_profile": {
       "team_rank": 2,
       "team_record": "16-8-5",
-      "team_points_rank": 8,
+      "team_points_rank": 9,
       "team_points_leader": "Brendan Stone",
-      "gap_to_team_leader": 36,
-      "lead_over_next_teammate": 0,
-      "goal_share_pct": "3.4%"
+      "gap_to_team_leader": 34,
+      "lead_over_next_teammate": 3,
+      "goal_share_pct": "4.8%"
     },
     "team_context_crossovers": [
       {
@@ -391,6 +412,7 @@
         "month_label": "December 2025",
         "notes": [
           "J&K Electric went 5-0-0 and scored 29 while allowing 15.",
+          "Player logged-sample line that month: 1 GP, 1 G, 0 A, 1 PTS.",
           "Went unbeaten and perfect at 5-0-0 with a +14 goal differential.",
           "Defended better than its season norm, which gave the month a steadier feel."
         ]
@@ -412,7 +434,7 @@
         "notes": [
           "J&K Electric went 1-2-2 and scored 26 while allowing 29.",
           "Month-end standing snapshot: No. 3 with 33 points.",
-          "Player logged-sample line that month: 1 GP, 3 G, 1 A, 4 PTS.",
+          "Player logged-sample line that month: 2 GP, 4 G, 1 A, 5 PTS.",
           "Played to a 1-2-2 month and outscored opponents 26-29.",
           "Allowed goals at a higher rate than normal, which put strain on the month."
         ]
@@ -422,7 +444,7 @@
   "angles": [
     "Played a limited share of the team schedule, which makes availability and sample size part of the profile.",
     "Recorded 1 hat trick, which is a ready-made local-paper hook.",
-    "Peak month was November 2025 (5 points), which helps structure the season arc."
+    "Peak month was February 2026 (5 points), which helps structure the season arc."
   ],
   "suggested_prompts": [
     "Write a newspaper-style player profile on Noah Perrin and how his season developed month by month.",

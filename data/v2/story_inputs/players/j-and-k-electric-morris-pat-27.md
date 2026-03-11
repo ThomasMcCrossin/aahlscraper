@@ -13,18 +13,18 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Team: J&K Electric
 - Number: 27
 - Positions: F, D
-- Season totals: 5 GP, 4 G, 9 A, 13 PTS, 0 PIM
+- Season totals: 7 GP, 6 G, 10 A, 16 PTS, 3 PIM
 - Team games played: 21
-- Team scoring rank: 9
-- League scoring rank: 40
-- Points per game: 2.6
-- Logged-sample longest point streak: 5
-- Logged-sample longest goal streak: 1
+- Team scoring rank: 8
+- League scoring rank: 37
+- Points per game: 2.29
+- Logged-sample longest point streak: 7
+- Logged-sample longest goal streak: 3
 
 ## Per-Game Log Coverage
-- Logged box-score appearances: 5 of 5 (1.000)
-- Logged goals / assists / points: 4 / 9 / 13
-- Season goals / assists / points: 4 / 9 / 13
+- Logged box-score appearances: 7 of 7 (1.000)
+- Logged goals / assists / points: 6 / 10 / 16
+- Season goals / assists / points: 6 / 10 / 16
 
 ## Month-End Progression
 | Month | GP | G | A | PTS |
@@ -40,7 +40,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | --- | --- | --- | --- | --- | --- |
 | October 2025 | 1 | 1 | 3 | 4 | 1 |
 | November 2025 | 1 | 0 | 2 | 2 | 1 |
-| December 2025 | 1 | 3 | 1 | 4 | 1 |
+| December 2025 | 3 | 5 | 2 | 7 | 2 |
 | January 2026 | 1 | 0 | 1 | 1 | 0 |
 | February 2026 | 1 | 0 | 2 | 2 | 1 |
 
@@ -49,7 +49,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | --- | --- | --- | --- | --- | --- |
 | October 2025 | 1 | 1 | 3 | 4 | 2025-10-14 vs Colson Overhead Doors (1-3-4) |
 | November 2025 | 1 | 0 | 2 | 2 | 2025-11-02 vs Colson Overhead Doors (0-2-2) |
-| December 2025 | 1 | 3 | 1 | 4 | 2025-12-02 vs Colson Overhead Doors (3-1-4) |
+| December 2025 | 3 | 5 | 2 | 7 | 2025-12-02 vs Colson Overhead Doors (3-1-4) |
 | January 2026 | 1 | 0 | 1 | 1 | 2026-01-27 vs Colson Overhead Doors (0-1-1) |
 | February 2026 | 1 | 0 | 2 | 2 | 2026-02-01 vs Maltby Sports (0-2-2) |
 
@@ -58,18 +58,18 @@ Use this as source material for a player profile, season recap, or playoff featu
 | --- | --- | --- | --- | --- | --- | --- |
 | 2025-12-02 | Colson Overhead Doors | W | 8-6 | 3 | 1 | 4 |
 | 2025-10-14 | Colson Overhead Doors | W | 6-1 | 1 | 3 | 4 |
+| 2025-12-16 | Colson Overhead Doors | W | 5-0 | 1 | 1 | 2 |
 | 2025-11-02 | Colson Overhead Doors | W | 6-3 | 0 | 2 | 2 |
 | 2026-02-01 | Maltby Sports | L | 4-6 | 0 | 2 | 2 |
-| 2026-01-27 | Colson Overhead Doors | L | 6-7 | 0 | 1 | 1 |
 
 ## Recent Games
 | Date | Opponent | Result | G | A | PTS |
 | --- | --- | --- | --- | --- | --- |
 | 2026-02-01 | Maltby Sports | L | 0 | 2 | 2 |
 | 2026-01-27 | Colson Overhead Doors | L | 0 | 1 | 1 |
+| 2025-12-16 | Colson Overhead Doors | W | 1 | 1 | 2 |
+| 2025-12-07 | Colson Overhead Doors | W | 1 | 0 | 1 |
 | 2025-12-02 | Colson Overhead Doors | W | 3 | 1 | 4 |
-| 2025-11-02 | Colson Overhead Doors | W | 0 | 2 | 2 |
-| 2025-10-14 | Colson Overhead Doors | W | 1 | 3 | 4 |
 
 ## Versus Playoff Teams
 - GP: 1
@@ -80,21 +80,21 @@ Use this as source material for a player profile, season recap, or playoff featu
 ## Results Splits
 | Result | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| W | 3 | 4 | 6 | 10 | 3.33 |
+| W | 5 | 6 | 7 | 13 | 2.60 |
 | L | 2 | 0 | 3 | 3 | 1.50 |
 | T | 0 | 0 | 0 | 0 | 0.00 |
 
 ## Opponent Splits
 | Opponent | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| Colson Overhead Doors | 4 | 4 | 7 | 11 | 2.75 |
+| Colson Overhead Doors | 6 | 6 | 8 | 14 | 2.33 |
 | Maltby Sports | 1 | 0 | 2 | 2 | 2.00 |
 
 ## Team Context Crossovers
 - Team finish: No. 2 at 16-8-5
-- Team scoring rank: 9
-- Share of team goals: 2.8%
-- Gap to team points leader Brendan Stone: 36 points
+- Team scoring rank: 8
+- Share of team goals: 4.1%
+- Gap to team points leader Brendan Stone: 33 points
 
 ### October 2025
 - J&K Electric went 2-1-0 and scored 12 while allowing 9.
@@ -111,7 +111,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 
 ### December 2025
 - J&K Electric went 5-0-0 and scored 29 while allowing 15.
-- Player logged-sample line that month: 1 GP, 3 G, 1 A, 4 PTS.
+- Player logged-sample line that month: 3 GP, 5 G, 2 A, 7 PTS.
 - Went unbeaten and perfect at 5-0-0 with a +14 goal differential.
 - Defended better than its season norm, which gave the month a steadier feel.
 
@@ -132,17 +132,20 @@ Use this as source material for a player profile, season recap, or playoff featu
 ## First Half Vs Second Half
 | Split | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| First half | 2 | 1 | 5 | 6 | 3.00 |
-| Second half | 3 | 3 | 4 | 7 | 2.33 |
+| First half | 3 | 4 | 6 | 10 | 3.33 |
+| Second half | 4 | 2 | 4 | 6 | 1.50 |
 
 ## Best And Worst 5-Game Stretches
-- Best 5-game run: 13 points (4-9) from 2025-10-14 to 2026-02-01.
-- Quietest 5-game run: 13 points (4-9) from 2025-10-14 to 2026-02-01.
+- Best 5-game run: 13 points (6-7) from 2025-10-14 to 2025-12-16.
+- Quietest 5-game run: 10 points (5-5) from 2025-11-02 to 2026-01-27.
 
 ## Derived Angles
 - Played a limited share of the team schedule, which makes availability and sample size part of the profile.
+- Profiles as a playmaker; the assist totals tell more of the story than the goal count.
+- Logged 5 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.
 - Recorded 1 hat trick, which is a ready-made local-paper hook.
-- Peak month was December 2025 (4 points), which helps structure the season arc.
+- Peak month was December 2025 (7 points), which helps structure the season arc.
+- Produces enough offense from the blue line to justify a puck-moving defenseman frame.
 
 ## Suggested Prompts
 - Write a newspaper-style player profile on Pat Morris and how his season developed month by month.

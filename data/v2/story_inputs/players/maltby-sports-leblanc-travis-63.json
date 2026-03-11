@@ -2,7 +2,7 @@
   "entity_type": "player",
   "entity_id": "maltby-sports-leblanc-travis-63",
   "title": "Travis Leblanc season story pack",
-  "generated_at": "2026-03-10T20:36:07.744007+00:00",
+  "generated_at": "2026-03-11T00:28:39.166848+00:00",
   "verified_facts": {
     "player": {
       "player_id": "maltby-sports-leblanc-travis-63",
@@ -27,12 +27,12 @@
       "recent_games": 0
     },
     "season_profile": {
-      "gp": 12,
+      "gp": 13,
       "goals": 9,
-      "assists": 12,
-      "points": 21,
+      "assists": 14,
+      "points": 23,
       "penalty_minutes": 18,
-      "points_per_game": "1.75"
+      "points_per_game": "1.77"
     },
     "month_end_checkpoints": [
       {
@@ -120,12 +120,12 @@
       {
         "month": "2026-02",
         "month_label": "February 2026",
-        "gp": 1,
+        "gp": 2,
         "goals": 1,
-        "assists": 2,
-        "points": 3,
+        "assists": 4,
+        "points": 5,
         "pim": 3,
-        "multi_point_games": 1
+        "multi_point_games": 2
       }
     ],
     "monthly_timeline": [
@@ -176,12 +176,12 @@
       {
         "month": "2026-02",
         "month_label": "February 2026",
-        "gp": 1,
+        "gp": 2,
         "goals": 1,
-        "assists": 2,
-        "points": 3,
+        "assists": 4,
+        "points": 5,
         "penalty_minutes": 3,
-        "points_per_game": "3.00",
+        "points_per_game": "2.50",
         "top_game": "2026-02-24 vs J&K Electric (1-2-3)"
       }
     ],
@@ -238,20 +238,20 @@
       }
     ],
     "vs_playoff_teams": {
-      "gp": 11,
+      "gp": 12,
       "goals": 8,
-      "assists": 11,
-      "points": 19
+      "assists": 13,
+      "points": 21
     },
     "result_splits": [
       {
         "result": "W",
-        "gp": 7,
+        "gp": 8,
         "goals": 5,
-        "assists": 7,
-        "points": 12,
+        "assists": 9,
+        "points": 14,
         "penalty_minutes": 15,
-        "points_per_game": "1.71"
+        "points_per_game": "1.75"
       },
       {
         "result": "L",
@@ -284,6 +284,16 @@
         "points_per_game": "2.00"
       },
       {
+        "opponent_slug": "j-and-k-electric",
+        "opponent_name": "J&K Electric",
+        "gp": 4,
+        "goals": 2,
+        "assists": 5,
+        "points": 7,
+        "penalty_minutes": 3,
+        "points_per_game": "1.75"
+      },
+      {
         "opponent_slug": "ultramar",
         "opponent_name": "Ultramar",
         "gp": 4,
@@ -292,16 +302,6 @@
         "points": 6,
         "penalty_minutes": 12,
         "points_per_game": "1.50"
-      },
-      {
-        "opponent_slug": "j-and-k-electric",
-        "opponent_name": "J&K Electric",
-        "gp": 3,
-        "goals": 2,
-        "assists": 3,
-        "points": 5,
-        "penalty_minutes": 3,
-        "points_per_game": "1.67"
       },
       {
         "opponent_slug": "colson-overhead-doors",
@@ -348,33 +348,33 @@
         "points_per_game": "1.67"
       },
       "second_half": {
-        "gp": 6,
+        "gp": 7,
         "goals": 4,
-        "assists": 7,
-        "points": 11,
+        "assists": 9,
+        "points": 13,
         "penalty_minutes": 12,
-        "points_per_game": "1.83"
+        "points_per_game": "1.86"
       }
     },
     "streaks": {
       "longest_point_streak": 8,
       "longest_goal_streak": 3,
-      "multi_point_games": 6,
+      "multi_point_games": 7,
       "hat_tricks": 0
     },
     "box_score_log_coverage": {
-      "logged_gp": 12,
+      "logged_gp": 13,
       "season_gp": 19,
-      "game_coverage_pct": "0.632",
+      "game_coverage_pct": "0.684",
       "logged_goals": 9,
       "season_goals": 12,
       "goal_coverage_pct": "0.750",
-      "logged_assists": 12,
+      "logged_assists": 14,
       "season_assists": 18,
-      "assist_coverage_pct": "0.667",
-      "logged_points": 21,
+      "assist_coverage_pct": "0.778",
+      "logged_points": 23,
       "season_points": 30,
-      "point_coverage_pct": "0.700",
+      "point_coverage_pct": "0.767",
       "is_complete": false
     },
     "team_role_profile": {
@@ -435,7 +435,7 @@
         "notes": [
           "Maltby Sports went 5-0-1 and scored 38 while allowing 22.",
           "Month-end standing snapshot: No. 1 with 42 points.",
-          "Player logged-sample line that month: 1 GP, 1 G, 2 A, 3 PTS.",
+          "Player logged-sample line that month: 2 GP, 1 G, 4 A, 5 PTS.",
           "Went unbeaten at 5-0-1 with a +16 goal differential.",
           "This was a clear improvement from the previous month."
         ]
@@ -445,7 +445,7 @@
   "angles": [
     "Was available for almost the full season, which supports an ironman or lineup fixture angle.",
     "Profiles as a playmaker; the assist totals tell more of the story than the goal count.",
-    "Logged 6 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.",
+    "Logged 7 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.",
     "Peak month was October 2025 (8 points), which helps structure the season arc.",
     "The month-end checkpoints show a steady accumulation profile rather than one single explosive stretch.",
     "Produces enough offense from the blue line to justify a puck-moving defenseman frame."

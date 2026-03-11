@@ -2,7 +2,7 @@
   "entity_type": "player",
   "entity_id": "j-and-k-electric-boutiler-gerald-22",
   "title": "Gerald Boutiler season story pack",
-  "generated_at": "2026-03-10T20:36:07.718369+00:00",
+  "generated_at": "2026-03-11T00:28:39.151862+00:00",
   "verified_facts": {
     "player": {
       "player_id": "j-and-k-electric-boutiler-gerald-22",
@@ -27,12 +27,12 @@
       "recent_games": 0
     },
     "season_profile": {
-      "gp": 15,
+      "gp": 18,
       "goals": 5,
-      "assists": 21,
-      "points": 26,
-      "penalty_minutes": 9,
-      "points_per_game": "1.73"
+      "assists": 27,
+      "points": 32,
+      "penalty_minutes": 15,
+      "points_per_game": "1.78"
     },
     "month_end_checkpoints": [
       {
@@ -100,12 +100,12 @@
       {
         "month": "2025-12",
         "month_label": "December 2025",
-        "gp": 3,
+        "gp": 5,
         "goals": 1,
-        "assists": 5,
-        "points": 6,
-        "pim": 3,
-        "multi_point_games": 1
+        "assists": 9,
+        "points": 10,
+        "pim": 6,
+        "multi_point_games": 3
       },
       {
         "month": "2026-01",
@@ -120,12 +120,12 @@
       {
         "month": "2026-02",
         "month_label": "February 2026",
-        "gp": 2,
+        "gp": 3,
         "goals": 1,
-        "assists": 3,
-        "points": 4,
-        "pim": 0,
-        "multi_point_games": 1
+        "assists": 5,
+        "points": 6,
+        "pim": 3,
+        "multi_point_games": 2
       }
     ],
     "monthly_timeline": [
@@ -154,11 +154,11 @@
       {
         "month": "2025-12",
         "month_label": "December 2025",
-        "gp": 3,
+        "gp": 5,
         "goals": 1,
-        "assists": 5,
-        "points": 6,
-        "penalty_minutes": 3,
+        "assists": 9,
+        "points": 10,
+        "penalty_minutes": 6,
         "points_per_game": "2.00",
         "top_game": "2025-12-23 vs Ultramar (1-3-4)"
       },
@@ -176,11 +176,11 @@
       {
         "month": "2026-02",
         "month_label": "February 2026",
-        "gp": 2,
+        "gp": 3,
         "goals": 1,
-        "assists": 3,
-        "points": 4,
-        "penalty_minutes": 0,
+        "assists": 5,
+        "points": 6,
+        "penalty_minutes": 3,
         "points_per_game": "2.00",
         "top_game": "2026-02-10 vs G.R. Mitchell Welding (0-3-3)"
       }
@@ -238,28 +238,28 @@
       }
     ],
     "vs_playoff_teams": {
-      "gp": 10,
+      "gp": 11,
       "goals": 5,
-      "assists": 15,
-      "points": 20
+      "assists": 17,
+      "points": 22
     },
     "result_splits": [
       {
         "result": "W",
-        "gp": 9,
+        "gp": 11,
         "goals": 2,
-        "assists": 12,
-        "points": 14,
-        "penalty_minutes": 6,
-        "points_per_game": "1.56"
+        "assists": 16,
+        "points": 18,
+        "penalty_minutes": 9,
+        "points_per_game": "1.64"
       },
       {
         "result": "L",
-        "gp": 2,
+        "gp": 3,
         "goals": 1,
-        "assists": 3,
-        "points": 4,
-        "penalty_minutes": 0,
+        "assists": 5,
+        "points": 6,
+        "penalty_minutes": 3,
         "points_per_game": "2.00"
       },
       {
@@ -286,22 +286,22 @@
       {
         "opponent_slug": "colson-overhead-doors",
         "opponent_name": "Colson Overhead Doors",
-        "gp": 5,
+        "gp": 7,
         "goals": 0,
-        "assists": 6,
-        "points": 6,
-        "penalty_minutes": 0,
-        "points_per_game": "1.20"
+        "assists": 10,
+        "points": 10,
+        "penalty_minutes": 3,
+        "points_per_game": "1.43"
       },
       {
         "opponent_slug": "maltby-sports",
         "opponent_name": "Maltby Sports",
-        "gp": 3,
+        "gp": 4,
         "goals": 2,
-        "assists": 3,
-        "points": 5,
-        "penalty_minutes": 0,
-        "points_per_game": "1.67"
+        "assists": 5,
+        "points": 7,
+        "penalty_minutes": 3,
+        "points_per_game": "1.75"
       },
       {
         "opponent_slug": "ultramar",
@@ -340,41 +340,41 @@
     },
     "half_splits": {
       "first_half": {
-        "gp": 7,
+        "gp": 9,
         "goals": 2,
-        "assists": 8,
-        "points": 10,
+        "assists": 11,
+        "points": 13,
         "penalty_minutes": 3,
-        "points_per_game": "1.43"
+        "points_per_game": "1.44"
       },
       "second_half": {
-        "gp": 8,
+        "gp": 9,
         "goals": 3,
-        "assists": 13,
-        "points": 16,
-        "penalty_minutes": 6,
-        "points_per_game": "2.00"
+        "assists": 16,
+        "points": 19,
+        "penalty_minutes": 12,
+        "points_per_game": "2.11"
       }
     },
     "streaks": {
-      "longest_point_streak": 14,
+      "longest_point_streak": 17,
       "longest_goal_streak": 2,
-      "multi_point_games": 9,
+      "multi_point_games": 12,
       "hat_tricks": 0
     },
     "box_score_log_coverage": {
-      "logged_gp": 15,
+      "logged_gp": 18,
       "season_gp": 24,
-      "game_coverage_pct": "0.625",
+      "game_coverage_pct": "0.750",
       "logged_goals": 5,
       "season_goals": 8,
       "goal_coverage_pct": "0.625",
-      "logged_assists": 21,
+      "logged_assists": 27,
       "season_assists": 30,
-      "assist_coverage_pct": "0.700",
-      "logged_points": 26,
+      "assist_coverage_pct": "0.900",
+      "logged_points": 32,
       "season_points": 38,
-      "point_coverage_pct": "0.684",
+      "point_coverage_pct": "0.842",
       "is_complete": false
     },
     "team_role_profile": {
@@ -413,7 +413,7 @@
         "month_label": "December 2025",
         "notes": [
           "J&K Electric went 5-0-0 and scored 29 while allowing 15.",
-          "Player logged-sample line that month: 3 GP, 1 G, 5 A, 6 PTS.",
+          "Player logged-sample line that month: 5 GP, 1 G, 9 A, 10 PTS.",
           "Went unbeaten and perfect at 5-0-0 with a +14 goal differential.",
           "Defended better than its season norm, which gave the month a steadier feel."
         ]
@@ -435,7 +435,7 @@
         "notes": [
           "J&K Electric went 1-2-2 and scored 26 while allowing 29.",
           "Month-end standing snapshot: No. 3 with 33 points.",
-          "Player logged-sample line that month: 2 GP, 1 G, 3 A, 4 PTS.",
+          "Player logged-sample line that month: 3 GP, 1 G, 5 A, 6 PTS.",
           "Played to a 1-2-2 month and outscored opponents 26-29.",
           "Allowed goals at a higher rate than normal, which put strain on the month."
         ]
@@ -446,8 +446,8 @@
     "Was available for almost the full season, which supports an ironman or lineup fixture angle.",
     "Finished inside the league top 10 in points at No. 9.",
     "Profiles as a playmaker; the assist totals tell more of the story than the goal count.",
-    "Logged 9 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.",
-    "Peak month was December 2025 (6 points), which helps structure the season arc.",
+    "Logged 12 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.",
+    "Peak month was December 2025 (10 points), which helps structure the season arc.",
     "The month-end checkpoints show a steady accumulation profile rather than one single explosive stretch.",
     "Produces enough offense from the blue line to justify a puck-moving defenseman frame."
   ],

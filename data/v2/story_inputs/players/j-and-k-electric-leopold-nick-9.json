@@ -2,7 +2,7 @@
   "entity_type": "player",
   "entity_id": "j-and-k-electric-leopold-nick-9",
   "title": "Nick Leopold season story pack",
-  "generated_at": "2026-03-10T20:36:07.729991+00:00",
+  "generated_at": "2026-03-11T00:28:39.159217+00:00",
   "verified_facts": {
     "player": {
       "player_id": "j-and-k-electric-leopold-nick-9",
@@ -27,12 +27,12 @@
       "recent_games": 0
     },
     "season_profile": {
-      "gp": 13,
+      "gp": 14,
       "goals": 8,
-      "assists": 22,
-      "points": 30,
+      "assists": 23,
+      "points": 31,
       "penalty_minutes": 6,
-      "points_per_game": "2.31"
+      "points_per_game": "2.21"
     },
     "month_end_checkpoints": [
       {
@@ -120,10 +120,10 @@
       {
         "month": "2026-02",
         "month_label": "February 2026",
-        "gp": 2,
+        "gp": 3,
         "goals": 1,
-        "assists": 5,
-        "points": 6,
+        "assists": 6,
+        "points": 7,
         "pim": 3,
         "multi_point_games": 1
       }
@@ -176,12 +176,12 @@
       {
         "month": "2026-02",
         "month_label": "February 2026",
-        "gp": 2,
+        "gp": 3,
         "goals": 1,
-        "assists": 5,
-        "points": 6,
+        "assists": 6,
+        "points": 7,
         "penalty_minutes": 3,
-        "points_per_game": "3.00",
+        "points_per_game": "2.33",
         "top_game": "2026-02-24 vs Maltby Sports (1-4-5)"
       }
     ],
@@ -238,10 +238,10 @@
       }
     ],
     "vs_playoff_teams": {
-      "gp": 9,
+      "gp": 10,
       "goals": 4,
-      "assists": 14,
-      "points": 18
+      "assists": 15,
+      "points": 19
     },
     "result_splits": [
       {
@@ -255,10 +255,10 @@
       },
       {
         "result": "L",
-        "gp": 1,
+        "gp": 2,
         "goals": 0,
-        "assists": 1,
-        "points": 1,
+        "assists": 2,
+        "points": 2,
         "penalty_minutes": 3,
         "points_per_game": "1.00"
       },
@@ -284,6 +284,16 @@
         "points_per_game": "3.00"
       },
       {
+        "opponent_slug": "maltby-sports",
+        "opponent_name": "Maltby Sports",
+        "gp": 5,
+        "goals": 1,
+        "assists": 8,
+        "points": 9,
+        "penalty_minutes": 6,
+        "points_per_game": "1.80"
+      },
+      {
         "opponent_slug": "gr-mitchell-welding",
         "opponent_name": "G.R. Mitchell Welding",
         "gp": 4,
@@ -291,16 +301,6 @@
         "assists": 6,
         "points": 8,
         "penalty_minutes": 0,
-        "points_per_game": "2.00"
-      },
-      {
-        "opponent_slug": "maltby-sports",
-        "opponent_name": "Maltby Sports",
-        "gp": 4,
-        "goals": 1,
-        "assists": 7,
-        "points": 8,
-        "penalty_minutes": 6,
         "points_per_game": "2.00"
       },
       {
@@ -340,41 +340,41 @@
     },
     "half_splits": {
       "first_half": {
-        "gp": 6,
-        "goals": 3,
-        "assists": 7,
-        "points": 10,
+        "gp": 7,
+        "goals": 4,
+        "assists": 11,
+        "points": 15,
         "penalty_minutes": 3,
-        "points_per_game": "1.67"
+        "points_per_game": "2.14"
       },
       "second_half": {
         "gp": 7,
-        "goals": 5,
-        "assists": 15,
-        "points": 20,
+        "goals": 4,
+        "assists": 12,
+        "points": 16,
         "penalty_minutes": 3,
-        "points_per_game": "2.86"
+        "points_per_game": "2.29"
       }
     },
     "streaks": {
-      "longest_point_streak": 13,
+      "longest_point_streak": 14,
       "longest_goal_streak": 4,
       "multi_point_games": 6,
       "hat_tricks": 0
     },
     "box_score_log_coverage": {
-      "logged_gp": 13,
+      "logged_gp": 14,
       "season_gp": 18,
-      "game_coverage_pct": "0.722",
+      "game_coverage_pct": "0.778",
       "logged_goals": 8,
       "season_goals": 10,
       "goal_coverage_pct": "0.800",
-      "logged_assists": 22,
+      "logged_assists": 23,
       "season_assists": 27,
-      "assist_coverage_pct": "0.815",
-      "logged_points": 30,
+      "assist_coverage_pct": "0.852",
+      "logged_points": 31,
       "season_points": 37,
-      "point_coverage_pct": "0.811",
+      "point_coverage_pct": "0.838",
       "is_complete": false
     },
     "team_role_profile": {
@@ -435,7 +435,7 @@
         "notes": [
           "J&K Electric went 1-2-2 and scored 26 while allowing 29.",
           "Month-end standing snapshot: No. 3 with 33 points.",
-          "Player logged-sample line that month: 2 GP, 1 G, 5 A, 6 PTS.",
+          "Player logged-sample line that month: 3 GP, 1 G, 6 A, 7 PTS.",
           "Played to a 1-2-2 month and outscored opponents 26-29.",
           "Allowed goals at a higher rate than normal, which put strain on the month."
         ]

@@ -2,7 +2,7 @@
   "entity_type": "player",
   "entity_id": "maltby-sports-crocker-luke-6",
   "title": "Luke Crocker season story pack",
-  "generated_at": "2026-03-10T20:36:07.743041+00:00",
+  "generated_at": "2026-03-11T00:28:39.165962+00:00",
   "verified_facts": {
     "player": {
       "player_id": "maltby-sports-crocker-luke-6",
@@ -14,24 +14,24 @@
       "team_id": "TYLERARSENEAU-1",
       "team_name": "Maltby Sports",
       "team_slug": "maltby-sports",
-      "games_played": 10,
-      "goals": 3,
-      "assists": 9,
-      "points": 12,
+      "games_played": 12,
+      "goals": 4,
+      "assists": 12,
+      "points": 16,
       "penalty_minutes": 6,
-      "points_per_game": 1.2,
+      "points_per_game": 1.33,
       "team_games_played": 21,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 4,
+      "recent_games": 2
     },
     "season_profile": {
-      "gp": 10,
-      "goals": 3,
-      "assists": 9,
-      "points": 12,
+      "gp": 12,
+      "goals": 4,
+      "assists": 12,
+      "points": 16,
       "penalty_minutes": 6,
-      "points_per_game": "1.20"
+      "points_per_game": "1.33"
     },
     "month_end_checkpoints": [
       {
@@ -119,12 +119,12 @@
       {
         "month": "2026-02",
         "month_label": "February 2026",
-        "gp": 1,
-        "goals": 0,
-        "assists": 1,
-        "points": 1,
+        "gp": 3,
+        "goals": 1,
+        "assists": 4,
+        "points": 5,
         "pim": 0,
-        "multi_point_games": 0
+        "multi_point_games": 1
       }
     ],
     "monthly_timeline": [
@@ -175,16 +175,26 @@
       {
         "month": "2026-02",
         "month_label": "February 2026",
-        "gp": 1,
-        "goals": 0,
-        "assists": 1,
-        "points": 1,
+        "gp": 3,
+        "goals": 1,
+        "assists": 4,
+        "points": 5,
         "penalty_minutes": 0,
-        "points_per_game": "1.00",
-        "top_game": "2026-02-01 vs J&K Electric (0-1-1)"
+        "points_per_game": "1.67",
+        "top_game": "2026-02-17 vs J&K Electric (1-2-3)"
       }
     ],
     "key_games": [
+      {
+        "local_date": "2026-02-17",
+        "opponent_name": "J&K Electric",
+        "score": "7-5",
+        "result": "W",
+        "goals": 1,
+        "assists": 2,
+        "points": 3,
+        "game_id": "3276679"
+      },
       {
         "local_date": "2025-12-09",
         "opponent_name": "Colson Overhead Doors",
@@ -224,33 +234,23 @@
         "assists": 0,
         "points": 1,
         "game_id": "3276455"
-      },
-      {
-        "local_date": "2026-01-25",
-        "opponent_name": "G.R. Mitchell Welding",
-        "score": "7-8",
-        "result": "L",
-        "goals": 1,
-        "assists": 0,
-        "points": 1,
-        "game_id": "3276653"
       }
     ],
     "vs_playoff_teams": {
-      "gp": 9,
-      "goals": 3,
-      "assists": 6,
-      "points": 9
+      "gp": 11,
+      "goals": 4,
+      "assists": 9,
+      "points": 13
     },
     "result_splits": [
       {
         "result": "W",
-        "gp": 7,
-        "goals": 1,
-        "assists": 8,
-        "points": 9,
+        "gp": 9,
+        "goals": 2,
+        "assists": 11,
+        "points": 13,
         "penalty_minutes": 6,
-        "points_per_game": "1.29"
+        "points_per_game": "1.44"
       },
       {
         "result": "L",
@@ -273,12 +273,22 @@
     ],
     "opponent_splits": [
       {
+        "opponent_slug": "j-and-k-electric",
+        "opponent_name": "J&K Electric",
+        "gp": 3,
+        "goals": 2,
+        "assists": 3,
+        "points": 5,
+        "penalty_minutes": 0,
+        "points_per_game": "1.67"
+      },
+      {
         "opponent_slug": "ultramar",
         "opponent_name": "Ultramar",
-        "gp": 4,
+        "gp": 5,
         "goals": 0,
-        "assists": 4,
-        "points": 4,
+        "assists": 5,
+        "points": 5,
         "penalty_minutes": 6,
         "points_per_game": "1.00"
       },
@@ -301,16 +311,6 @@
         "points": 3,
         "penalty_minutes": 0,
         "points_per_game": "3.00"
-      },
-      {
-        "opponent_slug": "j-and-k-electric",
-        "opponent_name": "J&K Electric",
-        "gp": 2,
-        "goals": 1,
-        "assists": 1,
-        "points": 2,
-        "penalty_minutes": 0,
-        "points_per_game": "1.00"
       }
     ],
     "five_game_windows": {
@@ -339,51 +339,51 @@
     },
     "half_splits": {
       "first_half": {
-        "gp": 5,
+        "gp": 6,
         "goals": 2,
-        "assists": 5,
-        "points": 7,
+        "assists": 6,
+        "points": 8,
         "penalty_minutes": 3,
-        "points_per_game": "1.40"
+        "points_per_game": "1.33"
       },
       "second_half": {
-        "gp": 5,
-        "goals": 1,
-        "assists": 4,
-        "points": 5,
+        "gp": 6,
+        "goals": 2,
+        "assists": 6,
+        "points": 8,
         "penalty_minutes": 3,
-        "points_per_game": "1.00"
+        "points_per_game": "1.33"
       }
     },
     "streaks": {
-      "longest_point_streak": 9,
+      "longest_point_streak": 11,
       "longest_goal_streak": 2,
-      "multi_point_games": 2,
+      "multi_point_games": 3,
       "hat_tricks": 0
     },
     "box_score_log_coverage": {
-      "logged_gp": 10,
-      "season_gp": 10,
+      "logged_gp": 12,
+      "season_gp": 12,
       "game_coverage_pct": "1.000",
-      "logged_goals": 3,
-      "season_goals": 3,
+      "logged_goals": 4,
+      "season_goals": 4,
       "goal_coverage_pct": "1.000",
-      "logged_assists": 9,
-      "season_assists": 9,
+      "logged_assists": 12,
+      "season_assists": 12,
       "assist_coverage_pct": "1.000",
-      "logged_points": 12,
-      "season_points": 12,
+      "logged_points": 16,
+      "season_points": 16,
       "point_coverage_pct": "1.000",
       "is_complete": true
     },
     "team_role_profile": {
       "team_rank": 1,
       "team_record": "21-4-3",
-      "team_points_rank": 10,
+      "team_points_rank": 9,
       "team_points_leader": "Issac Bridge",
-      "gap_to_team_leader": 68,
-      "lead_over_next_teammate": 1,
-      "goal_share_pct": "1.8%"
+      "gap_to_team_leader": 64,
+      "lead_over_next_teammate": 0,
+      "goal_share_pct": "2.4%"
     },
     "team_context_crossovers": [
       {
@@ -434,7 +434,7 @@
         "notes": [
           "Maltby Sports went 5-0-1 and scored 38 while allowing 22.",
           "Month-end standing snapshot: No. 1 with 42 points.",
-          "Player logged-sample line that month: 1 GP, 0 G, 1 A, 1 PTS.",
+          "Player logged-sample line that month: 3 GP, 1 G, 4 A, 5 PTS.",
           "Went unbeaten at 5-0-1 with a +16 goal differential.",
           "This was a clear improvement from the previous month."
         ]
@@ -442,7 +442,9 @@
     ]
   },
   "angles": [
-    "Peak month was December 2025 (4 points), which helps structure the season arc."
+    "Profiles as a playmaker; the assist totals tell more of the story than the goal count.",
+    "Peak month was February 2026 (5 points), which helps structure the season arc.",
+    "Produces enough offense from the blue line to justify a puck-moving defenseman frame."
   ],
   "suggested_prompts": [
     "Write a newspaper-style player profile on Luke Crocker and how his season developed month by month.",

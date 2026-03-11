@@ -22,8 +22,8 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Logged-sample longest goal streak: 3
 
 ## Per-Game Log Coverage
-- Logged box-score appearances: 12 of 19 (0.632)
-- Logged goals / assists / points: 9 / 12 / 21
+- Logged box-score appearances: 13 of 19 (0.684)
+- Logged goals / assists / points: 9 / 14 / 23
 - Season goals / assists / points: 12 / 18 / 30
 - Note: the game-by-game sections below use only the logged box-score sample, not the full season totals.
 
@@ -43,7 +43,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | November 2025 | 2 | 1 | 1 | 2 | 0 |
 | December 2025 | 2 | 2 | 1 | 3 | 1 |
 | January 2026 | 3 | 1 | 4 | 5 | 2 |
-| February 2026 | 1 | 1 | 2 | 3 | 1 |
+| February 2026 | 2 | 1 | 4 | 5 | 2 |
 
 ## Month-by-Month Narrative Timeline
 | Month | GP | G | A | PTS | Top Game |
@@ -52,7 +52,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | November 2025 | 2 | 1 | 1 | 2 | 2025-11-25 vs J&K Electric (1-0-1) |
 | December 2025 | 2 | 2 | 1 | 3 | 2025-12-09 vs Colson Overhead Doors (1-1-2) |
 | January 2026 | 3 | 1 | 4 | 5 | 2026-01-25 vs G.R. Mitchell Welding (1-2-3) |
-| February 2026 | 1 | 1 | 2 | 3 | 2026-02-24 vs J&K Electric (1-2-3) |
+| February 2026 | 2 | 1 | 4 | 5 | 2026-02-24 vs J&K Electric (1-2-3) |
 
 ## Best Games
 | Date | Opponent | Result | Score | G | A | PTS |
@@ -67,21 +67,21 @@ Use this as source material for a player profile, season recap, or playoff featu
 | Date | Opponent | Result | G | A | PTS |
 | --- | --- | --- | --- | --- | --- |
 | 2026-02-24 | J&K Electric | T | 1 | 2 | 3 |
+| 2026-02-17 | J&K Electric | W | 0 | 2 | 2 |
 | 2026-01-25 | G.R. Mitchell Welding | L | 1 | 2 | 3 |
 | 2026-01-20 | Ultramar | W | 0 | 0 | 0 |
 | 2026-01-04 | Ultramar | W | 0 | 2 | 2 |
-| 2025-12-14 | G.R. Mitchell Welding | L | 1 | 0 | 1 |
 
 ## Versus Playoff Teams
-- GP: 11
+- GP: 12
 - G: 8
-- A: 11
-- PTS: 19
+- A: 13
+- PTS: 21
 
 ## Results Splits
 | Result | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| W | 7 | 5 | 7 | 12 | 1.71 |
+| W | 8 | 5 | 9 | 14 | 1.75 |
 | L | 3 | 2 | 3 | 5 | 1.67 |
 | T | 2 | 2 | 2 | 4 | 2.00 |
 
@@ -89,8 +89,8 @@ Use this as source material for a player profile, season recap, or playoff featu
 | Opponent | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
 | G.R. Mitchell Welding | 4 | 4 | 4 | 8 | 2.00 |
+| J&K Electric | 4 | 2 | 5 | 7 | 1.75 |
 | Ultramar | 4 | 2 | 4 | 6 | 1.50 |
-| J&K Electric | 3 | 2 | 3 | 5 | 1.67 |
 | Colson Overhead Doors | 1 | 1 | 1 | 2 | 2.00 |
 
 ## Team Context Crossovers
@@ -128,7 +128,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 ### February 2026
 - Maltby Sports went 5-0-1 and scored 38 while allowing 22.
 - Month-end standing snapshot: No. 1 with 42 points.
-- Player logged-sample line that month: 1 GP, 1 G, 2 A, 3 PTS.
+- Player logged-sample line that month: 2 GP, 1 G, 4 A, 5 PTS.
 - Went unbeaten at 5-0-1 with a +16 goal differential.
 - This was a clear improvement from the previous month.
 
@@ -136,7 +136,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | Split | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
 | First half | 6 | 5 | 5 | 10 | 1.67 |
-| Second half | 6 | 4 | 7 | 11 | 1.83 |
+| Second half | 7 | 4 | 9 | 13 | 1.86 |
 
 ## Best And Worst 5-Game Stretches
 - Best 5-game run: 10 points (5-5) from 2025-10-19 to 2025-11-25.
@@ -146,7 +146,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Coverage note: angles that depend on game-by-game logs are based on the logged box-score sample.
 - Was available for almost the full season, which supports an ironman or lineup fixture angle.
 - Profiles as a playmaker; the assist totals tell more of the story than the goal count.
-- Logged 6 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.
+- Logged 7 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.
 - Peak month was October 2025 (8 points), which helps structure the season arc.
 - The month-end checkpoints show a steady accumulation profile rather than one single explosive stretch.
 - Produces enough offense from the blue line to justify a puck-moving defenseman frame.

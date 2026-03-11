@@ -13,18 +13,18 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Team: Maltby Sports
 - Number: 77
 - Positions: F
-- Season totals: 10 GP, 4 G, 11 A, 15 PTS, 3 PIM
+- Season totals: 11 GP, 4 G, 12 A, 16 PTS, 3 PIM
 - Team games played: 21
 - Team scoring rank: 9
 - League scoring rank: 38
-- Points per game: 1.5
+- Points per game: 1.45
 - Logged-sample longest point streak: 5
 - Logged-sample longest goal streak: 1
 
 ## Per-Game Log Coverage
-- Logged box-score appearances: 10 of 10 (1.000)
-- Logged goals / assists / points: 4 / 11 / 15
-- Season goals / assists / points: 4 / 11 / 15
+- Logged box-score appearances: 11 of 11 (1.000)
+- Logged goals / assists / points: 4 / 12 / 16
+- Season goals / assists / points: 4 / 12 / 16
 
 ## Month-End Progression
 | Month | GP | G | A | PTS |
@@ -42,7 +42,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | November 2025 | 2 | 2 | 1 | 3 | 1 |
 | December 2025 | 1 | 1 | 0 | 1 | 0 |
 | January 2026 | 3 | 0 | 2 | 2 | 0 |
-| February 2026 | 2 | 1 | 4 | 5 | 1 |
+| February 2026 | 3 | 1 | 5 | 6 | 1 |
 
 ## Month-by-Month Narrative Timeline
 | Month | GP | G | A | PTS | Top Game |
@@ -51,7 +51,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | November 2025 | 2 | 2 | 1 | 3 | 2025-11-18 vs J&K Electric (2-0-2) |
 | December 2025 | 1 | 1 | 0 | 1 | 2025-12-09 vs Colson Overhead Doors (1-0-1) |
 | January 2026 | 3 | 0 | 2 | 2 | 2026-01-06 vs Colson Overhead Doors (0-1-1) |
-| February 2026 | 2 | 1 | 4 | 5 | 2026-02-24 vs J&K Electric (0-4-4) |
+| February 2026 | 3 | 1 | 5 | 6 | 2026-02-24 vs J&K Electric (0-4-4) |
 
 ## Best Games
 | Date | Opponent | Result | Score | G | A | PTS |
@@ -66,36 +66,36 @@ Use this as source material for a player profile, season recap, or playoff featu
 | Date | Opponent | Result | G | A | PTS |
 | --- | --- | --- | --- | --- | --- |
 | 2026-02-24 | J&K Electric | T | 0 | 4 | 4 |
+| 2026-02-17 | J&K Electric | W | 0 | 1 | 1 |
 | 2026-02-03 | Colson Overhead Doors | W | 1 | 0 | 1 |
 | 2026-01-20 | Ultramar | W | 0 | 1 | 1 |
 | 2026-01-06 | Colson Overhead Doors | W | 0 | 1 | 1 |
-| 2026-01-04 | Ultramar | W | 0 | 0 | 0 |
 
 ## Versus Playoff Teams
-- GP: 7
+- GP: 8
 - G: 2
-- A: 10
-- PTS: 12
+- A: 11
+- PTS: 13
 
 ## Results Splits
 | Result | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| W | 8 | 4 | 6 | 10 | 1.25 |
+| W | 9 | 4 | 7 | 11 | 1.22 |
 | L | 0 | 0 | 0 | 0 | 0.00 |
 | T | 2 | 0 | 5 | 5 | 2.50 |
 
 ## Opponent Splits
 | Opponent | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| J&K Electric | 3 | 2 | 5 | 7 | 2.33 |
+| J&K Electric | 4 | 2 | 6 | 8 | 2.00 |
 | Ultramar | 4 | 0 | 5 | 5 | 1.25 |
 | Colson Overhead Doors | 3 | 2 | 1 | 3 | 1.00 |
 
 ## Team Context Crossovers
 - Team finish: No. 1 at 21-4-3
-- Team scoring rank: 9
+- Team scoring rank: 10
 - Share of team goals: 2.4%
-- Gap to team points leader Issac Bridge: 65 points
+- Gap to team points leader Issac Bridge: 64 points
 
 ### October 2025
 - Maltby Sports went 3-1-0 and scored 29 while allowing 15.
@@ -126,7 +126,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 ### February 2026
 - Maltby Sports went 5-0-1 and scored 38 while allowing 22.
 - Month-end standing snapshot: No. 1 with 42 points.
-- Player logged-sample line that month: 2 GP, 1 G, 4 A, 5 PTS.
+- Player logged-sample line that month: 3 GP, 1 G, 5 A, 6 PTS.
 - Went unbeaten at 5-0-1 with a +16 goal differential.
 - This was a clear improvement from the previous month.
 
@@ -134,7 +134,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | Split | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
 | First half | 5 | 3 | 5 | 8 | 1.60 |
-| Second half | 5 | 1 | 6 | 7 | 1.40 |
+| Second half | 6 | 1 | 7 | 8 | 1.33 |
 
 ## Best And Worst 5-Game Stretches
 - Best 5-game run: 8 points (3-5) from 2025-10-14 to 2025-12-09.
@@ -142,7 +142,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 
 ## Derived Angles
 - Profiles as a playmaker; the assist totals tell more of the story than the goal count.
-- Peak month was February 2026 (5 points), which helps structure the season arc.
+- Peak month was February 2026 (6 points), which helps structure the season arc.
 
 ## Suggested Prompts
 - Write a newspaper-style player profile on Ted Mackinnon and how his season developed month by month.

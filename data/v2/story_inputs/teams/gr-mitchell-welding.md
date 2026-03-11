@@ -155,7 +155,7 @@ Use this as source material for a season recap, playoff preview, or identity pie
 - Series: G.R. Mitchell Welding vs J&K Electric
 - State: Series tied 0-0
 - Known dates: 2026-03-10, 2026-03-22, 2026-03-24
-- Next game: 2026-03-10 8:45 PM vs J&K Electric
+- Next game: 2026-03-22 9:00 PM vs J&K Electric
 
 ## Derived Angles
 - Finished the regular season in a playoff position at No. 3.

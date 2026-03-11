@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-10T19:38:47.750470+00:00",
+  "generated_at": "2026-03-11T00:28:30.052309+00:00",
   "season_id": "2025-2026",
   "timezone": "America/Halifax",
   "rounds": [
@@ -250,35 +250,6 @@
           "completed_games": [],
           "upcoming_games": [
             {
-              "canonical_game_id": "3306125",
-              "source_game_ids": [
-                "3306125"
-              ],
-              "source_game_count": 1,
-              "status": "scheduled",
-              "season_phase": "playoffs",
-              "playoff_round_id": "2026-semifinals",
-              "playoff_series_id": "2026-semifinal-gr-mitchell-vs-jk",
-              "location": "Amherst",
-              "division": null,
-              "start_local": "2026-03-10T20:45:00-03:00",
-              "start_utc": "2026-03-10T23:45:00+00:00",
-              "local_date": "2026-03-10",
-              "local_time": "8:45 PM",
-              "home_team": "J&K Electric",
-              "home_slug": "j-and-k-electric",
-              "away_team": "G.R. Mitchell Welding",
-              "away_slug": "gr-mitchell-welding",
-              "home_score": null,
-              "away_score": null,
-              "result": null,
-              "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306125&u=DSMALL&s=hockey&p=preview",
-              "summary_url": null,
-              "scoring_event_count": 0,
-              "penalty_count": 0,
-              "notable_performers": []
-            },
-            {
               "canonical_game_id": "3306131",
               "source_game_ids": [
                 "3306131"
@@ -338,9 +309,9 @@
             }
           ],
           "next_game": {
-            "canonical_game_id": "3306125",
+            "canonical_game_id": "3306131",
             "source_game_ids": [
-              "3306125"
+              "3306131"
             ],
             "source_game_count": 1,
             "status": "scheduled",
@@ -349,18 +320,18 @@
             "playoff_series_id": "2026-semifinal-gr-mitchell-vs-jk",
             "location": "Amherst",
             "division": null,
-            "start_local": "2026-03-10T20:45:00-03:00",
-            "start_utc": "2026-03-10T23:45:00+00:00",
-            "local_date": "2026-03-10",
-            "local_time": "8:45 PM",
-            "home_team": "J&K Electric",
-            "home_slug": "j-and-k-electric",
-            "away_team": "G.R. Mitchell Welding",
-            "away_slug": "gr-mitchell-welding",
+            "start_local": "2026-03-22T21:00:00-03:00",
+            "start_utc": "2026-03-23T00:00:00+00:00",
+            "local_date": "2026-03-22",
+            "local_time": "9:00 PM",
+            "home_team": "G.R. Mitchell Welding",
+            "home_slug": "gr-mitchell-welding",
+            "away_team": "J&K Electric",
+            "away_slug": "j-and-k-electric",
             "home_score": null,
             "away_score": null,
             "result": null,
-            "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306125&u=DSMALL&s=hockey&p=preview",
+            "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306131&u=DSMALL&s=hockey&p=preview",
             "summary_url": null,
             "scoring_event_count": 0,
             "penalty_count": 0,

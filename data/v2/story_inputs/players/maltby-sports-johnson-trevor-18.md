@@ -18,12 +18,12 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Team scoring rank: 3
 - League scoring rank: 8
 - Points per game: 1.46
-- Logged-sample longest point streak: 14
-- Logged-sample longest goal streak: 5
+- Logged-sample longest point streak: 16
+- Logged-sample longest goal streak: 4
 
 ## Per-Game Log Coverage
-- Logged box-score appearances: 17 of 26 (0.654)
-- Logged goals / assists / points: 16 / 11 / 27
+- Logged box-score appearances: 19 of 26 (0.731)
+- Logged goals / assists / points: 18 / 12 / 30
 - Season goals / assists / points: 21 / 17 / 38
 - Note: the game-by-game sections below use only the logged box-score sample, not the full season totals.
 
@@ -43,7 +43,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | November 2025 | 3 | 1 | 2 | 3 | 0 |
 | December 2025 | 2 | 1 | 4 | 5 | 2 |
 | January 2026 | 5 | 6 | 4 | 10 | 4 |
-| February 2026 | 4 | 7 | 1 | 8 | 2 |
+| February 2026 | 6 | 9 | 2 | 11 | 3 |
 
 ## Month-by-Month Narrative Timeline
 | Month | GP | G | A | PTS | Top Game |
@@ -52,7 +52,7 @@ Use this as source material for a player profile, season recap, or playoff featu
 | November 2025 | 3 | 1 | 2 | 3 | 2025-11-04 vs G.R. Mitchell Welding (1-0-1) |
 | December 2025 | 2 | 1 | 4 | 5 | 2025-12-23 vs Colson Overhead Doors (1-2-3) |
 | January 2026 | 5 | 6 | 4 | 10 | 2026-01-06 vs Colson Overhead Doors (2-1-3) |
-| February 2026 | 4 | 7 | 1 | 8 | 2026-02-01 vs J&K Electric (3-0-3) |
+| February 2026 | 6 | 9 | 2 | 11 | 2026-02-01 vs J&K Electric (3-0-3) |
 
 ## Best Games
 | Date | Opponent | Result | Score | G | A | PTS |
@@ -68,20 +68,20 @@ Use this as source material for a player profile, season recap, or playoff featu
 | --- | --- | --- | --- | --- | --- |
 | 2026-02-24 | J&K Electric | T | 1 | 0 | 1 |
 | 2026-02-22 | Colson Overhead Doors | W | 2 | 1 | 3 |
+| 2026-02-17 | J&K Electric | W | 0 | 1 | 1 |
+| 2026-02-10 | Ultramar | W | 2 | 0 | 2 |
 | 2026-02-03 | Colson Overhead Doors | W | 1 | 0 | 1 |
-| 2026-02-01 | J&K Electric | W | 3 | 0 | 3 |
-| 2026-01-25 | G.R. Mitchell Welding | L | 2 | 0 | 2 |
 
 ## Versus Playoff Teams
-- GP: 12
-- G: 10
-- A: 5
-- PTS: 15
+- GP: 14
+- G: 12
+- A: 6
+- PTS: 18
 
 ## Results Splits
 | Result | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| W | 12 | 11 | 10 | 21 | 1.75 |
+| W | 14 | 13 | 11 | 24 | 1.71 |
 | L | 2 | 2 | 0 | 2 | 1.00 |
 | T | 3 | 3 | 1 | 4 | 1.33 |
 
@@ -89,9 +89,9 @@ Use this as source material for a player profile, season recap, or playoff featu
 | Opponent | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
 | Colson Overhead Doors | 5 | 6 | 6 | 12 | 2.40 |
+| J&K Electric | 6 | 4 | 3 | 7 | 1.17 |
 | G.R. Mitchell Welding | 4 | 6 | 0 | 6 | 1.50 |
-| J&K Electric | 5 | 4 | 2 | 6 | 1.20 |
-| Ultramar | 3 | 0 | 3 | 3 | 1.00 |
+| Ultramar | 4 | 2 | 3 | 5 | 1.25 |
 
 ## Team Context Crossovers
 - Team finish: No. 1 at 21-4-3
@@ -128,15 +128,15 @@ Use this as source material for a player profile, season recap, or playoff featu
 ### February 2026
 - Maltby Sports went 5-0-1 and scored 38 while allowing 22.
 - Month-end standing snapshot: No. 1 with 42 points.
-- Player logged-sample line that month: 4 GP, 7 G, 1 A, 8 PTS.
+- Player logged-sample line that month: 6 GP, 9 G, 2 A, 11 PTS.
 - Went unbeaten at 5-0-1 with a +16 goal differential.
 - This was a clear improvement from the previous month.
 
 ## First Half Vs Second Half
 | Split | GP | G | A | PTS | P/GP |
 | --- | --- | --- | --- | --- | --- |
-| First half | 8 | 3 | 6 | 9 | 1.12 |
-| Second half | 9 | 13 | 5 | 18 | 2.00 |
+| First half | 9 | 3 | 8 | 11 | 1.22 |
+| Second half | 10 | 15 | 4 | 19 | 1.90 |
 
 ## Best And Worst 5-Game Stretches
 - Best 5-game run: 12 points (5-7) from 2025-12-09 to 2026-01-13.
@@ -147,9 +147,9 @@ Use this as source material for a player profile, season recap, or playoff featu
 - Was available for almost the full season, which supports an ironman or lineup fixture angle.
 - Finished inside the league top 10 in points at No. 8.
 - Has a balanced scoring line rather than an extreme scorer/playmaker split.
-- Logged 8 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.
+- Logged 9 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.
 - Recorded 1 hat trick, which is a ready-made local-paper hook.
-- Peak month was January 2026 (10 points), which helps structure the season arc.
+- Peak month was February 2026 (11 points), which helps structure the season arc.
 - Production rose late in the season, which supports a late-heater or playoff-form angle.
 
 ## Suggested Prompts

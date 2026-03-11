@@ -2,7 +2,7 @@
   "entity_type": "team",
   "entity_id": "ultramar",
   "title": "Ultramar season story pack",
-  "generated_at": "2026-03-10T20:36:07.675017+00:00",
+  "generated_at": "2026-03-11T00:28:39.122735+00:00",
   "verified_facts": {
     "standing": {
       "rank": 4,
@@ -341,27 +341,6 @@
           "recent_games": 0
         },
         {
-          "player_id": "ultramar-bonnell-andy-5",
-          "name": "Bonnell, Andy",
-          "number": "5",
-          "positions": [
-            "F"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 11,
-          "goals": 3,
-          "assists": 10,
-          "points": 13,
-          "penalty_minutes": 6,
-          "points_per_game": 1.18,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
           "player_id": "ultramar-gallant-brett-3",
           "name": "Gallant, Brett",
           "number": "3",
@@ -372,16 +351,58 @@
           "team_id": "TYLERARSENEAU-2",
           "team_name": "Ultramar",
           "team_slug": "ultramar",
-          "games_played": 12,
+          "games_played": 13,
           "goals": 6,
-          "assists": 6,
-          "points": 12,
+          "assists": 7,
+          "points": 13,
+          "penalty_minutes": 12,
+          "points_per_game": 1.0,
+          "team_games_played": 21,
+          "games_missed": null,
+          "recent_points": 1,
+          "recent_games": 1
+        },
+        {
+          "player_id": "ultramar-bonnell-andy-5",
+          "name": "Bonnell, Andy",
+          "number": "5",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-2",
+          "team_name": "Ultramar",
+          "team_slug": "ultramar",
+          "games_played": 13,
+          "goals": 3,
+          "assists": 10,
+          "points": 13,
           "penalty_minutes": 12,
           "points_per_game": 1.0,
           "team_games_played": 21,
           "games_missed": null,
           "recent_points": 0,
-          "recent_games": 0
+          "recent_games": 2
+        },
+        {
+          "player_id": "ultramar-malcolm-robert-10",
+          "name": "Malcolm, Robert",
+          "number": "10",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-2",
+          "team_name": "Ultramar",
+          "team_slug": "ultramar",
+          "games_played": 10,
+          "goals": 2,
+          "assists": 8,
+          "points": 10,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 21,
+          "games_missed": null,
+          "recent_points": 1,
+          "recent_games": 1
         },
         {
           "player_id": "ultramar-burke-tim-22",
@@ -394,37 +415,16 @@
           "team_id": "TYLERARSENEAU-2",
           "team_name": "Ultramar",
           "team_slug": "ultramar",
-          "games_played": 8,
+          "games_played": 9,
           "goals": 5,
           "assists": 5,
           "points": 10,
-          "penalty_minutes": 6,
-          "points_per_game": 1.25,
+          "penalty_minutes": 9,
+          "points_per_game": 1.11,
           "team_games_played": 21,
           "games_missed": null,
           "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-malcolm-robert-10",
-          "name": "Malcolm, Robert",
-          "number": "10",
-          "positions": [
-            "F"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 9,
-          "goals": 1,
-          "assists": 8,
-          "points": 9,
-          "penalty_minutes": 0,
-          "points_per_game": 1.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
+          "recent_games": 1
         },
         {
           "player_id": "ultramar-burke-brody-14",
@@ -459,37 +459,16 @@
           "team_id": "TYLERARSENEAU-2",
           "team_name": "Ultramar",
           "team_slug": "ultramar",
-          "games_played": 7,
-          "goals": 1,
+          "games_played": 8,
+          "goals": 2,
           "assists": 6,
-          "points": 7,
+          "points": 8,
           "penalty_minutes": 6,
           "points_per_game": 1.0,
           "team_games_played": 21,
           "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-bridge-issac-98",
-          "name": "Bridge, Issac",
-          "number": "98",
-          "positions": [
-            "C"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 1,
-          "assists": 3,
-          "points": 4,
-          "penalty_minutes": 0,
-          "points_per_game": 4.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
+          "recent_points": 1,
+          "recent_games": 1
         },
         {
           "player_id": "ultramar-bennett-mark-68",
@@ -513,27 +492,6 @@
           "recent_games": 0
         },
         {
-          "player_id": "ultramar-johnson-trevor-18",
-          "name": "Johnson, Trevor",
-          "number": "18",
-          "positions": [
-            "D"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 2,
-          "assists": 0,
-          "points": 2,
-          "penalty_minutes": 3,
-          "points_per_game": 2.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
           "player_id": "ultramar-thomas-remi-1",
           "name": "Thomas, Remi",
           "number": "1",
@@ -549,113 +507,6 @@
           "points": 1,
           "penalty_minutes": 0,
           "points_per_game": 1.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-mccrossin-thomas-19",
-          "name": "Mccrossin, Thomas",
-          "number": "19",
-          "positions": [
-            "F"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 1,
-          "assists": 0,
-          "points": 1,
-          "penalty_minutes": 0,
-          "points_per_game": 1.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-crocker-luke-6",
-          "name": "Crocker, Luke",
-          "number": "6",
-          "positions": [
-            "D"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "points_per_game": 1.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-mccarthy-ian-9",
-          "name": "McCarthy, Ian",
-          "number": "9",
-          "positions": [
-            "F"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "points_per_game": 1.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-arbing-ryan-91",
-          "name": "Arbing, Ryan",
-          "number": "91",
-          "positions": [
-            "D",
-            "F"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "points_per_game": 1.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-small-danny-biggie-16",
-          "name": "Small, Danny \"Biggie\"",
-          "number": "16",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "penalty_minutes": 3,
-          "points_per_game": 0.0,
           "team_games_played": 21,
           "games_missed": null,
           "recent_points": 0,
@@ -779,16 +630,16 @@
           "team_id": "TYLERARSENEAU-2",
           "team_name": "Ultramar",
           "team_slug": "ultramar",
-          "games_played": 12,
+          "games_played": 13,
           "goals": 6,
-          "assists": 6,
-          "points": 12,
+          "assists": 7,
+          "points": 13,
           "penalty_minutes": 12,
           "points_per_game": 1.0,
           "team_games_played": 21,
           "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
+          "recent_points": 1,
+          "recent_games": 1
         },
         {
           "player_id": "ultramar-burke-tim-22",
@@ -801,16 +652,16 @@
           "team_id": "TYLERARSENEAU-2",
           "team_name": "Ultramar",
           "team_slug": "ultramar",
-          "games_played": 8,
+          "games_played": 9,
           "goals": 5,
           "assists": 5,
           "points": 10,
-          "penalty_minutes": 6,
-          "points_per_game": 1.25,
+          "penalty_minutes": 9,
+          "points_per_game": 1.11,
           "team_games_played": 21,
           "games_missed": null,
           "recent_points": 0,
-          "recent_games": 0
+          "recent_games": 1
         },
         {
           "player_id": "ultramar-bonnell-andy-5",
@@ -822,16 +673,37 @@
           "team_id": "TYLERARSENEAU-2",
           "team_name": "Ultramar",
           "team_slug": "ultramar",
-          "games_played": 11,
+          "games_played": 13,
           "goals": 3,
           "assists": 10,
           "points": 13,
-          "penalty_minutes": 6,
-          "points_per_game": 1.18,
+          "penalty_minutes": 12,
+          "points_per_game": 1.0,
           "team_games_played": 21,
           "games_missed": null,
           "recent_points": 0,
-          "recent_games": 0
+          "recent_games": 2
+        },
+        {
+          "player_id": "ultramar-malcolm-robert-10",
+          "name": "Malcolm, Robert",
+          "number": "10",
+          "positions": [
+            "F"
+          ],
+          "team_id": "TYLERARSENEAU-2",
+          "team_name": "Ultramar",
+          "team_slug": "ultramar",
+          "games_played": 10,
+          "goals": 2,
+          "assists": 8,
+          "points": 10,
+          "penalty_minutes": 0,
+          "points_per_game": 1.0,
+          "team_games_played": 21,
+          "games_missed": null,
+          "recent_points": 1,
+          "recent_games": 1
         },
         {
           "player_id": "ultramar-burke-brody-14",
@@ -856,25 +728,26 @@
           "recent_games": 0
         },
         {
-          "player_id": "ultramar-johnson-trevor-18",
-          "name": "Johnson, Trevor",
-          "number": "18",
+          "player_id": "ultramar-dywer-chris-2",
+          "name": "Dywer, Chris",
+          "number": "2",
           "positions": [
+            "F",
             "D"
           ],
           "team_id": "TYLERARSENEAU-2",
           "team_name": "Ultramar",
           "team_slug": "ultramar",
-          "games_played": 1,
+          "games_played": 8,
           "goals": 2,
-          "assists": 0,
-          "points": 2,
-          "penalty_minutes": 3,
-          "points_per_game": 2.0,
+          "assists": 6,
+          "points": 8,
+          "penalty_minutes": 6,
+          "points_per_game": 1.0,
           "team_games_played": 21,
           "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
+          "recent_points": 1,
+          "recent_games": 1
         },
         {
           "player_id": "ultramar-jobes-bill-8",
@@ -898,139 +771,11 @@
           "recent_games": 0
         },
         {
-          "player_id": "ultramar-malcolm-robert-10",
-          "name": "Malcolm, Robert",
-          "number": "10",
-          "positions": [
-            "F"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 9,
-          "goals": 1,
-          "assists": 8,
-          "points": 9,
-          "penalty_minutes": 0,
-          "points_per_game": 1.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-mccrossin-thomas-19",
-          "name": "Mccrossin, Thomas",
-          "number": "19",
-          "positions": [
-            "F"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 1,
-          "assists": 0,
-          "points": 1,
-          "penalty_minutes": 0,
-          "points_per_game": 1.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-dywer-chris-2",
-          "name": "Dywer, Chris",
-          "number": "2",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 7,
-          "goals": 1,
-          "assists": 6,
-          "points": 7,
-          "penalty_minutes": 6,
-          "points_per_game": 1.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-bridge-issac-98",
-          "name": "Bridge, Issac",
-          "number": "98",
-          "positions": [
-            "C"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 1,
-          "assists": 3,
-          "points": 4,
-          "penalty_minutes": 0,
-          "points_per_game": 4.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
           "player_id": "ultramar-thomas-remi-1",
           "name": "Thomas, Remi",
           "number": "1",
           "positions": [
             "G"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "points_per_game": 1.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-small-danny-biggie-16",
-          "name": "Small, Danny \"Biggie\"",
-          "number": "16",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "penalty_minutes": 3,
-          "points_per_game": 0.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-crocker-luke-6",
-          "name": "Crocker, Luke",
-          "number": "6",
-          "positions": [
-            "D"
           ],
           "team_id": "TYLERARSENEAU-2",
           "team_name": "Ultramar",
@@ -1062,49 +807,6 @@
           "points": 3,
           "penalty_minutes": 9,
           "points_per_game": 0.6,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-mccarthy-ian-9",
-          "name": "McCarthy, Ian",
-          "number": "9",
-          "positions": [
-            "F"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "points_per_game": 1.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-arbing-ryan-91",
-          "name": "Arbing, Ryan",
-          "number": "91",
-          "positions": [
-            "D",
-            "F"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "points_per_game": 1.0,
           "team_games_played": 21,
           "games_missed": null,
           "recent_points": 0,
@@ -1227,16 +929,16 @@
           "team_id": "TYLERARSENEAU-2",
           "team_name": "Ultramar",
           "team_slug": "ultramar",
-          "games_played": 11,
+          "games_played": 13,
           "goals": 3,
           "assists": 10,
           "points": 13,
-          "penalty_minutes": 6,
-          "points_per_game": 1.18,
+          "penalty_minutes": 12,
+          "points_per_game": 1.0,
           "team_games_played": 21,
           "games_missed": null,
           "recent_points": 0,
-          "recent_games": 0
+          "recent_games": 2
         },
         {
           "player_id": "ultramar-miller-madden-6",
@@ -1269,16 +971,16 @@
           "team_id": "TYLERARSENEAU-2",
           "team_name": "Ultramar",
           "team_slug": "ultramar",
-          "games_played": 9,
-          "goals": 1,
+          "games_played": 10,
+          "goals": 2,
           "assists": 8,
-          "points": 9,
+          "points": 10,
           "penalty_minutes": 0,
           "points_per_game": 1.0,
           "team_games_played": 21,
           "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
+          "recent_points": 1,
+          "recent_games": 1
         },
         {
           "player_id": "ultramar-burke-brody-14",
@@ -1303,28 +1005,6 @@
           "recent_games": 0
         },
         {
-          "player_id": "ultramar-dywer-chris-2",
-          "name": "Dywer, Chris",
-          "number": "2",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 7,
-          "goals": 1,
-          "assists": 6,
-          "points": 7,
-          "penalty_minutes": 6,
-          "points_per_game": 1.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
           "player_id": "ultramar-gallant-brett-3",
           "name": "Gallant, Brett",
           "number": "3",
@@ -1335,16 +1015,38 @@
           "team_id": "TYLERARSENEAU-2",
           "team_name": "Ultramar",
           "team_slug": "ultramar",
-          "games_played": 12,
+          "games_played": 13,
           "goals": 6,
-          "assists": 6,
-          "points": 12,
+          "assists": 7,
+          "points": 13,
           "penalty_minutes": 12,
           "points_per_game": 1.0,
           "team_games_played": 21,
           "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
+          "recent_points": 1,
+          "recent_games": 1
+        },
+        {
+          "player_id": "ultramar-dywer-chris-2",
+          "name": "Dywer, Chris",
+          "number": "2",
+          "positions": [
+            "F",
+            "D"
+          ],
+          "team_id": "TYLERARSENEAU-2",
+          "team_name": "Ultramar",
+          "team_slug": "ultramar",
+          "games_played": 8,
+          "goals": 2,
+          "assists": 6,
+          "points": 8,
+          "penalty_minutes": 6,
+          "points_per_game": 1.0,
+          "team_games_played": 21,
+          "games_missed": null,
+          "recent_points": 1,
+          "recent_games": 1
         },
         {
           "player_id": "ultramar-burke-tim-22",
@@ -1357,16 +1059,16 @@
           "team_id": "TYLERARSENEAU-2",
           "team_name": "Ultramar",
           "team_slug": "ultramar",
-          "games_played": 8,
+          "games_played": 9,
           "goals": 5,
           "assists": 5,
           "points": 10,
-          "penalty_minutes": 6,
-          "points_per_game": 1.25,
+          "penalty_minutes": 9,
+          "points_per_game": 1.11,
           "team_games_played": 21,
           "games_missed": null,
           "recent_points": 0,
-          "recent_games": 0
+          "recent_games": 1
         },
         {
           "player_id": "ultramar-bennett-mark-68",
@@ -1390,27 +1092,6 @@
           "recent_games": 0
         },
         {
-          "player_id": "ultramar-bridge-issac-98",
-          "name": "Bridge, Issac",
-          "number": "98",
-          "positions": [
-            "C"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 1,
-          "assists": 3,
-          "points": 4,
-          "penalty_minutes": 0,
-          "points_per_game": 4.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
           "player_id": "ultramar-thomas-remi-1",
           "name": "Thomas, Remi",
           "number": "1",
@@ -1423,134 +1104,6 @@
           "games_played": 1,
           "goals": 0,
           "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "points_per_game": 1.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-crocker-luke-6",
-          "name": "Crocker, Luke",
-          "number": "6",
-          "positions": [
-            "D"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "points_per_game": 1.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-mccarthy-ian-9",
-          "name": "McCarthy, Ian",
-          "number": "9",
-          "positions": [
-            "F"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "points_per_game": 1.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-arbing-ryan-91",
-          "name": "Arbing, Ryan",
-          "number": "91",
-          "positions": [
-            "D",
-            "F"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "penalty_minutes": 0,
-          "points_per_game": 1.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-small-danny-biggie-16",
-          "name": "Small, Danny \"Biggie\"",
-          "number": "16",
-          "positions": [
-            "F",
-            "D"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "penalty_minutes": 3,
-          "points_per_game": 0.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-johnson-trevor-18",
-          "name": "Johnson, Trevor",
-          "number": "18",
-          "positions": [
-            "D"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 2,
-          "assists": 0,
-          "points": 2,
-          "penalty_minutes": 3,
-          "points_per_game": 2.0,
-          "team_games_played": 21,
-          "games_missed": null,
-          "recent_points": 0,
-          "recent_games": 0
-        },
-        {
-          "player_id": "ultramar-mccrossin-thomas-19",
-          "name": "Mccrossin, Thomas",
-          "number": "19",
-          "positions": [
-            "F"
-          ],
-          "team_id": "TYLERARSENEAU-2",
-          "team_name": "Ultramar",
-          "team_slug": "ultramar",
-          "games_played": 1,
-          "goals": 1,
-          "assists": 0,
           "points": 1,
           "penalty_minutes": 0,
           "points_per_game": 1.0,

@@ -2,7 +2,7 @@
   "entity_type": "player",
   "entity_id": "maltby-sports-bridge-issac-98",
   "title": "Issac Bridge season story pack",
-  "generated_at": "2026-03-10T20:36:07.750377+00:00",
+  "generated_at": "2026-03-11T00:28:39.171327+00:00",
   "verified_facts": {
     "player": {
       "player_id": "maltby-sports-bridge-issac-98",
@@ -26,12 +26,12 @@
       "recent_games": 0
     },
     "season_profile": {
-      "gp": 17,
-      "goals": 34,
-      "assists": 19,
-      "points": 53,
+      "gp": 19,
+      "goals": 38,
+      "assists": 23,
+      "points": 61,
       "penalty_minutes": 6,
-      "points_per_game": "3.12"
+      "points_per_game": "3.21"
     },
     "month_end_checkpoints": [
       {
@@ -119,12 +119,12 @@
       {
         "month": "2026-02",
         "month_label": "February 2026",
-        "gp": 3,
-        "goals": 3,
-        "assists": 6,
-        "points": 9,
+        "gp": 5,
+        "goals": 7,
+        "assists": 10,
+        "points": 17,
         "pim": 0,
-        "multi_point_games": 2
+        "multi_point_games": 4
       }
     ],
     "monthly_timeline": [
@@ -175,12 +175,12 @@
       {
         "month": "2026-02",
         "month_label": "February 2026",
-        "gp": 3,
-        "goals": 3,
-        "assists": 6,
-        "points": 9,
+        "gp": 5,
+        "goals": 7,
+        "assists": 10,
+        "points": 17,
         "penalty_minutes": 0,
-        "points_per_game": "3.00",
+        "points_per_game": "3.40",
         "top_game": "2026-02-24 vs J&K Electric (1-5-6)"
       }
     ],
@@ -237,20 +237,20 @@
       }
     ],
     "vs_playoff_teams": {
-      "gp": 13,
-      "goals": 23,
-      "assists": 19,
-      "points": 42
+      "gp": 15,
+      "goals": 27,
+      "assists": 23,
+      "points": 50
     },
     "result_splits": [
       {
         "result": "W",
-        "gp": 12,
-        "goals": 26,
-        "assists": 11,
-        "points": 37,
+        "gp": 14,
+        "goals": 30,
+        "assists": 15,
+        "points": 45,
         "penalty_minutes": 3,
-        "points_per_game": "3.08"
+        "points_per_game": "3.21"
       },
       {
         "result": "L",
@@ -275,12 +275,22 @@
       {
         "opponent_slug": "ultramar",
         "opponent_name": "Ultramar",
-        "gp": 4,
-        "goals": 13,
-        "assists": 5,
-        "points": 18,
+        "gp": 5,
+        "goals": 14,
+        "assists": 8,
+        "points": 22,
         "penalty_minutes": 3,
-        "points_per_game": "4.50"
+        "points_per_game": "4.40"
+      },
+      {
+        "opponent_slug": "j-and-k-electric",
+        "opponent_name": "J&K Electric",
+        "gp": 5,
+        "goals": 7,
+        "assists": 8,
+        "points": 15,
+        "penalty_minutes": 0,
+        "points_per_game": "3.00"
       },
       {
         "opponent_slug": "gr-mitchell-welding",
@@ -298,16 +308,6 @@
         "gp": 4,
         "goals": 11,
         "assists": 0,
-        "points": 11,
-        "penalty_minutes": 0,
-        "points_per_game": "2.75"
-      },
-      {
-        "opponent_slug": "j-and-k-electric",
-        "opponent_name": "J&K Electric",
-        "gp": 4,
-        "goals": 4,
-        "assists": 7,
         "points": 11,
         "penalty_minutes": 0,
         "points_per_game": "2.75"
@@ -339,41 +339,41 @@
     },
     "half_splits": {
       "first_half": {
-        "gp": 8,
-        "goals": 16,
+        "gp": 9,
+        "goals": 20,
         "assists": 10,
-        "points": 26,
+        "points": 30,
         "penalty_minutes": 3,
-        "points_per_game": "3.25"
+        "points_per_game": "3.33"
       },
       "second_half": {
-        "gp": 9,
+        "gp": 10,
         "goals": 18,
-        "assists": 9,
-        "points": 27,
+        "assists": 13,
+        "points": 31,
         "penalty_minutes": 3,
-        "points_per_game": "3.00"
+        "points_per_game": "3.10"
       }
     },
     "streaks": {
-      "longest_point_streak": 17,
+      "longest_point_streak": 19,
       "longest_goal_streak": 10,
-      "multi_point_games": 12,
-      "hat_tricks": 6
+      "multi_point_games": 14,
+      "hat_tricks": 7
     },
     "box_score_log_coverage": {
-      "logged_gp": 17,
+      "logged_gp": 19,
       "season_gp": 26,
-      "game_coverage_pct": "0.654",
-      "logged_goals": 34,
+      "game_coverage_pct": "0.731",
+      "logged_goals": 38,
       "season_goals": 49,
-      "goal_coverage_pct": "0.694",
-      "logged_assists": 19,
+      "goal_coverage_pct": "0.776",
+      "logged_assists": 23,
       "season_assists": 31,
-      "assist_coverage_pct": "0.613",
-      "logged_points": 53,
+      "assist_coverage_pct": "0.742",
+      "logged_points": 61,
       "season_points": 80,
-      "point_coverage_pct": "0.662",
+      "point_coverage_pct": "0.762",
       "is_complete": false
     },
     "team_role_profile": {
@@ -434,7 +434,7 @@
         "notes": [
           "Maltby Sports went 5-0-1 and scored 38 while allowing 22.",
           "Month-end standing snapshot: No. 1 with 42 points.",
-          "Player logged-sample line that month: 3 GP, 3 G, 6 A, 9 PTS.",
+          "Player logged-sample line that month: 5 GP, 7 G, 10 A, 17 PTS.",
           "Went unbeaten at 5-0-1 with a +16 goal differential.",
           "This was a clear improvement from the previous month."
         ]
@@ -446,9 +446,9 @@
     "Finished as his team\u2019s points leader, which makes him a natural centerpiece for any team-season story.",
     "Finished inside the league top 10 in points at No. 1.",
     "Profiles more like a finisher than a pure setup player; the goal totals drive the story.",
-    "Logged 12 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.",
-    "Recorded 6 hat tricks, which is a ready-made local-paper hook.",
-    "Peak month was October 2025 (16 points), which helps structure the season arc."
+    "Logged 14 multi-point games, which gives the season a repeat-impact frame rather than a few isolated spikes.",
+    "Recorded 7 hat tricks, which is a ready-made local-paper hook.",
+    "Peak month was February 2026 (17 points), which helps structure the season arc."
   ],
   "suggested_prompts": [
     "Write a newspaper-style player profile on Issac Bridge and how his season developed month by month.",

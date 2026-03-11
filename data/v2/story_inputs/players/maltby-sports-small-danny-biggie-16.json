@@ -2,7 +2,7 @@
   "entity_type": "player",
   "entity_id": "maltby-sports-small-danny-biggie-16",
   "title": "Danny \"Biggie\" Small season story pack",
-  "generated_at": "2026-03-10T20:36:07.732965+00:00",
+  "generated_at": "2026-03-11T00:28:39.160147+00:00",
   "verified_facts": {
     "player": {
       "player_id": "maltby-sports-small-danny-biggie-16",
@@ -27,12 +27,12 @@
       "recent_games": 0
     },
     "season_profile": {
-      "gp": 13,
+      "gp": 15,
       "goals": 16,
-      "assists": 13,
-      "points": 29,
-      "penalty_minutes": 0,
-      "points_per_game": "2.23"
+      "assists": 14,
+      "points": 30,
+      "penalty_minutes": 3,
+      "points_per_game": "2.00"
     },
     "month_end_checkpoints": [
       {
@@ -120,11 +120,11 @@
       {
         "month": "2026-02",
         "month_label": "February 2026",
-        "gp": 2,
+        "gp": 4,
         "goals": 4,
-        "assists": 1,
-        "points": 5,
-        "pim": 0,
+        "assists": 2,
+        "points": 6,
+        "pim": 3,
         "multi_point_games": 2
       }
     ],
@@ -176,12 +176,12 @@
       {
         "month": "2026-02",
         "month_label": "February 2026",
-        "gp": 2,
+        "gp": 4,
         "goals": 4,
-        "assists": 1,
-        "points": 5,
-        "penalty_minutes": 0,
-        "points_per_game": "2.50",
+        "assists": 2,
+        "points": 6,
+        "penalty_minutes": 3,
+        "points_per_game": "1.50",
         "top_game": "2026-02-01 vs J&K Electric (3-0-3)"
       }
     ],
@@ -238,20 +238,20 @@
       }
     ],
     "vs_playoff_teams": {
-      "gp": 11,
+      "gp": 13,
       "goals": 15,
-      "assists": 10,
-      "points": 25
+      "assists": 11,
+      "points": 26
     },
     "result_splits": [
       {
         "result": "W",
-        "gp": 9,
+        "gp": 11,
         "goals": 14,
-        "assists": 8,
-        "points": 22,
-        "penalty_minutes": 0,
-        "points_per_game": "2.44"
+        "assists": 9,
+        "points": 23,
+        "penalty_minutes": 3,
+        "points_per_game": "2.09"
       },
       {
         "result": "L",
@@ -286,22 +286,22 @@
       {
         "opponent_slug": "ultramar",
         "opponent_name": "Ultramar",
-        "gp": 4,
+        "gp": 5,
         "goals": 7,
         "assists": 1,
         "points": 8,
-        "penalty_minutes": 0,
-        "points_per_game": "2.00"
+        "penalty_minutes": 3,
+        "points_per_game": "1.60"
       },
       {
         "opponent_slug": "j-and-k-electric",
         "opponent_name": "J&K Electric",
-        "gp": 3,
+        "gp": 4,
         "goals": 4,
-        "assists": 3,
-        "points": 7,
+        "assists": 4,
+        "points": 8,
         "penalty_minutes": 0,
-        "points_per_game": "2.33"
+        "points_per_game": "2.00"
       },
       {
         "opponent_slug": "colson-overhead-doors",
@@ -327,33 +327,33 @@
         "points_per_game": "2.60"
       },
       "worst": {
-        "start_date": "2025-10-21",
-        "end_date": "2025-12-09",
+        "start_date": "2026-01-25",
+        "end_date": "2026-02-17",
         "window": 5,
         "gp": 5,
-        "goals": 3,
-        "assists": 7,
-        "points": 10,
-        "penalty_minutes": 0,
-        "points_per_game": "2.00"
+        "goals": 4,
+        "assists": 3,
+        "points": 7,
+        "penalty_minutes": 3,
+        "points_per_game": "1.40"
       }
     },
     "half_splits": {
       "first_half": {
-        "gp": 6,
+        "gp": 7,
         "goals": 6,
-        "assists": 8,
-        "points": 14,
+        "assists": 10,
+        "points": 16,
         "penalty_minutes": 0,
-        "points_per_game": "2.33"
+        "points_per_game": "2.29"
       },
       "second_half": {
-        "gp": 7,
+        "gp": 8,
         "goals": 10,
-        "assists": 5,
-        "points": 15,
-        "penalty_minutes": 0,
-        "points_per_game": "2.14"
+        "assists": 4,
+        "points": 14,
+        "penalty_minutes": 3,
+        "points_per_game": "1.75"
       }
     },
     "streaks": {
@@ -363,18 +363,18 @@
       "hat_tricks": 2
     },
     "box_score_log_coverage": {
-      "logged_gp": 13,
+      "logged_gp": 15,
       "season_gp": 19,
-      "game_coverage_pct": "0.684",
+      "game_coverage_pct": "0.789",
       "logged_goals": 16,
       "season_goals": 18,
       "goal_coverage_pct": "0.889",
-      "logged_assists": 13,
+      "logged_assists": 14,
       "season_assists": 15,
-      "assist_coverage_pct": "0.867",
-      "logged_points": 29,
+      "assist_coverage_pct": "0.933",
+      "logged_points": 30,
       "season_points": 33,
-      "point_coverage_pct": "0.879",
+      "point_coverage_pct": "0.909",
       "is_complete": false
     },
     "team_role_profile": {
@@ -435,7 +435,7 @@
         "notes": [
           "Maltby Sports went 5-0-1 and scored 38 while allowing 22.",
           "Month-end standing snapshot: No. 1 with 42 points.",
-          "Player logged-sample line that month: 2 GP, 4 G, 1 A, 5 PTS.",
+          "Player logged-sample line that month: 4 GP, 4 G, 2 A, 6 PTS.",
           "Went unbeaten at 5-0-1 with a +16 goal differential.",
           "This was a clear improvement from the previous month."
         ]

@@ -2,7 +2,7 @@
   "entity_type": "player",
   "entity_id": "ultramar-allen-tyler-tuffy-11",
   "title": "Tyler \"Tuffy\" Allen season story pack",
-  "generated_at": "2026-03-10T20:36:07.752766+00:00",
+  "generated_at": "2026-03-11T00:28:39.173694+00:00",
   "verified_facts": {
     "player": {
       "player_id": "ultramar-allen-tyler-tuffy-11",
@@ -26,12 +26,12 @@
       "recent_games": 0
     },
     "season_profile": {
-      "gp": 11,
+      "gp": 12,
       "goals": 8,
-      "assists": 11,
-      "points": 19,
+      "assists": 12,
+      "points": 20,
       "penalty_minutes": 17,
-      "points_per_game": "1.73"
+      "points_per_game": "1.67"
     },
     "month_end_checkpoints": [
       {
@@ -109,10 +109,10 @@
       {
         "month": "2026-01",
         "month_label": "January 2026",
-        "gp": 1,
+        "gp": 2,
         "goals": 0,
-        "assists": 1,
-        "points": 1,
+        "assists": 2,
+        "points": 2,
         "pim": 0,
         "multi_point_games": 0
       },
@@ -164,10 +164,10 @@
       {
         "month": "2026-01",
         "month_label": "January 2026",
-        "gp": 1,
+        "gp": 2,
         "goals": 0,
-        "assists": 1,
-        "points": 1,
+        "assists": 2,
+        "points": 2,
         "penalty_minutes": 0,
         "points_per_game": "1.00",
         "top_game": "2026-01-04 vs Maltby Sports (0-1-1)"
@@ -245,12 +245,12 @@
     "result_splits": [
       {
         "result": "W",
-        "gp": 2,
+        "gp": 3,
         "goals": 2,
-        "assists": 2,
-        "points": 4,
+        "assists": 3,
+        "points": 5,
         "penalty_minutes": 11,
-        "points_per_game": "2.00"
+        "points_per_game": "1.67"
       },
       {
         "result": "L",
@@ -273,6 +273,16 @@
     ],
     "opponent_splits": [
       {
+        "opponent_slug": "colson-overhead-doors",
+        "opponent_name": "Colson Overhead Doors",
+        "gp": 4,
+        "goals": 3,
+        "assists": 4,
+        "points": 7,
+        "penalty_minutes": 14,
+        "points_per_game": "1.75"
+      },
+      {
         "opponent_slug": "gr-mitchell-welding",
         "opponent_name": "G.R. Mitchell Welding",
         "gp": 4,
@@ -281,16 +291,6 @@
         "points": 7,
         "penalty_minutes": 3,
         "points_per_game": "1.75"
-      },
-      {
-        "opponent_slug": "colson-overhead-doors",
-        "opponent_name": "Colson Overhead Doors",
-        "gp": 3,
-        "goals": 3,
-        "assists": 3,
-        "points": 6,
-        "penalty_minutes": 14,
-        "points_per_game": "2.00"
       },
       {
         "opponent_slug": "maltby-sports",
@@ -326,33 +326,33 @@
         "points_per_game": "2.20"
       },
       "worst": {
-        "start_date": "2025-11-09",
-        "end_date": "2026-01-04",
+        "start_date": "2025-12-09",
+        "end_date": "2026-01-13",
         "window": 5,
         "gp": 5,
-        "goals": 3,
+        "goals": 1,
         "assists": 4,
-        "points": 7,
+        "points": 5,
         "penalty_minutes": 6,
-        "points_per_game": "1.40"
+        "points_per_game": "1.00"
       }
     },
     "half_splits": {
       "first_half": {
-        "gp": 5,
-        "goals": 5,
-        "assists": 4,
-        "points": 9,
-        "penalty_minutes": 3,
-        "points_per_game": "1.80"
+        "gp": 6,
+        "goals": 6,
+        "assists": 5,
+        "points": 11,
+        "penalty_minutes": 6,
+        "points_per_game": "1.83"
       },
       "second_half": {
         "gp": 6,
-        "goals": 3,
+        "goals": 2,
         "assists": 7,
-        "points": 10,
-        "penalty_minutes": 14,
-        "points_per_game": "1.67"
+        "points": 9,
+        "penalty_minutes": 11,
+        "points_per_game": "1.50"
       }
     },
     "streaks": {
@@ -362,18 +362,18 @@
       "hat_tricks": 0
     },
     "box_score_log_coverage": {
-      "logged_gp": 11,
+      "logged_gp": 12,
       "season_gp": 15,
-      "game_coverage_pct": "0.733",
+      "game_coverage_pct": "0.800",
       "logged_goals": 8,
       "season_goals": 13,
       "goal_coverage_pct": "0.615",
-      "logged_assists": 11,
+      "logged_assists": 12,
       "season_assists": 13,
-      "assist_coverage_pct": "0.846",
-      "logged_points": 19,
+      "assist_coverage_pct": "0.923",
+      "logged_points": 20,
       "season_points": 26,
-      "point_coverage_pct": "0.731",
+      "point_coverage_pct": "0.769",
       "is_complete": false
     },
     "team_role_profile": {
@@ -423,7 +423,7 @@
         "notes": [
           "Ultramar went 1-3-0 and scored 10 while allowing 22.",
           "Month-end standing snapshot: No. 4 with 9 points.",
-          "Player logged-sample line that month: 1 GP, 0 G, 1 A, 1 PTS.",
+          "Player logged-sample line that month: 2 GP, 0 G, 2 A, 2 PTS.",
           "Played to a 1-3-0 month and outscored opponents 10-22.",
           "Scored below its usual rate, which helps explain any stall or fade in the standings."
         ]

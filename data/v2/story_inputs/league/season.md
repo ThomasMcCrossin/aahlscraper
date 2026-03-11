@@ -117,7 +117,7 @@ Paste this file into an LLM and ask it to write league-wide season recaps, playo
 
 ## Playoff Frame
 - Maltby Sports vs Ultramar: Series tied 0-0 | next game 2026-03-10 10:00 PM
-- G.R. Mitchell Welding vs J&K Electric: Series tied 0-0 | next game 2026-03-10 8:45 PM
+- G.R. Mitchell Welding vs J&K Electric: Series tied 0-0 | next game 2026-03-22 9:00 PM
 
 ## Derived Angles
 - Maltby Sports separated itself at the top of the table rather than merely surviving a crowded race.

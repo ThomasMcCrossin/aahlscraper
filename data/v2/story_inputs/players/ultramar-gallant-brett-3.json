@@ -2,7 +2,7 @@
   "entity_type": "player",
   "entity_id": "ultramar-gallant-brett-3",
   "title": "Brett Gallant season story pack",
-  "generated_at": "2026-03-10T20:36:07.759236+00:00",
+  "generated_at": "2026-03-11T00:28:39.177990+00:00",
   "verified_facts": {
     "player": {
       "player_id": "ultramar-gallant-brett-3",
@@ -15,22 +15,22 @@
       "team_id": "TYLERARSENEAU-2",
       "team_name": "Ultramar",
       "team_slug": "ultramar",
-      "games_played": 12,
+      "games_played": 13,
       "goals": 6,
-      "assists": 6,
-      "points": 12,
+      "assists": 7,
+      "points": 13,
       "penalty_minutes": 12,
       "points_per_game": 1.0,
       "team_games_played": 21,
       "games_missed": null,
-      "recent_points": 0,
-      "recent_games": 0
+      "recent_points": 1,
+      "recent_games": 1
     },
     "season_profile": {
-      "gp": 12,
+      "gp": 13,
       "goals": 6,
-      "assists": 6,
-      "points": 12,
+      "assists": 7,
+      "points": 13,
       "penalty_minutes": 12,
       "points_per_game": "1.00"
     },
@@ -110,10 +110,10 @@
       {
         "month": "2026-01",
         "month_label": "January 2026",
-        "gp": 1,
+        "gp": 2,
         "goals": 1,
-        "assists": 1,
-        "points": 2,
+        "assists": 2,
+        "points": 3,
         "pim": 0,
         "multi_point_games": 1
       },
@@ -165,12 +165,12 @@
       {
         "month": "2026-01",
         "month_label": "January 2026",
-        "gp": 1,
+        "gp": 2,
         "goals": 1,
-        "assists": 1,
-        "points": 2,
+        "assists": 2,
+        "points": 3,
         "penalty_minutes": 0,
-        "points_per_game": "2.00",
+        "points_per_game": "1.50",
         "top_game": "2026-01-20 vs Maltby Sports (1-1-2)"
       },
       {
@@ -246,12 +246,12 @@
     "result_splits": [
       {
         "result": "W",
-        "gp": 1,
+        "gp": 2,
         "goals": 1,
-        "assists": 1,
-        "points": 2,
+        "assists": 2,
+        "points": 3,
         "penalty_minutes": 0,
-        "points_per_game": "2.00"
+        "points_per_game": "1.50"
       },
       {
         "result": "L",
@@ -284,6 +284,16 @@
         "points_per_game": "0.67"
       },
       {
+        "opponent_slug": "colson-overhead-doors",
+        "opponent_name": "Colson Overhead Doors",
+        "gp": 3,
+        "goals": 2,
+        "assists": 2,
+        "points": 4,
+        "penalty_minutes": 6,
+        "points_per_game": "1.33"
+      },
+      {
         "opponent_slug": "maltby-sports",
         "opponent_name": "Maltby Sports",
         "gp": 3,
@@ -292,16 +302,6 @@
         "points": 4,
         "penalty_minutes": 0,
         "points_per_game": "1.33"
-      },
-      {
-        "opponent_slug": "colson-overhead-doors",
-        "opponent_name": "Colson Overhead Doors",
-        "gp": 2,
-        "goals": 2,
-        "assists": 1,
-        "points": 3,
-        "penalty_minutes": 6,
-        "points_per_game": "1.50"
       },
       {
         "opponent_slug": "j-and-k-electric",
@@ -316,15 +316,15 @@
     ],
     "five_game_windows": {
       "best": {
-        "start_date": "2025-12-09",
-        "end_date": "2026-02-17",
+        "start_date": "2025-12-30",
+        "end_date": "2026-02-24",
         "window": 5,
         "gp": 5,
         "goals": 4,
-        "assists": 2,
-        "points": 6,
-        "penalty_minutes": 3,
-        "points_per_game": "1.20"
+        "assists": 3,
+        "points": 7,
+        "penalty_minutes": 0,
+        "points_per_game": "1.40"
       },
       "worst": {
         "start_date": "2025-11-09",
@@ -348,42 +348,42 @@
         "points_per_game": "0.83"
       },
       "second_half": {
-        "gp": 6,
+        "gp": 7,
         "goals": 5,
-        "assists": 2,
-        "points": 7,
+        "assists": 3,
+        "points": 8,
         "penalty_minutes": 3,
-        "points_per_game": "1.17"
+        "points_per_game": "1.14"
       }
     },
     "streaks": {
       "longest_point_streak": 5,
-      "longest_goal_streak": 4,
+      "longest_goal_streak": 3,
       "multi_point_games": 2,
       "hat_tricks": 0
     },
     "box_score_log_coverage": {
-      "logged_gp": 12,
-      "season_gp": 12,
+      "logged_gp": 13,
+      "season_gp": 13,
       "game_coverage_pct": "1.000",
       "logged_goals": 6,
       "season_goals": 6,
       "goal_coverage_pct": "1.000",
-      "logged_assists": 6,
-      "season_assists": 6,
+      "logged_assists": 7,
+      "season_assists": 7,
       "assist_coverage_pct": "1.000",
-      "logged_points": 12,
-      "season_points": 12,
+      "logged_points": 13,
+      "season_points": 13,
       "point_coverage_pct": "1.000",
       "is_complete": true
     },
     "team_role_profile": {
       "team_rank": 4,
       "team_record": "5-19-4",
-      "team_points_rank": 8,
+      "team_points_rank": 7,
       "team_points_leader": "Brad Linkletter",
-      "gap_to_team_leader": 25,
-      "lead_over_next_teammate": 2,
+      "gap_to_team_leader": 24,
+      "lead_over_next_teammate": 0,
       "goal_share_pct": "5.6%"
     },
     "team_context_crossovers": [
@@ -424,7 +424,7 @@
         "notes": [
           "Ultramar went 1-3-0 and scored 10 while allowing 22.",
           "Month-end standing snapshot: No. 4 with 9 points.",
-          "Player logged-sample line that month: 1 GP, 1 G, 1 A, 2 PTS.",
+          "Player logged-sample line that month: 2 GP, 1 G, 2 A, 3 PTS.",
           "Played to a 1-3-0 month and outscored opponents 10-22.",
           "Scored below its usual rate, which helps explain any stall or fade in the standings."
         ]
