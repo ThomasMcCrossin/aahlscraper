@@ -1,18 +1,24 @@
 {
-  "generated_at": "2026-03-12T19:45:36.737441+00:00",
-  "standings_snapshot": "standings-20260304T014239Z.json",
-  "previous_snapshot": "standings-20260304T000019Z.json",
+  "generated_at": "2026-03-13T11:38:33.998773+00:00",
+  "standings_snapshot": "standings-20260313T113817Z.json",
+  "previous_snapshot": "standings-20260304T014239Z.json",
   "standings_movements": [
     {
-      "team": "J&K Electric",
-      "current_points": 37,
-      "previous_points": 35,
+      "team": "Maltby Sports",
+      "current_points": 47,
+      "previous_points": 45,
       "points_change": 2
     },
     {
-      "team": "Maltby Sports",
-      "current_points": 45,
-      "previous_points": 45,
+      "team": "Ultramar",
+      "current_points": 16,
+      "previous_points": 14,
+      "points_change": 2
+    },
+    {
+      "team": "J&K Electric",
+      "current_points": 37,
+      "previous_points": 37,
       "points_change": 0
     },
     {
@@ -22,20 +28,63 @@
       "points_change": 0
     },
     {
-      "team": "Ultramar",
-      "current_points": 14,
-      "previous_points": 14,
-      "points_change": 0
-    },
-    {
       "team": "Colson Overhead Doors",
       "current_points": 9,
       "previous_points": 9,
       "points_change": 0
     }
   ],
-  "recent_team_form": [],
+  "recent_team_form": [
+    {
+      "team": "Maltby Sports",
+      "played": 2,
+      "wins": 2,
+      "losses": 0,
+      "ties": 0
+    },
+    {
+      "team": "J&K Electric",
+      "played": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    {
+      "team": "G.R. Mitchell Welding",
+      "played": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
+    },
+    {
+      "team": "Ultramar",
+      "played": 2,
+      "wins": 0,
+      "losses": 2,
+      "ties": 0
+    }
+  ],
   "game_headlines": [
+    {
+      "game_id": "3306127",
+      "headline": "Maltby Sports Edges Ultramar 2-1 with Goals from Crocker and Maltby in Tight Clash",
+      "game_datetime": "2026-03-11T01:00:00+00:00"
+    },
+    {
+      "game_id": "3306125",
+      "headline": "J&K Electric Powers Past G.R. Mitchell Welding 4-2, Harrison and Avery Shine with 2 Goals and 2 Assists Each",
+      "game_datetime": "2026-03-10T23:45:00+00:00"
+    },
+    {
+      "game_id": "3276669",
+      "headline": "Ultramar Powers Past Colson Overhead Doors 8-4; Dwyer Nets Two Goals in Dominant Victory",
+      "game_datetime": "2026-03-04T02:00:00+00:00"
+    },
+    {
+      "game_id": "3276564",
+      "headline": "Maltby Sports Powers Past G.R. Mitchell Welding 6-2 with Bridge's 2 Goals and 2 Assists Leading the Charge!",
+      "game_datetime": "2026-03-04T00:45:00+00:00"
+    },
     {
       "game_id": "3276689",
       "headline": "G.R. Mitchell Welding Powers Past Ultramar 5-3 with Strong Efforts from Dobson, Macpherson, and Mattix",

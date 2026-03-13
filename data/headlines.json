@@ -1,6 +1,66 @@
 {
-  "generated_at": "2026-03-12T19:45:36.737441+00:00",
+  "generated_at": "2026-03-13T11:38:33.998773+00:00",
   "headlines": [
+    {
+      "game_id": "3306127",
+      "headline": "Maltby Sports Edges Ultramar 2-1 with Goals from Crocker and Maltby in Tight Clash",
+      "ai_generated": true,
+      "created_at": "2026-03-13T11:38:19.519647+00:00",
+      "updated_at": "2026-03-13T11:38:19.519647+00:00",
+      "narrative": "Maltby Sports secured a narrow victory over Ultramar with a final score of 2-1. Chris Maltby and Luke Crocker each contributed a goal, while Ultramar's lone score came from Brad Linkletter. This matchup was crucial for playoff positioning, with Maltby Sports maintaining their top rank.",
+      "game_datetime": "2026-03-11T01:00:00+00:00",
+      "home_team": "Ultramar",
+      "away_team": "Maltby Sports",
+      "home_score": 1,
+      "away_score": 2,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306127&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306127&u=DSMALL&s=hockey&p=boxscore"
+    },
+    {
+      "game_id": "3306125",
+      "headline": "J&K Electric Powers Past G.R. Mitchell Welding 4-2, Harrison and Avery Shine with 2 Goals and 2 Assists Each",
+      "ai_generated": true,
+      "created_at": "2026-03-13T11:38:19.519647+00:00",
+      "updated_at": "2026-03-13T11:38:19.519647+00:00",
+      "narrative": "In a crucial playoff positioning matchup, J&K Electric defeated G.R. Mitchell Welding 4-2. Avery Harrison led the way with a standout 4-point night, scoring 2 goals and providing 2 assists. Despite the loss, Gordon Mitchell scored for G.R. Mitchell Welding, but it wasn't enough to overcome J&K's strong performance.",
+      "game_datetime": "2026-03-10T23:45:00+00:00",
+      "home_team": "G.R. Mitchell Welding",
+      "away_team": "J&K Electric",
+      "home_score": 2,
+      "away_score": 4,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3306125&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=983723&gameID=3306125&p=boxscore"
+    },
+    {
+      "game_id": "3276669",
+      "headline": "Ultramar Powers Past Colson Overhead Doors 8-4; Dwyer Nets Two Goals in Dominant Victory",
+      "ai_generated": true,
+      "created_at": "2026-03-13T11:38:19.519647+00:00",
+      "updated_at": "2026-03-13T11:38:19.519647+00:00",
+      "narrative": "Ultramar secured a strong 8-4 victory over Colson Overhead Doors, boosting their playoff hopes. Chris Dywer led the way with 2 goals and 1 assist, while Aaron Dobson contributed 1 goal and 2 assists in a solid team effort. Colson, now on a seven-game losing streak, will need to regroup as they remain ranked #5 in the standings.",
+      "game_datetime": "2026-03-04T02:00:00+00:00",
+      "home_team": "Colson Overhead Doors",
+      "away_team": "Ultramar",
+      "home_score": 4,
+      "away_score": 8,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276669&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276669&u=DSMALL&s=hockey&p=boxscore"
+    },
+    {
+      "game_id": "3276564",
+      "headline": "Maltby Sports Powers Past G.R. Mitchell Welding 6-2 with Bridge's 2 Goals and 2 Assists Leading the Charge!",
+      "ai_generated": true,
+      "created_at": "2026-03-13T11:38:19.519647+00:00",
+      "updated_at": "2026-03-13T11:38:19.519647+00:00",
+      "narrative": "Maltby Sports triumphed over G.R. Mitchell Welding with a final score of 6-2. Isaac Bridge led the way with 2 goals and 2 assists, while Thomas McCrossin contributed 1 goal and 2 assists for a strong offensive showing. This victory solidifies Maltby Sports' position at the top of the standings as they continue their playoff push.",
+      "game_datetime": "2026-03-04T00:45:00+00:00",
+      "home_team": "Maltby Sports",
+      "away_team": "G.R. Mitchell Welding",
+      "home_score": 6,
+      "away_score": 2,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276564&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276564&u=DSMALL&s=hockey&p=boxscore"
+    },
     {
       "game_id": "3276689",
       "headline": "G.R. Mitchell Welding Powers Past Ultramar 5-3 with Strong Efforts from Dobson, Macpherson, and Mattix",
@@ -118,8 +178,8 @@
       "away_team": "Maltby Sports",
       "home_score": 1,
       "away_score": 4,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276671&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276671&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276671&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276671&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276665",
@@ -133,8 +193,8 @@
       "away_team": "Colson Overhead Doors",
       "home_score": 7,
       "away_score": 2,
-      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276665&p=summary",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?u=DSMALL&s=hockey&sportsHQ=TYLERARSENEAU-1&gameID=3276665&p=boxscore"
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276665&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276665&u=DSMALL&s=hockey&p=boxscore"
     },
     {
       "game_id": "3276663",
