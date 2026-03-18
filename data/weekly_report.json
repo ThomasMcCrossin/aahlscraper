@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T00:03:24.592391+00:00",
+  "generated_at": "2026-03-18T01:50:18.837562+00:00",
   "standings_snapshot": "standings-20260313T113817Z.json",
   "previous_snapshot": "standings-20260304T014239Z.json",
   "standings_movements": [
@@ -34,22 +34,7 @@
       "points_change": 0
     }
   ],
-  "recent_team_form": [
-    {
-      "team": "Maltby Sports",
-      "played": 2,
-      "wins": 2,
-      "losses": 0,
-      "ties": 0
-    },
-    {
-      "team": "Ultramar",
-      "played": 2,
-      "wins": 0,
-      "losses": 2,
-      "ties": 0
-    }
-  ],
+  "recent_team_form": [],
   "game_headlines": [
     {
       "game_id": "3306127",
