@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-17T19:56:01.911378+00:00",
+  "generated_at": "2026-03-18T00:03:24.592391+00:00",
   "standings_snapshot": "standings-20260313T113817Z.json",
   "previous_snapshot": "standings-20260304T014239Z.json",
   "standings_movements": [
@@ -40,20 +40,6 @@
       "played": 2,
       "wins": 2,
       "losses": 0,
-      "ties": 0
-    },
-    {
-      "team": "J&K Electric",
-      "played": 1,
-      "wins": 1,
-      "losses": 0,
-      "ties": 0
-    },
-    {
-      "team": "G.R. Mitchell Welding",
-      "played": 1,
-      "wins": 0,
-      "losses": 1,
       "ties": 0
     },
     {
