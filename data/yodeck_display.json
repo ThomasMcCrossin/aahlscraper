@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-22T19:33:21.227006",
+  "timestamp": "2026-03-23T01:09:37.768920",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -3560,37 +3560,6 @@
   ],
   "upcoming_games": [
     {
-      "game_id": "3306131",
-      "status": "scheduled",
-      "location": "Amherst",
-      "division": null,
-      "start_utc": "2026-03-23T00:00:00+00:00",
-      "start_local": "2026-03-22T21:00:00-03:00",
-      "home": "G.R. Mitchell Welding",
-      "away": "J&K Electric",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306131&u=DSMALL&s=hockey&p=preview",
-      "summary_url": null,
-      "home_line": {
-        "name": "G.R. Mitchell Welding",
-        "slug": "gr-mitchell-welding",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "away_line": {
-        "name": "J&K Electric",
-        "slug": "j-and-k-electric",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "home_score": "",
-      "away_score": "",
-      "datetime": "2026-03-22T21:00:00-03:00",
-      "date": "03/22/2026",
-      "time": "9:00 PM"
-    },
-    {
       "game_id": "3306123",
       "status": "scheduled",
       "location": "Amherst",
@@ -4495,7 +4464,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2026-03-22T19:33:21.035200+00:00",
+    "generated_at": "2026-03-23T01:09:37.631875+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",
