@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-24T19:55:47.735822",
+  "timestamp": "2026-03-25T00:02:36.050586",
   "standings": [
     {
       "team": "Maltby Sports",
@@ -3558,39 +3558,7 @@
       "narrative": "In a decisive matchup, Ultramar defeated Colson Overhead Doors 9-4, solidifying their playoff position. Brad Linkletter led the charge with a hat trick and an assist, while Miller Madden contributed 2 goals and 3 assists for a 5-point night. The loss keeps Colson Overhead Doors in a tough spot, having now lost their last three games."
     }
   ],
-  "upcoming_games": [
-    {
-      "game_id": "3306123",
-      "status": "scheduled",
-      "location": "Amherst",
-      "division": null,
-      "start_utc": "2026-03-24T22:30:00+00:00",
-      "start_local": "2026-03-24T19:30:00-03:00",
-      "home": "G.R. Mitchell Welding",
-      "away": "J&K Electric",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3306123&u=DSMALL&s=hockey&p=preview",
-      "summary_url": null,
-      "home_line": {
-        "name": "G.R. Mitchell Welding",
-        "slug": "gr-mitchell-welding",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "away_line": {
-        "name": "J&K Electric",
-        "slug": "j-and-k-electric",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "home_score": "",
-      "away_score": "",
-      "datetime": "2026-03-24T19:30:00-03:00",
-      "date": "03/24/2026",
-      "time": "7:30 PM"
-    }
-  ],
+  "upcoming_games": [],
   "headlines": [
     {
       "game_id": "3306127",
@@ -4464,7 +4432,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2026-03-24T19:55:47.568416+00:00",
+    "generated_at": "2026-03-25T00:02:35.916807+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",
