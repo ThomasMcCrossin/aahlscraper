@@ -1,8 +1,39 @@
 {
-  "generated_at": "2026-03-25T19:50:05.758136+00:00",
-  "standings_snapshot": "standings-20260325T195004Z.json",
-  "previous_snapshot": "standings-20260313T113817Z.json",
-  "standings_movements": [],
+  "generated_at": "2026-03-26T11:54:25.186533+00:00",
+  "standings_snapshot": "standings-20260326T115424Z.json",
+  "previous_snapshot": "standings-20260325T195004Z.json",
+  "standings_movements": [
+    {
+      "team": "Maltby Sports",
+      "current_points": 47,
+      "previous_points": 0,
+      "points_change": 47
+    },
+    {
+      "team": "J&K Electric",
+      "current_points": 37,
+      "previous_points": 0,
+      "points_change": 37
+    },
+    {
+      "team": "G.R. Mitchell Welding",
+      "current_points": 37,
+      "previous_points": 0,
+      "points_change": 37
+    },
+    {
+      "team": "Ultramar",
+      "current_points": 16,
+      "previous_points": 0,
+      "points_change": 16
+    },
+    {
+      "team": "Colson Overhead Doors",
+      "current_points": 9,
+      "previous_points": 0,
+      "points_change": 9
+    }
+  ],
   "recent_team_form": [],
   "game_headlines": [
     {
@@ -41,8 +72,8 @@
       "game_datetime": "2026-02-23T01:00:00+00:00"
     },
     {
-      "game_id": "3276681",
-      "headline": "G.R. Mitchell Welding Powers Past Ultramar 7-4 with Hurley's Two Goals and Fullerton's Three-Point Night!",
+      "game_id": "3276682",
+      "headline": "G.R. Mitchell Welding Powers Past Ultramar 7-4 with Linkletter's Two Goals and Strong Team Effort",
       "game_datetime": "2026-02-18T02:00:00+00:00"
     },
     {
@@ -56,8 +87,8 @@
       "game_datetime": "2026-02-16T01:00:00+00:00"
     },
     {
-      "game_id": "3276673",
-      "headline": "Thrilling Stalemate: J&K Electric and G.R. Mitchell Welding Battle to 6-6 Tie, Mackenzie and Fullerton Shine!",
+      "game_id": "3276674",
+      "headline": "Thrilling Standoff: J&K Electric and G.R. Mitchell Welding Battle to 6-6 Draw as Mackenzie, Fullerton Shine",
       "game_datetime": "2026-02-11T02:00:00+00:00"
     },
     {
