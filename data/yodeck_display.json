@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-06-10T21:26:18.999397",
+  "timestamp": "2026-06-11T14:44:04.216006",
   "standings": [],
   "top_scorers": [],
   "recent_results": [],
   "upcoming_games": [],
   "headlines": [],
   "player_registry": {
-    "generated_at": "2026-06-10T21:26:18.868257+00:00",
+    "generated_at": "2026-06-11T14:44:04.112535+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",
@@ -132,8 +132,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -27,
-        "recent_games": -19
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-russel-nick-30",
@@ -279,8 +279,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -35,
-        "recent_games": -20
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "colson-overhead-doors-black-mark-9",
@@ -344,8 +344,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -36,
-        "recent_games": -24
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-hurley-william-15",
@@ -386,8 +386,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -34,
-        "recent_games": -20
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-atkinson-dave-38",
@@ -407,8 +407,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -55,
-        "recent_games": -26
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-ryan-geoff-55",
@@ -493,8 +493,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -28,
-        "recent_games": -20
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-robichaud-corey-88",
@@ -535,8 +535,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -32,
-        "recent_games": -19
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-fullerton-zack-90",
@@ -556,8 +556,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -41,
-        "recent_games": -22
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-dobson-nick-pickle-94",
@@ -577,8 +577,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -28,
-        "recent_games": -18
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "gr-mitchell-welding-macdonald-meathead-97",
@@ -598,8 +598,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -57,
-        "recent_games": -18
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "j-and-k-electric-harrison-avery-00",
@@ -725,8 +725,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -38,
-        "recent_games": -24
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "j-and-k-electric-morris-pat-27",
@@ -768,8 +768,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -49,
-        "recent_games": -22
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "j-and-k-electric-drake-scott-30",
@@ -831,8 +831,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -43,
-        "recent_games": -19
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "j-and-k-electric-davison-bill-74",
@@ -896,8 +896,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -37,
-        "recent_games": -18
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-small-danny-biggie-16",
@@ -918,8 +918,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -35,
-        "recent_games": -20
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-maltby-chris-17",
@@ -940,8 +940,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -28,
-        "recent_games": -21
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-johnson-trevor-18",
@@ -961,8 +961,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -38,
-        "recent_games": -26
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-mccrossin-thomas-19",
@@ -982,8 +982,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -40,
-        "recent_games": -23
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-gallant-matt-2",
@@ -1088,8 +1088,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -30,
-        "recent_games": -20
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-hurley-connor-7",
@@ -1151,8 +1151,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -55,
-        "recent_games": -24
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "maltby-sports-arbing-ryan-91",
@@ -1194,8 +1194,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -84,
-        "recent_games": -27
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "ultramar-thomas-remi-1",
@@ -1257,8 +1257,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -26,
-        "recent_games": -15
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "ultramar-cove-matt-12",
@@ -1387,8 +1387,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -31,
-        "recent_games": -17
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "ultramar-bonnell-andy-5",
@@ -1429,8 +1429,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -28,
-        "recent_games": -17
+        "recent_points": 0,
+        "recent_games": 0
       },
       {
         "player_id": "ultramar-bennett-mark-68",
@@ -1492,8 +1492,8 @@
         "points_per_game": 0.0,
         "team_games_played": 0,
         "games_missed": null,
-        "recent_points": -39,
-        "recent_games": -22
+        "recent_points": 0,
+        "recent_games": 0
       }
     ]
   }
