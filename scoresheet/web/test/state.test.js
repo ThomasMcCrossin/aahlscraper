@@ -66,3 +66,55 @@ test("queues are isolated per game", async () => {
   assert.deepEqual(sent.map(x => x[0]).sort(), ["a", "b"]);
   assert.equal(syncPayload(a).gameId, "g-1");
 });
+
+test("two-phase queue records complete verified publication", async () => {
+  const s = ready();
+  const q = createSyncQueue({ send: async () => ({ ok: true, status: "published", phase: "published", verified: true }) });
+  captureEvent(s, "goal", { id: "g" }); q.enqueue(s); await tick();
+  assert.equal(s.syncStatus, "published");
+  assert.equal(s.syncPhase, "published");
+  assert.equal(s.dirty, false);
+});
+
+test("phase failures remain visible and retry can resume", async () => {
+  const s = ready(); let attempt = 0;
+  const q = createSyncQueue({ send: async () => {
+    attempt += 1;
+    if (attempt === 1) return { ok: false, status: "goal-published/partial", phase: "penalties", message: "penalty failed", retryable: true };
+    return { ok: true, status: "published", phase: "published", verified: true };
+  }});
+  captureEvent(s, "goal", { id: "g" }); q.enqueue(s); await tick();
+  assert.equal(s.syncStatus, "goal-published/partial"); assert.equal(s.dirty, true);
+  q.enqueue(s); await tick();
+  assert.equal(s.syncStatus, "published"); assert.equal(s.dirty, false);
+});
+
+test("partial publication adopts the recovered remote comparison token for retry", async () => {
+  const s = ready();
+  const q = createSyncQueue({ send: async () => {
+    const error = new Error("penalty failed");
+    Object.assign(error, { status: "goal-published/partial", phase: "penalties", comparisonToken: "token-after-goal" });
+    throw error;
+  }});
+  captureEvent(s, "goal", { id: "g" }); q.enqueue(s); await tick();
+  assert.equal(s.remoteBaseline.comparisonToken, "token-after-goal");
+  assert.equal(syncPayload(s).comparisonToken, "token-after-goal");
+});
+
+test("reread mismatch is represented as conflict instead of success", async () => {
+  const s = ready();
+  const q = createSyncQueue({ send: async () => ({ ok: false, conflict: true, status: "conflict", phase: "verification", message: "mismatch" }) });
+  captureEvent(s, "penalty", { id: "p" }); q.enqueue(s); await tick();
+  assert.equal(s.syncStatus, "conflict"); assert.equal(s.syncPhase, "verification");
+  assert.equal(s.dirty, true); assert.match(s.syncError, /mismatch/);
+});
+
+test("stale client completion cannot replace a newer phase or clear its revision", async () => {
+  const first = ready(); let release;
+  const q = createSyncQueue({ send: async () => new Promise(resolve => { release = resolve; }) });
+  captureEvent(first, "goal", { id: "one" }); q.enqueue(first); await tick();
+  const newer = structuredClone(first); captureEvent(newer, "penalty", { id: "two" }); q.enqueue(newer);
+  release({ ok: false, status: "goal-published/partial", phase: "penalties", message: "old completion" }); await tick();
+  assert.equal(newer.dirty, true); assert.equal(newer.syncStatus, "pending");
+  assert.equal(newer.revision, 2);
+});

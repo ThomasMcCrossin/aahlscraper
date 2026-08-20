@@ -100,10 +100,81 @@ test("Blocker 3 regression: compare is against a freshly read authoritative snap
     scoreSummary: [{ id: "new" }], penaltySummary: [],
   }, {
     operatorId: "op-a", coordinator,
-    authoritativeReader: async () => { calls.push("read"); return remote; },
+    authoritativeReader: async ({ phase }) => { calls.push("read"); return phase === "verifying" ? authoritative([{ id: "new" }], []) : remote; },
     writer: async (_env, action) => { calls.push("write"); writes.push(action); return { success: 1 }; },
   });
   assert.equal(result.ok, true);
-  assert.deepEqual(calls, ["read", "write", "write"]);
+  assert.deepEqual(calls, ["read", "write", "write", "read"]);
   assert.deepEqual(writes, ["updateScoreSummary", "updatePenaltySummary"]);
+});
+
+test("T4 complete publication has goal, penalty, and verified phases", async () => {
+  const coordinator = createInMemoryLeaseCoordinator();
+  const baseline = authoritative([{ id: "old" }], [{ id: "old-pen" }]);
+  const requested = { scoreSummary: [{ id: "new" }], penaltySummary: [{ id: "new-pen" }] };
+  const lease = await coordinator.acquire({ gameId: "g-t4", operatorId: "op-a" });
+  const phases = [];
+  const result = await syncGame({}, "g-t4", { username: "H", ...requested, ...lease, comparisonToken: baseline.comparisonToken, revision: 4 }, {
+    operatorId: "op-a", coordinator,
+    authoritativeReader: async ({ phase }) => { phases.push(phase || "baseline"); return phase === "verifying" ? authoritative(requested.scoreSummary, requested.penaltySummary) : baseline; },
+    writer: async (_env, action) => { phases.push(action); return { success: 1 }; },
+  });
+  assert.equal(result.ok, true);
+  assert.equal(result.status, "published");
+  assert.equal(result.verified, true);
+  assert.deepEqual(phases, ["baseline", "updateScoreSummary", "updatePenaltySummary", "verifying"]);
+});
+
+test("T4 first-phase failure is explicit and retryable without a penalty write", async () => {
+  const coordinator = createInMemoryLeaseCoordinator();
+  const baseline = authoritative();
+  const lease = await coordinator.acquire({ gameId: "g-fail-goal", operatorId: "op-a" });
+  let writes = 0;
+  const result = await syncGame({}, "g-fail-goal", { username: "H", scoreSummary: [{ id: "g" }], penaltySummary: [], ...lease, comparisonToken: baseline.comparisonToken }, {
+    operatorId: "op-a", coordinator, authoritativeReader: async () => baseline,
+    writer: async () => { writes += 1; throw new Error("goal unavailable"); },
+  });
+  assert.equal(result.ok, false); assert.equal(result.phase, "goals"); assert.equal(result.status, "goal-failed");
+  assert.equal(result.retryable, true); assert.equal(writes, 1);
+});
+
+test("T4 penalty failure exposes partial goal publication and retry resumes both phases", async () => {
+  const coordinator = createInMemoryLeaseCoordinator();
+  const baseline = authoritative();
+  const goal = [{ id: "g" }], penalty = [{ id: "p" }];
+  const lease = await coordinator.acquire({ gameId: "g-fail-pen", operatorId: "op-a" });
+  let failPenalty = true; const writes = []; let current = baseline;
+  const result = await syncGame({}, "g-fail-pen", { username: "H", scoreSummary: goal, penaltySummary: penalty, ...lease, comparisonToken: baseline.comparisonToken }, {
+    operatorId: "op-a", coordinator, authoritativeReader: async () => current,
+    writer: async (_env, action) => {
+      writes.push(action);
+      if (action === "updateScoreSummary") current = authoritative(goal, current.penalties);
+      if (action === "updatePenaltySummary" && failPenalty) { failPenalty = false; throw new Error("penalty unavailable"); }
+      if (action === "updatePenaltySummary") current = authoritative(goal, penalty);
+      return { success: 1 };
+    },
+  });
+  assert.equal(result.ok, false); assert.equal(result.phase, "penalties"); assert.equal(result.status, "goal-published/partial");
+  assert.equal(result.comparisonToken, current.comparisonToken);
+  const retry = await syncGame({}, "g-fail-pen", { username: "H", scoreSummary: goal, penaltySummary: penalty, ...lease, comparisonToken: result.comparisonToken }, {
+    operatorId: "op-a", coordinator, authoritativeReader: async () => current,
+    writer: async (_env, action) => {
+      writes.push(action);
+      if (action === "updatePenaltySummary") current = authoritative(goal, penalty);
+      return { success: 1 };
+    },
+  });
+  assert.equal(retry.ok, true); assert.deepEqual(writes, ["updateScoreSummary", "updatePenaltySummary", "updateScoreSummary", "updatePenaltySummary"]);
+});
+
+test("T4 reread mismatch is a conflict, never a published result", async () => {
+  const coordinator = createInMemoryLeaseCoordinator();
+  const baseline = authoritative(); const lease = await coordinator.acquire({ gameId: "g-mismatch", operatorId: "op-a" });
+  const result = await syncGame({}, "g-mismatch", { username: "H", scoreSummary: [{ id: "wanted" }], penaltySummary: [], ...lease, comparisonToken: baseline.comparisonToken }, {
+    operatorId: "op-a", coordinator,
+    authoritativeReader: async ({ phase }) => phase === "verifying" ? authoritative([{ id: "different" }], []) : baseline,
+    writer: async () => ({ success: 1 }),
+  });
+  assert.equal(result.ok, false); assert.equal(result.conflict, true); assert.equal(result.phase, "verification");
+  assert.equal(result.status, "conflict"); assert.equal(result.code, "verification_mismatch");
 });

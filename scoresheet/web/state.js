@@ -14,6 +14,8 @@ export function createGameState(game, setup = {}) {
     syncedRevision: 0,
     dirty: false,
     syncStatus: "offline",
+    syncPhase: null,
+    syncError: null,
     remoteBaseline: null,
     resume: { required: true, confirmed: false },
     setup: clone(setup),
@@ -39,6 +41,7 @@ export function resumeGame(state, remote, confirmation = {}) {
   state.syncedRevision = 0;
   state.dirty = false;
   state.syncStatus = "published";
+  state.syncPhase = "published";
   return state;
 }
 
@@ -52,6 +55,8 @@ export function captureEvent(state, kind, event) {
   state.revision += 1;
   state.dirty = true;
   state.syncStatus = "pending";
+  state.syncPhase = "pending";
+  state.syncError = null;
   return state;
 }
 
@@ -77,19 +82,33 @@ export function createSyncQueue({ send, persist = () => {}, isOnline = () => tru
     pending = null;
     inFlight = true;
     try {
-      await send(item.payload);
+      const result = await send(item.payload);
       if (item.state.revision === item.payload.revision && item.payload.revision >= latestRevision) {
-        item.state.syncedRevision = item.payload.revision;
-        item.state.dirty = false;
-        item.state.syncStatus = "published";
+        if (result && result.ok === false) {
+          item.state.dirty = true;
+          item.state.syncStatus = result.status || (result.conflict ? "conflict" : "error");
+          item.state.syncPhase = result.phase || null;
+          item.state.syncError = result.message || result.error || "publication failed";
+        } else {
+          item.state.syncedRevision = item.payload.revision;
+          item.state.dirty = false;
+          item.state.syncStatus = result && result.status || "published";
+          item.state.syncPhase = result && result.phase || "published";
+          item.state.syncError = null;
+        }
       } else {
         item.state.dirty = true;
         item.state.syncStatus = "pending";
+        item.state.syncPhase = "pending";
       }
     } catch (error) {
       item.state.dirty = true;
-      item.state.syncStatus = "error";
+      item.state.syncStatus = error.status || "error";
+      item.state.syncPhase = error.phase || null;
       item.state.syncError = error.message;
+      if (error.comparisonToken && item.state.remoteBaseline) {
+        item.state.remoteBaseline.comparisonToken = error.comparisonToken;
+      }
     } finally {
       inFlight = false;
       // The browser reloads persisted state for each edit, so a queued edit may

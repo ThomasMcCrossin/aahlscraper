@@ -70,7 +70,11 @@ async function api(path, opts = {}) {
     headers: { "Content-Type": "application/json", "X-App-Token": cfg.token, ...(opts.headers || {}) },
   });
   const data = await res.json().catch(() => ({}));
-  if (!res.ok || data.ok === false) throw new Error(data.error || `HTTP ${res.status}`);
+  if (!res.ok || data.ok === false) {
+    const error = new Error(data.message || data.error || `HTTP ${res.status}`);
+    Object.assign(error, data);
+    throw error;
+  }
   return data;
 }
 
@@ -178,8 +182,19 @@ function renderGame() {
   ].reverse();
   for (const it of items) ev.appendChild(it.kind === "goal" ? goalEl(s, it.g, it.i) : penEl(s, it.p, it.i));
 
-  const t = s.dirty ? "Unsynced changes" : s.lastSyncedAt ? "Synced " + timeAgo(s.lastSyncedAt) : "Nothing synced yet";
+  const labels = {
+    pending: "Pending",
+    verifying: "Verifying authoritative state…",
+    "goal-published/partial": "Goal published · penalty pending",
+    "penalty-published": "Penalty published · verification pending",
+    published: "Published",
+    conflict: "Conflict — retry after review",
+    "goal-failed": "Goal phase failed — retry",
+    error: "Publication failed — retry",
+  };
+  const t = s.dirty ? (labels[s.syncStatus] || "Unsynced changes") : s.syncStatus === "published" ? "Published " + (s.lastSyncedAt ? timeAgo(s.lastSyncedAt) : "") : s.lastSyncedAt ? "Published " + timeAgo(s.lastSyncedAt) : "Nothing synced yet";
   $("syncText").textContent = (navigator.onLine ? "" : "Offline · ") + t;
+  $("syncText").title = s.syncError || "";
 }
 
 function computeScore(s) {

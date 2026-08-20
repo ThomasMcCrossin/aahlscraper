@@ -275,17 +275,76 @@ async function syncGame(env, gameId, body, options = {}) {
     return conflict("invalid_request", "at least one summary array is required");
   }
 
+  const writer = options.writer || postSummary;
   const results = {};
-  if (Array.isArray(body.scoreSummary)) {
-    results.score = await (options.writer || postSummary)(env, "updateScoreSummary", "scoreSummaryData", gameId, username, body.scoreSummary);
+
+  // These are deliberately separate phases. A retry repeats the complete
+  // arrays, so a partial upstream write is safe to resume without pretending
+  // that the second request (or verification) happened.
+  if (!Array.isArray(body.scoreSummary) || !Array.isArray(body.penaltySummary)) {
+    return conflict("invalid_request", "both goal and penalty summary arrays are required");
   }
-  if (Array.isArray(body.penaltySummary)) {
-    results.penalty = await (options.writer || postSummary)(env, "updatePenaltySummary", "penaltySummaryData", gameId, username, body.penaltySummary);
+  try {
+    results.goals = await writer(env, "updateScoreSummary", "scoreSummaryData", gameId, username, body.scoreSummary);
+  } catch (error) {
+    return publicationFailure("goals", "goal-failed", error, results, body);
   }
-  return { ok: true, results, leaseId: body.leaseId, comparisonToken: actualToken };
+
+  try {
+    results.penalties = await writer(env, "updatePenaltySummary", "penaltySummaryData", gameId, username, body.penaltySummary);
+  } catch (error) {
+    // The goal write changed the authoritative comparison token. Recover the
+    // exact partial state so a retry can compare against reality instead of
+    // being rejected with the now-stale pre-publication token.
+    try {
+      const partial = options.authoritativeReader
+        ? await options.authoritativeReader({ gameId, username, gameId2: body.gameId2, phase: "partial-recovery" })
+        : (await gameSetup(env, gameId, username, body.gameId2 || "")).current;
+      if (!partial || !sameEvents(partial.goals, body.scoreSummary)) {
+        return publicationFailure("verification", "conflict", new Error("partial goal publication could not be verified"), results, body, "partial_verification_mismatch");
+      }
+      return publicationFailure("penalties", "goal-published/partial", error, results, body, "publication_failed", {
+        comparisonToken: comparisonToken({ finals: partial.finals, goals: partial.goals, penalties: partial.penalties }),
+      });
+    } catch (recoveryError) {
+      return publicationFailure("verification", "conflict", recoveryError, results, body, "partial_verification_failed");
+    }
+  }
+
+  // The write acknowledgements are not authoritative. Read the editor again
+  // through the injected boundary and only then report full publication.
+  let verified;
+  try {
+    verified = options.authoritativeReader
+      ? await options.authoritativeReader({ gameId, username, gameId2: body.gameId2, phase: "verifying" })
+      : (await gameSetup(env, gameId, username, body.gameId2 || "")).current;
+  } catch (error) {
+    return publicationFailure("verification", "penalty-published", error, results, body, "verification_failed");
+  }
+  if (!verified || !sameEvents(verified.goals, body.scoreSummary) || !sameEvents(verified.penalties, body.penaltySummary)) {
+    return publicationFailure("verification", "conflict", new Error("authoritative reread does not match requested revision"), results, body, "verification_mismatch");
+  }
+  return {
+    ok: true, status: "published", phase: "published", verified: true, results,
+    leaseId: body.leaseId, comparisonToken: comparisonToken({
+      finals: verified.finals, goals: verified.goals, penalties: verified.penalties,
+    }),
+  };
 }
 
 function conflict(code, message) { return { ok: false, conflict: true, code, message, writes: 0 }; }
+
+function sameEvents(actual, requested) {
+  return stableStringify(actual) === stableStringify(requested);
+}
+
+function publicationFailure(phase, status, error, results, body, code = "publication_failed", extra = {}) {
+  return {
+    ok: false, conflict: phase === "verification", retryable: true, code,
+    phase, status, message: String((error && error.message) || error), results,
+    revision: body.revision, writes: Object.keys(results).length, ...extra,
+  };
+}
 
 function operatorIdentity(request, env) {
   // D2 is intentionally unresolved: this is only an injected/default adapter,
