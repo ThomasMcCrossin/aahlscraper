@@ -8,6 +8,8 @@
  * DOM is built with the h() helper + textContent (no markup-from-strings), so
  * roster/team names can never be interpreted as HTML. */
 
+import { createGameState, createSyncQueue, resumeGame } from "./state.js";
+
 const CFG_KEY = "aahl_cfg";
 const PERIODS = ["1", "2", "3", "OT", "2OT", "SO"];
 const STRENGTHS = ["ES", "PP", "SH", "EN", "EA", "PS"];
@@ -16,6 +18,7 @@ const PEN_LENGTHS = ["2", "3", "4", "5", "10"];
 let cfg = loadCfg();
 let activeGameId = null;
 let syncTimer = null;
+const gameQueues = new Map();
 
 const $ = (id) => document.getElementById(id);
 const screens = ["settings", "games", "game"];
@@ -130,13 +133,23 @@ function renderGames(games) {
 // ---------------------------------------------------------------------------
 async function openGame(g) {
   let store = loadGame(g.gameId);
-  if (!store) store = { ...g, scoreSummary: [], penaltySummary: [], dirty: false, lastSyncedAt: null, status: null };
+  if (!store) store = createGameState(g);
   activeGameId = g.gameId;
   try {
     const setup = await api(`/api/games/${g.gameId}/setup?div=${encodeURIComponent(g.homeDiv)}&g2=${encodeURIComponent(g.gameId2)}`);
     store.setup = setup;
-    const f = setup.current && setup.current.finals;
-    store._existingWarn = (!store.scoreSummary.length && f && (f.h || f.a)) ? `Website already shows ${f.h}-${f.a}; adding here replaces it.` : "";
+    const current = setup.current || {};
+    const remote = { goals: current.goals || [], penalties: current.penalties || [], comparisonToken: current.comparisonToken };
+    const sameBaseline = store.remoteBaseline && store.remoteBaseline.comparisonToken === remote.comparisonToken;
+    if (!sameBaseline) {
+      const label = `${g.away || "Away"} @ ${g.home || "Home"} (game ${g.gameId})`;
+      if (!confirm(`Confirm exact game ${label} and import its authoritative events before editing?`)) {
+        alert("Resume/import cancelled; no replacement is allowed."); return;
+      }
+      resumeGame(store, remote, { gameId: g.gameId, confirmed: true });
+    }
+    const f = current.finals;
+    store._existingWarn = (remote.goals.length || remote.penalties.length || (f && (f.h || f.a))) ? "Authoritative events imported; local edits use its comparison token." : "";
   } catch (e) {
     if (!store.setup) { alert("Couldn't load rosters: " + e.message); return; }
   }
@@ -298,20 +311,24 @@ function recomputeTotals(s) {
 // ---------------------------------------------------------------------------
 // Sync
 // ---------------------------------------------------------------------------
-function markDirty(s) { s.dirty = true; saveGame(s); scheduleSync(); }
+function markDirty(s) { s.revision = (s.revision || 0) + 1; s.dirty = true; s.syncStatus = "pending"; saveGame(s); scheduleSync(); }
 function scheduleSync() { clearTimeout(syncTimer); badge("pending"); syncTimer = setTimeout(syncActive, 1200); }
+
+function queueFor(s) {
+  if (!gameQueues.has(s.gameId)) gameQueues.set(s.gameId, createSyncQueue({
+    isOnline: () => navigator.onLine,
+    persist: (state) => { if (state.syncStatus === "published") state.lastSyncedAt = Date.now(); saveGame(state); if (state.gameId === activeGameId) renderGame(); },
+    send: (payload) => api(`/api/games/${payload.gameId}/sync`, { method: "POST", body: JSON.stringify({ username: s.homeDiv, ...payload }) }),
+  }));
+  return gameQueues.get(s.gameId);
+}
 
 async function syncActive() {
   const s = loadGame(activeGameId);
   if (!s || !s.dirty) { badge(s && s.lastSyncedAt ? "ok" : ""); return; }
   if (!navigator.onLine) { badge("pending"); renderGame(); return; }
-  recomputeTotals(s);
   try {
-    await api(`/api/games/${s.gameId}/sync`, {
-      method: "POST",
-      body: JSON.stringify({ username: s.homeDiv, scoreSummary: s.scoreSummary, penaltySummary: s.penaltySummary }),
-    });
-    s.dirty = false; s.lastSyncedAt = Date.now(); saveGame(s); badge("ok");
+    recomputeTotals(s); queueFor(s).enqueue(s); badge("pending");
   } catch (e) {
     badge("err"); $("syncText").textContent = "Sync failed: " + e.message + " (will retry)";
     return;
