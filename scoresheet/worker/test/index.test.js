@@ -107,6 +107,22 @@ test("unknown list-entry guesses lock the peppered subject without storing clien
   assert.equal([...data.keys()].some((key) => key.startsWith("subject:")), true);
 });
 
+test("rate-limit expiry and successful redemption clear the same subject state", async () => {
+  const { registry, data } = registryFixture();
+  const minted = await registryAction(registry, "mint", { gameId: "252", pepper: "p" });
+  const input = { gameId: "252", requestSubject: "reset-subject", pepper: "p" };
+  for (let i = 0; i < 5; i++) await registryAction(registry, "redeem", { ...input, code: "UNKNOWN1" });
+  const subjectKey = "subject:reset-subject";
+  assert.ok(data.get(subjectKey).lockedUntil > Date.now());
+  data.get(subjectKey).lockedUntil = Date.now() - 1;
+  assert.equal((await registryAction(registry, "redeem", { ...input, code: minted.code })).ok, true);
+  assert.equal(data.has(subjectKey), false);
+  assert.equal((await registryAction(registry, "redeem", { ...input, code: "UNKNOWN1" })).reason, "code_invalid");
+  assert.equal(data.get(subjectKey).failures, 1);
+  assert.equal((await registryAction(registry, "redeem", { ...input, code: minted.code })).ok, true);
+  assert.equal(data.has(subjectKey), false);
+});
+
 test("constant-time digest helper compares fixed and mismatched lengths without coercion", () => {
   assert.equal(constantTimeEqual("abcd", "abcd"), true);
   assert.equal(constantTimeEqual("abcd", "abce"), false);
@@ -162,6 +178,103 @@ test("admin code actions are POST-only and preserve non-success status", async (
   assert.equal(get.status, 405);
   const invalid = await worker.fetch(new Request("https://worker.invalid/api/admin/game-codes/mint", { method: "POST", headers: { Origin: "https://scores.invalid", "X-App-Token": "admin", "Content-Type": "application/json" }, body: "{}" }), env);
   assert.equal(invalid.status, 400);
+});
+
+test("route configuration failures stop before registry, session, and protected work", async () => {
+  const restore = installNetworkTripwire();
+  let sessionCalls = 0;
+  const request = new Request("https://worker.invalid/api/games/601/setup?div=TYLERARSENEAU-1&g2=2", {
+    headers: { Origin: "https://scores.invalid", "X-Game-Code": "SYNTHETIC1" },
+  });
+  const base = { APP_TOKEN: "admin", ALLOWED_ORIGIN: "https://scores.invalid", SESSION: { get: async () => { sessionCalls++; return "fixture"; } } };
+  try {
+    for (const env of [
+      { ...base },
+      { ...base, GAME_CODE_PEPPER: "p" },
+      { ...base, GAME_CODE_PEPPER: "p", GAME_CODE_REGISTRY: {} },
+    ]) {
+      const response = await worker.fetch(request, env);
+      assert.equal(response.status, 503);
+      assert.equal((await response.json()).error, "configuration_error");
+    }
+    assert.equal(sessionCalls, 0);
+  } finally { restore(); }
+});
+
+test("admin routes mint, revoke, and reissue through the HTTP contract", async () => {
+  const { registry, data } = registryFixture();
+  const env = { APP_TOKEN: "admin", ALLOWED_ORIGIN: "https://scores.invalid", GAME_CODE_PEPPER: "p", GAME_CODE_REGISTRY: registry };
+  const admin = (action, body) => worker.fetch(new Request(`https://worker.invalid/api/admin/game-codes/${action}`, {
+    method: "POST", headers: { Origin: "https://scores.invalid", "X-App-Token": "admin", "Content-Type": "application/json" }, body: JSON.stringify(body),
+  }), env);
+  const captain = (code) => new Request("https://worker.invalid/api/games/602/setup?div=TYLERARSENEAU-1&g2=2", {
+    headers: { Origin: "https://scores.invalid", "X-Game-Code": code },
+  });
+  const mintedResponse = await admin("mint", { gameId: "602" });
+  assert.equal(mintedResponse.status, 200);
+  const minted = await mintedResponse.json();
+  assert.equal(minted.ok, true); assert.match(minted.code, /^[A-Z2-9]{8}$/);
+  assert.equal(data.get("game:602").code, undefined);
+  const revokedResponse = await admin("revoke", { gameId: "602" });
+  assert.equal(revokedResponse.status, 200);
+  const revoked = await worker.fetch(captain(minted.code), env);
+  assert.equal(revoked.status, 401); assert.equal((await revoked.json()).reason, "code_revoked");
+  const reissuedResponse = await admin("reissue", { gameId: "602" });
+  assert.equal(reissuedResponse.status, 200);
+  const reissued = await reissuedResponse.json();
+  assert.equal(reissued.ok, true); assert.match(reissued.code, /^[A-Z2-9]{8}$/);
+  assert.notEqual(reissued.code, minted.code);
+  const oldCode = await worker.fetch(captain(minted.code), env);
+  assert.equal(oldCode.status, 401); assert.equal((await oldCode.json()).reason, "code_invalid");
+  assert.equal(data.get("game:602").code, undefined);
+});
+
+test("game-A code is rejected on game-B setup and sync before upstream work", async () => {
+  const restore = installNetworkTripwire();
+  const { registry } = registryFixture();
+  const minted = await registryAction(registry, "mint", { gameId: "603", pepper: "p" });
+  const env = { APP_TOKEN: "admin", ALLOWED_ORIGIN: "https://scores.invalid", GAME_CODE_PEPPER: "p", GAME_CODE_REGISTRY: registry };
+  try {
+    const setup = await worker.fetch(new Request("https://worker.invalid/api/games/604/setup?div=TYLERARSENEAU-1&g2=2", {
+      headers: { Origin: "https://scores.invalid", "X-Game-Code": minted.code },
+    }), env);
+    assert.equal(setup.status, 403); assert.equal((await setup.json()).reason, "wrong_game");
+    const sync = await worker.fetch(new Request("https://worker.invalid/api/games/604/sync", {
+      method: "POST", headers: { Origin: "https://scores.invalid", "X-Game-Code": minted.code, "Content-Type": "application/json" }, body: "{}",
+    }), env);
+    assert.equal(sync.status, 403); assert.equal((await sync.json()).reason, "wrong_game");
+  } finally { restore(); }
+});
+
+test("invalid, expired, revoked, and locked route codes stop before protected work", async () => {
+  const restore = installNetworkTripwire();
+  const request = (gameId, code, method = "GET") => new Request(`https://worker.invalid/api/games/${gameId}/${method === "GET" ? "setup?div=TYLERARSENEAU-1&g2=2" : "sync"}`, {
+    method, headers: { Origin: "https://scores.invalid", "X-Game-Code": code, "Content-Type": "application/json" }, body: method === "GET" ? undefined : "{}",
+  });
+  const envFor = (registry) => ({ APP_TOKEN: "admin", ALLOWED_ORIGIN: "https://scores.invalid", GAME_CODE_PEPPER: "p", GAME_CODE_REGISTRY: registry });
+  try {
+    const invalidRegistry = registryFixture().registry;
+    const invalid = await worker.fetch(request("605", "INVALID1"), envFor(invalidRegistry));
+    assert.equal(invalid.status, 401); assert.equal((await invalid.json()).reason, "code_invalid");
+
+    const expiredFixture = registryFixture();
+    const expired = await registryAction(expiredFixture.registry, "mint", { gameId: "606", pepper: "p" });
+    expiredFixture.data.get("game:606").expiresAt = Date.now() - 1;
+    const expiredResponse = await worker.fetch(request("606", expired.code), envFor(expiredFixture.registry));
+    assert.equal(expiredResponse.status, 401); assert.equal((await expiredResponse.json()).reason, "code_expired");
+
+    const revokedFixture = registryFixture();
+    const revoked = await registryAction(revokedFixture.registry, "mint", { gameId: "607", pepper: "p" });
+    await registryAction(revokedFixture.registry, "revoke", { gameId: "607", pepper: "p" });
+    const revokedResponse = await worker.fetch(request("607", revoked.code, "POST"), envFor(revokedFixture.registry));
+    assert.equal(revokedResponse.status, 401); assert.equal((await revokedResponse.json()).reason, "code_revoked");
+
+    const lockedFixture = registryFixture();
+    const lockedEnv = envFor(lockedFixture.registry);
+    for (let i = 0; i < 4; i++) assert.equal((await worker.fetch(request("608", "LOCKED1", "POST"), lockedEnv)).status, 401);
+    const locked = await worker.fetch(request("608", "LOCKED1", "POST"), lockedEnv);
+    assert.equal(locked.status, 429); assert.equal((await locked.json()).reason, "code_locked");
+  } finally { restore(); }
 });
 
 test("redeemed code filters the games list to its exact game", async () => {
