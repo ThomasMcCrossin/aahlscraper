@@ -88,3 +88,18 @@ not pretend eventually consistent KV is atomic.
 - **Icons:** add `web/icons/icon-192.png` and `icon-512.png` for a polished install.
 - Team→division map in `worker/src/index.js` (`TEAMS`) is league/season-specific —
   update it each season.
+
+## Corrections and recovery (T5)
+
+Events are checked before capture and again on recovery import: period and clock
+bounds, selected-team roster membership, scorer/assist uniqueness, duplicate
+events, penalty served-by membership, and infraction severity/duration must all
+match the loaded setup. Existing events have an explicit Edit action; deletion
+creates a new local revision and exposes an eight-second Undo window. Every game
+open confirms the displayed date, time, rink, away/home order, and game ID before
+authoritative import or editing.
+
+The scoring screen can export a versioned `aahl-scoresheet-recovery` JSON file.
+Import requires the exact same game identity, validates both arrays, and rejects
+an equal or older revision, so it cannot cross games or silently replace newer
+local work. Imported and corrected events use the same per-game sync queue.

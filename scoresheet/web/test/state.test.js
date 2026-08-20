@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { captureEvent, createGameState, createSyncQueue, resumeGame, syncPayload } from "../state.js";
+import { captureEvent, createGameState, createSyncQueue, resumeGame, syncPayload, validateGoal, validatePenalty, validateEvents, deleteEvent, undoDeletion, editEvent, exportRecovery, importRecovery, confirmGameIdentity } from "../state.js";
 
 const game = { gameId: "g-1", homeDiv: "H", awayDiv: "A" };
 const remote = { goals: [{ id: "old" }], penalties: [{ id: "pen" }], comparisonToken: "token-1" };
@@ -117,4 +117,47 @@ test("stale client completion cannot replace a newer phase or clear its revision
   release({ ok: false, status: "goal-published/partial", phase: "penalties", message: "old completion" }); await tick();
   assert.equal(newer.dirty, true); assert.equal(newer.syncStatus, "pending");
   assert.equal(newer.revision, 2);
+});
+
+const setup = {
+  home: { div: "H", players: [{ id: "h1" }, { id: "h2" }] },
+  away: { div: "A", players: [{ id: "a1" }, { id: "a2" }] },
+  infractions: [{ code: "hook", severity: "minor" }],
+};
+const goodGoal = { period: "1", scoreTime: "12:34", scoreTeam: "H", scorer: "h1", assists1: "h2", assists2: "", strength: "ES" };
+const goodPenalty = { period: "2", penaltyTime: "08:00", penaltyTeam: "A", penaltyPlayer: "a1", servedPlayer: "a2", infraction: "hook", severity: "minor", penaltyLength: 2 };
+
+test("T5 blocker-5 strict validation rejects malformed clocks, foreign players, duplicate assists, and bad periods", () => {
+  assert.equal(validateGoal(goodGoal, setup).valid, true);
+  assert.match(validateGoal({ ...goodGoal, scoreTime: "20:01" }, setup).errors.join(" "), /bounds/);
+  assert.match(validateGoal({ ...goodGoal, period: "4", scorer: "a1" }, setup).errors.join(" "), /period|roster/);
+  assert.match(validateGoal({ ...goodGoal, assists1: "h2", assists2: "h2" }, setup).errors.join(" "), /unique/);
+  assert.equal(validatePenalty({ ...goodPenalty, penaltyLength: 3 }, setup).valid, true);
+  assert.match(validatePenalty({ ...goodPenalty, penaltyLength: 5 }, setup).errors.join(" "), /duration/);
+  assert.match(validatePenalty({ ...goodPenalty, servedPlayer: "h1" }, setup).errors.join(" "), /served-by/);
+  assert.equal(validateEvents({ ...ready(), setup, scoreSummary: [goodGoal, goodGoal], penaltySummary: [goodPenalty] }).valid, false);
+});
+
+test("T5 edit creates a revision and deletion has an explicit short undo window", () => {
+  const s = { ...ready(), setup, scoreSummary: [goodGoal], penaltySummary: [] };
+  editEvent(s, "goal", 0, { ...goodGoal, scoreTime: "11:00" });
+  assert.equal(s.revision, 1); assert.equal(s.scoreSummary[0].scoreTime, "11:00");
+  deleteEvent(s, "goal", 0, 1000, 8000); assert.equal(s.scoreSummary.length, 0); assert.equal(s.revision, 2);
+  undoDeletion(s, 8999); assert.equal(s.scoreSummary.length, 1); assert.equal(s.revision, 3);
+  deleteEvent(s, "goal", 0, 1000, 8000); assert.throws(() => undoDeletion(s, 9001), /expired/);
+});
+
+test("T5 exact-game gate requires every displayed identity field", () => {
+  const identity = { gameId: "g-1", date: "Aug 20", time: "7:00 PM", rink: "Amherst", away: "Away", home: "Home" };
+  assert.equal(confirmGameIdentity(identity, { ...identity, confirmed: true }), true);
+  assert.equal(confirmGameIdentity(identity, { ...identity, rink: "Other", confirmed: true }), false);
+});
+
+test("T5 versioned recovery round trips and refuses wrong game or newer replacement", () => {
+  const s = { ...ready(), setup, gameIdentity: { gameId: "g-1", date: "Aug 20", time: "7:00 PM", rink: "Amherst", away: "Away", home: "Home" }, scoreSummary: [goodGoal], penaltySummary: [], revision: 1 };
+  const restored = importRecovery({ ...createGameState({ gameId: "g-1" }), setup, gameIdentity: s.gameIdentity }, exportRecovery(s), s.gameIdentity);
+  assert.deepEqual(restored.scoreSummary, [goodGoal]);
+  assert.throws(() => importRecovery({ ...restored, revision: 2 }, exportRecovery(s), s.gameIdentity), /newer or equal/);
+  assert.throws(() => importRecovery({ ...createGameState({ gameId: "g-2" }), setup, gameIdentity: s.gameIdentity }, exportRecovery(s), s.gameIdentity), /different/);
+  assert.throws(() => importRecovery({ ...createGameState({ gameId: "g-1" }), setup, gameIdentity: s.gameIdentity }, { format: "aahl-scoresheet-recovery", version: 1, gameId: "g-1", identity: s.gameIdentity, revision: 3 }, s.gameIdentity), /arrays/);
 });

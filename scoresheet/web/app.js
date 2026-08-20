@@ -8,7 +8,7 @@
  * DOM is built with the h() helper + textContent (no markup-from-strings), so
  * roster/team names can never be interpreted as HTML. */
 
-import { createGameState, createSyncQueue, resumeGame } from "./state.js";
+import { createGameState, createSyncQueue, resumeGame, validateGoal, validatePenalty, deleteEvent, undoDeletion, editEvent, exportRecovery, importRecovery, confirmGameIdentity } from "./state.js";
 
 const CFG_KEY = "aahl_cfg";
 const PERIODS = ["1", "2", "3", "OT", "2OT", "SO"];
@@ -137,7 +137,12 @@ function renderGames(games) {
 // ---------------------------------------------------------------------------
 async function openGame(g) {
   let store = loadGame(g.gameId);
+  const previousIdentity = store && store.gameIdentity;
   if (!store) store = createGameState(g);
+  store.gameIdentity = { gameId: g.gameId, date: g.date || fmtDate(g.startMs).split(" ").slice(0, 2).join(" "), time: g.time || (g.startMs ? new Date(g.startMs).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }) : ""), rink: g.rink || g.location || "", away: g.away || "", home: g.home || "" };
+  if (previousIdentity && JSON.stringify(previousIdentity) !== JSON.stringify(store.gameIdentity)) {
+    store.resume = { required: true, confirmed: false }; store.remoteBaseline = null;
+  }
   activeGameId = g.gameId;
   try {
     const setup = await api(`/api/games/${g.gameId}/setup?div=${encodeURIComponent(g.homeDiv)}&g2=${encodeURIComponent(g.gameId2)}`);
@@ -145,11 +150,13 @@ async function openGame(g) {
     const current = setup.current || {};
     const remote = { goals: current.goals || [], penalties: current.penalties || [], comparisonToken: current.comparisonToken };
     const sameBaseline = store.remoteBaseline && store.remoteBaseline.comparisonToken === remote.comparisonToken;
-    if (!sameBaseline) {
-      const label = `${g.away || "Away"} @ ${g.home || "Home"} (game ${g.gameId})`;
-      if (!confirm(`Confirm exact game ${label} and import its authoritative events before editing?`)) {
+    if (!sameBaseline || store.resume?.confirmed !== true) {
+      const identity = store.gameIdentity;
+      const label = `${identity.date} ${identity.time} · ${identity.rink} · ${identity.away} @ ${identity.home} · game ${identity.gameId}`;
+      if (!confirm(`Confirm exact game:\n${label}\n\nImport authoritative events before editing?`)) {
         alert("Resume/import cancelled; no replacement is allowed."); return;
       }
+      if (!confirmGameIdentity(identity, { ...identity, confirmed: true })) { alert("Exact-game confirmation failed."); return; }
       resumeGame(store, remote, { gameId: g.gameId, confirmed: true });
     }
     const f = current.finals;
@@ -195,6 +202,8 @@ function renderGame() {
   const t = s.dirty ? (labels[s.syncStatus] || "Unsynced changes") : s.syncStatus === "published" ? "Published " + (s.lastSyncedAt ? timeAgo(s.lastSyncedAt) : "") : s.lastSyncedAt ? "Published " + timeAgo(s.lastSyncedAt) : "Nothing synced yet";
   $("syncText").textContent = (navigator.onLine ? "" : "Offline · ") + t;
   $("syncText").title = s.syncError || "";
+  $("undoBtn").hidden = !s.undo || Date.now() > s.undo.expiresAt;
+  $("undoBtn").textContent = s.undo ? `Undo deletion (${Math.max(0, Math.ceil((s.undo.expiresAt - Date.now()) / 1000))}s)` : "Undo deletion";
 }
 
 function computeScore(s) {
@@ -208,13 +217,23 @@ function nameOf(s, div, id) {
   return p ? `${p.number} ${p.name}` : "";
 }
 function delBtn(onclick) { return h("button", { class: "edel", onclick }, "✕"); }
+function editBtn(onclick) { return h("button", { class: "edel", onclick }, "Edit"); }
+
+function editPrompt(s, kind, index) {
+  const key = kind === "goal" ? "scoreSummary" : "penaltySummary";
+  const raw = prompt("Edit event as JSON", JSON.stringify(s[key][index]));
+  if (raw == null) return;
+  try { editEvent(s, kind, index, JSON.parse(raw)); saveGame(s); scheduleSync(); renderGame(); }
+  catch (e) { alert(`Invalid event: ${e.message}`); }
+}
 
 function goalEl(s, g, i) {
   const team = g.scoreTeam === s.homeDiv ? s.home : s.away;
   const assists = [g.assists1, g.assists2].filter(Boolean).map((id) => nameOf(s, g.scoreTeam, id)).join(", ");
   return h("div", { class: "event goal" },
     h("div", { class: "etop" }, h("span", { class: "etag" }, `GOAL · ${team}`),
-      delBtn(() => { s.scoreSummary.splice(i, 1); markDirty(s); renderGame(); })),
+      editBtn(() => editPrompt(s, "goal", i)),
+      delBtn(() => { try { deleteEvent(s, "goal", i); saveGame(s); scheduleSync(); renderGame(); } catch (e) { alert(e.message); } })),
     h("div", { class: "edetail" }, `P${g.period} ${g.scoreTime} ${g.strength} · ${nameOf(s, g.scoreTeam, g.scorer)}${assists ? " (A: " + assists + ")" : ""}`));
 }
 function penEl(s, p, i) {
@@ -222,7 +241,8 @@ function penEl(s, p, i) {
   const inf = (s.setup.infractions.find((x) => x.code === p.infraction) || {}).label || p.infraction;
   return h("div", { class: "event pen" },
     h("div", { class: "etop" }, h("span", { class: "etag" }, `PEN · ${team}`),
-      delBtn(() => { s.penaltySummary.splice(i, 1); markDirty(s); renderGame(); })),
+      editBtn(() => editPrompt(s, "penalty", i)),
+      delBtn(() => { try { deleteEvent(s, "penalty", i); saveGame(s); scheduleSync(); renderGame(); } catch (e) { alert(e.message); } })),
     h("div", { class: "edetail" }, `P${p.period} ${p.penaltyTime} · ${nameOf(s, p.penaltyTeam, p.penaltyPlayer)} · ${inf} ${p.penaltyLength}m`));
 }
 
@@ -277,10 +297,12 @@ function addGoalModal() {
 
   openModal("Add Goal", body, () => {
     if (!scorer.value) { alert("Pick a scorer"); return false; }
-    s.scoreSummary.push({
+    const event = {
       assists1: a1.value, assists2: a2.value, period: period.value, scoreTeam: div,
       scoreTime: normTime(time.value), scorer: scorer.value, strength: strength.value, scoreTotalText: "",
-    });
+    };
+    const checked = validateGoal(event, s.setup); if (!checked.valid) { alert(checked.errors.join("\n")); return false; }
+    s.scoreSummary.push(event);
     recomputeTotals(s); markDirty(s); renderGame();
   });
 }
@@ -304,12 +326,14 @@ function addPenaltyModal() {
 
   openModal("Add Penalty", body, () => {
     if (!player.value) { alert("Pick a player"); return false; }
-    s.penaltySummary.push({
+    const event = {
       period: period.value, penaltyTeam: div, penaltyTime: normTime(time.value),
       penaltyPlayer: player.value, servedPlayer: player.value,
       infraction: inf.value, severity: inf.selectedOptions[0] ? inf.selectedOptions[0].dataset.sev : "minor",
       penaltyLength: Number(len.value),
-    });
+    };
+    const checked = validatePenalty(event, s.setup); if (!checked.valid) { alert(checked.errors.join("\n")); return false; }
+    s.penaltySummary.push(event);
     markDirty(s); renderGame();
   });
 }
@@ -373,6 +397,9 @@ function boot() {
   $("addGoal").onclick = addGoalModal;
   $("addPenalty").onclick = addPenaltyModal;
   $("syncNow").onclick = syncActive;
+  $("undoBtn").onclick = () => { const s = loadGame(activeGameId); try { undoDeletion(s); saveGame(s); scheduleSync(); renderGame(); } catch (e) { alert(e.message); } };
+  $("exportBtn").onclick = () => { const s = loadGame(activeGameId); const blob = new Blob([exportRecovery(s)], { type: "application/json" }); const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `aahl-${s.gameId}-recovery.json`; a.click(); URL.revokeObjectURL(a.href); };
+  $("importInput").onchange = async (event) => { const s = loadGame(activeGameId); const file = event.target.files[0]; if (!file) return; try { const next = importRecovery(s, await file.text(), s.gameIdentity); saveGame(next); scheduleSync(); renderGame(); } catch (e) { alert(`Recovery rejected: ${e.message}`); } event.target.value = ""; };
   window.addEventListener("online", () => { badge("pending"); syncActive(); });
   window.addEventListener("offline", () => { badge("pending"); if (activeGameId) renderGame(); });
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
