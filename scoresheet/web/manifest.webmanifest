@@ -1,0 +1,14 @@
+{
+  "name": "AAHL Live Scoresheet",
+  "short_name": "Scoresheet",
+  "description": "Live goal/penalty entry for the Amherst Adult Hockey League",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b1f3a",
+  "theme_color": "#0b1f3a",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

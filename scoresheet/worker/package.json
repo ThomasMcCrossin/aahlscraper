@@ -1,0 +1,14 @@
+{
+  "name": "aahl-scoresheet-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Auth proxy + API that bridges the AAHL live scoresheet PWA to HomeTeamsOnline",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

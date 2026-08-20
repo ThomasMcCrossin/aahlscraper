@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0b1f3a" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <title>AAHL Live Scoresheet</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header id="appbar">
+    <button id="backBtn" class="ghost" hidden>‹ Back</button>
+    <h1 id="title">AAHL Scoresheet</h1>
+    <span id="syncBadge" class="badge" title="sync status">●</span>
+  </header>
+
+  <!-- Settings -->
+  <section id="screen-settings" class="screen">
+    <h2>Connect</h2>
+    <label>Proxy URL
+      <input id="cfgApi" type="url" placeholder="https://aahl-scoresheet-api.<you>.workers.dev" />
+    </label>
+    <label>Access code
+      <input id="cfgToken" type="password" placeholder="app token" />
+    </label>
+    <button id="cfgSave" class="primary big">Save & continue</button>
+    <p class="muted small">Stored only on this device. The league login lives on the proxy, never here.</p>
+  </section>
+
+  <!-- Game list -->
+  <section id="screen-games" class="screen" hidden>
+    <div class="row between">
+      <h2>Games</h2>
+      <button id="refreshGames" class="ghost">↻</button>
+    </div>
+    <div id="gamesList" class="list"></div>
+    <p id="gamesEmpty" class="muted" hidden>No games found.</p>
+  </section>
+
+  <!-- Scoring -->
+  <section id="screen-game" class="screen" hidden>
+    <div id="scoreboard">
+      <div class="team away">
+        <div class="tname" id="sbAway">Away</div>
+        <div class="tscore" id="sbAwayScore">0</div>
+      </div>
+      <div class="vs">
+        <div id="sbMeta" class="muted small"></div>
+      </div>
+      <div class="team home">
+        <div class="tname" id="sbHome">Home</div>
+        <div class="tscore" id="sbHomeScore">0</div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="addGoal" class="primary big">+ Goal</button>
+      <button id="addPenalty" class="warn big">+ Penalty</button>
+    </div>
+
+    <div id="events" class="list"></div>
+
+    <div class="syncbar">
+      <span id="syncText" class="small muted">—</span>
+      <button id="syncNow" class="ghost">Sync now</button>
+    </div>
+  </section>
+
+  <!-- Goal / Penalty entry modal -->
+  <div id="modal" class="modal" hidden>
+    <div class="sheet">
+      <h3 id="modalTitle">Add</h3>
+      <div id="modalBody"></div>
+      <div class="row between">
+        <button id="modalCancel" class="ghost big">Cancel</button>
+        <button id="modalOk" class="primary big">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
