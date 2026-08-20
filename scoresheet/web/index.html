@@ -24,8 +24,11 @@
     <label>Access code
       <input id="cfgToken" type="password" placeholder="app token" />
     </label>
+    <label>Operator label
+      <input id="cfgOperator" type="text" autocomplete="off" placeholder="e.g. timekeeper-1" />
+    </label>
     <button id="cfgSave" class="primary big">Save & continue</button>
-    <p class="muted small">Stored only on this device. The league login lives on the proxy, never here.</p>
+    <p class="muted small">A local non-secret label used for game ownership. Stored only on this device; identity-provider selection remains outside the PWA.</p>
   </section>
 
   <!-- Game list -->

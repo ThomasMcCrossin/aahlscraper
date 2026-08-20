@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { captureEvent, createGameState, createSyncQueue, resumeGame, syncPayload, validateGoal, validatePenalty, validateEvents, deleteEvent, undoDeletion, editEvent, exportRecovery, importRecovery, confirmGameIdentity, recomputeRunningScore } from "../state.js";
+import { apiHeaders, captureEvent, createGameState, createLeaseClient, createSyncQueue, normalizeApiError, resumeGame, syncPayload, validateGoal, validatePenalty, validateEvents, deleteEvent, undoDeletion, editEvent, exportRecovery, importRecovery, confirmGameIdentity, recomputeRunningScore } from "../state.js";
 
 const game = { gameId: "g-1", homeDiv: "H", awayDiv: "A" };
 const remote = { goals: [{ id: "old" }], penalties: [{ id: "pen" }], comparisonToken: "token-1" };
@@ -70,6 +70,40 @@ test("queues are isolated per game", async () => {
   captureEvent(a, "goal", { id: "a" }); captureEvent(b, "goal", { id: "b" }); qa.enqueue(a); qb.enqueue(b); await tick();
   assert.deepEqual(sent.map(x => x[0]).sort(), ["a", "b"]);
   assert.equal(syncPayload(a).gameId, "g-1");
+});
+
+test("R1 lease client acquires, renews before expiry, and reacquires after expiry", async () => {
+  let now = 1000; const calls = [];
+  const responses = [
+    { ok: true, leaseId: "lease-1", expiresAt: 4000 },
+    { ok: true, leaseId: "lease-1", expiresAt: 7000 },
+    { ok: true, leaseId: "lease-2", expiresAt: 9000 },
+  ];
+  const lease = createLeaseClient({ gameId: "g-1", operatorId: "op-a", now: () => now, renewLeadMs: 1000,
+    request: (input) => { calls.push(input); return responses.shift(); } });
+  assert.equal((await lease.ensure()).leaseId, "lease-1");
+  now = 3500; assert.equal((await lease.ensure()).leaseId, "lease-1");
+  assert.equal(calls[1].action, "renew"); assert.equal(calls[1].leaseId, "lease-1");
+  now = 8000; assert.equal((await lease.ensure()).leaseId, "lease-2");
+  assert.equal(calls[2].action, "acquire"); assert.equal(calls[2].leaseId, undefined);
+});
+
+test("R1 lease conflict keeps revision dirty and sync payload carries exact lease ID", async () => {
+  const s = ready(); s.leaseId = "lease-1"; let sent;
+  const q = createSyncQueue({ send: async (payload) => { sent = payload; const e = new Error("lease owned"); e.status = "conflict"; e.reason = "lease_owned"; throw e; } });
+  captureEvent(s, "goal", { id: "g" }); q.enqueue(s); await tick();
+  assert.equal(sent.leaseId, "lease-1");
+  assert.equal(s.dirty, true); assert.equal(s.syncStatus, "conflict");
+  assert.equal(s.syncedRevision, 0);
+});
+
+test("R1 browser API contract sends operator identity and normalizes lease conflicts", () => {
+  const headers = apiHeaders({ token: "fixture-token", operatorId: "op-a" });
+  assert.equal(headers["X-App-Token"], "fixture-token");
+  assert.equal(headers["X-Operator-Id"], "op-a");
+  const error = normalizeApiError({ ok: false, code: "lease_owned", message: "game is leased" }, 409);
+  assert.equal(error.status, "conflict");
+  assert.equal(error.reason, "lease_owned");
 });
 
 test("two-phase queue records complete verified publication", async () => {

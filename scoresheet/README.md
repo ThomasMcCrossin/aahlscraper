@@ -24,6 +24,11 @@ together. See `../docs/SCORESHEET_APP_FEASIBILITY.md` for the full reverse-engin
   arrays. Because HomeTeamsOnline's endpoint replaces the whole summary, retries
   after flaky rink wifi can never double-count — idempotent by design.
 - The league password lives **only** in the Worker's secrets, never on the tablet.
+- Connect also requires a non-secret operator label. The PWA sends it as
+  `X-Operator-Id`; after exact-game confirmation it acquires one lease per
+  game/operator boundary, renews it before publication, and includes the
+  returned `leaseId` in every revision sync. Lease conflicts leave the local
+  revision pending for review/retry.
 
 ## Deploy
 

@@ -57,6 +57,9 @@ test("Blocker 6 regression: missing token/origin and forbidden Origin fail befor
   assert.equal(response.status, 503);
   response = await worker.fetch(protectedRequest, { APP_TOKEN: "secret", ALLOWED_ORIGIN: "https://scores.invalid" });
   assert.equal(response.status, 404); // route is reached only after both gates
+  response = await worker.fetch(new Request(protectedRequest, { headers: { Origin: "https://scores.invalid", "X-App-Token": "wrong" } }), { APP_TOKEN: "secret", ALLOWED_ORIGIN: "https://scores.invalid" });
+  assert.equal(response.status, 401);
+  assert.equal((await response.json()).error, "unauthorized");
   response = await worker.fetch(new Request(protectedRequest, { headers: { Origin: "https://other.invalid", "X-App-Token": "secret" } }), { APP_TOKEN: "secret", ALLOWED_ORIGIN: "https://scores.invalid" });
   assert.equal(response.status, 403);
   assert.equal((await response.json()).error, "origin_not_allowed");

@@ -8,7 +8,7 @@
  * DOM is built with the h() helper + textContent (no markup-from-strings), so
  * roster/team names can never be interpreted as HTML. */
 
-import { createGameState, createSyncQueue, resumeGame, validateGoal, validatePenalty, deleteEvent, undoDeletion, editEvent, exportRecovery, importRecovery, confirmGameIdentity, recomputeRunningScore } from "./state.js";
+import { apiHeaders, createGameState, createSyncQueue, createLeaseClient, normalizeApiError, resumeGame, validateGoal, validatePenalty, deleteEvent, undoDeletion, editEvent, exportRecovery, importRecovery, confirmGameIdentity, recomputeRunningScore, syncPayload } from "./state.js";
 
 const CFG_KEY = "aahl_cfg";
 const PERIODS = ["1", "2", "3", "OT", "2OT", "SO"];
@@ -19,6 +19,7 @@ let cfg = loadCfg();
 let activeGameId = null;
 let syncTimer = null;
 const gameQueues = new Map();
+const gameLeases = new Map();
 
 const $ = (id) => document.getElementById(id);
 const screens = ["settings", "games", "game"];
@@ -67,13 +68,11 @@ function saveGame(s) { localStorage.setItem(gameKey(s.gameId), JSON.stringify(s)
 async function api(path, opts = {}) {
   const res = await fetch(cfg.api.replace(/\/$/, "") + path, {
     ...opts,
-    headers: { "Content-Type": "application/json", "X-App-Token": cfg.token, ...(opts.headers || {}) },
+    headers: apiHeaders(cfg, opts.headers),
   });
   const data = await res.json().catch(() => ({}));
   if (!res.ok || data.ok === false) {
-    const error = new Error(data.message || data.error || `HTTP ${res.status}`);
-    Object.assign(error, data);
-    throw error;
+    throw normalizeApiError(data, res.status);
   }
   return data;
 }
@@ -94,9 +93,11 @@ function badge(state) { $("syncBadge").className = "badge " + (state || ""); }
 function initSettings() {
   $("cfgApi").value = cfg.api || "";
   $("cfgToken").value = cfg.token || "";
+  $("cfgOperator").value = cfg.operatorId || "";
   $("cfgSave").onclick = () => {
-    saveCfg({ api: $("cfgApi").value.trim(), token: $("cfgToken").value.trim() });
-    showGames();
+    saveCfg({ api: $("cfgApi").value.trim(), token: $("cfgToken").value.trim(), operatorId: $("cfgOperator").value.trim() });
+    if (cfg.api && cfg.token && cfg.operatorId) showGames();
+    else { alert("Proxy URL, access code, and operator label are all required."); show("settings"); }
   };
 }
 
@@ -104,6 +105,7 @@ function initSettings() {
 // Games list
 // ---------------------------------------------------------------------------
 async function showGames() {
+  if (!cfg.api || !cfg.token || !cfg.operatorId) { show("settings"); return; }
   show("games");
   clear($("gamesList"));
   $("gamesEmpty").hidden = true;
@@ -136,6 +138,10 @@ function renderGames(games) {
 // Scoring screen
 // ---------------------------------------------------------------------------
 async function openGame(g) {
+  if (!cfg.api || !cfg.token || !cfg.operatorId) {
+    alert("Proxy URL, access code, and operator label are required before opening a protected game.");
+    show("settings"); return;
+  }
   let store = loadGame(g.gameId);
   const previousIdentity = store && store.gameIdentity;
   if (!store) store = createGameState(g);
@@ -164,9 +170,17 @@ async function openGame(g) {
       if (!confirmGameIdentity(identity, { ...identity, confirmed: true })) { alert("Exact-game confirmation failed."); return; }
       resumeGame(store, remote, { gameId: g.gameId, confirmed: true });
     }
+    const lease = leaseFor(g.gameId);
+    const acquired = await lease.ensure();
+    store.leaseId = acquired.leaseId;
+    store.leaseExpiresAt = acquired.expiresAt;
     const f = current.finals;
     store._existingWarn = (remote.goals.length || remote.penalties.length || (f && (f.h || f.a))) ? "Authoritative events imported; local edits use its comparison token." : "";
   } catch (e) {
+    if (e.status === "conflict" || e.reason === "lease_owned" || e.reason === "lease_conflict" || e.reason === "identity_required") {
+      alert("This game is not available for protected scoring: " + e.message);
+      return;
+    }
     if (!store.setup) { alert("Couldn't load rosters: " + e.message); return; }
   }
   saveGame(store);
@@ -358,6 +372,13 @@ function queueFor(s) {
   if (!gameQueues.has(s.gameId)) gameQueues.set(s.gameId, createSyncQueue({
     isOnline: () => navigator.onLine,
     persist: (state) => { if (state.syncStatus === "published") state.lastSyncedAt = Date.now(); saveGame(state); if (state.gameId === activeGameId) renderGame(); },
+    prepare: async (state) => {
+      const activeLease = await leaseFor(state.gameId).ensure();
+      state.leaseId = activeLease.leaseId;
+      state.leaseExpiresAt = activeLease.expiresAt;
+      saveGame(state);
+      return syncPayload(state);
+    },
     send: (payload) => api(`/api/games/${payload.gameId}/sync`, { method: "POST", body: JSON.stringify({ username: s.homeDiv, ...payload }) }),
   }));
   return gameQueues.get(s.gameId);
@@ -374,6 +395,15 @@ async function syncActive() {
     return;
   }
   renderGame();
+}
+
+function leaseFor(gameId) {
+  const key = `${gameId}:${cfg.operatorId}`;
+  if (!gameLeases.has(key)) gameLeases.set(key, createLeaseClient({
+    gameId, operatorId: cfg.operatorId,
+    request: ({ action, leaseId, ttlMs }) => api(`/api/games/${gameId}/lease`, { method: "POST", body: JSON.stringify({ action, leaseId, ttlMs }) }),
+  }));
+  return gameLeases.get(key);
 }
 
 // ---------------------------------------------------------------------------
@@ -404,6 +434,6 @@ function boot() {
   window.addEventListener("online", () => { badge("pending"); syncActive(); });
   window.addEventListener("offline", () => { badge("pending"); if (activeGameId) renderGame(); });
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
-  if (cfg.api && cfg.token) showGames(); else show("settings");
+  if (cfg.api && cfg.token && cfg.operatorId) showGames(); else show("settings");
 }
 boot();

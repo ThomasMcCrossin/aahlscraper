@@ -4,6 +4,25 @@ export function clone(value) {
   return value == null ? value : JSON.parse(JSON.stringify(value));
 }
 
+export function apiHeaders(config = {}, extra = {}) {
+  return {
+    "Content-Type": "application/json",
+    "X-App-Token": config.token,
+    ...(config.operatorId ? { "X-Operator-Id": config.operatorId } : {}),
+    ...extra,
+  };
+}
+
+export function normalizeApiError(data = {}, httpStatus = 500) {
+  const error = new Error(data.message || data.error || `HTTP ${httpStatus}`);
+  Object.assign(error, data, {
+    httpStatus,
+    status: data.status || (httpStatus === 409 ? "conflict" : "error"),
+    reason: data.reason || data.code,
+  });
+  return error;
+}
+
 // HomeTeamsOnline records running score text as (home-away), in chronological
 // event order. Keep this convention explicit so display order cannot silently
 // change the published representation.
@@ -186,13 +205,57 @@ export function syncPayload(state) {
     gameId: state.gameId, revision: state.revision,
     seasonMapId: state.seasonMapId || state.setup?.seasonMapId,
     comparisonToken: state.remoteBaseline.comparisonToken,
+    ...(state.leaseId ? { leaseId: state.leaseId } : {}),
     scoreSummary: clone(state.scoreSummary), penaltySummary: clone(state.penaltySummary),
+  };
+}
+
+// Browser-independent lease lifecycle. The request function is injected so
+// tests can use recorded responses and the PWA never needs a network-aware
+// lease implementation here.
+export function createLeaseClient({ gameId, operatorId, request, now = () => Date.now(), ttlMs = 30000, renewLeadMs = 5000 }) {
+  if (!gameId || !operatorId) throw new Error("game and operator identity are required");
+  if (typeof request !== "function") throw new Error("lease request adapter is required");
+  let lease = null;
+  const call = (action, leaseId) => request({ action, gameId, operatorId, leaseId, ttlMs });
+  function adopt(result) {
+    if (!result || result.ok === false || !result.leaseId || !result.expiresAt) {
+      const error = new Error(result?.message || result?.error || "game lease request failed");
+      Object.assign(error, result || {}, { status: result?.status || "conflict" });
+      throw error;
+    }
+    lease = { leaseId: result.leaseId, expiresAt: Number(result.expiresAt), operatorId };
+    return { ...lease };
+  }
+  return {
+    async acquire() { return adopt(await call("acquire")); },
+    async renew() {
+      if (!lease) return this.acquire();
+      return adopt(await call("renew", lease.leaseId));
+    },
+    async ensure() {
+      if (lease && lease.expiresAt > now() + renewLeadMs) return { ...lease };
+      return lease && lease.expiresAt > now() ? this.renew() : this.acquire();
+    },
+    async release() {
+      if (!lease || lease.operatorId !== operatorId) return { ok: true, released: false };
+      const owned = lease;
+      const result = await call("release", owned.leaseId);
+      if (result?.ok === false) {
+        const error = new Error(result.message || result.error || "lease release failed");
+        Object.assign(error, result, { status: result.status || "conflict" });
+        throw error;
+      }
+      lease = null;
+      return result;
+    },
+    get current() { return lease && { ...lease }; },
   };
 }
 
 // One queue instance belongs to exactly one game. A later enqueue replaces the
 // pending payload, while the in-flight payload remains immutable.
-export function createSyncQueue({ send, persist = () => {}, isOnline = () => true }) {
+export function createSyncQueue({ send, persist = () => {}, isOnline = () => true, prepare = null }) {
   let inFlight = false;
   let pending = null;
   let latestRevision = 0;
@@ -203,15 +266,16 @@ export function createSyncQueue({ send, persist = () => {}, isOnline = () => tru
     pending = null;
     inFlight = true;
     try {
-      const result = await send(item.payload);
-      if (item.state.revision === item.payload.revision && item.payload.revision >= latestRevision) {
+      const payload = prepare ? await prepare(item.state, item.payload) : item.payload;
+      const result = await send(payload);
+      if (item.state.revision === payload.revision && payload.revision >= latestRevision) {
         if (result && result.ok === false) {
           item.state.dirty = true;
           item.state.syncStatus = result.status || (result.conflict ? "conflict" : "error");
           item.state.syncPhase = result.phase || null;
           item.state.syncError = result.message || result.error || "publication failed";
         } else {
-          item.state.syncedRevision = item.payload.revision;
+          item.state.syncedRevision = payload.revision;
           item.state.dirty = false;
           item.state.syncStatus = result && result.status || "published";
           item.state.syncPhase = result && result.phase || "published";
@@ -224,7 +288,7 @@ export function createSyncQueue({ send, persist = () => {}, isOnline = () => tru
       }
     } catch (error) {
       item.state.dirty = true;
-      item.state.syncStatus = error.status || "error";
+      item.state.syncStatus = error.status || (error.reason === "lease_conflict" ? "conflict" : "error");
       item.state.syncPhase = error.phase || null;
       item.state.syncError = error.message;
       if (error.comparisonToken && item.state.remoteBaseline) {
