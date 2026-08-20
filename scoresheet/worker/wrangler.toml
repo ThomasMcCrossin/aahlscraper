@@ -4,7 +4,18 @@ compatibility_date = "2025-09-01"
 
 # CORS origin for the PWA. Set to your Pages URL once deployed.
 [vars]
-ALLOWED_ORIGIN = "*"
+ALLOWED_ORIGIN = "REPLACE_WITH_EXACT_PWA_ORIGIN"
+
+# One Durable Object instance owns the lease for one exact game. Its serialized
+# requests provide the atomic acquire/renew/release boundary; KV is not used for
+# lease arbitration.
+[[durable_objects.bindings]]
+name = "GAME_LEASES"
+class_name = "GameLease"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["GameLease"]
 
 # Session cookie store. Create with:
 #   npx wrangler kv namespace create SESSION

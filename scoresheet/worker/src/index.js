@@ -13,7 +13,8 @@
  * Endpoints (all require header `X-App-Token: <APP_TOKEN>`):
  *   GET  /api/games                         -> [{gameId, gameId2, homeDiv, awayDiv, home, away, location, startMs}]
  *   GET  /api/games/:gameId/setup?div=&g2=  -> {home, away, infractions, current}
- *   POST /api/games/:gameId/sync            -> {ok, results}   body: {username, scoreSummary[], penaltySummary[]}
+ *   POST /api/games/:gameId/lease           -> acquire/renew/release a game lease
+ *   POST /api/games/:gameId/sync            -> compare-and-replace summaries
  *   GET  /api/health                        -> {ok}
  *
  * Bindings (wrangler.toml):
@@ -71,10 +72,22 @@ export default {
         return json(await gameSetup(env, setup[1], div, g2), 200, cors);
       }
 
+      const lease = url.pathname.match(/^\/api\/games\/(\d+)\/lease$/);
+      if (lease && request.method === "POST") {
+        const operatorId = operatorIdentity(request, env);
+        if (!operatorId) return json(conflict("identity_required", "operator identity is required"), 409, cors);
+        const body = await request.json();
+        const result = await leaseAction(env, lease[1], body, operatorId);
+        return json(result, result.ok ? 200 : 409, cors);
+      }
+
       const sync = url.pathname.match(/^\/api\/games\/(\d+)\/sync$/);
       if (sync && request.method === "POST") {
         const body = await request.json();
-        return json(await syncGame(env, sync[1], body), 200, cors);
+        const operatorId = operatorIdentity(request, env);
+        if (!operatorId) return json(conflict("identity_required", "operator identity is required"), 409, cors);
+        const result = await syncGame(env, sync[1], body, { operatorId });
+        return json(result, result.conflict ? 409 : 200, cors);
       }
 
       return json({ ok: false, error: "not found" }, 404, cors);
@@ -91,7 +104,7 @@ function corsHeaders(env) {
   return {
     "Access-Control-Allow-Origin": env.ALLOWED_ORIGIN || "*",
     "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type,X-App-Token",
+    "Access-Control-Allow-Headers": "Content-Type,X-App-Token,X-Operator-Id",
   };
 }
 function json(obj, statusCode, cors) {
@@ -229,18 +242,147 @@ async function gameSetup(env, gameId, div, gameId2) {
   };
 }
 
-async function syncGame(env, gameId, body) {
-  const username = body.username; // home division id
-  if (!username) throw new Error("missing username (home division id)");
+async function syncGame(env, gameId, body, options = {}) {
+  const username = body.username; // home division id, not operator identity
+  const operatorId = options.operatorId || body.operatorId;
+  if (!username) return conflict("invalid_request", "missing username (home division id)");
+  if (!operatorId) return conflict("identity_required", "operator identity is required");
+  if (!body.leaseId) return conflict("lease_required", "an active game lease is required");
+  if (!body.comparisonToken) return conflict("baseline_required", "authoritative comparison token is required");
+
+  const coordinator = options.coordinator || leaseCoordinator(env);
+  const ownership = await coordinator.check({ gameId, operatorId, leaseId: body.leaseId });
+  if (!ownership.ok) return conflict(ownership.reason || "lease_conflict", ownership.message || "game lease is not owned");
+
+  // This read is deliberately immediately before the first write. The caller's
+  // token is compared to a fresh authoritative snapshot, never to cached KV.
+  let remote;
+  try {
+    remote = options.authoritativeReader
+      ? await options.authoritativeReader({ gameId, username, gameId2: body.gameId2 })
+      : (await gameSetup(env, gameId, username, body.gameId2 || "")).current;
+  } catch (error) {
+    return conflict("remote_read_failed", error.message);
+  }
+  if (!remote || !remote.comparisonToken) return conflict("baseline_required", "authoritative baseline is required");
+  const actualToken = comparisonToken({ finals: remote.finals, goals: remote.goals, penalties: remote.penalties });
+  if (actualToken !== body.comparisonToken || actualToken !== remote.comparisonToken) {
+    return conflict("remote_drift", "authoritative remote snapshot changed");
+  }
+  const stillOwned = await coordinator.check({ gameId, operatorId, leaseId: body.leaseId });
+  if (!stillOwned.ok) return conflict(stillOwned.reason || "lease_conflict", stillOwned.message || "game lease expired before publish");
+  if (!Array.isArray(body.scoreSummary) && !Array.isArray(body.penaltySummary)) {
+    return conflict("invalid_request", "at least one summary array is required");
+  }
 
   const results = {};
   if (Array.isArray(body.scoreSummary)) {
-    results.score = await postSummary(env, "updateScoreSummary", "scoreSummaryData", gameId, username, body.scoreSummary);
+    results.score = await (options.writer || postSummary)(env, "updateScoreSummary", "scoreSummaryData", gameId, username, body.scoreSummary);
   }
   if (Array.isArray(body.penaltySummary)) {
-    results.penalty = await postSummary(env, "updatePenaltySummary", "penaltySummaryData", gameId, username, body.penaltySummary);
+    results.penalty = await (options.writer || postSummary)(env, "updatePenaltySummary", "penaltySummaryData", gameId, username, body.penaltySummary);
   }
-  return { ok: true, results };
+  return { ok: true, results, leaseId: body.leaseId, comparisonToken: actualToken };
+}
+
+function conflict(code, message) { return { ok: false, conflict: true, code, message, writes: 0 }; }
+
+function operatorIdentity(request, env) {
+  // D2 is intentionally unresolved: this is only an injected/default adapter,
+  // and never a claim that X-Operator-Id is an identity provider.
+  return (env.IDENTITY_ADAPTER || defaultIdentityAdapter)(request, env);
+}
+function defaultIdentityAdapter(request) { return request.headers.get("X-Operator-Id") || null; }
+
+async function leaseAction(env, gameId, body, operatorId) {
+  const coordinator = leaseCoordinator(env);
+  const input = { gameId, operatorId, leaseId: body.leaseId, ttlMs: body.ttlMs };
+  if (body.action === "acquire") return coordinator.acquire(input);
+  if (body.action === "renew") return coordinator.renew(input);
+  if (body.action === "release") return coordinator.release(input);
+  return conflict("invalid_request", "lease action must be acquire, renew, or release");
+}
+
+function leaseCoordinator(env) {
+  if (env.GAME_LEASES && typeof env.GAME_LEASES.idFromName === "function") {
+    return durableLeaseCoordinator(env.GAME_LEASES);
+  }
+  return env.LEASE_COORDINATOR || rejectingLeaseCoordinator();
+}
+
+function durableLeaseCoordinator(namespace) {
+  const stub = (gameId) => namespace.get(namespace.idFromName(String(gameId)));
+  return { acquire: (x) => stub(x.gameId).fetch("https://lease/acquire", { method: "POST", body: JSON.stringify(x) }).then(r => r.json()),
+    renew: (x) => stub(x.gameId).fetch("https://lease/renew", { method: "POST", body: JSON.stringify(x) }).then(r => r.json()),
+    release: (x) => stub(x.gameId).fetch("https://lease/release", { method: "POST", body: JSON.stringify(x) }).then(r => r.json()),
+    check: (x) => stub(x.gameId).fetch("https://lease/check", { method: "POST", body: JSON.stringify(x) }).then(r => r.json()) };
+}
+
+function rejectingLeaseCoordinator() {
+  const rejected = async () => ({ ok: false, reason: "lease_unconfigured", message: "distributed game lease is not configured" });
+  return { acquire: rejected, renew: rejected, release: rejected, check: rejected };
+}
+
+/** Durable Object: one object per exact game gives serialized lease mutations. */
+export class GameLease {
+  constructor(state) { this.state = state; }
+  async fetch(request) {
+    const action = new URL(request.url).pathname.slice(1);
+    const input = await request.json();
+    const now = Date.now();
+    const current = await this.state.storage.get("lease");
+    if (current && current.expiresAt <= now) await this.state.storage.delete("lease");
+    const lease = current && current.expiresAt > now ? current : null;
+    let result;
+    if (action === "acquire") {
+      if (lease && lease.operatorId !== input.operatorId) result = conflict("lease_owned", "game is leased by another operator");
+      else {
+        const next = { operatorId: input.operatorId, leaseId: lease?.leaseId || crypto.randomUUID(), expiresAt: now + leaseTtl(input.ttlMs) };
+        await this.state.storage.put("lease", next); result = { ok: true, ...next };
+      }
+    } else if (action === "renew" || action === "release" || action === "check") {
+      const owns = lease && lease.operatorId === input.operatorId && lease.leaseId === input.leaseId;
+      if (!owns) result = conflict("lease_conflict", "lease owner or lease token is invalid");
+      else if (action === "release") { await this.state.storage.delete("lease"); result = { ok: true, released: true }; }
+      else if (action === "renew") { const next = { ...lease, expiresAt: now + leaseTtl(input.ttlMs) }; await this.state.storage.put("lease", next); result = { ok: true, ...next }; }
+      else result = { ok: true, expiresAt: lease.expiresAt };
+    } else result = conflict("invalid_request", "unknown lease action");
+    return new Response(JSON.stringify(result), { headers: { "Content-Type": "application/json" } });
+  }
+}
+
+function leaseTtl(value) { return Math.min(Math.max(Number(value) || 30000, 1000), 120000); }
+
+/** Fixture/test coordinator. Production uses the Durable Object above. */
+function createInMemoryLeaseCoordinator(clock = () => Date.now()) {
+  const leases = new Map(); let sequence = 0;
+  function active(gameId) {
+    const lease = leases.get(String(gameId));
+    if (lease && lease.expiresAt <= clock()) { leases.delete(String(gameId)); return null; }
+    return lease || null;
+  }
+  function own(input) {
+    const lease = active(input.gameId);
+    return lease && lease.operatorId === input.operatorId && lease.leaseId === input.leaseId;
+  }
+  return {
+    async acquire(input) {
+      const existing = active(input.gameId);
+      if (existing && existing.operatorId !== input.operatorId) return conflict("lease_owned", "game is leased by another operator");
+      const lease = { operatorId: input.operatorId, leaseId: existing?.leaseId || `lease-${++sequence}`, expiresAt: clock() + leaseTtl(input.ttlMs) };
+      leases.set(String(input.gameId), lease); return { ok: true, ...lease };
+    },
+    async renew(input) {
+      if (!own(input)) return conflict("lease_conflict", "lease owner or lease token is invalid");
+      const lease = { ...active(input.gameId), expiresAt: clock() + leaseTtl(input.ttlMs) };
+      leases.set(String(input.gameId), lease); return { ok: true, ...lease };
+    },
+    async release(input) {
+      if (!own(input)) return conflict("lease_conflict", "lease owner or lease token is invalid");
+      leases.delete(String(input.gameId)); return { ok: true, released: true };
+    },
+    async check(input) { return own(input) ? { ok: true } : conflict("lease_conflict", "lease owner or lease token is invalid"); },
+  };
 }
 
 async function postSummary(env, action, key, gameId, username, arr) {
@@ -431,4 +573,4 @@ function stripTags(s) {
   return s.replace(/<[^>]*>/g, " ").replace(/&amp;/g, "&").replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim();
 }
 
-export { comparisonToken, gameSetup, parseAuthoritativeEvents };
+export { comparisonToken, createInMemoryLeaseCoordinator, gameSetup, parseAuthoritativeEvents, syncGame };

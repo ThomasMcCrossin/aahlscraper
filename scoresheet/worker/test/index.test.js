@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
-import { comparisonToken, gameSetup, parseAuthoritativeEvents } from "../src/index.js";
+import { comparisonToken, createInMemoryLeaseCoordinator, gameSetup, parseAuthoritativeEvents, syncGame } from "../src/index.js";
 
 const fixture = await readFile(new URL("./fixtures/game-editor.html", import.meta.url), "utf8");
 
@@ -49,4 +49,61 @@ test("network tripwire rejects an unmocked request immediately", async () => {
   try {
     await assert.rejects(() => globalThis.fetch("https://unexpected.invalid/"), /unexpected network request/);
   } finally { restore(); }
+});
+
+test("Blocker 3 regression: leases acquire, renew, release, and expire atomically", async () => {
+  let now = 1000;
+  const c = createInMemoryLeaseCoordinator(() => now);
+  const first = await c.acquire({ gameId: "g-1", operatorId: "op-a", ttlMs: 1000 });
+  assert.equal(first.ok, true);
+  assert.equal((await c.acquire({ gameId: "g-1", operatorId: "op-b" })).code, "lease_owned");
+  const renewed = await c.renew({ gameId: "g-1", operatorId: "op-a", leaseId: first.leaseId, ttlMs: 2000 });
+  assert.equal(renewed.expiresAt, 3000);
+  assert.equal((await c.release({ gameId: "g-1", operatorId: "op-b", leaseId: first.leaseId })).code, "lease_conflict");
+  now = 3000;
+  assert.equal((await c.check({ gameId: "g-1", operatorId: "op-a", leaseId: first.leaseId })).code, "lease_conflict");
+  const afterExpiry = await c.acquire({ gameId: "g-1", operatorId: "op-b", ttlMs: 1000 });
+  assert.equal(afterExpiry.ok, true);
+});
+
+function authoritative(goals = [], penalties = [], finals = { h: 0, a: 0 }) {
+  return { goals, penalties, finals, comparisonToken: comparisonToken({ finals, goals, penalties }) };
+}
+
+test("Blocker 3 regression: wrong owner, missing baseline, and stale remote token do zero writes", async () => {
+  const coordinator = createInMemoryLeaseCoordinator();
+  const lease = await coordinator.acquire({ gameId: "g-1", operatorId: "op-a" });
+  const remote = authoritative([{ id: "remote" }]);
+  let writes = 0;
+  const writer = async () => { writes += 1; return { success: 1 }; };
+  const base = { username: "HOME-DIV", leaseId: lease.leaseId, comparisonToken: remote.comparisonToken, scoreSummary: [], penaltySummary: [] };
+  const wrongOwner = await syncGame({}, "g-1", base, { operatorId: "op-b", coordinator, authoritativeReader: async () => remote, writer });
+  assert.equal(wrongOwner.code, "lease_conflict");
+  assert.equal(writes, 0);
+  const missing = await syncGame({}, "g-1", { ...base, leaseId: undefined }, { operatorId: "op-a", coordinator, authoritativeReader: async () => remote, writer });
+  assert.equal(missing.code, "lease_required");
+  assert.equal(writes, 0);
+  const drift = await syncGame({}, "g-1", { ...base, comparisonToken: "stale" }, { operatorId: "op-a", coordinator, authoritativeReader: async () => remote, writer });
+  assert.equal(drift.code, "remote_drift");
+  assert.equal(drift.writes, 0);
+  assert.equal(writes, 0);
+});
+
+test("Blocker 3 regression: compare is against a freshly read authoritative snapshot before replacement", async () => {
+  const coordinator = createInMemoryLeaseCoordinator();
+  const lease = await coordinator.acquire({ gameId: "g-2", operatorId: "op-a" });
+  const remote = authoritative([{ id: "old" }], []);
+  const calls = [];
+  const writes = [];
+  const result = await syncGame({}, "g-2", {
+    username: "HOME-DIV", leaseId: lease.leaseId, comparisonToken: remote.comparisonToken,
+    scoreSummary: [{ id: "new" }], penaltySummary: [],
+  }, {
+    operatorId: "op-a", coordinator,
+    authoritativeReader: async () => { calls.push("read"); return remote; },
+    writer: async (_env, action) => { calls.push("write"); writes.push(action); return { success: 1 }; },
+  });
+  assert.equal(result.ok, true);
+  assert.deepEqual(calls, ["read", "write", "write"]);
+  assert.deepEqual(writes, ["updateScoreSummary", "updatePenaltySummary"]);
 });

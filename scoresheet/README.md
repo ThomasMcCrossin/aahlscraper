@@ -61,16 +61,25 @@ cd web && python3 -m http.server 5173  # PWA at http://localhost:5173
 | GET | `/api/health` | liveness (no auth) |
 | GET | `/api/games` | list season games `{gameId,gameId2,homeDiv,awayDiv,home,away,location,startMs}` |
 | GET | `/api/games/:id/setup?div=&g2=` | rosters (with HTO player ids), infractions, current finals |
-| POST | `/api/games/:id/sync` | `{username,scoreSummary[],penaltySummary[]}` → replace summaries |
+| POST | `/api/games/:id/lease` | `{action:"acquire"|"renew"|"release",leaseId?,ttlMs?}` |
+| POST | `/api/games/:id/sync` | `{username,leaseId,comparisonToken,scoreSummary[],penaltySummary[]}` → compare then replace |
 
-All except `/api/health` require header `X-App-Token: <APP_TOKEN>`.
+All except `/api/health` require header `X-App-Token: <APP_TOKEN>`. Lease and sync
+also require an operator identity. The default adapter reads `X-Operator-Id`; D2
+identity-provider selection remains unresolved.
+
+Sync validates ownership and freshly reads the authoritative event arrays before
+either upstream replacement. Wrong owner, expired or missing lease, missing
+baseline, and remote drift return structured conflicts with zero upstream writes.
+Production arbitration uses one `GameLease` Durable Object per exact game; it does
+not pretend eventually consistent KV is atomic.
 
 ## Known prototype limitations / next steps
 - **Resume mid-game:** `setup` returns current *finals* (to warn before overwriting)
   but not the full prior event list — entering a brand-new game live is the target
   use case. Full resume = parse the existing summary (v2).
-- **Auth:** single shared `APP_TOKEN`. Fine for one trusted timekeeper; add per-user
-  codes if multiple people score concurrently.
+- **Auth:** `APP_TOKEN` remains the fail-closed edge gate. Operator identity is
+  intentionally only an injected/default adapter until D2 selects an identity system.
 - **Game status (in-progress / final):** intentionally out of scope. On the site this
   isn't an AJAX action — it toggles `#inProgress` and submits the full score form
   (and `pre` *clears* the game). Wire it in v2 via the full-form POST, computing the
