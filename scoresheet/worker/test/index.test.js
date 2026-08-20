@@ -81,17 +81,30 @@ test("per-game registry mints plaintext once and stores only a keyed digest", as
 test("per-game registry enforces wrong game, expiry, revoke, reissue, and lockout", async () => {
   const { registry, data } = registryFixture();
   const first = await registryAction(registry, "mint", { gameId: "201", pepper: "p" });
-  assert.equal((await registryAction(registry, "redeem", { code: first.code, gameId: "202", pepper: "p" })).reason, "wrong_game");
+  await registryAction(registry, "mint", { gameId: "202", pepper: "p" });
+  assert.equal((await registryAction(registry, "redeem", { code: first.code, gameId: "202", requestSubject: "wrong-game", pepper: "p" })).reason, "wrong_game");
   await registryAction(registry, "revoke", { gameId: "201", pepper: "p" });
-  assert.equal((await registryAction(registry, "redeem", { code: first.code, gameId: "201", pepper: "p" })).reason, "code_revoked");
+  assert.equal((await registryAction(registry, "redeem", { code: first.code, gameId: "201", requestSubject: "revoked", pepper: "p" })).reason, "code_revoked");
   const second = await registryAction(registry, "reissue", { gameId: "201", pepper: "p" });
-  assert.equal((await registryAction(registry, "redeem", { code: first.code, gameId: "201", pepper: "p" })).reason, "code_invalid");
+  assert.equal((await registryAction(registry, "redeem", { code: first.code, gameId: "201", requestSubject: "reissued", pepper: "p" })).reason, "code_invalid");
   data.get("game:201").expiresAt = Date.now() - 1;
-  assert.equal((await registryAction(registry, "redeem", { code: second.code, gameId: "201", pepper: "p" })).reason, "code_expired");
+  assert.equal((await registryAction(registry, "redeem", { code: second.code, gameId: "201", requestSubject: "expired", pepper: "p" })).reason, "code_expired");
   const third = await registryAction(registry, "reissue", { gameId: "201", pepper: "p" });
-  for (let i = 0; i < 4; i++) assert.equal((await registryAction(registry, "redeem", { code: "BADCODE1", gameId: "201", pepper: "p" })).reason, "code_invalid");
-  assert.equal((await registryAction(registry, "redeem", { code: "BADCODE1", gameId: "201", pepper: "p" })).reason, "code_locked");
-  assert.equal((await registryAction(registry, "redeem", { code: third.code, gameId: "201", pepper: "p" })).reason, "code_locked");
+  for (let i = 0; i < 4; i++) assert.equal((await registryAction(registry, "redeem", { code: "BADCODE1", gameId: "201", requestSubject: "brute", pepper: "p" })).reason, "code_invalid");
+  assert.equal((await registryAction(registry, "redeem", { code: "BADCODE1", gameId: "201", requestSubject: "brute", pepper: "p" })).reason, "code_locked");
+  assert.equal((await registryAction(registry, "redeem", { code: third.code, gameId: "201", requestSubject: "brute", pepper: "p" })).reason, "code_locked");
+});
+
+test("unknown list-entry guesses lock the peppered subject without storing client data or code", async () => {
+  const { registry, data } = registryFixture();
+  await registryAction(registry, "mint", { gameId: "250", pepper: "p" });
+  for (let i = 0; i < 4; i++) assert.equal((await registryAction(registry, "redeem", { code: "UNKNOWN1", requestSubject: "peppered-subject", pepper: "p" })).reason, "code_invalid");
+  assert.equal((await registryAction(registry, "redeem", { code: "UNKNOWN1", requestSubject: "peppered-subject", pepper: "p" })).reason, "code_locked");
+  assert.equal((await registryAction(registry, "redeem", { code: (await registryAction(registry, "mint", { gameId: "251", pepper: "p" })).code, gameId: "251", requestSubject: "peppered-subject", pepper: "p" })).reason, "code_locked");
+  const stored = [...data.values()];
+  assert.equal(stored.some((value) => JSON.stringify(value).includes("UNKNOWN1")), false);
+  assert.equal(stored.some((value) => JSON.stringify(value).includes("peppered-subject")), false);
+  assert.equal([...data.keys()].some((key) => key.startsWith("subject:")), true);
 });
 
 test("constant-time digest helper compares fixed and mismatched lengths without coercion", () => {
@@ -108,6 +121,47 @@ test("captain routes reject APP_TOKEN fallback and missing code before protected
     });
     assert.equal(response.status, 401); assert.equal((await response.json()).reason, "code_required");
   } finally { restore(); }
+});
+
+test("route lease uses redeemed subject, ignores X-Operator-Id, and reissue conflicts", async () => {
+  const { registry, data } = registryFixture();
+  const first = await registryAction(registry, "mint", { gameId: "401", pepper: "p" });
+  const firstSubject = data.get("game:401").subject;
+  const coordinator = createInMemoryLeaseCoordinator();
+  const existing = await coordinator.acquire({ gameId: "401", operatorId: firstSubject });
+  const env = { APP_TOKEN: "admin", ALLOWED_ORIGIN: "https://scores.invalid", GAME_CODE_PEPPER: "p", GAME_CODE_REGISTRY: registry, LEASE_COORDINATOR: coordinator };
+  const request = (code) => new Request("https://worker.invalid/api/games/401/lease", {
+    method: "POST", headers: { Origin: "https://scores.invalid", "X-Game-Code": code, "X-Operator-Id": "caller-controlled" },
+    body: JSON.stringify({ action: "renew", leaseId: existing.leaseId, ttlMs: 30000 }),
+  });
+  const owned = await worker.fetch(request(first.code), env);
+  assert.equal(owned.status, 200, await owned.text());
+  const second = await registryAction(registry, "reissue", { gameId: "401", pepper: "p" });
+  const conflicted = await worker.fetch(request(second.code), env);
+  assert.equal(conflicted.status, 409);
+  assert.equal((await conflicted.json()).code, "lease_conflict");
+});
+
+test("unknown code guesses on /api/games reach a stable 429 lock without upstream", async () => {
+  const restore = installNetworkTripwire();
+  const { registry } = registryFixture();
+  try {
+    const env = { APP_TOKEN: "admin", ALLOWED_ORIGIN: "https://scores.invalid", GAME_CODE_PEPPER: "p", GAME_CODE_REGISTRY: registry };
+    const makeRequest = () => new Request("https://worker.invalid/api/games", { headers: { Origin: "https://scores.invalid", "X-Game-Code": "UNKNOWN1", "CF-Connecting-IP": "198.51.100.7" } });
+    for (let i = 0; i < 4; i++) assert.equal((await worker.fetch(makeRequest(), env)).status, 401);
+    const locked = await worker.fetch(makeRequest(), env);
+    assert.equal(locked.status, 429);
+    assert.equal((await locked.json()).reason, "code_locked");
+  } finally { restore(); }
+});
+
+test("admin code actions are POST-only and preserve non-success status", async () => {
+  const { registry } = registryFixture();
+  const env = { APP_TOKEN: "admin", ALLOWED_ORIGIN: "https://scores.invalid", GAME_CODE_PEPPER: "p", GAME_CODE_REGISTRY: registry };
+  const get = await worker.fetch(new Request("https://worker.invalid/api/admin/game-codes/mint", { headers: { Origin: "https://scores.invalid", "X-App-Token": "admin" } }), env);
+  assert.equal(get.status, 405);
+  const invalid = await worker.fetch(new Request("https://worker.invalid/api/admin/game-codes/mint", { method: "POST", headers: { Origin: "https://scores.invalid", "X-App-Token": "admin", "Content-Type": "application/json" }, body: "{}" }), env);
+  assert.equal(invalid.status, 400);
 });
 
 test("redeemed code filters the games list to its exact game", async () => {

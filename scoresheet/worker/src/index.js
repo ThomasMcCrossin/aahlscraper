@@ -68,7 +68,10 @@ export default {
       const admin = url.pathname.startsWith("/api/admin/game-codes/");
       if (admin && request.headers.get("X-App-Token") !== configured.token)
         return json({ ok: false, error: "unauthorized" }, 401, cors);
-      if (admin) return json(await adminCodeRoute(env, url, request), 200, cors);
+      if (admin) {
+        const result = await adminCodeRoute(env, url, request);
+        return json(result.body, result.status, cors);
+      }
 
       const protectedRoute = url.pathname === "/api/games" || /^\/api\/games\/\d+\/(setup|lease|sync)$/.test(url.pathname);
       if (!protectedRoute) {
@@ -161,22 +164,29 @@ async function registryCall(env, path, body) {
   return response.json();
 }
 async function adminCodeRoute(env, url, request) {
-  if (!env.GAME_CODE_PEPPER) return codeError("configuration_error");
-  const body = request.method === "POST" ? await request.json() : {};
+  if (!env.GAME_CODE_PEPPER || !env.GAME_CODE_REGISTRY) return { body: codeError("configuration_error"), status: 503 };
+  if (request.method !== "POST") return { body: { ok: false, error: "method_not_allowed" }, status: 405 };
+  const body = await request.json();
   const gameId = String(body.gameId || "");
-  if (!gameId) return { ok: false, error: "invalid_request", message: "gameId is required" };
+  if (!gameId) return { body: { ok: false, error: "invalid_request", message: "gameId is required" }, status: 400 };
   const action = url.pathname.split("/").pop();
-  if (action === "mint" || action === "reissue") return registryCall(env, `/${action}`, { gameId, ttlMs: boundedTtl(body.ttlMs), pepper: env.GAME_CODE_PEPPER });
-  if (action === "revoke") return registryCall(env, "/revoke", { gameId, pepper: env.GAME_CODE_PEPPER });
-  return { ok: false, error: "not found" };
+  if (action !== "mint" && action !== "reissue" && action !== "revoke") return { body: { ok: false, error: "not_found" }, status: 404 };
+  const result = action === "revoke"
+    ? await registryCall(env, "/revoke", { gameId, pepper: env.GAME_CODE_PEPPER })
+    : await registryCall(env, `/${action}`, { gameId, ttlMs: boundedTtl(body.ttlMs), pepper: env.GAME_CODE_PEPPER });
+  return { body: result, status: result.ok ? 200 : 400 };
+}
+async function rateLimitSubject(request, pepper) {
+  const forwarded = request.headers.get("CF-Connecting-IP") || "anonymous";
+  return keyedDigest(`request-subject:${forwarded.split(",")[0].trim()}`, pepper);
 }
 async function captainAuthorization(env, request, url) {
-  if (!env.GAME_CODE_PEPPER || !env.GAME_CODE_REGISTRY) return { ok: false, status: 503, body: codeError("configuration_error") };
+  if (!env.GAME_CODE_PEPPER || !env.GAME_CODE_REGISTRY || (typeof env.GAME_CODE_REGISTRY.fetch !== "function" && typeof env.GAME_CODE_REGISTRY.idFromName !== "function")) return { ok: false, status: 503, body: codeError("configuration_error") };
   const supplied = request.headers.get("X-Game-Code");
   if (!supplied) return { ok: false, status: 401, body: codeError("code_required") };
   const expectedGame = url.pathname.match(/^\/api\/games\/(\d+)\//)?.[1] || null;
-  const result = await registryCall(env, "/redeem", { code: supplied, gameId: expectedGame, pepper: env.GAME_CODE_PEPPER });
-  if (!result.ok) return { ok: false, status: result.reason === "wrong_game" ? 403 : 401, body: codeError(result.reason || "code_invalid") };
+  const result = await registryCall(env, "/redeem", { code: supplied, gameId: expectedGame, requestSubject: await rateLimitSubject(request, env.GAME_CODE_PEPPER), pepper: env.GAME_CODE_PEPPER });
+  if (!result.ok) return { ok: false, status: result.reason === "code_locked" ? 429 : result.reason === "wrong_game" ? 403 : 401, body: codeError(result.reason || "code_invalid") };
   return { ok: true, gameId: String(result.gameId), operatorId: await operatorFromSubject(result.subject, env) };
 }
 function operatorFromSubject(subject, env) {
@@ -200,28 +210,37 @@ export class GameCodeRegistry {
       return this.response({ ok: true, revoked: true, gameId: String(input.gameId) });
     }
     if (action === "redeem") {
+      const subjectKey = `subject:${String(input.requestSubject || "fixture-subject")}`;
+      let attempt = await this.state.storage.get(subjectKey);
+      if (attempt?.lockedUntil > now) return this.response(codeError("code_locked"), 429);
+      if (attempt?.lockedUntil && attempt.lockedUntil <= now) attempt = null;
+      const digest = await keyedDigest(input.code, input.pepper);
       if (!record && typeof this.state.storage.list === "function") {
         const all = await this.state.storage.list({ prefix: "game:" });
-        const digest = await keyedDigest(input.code, input.pepper);
+        for (const candidate of all.values()) if (constantTimeEqual(digest, candidate.digest)) { record = candidate; break; }
+      } else if (record && !constantTimeEqual(digest, record.digest) && typeof this.state.storage.list === "function") {
+        const all = await this.state.storage.list({ prefix: "game:" });
         for (const candidate of all.values()) if (constantTimeEqual(digest, candidate.digest)) { record = candidate; break; }
       }
-      if (!record) return this.response(codeError("code_invalid"));
-      if (record.revoked) return this.response(codeError("code_revoked"));
-      if (record.expiresAt <= now) return this.response(codeError("code_expired"));
-      if (record.lockedUntil > now) return this.response(codeError("code_locked"));
-      const digest = await keyedDigest(input.code, input.pepper);
+      const fail = async (reason) => {
+        const failures = (attempt?.failures || 0) + 1;
+        const lockedUntil = failures >= MAX_FAILED_ATTEMPTS ? now + LOCKOUT_MS : 0;
+        await this.state.storage.put(subjectKey, { failures, lockedUntil, expiresAt: now + LOCKOUT_MS });
+        return this.response(codeError(lockedUntil ? "code_locked" : reason), lockedUntil ? 429 : 401);
+      };
+      if (!record) return fail("code_invalid");
+      if (record.revoked) return fail("code_revoked");
+      if (record.expiresAt <= now) return fail("code_expired");
       if (!constantTimeEqual(digest, record.digest)) {
-        const failures = (record.failures || 0) + 1; const lockedUntil = failures >= MAX_FAILED_ATTEMPTS ? now + LOCKOUT_MS : 0;
-        await this.state.storage.put(key, { ...record, failures, lockedUntil });
-        return this.response(codeError(lockedUntil ? "code_locked" : "code_invalid"));
+        return fail("code_invalid");
       }
-      await this.state.storage.put(`game:${record.gameId}`, { ...record, failures: 0, lockedUntil: 0 });
-      if (input.gameId && String(input.gameId) !== record.gameId) return this.response(codeError("wrong_game"));
+      if (input.gameId && String(input.gameId) !== record.gameId) return fail("wrong_game");
+      await this.state.storage.delete(subjectKey);
       return this.response({ ok: true, gameId: record.gameId, subject: record.subject });
     }
     return this.response({ ok: false, error: "not found" });
   }
-  response(value) { return new Response(JSON.stringify(value), { headers: { "Content-Type": "application/json" } }); }
+  response(value, status = 200) { return new Response(JSON.stringify(value), { status, headers: { "Content-Type": "application/json" } }); }
 }
 
 function configuration(env) {
