@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { apiHeaders, captureEvent, createGameState, createLeaseClient, createSyncQueue, normalizeApiError, resumeGame, syncPayload, validateGoal, validatePenalty, validateEvents, deleteEvent, undoDeletion, editEvent, exportRecovery, importRecovery, confirmGameIdentity, recomputeRunningScore } from "../state.js";
+import { apiHeaders, captureEvent, createGameState, createLeaseClient, createSyncQueue, normalizeApiError, normalizeGameCode, gameCodeKey, storeGameCode, getGameCode, removeGameCode, isAuthorizationError, resumeGame, syncPayload, validateGoal, validatePenalty, validateEvents, deleteEvent, undoDeletion, editEvent, exportRecovery, importRecovery, confirmGameIdentity, recomputeRunningScore } from "../state.js";
 
 const game = { gameId: "g-1", homeDiv: "H", awayDiv: "A" };
 const remote = { goals: [{ id: "old" }], penalties: [{ id: "pen" }], comparisonToken: "token-1" };
@@ -97,13 +97,37 @@ test("R1 lease conflict keeps revision dirty and sync payload carries exact leas
   assert.equal(s.syncedRevision, 0);
 });
 
-test("R1 browser API contract sends operator identity and normalizes lease conflicts", () => {
-  const headers = apiHeaders({ token: "fixture-token", operatorId: "op-a" });
-  assert.equal(headers["X-App-Token"], "fixture-token");
-  assert.equal(headers["X-Operator-Id"], "op-a");
+test("game code headers have no APP_TOKEN or operator fallback", () => {
+  const headers = apiHeaders({ token: "fixture-token", operatorId: "op-a", gameCode: "ab-cd 2345" });
+  assert.equal(headers["X-Game-Code"], "ABCD2345");
+  assert.equal(headers["X-App-Token"], undefined);
+  assert.equal(headers["X-Operator-Id"], undefined);
   const error = normalizeApiError({ ok: false, code: "lease_owned", message: "game is leased" }, 409);
   assert.equal(error.status, "conflict");
   assert.equal(error.reason, "lease_owned");
+});
+
+test("game codes normalize and stay under exact game storage keys", () => {
+  const data = new Map();
+  const storage = { setItem: (k, v) => data.set(k, v), getItem: (k) => data.get(k) || null, removeItem: (k) => data.delete(k) };
+  storeGameCode(storage, "g-1", " ab-cd 2345 ");
+  assert.equal(normalizeGameCode("ab-cd 2345"), "ABCD2345");
+  assert.equal(gameCodeKey("g-1"), "aahl_game_code_g-1");
+  assert.equal(getGameCode(storage, "g-1"), "ABCD2345");
+  assert.equal(getGameCode(storage, "g-2"), null);
+  removeGameCode(storage, "g-1");
+  assert.equal(getGameCode(storage, "g-1"), null);
+});
+
+test("authorization responses are actionable and local events remain unchanged", () => {
+  const s = ready(); s.scoreSummary.push({ id: "local" }); s.penaltySummary.push({ id: "local-pen" });
+  const before = structuredClone({ goals: s.scoreSummary, penalties: s.penaltySummary });
+  for (const [reason, phrase] of [["code_expired", "expired"], ["code_revoked", "revoked"], ["wrong_game", "another game"], ["code_locked", "Too many"]]) {
+    const error = normalizeApiError({ reason }, reason === "code_locked" ? 429 : 403);
+    assert.equal(isAuthorizationError(error), true);
+    assert.match(error.message, new RegExp(phrase, "i"));
+    assert.deepEqual({ goals: s.scoreSummary, penalties: s.penaltySummary }, before);
+  }
 });
 
 test("two-phase queue records complete verified publication", async () => {

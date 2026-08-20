@@ -33,6 +33,7 @@ input, select {
   width: 100%; padding: 14px; margin-top: 6px; font-size: 17px;
   border: 1px solid var(--line); border-radius: 12px; background: #fff; color: var(--text);
 }
+input#cfgCode { text-transform: uppercase; letter-spacing: .12em; }
 button {
   border: 0; border-radius: 12px; padding: 14px 16px; font-size: 17px; font-weight: 600;
   background: #fff; color: var(--text); cursor: pointer;

@@ -22,13 +22,10 @@
       <input id="cfgApi" type="url" placeholder="https://aahl-scoresheet-api.<you>.workers.dev" />
     </label>
     <label>Access code
-      <input id="cfgToken" type="password" placeholder="app token" />
-    </label>
-    <label>Operator label
-      <input id="cfgOperator" type="text" autocomplete="off" placeholder="e.g. timekeeper-1" />
+      <input id="cfgCode" type="text" autocomplete="off" autocapitalize="characters" placeholder="e.g. ABCD-2345" />
     </label>
     <button id="cfgSave" class="primary big">Save & continue</button>
-    <p class="muted small">A local non-secret label used for game ownership. Stored only on this device; identity-provider selection remains outside the PWA.</p>
+    <p class="muted small">The code authorizes one exact game. It is normalized and stored only after the proxy confirms that game.</p>
   </section>
 
   <!-- Game list -->

@@ -24,11 +24,11 @@ together. See `../docs/SCORESHEET_APP_FEASIBILITY.md` for the full reverse-engin
   arrays. Because HomeTeamsOnline's endpoint replaces the whole summary, retries
   after flaky rink wifi can never double-count — idempotent by design.
 - The league password lives **only** in the Worker's secrets, never on the tablet.
-- Connect also requires a non-secret operator label. The PWA sends it as
-  `X-Operator-Id`; after exact-game confirmation it acquires one lease per
-  game/operator boundary, renews it before publication, and includes the
-  returned `leaseId` in every revision sync. Lease conflicts leave the local
-  revision pending for review/retry.
+- Connect uses a short human-typeable per-game code. The PWA sends it as
+  `X-Game-Code`; the Worker redeems it to the exact game and uses its returned
+  subject for lease ownership. Codes are stored under `aahl_game_code_<gameId>`
+  only after successful redemption. Authorization failures never clear the
+  `aahl_game_<gameId>` event or recovery data.
 
 ## Deploy
 
@@ -37,11 +37,16 @@ together. See `../docs/SCORESHEET_APP_FEASIBILITY.md` for the full reverse-engin
 cd worker
 npm install
 npx wrangler kv namespace create SESSION      # paste the id into wrangler.toml
-npx wrangler secret put HTO_USERNAME           # amherstadulthockeyleague@gmail.com
-npx wrangler secret put HTO_PASSWORD           # the league password
-npx wrangler secret put APP_TOKEN              # invent a shared code for the tablet
+npx wrangler secret put HTO_USERNAME
+npx wrangler secret put HTO_PASSWORD
+npx wrangler secret put APP_TOKEN              # administrator code-management secret
+npx wrangler secret put GAME_CODE_PEPPER       # keyed digest pepper; do not expose its value
 npx wrangler deploy
 ```
+The Worker also requires the `GameCodeRegistry` Durable Object binding and its
+migration in `worker/wrangler.toml`, plus the existing `SESSION` KV binding.
+Use the admin code-management routes to mint, revoke, or reissue a code for an
+exact `gameId`; plaintext is returned only by mint/reissue and is never stored.
 Set `ALLOWED_ORIGIN` in `wrangler.toml` to the PWA URL (below) once you have it,
 then `npx wrangler deploy` again.
 
@@ -51,7 +56,7 @@ Any static host works. With Cloudflare Pages:
 cd web
 npx wrangler pages deploy . --project-name aahl-scoresheet
 ```
-Open the page, tap **Connect**, enter the Worker URL + the `APP_TOKEN`. On a phone/
+Open the page, tap **Connect**, enter the Worker URL + the per-game code. On a phone/
 tablet, "Add to Home Screen" installs it as an app (offline-capable).
 
 ### Local dev
@@ -64,16 +69,19 @@ cd web && python3 -m http.server 5173  # PWA at http://localhost:5173
 | Method | Path | Purpose |
 |---|---|---|
 | GET | `/api/health` | minimal liveness boundary (no auth; no protected work) |
-| GET | `/api/games` | list season games `{gameId,gameId2,homeDiv,awayDiv,home,away,location,startMs}` |
+| GET | `/api/games` | redeem `X-Game-Code` and list only its authorized game `{gameId,gameId2,homeDiv,awayDiv,home,away,location,startMs}` |
 | GET | `/api/games/:id/setup?div=&g2=` | rosters (with HTO player ids), infractions, current finals |
 | POST | `/api/games/:id/lease` | `{action:"acquire"|"renew"|"release",leaseId?,ttlMs?}` |
 | POST | `/api/games/:id/sync` | `{username,leaseId,comparisonToken,scoreSummary[],penaltySummary[]}` → compare then replace |
 
-All except `/api/health` require a non-empty configured `APP_TOKEN`, the exact
-configured `Origin`, and header `X-App-Token: <APP_TOKEN>`. Missing or mismatched
-configuration/origin fails before routing and never emits wildcard CORS. Lease and sync
-also require an operator identity. The default adapter reads `X-Operator-Id`; D2
-identity-provider selection remains unresolved.
+Captain routes require the configured `GAME_CODE_PEPPER`, `GameCodeRegistry`
+binding, exact configured `Origin`, and `X-Game-Code`. `APP_TOKEN` remains only
+for administrator code-management routes. The redeemed code subject supplies
+lease identity; the captain does not send an operator label. Missing or
+mismatched configuration/origin fails before protected routing and never emits
+wildcard CORS. Stable authorization reasons are `code_required`, `code_invalid`,
+`code_expired`, `code_revoked`, `wrong_game`, and `code_locked` (HTTP 429 for
+lockout).
 
 Schedule and setup carry a `seasonMapId`; sync refuses a schedule/setup/roster
 mismatch. The map is configured in `worker/wrangler.toml` and must be changed
@@ -88,8 +96,9 @@ not pretend eventually consistent KV is atomic.
 ## Known prototype limitations / next steps
 - **Resume mid-game:** `setup` imports the authoritative goal and penalty arrays and
   exposes a comparison token before any replacement is allowed.
-- **Auth:** `APP_TOKEN` remains the fail-closed edge gate. Operator identity is
-  intentionally only an injected/default adapter until D2 selects an identity system.
+- **Auth:** `APP_TOKEN` is administrator-only. Captains use exact-game codes;
+  expired, revoked, wrong-game, and locked codes leave offline events pending
+  and require a replacement code or retry after lockout.
 - **Game status (in-progress / final):** intentionally out of scope. On the site this
   isn't an AJAX action — it toggles `#inProgress` and submits the full score form
   (and `pre` *clears* the game). Wire it in v2 via the full-form POST, computing the

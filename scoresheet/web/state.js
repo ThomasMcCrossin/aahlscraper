@@ -5,23 +5,44 @@ export function clone(value) {
 }
 
 export function apiHeaders(config = {}, extra = {}) {
-  return {
+  const headers = {
     "Content-Type": "application/json",
-    "X-App-Token": config.token,
-    ...(config.operatorId ? { "X-Operator-Id": config.operatorId } : {}),
+    ...(config.gameCode ? { "X-Game-Code": normalizeGameCode(config.gameCode) } : {}),
     ...extra,
   };
+  delete headers["X-App-Token"];
+  delete headers["X-Operator-Id"];
+  return headers;
 }
 
+export function normalizeGameCode(value) { return String(value || "").toUpperCase().replace(/[\s-]/g, ""); }
+export function gameCodeKey(gameId) { return `aahl_game_code_${String(gameId)}`; }
+export function storeGameCode(storage, gameId, code) {
+  if (!storage || gameId == null || !normalizeGameCode(code)) throw new Error("game ID and game code are required");
+  storage.setItem(gameCodeKey(gameId), normalizeGameCode(code));
+}
+export function getGameCode(storage, gameId) { return storage?.getItem(gameCodeKey(gameId)) || null; }
+export function removeGameCode(storage, gameId) { storage?.removeItem(gameCodeKey(gameId)); }
+
+const AUTH_MESSAGES = {
+  code_required: "Enter the game code to connect.",
+  code_invalid: "That game code is not valid. Check the code and try again.",
+  code_expired: "That game code has expired. Ask an administrator for a new code.",
+  code_revoked: "That game code was revoked. Ask an administrator for a replacement.",
+  wrong_game: "This code belongs to another game. Return to Games and use its code.",
+  code_locked: "Too many failed code attempts. Wait for the lockout to expire, then try again.",
+};
 export function normalizeApiError(data = {}, httpStatus = 500) {
-  const error = new Error(data.message || data.error || `HTTP ${httpStatus}`);
+  const reason = data.reason || data.code;
+  const error = new Error(AUTH_MESSAGES[reason] || data.message || data.error || `HTTP ${httpStatus}`);
   Object.assign(error, data, {
     httpStatus,
     status: data.status || (httpStatus === 409 ? "conflict" : "error"),
-    reason: data.reason || data.code,
+    reason,
   });
   return error;
 }
+export function isAuthorizationError(error) { return !!error && ["code_required", "code_invalid", "code_expired", "code_revoked", "wrong_game", "code_locked"].includes(error.reason); }
 
 // HomeTeamsOnline records running score text as (home-away), in chronological
 // event order. Keep this convention explicit so display order cannot silently
@@ -214,7 +235,7 @@ export function syncPayload(state) {
 // tests can use recorded responses and the PWA never needs a network-aware
 // lease implementation here.
 export function createLeaseClient({ gameId, operatorId, request, now = () => Date.now(), ttlMs = 30000, renewLeadMs = 5000 }) {
-  if (!gameId || !operatorId) throw new Error("game and operator identity are required");
+  if (!gameId) throw new Error("game identity is required");
   if (typeof request !== "function") throw new Error("lease request adapter is required");
   let lease = null;
   const call = (action, leaseId) => request({ action, gameId, operatorId, leaseId, ttlMs });
