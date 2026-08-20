@@ -1,9 +1,27 @@
 import assert from "node:assert/strict";
+import { webcrypto } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
-import worker, { comparisonToken, createInMemoryLeaseCoordinator, gameSetup, parseAuthoritativeEvents, syncGame } from "../src/index.js";
+import worker, { comparisonToken, constantTimeEqual, createInMemoryLeaseCoordinator, GameCodeRegistry, gameSetup, parseAuthoritativeEvents, syncGame } from "../src/index.js";
+
+if (!globalThis.crypto) Object.defineProperty(globalThis, "crypto", { value: webcrypto });
 
 const fixture = await readFile(new URL("./fixtures/game-editor.html", import.meta.url), "utf8");
+
+function registryFixture() {
+  const data = new Map();
+  const storage = {
+    get: async (key) => data.get(key),
+    put: async (key, value) => data.set(key, value),
+    delete: async (key) => data.delete(key),
+    list: async ({ prefix } = {}) => new Map([...data].filter(([key]) => !prefix || key.startsWith(prefix))),
+  };
+  return { registry: new GameCodeRegistry({ storage }), data };
+}
+async function registryAction(registry, action, input) {
+  const response = await registry.fetch(new Request(`https://registry.invalid/${action}`, { method: "POST", body: JSON.stringify(input) }));
+  return response.json();
+}
 
 function installNetworkTripwire(responseText = fixture) {
   const original = globalThis.fetch;
@@ -49,6 +67,64 @@ test("network tripwire rejects an unmocked request immediately", async () => {
   try {
     await assert.rejects(() => globalThis.fetch("https://unexpected.invalid/"), /unexpected network request/);
   } finally { restore(); }
+});
+
+test("per-game registry mints plaintext once and stores only a keyed digest", async () => {
+  const { registry, data } = registryFixture();
+  const minted = await registryAction(registry, "mint", { gameId: "101", pepper: "fixture-pepper", ttlMs: 3600000 });
+  assert.equal(minted.ok, true); assert.match(minted.code, /^[A-Z2-9]{8}$/);
+  const stored = data.get("game:101");
+  assert.equal(stored.code, undefined); assert.equal(stored.digest.length, 64);
+  assert.equal((await registryAction(registry, "redeem", { code: minted.code, gameId: "101", pepper: "fixture-pepper" })).gameId, "101");
+});
+
+test("per-game registry enforces wrong game, expiry, revoke, reissue, and lockout", async () => {
+  const { registry, data } = registryFixture();
+  const first = await registryAction(registry, "mint", { gameId: "201", pepper: "p" });
+  assert.equal((await registryAction(registry, "redeem", { code: first.code, gameId: "202", pepper: "p" })).reason, "wrong_game");
+  await registryAction(registry, "revoke", { gameId: "201", pepper: "p" });
+  assert.equal((await registryAction(registry, "redeem", { code: first.code, gameId: "201", pepper: "p" })).reason, "code_revoked");
+  const second = await registryAction(registry, "reissue", { gameId: "201", pepper: "p" });
+  assert.equal((await registryAction(registry, "redeem", { code: first.code, gameId: "201", pepper: "p" })).reason, "code_invalid");
+  data.get("game:201").expiresAt = Date.now() - 1;
+  assert.equal((await registryAction(registry, "redeem", { code: second.code, gameId: "201", pepper: "p" })).reason, "code_expired");
+  const third = await registryAction(registry, "reissue", { gameId: "201", pepper: "p" });
+  for (let i = 0; i < 4; i++) assert.equal((await registryAction(registry, "redeem", { code: "BADCODE1", gameId: "201", pepper: "p" })).reason, "code_invalid");
+  assert.equal((await registryAction(registry, "redeem", { code: "BADCODE1", gameId: "201", pepper: "p" })).reason, "code_locked");
+  assert.equal((await registryAction(registry, "redeem", { code: third.code, gameId: "201", pepper: "p" })).reason, "code_locked");
+});
+
+test("constant-time digest helper compares fixed and mismatched lengths without coercion", () => {
+  assert.equal(constantTimeEqual("abcd", "abcd"), true);
+  assert.equal(constantTimeEqual("abcd", "abce"), false);
+  assert.equal(constantTimeEqual("abcd", "abc"), false);
+});
+
+test("captain routes reject APP_TOKEN fallback and missing code before protected fetch", async () => {
+  const restore = installNetworkTripwire();
+  try {
+    const response = await worker.fetch(new Request("https://worker.invalid/api/games", { headers: { Origin: "https://scores.invalid", "X-App-Token": "secret" } }), {
+      APP_TOKEN: "secret", ALLOWED_ORIGIN: "https://scores.invalid", GAME_CODE_PEPPER: "p", GAME_CODE_REGISTRY: { fetch: async () => { throw new Error("registry should not be called"); } },
+    });
+    assert.equal(response.status, 401); assert.equal((await response.json()).reason, "code_required");
+  } finally { restore(); }
+});
+
+test("redeemed code filters the games list to its exact game", async () => {
+  const { registry } = registryFixture();
+  const minted = await registryAction(registry, "mint", { gameId: "301", pepper: "p" });
+  const html = "<tr><td>Amherst</td><td>ScoreClick('default.asp?p=ScoresEdit&a=1&sportsHQ=TYLERARSENEAU-1&gameID=301&gameID2=1', 10)</td></tr>" +
+    "<tr><td>Springhill</td><td>ScoreClick('default.asp?p=ScoresEdit&a=1&sportsHQ=TYLERARSENEAU-2&gameID=302&gameID2=2', 20)</td></tr>";
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async () => new Response(html, { status: 200 });
+  try {
+    const response = await worker.fetch(new Request("https://worker.invalid/api/games", { headers: { Origin: "https://scores.invalid", "X-Game-Code": minted.code } }), {
+      APP_TOKEN: "admin", ALLOWED_ORIGIN: "https://scores.invalid", GAME_CODE_PEPPER: "p", GAME_CODE_REGISTRY: registry, SESSION: { get: async () => "fixture" },
+    });
+    const listed = await response.json();
+    assert.equal(response.status, 200, JSON.stringify(listed));
+    assert.deepEqual(listed.map((game) => game.gameId), ["301"]);
+  } finally { globalThis.fetch = originalFetch; }
 });
 
 test("Blocker 6 regression: missing token/origin and forbidden Origin fail before protected work", async () => {

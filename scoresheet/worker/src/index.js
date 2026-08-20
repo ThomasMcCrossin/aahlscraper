@@ -10,7 +10,8 @@
  * idempotent — the PWA holds the complete event list locally and re-POSTs the
  * whole array, so retries (after flaky rink wifi) can never double-count.
  *
- * Endpoints (all require header `X-App-Token: <APP_TOKEN>`):
+ * Administrator code-management endpoints require `X-App-Token`; captain
+ * endpoints require `X-Game-Code` bound to the exact game.
  *   GET  /api/games                         -> [{gameId, gameId2, homeDiv, awayDiv, home, away, location, startMs}]
  *   GET  /api/games/:gameId/setup?div=&g2=  -> {home, away, infractions, current}
  *   POST /api/games/:gameId/lease           -> acquire/renew/release a game lease
@@ -22,7 +23,8 @@
  *   var ALLOWED_ORIGIN       - the PWA origin for CORS (e.g. https://aahl-scoresheet.pages.dev)
  *   secret HTO_USERNAME      - league login email
  *   secret HTO_PASSWORD      - league login password
- *   secret APP_TOKEN         - shared secret the PWA must send
+ *   secret APP_TOKEN         - administrator shared secret
+ *   secret GAME_CODE_PEPPER  - keyed digest pepper for per-game codes
  */
 
 const HTO = "https://www.hometeamsonline.com";
@@ -63,16 +65,28 @@ export default {
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
 
     try {
-      if (request.headers.get("X-App-Token") !== configured.token) {
+      const admin = url.pathname.startsWith("/api/admin/game-codes/");
+      if (admin && request.headers.get("X-App-Token") !== configured.token)
         return json({ ok: false, error: "unauthorized" }, 401, cors);
+      if (admin) return json(await adminCodeRoute(env, url, request), 200, cors);
+
+      const protectedRoute = url.pathname === "/api/games" || /^\/api\/games\/\d+\/(setup|lease|sync)$/.test(url.pathname);
+      if (!protectedRoute) {
+        if (request.headers.get("X-App-Token") !== configured.token)
+          return json({ ok: false, error: "unauthorized" }, 401, cors);
+        return json({ ok: false, error: "not found" }, 404, cors);
       }
+      const captain = await captainAuthorization(env, request, url);
+      if (!captain.ok) return json(captain.body, captain.status, cors);
 
       if (url.pathname === "/api/games" && request.method === "GET") {
-        return json(await listGames(env), 200, cors);
+        const games = await listGames(env);
+        return json(games.filter((game) => String(game.gameId) === captain.gameId), 200, cors);
       }
 
       const setup = url.pathname.match(/^\/api\/games\/(\d+)\/setup$/);
       if (setup && request.method === "GET") {
+        if (setup[1] !== captain.gameId) return json(codeError("wrong_game"), 403, cors);
         const div = url.searchParams.get("div");
         const g2 = url.searchParams.get("g2") || "";
         return json(await gameSetup(env, setup[1], div, g2), 200, cors);
@@ -80,7 +94,8 @@ export default {
 
       const lease = url.pathname.match(/^\/api\/games\/(\d+)\/lease$/);
       if (lease && request.method === "POST") {
-        const operatorId = operatorIdentity(request, env);
+        if (lease[1] !== captain.gameId) return json(codeError("wrong_game"), 403, cors);
+        const operatorId = captain.operatorId;
         if (!operatorId) return json(conflict("identity_required", "operator identity is required"), 409, cors);
         const body = await request.json();
         const result = await leaseAction(env, lease[1], body, operatorId);
@@ -89,8 +104,9 @@ export default {
 
       const sync = url.pathname.match(/^\/api\/games\/(\d+)\/sync$/);
       if (sync && request.method === "POST") {
+        if (sync[1] !== captain.gameId) return json(codeError("wrong_game"), 403, cors);
         const body = await request.json();
-        const operatorId = operatorIdentity(request, env);
+        const operatorId = captain.operatorId;
         if (!operatorId) return json(conflict("identity_required", "operator identity is required"), 409, cors);
         const result = await syncGame(env, sync[1], body, { operatorId });
         return json(result, result.conflict ? 409 : 200, cors);
@@ -106,6 +122,108 @@ export default {
 // ---------------------------------------------------------------------------
 // HTTP helpers
 // ---------------------------------------------------------------------------
+const CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+const CODE_LENGTH = 8;
+const CODE_MIN_TTL = 5 * 60 * 1000;
+const CODE_MAX_TTL = 24 * 60 * 60 * 1000;
+const CODE_DEFAULT_TTL = 6 * 60 * 60 * 1000;
+const MAX_FAILED_ATTEMPTS = 5;
+const LOCKOUT_MS = 10 * 60 * 1000;
+
+function codeError(reason) {
+  const messages = { code_required: "game code is required", code_invalid: "game code is invalid", code_expired: "game code has expired", code_revoked: "game code has been revoked", wrong_game: "game code is bound to another game", code_locked: "game code attempts are locked" };
+  return { ok: false, error: reason, reason, message: messages[reason] || "game code is not authorized" };
+}
+function normalizeCode(value) { return String(value || "").toUpperCase().replace(/[-\s]/g, ""); }
+function boundedTtl(value) { return Math.min(Math.max(Number(value) || CODE_DEFAULT_TTL, CODE_MIN_TTL), CODE_MAX_TTL); }
+function randomCode() {
+  const bytes = new Uint8Array(CODE_LENGTH); crypto.getRandomValues(bytes);
+  return [...bytes].map((b) => CODE_ALPHABET[b % CODE_ALPHABET.length]).join("");
+}
+async function keyedDigest(code, pepper) {
+  const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(String(pepper)), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  const digest = await crypto.subtle.sign("HMAC", key, new TextEncoder().encode(normalizeCode(code)));
+  return Array.from(new Uint8Array(digest), (b) => b.toString(16).padStart(2, "0")).join("");
+}
+export function constantTimeEqual(left, right) {
+  const a = String(left || ""), b = String(right || ""); let different = a.length ^ b.length;
+  const length = Math.max(a.length, b.length);
+  for (let i = 0; i < length; i++) different |= (a.charCodeAt(i) || 0) ^ (b.charCodeAt(i) || 0);
+  return different === 0;
+}
+function codeRegistry(env) {
+  if (env.GAME_CODE_REGISTRY && typeof env.GAME_CODE_REGISTRY.fetch === "function") return env.GAME_CODE_REGISTRY;
+  if (env.GAME_CODE_REGISTRY && typeof env.GAME_CODE_REGISTRY.idFromName === "function") return env.GAME_CODE_REGISTRY.get(env.GAME_CODE_REGISTRY.idFromName("registry"));
+  return { fetch: async () => new Response(JSON.stringify(codeError("code_invalid")), { status: 503 }) };
+}
+async function registryCall(env, path, body) {
+  const response = await codeRegistry(env).fetch(new Request(`https://game-code${path}`, { method: "POST", body: JSON.stringify(body) }));
+  return response.json();
+}
+async function adminCodeRoute(env, url, request) {
+  if (!env.GAME_CODE_PEPPER) return codeError("configuration_error");
+  const body = request.method === "POST" ? await request.json() : {};
+  const gameId = String(body.gameId || "");
+  if (!gameId) return { ok: false, error: "invalid_request", message: "gameId is required" };
+  const action = url.pathname.split("/").pop();
+  if (action === "mint" || action === "reissue") return registryCall(env, `/${action}`, { gameId, ttlMs: boundedTtl(body.ttlMs), pepper: env.GAME_CODE_PEPPER });
+  if (action === "revoke") return registryCall(env, "/revoke", { gameId, pepper: env.GAME_CODE_PEPPER });
+  return { ok: false, error: "not found" };
+}
+async function captainAuthorization(env, request, url) {
+  if (!env.GAME_CODE_PEPPER || !env.GAME_CODE_REGISTRY) return { ok: false, status: 503, body: codeError("configuration_error") };
+  const supplied = request.headers.get("X-Game-Code");
+  if (!supplied) return { ok: false, status: 401, body: codeError("code_required") };
+  const expectedGame = url.pathname.match(/^\/api\/games\/(\d+)\//)?.[1] || null;
+  const result = await registryCall(env, "/redeem", { code: supplied, gameId: expectedGame, pepper: env.GAME_CODE_PEPPER });
+  if (!result.ok) return { ok: false, status: result.reason === "wrong_game" ? 403 : 401, body: codeError(result.reason || "code_invalid") };
+  return { ok: true, gameId: String(result.gameId), operatorId: await operatorFromSubject(result.subject, env) };
+}
+function operatorFromSubject(subject, env) {
+  if (typeof env.IDENTITY_ADAPTER === "function") return env.IDENTITY_ADAPTER(new Request("https://identity.invalid", { headers: { "X-Operator-Id": subject } }), env);
+  return subject;
+}
+
+/** Serialized registry: plaintext is returned only by mint/reissue and never stored. */
+export class GameCodeRegistry {
+  constructor(state) { this.state = state; }
+  async fetch(request) {
+    const action = new URL(request.url).pathname.slice(1); const input = await request.json();
+    const now = Date.now(); const key = `game:${String(input.gameId || "")}`;
+    let record = await this.state.storage.get(key);
+    if (action === "mint" || action === "reissue") {
+      const code = randomCode(); const next = { gameId: String(input.gameId), digest: await keyedDigest(code, input.pepper), subject: crypto.randomUUID(), expiresAt: now + boundedTtl(input.ttlMs), revoked: false, failures: 0, lockedUntil: 0 };
+      await this.state.storage.put(key, next); return this.response({ ok: true, gameId: next.gameId, code, expiresAt: next.expiresAt });
+    }
+    if (action === "revoke") {
+      if (record) await this.state.storage.put(key, { ...record, revoked: true });
+      return this.response({ ok: true, revoked: true, gameId: String(input.gameId) });
+    }
+    if (action === "redeem") {
+      if (!record && typeof this.state.storage.list === "function") {
+        const all = await this.state.storage.list({ prefix: "game:" });
+        const digest = await keyedDigest(input.code, input.pepper);
+        for (const candidate of all.values()) if (constantTimeEqual(digest, candidate.digest)) { record = candidate; break; }
+      }
+      if (!record) return this.response(codeError("code_invalid"));
+      if (record.revoked) return this.response(codeError("code_revoked"));
+      if (record.expiresAt <= now) return this.response(codeError("code_expired"));
+      if (record.lockedUntil > now) return this.response(codeError("code_locked"));
+      const digest = await keyedDigest(input.code, input.pepper);
+      if (!constantTimeEqual(digest, record.digest)) {
+        const failures = (record.failures || 0) + 1; const lockedUntil = failures >= MAX_FAILED_ATTEMPTS ? now + LOCKOUT_MS : 0;
+        await this.state.storage.put(key, { ...record, failures, lockedUntil });
+        return this.response(codeError(lockedUntil ? "code_locked" : "code_invalid"));
+      }
+      await this.state.storage.put(`game:${record.gameId}`, { ...record, failures: 0, lockedUntil: 0 });
+      if (input.gameId && String(input.gameId) !== record.gameId) return this.response(codeError("wrong_game"));
+      return this.response({ ok: true, gameId: record.gameId, subject: record.subject });
+    }
+    return this.response({ ok: false, error: "not found" });
+  }
+  response(value) { return new Response(JSON.stringify(value), { headers: { "Content-Type": "application/json" } }); }
+}
+
 function configuration(env) {
   const token = typeof env.APP_TOKEN === "string" ? env.APP_TOKEN.trim() : "";
   const rawOrigin = typeof env.ALLOWED_ORIGIN === "string" ? env.ALLOWED_ORIGIN.trim() : "";
@@ -120,7 +238,7 @@ function corsHeaders(origin) {
     "Access-Control-Allow-Origin": origin,
     "Vary": "Origin",
     "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type,X-App-Token,X-Operator-Id",
+    "Access-Control-Allow-Headers": "Content-Type,X-App-Token,X-Game-Code",
   };
 }
 function json(obj, statusCode, cors) {

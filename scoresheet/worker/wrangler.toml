@@ -14,9 +14,17 @@ SEASON_MAP_ID = "AAHL-WINTER-2025-2026"
 name = "GAME_LEASES"
 class_name = "GameLease"
 
+[[durable_objects.bindings]]
+name = "GAME_CODE_REGISTRY"
+class_name = "GameCodeRegistry"
+
 [[migrations]]
 tag = "v1"
 new_sqlite_classes = ["GameLease"]
+
+[[migrations]]
+tag = "v2"
+new_sqlite_classes = ["GameCodeRegistry"]
 
 # Session cookie store. Create with:
 #   npx wrangler kv namespace create SESSION
@@ -29,3 +37,4 @@ id = "REPLACE_WITH_KV_ID"
 #   npx wrangler secret put HTO_USERNAME
 #   npx wrangler secret put HTO_PASSWORD
 #   npx wrangler secret put APP_TOKEN
+#   npx wrangler secret put GAME_CODE_PEPPER
