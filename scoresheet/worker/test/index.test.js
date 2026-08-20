@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
-import { comparisonToken, createInMemoryLeaseCoordinator, gameSetup, parseAuthoritativeEvents, syncGame } from "../src/index.js";
+import worker, { comparisonToken, createInMemoryLeaseCoordinator, gameSetup, parseAuthoritativeEvents, syncGame } from "../src/index.js";
 
 const fixture = await readFile(new URL("./fixtures/game-editor.html", import.meta.url), "utf8");
 
@@ -26,7 +26,7 @@ test("Blocker 1 regression: setup imports authoritative scoring and penalty arra
     globalThis.fetch = async () => new Response(fixture, { status: 200 });
     const setup = await gameSetup(env, "game-1", "HOME-DIV", "game-2");
     globalThis.fetch = originalFetch;
-    assert.deepEqual(setup.current.goals, [{ period: "1", clock: "12:34", team: "HOME-DIV", scorer: "p-home-1", assists: [] }]);
+    assert.deepEqual(setup.current.goals, [{ period: "1", clock: "12:34", team: "HOME-DIV", scorer: "p-home-1", assists: [], scoreTotalText: "(1-0)" }]);
     assert.equal(setup.current.penalties[0].infraction, "hook");
     assert.deepEqual(setup.current.finals, { h: 2, a: 1 });
     assert.equal(setup.current.comparisonToken, comparisonToken({
@@ -49,6 +49,24 @@ test("network tripwire rejects an unmocked request immediately", async () => {
   try {
     await assert.rejects(() => globalThis.fetch("https://unexpected.invalid/"), /unexpected network request/);
   } finally { restore(); }
+});
+
+test("Blocker 6 regression: missing token/origin and forbidden Origin fail before protected work", async () => {
+  const protectedRequest = new Request("https://worker.invalid/api/unknown", { headers: { Origin: "https://scores.invalid", "X-App-Token": "secret" } });
+  let response = await worker.fetch(protectedRequest, {});
+  assert.equal(response.status, 503);
+  response = await worker.fetch(protectedRequest, { APP_TOKEN: "secret", ALLOWED_ORIGIN: "https://scores.invalid" });
+  assert.equal(response.status, 404); // route is reached only after both gates
+  response = await worker.fetch(new Request(protectedRequest, { headers: { Origin: "https://other.invalid", "X-App-Token": "secret" } }), { APP_TOKEN: "secret", ALLOWED_ORIGIN: "https://scores.invalid" });
+  assert.equal(response.status, 403);
+  assert.equal((await response.json()).error, "origin_not_allowed");
+});
+
+test("health is minimal and never uses wildcard CORS", async () => {
+  const response = await worker.fetch(new Request("https://worker.invalid/api/health"), {});
+  assert.equal(response.status, 200);
+  assert.deepEqual(await response.json(), { ok: true });
+  assert.equal(response.headers.get("Access-Control-Allow-Origin"), null);
 });
 
 test("Blocker 3 regression: leases acquire, renew, release, and expire atomically", async () => {
@@ -177,4 +195,16 @@ test("T4 reread mismatch is a conflict, never a published result", async () => {
   });
   assert.equal(result.ok, false); assert.equal(result.conflict, true); assert.equal(result.phase, "verification");
   assert.equal(result.status, "conflict"); assert.equal(result.code, "verification_mismatch");
+});
+
+test("Blocker 7/8 regression: season drift blocks sync and fixture preserves HTO running-score orientation", async () => {
+  assert.equal(parseAuthoritativeEvents(fixture).goals[0].scoreTotalText, "(1-0)");
+  const coordinator = createInMemoryLeaseCoordinator();
+  const baseline = authoritative(); const lease = await coordinator.acquire({ gameId: "g-drift", operatorId: "op-a" });
+  let writes = 0;
+  const result = await syncGame({ SEASON_MAP_ID: "season-current" }, "g-drift", {
+    username: "H", seasonMapId: "season-old", scoreSummary: [], penaltySummary: [], ...lease, comparisonToken: baseline.comparisonToken,
+  }, { operatorId: "op-a", coordinator, authoritativeReader: async () => ({ ...baseline, seasonMapId: "season-current" }), writer: async () => { writes += 1; } });
+  assert.equal(result.code, "season_map_drift");
+  assert.equal(writes, 0);
 });

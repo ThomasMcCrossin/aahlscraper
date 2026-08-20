@@ -4,6 +4,17 @@ export function clone(value) {
   return value == null ? value : JSON.parse(JSON.stringify(value));
 }
 
+// HomeTeamsOnline records running score text as (home-away), in chronological
+// event order. Keep this convention explicit so display order cannot silently
+// change the published representation.
+export function recomputeRunningScore(events, homeTeam) {
+  let home = 0, away = 0;
+  return (events || []).map((event) => {
+    if ((event.scoreTeam ?? event.team) === homeTeam) home += 1; else away += 1;
+    return { ...event, scoreTotalText: `(${home}-${away})` };
+  });
+}
+
 const PERIODS = new Set(["1", "2", "3", "OT", "2OT", "SO"]);
 const PERIOD_LIMITS = { "1": 20, "2": 20, "3": 20, OT: 5, "2OT": 5, SO: 0 };
 
@@ -173,6 +184,7 @@ export function syncPayload(state) {
   if (!state.remoteBaseline) throw new Error("authoritative baseline is required");
   return {
     gameId: state.gameId, revision: state.revision,
+    seasonMapId: state.seasonMapId || state.setup?.seasonMapId,
     comparisonToken: state.remoteBaseline.comparisonToken,
     scoreSummary: clone(state.scoreSummary), penaltySummary: clone(state.penaltySummary),
   };

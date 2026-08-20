@@ -8,7 +8,7 @@
  * DOM is built with the h() helper + textContent (no markup-from-strings), so
  * roster/team names can never be interpreted as HTML. */
 
-import { createGameState, createSyncQueue, resumeGame, validateGoal, validatePenalty, deleteEvent, undoDeletion, editEvent, exportRecovery, importRecovery, confirmGameIdentity } from "./state.js";
+import { createGameState, createSyncQueue, resumeGame, validateGoal, validatePenalty, deleteEvent, undoDeletion, editEvent, exportRecovery, importRecovery, confirmGameIdentity, recomputeRunningScore } from "./state.js";
 
 const CFG_KEY = "aahl_cfg";
 const PERIODS = ["1", "2", "3", "OT", "2OT", "SO"];
@@ -146,7 +146,12 @@ async function openGame(g) {
   activeGameId = g.gameId;
   try {
     const setup = await api(`/api/games/${g.gameId}/setup?div=${encodeURIComponent(g.homeDiv)}&g2=${encodeURIComponent(g.gameId2)}`);
+    if (g.seasonMapId && setup.seasonMapId !== g.seasonMapId) {
+      alert("Season/team map changed; setup is blocked until the schedule is refreshed.");
+      return;
+    }
     store.setup = setup;
+    store.seasonMapId = setup.seasonMapId || g.seasonMapId;
     const current = setup.current || {};
     const remote = { goals: current.goals || [], penalties: current.penalties || [], comparisonToken: current.comparisonToken };
     const sameBaseline = store.remoteBaseline && store.remoteBaseline.comparisonToken === remote.comparisonToken;
@@ -340,11 +345,7 @@ function addPenaltyModal() {
 
 // running score text "(home-away)" in chronological (array) order
 function recomputeTotals(s) {
-  let home = 0, away = 0;
-  for (const g of s.scoreSummary) {
-    if (g.scoreTeam === s.homeDiv) home++; else away++;
-    g.scoreTotalText = `(${home}-${away})`;
-  }
+  s.scoreSummary = recomputeRunningScore(s.scoreSummary, s.homeDiv);
 }
 
 // ---------------------------------------------------------------------------

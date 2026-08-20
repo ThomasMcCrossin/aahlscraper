@@ -42,6 +42,7 @@ const TEAMS = {
   "983723": "G.R. Mitchell Welding",
 };
 const LOCATIONS = ["Amherst", "Springhill"];
+const DEFAULT_SEASON_MAP_ID = "AAHL-WINTER-2025-2026";
 
 // ---------------------------------------------------------------------------
 // Worker entry
@@ -49,15 +50,20 @@ const LOCATIONS = ["Amherst", "Springhill"];
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    const cors = corsHeaders(env);
+    const origin = request.headers.get("Origin");
+    const configured = configuration(env);
+    const cors = configured.ok && origin === configured.origin ? corsHeaders(configured.origin) : {};
 
-    if (request.method === "OPTIONS") return new Response(null, { headers: cors });
+    // Health is intentionally minimal and does not open the protected API.
+    if (url.pathname === "/api/health" && request.method === "GET") return json({ ok: true }, 200, cors);
+    // Preflight is protected too: never emit wildcard CORS or process a
+    // request when deployment configuration or the exact origin is absent.
+    if (!configured.ok) return json({ ok: false, error: "configuration_error" }, 503);
+    if (origin !== configured.origin) return json({ ok: false, error: "origin_not_allowed" }, 403);
+    if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
 
     try {
-      if (url.pathname === "/api/health") return json({ ok: true }, 200, cors);
-
-      // Simple shared-secret gate so the proxy isn't open to the world.
-      if (env.APP_TOKEN && request.headers.get("X-App-Token") !== env.APP_TOKEN) {
+      if (request.headers.get("X-App-Token") !== configured.token) {
         return json({ ok: false, error: "unauthorized" }, 401, cors);
       }
 
@@ -100,9 +106,19 @@ export default {
 // ---------------------------------------------------------------------------
 // HTTP helpers
 // ---------------------------------------------------------------------------
-function corsHeaders(env) {
+function configuration(env) {
+  const token = typeof env.APP_TOKEN === "string" ? env.APP_TOKEN.trim() : "";
+  const rawOrigin = typeof env.ALLOWED_ORIGIN === "string" ? env.ALLOWED_ORIGIN.trim() : "";
+  if (!token || !rawOrigin) return { ok: false };
+  let parsed;
+  try { parsed = new URL(rawOrigin); } catch { return { ok: false }; }
+  if (!/^https?:$/.test(parsed.protocol) || parsed.origin !== rawOrigin || parsed.pathname !== "/" || parsed.search || parsed.hash || parsed.username || parsed.password) return { ok: false };
+  return { ok: true, token, origin: parsed.origin };
+}
+function corsHeaders(origin) {
   return {
-    "Access-Control-Allow-Origin": env.ALLOWED_ORIGIN || "*",
+    "Access-Control-Allow-Origin": origin,
+    "Vary": "Origin",
     "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type,X-App-Token,X-Operator-Id",
   };
@@ -210,7 +226,7 @@ async function listGames(env) {
     },
     body: "action=getDetailsHTML",
   });
-  return parseGamesFromSchedule(html);
+  return parseGamesFromSchedule(html, seasonMapId(env));
 }
 
 async function gameSetup(env, gameId, div, gameId2) {
@@ -230,6 +246,7 @@ async function gameSetup(env, gameId, div, gameId2) {
     ok: true,
     gameId,
     gameId2,
+    seasonMapId: seasonMapId(env),
     home: { div: homeDiv, name: TEAMS[homeDiv] || homeDiv, players: rosters[homeDiv] || [] },
     away: awayDiv ? { div: awayDiv, name: TEAMS[awayDiv] || awayDiv, players: rosters[awayDiv] || [] } : null,
     infractions,
@@ -238,6 +255,7 @@ async function gameSetup(env, gameId, div, gameId2) {
       goals: authoritative.goals,
       penalties: authoritative.penalties,
       comparisonToken: comparisonToken({ finals, goals: authoritative.goals, penalties: authoritative.penalties }),
+      seasonMapId: seasonMapId(env),
     },
   };
 }
@@ -249,6 +267,8 @@ async function syncGame(env, gameId, body, options = {}) {
   if (!operatorId) return conflict("identity_required", "operator identity is required");
   if (!body.leaseId) return conflict("lease_required", "an active game lease is required");
   if (!body.comparisonToken) return conflict("baseline_required", "authoritative comparison token is required");
+  const expectedSeason = body.seasonMapId || env.SEASON_MAP_ID;
+  if (env.SEASON_MAP_ID && expectedSeason !== env.SEASON_MAP_ID) return conflict("season_map_drift", "schedule season map does not match the configured season map");
 
   const coordinator = options.coordinator || leaseCoordinator(env);
   const ownership = await coordinator.check({ gameId, operatorId, leaseId: body.leaseId });
@@ -265,6 +285,7 @@ async function syncGame(env, gameId, body, options = {}) {
     return conflict("remote_read_failed", error.message);
   }
   if (!remote || !remote.comparisonToken) return conflict("baseline_required", "authoritative baseline is required");
+  if (expectedSeason && remote.seasonMapId && remote.seasonMapId !== expectedSeason) return conflict("season_map_drift", "authoritative setup/roster season map changed");
   const actualToken = comparisonToken({ finals: remote.finals, goals: remote.goals, penalties: remote.penalties });
   if (actualToken !== body.comparisonToken || actualToken !== remote.comparisonToken) {
     return conflict("remote_drift", "authoritative remote snapshot changed");
@@ -351,6 +372,7 @@ function operatorIdentity(request, env) {
   // and never a claim that X-Operator-Id is an identity provider.
   return (env.IDENTITY_ADAPTER || defaultIdentityAdapter)(request, env);
 }
+function seasonMapId(env) { return env.SEASON_MAP_ID || DEFAULT_SEASON_MAP_ID; }
 function defaultIdentityAdapter(request) { return request.headers.get("X-Operator-Id") || null; }
 
 async function leaseAction(env, gameId, body, operatorId) {
@@ -475,7 +497,7 @@ async function postSummary(env, action, key, gameId, username, arr) {
 // ---------------------------------------------------------------------------
 
 /** Pull games out of the admin schedule page via the per-row ScoreClick handlers. */
-function parseGamesFromSchedule(html) {
+function parseGamesFromSchedule(html, mapId = DEFAULT_SEASON_MAP_ID) {
   const games = [];
   const re = /ScoreClick\('default\.asp\?p=ScoresEdit&a=1&sportsHQ=([^&]+)&gameID=(\d+)&gameID2=(\d+)',\s*(\d+)\)/g;
   for (const m of html.matchAll(re)) {
@@ -505,6 +527,7 @@ function parseGamesFromSchedule(html) {
       away: awayEntry ? awayEntry.name : null,
       location,
       startMs: Number(ts),
+      seasonMapId: mapId,
     });
   }
   const seen = new Set();
@@ -632,4 +655,4 @@ function stripTags(s) {
   return s.replace(/<[^>]*>/g, " ").replace(/&amp;/g, "&").replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim();
 }
 
-export { comparisonToken, createInMemoryLeaseCoordinator, gameSetup, parseAuthoritativeEvents, syncGame };
+export { comparisonToken, createInMemoryLeaseCoordinator, gameSetup, parseAuthoritativeEvents, syncGame, configuration, seasonMapId };

@@ -5,6 +5,7 @@ compatibility_date = "2025-09-01"
 # CORS origin for the PWA. Set to your Pages URL once deployed.
 [vars]
 ALLOWED_ORIGIN = "REPLACE_WITH_EXACT_PWA_ORIGIN"
+SEASON_MAP_ID = "AAHL-WINTER-2025-2026"
 
 # One Durable Object instance owns the lease for one exact game. Its serialized
 # requests provide the atomic acquire/renew/release boundary; KV is not used for

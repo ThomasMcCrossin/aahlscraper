@@ -1,11 +1,16 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { captureEvent, createGameState, createSyncQueue, resumeGame, syncPayload, validateGoal, validatePenalty, validateEvents, deleteEvent, undoDeletion, editEvent, exportRecovery, importRecovery, confirmGameIdentity } from "../state.js";
+import { captureEvent, createGameState, createSyncQueue, resumeGame, syncPayload, validateGoal, validatePenalty, validateEvents, deleteEvent, undoDeletion, editEvent, exportRecovery, importRecovery, confirmGameIdentity, recomputeRunningScore } from "../state.js";
 
 const game = { gameId: "g-1", homeDiv: "H", awayDiv: "A" };
 const remote = { goals: [{ id: "old" }], penalties: [{ id: "pen" }], comparisonToken: "token-1" };
 function ready() { return resumeGame(createGameState(game), remote, { gameId: "g-1", confirmed: true }); }
 const tick = () => new Promise((resolve) => setTimeout(resolve, 0));
+
+test("HomeTeamsOnline running-score fixture convention is recomputed home-away", () => {
+  const events = recomputeRunningScore([{ period: "1", scoreTeam: "H" }, { period: "1", scoreTeam: "A" }, { period: "2", scoreTeam: "A" }], "H");
+  assert.deepEqual(events.map((event) => event.scoreTotalText), ["(1-0)", "(1-1)", "(1-2)"]);
+});
 
 test("resume refuses blind replacement and requires exact-game confirmation", () => {
   const s = createGameState(game);

@@ -58,15 +58,21 @@ cd web && python3 -m http.server 5173  # PWA at http://localhost:5173
 ## API (Worker)
 | Method | Path | Purpose |
 |---|---|---|
-| GET | `/api/health` | liveness (no auth) |
+| GET | `/api/health` | minimal liveness boundary (no auth; no protected work) |
 | GET | `/api/games` | list season games `{gameId,gameId2,homeDiv,awayDiv,home,away,location,startMs}` |
 | GET | `/api/games/:id/setup?div=&g2=` | rosters (with HTO player ids), infractions, current finals |
 | POST | `/api/games/:id/lease` | `{action:"acquire"|"renew"|"release",leaseId?,ttlMs?}` |
 | POST | `/api/games/:id/sync` | `{username,leaseId,comparisonToken,scoreSummary[],penaltySummary[]}` → compare then replace |
 
-All except `/api/health` require header `X-App-Token: <APP_TOKEN>`. Lease and sync
+All except `/api/health` require a non-empty configured `APP_TOKEN`, the exact
+configured `Origin`, and header `X-App-Token: <APP_TOKEN>`. Missing or mismatched
+configuration/origin fails before routing and never emits wildcard CORS. Lease and sync
 also require an operator identity. The default adapter reads `X-Operator-Id`; D2
 identity-provider selection remains unresolved.
+
+Schedule and setup carry a `seasonMapId`; sync refuses a schedule/setup/roster
+mismatch. The map is configured in `worker/wrangler.toml` and must be changed
+deliberately when the league season mapping changes.
 
 Sync validates ownership and freshly reads the authoritative event arrays before
 either upstream replacement. Wrong owner, expired or missing lease, missing
@@ -75,9 +81,8 @@ Production arbitration uses one `GameLease` Durable Object per exact game; it do
 not pretend eventually consistent KV is atomic.
 
 ## Known prototype limitations / next steps
-- **Resume mid-game:** `setup` returns current *finals* (to warn before overwriting)
-  but not the full prior event list — entering a brand-new game live is the target
-  use case. Full resume = parse the existing summary (v2).
+- **Resume mid-game:** `setup` imports the authoritative goal and penalty arrays and
+  exposes a comparison token before any replacement is allowed.
 - **Auth:** `APP_TOKEN` remains the fail-closed edge gate. Operator identity is
   intentionally only an injected/default adapter until D2 selects an identity system.
 - **Game status (in-progress / final):** intentionally out of scope. On the site this
