@@ -1,0 +1,8 @@
+{
+  "name": "aahl-scoresheet",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test worker/test/index.test.js"
+  }
+}

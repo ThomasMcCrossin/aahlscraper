@@ -12,7 +12,7 @@
  *
  * Endpoints (all require header `X-App-Token: <APP_TOKEN>`):
  *   GET  /api/games                         -> [{gameId, gameId2, homeDiv, awayDiv, home, away, location, startMs}]
- *   GET  /api/games/:gameId/setup?div=&g2=  -> {home, away, infractions, current:{finals}}
+ *   GET  /api/games/:gameId/setup?div=&g2=  -> {home, away, infractions, current}
  *   POST /api/games/:gameId/sync            -> {ok, results}   body: {username, scoreSummary[], penaltySummary[]}
  *   GET  /api/health                        -> {ok}
  *
@@ -208,6 +208,7 @@ async function gameSetup(env, gameId, div, gameId2) {
   const rosters = parsePlayersByUsername(html);
   const infractions = parseInfractionList(html);
   const finals = parseFinals(html); // current line-score finals from the static form
+  const authoritative = parseAuthoritativeEvents(html);
 
   const homeDiv = div;
   const awayDiv = Object.keys(rosters).find((d) => d !== homeDiv) || null;
@@ -219,7 +220,12 @@ async function gameSetup(env, gameId, div, gameId2) {
     home: { div: homeDiv, name: TEAMS[homeDiv] || homeDiv, players: rosters[homeDiv] || [] },
     away: awayDiv ? { div: awayDiv, name: TEAMS[awayDiv] || awayDiv, players: rosters[awayDiv] || [] } : null,
     infractions,
-    current: { finals }, // full event resume is a v2 item — see README
+    current: {
+      finals,
+      goals: authoritative.goals,
+      penalties: authoritative.penalties,
+      comparisonToken: comparisonToken({ finals, goals: authoritative.goals, penalties: authoritative.penalties }),
+    },
   };
 }
 
@@ -341,6 +347,58 @@ function parseFinals(html) {
   return { h: grab("finalh"), a: grab("finala") };
 }
 
+/**
+ * Read the event arrays embedded in the Game Score editor. These are the
+ * authoritative remote baseline: callers must never substitute [] when the
+ * editor shape is unknown or malformed.
+ *
+ * The editor has used both the globalVars names and the submitted form names
+ * over time; the fixture and these aliases keep that variation explicit.
+ */
+function parseAuthoritativeEvents(html) {
+  const goals = firstArrayAssignment(html, [
+    "globalVars.scoreSummary", "globalVars.scoringSummary", "scoreSummaryData",
+  ]);
+  const penalties = firstArrayAssignment(html, [
+    "globalVars.penaltySummary", "globalVars.penaltiesSummary", "penaltySummaryData",
+  ]);
+  if (!goals || !penalties || !goals.every(isEvent) || !penalties.every(isEvent)) {
+    throw new Error("authoritative event arrays missing or malformed");
+  }
+  return { goals, penalties };
+}
+
+function firstArrayAssignment(html, names) {
+  for (const name of names) {
+    const value = extractJsonAssignment(html, name);
+    if (Array.isArray(value)) return value;
+  }
+  return null;
+}
+
+function isEvent(value) {
+  return value !== null && typeof value === "object" && !Array.isArray(value);
+}
+
+/** Stable, local comparison token for the complete authoritative setup. */
+function comparisonToken(value) {
+  const canonical = stableStringify(value);
+  let hash = 0xcbf29ce484222325n;
+  for (let i = 0; i < canonical.length; i++) {
+    hash ^= BigInt(canonical.charCodeAt(i));
+    hash = BigInt.asUintN(64, hash * 0x100000001b3n);
+  }
+  return hash.toString(16).padStart(16, "0");
+}
+
+function stableStringify(value) {
+  if (Array.isArray(value)) return `[${value.map(stableStringify).join(",")}]`;
+  if (value && typeof value === "object") {
+    return `{${Object.keys(value).sort().map((key) => `${JSON.stringify(key)}:${stableStringify(value[key])}`).join(",")}}`;
+  }
+  return JSON.stringify(value);
+}
+
 /** Find `name = { ... }` / `name = [ ... ]` and JSON.parse the balanced literal. */
 function extractJsonAssignment(html, name) {
   const at = html.indexOf(name);
@@ -372,3 +430,5 @@ function extractJsonAssignment(html, name) {
 function stripTags(s) {
   return s.replace(/<[^>]*>/g, " ").replace(/&amp;/g, "&").replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim();
 }
+
+export { comparisonToken, gameSetup, parseAuthoritativeEvents };
