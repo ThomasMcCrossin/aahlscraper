@@ -34,4 +34,8 @@ export function startPolling({ root, endpoint = "/api/public/scoreboard", fetche
   return () => { stopped = true; controller.abort(); if (timeout !== undefined) timer.clearTimeout(timeout); };
 }
 
-if (typeof document !== "undefined") startPolling({ root: document.querySelector("#scoreboard-list") });
+const PRODUCTION_ENDPOINT = "https://aahl-scoresheet-api.thomas-mccrossin.workers.dev/api/public/scoreboard";
+if (typeof document !== "undefined") {
+  const api = new URLSearchParams(location.search).get("api");
+  startPolling({ root: document.querySelector("#scoreboard-list"), endpoint: api || PRODUCTION_ENDPOINT });
+}
