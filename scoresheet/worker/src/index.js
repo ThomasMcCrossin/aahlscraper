@@ -53,6 +53,21 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const origin = request.headers.get("Origin");
+    // The public display is deliberately independent of the captain/admin
+    // origin gate. It is read-only and returns only projected canonical data.
+    if (url.pathname.startsWith("/api/public/")) {
+      const publicHeaders = { ...publicCors(), "Cache-Control": "public, max-age=20, s-maxage=20" };
+      if (request.method !== "GET") return json({ ok: false, error: "method_not_allowed" }, 405, publicHeaders);
+      if (url.pathname === "/api/public/scoreboard" || /^\/api\/public\/games\/[^/]+\/boxscore$/.test(url.pathname)) {
+        try {
+          const result = await publicRoute(env, url);
+          return json(result.body, result.status, publicHeaders);
+        } catch {
+          return json({ ok: false, error: "public_service_unavailable" }, 503, publicHeaders);
+        }
+      }
+      return json({ ok: false, error: "not_found" }, 404, publicHeaders);
+    }
     const configured = configuration(env);
     const cors = configured.ok && origin === configured.origin ? corsHeaders(configured.origin) : {};
 
@@ -272,7 +287,7 @@ export class GameRecord {
   async fetch(request) {
     const url = new URL(request.url);
     const input = request.method === "GET" ? {} : await request.json();
-    if (request.method === "GET" || url.pathname === "/read") {
+    if ((request.method === "GET" && url.pathname !== "/index") || url.pathname === "/read") {
       const revisions = await this.revisions();
       return this.response({ ok: true, gameId: input.gameId || url.pathname.slice(1), latest: revisions.at(-1) || null, revisions });
     }
@@ -298,6 +313,26 @@ export class GameRecord {
         ? await this.state.storage.transaction(append)
         : await append(this.state.storage);
       return this.response({ ok: true, revision });
+    }
+    if (url.pathname === "/index-update") {
+      const key = `game:${String(input.gameId || "")}`;
+      const current = await this.state.storage.get(key);
+      const next = {
+        gameId: String(input.gameId || ""),
+        seasonMapId: input.seasonMapId,
+        displayTeams: input.displayTeams,
+        updatedAt: input.updatedAt || new Date().toISOString(),
+        revision: Number(input.revision),
+      };
+      // Append/update only: never remove an entry or move it backwards.
+      if (!current || next.revision >= Number(current.revision || 0)) await this.state.storage.put(key, next);
+      return this.response({ ok: true, entry: next });
+    }
+    if (url.pathname === "/index") {
+      const entries = typeof this.state.storage.list === "function"
+        ? [...(await this.state.storage.list({ prefix: "game:" })).values()]
+        : [];
+      return this.response({ ok: true, entries });
     }
     if (url.pathname === "/promote") {
       const number = Number(input.revision);
@@ -339,6 +374,9 @@ function corsHeaders(origin) {
     "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type,X-App-Token,X-Game-Code",
   };
+}
+function publicCors() {
+  return { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "GET", "Access-Control-Allow-Headers": "Content-Type" };
 }
 function json(obj, statusCode, cors) {
   return new Response(JSON.stringify(obj), {
@@ -446,6 +484,72 @@ async function listGames(env) {
   return parseGamesFromSchedule(html, seasonMapId(env));
 }
 
+const PUBLIC_DEFAULT_LIMIT = 20;
+const PUBLIC_MAX_LIMIT = 100;
+function publicLimit(url) {
+  const raw = url.searchParams.get("limit");
+  if (raw == null || raw === "") return PUBLIC_DEFAULT_LIMIT;
+  const value = Number(raw);
+  return Number.isInteger(value) && value > 0 ? Math.min(value, PUBLIC_MAX_LIMIT) : PUBLIC_DEFAULT_LIMIT;
+}
+function publicProjection(record) {
+  if (!record) return null;
+  const status = record.status === "verified" ? "final" : "live";
+  return {
+    gameId: String(record.gameId || ""),
+    teams: publicTeams(record.displayTeams || record.teams),
+    boxScore: publicBoxScore(record.boxScore),
+    scores: publicEvents(record.scoreSummary, ["period", "clock", "scoreTeam", "team", "scorer", "assists", "scoreTotalText"]),
+    penalties: publicEvents(record.penaltySummary, ["period", "clock", "penaltyTeam", "team", "penaltyPlayer", "servedPlayer", "infraction", "penaltyLength", "minutes"]),
+    seasonMapId: record.seasonMapId || null,
+    revision: Number(record.revision || 0),
+    status,
+    submittedAt: record.submittedAt || null,
+    verifiedAt: record.verifiedAt || null,
+  };
+}
+function publicTeams(value) {
+  if (!value || typeof value !== "object") return null;
+  const side = (item) => item && typeof item === "object" ? { name: item.name || item.displayName || null } : null;
+  return { home: side(value.home), away: side(value.away) };
+}
+function publicBoxScore(value) {
+  if (!value || typeof value !== "object") return null;
+  return Object.fromEntries(Object.entries(value).map(([team, row]) => [String(team), {
+    goals: Number(row?.goals || 0), penaltyCount: Number(row?.penaltyCount || 0), penaltyMinutes: Number(row?.penaltyMinutes || 0),
+  }]));
+}
+function publicEvents(value, fields) {
+  return Array.isArray(value) ? value.map((event) => Object.fromEntries(fields.filter((field) => event && event[field] !== undefined).map((field) => [field, event[field]]))) : [];
+}
+function publicIndex(env) {
+  const namespace = env.GAME_RECORDS;
+  if (!namespace || typeof namespace.idFromName !== "function") throw new Error("index unavailable");
+  return namespace.get(namespace.idFromName("__public-index__"));
+}
+async function publicRoute(env, url) {
+  const namespace = env.GAME_RECORDS;
+  if (!namespace || typeof namespace.idFromName !== "function") return { body: { ok: false, error: "configuration_error" }, status: 503 };
+  const box = url.pathname.match(/^\/api\/public\/games\/([^/]+)\/boxscore$/);
+  if (box) {
+    const gameId = decodeURIComponent(box[1]);
+    const response = await namespace.get(namespace.idFromName(gameId)).fetch(new Request(`https://record/${encodeURIComponent(gameId)}`, { method: "GET" }));
+    if (!response.ok) return { body: { ok: false, error: "not_found" }, status: 404 };
+    const data = await response.json();
+    return data.latest ? { body: publicProjection(data.latest), status: 200 } : { body: { ok: false, error: "not_found" }, status: 404 };
+  }
+  const indexResponse = await publicIndex(env).fetch(new Request("https://record/index", { method: "GET" }));
+  const index = await indexResponse.json();
+  const entries = (index.entries || []).sort((a, b) => String(b.updatedAt || "").localeCompare(String(a.updatedAt || ""))).slice(0, publicLimit(url));
+  const games = [];
+  for (const entry of entries) {
+    const response = await namespace.get(namespace.idFromName(String(entry.gameId))).fetch(new Request(`https://record/${encodeURIComponent(entry.gameId)}`, { method: "GET" }));
+    if (response.ok) { const data = await response.json(); if (data.latest) games.push(publicProjection(data.latest)); }
+  }
+  games.sort((a, b) => Number(b.revision) - Number(a.revision) || String(b.submittedAt || "").localeCompare(String(a.submittedAt || "")));
+  return { body: { games, limit: publicLimit(url) }, status: 200 };
+}
+
 async function gameSetup(env, gameId, div, gameId2) {
   if (!div) throw new Error("missing ?div (home division id)");
   const target = `${HTO}/admin/default.asp?p=ScoresEdit&a=1&sportsHQ=${encodeURIComponent(div)}&gameID=${gameId}&gameID2=${encodeURIComponent(gameId2)}`;
@@ -533,6 +637,7 @@ async function syncGame(env, gameId, body, options = {}) {
         scoreSummary: body.scoreSummary,
         penaltySummary: body.penaltySummary,
         boxScore: deriveBoxScore(body.scoreSummary, body.penaltySummary),
+        displayTeams: body.displayTeams || body.teams || null,
         seasonMapId: expectedSeason || seasonMapId(env),
         subject: options.operatorId || operatorId,
         status: "submitted",
@@ -587,6 +692,7 @@ async function syncGame(env, gameId, body, options = {}) {
   }
   return {
     ok: true, status: "published", phase: "published", verified: true, results,
+    canonical: captured ? { revision: captured.revision, indexUpdated: captured.indexUpdated !== false } : null,
     leaseId: body.leaseId, comparisonToken: comparisonToken({
       finals: verified.finals, goals: verified.goals, penalties: verified.penalties,
     }),
@@ -597,8 +703,18 @@ function canonicalRecord(env) {
   const namespace = env.GAME_RECORDS;
   if (!namespace || typeof namespace.idFromName !== "function") return null;
   const stub = (gameId) => namespace.get(namespace.idFromName(String(gameId)));
+  const index = namespace.get(namespace.idFromName("__public-index__"));
   return {
-    append: async (value) => (await gameRecordCall(stub(value.gameId), "/append", value)).revision,
+    append: async (value) => {
+      const result = await gameRecordCall(stub(value.gameId), "/append", value);
+      try {
+        await gameRecordCall(index, "/index-update", { gameId: value.gameId, seasonMapId: value.seasonMapId, displayTeams: value.displayTeams, revision: result.revision.revision, updatedAt: value.submittedAt });
+        return { ...result.revision, indexUpdated: true };
+      } catch {
+        // Canonical append is durable; index refresh is best-effort and can be retried.
+        return { ...result.revision, indexUpdated: false, indexFailure: true };
+      }
+    },
     promote: async (revision) => gameRecordCall(stub(revision.gameId), "/promote", { revision: revision.revision }),
   };
 }

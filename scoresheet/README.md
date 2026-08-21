@@ -122,3 +122,17 @@ The scoring screen can export a versioned `aahl-scoresheet-recovery` JSON file.
 Import requires the exact same game identity, validates both arrays, and rejects
 an equal or older revision, so it cannot cross games or silently replace newer
 local work. Imported and corrected events use the same per-game sync queue.
+# Public scoreboard
+
+The unauthenticated, GET-only `/api/public/scoreboard` endpoint lists a bounded
+set of canonical games and `/api/public/games/:gameId/boxscore` reads one game.
+Responses use wildcard CORS, short public caching, and an explicit display
+projection; captain/admin credentials, lease data, subjects, and raw submitted
+payloads are never included. Submitted revisions display as `live`, while
+verified revisions display as `final`.
+
+After each canonical append, the worker best-effort updates the well-known
+`__public-index__` `GameRecord` instance. The append remains authoritative if
+the index update fails, and sync returns `canonical.indexUpdated: false` so a
+later append can repair the listing. Public listing reads that index, fetches
+latest revisions from each game record, and orders newest revisions first.
