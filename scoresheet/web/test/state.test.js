@@ -12,6 +12,13 @@ test("HomeTeamsOnline running-score fixture convention is recomputed home-away",
   assert.deepEqual(events.map((event) => event.scoreTotalText), ["(1-0)", "(1-1)", "(1-2)"]);
 });
 
+test("sync payload carries only display-safe home/away identity", () => {
+  const s = ready(); s.home = "Real Home"; s.away = "Real Away";
+  const payload = syncPayload(s);
+  assert.deepEqual(payload.displayTeams, { home: { name: "Real Home", key: "H" }, away: { name: "Real Away", key: "A" } });
+  assert.equal(payload.displayTeams.home.setup, undefined);
+});
+
 test("resume refuses blind replacement and requires exact-game confirmation", () => {
   const s = createGameState(game);
   assert.throws(() => resumeGame(s, remote, { gameId: "g-2", confirmed: true }), /exact-game/);

@@ -500,6 +500,16 @@ test("GameRecord appends numbered revisions and promotes only submitted status",
   assert.deepEqual(read.body.revisions.map((item) => item.revision), [1]);
 });
 
+test("GameRecord persists only canonical display team identity", async () => {
+  const { record } = recordFixture();
+  const result = await recordRequest(record, "/append", {
+    gameId: "display-1", scoreSummary: [], penaltySummary: [],
+    displayTeams: { home: { name: "Real Home", key: "home-key", secret: "drop" }, away: { name: "Real Away", key: "away-key", raw: {} }, internal: "drop" },
+  });
+  assert.deepEqual(result.body.revision.displayTeams, { home: { name: "Real Home", key: "home-key" }, away: { name: "Real Away", key: "away-key" } });
+  assert.equal(result.body.revision.displayTeams.internal, undefined);
+});
+
 test("sync captures before HTO writers, preserves failed capture, and promotes only after verification", async () => {
   const { record } = recordFixture();
   const coordinator = createInMemoryLeaseCoordinator();

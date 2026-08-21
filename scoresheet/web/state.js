@@ -226,6 +226,10 @@ export function syncPayload(state) {
     gameId: state.gameId, revision: state.revision,
     seasonMapId: state.seasonMapId || state.setup?.seasonMapId,
     comparisonToken: state.remoteBaseline.comparisonToken,
+    displayTeams: {
+      home: { name: state.home || state.setup?.home?.name || null, key: state.homeDiv || state.setup?.home?.div || null },
+      away: { name: state.away || state.setup?.away?.name || null, key: state.awayDiv || state.setup?.away?.div || null },
+    },
     ...(state.leaseId ? { leaseId: state.leaseId } : {}),
     scoreSummary: clone(state.scoreSummary), penaltySummary: clone(state.penaltySummary),
   };

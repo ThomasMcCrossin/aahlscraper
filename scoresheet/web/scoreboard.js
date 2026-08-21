@@ -10,7 +10,10 @@ export function renderScoreboard(root, payload) {
     const m = displayModel(game), card = document.createElement("article"); card.className = "score-card";
     card.innerHTML = `<div class="score-head"><span class="game-id">Game ${escapeHtml(m.gameId)}</span><span class="status ${m.status}">${m.status === "final" ? "FINAL" : "LIVE · UNOFFICIAL"}</span></div><div class="teams"><div><strong>${escapeHtml(m.away)}</strong><b>${m.awayScore}</b></div><div><strong>${escapeHtml(m.home)}</strong><b>${m.homeScore}</b></div></div>`;
     const meta = document.createElement("p"); meta.className = "summary";
-    meta.textContent = m.penalties.length ? `${m.penalties.length} penalty${m.penalties.length === 1 ? "" : "ies"}` : "";
+    const summaries = [];
+    if (m.periodSummary.length) summaries.push(`Periods: ${m.periodSummary.map((p) => `P${p.period} ${p.homeScore ?? p.home ?? 0}-${p.awayScore ?? p.away ?? 0}`).join(" · ")}`);
+    if (m.penalties.length) summaries.push(`${m.penalties.length} penalty${m.penalties.length === 1 ? "" : "ies"}`);
+    meta.textContent = summaries.join(" · ");
     card.append(meta); root.append(card);
   }
 }

@@ -2,15 +2,22 @@
 export const DEFAULT_POLL_MS = 25000;
 export function displayModel(game = {}) {
   const teams = game.teams || {};
+  const homeKey = teams.home?.key;
+  const awayKey = teams.away?.key;
+  const scoreFor = (key, fallback) => {
+    const value = game.boxScore?.[key]?.goals ?? game.boxScore?.[fallback]?.goals;
+    return value == null ? null : Number(value);
+  };
   return {
     gameId: game.gameId || "",
     home: teams.home?.name || "Home",
     away: teams.away?.name || "Away",
-    homeScore: Number(game.boxScore?.HOME?.goals ?? game.boxScore?.home?.goals ?? 0),
-    awayScore: Number(game.boxScore?.AWAY?.goals ?? game.boxScore?.away?.goals ?? 0),
+    homeScore: scoreFor(homeKey, "HOME") ?? scoreFor("home", "home") ?? 0,
+    awayScore: scoreFor(awayKey, "AWAY") ?? scoreFor("away", "away") ?? 0,
     status: game.status === "final" ? "final" : "live",
     scores: Array.isArray(game.scores) ? game.scores : [],
     penalties: Array.isArray(game.penalties) ? game.penalties : [],
+    periodSummary: Array.isArray(game.periodSummary) ? game.periodSummary : [],
   };
 }
 export function backoffDelay(attempt, random = Math.random) {

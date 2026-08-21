@@ -299,6 +299,8 @@ export class GameRecord {
           scoreSummary: input.scoreSummary,
           penaltySummary: input.penaltySummary,
           boxScore: input.boxScore,
+          displayTeams: sanitizeDisplayTeams(input.displayTeams),
+          periodSummary: input.periodSummary,
           seasonMapId: input.seasonMapId,
           subject: input.subject,
           submittedAt: input.submittedAt,
@@ -501,6 +503,7 @@ function publicProjection(record) {
     boxScore: publicBoxScore(record.boxScore),
     scores: publicEvents(record.scoreSummary, ["period", "clock", "scoreTeam", "team", "scorer", "assists", "scoreTotalText"]),
     penalties: publicEvents(record.penaltySummary, ["period", "clock", "penaltyTeam", "team", "penaltyPlayer", "servedPlayer", "infraction", "penaltyLength", "minutes"]),
+    periodSummary: publicEvents(record.periodSummary, ["period", "home", "away", "homeScore", "awayScore"]),
     seasonMapId: record.seasonMapId || null,
     revision: Number(record.revision || 0),
     status,
@@ -510,7 +513,15 @@ function publicProjection(record) {
 }
 function publicTeams(value) {
   if (!value || typeof value !== "object") return null;
-  const side = (item) => item && typeof item === "object" ? { name: item.name || item.displayName || null } : null;
+  const side = (item) => item && typeof item === "object" ? { name: item.name || null, key: item.key || null } : null;
+  return { home: side(value.home), away: side(value.away) };
+}
+function sanitizeDisplayTeams(value) {
+  if (!value || typeof value !== "object") return null;
+  const side = (item) => item && typeof item === "object" ? {
+    name: typeof item.name === "string" ? item.name : null,
+    key: typeof item.key === "string" ? item.key : null,
+  } : null;
   return { home: side(value.home), away: side(value.away) };
 }
 function publicBoxScore(value) {
@@ -540,13 +551,22 @@ async function publicRoute(env, url) {
   }
   const indexResponse = await publicIndex(env).fetch(new Request("https://record/index", { method: "GET" }));
   const index = await indexResponse.json();
-  const entries = (index.entries || []).sort((a, b) => String(b.updatedAt || "").localeCompare(String(a.updatedAt || ""))).slice(0, publicLimit(url));
+  const timestamp = (value) => {
+    const parsed = Date.parse(String(value || ""));
+    return Number.isFinite(parsed) ? parsed : null;
+  };
+  const entries = (index.entries || []).slice().sort((a, b) => {
+    const left = timestamp(a.updatedAt), right = timestamp(b.updatedAt);
+    if (left === null && right === null) return String(a.gameId || "").localeCompare(String(b.gameId || ""));
+    if (left === null) return 1;
+    if (right === null) return -1;
+    return right - left || String(a.gameId || "").localeCompare(String(b.gameId || ""));
+  }).slice(0, publicLimit(url));
   const games = [];
   for (const entry of entries) {
     const response = await namespace.get(namespace.idFromName(String(entry.gameId))).fetch(new Request(`https://record/${encodeURIComponent(entry.gameId)}`, { method: "GET" }));
     if (response.ok) { const data = await response.json(); if (data.latest) games.push(publicProjection(data.latest)); }
   }
-  games.sort((a, b) => Number(b.revision) - Number(a.revision) || String(b.submittedAt || "").localeCompare(String(a.submittedAt || "")));
   return { body: { games, limit: publicLimit(url) }, status: 200 };
 }
 
@@ -638,6 +658,7 @@ async function syncGame(env, gameId, body, options = {}) {
         penaltySummary: body.penaltySummary,
         boxScore: deriveBoxScore(body.scoreSummary, body.penaltySummary),
         displayTeams: body.displayTeams || body.teams || null,
+        periodSummary: Array.isArray(body.periodSummary) ? body.periodSummary : derivePeriodSummary(body.scoreSummary, body.displayTeams || body.teams),
         seasonMapId: expectedSeason || seasonMapId(env),
         subject: options.operatorId || operatorId,
         status: "submitted",
@@ -736,6 +757,21 @@ function deriveBoxScore(goals, penalties) {
     const value = row(event?.penaltyTeam ?? event?.team); value.penaltyCount++; value.penaltyMinutes += Number(event?.penaltyLength ?? event?.minutes) || 0;
   }
   return Object.fromEntries([...teams.entries()].sort(([a], [b]) => a.localeCompare(b)));
+}
+
+function derivePeriodSummary(goals, displayTeams) {
+  if (!Array.isArray(goals) || !goals.length) return [];
+  const homeKey = displayTeams?.home?.key || "HOME";
+  const rows = new Map();
+  for (const goal of goals) {
+    const period = String(goal?.period || "");
+    if (!period) continue;
+    if (!rows.has(period)) rows.set(period, { period, homeScore: 0, awayScore: 0 });
+    const row = rows.get(period);
+    if (String(goal?.scoreTeam ?? goal?.team ?? "") === String(homeKey)) row.homeScore += 1;
+    else row.awayScore += 1;
+  }
+  return [...rows.values()];
 }
 
 function conflict(code, message) { return { ok: false, conflict: true, code, message, writes: 0 }; }
