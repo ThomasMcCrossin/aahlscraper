@@ -67,7 +67,7 @@ export default {
     try {
       const admin = url.pathname.startsWith("/api/admin/game-codes/") || url.pathname.startsWith("/api/admin/game-records/");
       if (admin && request.headers.get("X-App-Token") !== configured.token)
-        return json({ ok: false, error: "unauthorized" }, 401, cors);
+        return json({ ok: false, error: "unauthorized" }, url.pathname.startsWith("/api/admin/game-records/") ? 403 : 401, cors);
       if (url.pathname.startsWith("/api/admin/game-records/")) {
         const result = await adminGameRecordRoute(env, url, request);
         return json(result.body, result.status, cors);
@@ -277,10 +277,26 @@ export class GameRecord {
       return this.response({ ok: true, gameId: input.gameId || url.pathname.slice(1), latest: revisions.at(-1) || null, revisions });
     }
     if (url.pathname === "/append") {
-      const next = Number(await this.state.storage.get("nextRevision") || 0) + 1;
-      const revision = { ...input, revision: next };
-      await this.state.storage.put(`revision:${next}`, revision);
-      await this.state.storage.put("nextRevision", next);
+      const append = async (storage) => {
+        const next = Number(await storage.get("nextRevision") || 0) + 1;
+        const revision = {
+          gameId: String(input.gameId || ""),
+          scoreSummary: input.scoreSummary,
+          penaltySummary: input.penaltySummary,
+          boxScore: input.boxScore,
+          seasonMapId: input.seasonMapId,
+          subject: input.subject,
+          submittedAt: input.submittedAt,
+          status: "submitted",
+          revision: next,
+        };
+        await storage.put(`revision:${next}`, revision);
+        await storage.put("nextRevision", next);
+        return revision;
+      };
+      const revision = typeof this.state.storage.transaction === "function"
+        ? await this.state.storage.transaction(append)
+        : await append(this.state.storage);
       return this.response({ ok: true, revision });
     }
     if (url.pathname === "/promote") {
@@ -463,7 +479,7 @@ async function gameSetup(env, gameId, div, gameId2) {
 
 async function syncGame(env, gameId, body, options = {}) {
   const username = body.username; // home division id, not operator identity
-  const operatorId = options.operatorId || body.operatorId;
+  const operatorId = options.operatorId;
   if (!username) return conflict("invalid_request", "missing username (home division id)");
   if (!operatorId) return conflict("identity_required", "operator identity is required");
   if (!body.leaseId) return conflict("lease_required", "an active game lease is required");
@@ -497,10 +513,6 @@ async function syncGame(env, gameId, body, options = {}) {
     return conflict("invalid_request", "at least one summary array is required");
   }
 
-  // Canonical capture is the first operation after all validation and lease
-  // checks, so a publication failure cannot discard a valid captain revision.
-  const recordBoundary = options.gameRecord || canonicalRecord(env);
-
   const writer = options.writer || postSummary;
   const results = {};
 
@@ -510,12 +522,14 @@ async function syncGame(env, gameId, body, options = {}) {
   if (!Array.isArray(body.scoreSummary) || !Array.isArray(body.penaltySummary)) {
     return conflict("invalid_request", "both goal and penalty summary arrays are required");
   }
+  // Canonical capture is the first operation after all validation and lease
+  // checks, so a publication failure cannot discard a valid captain revision.
+  const recordBoundary = options.gameRecord || canonicalRecord(env);
+  if (!recordBoundary) return conflict("canonical_persistence_failed", "GAME_RECORDS binding is required");
   let captured;
-  if (recordBoundary) {
-    try {
-      captured = await recordBoundary.append({
+  try {
+    captured = await recordBoundary.append({
         gameId: String(gameId),
-        clientRevision: body.revision === undefined ? undefined : body.revision,
         scoreSummary: body.scoreSummary,
         penaltySummary: body.penaltySummary,
         boxScore: deriveBoxScore(body.scoreSummary, body.penaltySummary),
@@ -523,10 +537,9 @@ async function syncGame(env, gameId, body, options = {}) {
         subject: options.operatorId || operatorId,
         status: "submitted",
         submittedAt: new Date().toISOString(),
-      });
-    } catch (error) {
-      return conflict("canonical_persistence_failed", String((error && error.message) || error));
-    }
+    });
+  } catch (error) {
+    return conflict("canonical_persistence_failed", String((error && error.message) || error));
   }
   try {
     results.goals = await writer(env, "updateScoreSummary", "scoreSummaryData", gameId, username, body.scoreSummary);
@@ -568,7 +581,7 @@ async function syncGame(env, gameId, body, options = {}) {
   if (!verified || !sameEvents(verified.goals, body.scoreSummary) || !sameEvents(verified.penalties, body.penaltySummary)) {
     return publicationFailure("verification", "conflict", new Error("authoritative reread does not match requested revision"), results, body, "verification_mismatch");
   }
-  if (recordBoundary && captured?.revision) {
+  if (captured?.revision) {
     try { await recordBoundary.promote(captured); }
     catch (error) { return publicationFailure("verification", "penalty-published", error, results, body, "canonical_promotion_failed"); }
   }
@@ -602,9 +615,9 @@ function deriveBoxScore(goals, penalties) {
     if (!teams.has(key)) teams.set(key, { goals: 0, penaltyCount: 0, penaltyMinutes: 0 });
     return teams.get(key);
   };
-  for (const event of goals) row(event?.team).goals++;
+  for (const event of goals) row(event?.scoreTeam ?? event?.team).goals++;
   for (const event of penalties) {
-    const value = row(event?.team); value.penaltyCount++; value.penaltyMinutes += Number(event?.minutes) || 0;
+    const value = row(event?.penaltyTeam ?? event?.team); value.penaltyCount++; value.penaltyMinutes += Number(event?.penaltyLength ?? event?.minutes) || 0;
   }
   return Object.fromEntries([...teams.entries()].sort(([a], [b]) => a.localeCompare(b)));
 }

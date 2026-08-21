@@ -13,6 +13,7 @@ function registryFixture() {
   const storage = {
     get: async (key) => data.get(key),
     put: async (key, value) => data.set(key, value),
+    transaction: async (fn) => fn(storage),
     delete: async (key) => data.delete(key),
     list: async ({ prefix } = {}) => new Map([...data].filter(([key]) => !prefix || key.startsWith(prefix))),
   };
@@ -364,6 +365,7 @@ test("Blocker 3 regression: compare is against a freshly read authoritative snap
     scoreSummary: [{ id: "new" }], penaltySummary: [],
   }, {
     operatorId: "op-a", coordinator,
+    gameRecord: recordBoundaryFixture(),
     authoritativeReader: async ({ phase }) => { calls.push("read"); return phase === "verifying" ? authoritative([{ id: "new" }], []) : remote; },
     writer: async (_env, action) => { calls.push("write"); writes.push(action); return { success: 1 }; },
   });
@@ -375,11 +377,12 @@ test("Blocker 3 regression: compare is against a freshly read authoritative snap
 test("T4 complete publication has goal, penalty, and verified phases", async () => {
   const coordinator = createInMemoryLeaseCoordinator();
   const baseline = authoritative([{ id: "old" }], [{ id: "old-pen" }]);
-  const requested = { scoreSummary: [{ id: "new" }], penaltySummary: [{ id: "new-pen" }] };
+  const requested = { scoreSummary: [{ scoreTeam: "HOME", id: "new" }], penaltySummary: [{ penaltyTeam: "AWAY", penaltyLength: 2, id: "new-pen" }] };
   const lease = await coordinator.acquire({ gameId: "g-t4", operatorId: "op-a" });
   const phases = [];
   const result = await syncGame({}, "g-t4", { username: "H", ...requested, ...lease, comparisonToken: baseline.comparisonToken, revision: 4 }, {
     operatorId: "op-a", coordinator,
+    gameRecord: recordBoundaryFixture(),
     authoritativeReader: async ({ phase }) => { phases.push(phase || "baseline"); return phase === "verifying" ? authoritative(requested.scoreSummary, requested.penaltySummary) : baseline; },
     writer: async (_env, action) => { phases.push(action); return { success: 1 }; },
   });
@@ -393,13 +396,18 @@ test("T4 first-phase failure is explicit and retryable without a penalty write",
   const coordinator = createInMemoryLeaseCoordinator();
   const baseline = authoritative();
   const lease = await coordinator.acquire({ gameId: "g-fail-goal", operatorId: "op-a" });
+  const { record, data } = recordFixture();
   let writes = 0;
   const result = await syncGame({}, "g-fail-goal", { username: "H", scoreSummary: [{ id: "g" }], penaltySummary: [], ...lease, comparisonToken: baseline.comparisonToken }, {
-    operatorId: "op-a", coordinator, authoritativeReader: async () => baseline,
+    operatorId: "op-a", coordinator, gameRecord: recordBoundary(record), authoritativeReader: async () => baseline,
     writer: async () => { writes += 1; throw new Error("goal unavailable"); },
   });
   assert.equal(result.ok, false); assert.equal(result.phase, "goals"); assert.equal(result.status, "goal-failed");
   assert.equal(result.retryable, true); assert.equal(writes, 1);
+  assert.equal(data.get("revision:1").status, "submitted");
+  assert.deepEqual(data.get("revision:1").scoreSummary, [{ id: "g" }]);
+  assert.equal(data.get("revision:1").leaseId, undefined);
+  assert.equal(data.get("revision:1").gameCode, undefined);
 });
 
 test("T4 penalty failure exposes partial goal publication and retry resumes both phases", async () => {
@@ -409,7 +417,7 @@ test("T4 penalty failure exposes partial goal publication and retry resumes both
   const lease = await coordinator.acquire({ gameId: "g-fail-pen", operatorId: "op-a" });
   let failPenalty = true; const writes = []; let current = baseline;
   const result = await syncGame({}, "g-fail-pen", { username: "H", scoreSummary: goal, penaltySummary: penalty, ...lease, comparisonToken: baseline.comparisonToken }, {
-    operatorId: "op-a", coordinator, authoritativeReader: async () => current,
+    operatorId: "op-a", coordinator, gameRecord: recordBoundaryFixture(), authoritativeReader: async () => current,
     writer: async (_env, action) => {
       writes.push(action);
       if (action === "updateScoreSummary") current = authoritative(goal, current.penalties);
@@ -421,7 +429,7 @@ test("T4 penalty failure exposes partial goal publication and retry resumes both
   assert.equal(result.ok, false); assert.equal(result.phase, "penalties"); assert.equal(result.status, "goal-published/partial");
   assert.equal(result.comparisonToken, current.comparisonToken);
   const retry = await syncGame({}, "g-fail-pen", { username: "H", scoreSummary: goal, penaltySummary: penalty, ...lease, comparisonToken: result.comparisonToken }, {
-    operatorId: "op-a", coordinator, authoritativeReader: async () => current,
+    operatorId: "op-a", coordinator, gameRecord: recordBoundaryFixture(), authoritativeReader: async () => current,
     writer: async (_env, action) => {
       writes.push(action);
       if (action === "updatePenaltySummary") current = authoritative(goal, penalty);
@@ -435,7 +443,7 @@ test("T4 reread mismatch is a conflict, never a published result", async () => {
   const coordinator = createInMemoryLeaseCoordinator();
   const baseline = authoritative(); const lease = await coordinator.acquire({ gameId: "g-mismatch", operatorId: "op-a" });
   const result = await syncGame({}, "g-mismatch", { username: "H", scoreSummary: [{ id: "wanted" }], penaltySummary: [], ...lease, comparisonToken: baseline.comparisonToken }, {
-    operatorId: "op-a", coordinator,
+    operatorId: "op-a", coordinator, gameRecord: recordBoundaryFixture(),
     authoritativeReader: async ({ phase }) => phase === "verifying" ? authoritative([{ id: "different" }], []) : baseline,
     writer: async () => ({ success: 1 }),
   });
@@ -460,9 +468,17 @@ function recordFixture() {
   const storage = {
     get: async (key) => data.get(key),
     put: async (key, value) => data.set(key, value),
+    transaction: async (fn) => fn(storage),
   };
   return { record: new GameRecord({ storage }), data };
 }
+function recordBoundary(record = recordFixture().record) {
+  return {
+    append: async (value) => (await recordRequest(record, "/append", value)).body.revision,
+    promote: async (value) => recordRequest(record, "/promote", { revision: value.revision }),
+  };
+}
+function recordBoundaryFixture() { return recordBoundary(); }
 async function recordRequest(record, path, value, method = "POST") {
   const response = await record.fetch(new Request(`https://record.invalid${path}`, { method, body: method === "GET" ? undefined : JSON.stringify(value || {}) }));
   return { status: response.status, body: await response.json() };
@@ -470,8 +486,13 @@ async function recordRequest(record, path, value, method = "POST") {
 
 test("GameRecord appends numbered revisions and promotes only submitted status", async () => {
   const { record } = recordFixture();
-  const first = await recordRequest(record, "/append", { gameId: "900", scoreSummary: [], penaltySummary: [], status: "submitted" });
+  const first = await recordRequest(record, "/append", { gameId: "900", scoreSummary: [], penaltySummary: [], status: "verified", leaseId: "secret", gameCode: "CODE", appToken: "TOKEN", operatorId: "caller" });
   assert.equal(first.body.revision.revision, 1);
+  assert.equal(first.body.revision.status, "submitted");
+  assert.equal(first.body.revision.leaseId, undefined);
+  assert.equal(first.body.revision.gameCode, undefined);
+  assert.equal(first.body.revision.appToken, undefined);
+  assert.equal(first.body.revision.operatorId, undefined);
   const promoted = await recordRequest(record, "/promote", { revision: 1 });
   assert.equal(promoted.body.revision.status, "verified");
   assert.deepEqual(promoted.body.revision.scoreSummary, []);
@@ -484,7 +505,7 @@ test("sync captures before HTO writers, preserves failed capture, and promotes o
   const coordinator = createInMemoryLeaseCoordinator();
   const lease = await coordinator.acquire({ gameId: "901", operatorId: "subject-1" });
   const baseline = authoritative();
-  const requested = { scoreSummary: [{ team: "HOME", id: "g" }], penaltySummary: [{ team: "AWAY", minutes: 2 }] };
+  const requested = { scoreSummary: [{ scoreTeam: "HOME", id: "g" }], penaltySummary: [{ penaltyTeam: "AWAY", penaltyLength: 2 }] };
   const calls = [];
   const result = await syncGame({ SEASON_MAP_ID: "season" }, "901", { username: "H", ...requested, ...lease, comparisonToken: baseline.comparisonToken }, {
     operatorId: "subject-1", coordinator, gameRecord: {
@@ -514,9 +535,49 @@ test("persistence failure blocks every HTO writer and admin game-records edge is
   const noConfig = await worker.fetch(new Request("https://worker.invalid/api/admin/game-records/902", { headers: { Origin: base.ALLOWED_ORIGIN, "X-App-Token": base.APP_TOKEN } }), base);
   assert.equal(noConfig.status, 503);
   const badToken = await worker.fetch(new Request("https://worker.invalid/api/admin/game-records/902", { headers: { Origin: base.ALLOWED_ORIGIN, "X-App-Token": "bad" } }), { ...base, GAME_RECORDS: {} });
-  assert.equal(badToken.status, 401);
+  assert.equal(badToken.status, 403);
   const badOrigin = await worker.fetch(new Request("https://worker.invalid/api/admin/game-records/902", { headers: { Origin: "https://bad.invalid", "X-App-Token": base.APP_TOKEN } }), { ...base, GAME_RECORDS: {} });
   assert.equal(badOrigin.status, 403);
+});
+
+test("missing production GAME_RECORDS binding fails before any HTO write", async () => {
+  const coordinator = createInMemoryLeaseCoordinator();
+  const lease = await coordinator.acquire({ gameId: "904", operatorId: "subject" });
+  const baseline = authoritative(); let writes = 0;
+  const result = await syncGame({}, "904", { username: "H", scoreSummary: [], penaltySummary: [], ...lease, comparisonToken: baseline.comparisonToken }, {
+    operatorId: "subject", coordinator, authoritativeReader: async () => baseline, writer: async () => { writes++; },
+  });
+  assert.equal(result.code, "canonical_persistence_failed");
+  assert.equal(writes, 0);
+});
+
+test("multiple syncs append revisions without mutating prior payload or metadata", async () => {
+  const { record, data } = recordFixture();
+  const coordinator = createInMemoryLeaseCoordinator();
+  const lease = await coordinator.acquire({ gameId: "905", operatorId: "redeemed-subject" });
+  let current = authoritative();
+  const sync = (goals, penalties) => syncGame({ SEASON_MAP_ID: "season" }, "905", {
+    username: "H", scoreSummary: goals, penaltySummary: penalties, ...lease, comparisonToken: current.comparisonToken,
+  }, {
+    operatorId: "redeemed-subject", coordinator, gameRecord: {
+      append: async (value) => (await recordRequest(record, "/append", value)).body.revision,
+      promote: async (value) => recordRequest(record, "/promote", { revision: value.revision }),
+    }, authoritativeReader: async ({ phase }) => phase === "verifying" ? current : current,
+    writer: async (_env, action, _field, _gameId, _username, value) => {
+      if (action === "updateScoreSummary") current = authoritative(value, current.penalties);
+      if (action === "updatePenaltySummary") current = authoritative(current.goals, value);
+      return { success: 1 };
+    },
+  });
+  const first = await sync([{ scoreTeam: "HOME", id: 1 }], [{ penaltyTeam: "AWAY", penaltyLength: 2, id: 1 }]);
+  assert.equal(first.ok, true);
+  const snapshot = structuredClone(data.get("revision:1"));
+  const second = await sync([{ scoreTeam: "HOME", id: 2 }], [{ penaltyTeam: "AWAY", penaltyLength: 4, id: 2 }]);
+  assert.equal(second.ok, true);
+  assert.deepEqual(data.get("revision:1"), snapshot);
+  assert.equal(data.get("revision:2").revision, 2);
+  assert.equal(data.get("revision:1").status, "verified");
+  assert.equal(data.get("revision:2").status, "verified");
 });
 
 test("admin game-records returns latest and ordered revisions through the configured edge", async () => {
