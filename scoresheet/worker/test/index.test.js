@@ -721,3 +721,52 @@ test("public routes do not leak fields or values from a stored revision", async 
   assert.equal(boxscore.boxScore.HOME.penaltyMinutes, 2);
   assert.equal(boxscore.scores[0].scorer, "Displayed Scorer");
 });
+
+test("canonical export is deterministic, complete, and admin/origin/method gated", async () => {
+  const first = recordFixture(); const second = recordFixture(); const index = recordFixture();
+  await recordRequest(first.record, "/append", { gameId: "b", scoreSummary: [{ id: 1 }], penaltySummary: [] });
+  await recordRequest(first.record, "/append", { gameId: "b", scoreSummary: [{ id: 2 }], penaltySummary: [] });
+  await recordRequest(second.record, "/append", { gameId: "a", scoreSummary: [], penaltySummary: [] });
+  await recordRequest(index.record, "/index-update", { gameId: "b", revision: 2 });
+  await recordRequest(index.record, "/index-update", { gameId: "a", revision: 1 });
+  const records = new Map([["a", second.record], ["b", first.record], ["__public-index__", index.record]]);
+  const env = { APP_TOKEN: "admin-value", ALLOWED_ORIGIN: "https://scores.invalid", GAME_RECORDS: { idFromName: (id) => id, get: (id) => records.get(id) } };
+  const request = (path, init = {}) => worker.fetch(new Request(`https://worker.invalid${path}`, { headers: { Origin: "https://scores.invalid", "X-App-Token": "admin-value", ...init.headers }, ...init }), env);
+  const response = await request("/api/admin/canonical-export"); const body = await response.json();
+  assert.equal(response.status, 200); assert.equal(body.schemaVersion, "aahl-canonical-export/v1");
+  assert.deepEqual(body.games.map((game) => game.gameId), ["a", "b"]);
+  assert.deepEqual(body.games[1].revisions.map((revision) => revision.revision), [1, 2]);
+  assert.equal(JSON.stringify(body).includes("admin-value"), false);
+  assert.equal((await request("/api/admin/canonical-export", { method: "POST" })).status, 405);
+  assert.equal((await worker.fetch(new Request("https://worker.invalid/api/admin/canonical-export", { headers: { Origin: "https://bad.invalid", "X-App-Token": "admin-value" } }), env)).status, 403);
+});
+
+test("markup canary uses GET for every outbound HTO request and reports assumptions", async () => {
+  const methods = [];
+  const schedule = '<table><tr><td>2026-08-21 Amherst Maltby Sports</td><td><script>ScoreClick(\'default.asp?p=ScoresEdit&a=1&sportsHQ=HOME-DIV&gameID=77&gameID2=88\', 123)</script></td></tr></table>';
+  const loginPage = '<form id="loginForm"><input name="username"><input name="password"></form>';
+  const original = globalThis.fetch;
+  globalThis.fetch = async (url, init = {}) => {
+    methods.push(init.method || "GET");
+    if (String(url) === "https://www.hometeamsonline.com/sportswebsites/default.asp?p=login&username=DSMALL") return new Response(loginPage);
+    if (String(url) === "https://www.hometeamsonline.com/admin/ajax/Schedule.asp?p=schedule") return new Response(schedule);
+    return new Response(fixture);
+  };
+  try {
+    const env = { APP_TOKEN: "admin", ALLOWED_ORIGIN: "https://scores.invalid", SESSION: { get: async () => "session" } };
+    const response = await worker.fetch(new Request("https://worker.invalid/api/admin/markup-canary", { headers: { Origin: "https://scores.invalid", "X-App-Token": "admin" } }), env);
+    const body = await response.json();
+    assert.equal(response.status, 200); assert.equal(body.ok, true); assert.ok(body.assumptions.every((check) => check.pass));
+    assert.ok(methods.length >= 3); assert.ok(methods.every((method) => method === "GET"));
+  } finally { globalThis.fetch = original; }
+});
+
+test("diagnostics reports only names/booleans and probes existing bindings with GET", async () => {
+  const methods = [];
+  const probe = { fetch: async (request) => { methods.push(request.method); return new Response('{"ok":true}'); } };
+  const env = { APP_TOKEN: "secret-value", HTO_USERNAME: "user-value", HTO_PASSWORD: "password-value", GAME_CODE_PEPPER: "pepper-value", ALLOWED_ORIGIN: "https://scores.invalid", SEASON_MAP_ID: "season-test", SESSION: { get: async () => "cookie-value" }, GAME_RECORDS: probe, GAME_CODE_REGISTRY: probe, GAME_LEASES: probe };
+  const response = await worker.fetch(new Request("https://worker.invalid/api/admin/diagnostics", { headers: { Origin: "https://scores.invalid", "X-App-Token": "secret-value" } }), env);
+  const body = await response.json(); const serialized = JSON.stringify(body);
+  assert.equal(response.status, 200); assert.equal(body.seasonMapId, "season-test"); assert.equal(body.config.APP_TOKEN, true); assert.equal(body.bindings.GAME_RECORDS, true);
+  assert.equal(serialized.includes("secret-value"), false); assert.equal(serialized.includes("password-value"), false); assert.deepEqual(methods, ["GET", "GET", "GET"]);
+});

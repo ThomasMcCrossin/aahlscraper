@@ -80,9 +80,22 @@ export default {
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
 
     try {
-      const admin = url.pathname.startsWith("/api/admin/game-codes/") || url.pathname.startsWith("/api/admin/game-records/");
+      const admin = url.pathname.startsWith("/api/admin/");
       if (admin && request.headers.get("X-App-Token") !== configured.token)
         return json({ ok: false, error: "unauthorized" }, url.pathname.startsWith("/api/admin/game-records/") ? 403 : 401, cors);
+      if (url.pathname === "/api/admin/canonical-export") {
+        if (request.method !== "GET") return json({ ok: false, error: "method_not_allowed" }, 405, cors);
+        return json(await canonicalExport(env), 200, cors);
+      }
+      if (url.pathname === "/api/admin/markup-canary") {
+        if (request.method !== "GET") return json({ ok: false, error: "method_not_allowed" }, 405, cors);
+        const result = await markupCanary(env);
+        return json(result, result.ok ? 200 : 502, cors);
+      }
+      if (url.pathname === "/api/admin/diagnostics") {
+        if (request.method !== "GET") return json({ ok: false, error: "method_not_allowed" }, 405, cors);
+        return json(await diagnostics(env), 200, cors);
+      }
       if (url.pathname.startsWith("/api/admin/game-records/")) {
         const result = await adminGameRecordRoute(env, url, request);
         return json(result.body, result.status, cors);
@@ -136,6 +149,7 @@ export default {
 
       return json({ ok: false, error: "not found" }, 404, cors);
     } catch (err) {
+      if (err?.code === "markup_drift") return json({ ok: false, error: "markup_drift", code: "markup_drift", site: err.site }, 502, cors);
       return json({ ok: false, error: String((err && err.message) || err) }, 500, cors);
     }
   },
@@ -214,6 +228,66 @@ async function adminGameRecordRoute(env, url, request) {
   const response = await namespace.fetch(new Request(`https://game-record/${encodeURIComponent(gameId)}`, { method: "GET" }));
   return { body: await response.json(), status: response.status };
 }
+
+function bindingPresent(env, name) {
+  return Boolean(env[name] && (typeof env[name].fetch === "function" || typeof env[name].get === "function" || typeof env[name].idFromName === "function"));
+}
+
+async function probeBinding(binding, name) {
+  if (!binding) return false;
+  try {
+    let response;
+    if (typeof binding.fetch === "function") response = await binding.fetch(new Request("https://probe/health", { method: "GET" }));
+    else if (typeof binding.idFromName === "function") response = await binding.get(binding.idFromName("__probe__")).fetch(new Request("https://probe/health", { method: "GET" }));
+    else return false;
+    return Boolean(response && response.ok);
+  } catch { return false; }
+}
+
+async function diagnostics(env) {
+  const names = ["APP_TOKEN", "HTO_USERNAME", "HTO_PASSWORD", "GAME_CODE_PEPPER", "ALLOWED_ORIGIN"];
+  const config = Object.fromEntries(names.map((name) => [name, typeof env[name] === "string" && env[name].trim().length > 0]));
+  const bindings = {
+    SESSION: Boolean(env.SESSION && typeof env.SESSION.get === "function" && await (async () => { try { await env.SESSION.get(SESSION_KEY); return true; } catch { return false; } })()),
+    GAME_RECORDS: await probeBinding(env.GAME_RECORDS, "GAME_RECORDS"),
+    GAME_CODE_REGISTRY: await probeBinding(env.GAME_CODE_REGISTRY, "GAME_CODE_REGISTRY"),
+    GAME_LEASES: await probeBinding(env.GAME_LEASES, "GAME_LEASES"),
+  };
+  return {
+    ok: Object.values(config).every(Boolean) && Object.values(bindings).every(Boolean),
+    seasonMapId: seasonMapId(env),
+    config,
+    requiredConfig: config,
+    requiredSecrets: Object.fromEntries(["APP_TOKEN", "HTO_USERNAME", "HTO_PASSWORD", "GAME_CODE_PEPPER"].map((name) => [name, config[name]])),
+    bindings: { ...bindings, GAME_CODES: bindings.GAME_CODE_REGISTRY },
+  };
+}
+
+async function canonicalExport(env) {
+  const failed = (message = "canonical export unavailable") => ({ ok: false, error: "canonical_export_failed", code: "canonical_export_failed", message });
+  try {
+    const namespace = env.GAME_RECORDS;
+    if (!namespace || typeof namespace.idFromName !== "function") return failed("GAME_RECORDS binding is unavailable");
+    const indexResponse = await namespace.get(namespace.idFromName("__public-index__")).fetch(new Request("https://record/index", { method: "GET" }));
+    if (!indexResponse.ok) return failed("canonical index read failed");
+    const index = await indexResponse.json();
+    if (!index || !Array.isArray(index.entries)) return failed("canonical index is malformed");
+    const entries = index.entries.slice().sort((a, b) => String(a?.gameId || "").localeCompare(String(b?.gameId || "")));
+    const games = [];
+    for (const entry of entries) {
+      if (!entry || entry.gameId == null) return failed("canonical index entry is malformed");
+      const gameId = String(entry.gameId);
+      const response = await namespace.get(namespace.idFromName(gameId)).fetch(new Request(`https://record/${encodeURIComponent(gameId)}`, { method: "GET" }));
+      if (!response.ok) return failed(`canonical record ${gameId} could not be read`);
+      const record = await response.json();
+      if (!record || String(record.gameId || gameId) !== gameId || !Array.isArray(record.revisions)) return failed(`canonical record ${gameId} is malformed`);
+      const revisions = record.revisions.slice().sort((a, b) => Number(a?.revision) - Number(b?.revision));
+      if (revisions.some((revision, i) => !revision || Number(revision.revision) !== i + 1)) return failed(`canonical record ${gameId} has invalid revisions`);
+      games.push({ gameId, index: entry, revisions });
+    }
+    return { ok: true, schemaVersion: "aahl-canonical-export/v1", index: { ...index, entries }, games };
+  } catch { return failed(); }
+}
 async function rateLimitSubject(request, pepper) {
   const forwarded = request.headers.get("CF-Connecting-IP") || "anonymous";
   return keyedDigest(`request-subject:${forwarded.split(",")[0].trim()}`, pepper);
@@ -236,7 +310,9 @@ function operatorFromSubject(subject, env) {
 export class GameCodeRegistry {
   constructor(state) { this.state = state; }
   async fetch(request) {
-    const action = new URL(request.url).pathname.slice(1); const input = await request.json();
+    const action = new URL(request.url).pathname.slice(1);
+    if (request.method === "GET" && action === "health") return this.response({ ok: true, binding: "GAME_CODE_REGISTRY" });
+    const input = await request.json();
     const now = Date.now(); const key = `game:${String(input.gameId || "")}`;
     let record = await this.state.storage.get(key);
     if (action === "mint" || action === "reissue") {
@@ -286,6 +362,7 @@ export class GameRecord {
   constructor(state) { this.state = state; }
   async fetch(request) {
     const url = new URL(request.url);
+    if (request.method === "GET" && url.pathname === "/health") return this.response({ ok: true, binding: "GAME_RECORDS" });
     const input = request.method === "GET" ? {} : await request.json();
     if ((request.method === "GET" && url.pathname !== "/index") || url.pathname === "/read") {
       const revisions = await this.revisions();
@@ -482,6 +559,74 @@ async function htoFetch(env, target, init = {}, allowRetry = true) {
   return { resp, text };
 }
 
+// Canary-only transport. It intentionally has no login POST fallback: every
+// request made by the canary, including session recovery, is GET.
+async function canaryFetch(env, target) {
+  let cookie = await env.SESSION?.get?.(SESSION_KEY);
+  const get = (jar) => fetch(target, { method: "GET", redirect: "manual", headers: jar ? { Cookie: jar } : {} });
+  let response = await get(cookie);
+  let text = await response.text();
+  if (looksUnauthed(response, text)) {
+    const seed = await fetch(LOGIN_PAGE, { method: "GET", redirect: "manual" });
+    cookie = mergeCookies(cookie || "", seed);
+    response = await get(cookie);
+    text = await response.text();
+  }
+  return { response, text };
+}
+
+function assumption(key, pass, detail) { return { key, pass: Boolean(pass), detail }; }
+async function markupCanary(env) {
+  const checks = [];
+  let loginText = "", scheduleText = "", setupText = "", games = [];
+  try {
+    const loginPage = await canaryFetch(env, LOGIN_PAGE);
+    loginText = loginPage.text;
+    checks.push(assumption("login.form", /<form\b[^>]*id=["']?loginForm/i.test(loginText), "login form marker"));
+    checks.push(assumption("login.username", /name=["']?(?:username|email)["']/i.test(loginText), "username field"));
+    checks.push(assumption("login.password", /name=["']?password["']/i.test(loginText), "password field"));
+  } catch (error) {
+    checks.push(assumption("login.form", false, "login page fetch failed"));
+    checks.push(assumption("login.username", false, "login page fetch failed"));
+    checks.push(assumption("login.password", false, String(error?.message || error)));
+  }
+  try {
+    const schedule = await canaryFetch(env, SCHEDULE_AJAX);
+    scheduleText = schedule.text;
+    games = parseGamesFromSchedule(scheduleText, seasonMapId(env));
+    checks.push(assumption("schedule.table", /<table\b/i.test(scheduleText), "schedule table"));
+    checks.push(assumption("schedule.date", /(?:date|\d{1,2}\/\d{1,2}|\d{4}-\d{2}-\d{2})/i.test(scheduleText), "schedule date marker"));
+    checks.push(assumption("schedule.game", games.length > 0, "ScoreClick game marker"));
+  } catch (error) {
+    checks.push(assumption("schedule.table", false, "schedule markup drift"));
+    checks.push(assumption("schedule.date", false, "schedule markup drift"));
+    checks.push(assumption("schedule.game", false, String(error?.message || error)));
+  }
+  const game = games[0];
+  if (game) {
+    try {
+      const setup = await canaryFetch(env, `${HTO}/admin/default.asp?p=ScoresEdit&a=1&sportsHQ=${encodeURIComponent(game.homeDiv)}&gameID=${game.gameId}&gameID2=${encodeURIComponent(game.gameId2)}`);
+      setupText = setup.text;
+      const rosters = parsePlayersByUsername(setupText);
+      const infractions = parseInfractionList(setupText);
+      const finals = parseFinals(setupText);
+      const events = parseAuthoritativeEvents(setupText);
+      checks.push(assumption("setup.playersByUsername", Object.keys(rosters).length > 0, "playersByUsername payload"));
+      checks.push(assumption("setup.infractions", Array.isArray(infractions), "infraction list"));
+      checks.push(assumption("setup.finals", Number.isFinite(finals.h) && Number.isFinite(finals.a), "final score inputs"));
+      checks.push(assumption("setup.editorArrays", Array.isArray(events.goals) && Array.isArray(events.penalties), "authoritative editor arrays"));
+      checks.push(assumption("setup.editorMarkers", /ScoresEdit|scoreSummary|penaltySummary/i.test(setupText), "editor markers"));
+    } catch (error) {
+      for (const key of ["setup.playersByUsername", "setup.infractions", "setup.finals", "setup.editorArrays", "setup.editorMarkers"])
+        checks.push(assumption(key, false, String(error?.message || error)));
+    }
+  } else {
+    for (const key of ["setup.playersByUsername", "setup.infractions", "setup.finals", "setup.editorArrays", "setup.editorMarkers"])
+      checks.push(assumption(key, false, "blocked: no schedule game"));
+  }
+  return { ok: checks.every((check) => check.pass), schemaVersion: "aahl-markup-canary/v1", manualOnly: true, outboundMethods: ["GET"], assumptions: checks };
+}
+
 // ---------------------------------------------------------------------------
 // API handlers
 // ---------------------------------------------------------------------------
@@ -637,7 +782,7 @@ async function syncGame(env, gameId, body, options = {}) {
       ? await options.authoritativeReader({ gameId, username, gameId2: body.gameId2 })
       : (await gameSetup(env, gameId, username, body.gameId2 || "")).current;
   } catch (error) {
-    return conflict("remote_read_failed", error.message);
+    return conflict(error?.code === "markup_drift" ? "markup_drift" : "remote_read_failed", error.message);
   }
   if (!remote || !remote.comparisonToken) return conflict("baseline_required", "authoritative baseline is required");
   if (expectedSeason && remote.seasonMapId && remote.seasonMapId !== expectedSeason) return conflict("season_map_drift", "authoritative setup/roster season map changed");
@@ -844,6 +989,7 @@ export class GameLease {
   constructor(state) { this.state = state; }
   async fetch(request) {
     const action = new URL(request.url).pathname.slice(1);
+    if (request.method === "GET" && action === "health") return new Response(JSON.stringify({ ok: true, binding: "GAME_LEASES" }), { headers: { "Content-Type": "application/json" } });
     const input = await request.json();
     const now = Date.now();
     const current = await this.state.storage.get("lease");
@@ -933,6 +1079,7 @@ async function postSummary(env, action, key, gameId, username, arr) {
 
 /** Pull games out of the admin schedule page via the per-row ScoreClick handlers. */
 function parseGamesFromSchedule(html, mapId = DEFAULT_SEASON_MAP_ID) {
+  if (typeof html !== "string") throw markupDrift("schedule.document");
   const games = [];
   const re = /ScoreClick\('default\.asp\?p=ScoresEdit&a=1&sportsHQ=([^&]+)&gameID=(\d+)&gameID2=(\d+)',\s*(\d+)\)/g;
   for (const m of html.matchAll(re)) {
@@ -953,6 +1100,7 @@ function parseGamesFromSchedule(html, mapId = DEFAULT_SEASON_MAP_ID) {
     const awayEntry = found.find((f) => f.div !== homeDiv);
     const location = LOCATIONS.find((l) => rowText.includes(l)) || "";
 
+    if (!rowText || !Number.isFinite(Number(ts))) throw markupDrift("schedule.row");
     games.push({
       gameId,
       gameId2,
@@ -965,6 +1113,7 @@ function parseGamesFromSchedule(html, mapId = DEFAULT_SEASON_MAP_ID) {
       seasonMapId: mapId,
     });
   }
+  if (!games.length) throw markupDrift("schedule.game");
   const seen = new Set();
   return games
     .filter((g) => (seen.has(g.gameId) ? false : seen.add(g.gameId)))
@@ -974,22 +1123,24 @@ function parseGamesFromSchedule(html, mapId = DEFAULT_SEASON_MAP_ID) {
 /** Extract globalVars.playersByUsername = {div:[{playerID,playernumber,firstName,lastName}]}. */
 function parsePlayersByUsername(html) {
   const obj = extractJsonAssignment(html, "globalVars.playersByUsername");
-  if (!obj) return {};
+  if (!obj || typeof obj !== "object" || Array.isArray(obj)) throw markupDrift("setup.playersByUsername");
   const out = {};
   for (const [div, players] of Object.entries(obj)) {
+    if (!Array.isArray(players)) throw markupDrift("setup.playersByUsername");
     out[div] = players.map((p) => ({
       id: String(p.playerID),
       number: p.playernumber,
       name: `${(p.firstName || "").trim()} ${(p.lastName || "").trim()}`.trim(),
     }));
   }
+  if (!Object.keys(out).length) throw markupDrift("setup.playersByUsername");
   return out;
 }
 
 /** Extract globalVars.infractionList = {code:{label,severity}}. */
 function parseInfractionList(html) {
   const obj = extractJsonAssignment(html, "globalVars.infractionList");
-  if (!obj) return [];
+  if (!obj || typeof obj !== "object" || Array.isArray(obj)) throw markupDrift("setup.infractions");
   return Object.entries(obj).map(([code, v]) => ({
     code,
     label: v.label || code,
@@ -1001,7 +1152,8 @@ function parseInfractionList(html) {
 function parseFinals(html) {
   const grab = (name) => {
     const m = html.match(new RegExp(`name=["']${name}["'][^>]*value=["']([^"']*)["']`, "i"));
-    return m ? Number(m[1] || 0) : 0;
+    if (!m || !/^[-+]?\d+(?:\.\d+)?$/.test(m[1] || "")) throw markupDrift(`setup.final.${name}`);
+    return Number(m[1]);
   };
   return { h: grab("finalh"), a: grab("finala") };
 }
@@ -1022,9 +1174,17 @@ function parseAuthoritativeEvents(html) {
     "globalVars.penaltySummary", "globalVars.penaltiesSummary", "penaltySummaryData",
   ]);
   if (!goals || !penalties || !goals.every(isEvent) || !penalties.every(isEvent)) {
-    throw new Error("authoritative event arrays missing or malformed");
+    throw markupDrift("setup.editorArrays");
   }
   return { goals, penalties };
+}
+
+function markupDrift(site) {
+  const detail = site === "setup.editorArrays" ? "authoritative event arrays missing or malformed" : `required marker missing (${site})`;
+  const error = new Error(`markup_drift: ${detail}`);
+  error.code = "markup_drift";
+  error.site = site;
+  return error;
 }
 
 function firstArrayAssignment(html, names) {
@@ -1090,4 +1250,4 @@ function stripTags(s) {
   return s.replace(/<[^>]*>/g, " ").replace(/&amp;/g, "&").replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim();
 }
 
-export { comparisonToken, createInMemoryLeaseCoordinator, gameSetup, parseAuthoritativeEvents, syncGame, configuration, seasonMapId };
+export { comparisonToken, createInMemoryLeaseCoordinator, gameSetup, parseAuthoritativeEvents, parseGamesFromSchedule, parsePlayersByUsername, parseInfractionList, parseFinals, syncGame, configuration, seasonMapId };
