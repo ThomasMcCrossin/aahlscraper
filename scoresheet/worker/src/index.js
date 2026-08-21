@@ -150,7 +150,7 @@ export default {
       return json({ ok: false, error: "not found" }, 404, cors);
     } catch (err) {
       if (err?.code === "markup_drift") return json({ ok: false, error: "markup_drift", code: "markup_drift", site: err.site }, 502, cors);
-      return json({ ok: false, error: String((err && err.message) || err) }, 500, cors);
+      return json({ ok: false, error: "service_unavailable", code: "service_unavailable" }, 500, cors);
     }
   },
 };
@@ -264,7 +264,7 @@ async function diagnostics(env) {
 }
 
 async function canonicalExport(env) {
-  const failed = (message = "canonical export unavailable") => ({ ok: false, error: "canonical_export_failed", code: "canonical_export_failed", message });
+  const failed = () => ({ ok: false, error: "canonical_export_failed", code: "canonical_export_failed", details: "canonical export unavailable" });
   try {
     const namespace = env.GAME_RECORDS;
     if (!namespace || typeof namespace.idFromName !== "function") return failed("GAME_RECORDS binding is unavailable");
@@ -285,8 +285,27 @@ async function canonicalExport(env) {
       if (revisions.some((revision, i) => !revision || Number(revision.revision) !== i + 1)) return failed(`canonical record ${gameId} has invalid revisions`);
       games.push({ gameId, index: entry, revisions });
     }
-    return { ok: true, schemaVersion: "aahl-canonical-export/v1", index: { ...index, entries }, games };
+    return { ok: true, schemaVersion: "aahl-canonical-export/v1", index: redactConfiguredSecrets({ ...index, entries }, env), games: redactConfiguredSecrets(games, env) };
   } catch { return failed(); }
+}
+
+function configuredSecretValues(env) {
+  return [...new Set(Object.entries(env || {})
+    .filter(([name, value]) => typeof value === "string" && value.length > 0 &&
+      /(?:secret|token|password|passwd|pepper|credential|private.?key|api.?key|username)/i.test(name))
+    .map(([, value]) => value))].sort((a, b) => b.length - a.length);
+}
+
+/** Preserve the complete export shape while replacing exact configured secret values. */
+function redactConfiguredSecrets(value, env) {
+  const secrets = configuredSecretValues(env);
+  const visit = (item) => {
+    if (typeof item === "string") return secrets.includes(item) ? "[REDACTED_CONFIGURED_SECRET]" : item;
+    if (Array.isArray(item)) return item.map(visit);
+    if (item && typeof item === "object") return Object.fromEntries(Object.entries(item).map(([key, child]) => [key, visit(child)]));
+    return item;
+  };
+  return visit(value);
 }
 async function rateLimitSubject(request, pepper) {
   const forwarded = request.headers.get("CF-Connecting-IP") || "anonymous";
@@ -526,6 +545,7 @@ async function login(env) {
 
 /** True when a response indicates the session is no longer authenticated. */
 function looksUnauthed(resp, text) {
+  if (resp.status === 401 || resp.status === 403) return true;
   if (resp.status === 301 || resp.status === 302) {
     if (/p=login/i.test(resp.headers.get("location") || "")) return true;
   }
@@ -562,6 +582,11 @@ async function htoFetch(env, target, init = {}, allowRetry = true) {
 // Canary-only transport. It intentionally has no login POST fallback: every
 // request made by the canary, including session recovery, is GET.
 async function canaryFetch(env, target) {
+  const expected = new URL(target);
+  if (expected.origin !== HTO || ![LOGIN_PAGE, SCHEDULE_AJAX].includes(target) &&
+      !/^https:\/\/www\.hometeamsonline\.com\/admin\/default\.asp\?p=ScoresEdit&a=1&sportsHQ=[^&]+&gameID=\d+&gameID2=[^&]*$/.test(target)) {
+    throw new Error("canary target rejected");
+  }
   let cookie = await env.SESSION?.get?.(SESSION_KEY);
   const get = (jar) => fetch(target, { method: "GET", redirect: "manual", headers: jar ? { Cookie: jar } : {} });
   let response = await get(cookie);
@@ -588,7 +613,7 @@ async function markupCanary(env) {
   } catch (error) {
     checks.push(assumption("login.form", false, "login page fetch failed"));
     checks.push(assumption("login.username", false, "login page fetch failed"));
-    checks.push(assumption("login.password", false, String(error?.message || error)));
+    checks.push(assumption("login.password", false, "login page unavailable"));
   }
   try {
     const schedule = await canaryFetch(env, SCHEDULE_AJAX);
@@ -600,7 +625,7 @@ async function markupCanary(env) {
   } catch (error) {
     checks.push(assumption("schedule.table", false, "schedule markup drift"));
     checks.push(assumption("schedule.date", false, "schedule markup drift"));
-    checks.push(assumption("schedule.game", false, String(error?.message || error)));
+    checks.push(assumption("schedule.game", false, "schedule unavailable or malformed"));
   }
   const game = games[0];
   if (game) {
@@ -618,7 +643,7 @@ async function markupCanary(env) {
       checks.push(assumption("setup.editorMarkers", /ScoresEdit|scoreSummary|penaltySummary/i.test(setupText), "editor markers"));
     } catch (error) {
       for (const key of ["setup.playersByUsername", "setup.infractions", "setup.finals", "setup.editorArrays", "setup.editorMarkers"])
-        checks.push(assumption(key, false, String(error?.message || error)));
+        checks.push(assumption(key, false, "setup unavailable or malformed"));
     }
   } else {
     for (const key of ["setup.playersByUsername", "setup.infractions", "setup.finals", "setup.editorArrays", "setup.editorMarkers"])
@@ -782,7 +807,8 @@ async function syncGame(env, gameId, body, options = {}) {
       ? await options.authoritativeReader({ gameId, username, gameId2: body.gameId2 })
       : (await gameSetup(env, gameId, username, body.gameId2 || "")).current;
   } catch (error) {
-    return conflict(error?.code === "markup_drift" ? "markup_drift" : "remote_read_failed", error.message);
+    const code = error?.code === "markup_drift" ? "markup_drift" : "remote_read_failed";
+    return conflict(code, code === "markup_drift" ? "required HTO markup is malformed" : "authoritative HTO read failed");
   }
   if (!remote || !remote.comparisonToken) return conflict("baseline_required", "authoritative baseline is required");
   if (expectedSeason && remote.seasonMapId && remote.seasonMapId !== expectedSeason) return conflict("season_map_drift", "authoritative setup/roster season map changed");
@@ -824,7 +850,7 @@ async function syncGame(env, gameId, body, options = {}) {
         submittedAt: new Date().toISOString(),
     });
   } catch (error) {
-    return conflict("canonical_persistence_failed", String((error && error.message) || error));
+    return conflict("canonical_persistence_failed", "canonical revision could not be persisted");
   }
   try {
     results.goals = await writer(env, "updateScoreSummary", "scoreSummaryData", gameId, username, body.scoreSummary);
@@ -942,7 +968,7 @@ function sameEvents(actual, requested) {
 function publicationFailure(phase, status, error, results, body, code = "publication_failed", extra = {}) {
   return {
     ok: false, conflict: phase === "verification", retryable: true, code,
-    phase, status, message: String((error && error.message) || error), results,
+    phase, status, message: "HTO publication did not complete", results,
     revision: body.revision, writes: Object.keys(results).length, ...extra,
   };
 }
@@ -1122,11 +1148,17 @@ function parseGamesFromSchedule(html, mapId = DEFAULT_SEASON_MAP_ID) {
 
 /** Extract globalVars.playersByUsername = {div:[{playerID,playernumber,firstName,lastName}]}. */
 function parsePlayersByUsername(html) {
+  if (typeof html !== "string") throw markupDrift("setup.playersByUsername");
   const obj = extractJsonAssignment(html, "globalVars.playersByUsername");
   if (!obj || typeof obj !== "object" || Array.isArray(obj)) throw markupDrift("setup.playersByUsername");
   const out = {};
   for (const [div, players] of Object.entries(obj)) {
     if (!Array.isArray(players)) throw markupDrift("setup.playersByUsername");
+    if (players.some((p) => !p || typeof p !== "object" || Array.isArray(p) ||
+      (p.playerID != null && !["string", "number"].includes(typeof p.playerID)) ||
+      (p.playernumber != null && !["string", "number"].includes(typeof p.playernumber)) ||
+      (p.firstName != null && typeof p.firstName !== "string") ||
+      (p.lastName != null && typeof p.lastName !== "string"))) throw markupDrift("setup.playersByUsername");
     out[div] = players.map((p) => ({
       id: String(p.playerID),
       number: p.playernumber,
@@ -1139,8 +1171,12 @@ function parsePlayersByUsername(html) {
 
 /** Extract globalVars.infractionList = {code:{label,severity}}. */
 function parseInfractionList(html) {
+  if (typeof html !== "string") throw markupDrift("setup.infractions");
   const obj = extractJsonAssignment(html, "globalVars.infractionList");
   if (!obj || typeof obj !== "object" || Array.isArray(obj)) throw markupDrift("setup.infractions");
+  if (Object.values(obj).some((value) => !value || typeof value !== "object" || Array.isArray(value) ||
+      (value.label != null && typeof value.label !== "string") ||
+      (value.severity != null && typeof value.severity !== "string"))) throw markupDrift("setup.infractions");
   return Object.entries(obj).map(([code, v]) => ({
     code,
     label: v.label || code,
@@ -1150,6 +1186,7 @@ function parseInfractionList(html) {
 
 /** Read the static line-score final inputs (cheap "does this game already have a score?" signal). */
 function parseFinals(html) {
+  if (typeof html !== "string") throw markupDrift("setup.final");
   const grab = (name) => {
     const m = html.match(new RegExp(`name=["']${name}["'][^>]*value=["']([^"']*)["']`, "i"));
     if (!m || !/^[-+]?\d+(?:\.\d+)?$/.test(m[1] || "")) throw markupDrift(`setup.final.${name}`);
@@ -1167,6 +1204,7 @@ function parseFinals(html) {
  * over time; the fixture and these aliases keep that variation explicit.
  */
 function parseAuthoritativeEvents(html) {
+  if (typeof html !== "string") throw markupDrift("setup.editorArrays");
   const goals = firstArrayAssignment(html, [
     "globalVars.scoreSummary", "globalVars.scoringSummary", "scoreSummaryData",
   ]);

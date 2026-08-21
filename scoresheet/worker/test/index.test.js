@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { webcrypto } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
-import worker, { canonicalRecord, comparisonToken, constantTimeEqual, createInMemoryLeaseCoordinator, GameCodeRegistry, GameRecord, gameSetup, MAX_PUBLIC_INDEX_ENTRIES, parseAuthoritativeEvents, syncGame } from "../src/index.js";
+import worker, { canonicalRecord, comparisonToken, constantTimeEqual, createInMemoryLeaseCoordinator, GameCodeRegistry, GameRecord, gameSetup, MAX_PUBLIC_INDEX_ENTRIES, parseAuthoritativeEvents, parseFinals, parseGamesFromSchedule, parseInfractionList, parsePlayersByUsername, syncGame } from "../src/index.js";
 
 if (!globalThis.crypto) Object.defineProperty(globalThis, "crypto", { value: webcrypto });
 
@@ -61,6 +61,20 @@ test("unknown editor event shape fails closed instead of creating an empty basel
     () => parseAuthoritativeEvents('<script>globalVars.scoreSummary = {};</script>'),
     /authoritative event arrays missing or malformed/
   );
+});
+
+test("every required parser normalizes malformed containers and members to markup_drift", () => {
+  const cases = [
+    [parseGamesFromSchedule, null],
+    [parsePlayersByUsername, '<script>globalVars.playersByUsername = {"HOME":[null]};</script>'],
+    [parsePlayersByUsername, '<script>globalVars.playersByUsername = {"HOME":{}};</script>'],
+    [parseInfractionList, '<script>globalVars.infractionList = {"hook":null};</script>'],
+    [parseFinals, '<input name="finalh" value="x"><input name="finala" value="1">'],
+    [parseAuthoritativeEvents, '<script>globalVars.scoreSummary = null; globalVars.penaltySummary = [];</script>'],
+  ];
+  for (const [parser, input] of cases) {
+    assert.throws(() => parser(input), (error) => error?.code === "markup_drift");
+  }
 });
 
 test("network tripwire rejects an unmocked request immediately", async () => {
@@ -724,19 +738,21 @@ test("public routes do not leak fields or values from a stored revision", async 
 
 test("canonical export is deterministic, complete, and admin/origin/method gated", async () => {
   const first = recordFixture(); const second = recordFixture(); const index = recordFixture();
-  await recordRequest(first.record, "/append", { gameId: "b", scoreSummary: [{ id: 1 }], penaltySummary: [] });
+  await recordRequest(first.record, "/append", { gameId: "b", scoreSummary: [{ id: 1, nested: { token: "admin-value", password: "password-value" } }], penaltySummary: [] });
   await recordRequest(first.record, "/append", { gameId: "b", scoreSummary: [{ id: 2 }], penaltySummary: [] });
   await recordRequest(second.record, "/append", { gameId: "a", scoreSummary: [], penaltySummary: [] });
   await recordRequest(index.record, "/index-update", { gameId: "b", revision: 2 });
   await recordRequest(index.record, "/index-update", { gameId: "a", revision: 1 });
   const records = new Map([["a", second.record], ["b", first.record], ["__public-index__", index.record]]);
-  const env = { APP_TOKEN: "admin-value", ALLOWED_ORIGIN: "https://scores.invalid", GAME_RECORDS: { idFromName: (id) => id, get: (id) => records.get(id) } };
+  const env = { APP_TOKEN: "admin-value", HTO_PASSWORD: "password-value", HTO_USERNAME: "user-value", GAME_CODE_PEPPER: "pepper-value", ALLOWED_ORIGIN: "https://scores.invalid", GAME_RECORDS: { idFromName: (id) => id, get: (id) => records.get(id) } };
   const request = (path, init = {}) => worker.fetch(new Request(`https://worker.invalid${path}`, { headers: { Origin: "https://scores.invalid", "X-App-Token": "admin-value", ...init.headers }, ...init }), env);
   const response = await request("/api/admin/canonical-export"); const body = await response.json();
   assert.equal(response.status, 200); assert.equal(body.schemaVersion, "aahl-canonical-export/v1");
   assert.deepEqual(body.games.map((game) => game.gameId), ["a", "b"]);
   assert.deepEqual(body.games[1].revisions.map((revision) => revision.revision), [1, 2]);
   assert.equal(JSON.stringify(body).includes("admin-value"), false);
+  assert.equal(JSON.stringify(body).includes("password-value"), false);
+  assert.equal(body.games[1].revisions[0].scoreSummary[0].nested.token, "[REDACTED_CONFIGURED_SECRET]");
   assert.equal((await request("/api/admin/canonical-export", { method: "POST" })).status, 405);
   assert.equal((await worker.fetch(new Request("https://worker.invalid/api/admin/canonical-export", { headers: { Origin: "https://bad.invalid", "X-App-Token": "admin-value" } }), env)).status, 403);
 });
