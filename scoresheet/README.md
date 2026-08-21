@@ -136,3 +136,7 @@ After each canonical append, the worker best-effort updates the well-known
 the index update fails, and sync returns `canonical.indexUpdated: false` so a
 later append can repair the listing. Public listing reads that index, fetches
 latest revisions from each game record, and orders newest revisions first.
+The index is one bounded object containing at most 400 distinct game IDs. An
+existing game can still advance at the ceiling; a new game receives a
+`409 index_capacity` index-update failure, without deleting entries or rolling
+back its already durable canonical revision.

@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { webcrypto } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
-import worker, { comparisonToken, constantTimeEqual, createInMemoryLeaseCoordinator, GameCodeRegistry, GameRecord, gameSetup, parseAuthoritativeEvents, syncGame } from "../src/index.js";
+import worker, { canonicalRecord, comparisonToken, constantTimeEqual, createInMemoryLeaseCoordinator, GameCodeRegistry, GameRecord, gameSetup, MAX_PUBLIC_INDEX_ENTRIES, parseAuthoritativeEvents, syncGame } from "../src/index.js";
 
 if (!globalThis.crypto) Object.defineProperty(globalThis, "crypto", { value: webcrypto });
 
@@ -600,4 +600,51 @@ test("admin game-records returns latest and ordered revisions through the config
   });
   const body = await response.json();
   assert.equal(response.status, 200); assert.deepEqual(body.revisions.map((item) => item.revision), [1, 2]); assert.equal(body.latest.revision, 2);
+});
+
+test("public index has a 400-game ceiling, updates at capacity, and never loses entries", async () => {
+  const { record, data } = recordFixture();
+  const entries = Array.from({ length: MAX_PUBLIC_INDEX_ENTRIES }, (_, n) => ({ gameId: String(n), revision: 1, updatedAt: new Date(n).toISOString() }));
+  data.set("publicIndex", { entries });
+  const full = await recordRequest(record, "/index-update", { gameId: "new-game", revision: 1 });
+  assert.equal(full.status, 409); assert.equal(full.body.error, "index_capacity");
+  const existing = await recordRequest(record, "/index-update", { gameId: "0", revision: 2, updatedAt: "2026-08-21T00:00:00Z" });
+  assert.equal(existing.status, 200);
+  const index = await recordRequest(record, "/index", undefined, "GET");
+  assert.equal(index.body.entries.length, MAX_PUBLIC_INDEX_ENTRIES);
+  assert.equal(index.body.entries.find((item) => item.gameId === "0").revision, 2);
+  assert.equal(index.body.entries.some((item) => item.gameId === "new-game"), false);
+});
+
+test("canonical append remains durable when the bounded index rejects a new game", async () => {
+  const game = recordFixture(); const index = recordFixture();
+  index.data.set("publicIndex", { entries: Array.from({ length: MAX_PUBLIC_INDEX_ENTRIES }, (_, n) => ({ gameId: String(n), revision: 1 })) });
+  const namespace = { idFromName: (name) => name, get: (name) => name === "__public-index__" ? index.record : game.record };
+  const captured = await canonicalRecord({ GAME_RECORDS: namespace }).append({ gameId: "beyond-cap", scoreSummary: [], penaltySummary: [], submittedAt: "2026-08-21T00:00:00Z" });
+  assert.equal(captured.indexUpdated, false); assert.equal(captured.revision, 1);
+  const durable = await recordRequest(game.record, "/beyond-cap", undefined, "GET");
+  assert.equal(durable.body.latest.revision, 1);
+});
+
+test("public HTTP fixtures project safe fields, status, latest revisions, order, limits, CORS, cache, and methods", async () => {
+  const records = new Map();
+  const makeRecord = (gameId) => { const fixture = recordFixture(); records.set(gameId, fixture.record); return fixture.record; };
+  const index = recordFixture(); records.set("__public-index__", index.record);
+  const append = async (gameId, value, promote = false) => { const record = records.get(gameId) || makeRecord(gameId); const result = await recordRequest(record, "/append", value); if (promote) await recordRequest(record, "/promote", { revision: result.body.revision.revision }); };
+  await append("old", { gameId: "old", scoreSummary: [], penaltySummary: [], displayTeams: { home: { name: "Home" }, away: { name: "Away" } }, submittedAt: "2026-08-20T00:00:00Z" });
+  await append("new", { gameId: "new", scoreSummary: [{ scoreTeam: "home-key", scorer: "public", secret: "drop" }], penaltySummary: [], boxScore: { "home-key": { goals: 2, hidden: 9 } }, displayTeams: { home: { name: "Real Home", key: "home-key", raw: "drop" }, away: { name: "Real Away", key: "away-key" }, internal: "drop" }, submittedAt: "2026-08-21T00:00:00Z" });
+  await append("new", { gameId: "new", scoreSummary: [{ scoreTeam: "home-key", scorer: "latest" }], penaltySummary: [{ penaltyTeam: "away-key", infraction: "hook", raw: "drop" }], boxScore: { "home-key": { goals: 2, hidden: 9 } }, periodSummary: [{ period: 1, homeScore: 2, awayScore: 1, internal: "drop" }], displayTeams: { home: { name: "Real Home", key: "home-key" }, away: { name: "Real Away", key: "away-key" } }, submittedAt: "2026-08-22T00:00:00Z" }, true);
+  const indexUpdate = async (gameId, revision, updatedAt) => recordRequest(index.record, "/index-update", { gameId, revision, updatedAt, displayTeams: { home: { name: "Real Home" }, away: { name: "Real Away" } } });
+  await indexUpdate("old", 1, "2026-08-20T00:00:00Z"); await indexUpdate("new", 2, "2026-08-22T00:00:00Z");
+  const namespace = { idFromName: (name) => name, get: (name) => records.get(name) };
+  const env = { GAME_RECORDS: namespace };
+  const get = (path) => worker.fetch(new Request(`https://worker.invalid${path}`), env);
+  const response = await get("/api/public/scoreboard?limit=1"); const body = await response.json();
+  assert.equal(response.status, 200); assert.deepEqual(body.games.map((game) => game.gameId), ["new"]); assert.equal(body.games[0].status, "final");
+  assert.equal(body.games[0].teams.home.name, "Real Home"); assert.equal(body.games[0].boxScore["home-key"].goals, 2); assert.equal(body.games[0].boxScore["home-key"].hidden, undefined); assert.equal(body.games[0].scores[0].secret, undefined); assert.equal(body.games[0].penalties[0].raw, undefined); assert.equal(body.games[0].periodSummary[0].internal, undefined);
+  assert.equal(response.headers.get("Access-Control-Allow-Origin"), "*"); assert.match(response.headers.get("Cache-Control"), /15|20|30/);
+  const capped = await get("/api/public/scoreboard?limit=999"); assert.equal((await capped.json()).limit, 100);
+  const defaultList = await get("/api/public/scoreboard"); const defaultBody = await defaultList.json(); assert.equal(defaultBody.games[1].status, "live");
+  const detail = await get("/api/public/games/new/boxscore"); assert.equal((await detail.json()).revision, 2);
+  const post = await worker.fetch(new Request("https://worker.invalid/api/public/scoreboard", { method: "POST" }), env); assert.equal(post.status, 405);
 });

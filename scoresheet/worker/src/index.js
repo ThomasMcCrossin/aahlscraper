@@ -317,24 +317,35 @@ export class GameRecord {
       return this.response({ ok: true, revision });
     }
     if (url.pathname === "/index-update") {
-      const key = `game:${String(input.gameId || "")}`;
-      const current = await this.state.storage.get(key);
+      const gameId = String(input.gameId || "");
       const next = {
-        gameId: String(input.gameId || ""),
+        gameId,
         seasonMapId: input.seasonMapId,
         displayTeams: input.displayTeams,
         updatedAt: input.updatedAt || new Date().toISOString(),
         revision: Number(input.revision),
       };
-      // Append/update only: never remove an entry or move it backwards.
-      if (!current || next.revision >= Number(current.revision || 0)) await this.state.storage.put(key, next);
-      return this.response({ ok: true, entry: next });
+      const update = async (storage) => {
+        const index = (await storage.get("publicIndex")) || { entries: [] };
+        const entries = Array.isArray(index.entries) ? index.entries.slice() : [];
+        const position = entries.findIndex((entry) => String(entry.gameId) === gameId);
+        const current = position >= 0 ? entries[position] : null;
+        // Append/update only: never remove an entry or move it backwards.
+        if (current && next.revision < Number(current.revision || 0)) return { ok: true, entry: current };
+        if (!current && entries.length >= MAX_PUBLIC_INDEX_ENTRIES) return { ok: false, error: "index_capacity", limit: MAX_PUBLIC_INDEX_ENTRIES };
+        if (position >= 0) entries[position] = next;
+        else entries.push(next);
+        await storage.put("publicIndex", { entries });
+        return { ok: true, entry: next };
+      };
+      const result = typeof this.state.storage.transaction === "function"
+        ? await this.state.storage.transaction(update)
+        : await update(this.state.storage);
+      return this.response(result, result.ok ? 200 : 409);
     }
     if (url.pathname === "/index") {
-      const entries = typeof this.state.storage.list === "function"
-        ? [...(await this.state.storage.list({ prefix: "game:" })).values()]
-        : [];
-      return this.response({ ok: true, entries });
+      const index = (await this.state.storage.get("publicIndex")) || { entries: [] };
+      return this.response({ ok: true, entries: Array.isArray(index.entries) ? index.entries : [] });
     }
     if (url.pathname === "/promote") {
       const number = Number(input.revision);
@@ -488,6 +499,9 @@ async function listGames(env) {
 
 const PUBLIC_DEFAULT_LIMIT = 20;
 const PUBLIC_MAX_LIMIT = 100;
+// The public index is a finite directory of distinct games, not an unbounded
+// event log. Existing games may continue to advance at the ceiling.
+export const MAX_PUBLIC_INDEX_ENTRIES = 400;
 function publicLimit(url) {
   const raw = url.searchParams.get("limit");
   if (raw == null || raw === "") return PUBLIC_DEFAULT_LIMIT;
@@ -720,7 +734,7 @@ async function syncGame(env, gameId, body, options = {}) {
   };
 }
 
-function canonicalRecord(env) {
+export function canonicalRecord(env) {
   const namespace = env.GAME_RECORDS;
   if (!namespace || typeof namespace.idFromName !== "function") return null;
   const stub = (gameId) => namespace.get(namespace.idFromName(String(gameId)));
