@@ -546,7 +546,7 @@ async function login(env) {
 /** True when a response indicates the session is no longer authenticated. */
 function looksUnauthed(resp, text) {
   if (resp.status === 401 || resp.status === 403) return true;
-  if (resp.status === 301 || resp.status === 302) {
+  if ([301, 302, 303, 307, 308].includes(resp.status)) {
     if (/p=login/i.test(resp.headers.get("location") || "")) return true;
   }
   if (text && /SessionExpired|p=login&error|id="loginForm"/i.test(text)) return true;
@@ -1155,10 +1155,10 @@ function parsePlayersByUsername(html) {
   for (const [div, players] of Object.entries(obj)) {
     if (!Array.isArray(players)) throw markupDrift("setup.playersByUsername");
     if (players.some((p) => !p || typeof p !== "object" || Array.isArray(p) ||
-      (p.playerID != null && !["string", "number"].includes(typeof p.playerID)) ||
-      (p.playernumber != null && !["string", "number"].includes(typeof p.playernumber)) ||
-      (p.firstName != null && typeof p.firstName !== "string") ||
-      (p.lastName != null && typeof p.lastName !== "string"))) throw markupDrift("setup.playersByUsername");
+      !Object.hasOwn(p, "playerID") || !safePlayerScalar(p.playerID) ||
+      !Object.hasOwn(p, "playernumber") || !safePlayerScalar(p.playernumber) ||
+      !Object.hasOwn(p, "firstName") || !nonEmptyString(p.firstName) ||
+      !Object.hasOwn(p, "lastName") || !nonEmptyString(p.lastName))) throw markupDrift("setup.playersByUsername");
     out[div] = players.map((p) => ({
       id: String(p.playerID),
       number: p.playernumber,
@@ -1175,8 +1175,8 @@ function parseInfractionList(html) {
   const obj = extractJsonAssignment(html, "globalVars.infractionList");
   if (!obj || typeof obj !== "object" || Array.isArray(obj)) throw markupDrift("setup.infractions");
   if (Object.values(obj).some((value) => !value || typeof value !== "object" || Array.isArray(value) ||
-      (value.label != null && typeof value.label !== "string") ||
-      (value.severity != null && typeof value.severity !== "string"))) throw markupDrift("setup.infractions");
+      !Object.hasOwn(value, "label") || !nonEmptyString(value.label) ||
+      !Object.hasOwn(value, "severity") || !nonEmptyString(value.severity))) throw markupDrift("setup.infractions");
   return Object.entries(obj).map(([code, v]) => ({
     code,
     label: v.label || code,
@@ -1234,7 +1234,12 @@ function firstArrayAssignment(html, names) {
 }
 
 function isEvent(value) {
-  return value !== null && typeof value === "object" && !Array.isArray(value);
+  return value !== null && typeof value === "object" && !Array.isArray(value) && Object.keys(value).length > 0;
+}
+
+function nonEmptyString(value) { return typeof value === "string" && value.trim().length > 0; }
+function safePlayerScalar(value) {
+  return nonEmptyString(value) || (typeof value === "number" && Number.isFinite(value));
 }
 
 /** Stable, local comparison token for the complete authoritative setup. */

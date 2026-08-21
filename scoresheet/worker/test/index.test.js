@@ -67,13 +67,37 @@ test("every required parser normalizes malformed containers and members to marku
   const cases = [
     [parseGamesFromSchedule, null],
     [parsePlayersByUsername, '<script>globalVars.playersByUsername = {"HOME":[null]};</script>'],
-    [parsePlayersByUsername, '<script>globalVars.playersByUsername = {"HOME":{}};</script>'],
+    [parsePlayersByUsername, '<script>globalVars.playersByUsername = {"HOME":[{}]};</script>'],
     [parseInfractionList, '<script>globalVars.infractionList = {"hook":null};</script>'],
+    [parseInfractionList, '<script>globalVars.infractionList = {"hook":{}};</script>'],
     [parseFinals, '<input name="finalh" value="x"><input name="finala" value="1">'],
     [parseAuthoritativeEvents, '<script>globalVars.scoreSummary = null; globalVars.penaltySummary = [];</script>'],
+    [parseAuthoritativeEvents, '<script>globalVars.scoreSummary = [{}]; globalVars.penaltySummary = [];</script>'],
+    [parseAuthoritativeEvents, '<script>globalVars.scoreSummary = []; globalVars.penaltySummary = [{}];</script>'],
   ];
   for (const [parser, input] of cases) {
     assert.throws(() => parser(input), (error) => error?.code === "markup_drift");
+  }
+});
+
+test("session expiry redirects in every supported family re-login and retry exactly once", async () => {
+  for (const status of [301, 302, 303, 307, 308]) {
+    const calls = [];
+    const original = globalThis.fetch;
+    globalThis.fetch = async (url, init = {}) => {
+      calls.push({ url: String(url), method: init.method || "GET" });
+      if (calls.length === 1) return new Response("", { status, headers: { Location: "https://www.hometeamsonline.com/sportswebsites/default.asp?p=login" } });
+      if (calls.length === 2) return new Response("<form id=loginForm></form>", { status: 200, headers: { "set-cookie": "ASP=seed" } });
+      if (calls.length === 3) return new Response("ok", { status: 200, headers: { "set-cookie": "AUTH=logged-in" } });
+      if (calls.length === 4) return new Response(fixture, { status: 200 });
+      throw new Error(`unexpected network request after retry: ${url}`);
+    };
+    try {
+      const setup = await gameSetup({ HTO_USERNAME: "fixture-user", HTO_PASSWORD: "fixture-password", SESSION: { get: async () => "expired" , put: async () => {} } }, "redirect-game", "HOME-DIV", "2");
+      assert.equal(setup.ok, true);
+      assert.equal(calls.length, 4);
+      assert.deepEqual(calls.map((call) => call.method), ["GET", "GET", "POST", "GET"]);
+    } finally { globalThis.fetch = original; }
   }
 });
 
