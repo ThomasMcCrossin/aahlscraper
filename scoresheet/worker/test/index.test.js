@@ -648,3 +648,76 @@ test("public HTTP fixtures project safe fields, status, latest revisions, order,
   const detail = await get("/api/public/games/new/boxscore"); assert.equal((await detail.json()).revision, 2);
   const post = await worker.fetch(new Request("https://worker.invalid/api/public/scoreboard", { method: "POST" }), env); assert.equal(post.status, 405);
 });
+
+test("public routes do not leak fields or values from a stored revision", async () => {
+  const gameId = "stored-leak-proof";
+  const game = recordFixture();
+  const index = recordFixture();
+  const sentinels = {
+    subject: "sentinel-subject",
+    leaseId: "sentinel-lease-id",
+    gameCode: "sentinel-game-code",
+    appToken: "sentinel-app-token",
+    rawSubmittedPayload: "sentinel-raw-submitted-payload",
+    internalErrorDetail: "sentinel-internal-error-detail",
+    unwantedEventField: "sentinel-unwanted-event-field",
+    unwantedBoxField: "sentinel-unwanted-box-field",
+    unwantedTeamField: "sentinel-unwanted-team-field",
+  };
+  const latest = {
+    gameId,
+    ...sentinels,
+    scoreSummary: [{ period: "1", scorer: "Displayed Scorer", unwantedEventField: sentinels.unwantedEventField }],
+    penaltySummary: [],
+    boxScore: { HOME: { goals: 3, penaltyCount: 1, penaltyMinutes: 2, unwantedBoxField: sentinels.unwantedBoxField } },
+    displayTeams: {
+      home: { name: "Displayed Home", key: "HOME", unwantedTeamField: sentinels.unwantedTeamField },
+      away: { name: "Displayed Away", key: "AWAY" },
+    },
+    periodSummary: [],
+    revision: 1,
+    status: "verified",
+    submittedAt: "2026-08-21T00:00:00Z",
+  };
+  game.data.set("revision:1", latest);
+  game.data.set("nextRevision", 1);
+  index.data.set("publicIndex", { entries: [{ gameId, revision: 1, updatedAt: latest.submittedAt }] });
+
+  const stored = game.data.get("revision:1");
+  for (const [key, value] of Object.entries(sentinels)) assert.equal(stored[key], value);
+  assert.equal(stored.scoreSummary[0].unwantedEventField, sentinels.unwantedEventField);
+  assert.equal(stored.boxScore.HOME.unwantedBoxField, sentinels.unwantedBoxField);
+  assert.equal(stored.displayTeams.home.unwantedTeamField, sentinels.unwantedTeamField);
+
+  const records = new Map([[gameId, game.record], ["__public-index__", index.record]]);
+  const env = { GAME_RECORDS: { idFromName: (name) => name, get: (name) => records.get(name) } };
+  const forbiddenKeys = new Set(Object.keys(sentinels));
+  const forbiddenValues = new Set(Object.values(sentinels));
+  const assertSafe = (value, path = "$") => {
+    if (Array.isArray(value)) return value.forEach((item, index) => assertSafe(item, `${path}[${index}]`));
+    if (!value || typeof value !== "object") {
+      if (typeof value === "string") assert.equal(forbiddenValues.has(value), false, `forbidden value at ${path}`);
+      return;
+    }
+    for (const [key, child] of Object.entries(value)) {
+      assert.equal(forbiddenKeys.has(key), false, `forbidden key at ${path}.${key}`);
+      assertSafe(child, `${path}.${key}`);
+    }
+  };
+  const fetchPublic = (path) => worker.fetch(new Request(`https://worker.invalid${path}`), env);
+  const scoreboardResponse = await fetchPublic("/api/public/scoreboard");
+  const scoreboard = await scoreboardResponse.json();
+  const boxscoreResponse = await fetchPublic(`/api/public/games/${gameId}/boxscore`);
+  const boxscore = await boxscoreResponse.json();
+
+  assert.equal(scoreboardResponse.status, 200);
+  assert.equal(boxscoreResponse.status, 200);
+  assertSafe(scoreboard);
+  assertSafe(boxscore);
+  assert.equal(scoreboard.games[0].teams.home.name, "Displayed Home");
+  assert.equal(scoreboard.games[0].boxScore.HOME.goals, 3);
+  assert.equal(scoreboard.games[0].scores[0].scorer, "Displayed Scorer");
+  assert.equal(boxscore.teams.away.name, "Displayed Away");
+  assert.equal(boxscore.boxScore.HOME.penaltyMinutes, 2);
+  assert.equal(boxscore.scores[0].scorer, "Displayed Scorer");
+});
