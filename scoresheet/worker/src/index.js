@@ -30,6 +30,9 @@
 const HTO = "https://www.hometeamsonline.com";
 const LOGIN_URL = `${HTO}/sportswebsites/ajax/Login.asp?p=login&username=DSMALL`;
 const LOGIN_PAGE = `${HTO}/sportswebsites/default.asp?p=login&username=DSMALL`;
+// HTO's WAF rejects requests without a browser User-Agent (403 challenge page),
+// so every outbound HTO request must carry one.
+const HTO_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
 const SCORESEDIT_AJAX = `${HTO}/admin/ajax/scoresedit.asp`;
 // The schedule page is client-rendered; games come from this AJAX call.
 const SCHEDULE_AJAX = `${HTO}/admin/ajax/Schedule.asp?p=schedule`;
@@ -519,7 +522,7 @@ function mergeCookies(existing, resp) {
 /** Log in fresh and persist the session cookie to KV. Returns the cookie string. */
 async function login(env) {
   // 1) Seed an ASP session cookie by hitting the login page.
-  const seed = await fetch(LOGIN_PAGE, { redirect: "manual" });
+  const seed = await fetch(LOGIN_PAGE, { redirect: "manual", headers: { "User-Agent": HTO_USER_AGENT } });
   let cookie = mergeCookies("", seed);
 
   // 2) Authenticate that session.
@@ -529,6 +532,7 @@ async function login(env) {
     headers: {
       "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
       "X-Requested-With": "XMLHttpRequest",
+      "User-Agent": HTO_USER_AGENT,
       "Cookie": cookie,
     },
     body: body.toString(),
@@ -565,7 +569,7 @@ async function htoFetch(env, target, init = {}, allowRetry = true) {
     fetch(target, {
       ...init,
       redirect: "manual",
-      headers: { ...(init.headers || {}), "Cookie": ck },
+      headers: { "User-Agent": HTO_USER_AGENT, ...(init.headers || {}), "Cookie": ck },
     });
 
   let resp = await doFetch(cookie);
@@ -588,11 +592,11 @@ async function canaryFetch(env, target) {
     throw new Error("canary target rejected");
   }
   let cookie = await env.SESSION?.get?.(SESSION_KEY);
-  const get = (jar) => fetch(target, { method: "GET", redirect: "manual", headers: jar ? { Cookie: jar } : {} });
+  const get = (jar) => fetch(target, { method: "GET", redirect: "manual", headers: jar ? { "User-Agent": HTO_USER_AGENT, Cookie: jar } : { "User-Agent": HTO_USER_AGENT } });
   let response = await get(cookie);
   let text = await response.text();
   if (looksUnauthed(response, text)) {
-    const seed = await fetch(LOGIN_PAGE, { method: "GET", redirect: "manual" });
+    const seed = await fetch(LOGIN_PAGE, { method: "GET", redirect: "manual", headers: { "User-Agent": HTO_USER_AGENT } });
     cookie = mergeCookies(cookie || "", seed);
     response = await get(cookie);
     text = await response.text();
