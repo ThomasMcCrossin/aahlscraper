@@ -65,9 +65,13 @@ export default {
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
 
     try {
-      const admin = url.pathname.startsWith("/api/admin/game-codes/");
+      const admin = url.pathname.startsWith("/api/admin/game-codes/") || url.pathname.startsWith("/api/admin/game-records/");
       if (admin && request.headers.get("X-App-Token") !== configured.token)
         return json({ ok: false, error: "unauthorized" }, 401, cors);
+      if (url.pathname.startsWith("/api/admin/game-records/")) {
+        const result = await adminGameRecordRoute(env, url, request);
+        return json(result.body, result.status, cors);
+      }
       if (admin) {
         const result = await adminCodeRoute(env, url, request);
         return json(result.body, result.status, cors);
@@ -176,6 +180,25 @@ async function adminCodeRoute(env, url, request) {
     : await registryCall(env, `/${action}`, { gameId, ttlMs: boundedTtl(body.ttlMs), pepper: env.GAME_CODE_PEPPER });
   return { body: result, status: result.ok ? 200 : 400 };
 }
+
+function gameRecords(env) {
+  if (env.GAME_RECORDS && typeof env.GAME_RECORDS.fetch === "function") return env.GAME_RECORDS;
+  if (env.GAME_RECORDS && typeof env.GAME_RECORDS.idFromName === "function") {
+    return { fetch: (request) => env.GAME_RECORDS.get(env.GAME_RECORDS.idFromName(new URL(request.url).pathname.split("/").pop())).fetch(request) };
+  }
+  return null;
+}
+
+async function adminGameRecordRoute(env, url, request) {
+  if (request.method !== "GET") return { body: { ok: false, error: "method_not_allowed" }, status: 405 };
+  const match = url.pathname.match(/^\/api\/admin\/game-records\/([^/]+)$/);
+  if (!match) return { body: { ok: false, error: "not_found" }, status: 404 };
+  const namespace = gameRecords(env);
+  if (!namespace) return { body: { ok: false, error: "configuration_error" }, status: 503 };
+  const gameId = decodeURIComponent(match[1]);
+  const response = await namespace.fetch(new Request(`https://game-record/${encodeURIComponent(gameId)}`, { method: "GET" }));
+  return { body: await response.json(), status: response.status };
+}
 async function rateLimitSubject(request, pepper) {
   const forwarded = request.headers.get("CF-Connecting-IP") || "anonymous";
   return keyedDigest(`request-subject:${forwarded.split(",")[0].trim()}`, pepper);
@@ -239,6 +262,47 @@ export class GameCodeRegistry {
       return this.response({ ok: true, gameId: record.gameId, subject: record.subject });
     }
     return this.response({ ok: false, error: "not found" });
+  }
+  response(value, status = 200) { return new Response(JSON.stringify(value), { status, headers: { "Content-Type": "application/json" } }); }
+}
+
+/** One strongly-consistent, append-only canonical revision log per game. */
+export class GameRecord {
+  constructor(state) { this.state = state; }
+  async fetch(request) {
+    const url = new URL(request.url);
+    const input = request.method === "GET" ? {} : await request.json();
+    if (request.method === "GET" || url.pathname === "/read") {
+      const revisions = await this.revisions();
+      return this.response({ ok: true, gameId: input.gameId || url.pathname.slice(1), latest: revisions.at(-1) || null, revisions });
+    }
+    if (url.pathname === "/append") {
+      const next = Number(await this.state.storage.get("nextRevision") || 0) + 1;
+      const revision = { ...input, revision: next };
+      await this.state.storage.put(`revision:${next}`, revision);
+      await this.state.storage.put("nextRevision", next);
+      return this.response({ ok: true, revision });
+    }
+    if (url.pathname === "/promote") {
+      const number = Number(input.revision);
+      const current = await this.state.storage.get(`revision:${number}`);
+      if (!current) return this.response({ ok: false, error: "revision_not_found" }, 404);
+      if (current.status === "verified") return this.response({ ok: true, revision: current });
+      if (current.status !== "submitted") return this.response({ ok: false, error: "invalid_status" }, 409);
+      const revision = { ...current, status: "verified", verifiedAt: input.verifiedAt || new Date().toISOString() };
+      await this.state.storage.put(`revision:${number}`, revision);
+      return this.response({ ok: true, revision });
+    }
+    return this.response({ ok: false, error: "not found" }, 404);
+  }
+  async revisions() {
+    const count = Number(await this.state.storage.get("nextRevision") || 0);
+    const values = [];
+    for (let n = 1; n <= count; n++) {
+      const value = await this.state.storage.get(`revision:${n}`);
+      if (value) values.push(value);
+    }
+    return values;
   }
   response(value, status = 200) { return new Response(JSON.stringify(value), { status, headers: { "Content-Type": "application/json" } }); }
 }
@@ -433,6 +497,10 @@ async function syncGame(env, gameId, body, options = {}) {
     return conflict("invalid_request", "at least one summary array is required");
   }
 
+  // Canonical capture is the first operation after all validation and lease
+  // checks, so a publication failure cannot discard a valid captain revision.
+  const recordBoundary = options.gameRecord || canonicalRecord(env);
+
   const writer = options.writer || postSummary;
   const results = {};
 
@@ -441,6 +509,24 @@ async function syncGame(env, gameId, body, options = {}) {
   // that the second request (or verification) happened.
   if (!Array.isArray(body.scoreSummary) || !Array.isArray(body.penaltySummary)) {
     return conflict("invalid_request", "both goal and penalty summary arrays are required");
+  }
+  let captured;
+  if (recordBoundary) {
+    try {
+      captured = await recordBoundary.append({
+        gameId: String(gameId),
+        clientRevision: body.revision === undefined ? undefined : body.revision,
+        scoreSummary: body.scoreSummary,
+        penaltySummary: body.penaltySummary,
+        boxScore: deriveBoxScore(body.scoreSummary, body.penaltySummary),
+        seasonMapId: expectedSeason || seasonMapId(env),
+        subject: options.operatorId || operatorId,
+        status: "submitted",
+        submittedAt: new Date().toISOString(),
+      });
+    } catch (error) {
+      return conflict("canonical_persistence_failed", String((error && error.message) || error));
+    }
   }
   try {
     results.goals = await writer(env, "updateScoreSummary", "scoreSummaryData", gameId, username, body.scoreSummary);
@@ -482,12 +568,45 @@ async function syncGame(env, gameId, body, options = {}) {
   if (!verified || !sameEvents(verified.goals, body.scoreSummary) || !sameEvents(verified.penalties, body.penaltySummary)) {
     return publicationFailure("verification", "conflict", new Error("authoritative reread does not match requested revision"), results, body, "verification_mismatch");
   }
+  if (recordBoundary && captured?.revision) {
+    try { await recordBoundary.promote(captured); }
+    catch (error) { return publicationFailure("verification", "penalty-published", error, results, body, "canonical_promotion_failed"); }
+  }
   return {
     ok: true, status: "published", phase: "published", verified: true, results,
     leaseId: body.leaseId, comparisonToken: comparisonToken({
       finals: verified.finals, goals: verified.goals, penalties: verified.penalties,
     }),
   };
+}
+
+function canonicalRecord(env) {
+  const namespace = env.GAME_RECORDS;
+  if (!namespace || typeof namespace.idFromName !== "function") return null;
+  const stub = (gameId) => namespace.get(namespace.idFromName(String(gameId)));
+  return {
+    append: async (value) => (await gameRecordCall(stub(value.gameId), "/append", value)).revision,
+    promote: async (revision) => gameRecordCall(stub(revision.gameId), "/promote", { revision: revision.revision }),
+  };
+}
+async function gameRecordCall(stub, path, value) {
+  const response = await stub.fetch(new Request(`https://game-record${path}`, { method: "POST", body: JSON.stringify(value) }));
+  const result = await response.json();
+  if (!response.ok || !result.ok) throw new Error(result.error || "canonical record operation failed");
+  return result;
+}
+function deriveBoxScore(goals, penalties) {
+  const teams = new Map();
+  const row = (team) => {
+    const key = String(team || "");
+    if (!teams.has(key)) teams.set(key, { goals: 0, penaltyCount: 0, penaltyMinutes: 0 });
+    return teams.get(key);
+  };
+  for (const event of goals) row(event?.team).goals++;
+  for (const event of penalties) {
+    const value = row(event?.team); value.penaltyCount++; value.penaltyMinutes += Number(event?.minutes) || 0;
+  }
+  return Object.fromEntries([...teams.entries()].sort(([a], [b]) => a.localeCompare(b)));
 }
 
 function conflict(code, message) { return { ok: false, conflict: true, code, message, writes: 0 }; }

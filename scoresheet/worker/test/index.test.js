@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { webcrypto } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
-import worker, { comparisonToken, constantTimeEqual, createInMemoryLeaseCoordinator, GameCodeRegistry, gameSetup, parseAuthoritativeEvents, syncGame } from "../src/index.js";
+import worker, { comparisonToken, constantTimeEqual, createInMemoryLeaseCoordinator, GameCodeRegistry, GameRecord, gameSetup, parseAuthoritativeEvents, syncGame } from "../src/index.js";
 
 if (!globalThis.crypto) Object.defineProperty(globalThis, "crypto", { value: webcrypto });
 
@@ -453,4 +453,80 @@ test("Blocker 7/8 regression: season drift blocks sync and fixture preserves HTO
   }, { operatorId: "op-a", coordinator, authoritativeReader: async () => ({ ...baseline, seasonMapId: "season-current" }), writer: async () => { writes += 1; } });
   assert.equal(result.code, "season_map_drift");
   assert.equal(writes, 0);
+});
+
+function recordFixture() {
+  const data = new Map();
+  const storage = {
+    get: async (key) => data.get(key),
+    put: async (key, value) => data.set(key, value),
+  };
+  return { record: new GameRecord({ storage }), data };
+}
+async function recordRequest(record, path, value, method = "POST") {
+  const response = await record.fetch(new Request(`https://record.invalid${path}`, { method, body: method === "GET" ? undefined : JSON.stringify(value || {}) }));
+  return { status: response.status, body: await response.json() };
+}
+
+test("GameRecord appends numbered revisions and promotes only submitted status", async () => {
+  const { record } = recordFixture();
+  const first = await recordRequest(record, "/append", { gameId: "900", scoreSummary: [], penaltySummary: [], status: "submitted" });
+  assert.equal(first.body.revision.revision, 1);
+  const promoted = await recordRequest(record, "/promote", { revision: 1 });
+  assert.equal(promoted.body.revision.status, "verified");
+  assert.deepEqual(promoted.body.revision.scoreSummary, []);
+  const read = await recordRequest(record, "/900", undefined, "GET");
+  assert.deepEqual(read.body.revisions.map((item) => item.revision), [1]);
+});
+
+test("sync captures before HTO writers, preserves failed capture, and promotes only after verification", async () => {
+  const { record } = recordFixture();
+  const coordinator = createInMemoryLeaseCoordinator();
+  const lease = await coordinator.acquire({ gameId: "901", operatorId: "subject-1" });
+  const baseline = authoritative();
+  const requested = { scoreSummary: [{ team: "HOME", id: "g" }], penaltySummary: [{ team: "AWAY", minutes: 2 }] };
+  const calls = [];
+  const result = await syncGame({ SEASON_MAP_ID: "season" }, "901", { username: "H", ...requested, ...lease, comparisonToken: baseline.comparisonToken }, {
+    operatorId: "subject-1", coordinator, gameRecord: {
+      append: async (value) => { calls.push("append"); const r = await recordRequest(record, "/append", value); return r.body.revision; },
+      promote: async (value) => { calls.push("promote"); return recordRequest(record, "/promote", { revision: value.revision }); },
+    },
+    authoritativeReader: async ({ phase }) => phase === "verifying" ? authoritative(requested.scoreSummary, requested.penaltySummary) : baseline,
+    writer: async (_env, action) => { calls.push(action); return { success: 1 }; },
+  });
+  assert.equal(result.ok, true);
+  assert.deepEqual(calls, ["append", "updateScoreSummary", "updatePenaltySummary", "promote"]);
+  const read = await recordRequest(record, "/901", undefined, "GET");
+  assert.equal(read.body.latest.status, "verified");
+  assert.deepEqual(read.body.latest.boxScore, { AWAY: { goals: 0, penaltyCount: 1, penaltyMinutes: 2 }, HOME: { goals: 1, penaltyCount: 0, penaltyMinutes: 0 } });
+});
+
+test("persistence failure blocks every HTO writer and admin game-records edge is fail-closed", async () => {
+  const coordinator = createInMemoryLeaseCoordinator();
+  const lease = await coordinator.acquire({ gameId: "902", operatorId: "s" });
+  const baseline = authoritative(); let writes = 0;
+  const result = await syncGame({}, "902", { username: "H", scoreSummary: [], penaltySummary: [], ...lease, comparisonToken: baseline.comparisonToken }, {
+    operatorId: "s", coordinator, gameRecord: { append: async () => { throw new Error("storage down"); } },
+    authoritativeReader: async () => baseline, writer: async () => { writes++; },
+  });
+  assert.equal(result.code, "canonical_persistence_failed"); assert.equal(writes, 0);
+  const base = { APP_TOKEN: "admin", ALLOWED_ORIGIN: "https://scores.invalid" };
+  const noConfig = await worker.fetch(new Request("https://worker.invalid/api/admin/game-records/902", { headers: { Origin: base.ALLOWED_ORIGIN, "X-App-Token": base.APP_TOKEN } }), base);
+  assert.equal(noConfig.status, 503);
+  const badToken = await worker.fetch(new Request("https://worker.invalid/api/admin/game-records/902", { headers: { Origin: base.ALLOWED_ORIGIN, "X-App-Token": "bad" } }), { ...base, GAME_RECORDS: {} });
+  assert.equal(badToken.status, 401);
+  const badOrigin = await worker.fetch(new Request("https://worker.invalid/api/admin/game-records/902", { headers: { Origin: "https://bad.invalid", "X-App-Token": base.APP_TOKEN } }), { ...base, GAME_RECORDS: {} });
+  assert.equal(badOrigin.status, 403);
+});
+
+test("admin game-records returns latest and ordered revisions through the configured edge", async () => {
+  const { record } = recordFixture();
+  await recordRequest(record, "/append", { gameId: "903", scoreSummary: [{ id: 1 }], penaltySummary: [], status: "submitted" });
+  await recordRequest(record, "/append", { gameId: "903", scoreSummary: [{ id: 2 }], penaltySummary: [], status: "submitted" });
+  const namespace = { idFromName: () => "903", get: () => record };
+  const response = await worker.fetch(new Request("https://worker.invalid/api/admin/game-records/903", { headers: { Origin: "https://scores.invalid", "X-App-Token": "admin" } }), {
+    APP_TOKEN: "admin", ALLOWED_ORIGIN: "https://scores.invalid", GAME_RECORDS: namespace,
+  });
+  const body = await response.json();
+  assert.equal(response.status, 200); assert.deepEqual(body.revisions.map((item) => item.revision), [1, 2]); assert.equal(body.latest.revision, 2);
 });
