@@ -57,6 +57,21 @@ Thumbs.db
 .mcp.json
 FilesToProcess/
 
+# Local runtime context and credentials
+CONTEXT.md
+.claude/
+.codex/
+*.pem
+*.key
+*.p12
+*.pfx
+*credentials*.json
+*service-account*.json
+*.sqlite
+*.sqlite3
+*.db
+*.Zone.Identifier
+
 # Local photo references / screenshots
 Aahldisplay/
 dump/

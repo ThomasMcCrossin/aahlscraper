@@ -37,8 +37,6 @@ permissions:
 jobs:
   scrape-and-process:
     runs-on: ubuntu-latest
-    env:
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
     steps:
       - name: Checkout repository
@@ -67,6 +65,8 @@ jobs:
       - name: Generate weekly report and headlines
         run: |
           python scripts/generate_weekly_report.py
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
       - name: Process data for Yodeck
         run: |

@@ -13,6 +13,7 @@ from typing import Iterable, Set
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = PROJECT_ROOT / "data"
 HISTORY_DIR = DATA_DIR / "history"
+MAX_SNAPSHOTS_PER_DATASET = 10
 
 
 def _utc_stamp() -> str:
@@ -72,6 +73,20 @@ def _prune_consecutive_duplicates(directory: Path) -> int:
 
     return removed
 
+def _prune_old_snapshots(directory: Path, keep: int = MAX_SNAPSHOTS_PER_DATASET) -> int:
+    if not directory.exists():
+        return 0
+
+    snapshots = sorted(directory.glob("*.json"))
+    stale = snapshots[:-keep] if keep > 0 else snapshots
+    for path in stale:
+        path.unlink(missing_ok=True)
+
+    if stale:
+        print(f"Pruned {len(stale)} old snapshot(s) from {directory.relative_to(HISTORY_DIR)}")
+
+    return len(stale)
+
 
 def main() -> None:
     HISTORY_DIR.mkdir(parents=True, exist_ok=True)
@@ -93,6 +108,7 @@ def main() -> None:
 
     for directory in touched_dirs:
         _prune_consecutive_duplicates(directory)
+        _prune_old_snapshots(directory)
 
 
 if __name__ == "__main__":
