@@ -128,7 +128,7 @@
     "time": "8:45 PM"
   },
   {
-    "game_id": "3274306",
+    "game_id": "3274307",
     "status": "final",
     "location": "Amherst",
     "division": null,
@@ -136,8 +136,8 @@
     "start_local": "2025-10-21T22:00:00-03:00",
     "home": "Maltby Sports",
     "away": "Ultramar",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274306&u=DSMALL&s=hockey&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274306&u=DSMALL&s=hockey&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274307&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3274307&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "Maltby Sports",
       "slug": "maltby-sports",
@@ -512,7 +512,7 @@
     "time": "9:00 PM"
   },
   {
-    "game_id": "3276525",
+    "game_id": "3276524",
     "status": "final",
     "location": "Amherst",
     "division": null,
@@ -520,8 +520,8 @@
     "start_local": "2025-11-25T20:45:00-04:00",
     "home": "Maltby Sports",
     "away": "J&K Electric",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276525&u=DSMALL&s=hockey&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276525&u=DSMALL&s=hockey&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276524&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276524&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "Maltby Sports",
       "slug": "maltby-sports",
@@ -544,7 +544,7 @@
     "time": "8:45 PM"
   },
   {
-    "game_id": "3276527",
+    "game_id": "3276526",
     "status": "final",
     "location": "Amherst",
     "division": null,
@@ -552,8 +552,8 @@
     "start_local": "2025-11-25T22:00:00-04:00",
     "home": "G.R. Mitchell Welding",
     "away": "Ultramar",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276527&u=DSMALL&s=hockey&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276527&u=DSMALL&s=hockey&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276526&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276526&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "G.R. Mitchell Welding",
       "slug": "gr-mitchell-welding",
@@ -608,7 +608,7 @@
     "time": "9:00 PM"
   },
   {
-    "game_id": "3276697",
+    "game_id": "3276698",
     "status": "final",
     "location": "Amherst",
     "division": null,
@@ -616,8 +616,8 @@
     "start_local": "2025-12-02T20:45:00-04:00",
     "home": "G.R. Mitchell Welding",
     "away": "Ultramar",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276697&u=DSMALL&s=hockey&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276697&u=DSMALL&s=hockey&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276698&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276698&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "G.R. Mitchell Welding",
       "slug": "gr-mitchell-welding",
@@ -672,7 +672,7 @@
     "time": "10:00 PM"
   },
   {
-    "game_id": "3276694",
+    "game_id": "3276693",
     "status": "final",
     "location": "Amherst",
     "division": null,
@@ -680,8 +680,8 @@
     "start_local": "2025-12-07T21:00:00-04:00",
     "home": "Colson Overhead Doors",
     "away": "J&K Electric",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276694&u=DSMALL&s=hockey&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276694&u=DSMALL&s=hockey&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276693&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276693&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "Colson Overhead Doors",
       "slug": "colson-overhead-doors",
@@ -768,7 +768,7 @@
     "time": "10:00 PM"
   },
   {
-    "game_id": "3276548",
+    "game_id": "3276549",
     "status": "final",
     "location": "Amherst",
     "division": null,
@@ -776,8 +776,8 @@
     "start_local": "2025-12-14T21:00:00-04:00",
     "home": "Maltby Sports",
     "away": "G.R. Mitchell Welding",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276548&u=DSMALL&s=hockey&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276548&u=DSMALL&s=hockey&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276549&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276549&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "Maltby Sports",
       "slug": "maltby-sports",
@@ -832,7 +832,7 @@
     "time": "8:45 PM"
   },
   {
-    "game_id": "3276551",
+    "game_id": "3276550",
     "status": "final",
     "location": "Amherst",
     "division": null,
@@ -840,8 +840,8 @@
     "start_local": "2025-12-16T22:00:00-04:00",
     "home": "Colson Overhead Doors",
     "away": "J&K Electric",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276551&u=DSMALL&s=hockey&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276551&u=DSMALL&s=hockey&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276550&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276550&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "Colson Overhead Doors",
       "slug": "colson-overhead-doors",
@@ -928,7 +928,7 @@
     "time": "8:15 PM"
   },
   {
-    "game_id": "3276563",
+    "game_id": "3276562",
     "status": "final",
     "location": "Amherst",
     "division": null,
@@ -936,8 +936,8 @@
     "start_local": "2025-12-23T21:30:00-04:00",
     "home": "J&K Electric",
     "away": "Ultramar",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276563&u=DSMALL&s=hockey&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276563&u=DSMALL&s=hockey&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276562&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276562&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "J&K Electric",
       "slug": "j-and-k-electric",
@@ -960,7 +960,7 @@
     "time": "9:30 PM"
   },
   {
-    "game_id": "3276566",
+    "game_id": "3276567",
     "status": "final",
     "location": "Amherst",
     "division": null,
@@ -968,8 +968,8 @@
     "start_local": "2025-12-30T19:30:00-04:00",
     "home": "J&K Electric",
     "away": "G.R. Mitchell Welding",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276566&u=DSMALL&s=hockey&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276566&u=DSMALL&s=hockey&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276567&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276567&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "J&K Electric",
       "slug": "j-and-k-electric",
@@ -1120,7 +1120,7 @@
     "time": "10:00 PM"
   },
   {
-    "game_id": "3276640",
+    "game_id": "3276639",
     "status": "final",
     "location": "Amherst",
     "division": null,
@@ -1128,8 +1128,8 @@
     "start_local": "2026-01-13T20:45:00-04:00",
     "home": "Maltby Sports",
     "away": "G.R. Mitchell Welding",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276640&u=DSMALL&s=hockey&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276640&u=DSMALL&s=hockey&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276639&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276639&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "Maltby Sports",
       "slug": "maltby-sports",
@@ -1152,7 +1152,7 @@
     "time": "8:45 PM"
   },
   {
-    "game_id": "3276641",
+    "game_id": "3276642",
     "status": "final",
     "location": "Amherst",
     "division": null,
@@ -1160,8 +1160,8 @@
     "start_local": "2026-01-13T22:00:00-04:00",
     "home": "Colson Overhead Doors",
     "away": "Ultramar",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276641&u=DSMALL&s=hockey&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276641&u=DSMALL&s=hockey&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276642&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276642&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "Colson Overhead Doors",
       "slug": "colson-overhead-doors",
@@ -1280,7 +1280,7 @@
     "time": "10:00 PM"
   },
   {
-    "game_id": "3276654",
+    "game_id": "3276653",
     "status": "final",
     "location": "Amherst",
     "division": null,
@@ -1288,8 +1288,8 @@
     "start_local": "2026-01-25T21:00:00-04:00",
     "home": "Maltby Sports",
     "away": "G.R. Mitchell Welding",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276654&u=DSMALL&s=hockey&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276654&u=DSMALL&s=hockey&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276653&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276653&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "Maltby Sports",
       "slug": "maltby-sports",
@@ -1504,7 +1504,7 @@
     "time": "8:45 PM"
   },
   {
-    "game_id": "3276674",
+    "game_id": "3276673",
     "status": "final",
     "location": "Amherst",
     "division": null,
@@ -1512,8 +1512,8 @@
     "start_local": "2026-02-10T22:00:00-04:00",
     "home": "J&K Electric",
     "away": "G.R. Mitchell Welding",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276674&u=DSMALL&s=hockey&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276674&u=DSMALL&s=hockey&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276673&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276673&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "J&K Electric",
       "slug": "j-and-k-electric",
@@ -1696,7 +1696,7 @@
     "time": "8:45 PM"
   },
   {
-    "game_id": "3276689",
+    "game_id": "3276690",
     "status": "final",
     "location": "Amherst",
     "division": null,
@@ -1704,8 +1704,8 @@
     "start_local": "2026-02-24T22:00:00-04:00",
     "home": "G.R. Mitchell Welding",
     "away": "Ultramar",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276689&u=DSMALL&s=hockey&p=boxscore",
-    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276689&u=DSMALL&s=hockey&p=summary",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276690&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3276690&u=DSMALL&s=hockey&p=summary",
     "home_line": {
       "name": "G.R. Mitchell Welding",
       "slug": "gr-mitchell-welding",
