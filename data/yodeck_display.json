@@ -1,40 +1,9 @@
 {
-  "timestamp": "2026-10-18T21:21:24.052309",
+  "timestamp": "2026-10-19T02:08:23.945383",
   "standings": [],
   "top_scorers": [],
   "recent_results": [],
   "upcoming_games": [
-    {
-      "game_id": "3374425",
-      "status": "scheduled",
-      "location": "Amherst",
-      "division": null,
-      "start_utc": "2026-10-19T00:00:00+00:00",
-      "start_local": "2026-10-18T21:00:00-03:00",
-      "home": "Super 8 Amherst",
-      "away": "Ultramar",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374425&u=DSMALL&s=hockey&p=preview",
-      "summary_url": null,
-      "home_line": {
-        "name": "Super 8 Amherst",
-        "slug": "super-8-amherst",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "away_line": {
-        "name": "Ultramar",
-        "slug": "ultramar",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "home_score": "",
-      "away_score": "",
-      "datetime": "2026-10-18T21:00:00-03:00",
-      "date": "10/18/2026",
-      "time": "9:00 PM"
-    },
     {
       "game_id": "3374428",
       "status": "scheduled",
@@ -313,11 +282,42 @@
       "datetime": "2026-11-08T21:00:00-04:00",
       "date": "11/08/2026",
       "time": "9:00 PM"
+    },
+    {
+      "game_id": "3374452",
+      "status": "scheduled",
+      "location": "Amherst",
+      "division": null,
+      "start_utc": "2026-11-11T00:45:00+00:00",
+      "start_local": "2026-11-10T20:45:00-04:00",
+      "home": "Coldwell Banker Performance Realty",
+      "away": "G.R. Mitchell Welding",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374452&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
+      "home_line": {
+        "name": "Coldwell Banker Performance Realty",
+        "slug": "coldwell-banker-performance-realty",
+        "final": null,
+        "periods": [],
+        "is_winner": null
+      },
+      "away_line": {
+        "name": "G.R. Mitchell Welding",
+        "slug": "gr-mitchell-welding",
+        "final": null,
+        "periods": [],
+        "is_winner": null
+      },
+      "home_score": "",
+      "away_score": "",
+      "datetime": "2026-11-10T20:45:00-04:00",
+      "date": "11/10/2026",
+      "time": "8:45 PM"
     }
   ],
   "headlines": [],
   "player_registry": {
-    "generated_at": "2026-10-18T21:21:23.937731+00:00",
+    "generated_at": "2026-10-19T02:08:23.845858+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",

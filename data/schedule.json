@@ -1,36 +1,5 @@
 [
   {
-    "game_id": "3374425",
-    "status": "scheduled",
-    "location": "Amherst",
-    "division": null,
-    "start_utc": "2026-10-19T00:00:00+00:00",
-    "start_local": "2026-10-18T21:00:00-03:00",
-    "home": "Super 8 Amherst",
-    "away": "Ultramar",
-    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374425&u=DSMALL&s=hockey&p=preview",
-    "summary_url": null,
-    "home_line": {
-      "name": "Super 8 Amherst",
-      "slug": "super-8-amherst",
-      "final": null,
-      "periods": [],
-      "is_winner": null
-    },
-    "away_line": {
-      "name": "Ultramar",
-      "slug": "ultramar",
-      "final": null,
-      "periods": [],
-      "is_winner": null
-    },
-    "home_score": "",
-    "away_score": "",
-    "datetime": "2026-10-18T21:00:00-03:00",
-    "date": "10/18/2026",
-    "time": "9:00 PM"
-  },
-  {
     "game_id": "3374428",
     "status": "scheduled",
     "location": "Amherst",
