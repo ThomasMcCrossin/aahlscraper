@@ -155,6 +155,37 @@
     "time": "10:00 PM"
   },
   {
+    "game_id": "3374439",
+    "status": "scheduled",
+    "location": "Amherst",
+    "division": null,
+    "start_utc": "2026-10-29T00:30:00+00:00",
+    "start_local": "2026-10-28T21:30:00-03:00",
+    "home": "Maltby Sports",
+    "away": "Coldwell Banker Performance Realty",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374439&u=DSMALL&s=hockey&p=preview",
+    "summary_url": null,
+    "home_line": {
+      "name": "Maltby Sports",
+      "slug": "maltby-sports",
+      "final": null,
+      "periods": [],
+      "is_winner": null
+    },
+    "away_line": {
+      "name": "Coldwell Banker Performance Realty",
+      "slug": "coldwell-banker-performance-realty",
+      "final": null,
+      "periods": [],
+      "is_winner": null
+    },
+    "home_score": "",
+    "away_score": "",
+    "datetime": "2026-10-28T21:30:00-03:00",
+    "date": "10/28/2026",
+    "time": "9:30 PM"
+  },
+  {
     "game_id": "3374442",
     "status": "scheduled",
     "location": "Amherst",
