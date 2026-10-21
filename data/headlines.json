@@ -1,4 +1,20 @@
 {
-  "generated_at": "2026-10-21T15:53:20.433667+00:00",
-  "headlines": []
+  "generated_at": "2026-10-21T22:13:13.152386+00:00",
+  "headlines": [
+    {
+      "game_id": "3374428",
+      "headline": "Super 8 Amherst and Maltby Sports Battle to a Thrilling 3-3 Tie in Hard-Fought Match!",
+      "ai_generated": true,
+      "created_at": "2026-10-21T22:13:08.106085+00:00",
+      "updated_at": "2026-10-21T22:13:08.106085+00:00",
+      "narrative": "In a tightly contested matchup, Super 8 Amherst and Maltby Sports finished in a 3-3 tie. No individual player stats were available for either team, but both squads showcased strong teamwork and determination throughout the game. Fans were treated to an exciting battle on the ice!",
+      "game_datetime": "2026-10-20T23:45:00+00:00",
+      "home_team": "Super 8 Amherst",
+      "away_team": "Maltby Sports",
+      "home_score": 3,
+      "away_score": 3,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374428&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374428&u=DSMALL&s=hockey&p=boxscore"
+    }
+  ]
 }

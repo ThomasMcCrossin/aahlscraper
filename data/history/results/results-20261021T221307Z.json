@@ -1,0 +1,34 @@
+[
+  {
+    "game_id": "3374428",
+    "status": "final",
+    "location": "Amherst",
+    "division": null,
+    "start_utc": "2026-10-20T23:45:00+00:00",
+    "start_local": "2026-10-20T20:45:00-03:00",
+    "home": "Super 8 Amherst",
+    "away": "Maltby Sports",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374428&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374428&u=DSMALL&s=hockey&p=summary",
+    "home_line": {
+      "name": "Super 8 Amherst",
+      "slug": "super-8-amherst",
+      "final": 3,
+      "periods": [],
+      "is_winner": null
+    },
+    "away_line": {
+      "name": "Maltby Sports",
+      "slug": "maltby-sports",
+      "final": 3,
+      "periods": [],
+      "is_winner": null
+    },
+    "home_score": 3,
+    "away_score": 3,
+    "result": "3 - 3",
+    "datetime": "2026-10-20T20:45:00-03:00",
+    "date": "10/20/2026",
+    "time": "8:45 PM"
+  }
+]

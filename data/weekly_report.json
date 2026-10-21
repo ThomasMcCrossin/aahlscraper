@@ -1,8 +1,29 @@
 {
-  "generated_at": "2026-10-21T15:53:20.433667+00:00",
+  "generated_at": "2026-10-21T22:13:13.152386+00:00",
   "standings_snapshot": "standings-20260610T180711Z.json",
   "previous_snapshot": "standings-20260530T160824Z.json",
   "standings_movements": [],
-  "recent_team_form": [],
-  "game_headlines": []
+  "recent_team_form": [
+    {
+      "team": "Super 8 Amherst",
+      "played": 1,
+      "wins": 0,
+      "losses": 0,
+      "ties": 1
+    },
+    {
+      "team": "Maltby Sports",
+      "played": 1,
+      "wins": 0,
+      "losses": 0,
+      "ties": 1
+    }
+  ],
+  "game_headlines": [
+    {
+      "game_id": "3374428",
+      "headline": "Super 8 Amherst and Maltby Sports Battle to a Thrilling 3-3 Tie in Hard-Fought Match!",
+      "game_datetime": "2026-10-20T23:45:00+00:00"
+    }
+  ]
 }
