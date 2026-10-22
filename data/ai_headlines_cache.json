@@ -908,5 +908,25 @@
     "narrative": "In a tightly contested matchup, Super 8 Amherst and Maltby Sports finished in a 3-3 tie. No individual player stats were available for either team, but both squads showcased strong teamwork and determination throughout the game. Fans were treated to an exciting battle on the ice!",
     "generated_at": "2026-10-21T22:13:13.151069+00:00",
     "game_id": "3374428"
+  },
+  "0f48b1926e648d3e7e951747042ff2ee": {
+    "headline": "Ultramar Powers Past Coldwell Banker with 4-2 Victory in Exciting Matchup",
+    "generated_at": "2026-10-22T15:50:05.071794+00:00",
+    "game_id": "3374430"
+  },
+  "0f48b1926e648d3e7e951747042ff2ee_narrative": {
+    "narrative": "In a competitive matchup, Ultramar emerged victorious over Coldwell Banker Performance Realty with a final score of 4-2. Unfortunately, no player statistics are available for either team. The win adds valuable points to Ultramar's standings as they continue their push in the league.",
+    "generated_at": "2026-10-22T15:50:06.612501+00:00",
+    "game_id": "3374430"
+  },
+  "dda6e242233114f032ad3fd61be0fe43": {
+    "headline": "Ultramar Powers Past Super 8 Amherst with 6-4 Victory in Thrilling Showdown",
+    "generated_at": "2026-10-22T15:50:07.917981+00:00",
+    "game_id": "3374425"
+  },
+  "dda6e242233114f032ad3fd61be0fe43_narrative": {
+    "narrative": "In a competitive matchup, Ultramar emerged victorious over Super 8 Amherst with a final score of 6-4. Unfortunately, no player statistics are available for either team. The win adds to Ultramar's momentum as they continue their season.",
+    "generated_at": "2026-10-22T15:50:09.690933+00:00",
+    "game_id": "3374425"
   }
 }

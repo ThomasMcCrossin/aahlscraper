@@ -1,8 +1,43 @@
 {
-  "timestamp": "2026-10-21T22:13:13.283856",
+  "timestamp": "2026-10-22T15:50:09.816522",
   "standings": [],
   "top_scorers": [],
   "recent_results": [
+    {
+      "game_id": "3374430",
+      "status": "final",
+      "location": "Amherst",
+      "division": null,
+      "start_utc": "2026-10-21T01:00:00+00:00",
+      "start_local": "2026-10-20T22:00:00-03:00",
+      "home": "Coldwell Banker Performance Realty",
+      "away": "Ultramar",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374430&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374430&u=DSMALL&s=hockey&p=summary",
+      "home_line": {
+        "name": "Coldwell Banker Performance Realty",
+        "slug": "coldwell-banker-performance-realty",
+        "final": 2,
+        "periods": [],
+        "is_winner": null
+      },
+      "away_line": {
+        "name": "Ultramar",
+        "slug": "ultramar",
+        "final": 4,
+        "periods": [],
+        "is_winner": null
+      },
+      "home_score": 2,
+      "away_score": 4,
+      "result": "2 - 4",
+      "datetime": "2026-10-20T22:00:00-03:00",
+      "date": "10/20/2026",
+      "time": "10:00 PM",
+      "headline": "Ultramar Powers Past Coldwell Banker with 4-2 Victory in Exciting Matchup",
+      "headline_updated_at": "2026-10-22T15:50:02.856280+00:00",
+      "narrative": "In a competitive matchup, Ultramar emerged victorious over Coldwell Banker Performance Realty with a final score of 4-2. Unfortunately, no player statistics are available for either team. The win adds valuable points to Ultramar's standings as they continue their push in the league."
+    },
     {
       "game_id": "3374428",
       "status": "final",
@@ -37,6 +72,41 @@
       "headline": "Super 8 Amherst and Maltby Sports Battle to a Thrilling 3-3 Tie in Hard-Fought Match!",
       "headline_updated_at": "2026-10-21T22:13:08.106085+00:00",
       "narrative": "In a tightly contested matchup, Super 8 Amherst and Maltby Sports finished in a 3-3 tie. No individual player stats were available for either team, but both squads showcased strong teamwork and determination throughout the game. Fans were treated to an exciting battle on the ice!"
+    },
+    {
+      "game_id": "3374425",
+      "status": "final",
+      "location": "Amherst",
+      "division": null,
+      "start_utc": "2026-10-19T00:00:00+00:00",
+      "start_local": "2026-10-18T21:00:00-03:00",
+      "home": "Ultramar",
+      "away": "Super 8 Amherst",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374425&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374425&u=DSMALL&s=hockey&p=summary",
+      "home_line": {
+        "name": "Ultramar",
+        "slug": "ultramar",
+        "final": 6,
+        "periods": [],
+        "is_winner": null
+      },
+      "away_line": {
+        "name": "Super 8 Amherst",
+        "slug": "super-8-amherst",
+        "final": 4,
+        "periods": [],
+        "is_winner": null
+      },
+      "home_score": 6,
+      "away_score": 4,
+      "result": "6 - 4",
+      "datetime": "2026-10-18T21:00:00-03:00",
+      "date": "10/18/2026",
+      "time": "9:00 PM",
+      "headline": "Ultramar Powers Past Super 8 Amherst with 6-4 Victory in Thrilling Showdown",
+      "headline_updated_at": "2026-10-22T15:50:02.856280+00:00",
+      "narrative": "In a competitive matchup, Ultramar emerged victorious over Super 8 Amherst with a final score of 6-4. Unfortunately, no player statistics are available for either team. The win adds to Ultramar's momentum as they continue their season."
     }
   ],
   "upcoming_games": [
@@ -353,6 +423,21 @@
   ],
   "headlines": [
     {
+      "game_id": "3374430",
+      "headline": "Ultramar Powers Past Coldwell Banker with 4-2 Victory in Exciting Matchup",
+      "ai_generated": true,
+      "created_at": "2026-10-22T15:50:02.856280+00:00",
+      "updated_at": "2026-10-22T15:50:02.856280+00:00",
+      "narrative": "In a competitive matchup, Ultramar emerged victorious over Coldwell Banker Performance Realty with a final score of 4-2. Unfortunately, no player statistics are available for either team. The win adds valuable points to Ultramar's standings as they continue their push in the league.",
+      "game_datetime": "2026-10-21T01:00:00+00:00",
+      "home_team": "Coldwell Banker Performance Realty",
+      "away_team": "Ultramar",
+      "home_score": 2,
+      "away_score": 4,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374430&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374430&u=DSMALL&s=hockey&p=boxscore"
+    },
+    {
       "game_id": "3374428",
       "headline": "Super 8 Amherst and Maltby Sports Battle to a Thrilling 3-3 Tie in Hard-Fought Match!",
       "ai_generated": true,
@@ -366,10 +451,25 @@
       "away_score": 3,
       "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374428&u=DSMALL&s=hockey&p=summary",
       "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374428&u=DSMALL&s=hockey&p=boxscore"
+    },
+    {
+      "game_id": "3374425",
+      "headline": "Ultramar Powers Past Super 8 Amherst with 6-4 Victory in Thrilling Showdown",
+      "ai_generated": true,
+      "created_at": "2026-10-22T15:50:02.856280+00:00",
+      "updated_at": "2026-10-22T15:50:02.856280+00:00",
+      "narrative": "In a competitive matchup, Ultramar emerged victorious over Super 8 Amherst with a final score of 6-4. Unfortunately, no player statistics are available for either team. The win adds to Ultramar's momentum as they continue their season.",
+      "game_datetime": "2026-10-19T00:00:00+00:00",
+      "home_team": "Ultramar",
+      "away_team": "Super 8 Amherst",
+      "home_score": 6,
+      "away_score": 4,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374425&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374425&u=DSMALL&s=hockey&p=boxscore"
     }
   ],
   "player_registry": {
-    "generated_at": "2026-10-21T22:13:13.154519+00:00",
+    "generated_at": "2026-10-22T15:50:09.696410+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",
@@ -1576,7 +1676,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 0,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1597,7 +1697,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 0,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1618,7 +1718,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 0,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1639,7 +1739,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 0,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1661,7 +1761,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 0,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1683,7 +1783,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 0,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1705,7 +1805,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 0,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1727,7 +1827,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 0,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1748,7 +1848,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 0,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1769,7 +1869,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 0,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1790,7 +1890,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 0,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1811,7 +1911,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 0,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1832,7 +1932,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 0,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1853,7 +1953,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 0,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
