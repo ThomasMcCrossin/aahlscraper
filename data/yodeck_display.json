@@ -1,8 +1,43 @@
 {
-  "timestamp": "2026-10-25T21:35:19.477745",
+  "timestamp": "2026-10-26T02:03:39.737532",
   "standings": [],
   "top_scorers": [],
   "recent_results": [
+    {
+      "game_id": "3374433",
+      "status": "final",
+      "location": "Amherst",
+      "division": null,
+      "start_utc": "2026-10-26T00:00:00+00:00",
+      "start_local": "2026-10-25T21:00:00-03:00",
+      "home": "Ultramar",
+      "away": "Maltby Sports",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374433&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374433&u=DSMALL&s=hockey&p=summary",
+      "home_line": {
+        "name": "Ultramar",
+        "slug": "ultramar",
+        "final": 1,
+        "periods": [],
+        "is_winner": null
+      },
+      "away_line": {
+        "name": "Maltby Sports",
+        "slug": "maltby-sports",
+        "final": 2,
+        "periods": [],
+        "is_winner": null
+      },
+      "home_score": 1,
+      "away_score": 2,
+      "result": "1 - 2",
+      "datetime": "2026-10-25T21:00:00-03:00",
+      "date": "10/25/2026",
+      "time": "9:00 PM",
+      "headline": "Maltby Sports Edges Ultramar 2-1 in Hard-Fought Battle for Victory",
+      "headline_updated_at": "2026-10-26T02:03:37.071806+00:00",
+      "narrative": "In a tightly contested matchup, Maltby Sports edged out Ultramar with a final score of 2-1. No player statistics were available for this game. With this victory, Maltby Sports continues to build momentum in the league."
+    },
     {
       "game_id": "3374430",
       "status": "final",
@@ -110,37 +145,6 @@
     }
   ],
   "upcoming_games": [
-    {
-      "game_id": "3374433",
-      "status": "scheduled",
-      "location": "Amherst",
-      "division": null,
-      "start_utc": "2026-10-26T00:00:00+00:00",
-      "start_local": "2026-10-25T21:00:00-03:00",
-      "home": "Maltby Sports",
-      "away": "Ultramar",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374433&u=DSMALL&s=hockey&p=preview",
-      "summary_url": null,
-      "home_line": {
-        "name": "Maltby Sports",
-        "slug": "maltby-sports",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "away_line": {
-        "name": "Ultramar",
-        "slug": "ultramar",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "home_score": "",
-      "away_score": "",
-      "datetime": "2026-10-25T21:00:00-03:00",
-      "date": "10/25/2026",
-      "time": "9:00 PM"
-    },
     {
       "game_id": "3374436",
       "status": "scheduled",
@@ -419,9 +423,55 @@
       "datetime": "2026-11-10T22:00:00-04:00",
       "date": "11/10/2026",
       "time": "10:00 PM"
+    },
+    {
+      "game_id": "3374457",
+      "status": "scheduled",
+      "location": "Amherst",
+      "division": null,
+      "start_utc": "2026-11-16T01:00:00+00:00",
+      "start_local": "2026-11-15T21:00:00-04:00",
+      "home": "Coldwell Banker Performance Realty",
+      "away": "Maltby Sports",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374457&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
+      "home_line": {
+        "name": "Coldwell Banker Performance Realty",
+        "slug": "coldwell-banker-performance-realty",
+        "final": null,
+        "periods": [],
+        "is_winner": null
+      },
+      "away_line": {
+        "name": "Maltby Sports",
+        "slug": "maltby-sports",
+        "final": null,
+        "periods": [],
+        "is_winner": null
+      },
+      "home_score": "",
+      "away_score": "",
+      "datetime": "2026-11-15T21:00:00-04:00",
+      "date": "11/15/2026",
+      "time": "9:00 PM"
     }
   ],
   "headlines": [
+    {
+      "game_id": "3374433",
+      "headline": "Maltby Sports Edges Ultramar 2-1 in Hard-Fought Battle for Victory",
+      "ai_generated": true,
+      "created_at": "2026-10-26T02:03:37.071806+00:00",
+      "updated_at": "2026-10-26T02:03:37.071806+00:00",
+      "narrative": "In a tightly contested matchup, Maltby Sports edged out Ultramar with a final score of 2-1. No player statistics were available for this game. With this victory, Maltby Sports continues to build momentum in the league.",
+      "game_datetime": "2026-10-26T00:00:00+00:00",
+      "home_team": "Ultramar",
+      "away_team": "Maltby Sports",
+      "home_score": 1,
+      "away_score": 2,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374433&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374433&u=DSMALL&s=hockey&p=boxscore"
+    },
     {
       "game_id": "3374430",
       "headline": "Ultramar Powers Past Coldwell Banker with 4-2 Victory in Exciting Matchup",
@@ -469,7 +519,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2026-10-25T21:35:19.373156+00:00",
+    "generated_at": "2026-10-26T02:03:39.623639+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",
@@ -1379,7 +1429,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 1,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1401,7 +1451,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 1,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1422,7 +1472,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 1,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1443,7 +1493,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 1,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1464,7 +1514,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 1,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1485,7 +1535,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 1,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1506,7 +1556,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 1,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1527,7 +1577,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 1,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1549,7 +1599,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 1,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1570,7 +1620,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 1,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1591,7 +1641,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 1,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1612,7 +1662,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 1,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1634,7 +1684,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 1,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1655,7 +1705,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 1,
+        "team_games_played": 2,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1676,7 +1726,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 2,
+        "team_games_played": 3,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1697,7 +1747,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 2,
+        "team_games_played": 3,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1718,7 +1768,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 2,
+        "team_games_played": 3,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1739,7 +1789,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 2,
+        "team_games_played": 3,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1761,7 +1811,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 2,
+        "team_games_played": 3,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1783,7 +1833,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 2,
+        "team_games_played": 3,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1805,7 +1855,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 2,
+        "team_games_played": 3,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1827,7 +1877,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 2,
+        "team_games_played": 3,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1848,7 +1898,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 2,
+        "team_games_played": 3,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1869,7 +1919,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 2,
+        "team_games_played": 3,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1890,7 +1940,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 2,
+        "team_games_played": 3,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1911,7 +1961,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 2,
+        "team_games_played": 3,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1932,7 +1982,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 2,
+        "team_games_played": 3,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1953,7 +2003,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 2,
+        "team_games_played": 3,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0

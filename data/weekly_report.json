@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-10-25T21:35:19.371254+00:00",
+  "generated_at": "2026-10-26T02:03:39.621681+00:00",
   "standings_snapshot": "standings-20260610T180711Z.json",
   "previous_snapshot": "standings-20260530T160824Z.json",
   "standings_movements": [],
   "recent_team_form": [
     {
-      "team": "Ultramar",
-      "played": 2,
-      "wins": 2,
-      "losses": 0,
-      "ties": 0
-    },
-    {
       "team": "Maltby Sports",
-      "played": 1,
-      "wins": 0,
+      "played": 2,
+      "wins": 1,
       "losses": 0,
       "ties": 1
     },
     {
-      "team": "Super 8 Amherst",
+      "team": "Ultramar",
       "played": 2,
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
+      "ties": 0
+    },
+    {
+      "team": "Super 8 Amherst",
+      "played": 1,
+      "wins": 0,
+      "losses": 0,
       "ties": 1
     },
     {
@@ -34,6 +34,11 @@
     }
   ],
   "game_headlines": [
+    {
+      "game_id": "3374433",
+      "headline": "Maltby Sports Edges Ultramar 2-1 in Hard-Fought Battle for Victory",
+      "game_datetime": "2026-10-26T00:00:00+00:00"
+    },
     {
       "game_id": "3374430",
       "headline": "Ultramar Powers Past Coldwell Banker with 4-2 Victory in Exciting Matchup",

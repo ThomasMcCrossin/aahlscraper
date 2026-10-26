@@ -94,5 +94,37 @@
     "datetime": "2026-10-20T22:00:00-03:00",
     "date": "10/20/2026",
     "time": "10:00 PM"
+  },
+  {
+    "game_id": "3374433",
+    "status": "final",
+    "location": "Amherst",
+    "division": null,
+    "start_utc": "2026-10-26T00:00:00+00:00",
+    "start_local": "2026-10-25T21:00:00-03:00",
+    "home": "Ultramar",
+    "away": "Maltby Sports",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374433&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374433&u=DSMALL&s=hockey&p=summary",
+    "home_line": {
+      "name": "Ultramar",
+      "slug": "ultramar",
+      "final": 1,
+      "periods": [],
+      "is_winner": null
+    },
+    "away_line": {
+      "name": "Maltby Sports",
+      "slug": "maltby-sports",
+      "final": 2,
+      "periods": [],
+      "is_winner": null
+    },
+    "home_score": 1,
+    "away_score": 2,
+    "result": "1 - 2",
+    "datetime": "2026-10-25T21:00:00-03:00",
+    "date": "10/25/2026",
+    "time": "9:00 PM"
   }
 ]
