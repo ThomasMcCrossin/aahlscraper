@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-26T23:04:11.891982",
+  "timestamp": "2026-10-27T16:19:20.401429",
   "standings": [],
   "top_scorers": [],
   "recent_results": [
@@ -243,8 +243,8 @@
       "status": "scheduled",
       "location": "Amherst",
       "division": null,
-      "start_utc": "2026-11-02T01:00:00+00:00",
-      "start_local": "2026-11-01T21:00:00-04:00",
+      "start_utc": "2026-11-02T01:30:00+00:00",
+      "start_local": "2026-11-01T21:30:00-04:00",
       "home": "Ultramar",
       "away": "Super 8 Amherst",
       "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374442&u=DSMALL&s=hockey&p=preview",
@@ -265,9 +265,9 @@
       },
       "home_score": "",
       "away_score": "",
-      "datetime": "2026-11-01T21:00:00-04:00",
+      "datetime": "2026-11-01T21:30:00-04:00",
       "date": "11/01/2026",
-      "time": "9:00 PM"
+      "time": "9:30 PM"
     },
     {
       "game_id": "3374444",
@@ -519,7 +519,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2026-10-26T23:04:11.777550+00:00",
+    "generated_at": "2026-10-27T16:19:20.278525+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",
