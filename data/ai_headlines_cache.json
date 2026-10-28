@@ -938,5 +938,25 @@
     "narrative": "In a tightly contested matchup, Maltby Sports edged out Ultramar with a final score of 2-1. No player statistics were available for this game. With this victory, Maltby Sports continues to build momentum in the league.",
     "generated_at": "2026-10-26T02:03:39.619888+00:00",
     "game_id": "3374433"
+  },
+  "bb44dce1f896c669f99b286cadff9add": {
+    "headline": "Super 8 Amherst Edges Maltby Sports 4-3 in Thrilling Showdown!",
+    "generated_at": "2026-10-28T02:35:24.803812+00:00",
+    "game_id": "3374437"
+  },
+  "bb44dce1f896c669f99b286cadff9add_narrative": {
+    "narrative": "In a tightly contested match, Super 8 Amherst edged out Maltby Sports with a final score of 4-3. Unfortunately, no player stats are available for either team. This victory keeps Super 8 Amherst competitive in the league standings.",
+    "generated_at": "2026-10-28T02:35:25.910466+00:00",
+    "game_id": "3374437"
+  },
+  "ec113253556e0c756dc7f04e6cebc2b6": {
+    "headline": "G.R. Mitchell Welding Dominates Coldwell Banker with 7-2 Victory in Impressive Showdown",
+    "generated_at": "2026-10-28T02:35:27.126295+00:00",
+    "game_id": "3374436"
+  },
+  "ec113253556e0c756dc7f04e6cebc2b6_narrative": {
+    "narrative": "G.R. Mitchell Welding secured a decisive 7-2 victory over Coldwell Banker Performance Realty. No player stats are available for either team. The win may impact the standings, but specific details are not provided.",
+    "generated_at": "2026-10-28T02:35:28.659882+00:00",
+    "game_id": "3374436"
   }
 }

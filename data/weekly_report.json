@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-10-27T22:53:55.895396+00:00",
+  "generated_at": "2026-10-28T02:35:28.663818+00:00",
   "standings_snapshot": "standings-20260610T180711Z.json",
   "previous_snapshot": "standings-20260530T160824Z.json",
   "standings_movements": [],
   "recent_team_form": [
     {
-      "team": "Maltby Sports",
-      "played": 2,
+      "team": "Super 8 Amherst",
+      "played": 1,
       "wins": 1,
       "losses": 0,
-      "ties": 1
+      "ties": 0
     },
     {
-      "team": "Ultramar",
+      "team": "G.R. Mitchell Welding",
+      "played": 1,
+      "wins": 1,
+      "losses": 0,
+      "ties": 0
+    },
+    {
+      "team": "Maltby Sports",
       "played": 2,
       "wins": 1,
       "losses": 1,
       "ties": 0
-    },
-    {
-      "team": "Super 8 Amherst",
-      "played": 1,
-      "wins": 0,
-      "losses": 0,
-      "ties": 1
     },
     {
       "team": "Coldwell Banker Performance Realty",
@@ -31,9 +31,26 @@
       "wins": 0,
       "losses": 1,
       "ties": 0
+    },
+    {
+      "team": "Ultramar",
+      "played": 1,
+      "wins": 0,
+      "losses": 1,
+      "ties": 0
     }
   ],
   "game_headlines": [
+    {
+      "game_id": "3374437",
+      "headline": "Super 8 Amherst Edges Maltby Sports 4-3 in Thrilling Showdown!",
+      "game_datetime": "2026-10-28T01:00:00+00:00"
+    },
+    {
+      "game_id": "3374436",
+      "headline": "G.R. Mitchell Welding Dominates Coldwell Banker with 7-2 Victory in Impressive Showdown",
+      "game_datetime": "2026-10-27T23:45:00+00:00"
+    },
     {
       "game_id": "3374433",
       "headline": "Maltby Sports Edges Ultramar 2-1 in Hard-Fought Battle for Victory",

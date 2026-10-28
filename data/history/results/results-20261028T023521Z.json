@@ -1,0 +1,194 @@
+[
+  {
+    "game_id": "3374425",
+    "status": "final",
+    "location": "Amherst",
+    "division": null,
+    "start_utc": "2026-10-19T00:00:00+00:00",
+    "start_local": "2026-10-18T21:00:00-03:00",
+    "home": "Ultramar",
+    "away": "Super 8 Amherst",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374425&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374425&u=DSMALL&s=hockey&p=summary",
+    "home_line": {
+      "name": "Ultramar",
+      "slug": "ultramar",
+      "final": 6,
+      "periods": [],
+      "is_winner": null
+    },
+    "away_line": {
+      "name": "Super 8 Amherst",
+      "slug": "super-8-amherst",
+      "final": 4,
+      "periods": [],
+      "is_winner": null
+    },
+    "home_score": 6,
+    "away_score": 4,
+    "result": "6 - 4",
+    "datetime": "2026-10-18T21:00:00-03:00",
+    "date": "10/18/2026",
+    "time": "9:00 PM"
+  },
+  {
+    "game_id": "3374428",
+    "status": "final",
+    "location": "Amherst",
+    "division": null,
+    "start_utc": "2026-10-20T23:45:00+00:00",
+    "start_local": "2026-10-20T20:45:00-03:00",
+    "home": "Super 8 Amherst",
+    "away": "Maltby Sports",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374428&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374428&u=DSMALL&s=hockey&p=summary",
+    "home_line": {
+      "name": "Super 8 Amherst",
+      "slug": "super-8-amherst",
+      "final": 3,
+      "periods": [],
+      "is_winner": null
+    },
+    "away_line": {
+      "name": "Maltby Sports",
+      "slug": "maltby-sports",
+      "final": 3,
+      "periods": [],
+      "is_winner": null
+    },
+    "home_score": 3,
+    "away_score": 3,
+    "result": "3 - 3",
+    "datetime": "2026-10-20T20:45:00-03:00",
+    "date": "10/20/2026",
+    "time": "8:45 PM"
+  },
+  {
+    "game_id": "3374430",
+    "status": "final",
+    "location": "Amherst",
+    "division": null,
+    "start_utc": "2026-10-21T01:00:00+00:00",
+    "start_local": "2026-10-20T22:00:00-03:00",
+    "home": "Coldwell Banker Performance Realty",
+    "away": "Ultramar",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374430&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374430&u=DSMALL&s=hockey&p=summary",
+    "home_line": {
+      "name": "Coldwell Banker Performance Realty",
+      "slug": "coldwell-banker-performance-realty",
+      "final": 2,
+      "periods": [],
+      "is_winner": null
+    },
+    "away_line": {
+      "name": "Ultramar",
+      "slug": "ultramar",
+      "final": 4,
+      "periods": [],
+      "is_winner": null
+    },
+    "home_score": 2,
+    "away_score": 4,
+    "result": "2 - 4",
+    "datetime": "2026-10-20T22:00:00-03:00",
+    "date": "10/20/2026",
+    "time": "10:00 PM"
+  },
+  {
+    "game_id": "3374433",
+    "status": "final",
+    "location": "Amherst",
+    "division": null,
+    "start_utc": "2026-10-26T00:00:00+00:00",
+    "start_local": "2026-10-25T21:00:00-03:00",
+    "home": "Ultramar",
+    "away": "Maltby Sports",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374433&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374433&u=DSMALL&s=hockey&p=summary",
+    "home_line": {
+      "name": "Ultramar",
+      "slug": "ultramar",
+      "final": 1,
+      "periods": [],
+      "is_winner": null
+    },
+    "away_line": {
+      "name": "Maltby Sports",
+      "slug": "maltby-sports",
+      "final": 2,
+      "periods": [],
+      "is_winner": null
+    },
+    "home_score": 1,
+    "away_score": 2,
+    "result": "1 - 2",
+    "datetime": "2026-10-25T21:00:00-03:00",
+    "date": "10/25/2026",
+    "time": "9:00 PM"
+  },
+  {
+    "game_id": "3374436",
+    "status": "final",
+    "location": "Amherst",
+    "division": null,
+    "start_utc": "2026-10-27T23:45:00+00:00",
+    "start_local": "2026-10-27T20:45:00-03:00",
+    "home": "G.R. Mitchell Welding",
+    "away": "Coldwell Banker Performance Realty",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374436&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374436&u=DSMALL&s=hockey&p=summary",
+    "home_line": {
+      "name": "G.R. Mitchell Welding",
+      "slug": "gr-mitchell-welding",
+      "final": 7,
+      "periods": [],
+      "is_winner": null
+    },
+    "away_line": {
+      "name": "Coldwell Banker Performance Realty",
+      "slug": "coldwell-banker-performance-realty",
+      "final": 2,
+      "periods": [],
+      "is_winner": null
+    },
+    "home_score": 7,
+    "away_score": 2,
+    "result": "7 - 2",
+    "datetime": "2026-10-27T20:45:00-03:00",
+    "date": "10/27/2026",
+    "time": "8:45 PM"
+  },
+  {
+    "game_id": "3374437",
+    "status": "final",
+    "location": "Amherst",
+    "division": null,
+    "start_utc": "2026-10-28T01:00:00+00:00",
+    "start_local": "2026-10-27T22:00:00-03:00",
+    "home": "Maltby Sports",
+    "away": "Super 8 Amherst",
+    "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374437&u=DSMALL&s=hockey&p=boxscore",
+    "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374437&u=DSMALL&s=hockey&p=summary",
+    "home_line": {
+      "name": "Maltby Sports",
+      "slug": "maltby-sports",
+      "final": 3,
+      "periods": [],
+      "is_winner": null
+    },
+    "away_line": {
+      "name": "Super 8 Amherst",
+      "slug": "super-8-amherst",
+      "final": 4,
+      "periods": [],
+      "is_winner": null
+    },
+    "home_score": 3,
+    "away_score": 4,
+    "result": "3 - 4",
+    "datetime": "2026-10-27T22:00:00-03:00",
+    "date": "10/27/2026",
+    "time": "10:00 PM"
+  }
+]

@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-10-27T22:53:55.895396+00:00",
+  "generated_at": "2026-10-28T02:35:28.663818+00:00",
   "headlines": [
+    {
+      "game_id": "3374437",
+      "headline": "Super 8 Amherst Edges Maltby Sports 4-3 in Thrilling Showdown!",
+      "ai_generated": true,
+      "created_at": "2026-10-28T02:35:22.344630+00:00",
+      "updated_at": "2026-10-28T02:35:22.344630+00:00",
+      "narrative": "In a tightly contested match, Super 8 Amherst edged out Maltby Sports with a final score of 4-3. Unfortunately, no player stats are available for either team. This victory keeps Super 8 Amherst competitive in the league standings.",
+      "game_datetime": "2026-10-28T01:00:00+00:00",
+      "home_team": "Maltby Sports",
+      "away_team": "Super 8 Amherst",
+      "home_score": 3,
+      "away_score": 4,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374437&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374437&u=DSMALL&s=hockey&p=boxscore"
+    },
+    {
+      "game_id": "3374436",
+      "headline": "G.R. Mitchell Welding Dominates Coldwell Banker with 7-2 Victory in Impressive Showdown",
+      "ai_generated": true,
+      "created_at": "2026-10-28T02:35:22.344630+00:00",
+      "updated_at": "2026-10-28T02:35:22.344630+00:00",
+      "narrative": "G.R. Mitchell Welding secured a decisive 7-2 victory over Coldwell Banker Performance Realty. No player stats are available for either team. The win may impact the standings, but specific details are not provided.",
+      "game_datetime": "2026-10-27T23:45:00+00:00",
+      "home_team": "G.R. Mitchell Welding",
+      "away_team": "Coldwell Banker Performance Realty",
+      "home_score": 7,
+      "away_score": 2,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374436&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374436&u=DSMALL&s=hockey&p=boxscore"
+    },
     {
       "game_id": "3374433",
       "headline": "Maltby Sports Edges Ultramar 2-1 in Hard-Fought Battle for Victory",
