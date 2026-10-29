@@ -1,6 +1,21 @@
 {
-  "generated_at": "2026-10-28T23:03:21.405991+00:00",
+  "generated_at": "2026-10-29T17:21:34.065693+00:00",
   "headlines": [
+    {
+      "game_id": "3374439",
+      "headline": "Maltby Sports Edges Coldwell Banker 3-2 in Thrilling Showdown!",
+      "ai_generated": true,
+      "created_at": "2026-10-29T17:21:30.969503+00:00",
+      "updated_at": "2026-10-29T17:21:30.969503+00:00",
+      "narrative": "In a closely contested matchup, Maltby Sports edged out Coldwell Banker Performance Realty with a final score of 3-2. No player stats are available for either team, but Maltby Sports secured the victory.",
+      "game_datetime": "2026-10-29T00:30:00+00:00",
+      "home_team": "Coldwell Banker Performance Realty",
+      "away_team": "Maltby Sports",
+      "home_score": 2,
+      "away_score": 3,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374439&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374439&u=DSMALL&s=hockey&p=boxscore"
+    },
     {
       "game_id": "3374437",
       "headline": "Super 8 Amherst Edges Maltby Sports 4-3 in Thrilling Showdown!",

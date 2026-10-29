@@ -1,8 +1,43 @@
 {
-  "timestamp": "2026-10-28T23:03:21.513361",
+  "timestamp": "2026-10-29T17:21:34.176053",
   "standings": [],
   "top_scorers": [],
   "recent_results": [
+    {
+      "game_id": "3374439",
+      "status": "final",
+      "location": "Amherst",
+      "division": null,
+      "start_utc": "2026-10-29T00:30:00+00:00",
+      "start_local": "2026-10-28T21:30:00-03:00",
+      "home": "Coldwell Banker Performance Realty",
+      "away": "Maltby Sports",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374439&u=DSMALL&s=hockey&p=boxscore",
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374439&u=DSMALL&s=hockey&p=summary",
+      "home_line": {
+        "name": "Coldwell Banker Performance Realty",
+        "slug": "coldwell-banker-performance-realty",
+        "final": 2,
+        "periods": [],
+        "is_winner": null
+      },
+      "away_line": {
+        "name": "Maltby Sports",
+        "slug": "maltby-sports",
+        "final": 3,
+        "periods": [],
+        "is_winner": null
+      },
+      "home_score": 2,
+      "away_score": 3,
+      "result": "2 - 3",
+      "datetime": "2026-10-28T21:30:00-03:00",
+      "date": "10/28/2026",
+      "time": "9:30 PM",
+      "headline": "Maltby Sports Edges Coldwell Banker 3-2 in Thrilling Showdown!",
+      "headline_updated_at": "2026-10-29T17:21:30.969503+00:00",
+      "narrative": "In a closely contested matchup, Maltby Sports edged out Coldwell Banker Performance Realty with a final score of 3-2. No player stats are available for either team, but Maltby Sports secured the victory."
+    },
     {
       "game_id": "3374437",
       "status": "final",
@@ -215,37 +250,6 @@
     }
   ],
   "upcoming_games": [
-    {
-      "game_id": "3374439",
-      "status": "scheduled",
-      "location": "Amherst",
-      "division": null,
-      "start_utc": "2026-10-29T00:30:00+00:00",
-      "start_local": "2026-10-28T21:30:00-03:00",
-      "home": "Maltby Sports",
-      "away": "Coldwell Banker Performance Realty",
-      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374439&u=DSMALL&s=hockey&p=preview",
-      "summary_url": null,
-      "home_line": {
-        "name": "Maltby Sports",
-        "slug": "maltby-sports",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "away_line": {
-        "name": "Coldwell Banker Performance Realty",
-        "slug": "coldwell-banker-performance-realty",
-        "final": null,
-        "periods": [],
-        "is_winner": null
-      },
-      "home_score": "",
-      "away_score": "",
-      "datetime": "2026-10-28T21:30:00-03:00",
-      "date": "10/28/2026",
-      "time": "9:30 PM"
-    },
     {
       "game_id": "3374442",
       "status": "scheduled",
@@ -524,9 +528,55 @@
       "datetime": "2026-11-17T22:00:00-04:00",
       "date": "11/17/2026",
       "time": "10:00 PM"
+    },
+    {
+      "game_id": "3374466",
+      "status": "scheduled",
+      "location": "Amherst",
+      "division": null,
+      "start_utc": "2026-11-23T01:00:00+00:00",
+      "start_local": "2026-11-22T21:00:00-04:00",
+      "home": "Super 8 Amherst",
+      "away": "Coldwell Banker Performance Realty",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374466&u=DSMALL&s=hockey&p=preview",
+      "summary_url": null,
+      "home_line": {
+        "name": "Super 8 Amherst",
+        "slug": "super-8-amherst",
+        "final": null,
+        "periods": [],
+        "is_winner": null
+      },
+      "away_line": {
+        "name": "Coldwell Banker Performance Realty",
+        "slug": "coldwell-banker-performance-realty",
+        "final": null,
+        "periods": [],
+        "is_winner": null
+      },
+      "home_score": "",
+      "away_score": "",
+      "datetime": "2026-11-22T21:00:00-04:00",
+      "date": "11/22/2026",
+      "time": "9:00 PM"
     }
   ],
   "headlines": [
+    {
+      "game_id": "3374439",
+      "headline": "Maltby Sports Edges Coldwell Banker 3-2 in Thrilling Showdown!",
+      "ai_generated": true,
+      "created_at": "2026-10-29T17:21:30.969503+00:00",
+      "updated_at": "2026-10-29T17:21:30.969503+00:00",
+      "narrative": "In a closely contested matchup, Maltby Sports edged out Coldwell Banker Performance Realty with a final score of 3-2. No player stats are available for either team, but Maltby Sports secured the victory.",
+      "game_datetime": "2026-10-29T00:30:00+00:00",
+      "home_team": "Coldwell Banker Performance Realty",
+      "away_team": "Maltby Sports",
+      "home_score": 2,
+      "away_score": 3,
+      "summary_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374439&u=DSMALL&s=hockey&p=summary",
+      "box_score_url": "https://www.amherstadulthockey.com/teams/default.asp?gameID=3374439&u=DSMALL&s=hockey&p=boxscore"
+    },
     {
       "game_id": "3374437",
       "headline": "Super 8 Amherst Edges Maltby Sports 4-3 in Thrilling Showdown!",
@@ -619,7 +669,7 @@
     }
   ],
   "player_registry": {
-    "generated_at": "2026-10-28T23:03:21.407977+00:00",
+    "generated_at": "2026-10-29T17:21:34.067584+00:00",
     "players": [
       {
         "player_id": "colson-overhead-doors-terrio-marshall-00",
@@ -1529,7 +1579,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 3,
+        "team_games_played": 4,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1551,7 +1601,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 3,
+        "team_games_played": 4,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1572,7 +1622,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 3,
+        "team_games_played": 4,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1593,7 +1643,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 3,
+        "team_games_played": 4,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1614,7 +1664,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 3,
+        "team_games_played": 4,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1635,7 +1685,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 3,
+        "team_games_played": 4,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1656,7 +1706,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 3,
+        "team_games_played": 4,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1677,7 +1727,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 3,
+        "team_games_played": 4,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1699,7 +1749,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 3,
+        "team_games_played": 4,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1720,7 +1770,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 3,
+        "team_games_played": 4,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1741,7 +1791,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 3,
+        "team_games_played": 4,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1762,7 +1812,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 3,
+        "team_games_played": 4,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1784,7 +1834,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 3,
+        "team_games_played": 4,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0
@@ -1805,7 +1855,7 @@
         "points": 0,
         "penalty_minutes": 0,
         "points_per_game": 0.0,
-        "team_games_played": 3,
+        "team_games_played": 4,
         "games_missed": null,
         "recent_points": 0,
         "recent_games": 0

@@ -1,9 +1,16 @@
 {
-  "generated_at": "2026-10-28T23:03:21.405991+00:00",
+  "generated_at": "2026-10-29T17:21:34.065693+00:00",
   "standings_snapshot": "standings-20260610T180711Z.json",
   "previous_snapshot": "standings-20260530T160824Z.json",
   "standings_movements": [],
   "recent_team_form": [
+    {
+      "team": "Maltby Sports",
+      "played": 3,
+      "wins": 2,
+      "losses": 1,
+      "ties": 0
+    },
     {
       "team": "Super 8 Amherst",
       "played": 1,
@@ -19,28 +26,26 @@
       "ties": 0
     },
     {
-      "team": "Maltby Sports",
-      "played": 2,
-      "wins": 1,
-      "losses": 1,
-      "ties": 0
-    },
-    {
-      "team": "Coldwell Banker Performance Realty",
-      "played": 1,
-      "wins": 0,
-      "losses": 1,
-      "ties": 0
-    },
-    {
       "team": "Ultramar",
       "played": 1,
       "wins": 0,
       "losses": 1,
       "ties": 0
+    },
+    {
+      "team": "Coldwell Banker Performance Realty",
+      "played": 2,
+      "wins": 0,
+      "losses": 2,
+      "ties": 0
     }
   ],
   "game_headlines": [
+    {
+      "game_id": "3374439",
+      "headline": "Maltby Sports Edges Coldwell Banker 3-2 in Thrilling Showdown!",
+      "game_datetime": "2026-10-29T00:30:00+00:00"
+    },
     {
       "game_id": "3374437",
       "headline": "Super 8 Amherst Edges Maltby Sports 4-3 in Thrilling Showdown!",
